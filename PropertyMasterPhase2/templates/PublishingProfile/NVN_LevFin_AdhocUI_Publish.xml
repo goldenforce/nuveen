@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<root>
+  <Subscriptions>
+    <Subscription description="profile to publish instruments from UI" id="++9JklEy2etbS275" name="NVN_LevFin_AdhocUI_Publish" ruleText="0 0 0 1 1 ? *" sourceId="" type="BATCH" workflow="PublishingWorkflow">
+      <destinations>
+        <destination id="++9JklEy2etbS272" outputType="JSON" participantRules="">
+          <subscriptionProperties>
+            <subscriptionProperty id="++9JklEy2etbS27C" propertyDesc="" propertyName="FILE_NAME" propertyValue="LevFin_Security"/>
+            <subscriptionProperty id="++9JklEy2etbS27D" propertyDesc="" propertyName="FILE_EXTENSION" propertyValue=".json"/>
+          </subscriptionProperties>
+          <downstream connectionFactory="" deadline="" deadlineTime="" description="Publishing directory for LevFin Adhoc UI publish" downstreamDestinationType="File" downstreamValue="/edmfs/app/outbound/output/levfin/smf/adhoc/done" dwdfOid="gp$3s&gt;h0e1" id="MUt2m?-1e1" name="Nuveen_LevFin_Adhoc" preferredLanguageCode="" preferredVendorId="" subscriberType="" typeFlag="" validityPriority="null"/>
+        </destination>
+      </destinations>
+      <messageTypes/>
+      <filters>
+        <filter dataSourceId="" deltaMode="NONE" entity="++5TZs2y2etse000" entityCaption="Full Instrument" entityName="FullInstrument" entityType="BUSINESS_ENTITY" filterEQLJsonText="" filterRuleText="FullInstrument.ID = :EntityOid" id="++9JklEy2etbS273" publishingModelName="FullInstrument" ruleText="Bonds.PopulateNuveencontractIndicatorForPublish" screen="VG8B41-qW1" tableType="ISSU"/>
+      </filters>
+    </Subscription>
+  </Subscriptions>
+</root>

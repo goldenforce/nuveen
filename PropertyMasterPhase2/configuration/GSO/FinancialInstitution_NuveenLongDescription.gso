@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entities cleanUnusedFields="false" nameSpace="NUVEEN">
+  <beFields>
+    <beField class="BETEXT" customDesc="" customDomainSQL="" customSQL="" desc="" displayCaption="Long Description" entityTypeId="++3qwBhS2etxm001" id="++9q19IMHINDG0vq" mandatory="0" multiplicity="SINGLE_OR_NULL" name="NuveenLongDescription" nameSpace="NUVEEN"/>
+  </beFields>
+  <dataGroups>
+    <dataGroup customInd="0" desc="Institution Details" displayCaption="Institution Details" entityTypeId="++3qwBhS2etxm001" frequencyInd="0" id="++4eFFHy2etv4014" ignoreDeleteChildren="false" multiplicity="SINGLE_OR_NULL" name="FinancialInstitutionDetails" nameSpace="GSC">
+      <part defNameSpace="NUVEEN" fieldId="++9q19IMHINDG0vq" id="++9q19IMHINDG0vs" prntReqdInd="0" seq="80"/>
+    </dataGroup>
+  </dataGroups>
+  <occurrences>
+    <occurrence desc="Occurrence for Nuveen Long Description" id="++9q19IMHINDG0vk" ignoreDeleteChildren="false" multiplicity="SINGLE_OR_NULL" name="NLD1_FINS_NUVEEN" nameSpace="NUVEEN" parentId="++4HwLjy2etpy00a" table="FT_T_NLD1" timeSeries="LOGICAL_DELETE">
+      <field desc="NLD1_LONG_DESC" id="++9q19IMHINDG0vm" name="NLD1_LONG_DESC" nameSpace="NUVEEN"/>
+      <field desc="NLD1_USR_TXT_1" id="++9q19IMHINDG0vn" name="NLD1_USR_TXT_1" nameSpace="NUVEEN"/>
+      <field desc="NLD1_USR_TXT_2" id="++9q19IMHINDG0vo" name="NLD1_USR_TXT_2" nameSpace="NUVEEN"/>
+      <field desc="NLD1_USR_TXT_3" id="++9q19IMHINDG0vp" name="NLD1_USR_TXT_3" nameSpace="NUVEEN"/>
+      <option id="++9q19IMHINDG0vl" nameSpace="NUVEEN" type="DEFAULT_ACTION" value="UNKNOWN"/>
+    </occurrence>
+  </occurrences>
+  <mappings>
+    <mapping beFieldId="++9q19IMHINDG0vq" groupMapping="0" id="++9q19IMHINDG0vr" nameSpace="NUVEEN" occFieldId="++9q19IMHINDG0vm"/>
+  </mappings>
+</entities>

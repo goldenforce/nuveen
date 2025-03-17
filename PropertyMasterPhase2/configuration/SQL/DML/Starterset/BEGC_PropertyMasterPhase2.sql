@@ -1,0 +1,9 @@
+INSERT INTO ft_t_begc
+(begc_oid, config_typ, config_val_txt, config_grp_nme, last_chg_tms, last_chg_usr_id)
+select '>K3-01~?W1', 'PropertySubtype', '{"entityName":"PropertySubtype","entityType":"PropertySubtype","disableMultiEdit":false,"srchActions":["IMPORT_IN_EXCEL","EXTRACTION_CRITERIA","OPEN_DETAILS","SAVE_FILTER","EDIT_IN_EXCEL","CONFIGURE_TEMPLATE","DELETE_ENTITIES","FUZZY_SEARCH","FETCH_MATCHES","SHOW_TRACE","SELECTALL_ENTITIES","EXPORT","CHANGE_DENSITY","NEW_ENTITY","SAVE_SEARCH_STATE"],"editActions":["RELOAD_ENTITY","DELETE_ENTITY","FUZZY_MATCH","PUBLISHING_PROFILES","SHOW_MATCH_RESULT","EXPORT","CREATE_CLONE","SAVE_AS_DRAFT","LOCK_ENTITY","VENDOR_CONTRIBUTION","DEBUG_ENTITY","SAVE_CHANGES","HIDE_EMPTY_FIELDS","EVALUATE_COMPLETENESS","ADD_TO_FAVOURITE","VIEW_AUDIT","PRINT"],"deleteActions":[],"setupEntities":[],"searchColorField":[],"commentsActions":[],"actionConfiguration":{},"comments":{},"autoRefreshInterval":null}', 'ACTIONS', '2024-10-14 12:07:18.000', 'user1' 
+from dual where not exists (select 'x' from ft_be_begc where config_typ = 'Property' and config_grp_nme = 'ACTIONS');
+
+INSERT INTO ft_be_begc
+(begc_oid, config_typ, config_val_txt, config_grp_nme, last_chg_tms, last_chg_usr_id)
+select new_oid(), 'Property', '{"entityName":"Property","entityType":"Property","disableMultiEdit":false,"srchActions":["IMPORT_IN_EXCEL","CONFIGURE_TEMPLATE","DELETE_ENTITIES","SELECTALL_ENTITIES","EXPORT","SAVE_SEARCH_STATE","NEW_ENTITY","EDIT_IN_EXCEL","SAVE_FILTER","OPEN_DETAILS"],"editActions":["EXPORT","RELOAD_ENTITY","ADD_TO_FAVOURITE","SAVE_CHANGES","DELETE_ENTITY","SAVE_AS_DRAFT"],"deleteActions":[],"setupEntities":[],"searchColorField":[],"commentsActions":[],"actionConfiguration":{},"comments":{},"autoRefreshInterval":null}', 'ACTIONS', '2025-02-03 21:29:52.000', 'NRE:CSTM'
+from dual where not exists (select 'x' from ft_be_begc where config_typ = 'Property' and config_grp_nme = 'ACTIONS');

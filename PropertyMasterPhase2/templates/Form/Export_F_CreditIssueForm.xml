@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<root createdUser="user1" entityName="NuveenCreditIssue" entitySubType="[]" id="A~z*%&gt;8F81" isDefault="N" isPublic="Y" screenType="SYSTEMFORM" title="F: CreditIssueForm">
+  <control caption="Instrument Details" columns="3" fullQualPath="NuveenCreditIssue.InstrumentDetails" hideDetail="N" id="&amp;lt;YuYv&amp;gt;4HO1" labelName="" lazyInd="N" orderNum="0" pageSize="0" parentId="" relatedPath="" screenId="A~z*%&amp;gt;8F81" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="RECORD">
+    <config>{"DETAIL_CHART_CONFIG":[]}</config>
+    <control caption="Issuer Long Name" columns="2" fullQualPath="NuveenCreditIssue.InstrumentDetails.Issuer.Issuer.IssuerInformation.IssuerName" hideDetail="N" id="&amp;lt;Yugv&amp;gt;4HO1" isColumnInTable="N" labelName="" lazyInd="N" orderNum="0" pageSize="0" parentId="&amp;lt;YuYv&amp;gt;4HO1" relatedPath="" screenId="A~z*%&amp;gt;8F81" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+      <config>{"DETAIL_CHART_CONFIG":[]}</config>
+    </control>
+    <control caption="Instrument Name" columns="2" fullQualPath="NuveenCreditIssue.InstrumentDetails.PreferredInstrumentName" hideDetail="N" id="&amp;lt;Yuiv&amp;gt;4HO1" isColumnInTable="N" labelName="" lazyInd="N" orderNum="1" pageSize="0" parentId="&amp;lt;YuYv&amp;gt;4HO1" relatedPath="" screenId="A~z*%&amp;gt;8F81" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+      <config>{"DETAIL_CHART_CONFIG":[]}</config>
+    </control>
+    <control caption="Instrument Description" columns="2" fullQualPath="NuveenCreditIssue.InstrumentDetails.PreferredInstrumentDescription" hideDetail="N" id="&amp;lt;Yukv&amp;gt;4HO1" isColumnInTable="N" labelName="" lazyInd="N" orderNum="2" pageSize="0" parentId="&amp;lt;YuYv&amp;gt;4HO1" relatedPath="" screenId="A~z*%&amp;gt;8F81" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+      <config>{"DETAIL_CHART_CONFIG":[]}</config>
+    </control>
+    <control caption="Instrument Type" columns="2" fullQualPath="NuveenCreditIssue.InstrumentDetails.InstrumentType" hideDetail="N" id="&amp;lt;Yumv&amp;gt;4HO1" isColumnInTable="N" labelName="" lazyInd="N" orderNum="3" pageSize="0" parentId="&amp;lt;YuYv&amp;gt;4HO1" relatedPath="" screenId="A~z*%&amp;gt;8F81" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+      <config>{"DETAIL_CHART_CONFIG":[]}</config>
+    </control>
+    <control caption="Par Value" columns="2" fullQualPath="NuveenCreditIssue.InstrumentDetails.ParValue" hideDetail="N" id="&amp;lt;Yuov&amp;gt;4HO1" isColumnInTable="N" labelName="" lazyInd="N" orderNum="4" pageSize="0" parentId="&amp;lt;YuYv&amp;gt;4HO1" relatedPath="" screenId="A~z*%&amp;gt;8F81" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+      <config>{"DETAIL_CHART_CONFIG":[]}</config>
+    </control>
+    <control caption="Instrument System Status" columns="2" fullQualPath="NuveenCreditIssue.InstrumentDetails.InstrumentSystemStatus" hideDetail="N" id="&amp;lt;Yuqv&amp;gt;4HO1" isColumnInTable="N" labelName="" lazyInd="N" orderNum="5" pageSize="0" parentId="&amp;lt;YuYv&amp;gt;4HO1" relatedPath="" screenId="A~z*%&amp;gt;8F81" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+      <config>{"DETAIL_CHART_CONFIG":[]}</config>
+    </control>
+  </control>
+  <control caption="Instrument Level Identifiers" columns="3" fullQualPath="NuveenCreditIssue.Identifiers.InstrumentLevelIdentifiers" hideDetail="N" id="&amp;lt;Yusv&amp;gt;4HO1" labelName="" lazyInd="N" orderNum="1" pageSize="0" parentId="" relatedPath="" screenId="A~z*%&amp;gt;8F81" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="RECORD">
+    <config>{"DETAIL_CHART_CONFIG":[]}</config>
+    <control caption="Merritt Issue ID" columns="2" fullQualPath="NuveenCreditIssue.Identifiers.InstrumentLevelIdentifiers.NuveenMerrittIssueID" hideDetail="N" id="&amp;lt;Yuwv&amp;gt;4HO1" isColumnInTable="N" labelName="" lazyInd="N" orderNum="0" pageSize="0" parentId="&amp;lt;Yusv&amp;gt;4HO1" relatedPath="" screenId="A~z*%&amp;gt;8F81" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+      <config>{"DETAIL_CHART_CONFIG":[]}</config>
+    </control>
+    <control caption="System Issue ID" columns="2" fullQualPath="NuveenCreditIssue.Identifiers.InstrumentLevelIdentifiers.NuveenSystemIssueID" hideDetail="N" id="&amp;lt;Yuyv&amp;gt;4HO1" isColumnInTable="N" labelName="" lazyInd="N" orderNum="1" pageSize="0" parentId="&amp;lt;Yusv&amp;gt;4HO1" relatedPath="" screenId="A~z*%&amp;gt;8F81" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+      <config>{"DETAIL_CHART_CONFIG":[]}</config>
+    </control>
+  </control>
+  <control caption="Classification" columns="3" fullQualPath="NuveenCreditIssue.InstrumentClassification" hideDetail="N" id="&amp;lt;Yu$v&amp;gt;4HO1" labelName="" lazyInd="N" orderNum="2" pageSize="0" parentId="" relatedPath="" screenId="A~z*%&amp;gt;8F81" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="RECORD">
+    <config>{"DETAIL_CHART_CONFIG":[]}</config>
+    <control caption="Debt Structure" columns="2" fullQualPath="NuveenCreditIssue.InstrumentClassification.NuveenDebtStructure" hideDetail="N" id="&amp;lt;Yu*v&amp;gt;4HO1" isColumnInTable="N" labelName="" lazyInd="N" orderNum="0" pageSize="0" parentId="&amp;lt;Yu$v&amp;gt;4HO1" relatedPath="" screenId="A~z*%&amp;gt;8F81" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+      <config>{"DETAIL_CHART_CONFIG":[]}</config>
+    </control>
+    <control caption="Issue Type" columns="2" fullQualPath="NuveenCreditIssue.InstrumentClassification.NuveenIssueType" hideDetail="N" id="&amp;lt;Yu.v&amp;gt;4HO1" isColumnInTable="N" labelName="" lazyInd="N" orderNum="1" pageSize="0" parentId="&amp;lt;Yu$v&amp;gt;4HO1" relatedPath="" screenId="A~z*%&amp;gt;8F81" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+      <config>{"DETAIL_CHART_CONFIG":[]}</config>
+    </control>
+  </control>
+  <control caption="Nuveen Statistics" columns="3" fullQualPath="NuveenCreditIssue.NuveenStatistics" hideDetail="N" id="&amp;lt;Yu(v&amp;gt;4HO1" labelName="" lazyInd="N" orderNum="3" pageSize="0" parentId="" relatedPath="" screenId="A~z*%&amp;gt;8F81" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="RECORD">
+    <config>{"DETAIL_CHART_CONFIG":[]}</config>
+    <control caption="Other Enhancements" columns="2" fullQualPath="NuveenCreditIssue.NuveenStatistics.NuveenOtherEnhancements" hideDetail="N" id="&amp;lt;Yu2w&amp;gt;4HO1" isColumnInTable="N" labelName="" lazyInd="N" orderNum="0" pageSize="0" parentId="&amp;lt;Yu(v&amp;gt;4HO1" relatedPath="" screenId="A~z*%&amp;gt;8F81" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+      <config>{"DETAIL_CHART_CONFIG":[]}</config>
+    </control>
+    <control caption="Calls" columns="2" fullQualPath="NuveenCreditIssue.NuveenStatistics.NuveenIssueCalls" hideDetail="N" id="&amp;lt;Yu4w&amp;gt;4HO1" isColumnInTable="N" labelName="" lazyInd="N" orderNum="1" pageSize="0" parentId="&amp;lt;Yu(v&amp;gt;4HO1" relatedPath="" screenId="A~z*%&amp;gt;8F81" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+      <config>{"DETAIL_CHART_CONFIG":[]}</config>
+    </control>
+    <control caption="Purpose" columns="2" fullQualPath="NuveenCreditIssue.NuveenStatistics.NuveenIssuePurpose" hideDetail="N" id="&amp;lt;Yu6w&amp;gt;4HO1" isColumnInTable="N" labelName="" lazyInd="N" orderNum="2" pageSize="0" parentId="&amp;lt;Yu(v&amp;gt;4HO1" relatedPath="" screenId="A~z*%&amp;gt;8F81" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+      <config>{"DETAIL_CHART_CONFIG":[]}</config>
+    </control>
+    <control caption="Legal Description" columns="2" fullQualPath="NuveenCreditIssue.NuveenStatistics.NuveenIssueLegalDesc" hideDetail="N" id="&amp;lt;Yu8w&amp;gt;4HO1" isColumnInTable="N" labelName="" lazyInd="N" orderNum="3" pageSize="0" parentId="&amp;lt;Yu(v&amp;gt;4HO1" relatedPath="" screenId="A~z*%&amp;gt;8F81" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+      <config>{"DETAIL_CHART_CONFIG":[]}</config>
+    </control>
+    <control caption="Use of Proceeds" columns="2" fullQualPath="NuveenCreditIssue.NuveenStatistics.NuveenUseOfProceeds" hideDetail="N" id="&amp;lt;YuAw&amp;gt;4HO1" isColumnInTable="N" labelName="" lazyInd="N" orderNum="4" pageSize="0" parentId="&amp;lt;Yu(v&amp;gt;4HO1" relatedPath="" screenId="A~z*%&amp;gt;8F81" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+      <config>{"DETAIL_CHART_CONFIG":[]}</config>
+    </control>
+    <control caption="Tax Status" columns="2" fullQualPath="NuveenCreditIssue.NuveenStatistics.NuveenTaxStatus" hideDetail="N" id="&amp;lt;YuCw&amp;gt;4HO1" isColumnInTable="N" labelName="" lazyInd="N" orderNum="5" pageSize="0" parentId="&amp;lt;Yu(v&amp;gt;4HO1" relatedPath="" screenId="A~z*%&amp;gt;8F81" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+      <config>{"DETAIL_CHART_CONFIG":[]}</config>
+    </control>
+  </control>
+  <control caption="Bond Features" columns="3" fullQualPath="NuveenCreditIssue.BondFeatures" hideDetail="N" id="&amp;lt;YuEw&amp;gt;4HO1" labelName="" lazyInd="N" orderNum="4" pageSize="0" parentId="" relatedPath="" screenId="A~z*%&amp;gt;8F81" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="RECORD">
+    <config>{"DETAIL_CHART_CONFIG":[]}</config>
+    <control caption="Dated Date" columns="2" fullQualPath="NuveenCreditIssue.BondFeatures.DatedDate" hideDetail="N" id="&amp;lt;YuHw&amp;gt;4HO1" isColumnInTable="N" labelName="" lazyInd="N" orderNum="0" pageSize="0" parentId="&amp;lt;YuEw&amp;gt;4HO1" relatedPath="" screenId="A~z*%&amp;gt;8F81" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+      <config>{"DETAIL_CHART_CONFIG":[]}</config>
+    </control>
+  </control>
+  <control caption="Issue Details" columns="2" fullQualPath="" hideDetail="N" id="&amp;lt;YuJw&amp;gt;4HO1" labelName="" lazyInd="N" orderNum="5" pageSize="0" parentId="" relatedPath="" screenId="A~z*%&amp;gt;8F81" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="TABSHEET">
+    <config>{"DETAIL_CHART_CONFIG":[]}</config>
+    <control caption="Party Roles" columns="3" fullQualPath="NuveenCreditIssue.InstitutionRoles" hideDetail="N" id="&amp;lt;Yukw&amp;gt;4HO1" isColumnInTable="N" labelName="" lazyInd="N" orderNum="0" pageSize="5" parentId="&amp;lt;YuJw&amp;gt;4HO1" relatedPath="" screenId="A~z*%&amp;gt;8F81" show="Y" showAsTable="Y" showDetailOnTop="N" showOneBelowAnother="N" type="LIST">
+      <control caption="Institution Name" columns="2" fullQualPath="NuveenCreditIssue.InstitutionRoles.RelatedInstitution.FinancialInstitution.FinancialInstitutionDetails.FinancialInstitutionName" hideDetail="N" id="&amp;lt;Yutw&amp;gt;4HO1" isColumnInTable="N" labelName="" lazyInd="N" orderNum="0" pageSize="0" parentId="&amp;lt;Yukw&amp;gt;4HO1" relatedPath="" screenId="A~z*%&amp;gt;8F81" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Institution Description" columns="2" fullQualPath="NuveenCreditIssue.InstitutionRoles.RelatedInstitution.FinancialInstitution.FinancialInstitutionDetails.InstitutionDescription" hideDetail="N" id="&amp;lt;Yuvw&amp;gt;4HO1" isColumnInTable="N" labelName="" lazyInd="N" orderNum="1" pageSize="0" parentId="&amp;lt;Yukw&amp;gt;4HO1" relatedPath="" screenId="A~z*%&amp;gt;8F81" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Role Type" columns="2" fullQualPath="NuveenCreditIssue.InstitutionRoles.InstitutionRoleType" hideDetail="N" id="&amp;lt;Yuxw&amp;gt;4HO1" isColumnInTable="N" labelName="" lazyInd="N" orderNum="2" pageSize="0" parentId="&amp;lt;Yukw&amp;gt;4HO1" relatedPath="" screenId="A~z*%&amp;gt;8F81" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Relationship Purpose" columns="2" fullQualPath="NuveenCreditIssue.InstitutionRoles.InstitutionRelationshipPurpose" hideDetail="N" id="&amp;lt;Yuzw&amp;gt;4HO1" isColumnInTable="N" labelName="" lazyInd="N" orderNum="3" pageSize="0" parentId="&amp;lt;Yukw&amp;gt;4HO1" relatedPath="" screenId="A~z*%&amp;gt;8F81" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Effective Date" columns="2" fullQualPath="NuveenCreditIssue.InstitutionRoles.InstitutionRelationshipEffectiveDate" hideDetail="N" id="&amp;lt;Yu%w&amp;gt;4HO1" isColumnInTable="N" labelName="" lazyInd="N" orderNum="4" pageSize="0" parentId="&amp;lt;Yukw&amp;gt;4HO1" relatedPath="" screenId="A~z*%&amp;gt;8F81" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Effective End Date" columns="2" fullQualPath="NuveenCreditIssue.InstitutionRoles.InstitutionRelationshipEffectiveEndDate" hideDetail="N" id="&amp;lt;Yu&amp;amp;w&amp;gt;4HO1" isColumnInTable="N" labelName="" lazyInd="N" orderNum="5" pageSize="0" parentId="&amp;lt;Yukw&amp;gt;4HO1" relatedPath="" screenId="A~z*%&amp;gt;8F81" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Relationship Status" columns="2" fullQualPath="NuveenCreditIssue.InstitutionRoles.InstitutionRoleRelationshipStatus" hideDetail="N" id="&amp;lt;Yu-w&amp;gt;4HO1" isColumnInTable="N" labelName="" lazyInd="N" orderNum="6" pageSize="0" parentId="&amp;lt;Yukw&amp;gt;4HO1" relatedPath="" screenId="A~z*%&amp;gt;8F81" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <config>{"DETAIL_CHART_CONFIG":[]}</config>
+    </control>
+    <control caption="Related Security" columns="3" fullQualPath="NuveenCreditIssue.RelatedInstrument" hideDetail="N" id="&amp;lt;Yu/w&amp;gt;4HO1" isColumnInTable="N" labelName="" lazyInd="N" orderNum="1" pageSize="5" parentId="&amp;lt;YuJw&amp;gt;4HO1" relatedPath="" screenId="A~z*%&amp;gt;8F81" show="Y" showAsTable="Y" showDetailOnTop="N" showOneBelowAnother="N" type="LIST">
+      <control caption="Relationship Type" columns="2" fullQualPath="NuveenCreditIssue.RelatedInstrument.RelationshipType" hideDetail="N" id="&amp;lt;Yu2x&amp;gt;4HO1" isColumnInTable="Y" labelName="" lazyInd="N" orderNum="0" pageSize="0" parentId="&amp;lt;Yu/w&amp;gt;4HO1" relatedPath="" screenId="A~z*%&amp;gt;8F81" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Related Instrument Details" columns="2" fullQualPath="NuveenCreditIssue.RelatedInstrument.RelatedInstrumentDetails" hideDetail="N" id="&amp;lt;Yu4x&amp;gt;4HO1" isColumnInTable="Y" labelName="" lazyInd="N" orderNum="1" pageSize="0" parentId="&amp;lt;Yu/w&amp;gt;4HO1" relatedPath="" screenId="A~z*%&amp;gt;8F81" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="LIST">
+        <control caption="CUSIP" columns="2" fullQualPath="NuveenCreditIssue.RelatedInstrument.RelatedInstrumentDetails.NuveenUnderlyingCUSIP.FullInstrument.Identifiers.InstrumentLevelIdentifiers.CUSIP" hideDetail="N" id="&amp;lt;YuBx&amp;gt;4HO1" isColumnInTable="N" labelName="" lazyInd="N" orderNum="0" pageSize="0" parentId="&amp;lt;Yu4x&amp;gt;4HO1" relatedPath="" screenId="A~z*%&amp;gt;8F81" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="ISIN" columns="2" fullQualPath="NuveenCreditIssue.RelatedInstrument.RelatedInstrumentDetails.NuveenUnderlyingCUSIP.FullInstrument.Identifiers.InstrumentLevelIdentifiers.ISIN" hideDetail="N" id="&amp;lt;YuDx&amp;gt;4HO1" isColumnInTable="N" labelName="" lazyInd="N" orderNum="1" pageSize="0" parentId="&amp;lt;Yu4x&amp;gt;4HO1" relatedPath="" screenId="A~z*%&amp;gt;8F81" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Instrument Name" columns="2" fullQualPath="NuveenCreditIssue.RelatedInstrument.RelatedInstrumentDetails.NuveenUnderlyingCUSIP.FullInstrument.InstrumentDetails.PreferredInstrumentName" hideDetail="N" id="&amp;lt;YuFx&amp;gt;4HO1" isColumnInTable="N" labelName="" lazyInd="N" orderNum="2" pageSize="0" parentId="&amp;lt;Yu4x&amp;gt;4HO1" relatedPath="" screenId="A~z*%&amp;gt;8F81" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Relationship Type" columns="2" fullQualPath="NuveenCreditIssue.RelatedInstrument.RelatedInstrumentDetails.RelationshipRoleType" hideDetail="N" id="&amp;lt;YuHx&amp;gt;4HO1" isColumnInTable="N" labelName="" lazyInd="N" orderNum="3" pageSize="0" parentId="&amp;lt;Yu4x&amp;gt;4HO1" relatedPath="" screenId="A~z*%&amp;gt;8F81" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Unit Type" columns="2" fullQualPath="NuveenCreditIssue.RelatedInstrument.RelatedInstrumentDetails.RelatedInstrumentUnitType" hideDetail="N" id="&amp;lt;YuJx&amp;gt;4HO1" isColumnInTable="N" labelName="" lazyInd="N" orderNum="4" pageSize="0" parentId="&amp;lt;Yu4x&amp;gt;4HO1" relatedPath="" screenId="A~z*%&amp;gt;8F81" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <config>{"DETAIL_CHART_CONFIG":[]}</config>
+    </control>
+    <control caption="Exceptions" columns="2" fullQualPath="NuveenCreditIssue.Exceptions" hideDetail="N" id="&amp;lt;YuLx&amp;gt;4HO1" isColumnInTable="N" labelName="" lazyInd="N" orderNum="2" pageSize="0" parentId="&amp;lt;YuJw&amp;gt;4HO1" relatedPath="" screenId="A~z*%&amp;gt;8F81" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="LIST"/>
+    <control caption="Ratings" columns="3" fullQualPath="NuveenCreditIssue.AllInstrumentRatings" hideDetail="N" id="&amp;lt;YuNx&amp;gt;4HO1" isColumnInTable="N" labelName="" lazyInd="N" orderNum="3" pageSize="10" parentId="&amp;lt;YuJw&amp;gt;4HO1" relatedPath="" screenId="A~z*%&amp;gt;8F81" show="Y" showAsTable="Y" showDetailOnTop="N" showOneBelowAnother="N" type="LIST">
+      <control caption="Instrument Ratings History" columns="2" fullQualPath="NuveenCreditIssue.AllInstrumentRatings.AllInstrumentRatingsHistory" hideDetail="N" id="&amp;lt;YuWx&amp;gt;4HO1" isColumnInTable="N" labelName="" lazyInd="N" orderNum="0" pageSize="0" parentId="&amp;lt;YuNx&amp;gt;4HO1" relatedPath="" screenId="A~z*%&amp;gt;8F81" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="LIST">
+        <control caption="Rating Name" columns="2" fullQualPath="NuveenCreditIssue.AllInstrumentRatings.AllInstrumentRatingsHistory.AllHistInstRtngName" hideDetail="N" id="&amp;lt;Yubx&amp;gt;4HO1" isColumnInTable="N" labelName="" lazyInd="N" orderNum="0" pageSize="0" parentId="&amp;lt;YuWx&amp;gt;4HO1" relatedPath="" screenId="A~z*%&amp;gt;8F81" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Rating Value" columns="2" fullQualPath="NuveenCreditIssue.AllInstrumentRatings.AllInstrumentRatingsHistory.AllHistInstRtngValue" hideDetail="N" id="&amp;lt;Yudx&amp;gt;4HO1" isColumnInTable="N" labelName="" lazyInd="N" orderNum="1" pageSize="0" parentId="&amp;lt;YuWx&amp;gt;4HO1" relatedPath="" screenId="A~z*%&amp;gt;8F81" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Rating Effective DateTime" columns="2" fullQualPath="NuveenCreditIssue.AllInstrumentRatings.AllInstrumentRatingsHistory.AllHistInstRtngEffectiveDateTime" hideDetail="N" id="&amp;lt;Yufx&amp;gt;4HO1" isColumnInTable="N" labelName="" lazyInd="N" orderNum="2" pageSize="0" parentId="&amp;lt;YuWx&amp;gt;4HO1" relatedPath="" screenId="A~z*%&amp;gt;8F81" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Rating Name" columns="2" fullQualPath="NuveenCreditIssue.AllInstrumentRatings.AllInstRtngName" hideDetail="N" id="&amp;lt;Yuhx&amp;gt;4HO1" isColumnInTable="N" labelName="" lazyInd="N" orderNum="1" pageSize="0" parentId="&amp;lt;YuNx&amp;gt;4HO1" relatedPath="" screenId="A~z*%&amp;gt;8F81" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Rating Value" columns="2" fullQualPath="NuveenCreditIssue.AllInstrumentRatings.AllInstRtngValue" hideDetail="N" id="&amp;lt;Yujx&amp;gt;4HO1" isColumnInTable="N" labelName="" lazyInd="N" orderNum="2" pageSize="0" parentId="&amp;lt;YuNx&amp;gt;4HO1" relatedPath="" screenId="A~z*%&amp;gt;8F81" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Rating Effective DateTime" columns="2" fullQualPath="NuveenCreditIssue.AllInstrumentRatings.AllInstRtngEffectiveDateTime" hideDetail="N" id="&amp;lt;Yulx&amp;gt;4HO1" isColumnInTable="N" labelName="" lazyInd="N" orderNum="3" pageSize="0" parentId="&amp;lt;YuNx&amp;gt;4HO1" relatedPath="" screenId="A~z*%&amp;gt;8F81" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <config>{"DETAIL_CHART_CONFIG":[]}</config>
+    </control>
+  </control>
+</root>

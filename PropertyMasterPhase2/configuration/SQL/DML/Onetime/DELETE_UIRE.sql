@@ -1,0 +1,1 @@
+delete from ft_o_uire where created_usr_id = 'NRE:CSTM' or srle_oid in (select srle_oid from ft_t_srle where last_chg_usr_id = 'NRE:CSTM');

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entities cleanUnusedFields="false" nameSpace="NUVEEN">
+  <beFields>
+    <beField class="BETEXT" customDesc="Code for the trading venue or environment on which the instrument  trades. If an exchange is specified, the code will be for the specified exchange. When not specified, the code will be according to the user default exchange, which can be the composite or primary exchange.        Fixed Income:       Name of the exchange on which the security is listed or 'NOT LISTED' if it is known that the security is not listed on any exchange.        Commodities:       Returns the Bloomberg contract exchange menu code for the security.        Mutual Funds:       Can represent either the country of exchange listing or the country of domicile of a fund." desc="" displayCaption="Nuveen Market ID Level1" entityTypeId="++3qwBhS2etxm002" id="++8nxlWS2es18005" mandatory="0" multiplicity="SINGLE_OR_NULL" name="NuveenMarketIDLevel1" nameSpace="NUVEEN"/>
+    <beField class="BETEXT" displayCaption="Nuveen Market ID Level2" entityTypeId="++3qwBhS2etxm002" id="++8nxlWS2es1800A" mandatory="0" multiplicity="SINGLE_OR_NULL" name="NuveenMarketIDLevel2" nameSpace="NUVEEN"/>
+    <beField class="BETEXT" customDesc="" desc="" displayCaption="Nuveen Factset Exchange" entityTypeId="++3qwBhS2etxm002" id="++8tsuNy2es18008" mandatory="0" multiplicity="SINGLE_OR_NULL" name="NuveenFactsetExchange" nameSpace="NUVEEN"/>
+    <beField class="BETEXT" customDesc="" desc="" displayCaption="FactSet Exchange" entityTypeId="++3qwBhS2etxm002" id="++8tsuNy2es1800A" mandatory="0" multiplicity="SINGLE_OR_NULL" name="NuveenFactSetExchange1" nameSpace="NUVEEN"/>
+  </beFields>
+  <dataGroups>
+    <dataGroup customInd="0" desc="Market Details" displayCaption="Market Details" entityTypeId="++3qwBhS2etxm002" frequencyInd="0" id="++4KO9uS2etzy000" ignoreDeleteChildren="false" multiplicity="SINGLE_OR_NULL" name="MarketDetails" nameSpace="GSC">
+      <part defNameSpace="NUVEEN" fieldId="++8nxlWS2es18005" id="++8nxlWS2es1800C" prntReqdInd="0" seq="25"/>
+      <part defNameSpace="NUVEEN" fieldId="++8nxlWS2es1800A" id="++8nxlWS2es1800D" prntReqdInd="0" seq="27"/>
+      <part defNameSpace="NUVEEN" fieldId="++8tsuNy2es18008" id="++8tsuNy2es1800C" prntReqdInd="0" seq="29"/>
+      <part defNameSpace="NUVEEN" fieldId="++8tsuNy2es1800A" id="++8tsuNy2es1800D" prntReqdInd="0" seq="30"/>
+    </dataGroup>
+  </dataGroups>
+  <occurrences>
+    <occurrence desc="Occurrence for Financial Market Identifier" id="++8nxlWS2es18002" ignoreDeleteChildren="false" multiplicity="SINGLE_OR_NULL" name="MKID_NVN_MKT1" nameSpace="NUVEEN" parentId="004KIvai2etzy01D" table="FT_T_MKID" timeSeries="LOGICAL_DELETE">
+      <field id="++8nxlWS2es18004" name="MKT_ID" nameSpace="NUVEEN"/>
+      <value id="++8nxlWS2es18003" name="MKT_ID_CTXT_TYP" nameSpace="NUVEEN" type="FILTER_FIELD" value="NVNBBEGL" valueType="CONSTANT"/>
+      <option id="++8nx-KS2es18000" nameSpace="NUVEEN" type="DEFAULT_ACTION" value="UNKNOWN"/>
+      <option id="++8nx-KS2es18001" nameSpace="NUVEEN" type="DEFAULT_MATCH_KEY" value="MKID1_MKT_CTXT_MKTID"/>
+    </occurrence>
+    <occurrence desc="Occurrence for Financial Market Identifier" id="++8nxlWS2es18007" ignoreDeleteChildren="false" multiplicity="SINGLE_OR_NULL" name="MKID_NVN_MKT2" nameSpace="NUVEEN" parentId="004KIvai2etzy01D" table="FT_T_MKID" timeSeries="LOGICAL_DELETE">
+      <field id="++8nxlWS2es18009" name="MKT_ID" nameSpace="NUVEEN"/>
+      <value id="++8nxlWS2es18008" name="MKT_ID_CTXT_TYP" nameSpace="NUVEEN" type="FILTER_FIELD" value="NVNMKT2" valueType="CONSTANT"/>
+      <option id="++8nx-KS2es18002" nameSpace="NUVEEN" type="DEFAULT_ACTION" value="UNKNOWN"/>
+      <option id="++8nx-KS2es18003" nameSpace="NUVEEN" type="DEFAULT_MATCH_KEY" value="MKID1_MKT_CTXT_MKTID"/>
+    </occurrence>
+    <occurrence desc="Occurrence for Financial Market Identifier" id="++8tsuNy2es18000" ignoreDeleteChildren="false" multiplicity="SINGLE_OR_NULL" name="MKID_NVN_FSEXCH" nameSpace="NUVEEN" parentId="004KIvai2etzy01D" table="FT_T_MKID" timeSeries="LOGICAL_DELETE">
+      <field id="++8tsuNy2es18003" name="MKT_ID" nameSpace="NUVEEN"/>
+      <value id="++8tsuNy2es18002" name="MKT_ID_CTXT_TYP" nameSpace="NUVEEN" type="FILTER_FIELD" value="FSEXCH" valueType="CONSTANT"/>
+      <option id="++8tsuNy2es18001" nameSpace="NUVEEN" type="DEFAULT_MATCH_KEY" value="MKID1_MKT_CTXT_MKTID"/>
+    </occurrence>
+    <occurrence desc="Occurrence for Financial Market Identifier" id="++8tsuNy2es18004" ignoreDeleteChildren="false" multiplicity="SINGLE_OR_NULL" name="MKID_NVN_FSEXCHUI" nameSpace="NUVEEN" parentId="004KIvai2etzy01D" table="FT_T_MKID" timeSeries="LOGICAL_DELETE">
+      <field id="++8tsuNy2es18007" name="MKT_ID" nameSpace="NUVEEN"/>
+      <value id="++8tsuNy2es18006" name="MKT_ID_CTXT_TYP" nameSpace="NUVEEN" type="FILTER_FIELD" value="FSEXCHUI" valueType="CONSTANT"/>
+      <option id="++8tsuNy2es18005" nameSpace="NUVEEN" type="DEFAULT_MATCH_KEY" value="MKID1_MKT_CTXT_MKTID"/>
+    </occurrence>
+  </occurrences>
+  <mappings>
+    <mapping beFieldId="++8nxlWS2es18005" groupMapping="0" id="++8nxlWS2es18006" nameSpace="NUVEEN" occFieldId="++8nxlWS2es18004"/>
+    <mapping beFieldId="++8nxlWS2es1800A" groupMapping="0" id="++8nxlWS2es1800B" nameSpace="NUVEEN" occFieldId="++8nxlWS2es18009"/>
+    <mapping beFieldId="++8tsuNy2es18008" groupMapping="0" id="++8tsuNy2es18009" nameSpace="NUVEEN" occFieldId="++8tsuNy2es18007"/>
+    <mapping beFieldId="++8tsuNy2es1800A" groupMapping="0" id="++8tsuNy2es1800B" nameSpace="NUVEEN" occFieldId="++8tsuNy2es18003"/>
+  </mappings>
+</entities>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entities cleanUnusedFields="false" nameSpace="NUVEEN">
+  <beFields>
+    <beField class="BETEXT" customDesc="" customDomainSQL="" customSQL="" desc="" displayCaption="Nuveen Invested Indicator" entityTypeId="++3qwBhS2etxm003" id="009eYdGcHIYuW08c" mandatory="0" multiplicity="SINGLE_OR_NULL" name="NuveenInvestedIndicator" nameSpace="NUVEEN"/>
+  </beFields>
+  <dataGroups>
+    <dataGroup customInd="0" displayCaption="NuveenStatistics" entityTypeId="++3qwBhS2etxm003" frequencyInd="0" id="008mcntC2etbS04Q" ignoreDeleteChildren="false" multiplicity="SINGLE_OR_NULL" name="NuveenStatistics" nameSpace="NUVEEN">
+      <part defNameSpace="NUVEEN" fieldId="009eYdGcHIYuW08c" id="009eYdGcHIYuW08f" prntReqdInd="0" seq="140"/>
+    </dataGroup>
+  </dataGroups>
+  <occurrences>
+    <occurrence desc="Occurrence for Issue Statistic" id="009eYdGcHIYuW08W" ignoreDeleteChildren="false" multiplicity="SINGLE_OR_NULL" name="ISST_NVN_NVIVDIND" nameSpace="NUVEEN" parentId="++4Gmmty2ettS01A" table="FT_T_ISST" timeSeries="LOGICAL_DELETE">
+      <field desc="Statistic Character Value" id="009eYdGcHIYuW08Z" name="STAT_CHAR_VAL_TXT" nameSpace="NUVEEN"/>
+      <value id="009eYdGcHIYuW08Y" name="STAT_DEF_ID" nameSpace="NUVEEN" type="FILTER_FIELD" value="NVIVDIND" valueType="CONSTANT"/>
+      <option id="009eYdGcHIYuW08X" nameSpace="NUVEEN" type="DEFAULT_ACTION" value="UNKNOWN"/>
+    </occurrence>
+  </occurrences>
+  <mappings>
+    <mapping beFieldId="009eYdGcHIYuW08c" groupMapping="0" id="009eYdGcHIYuW08d" nameSpace="NUVEEN" occFieldId="009eYdGcHIYuW08Z"/>
+  </mappings>
+</entities>

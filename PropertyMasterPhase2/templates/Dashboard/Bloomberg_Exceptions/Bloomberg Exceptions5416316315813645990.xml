@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<root createdUser="user1" id="l5CIC1)le1" screenType="DASHBOARD" title="Bloomberg Exceptions">
+  <users>
+    <user id="icz%x&gt;&gt;.e1" user="" userGroup="" userRole="sm_readonly"/>
+    <user id="4NDd31lke1" user="" userGroup="" userRole="readonly"/>
+    <user id="4NDe31lke1" user="" userGroup="" userRole="administrators"/>
+    <user id="icz@x&gt;&gt;.e1" user="" userGroup="" userRole="sm_users"/>
+    <user id="4NDf31lke1" user="" userGroup="" userRole="users"/>
+  </users>
+  <tabs>
+    <tab columns="12" id="l5CJC1)le1" orderNum="0" tabSearch="l5CI91)le1" title="Bloomberg Loan Exceptions">
+      <participants>
+        <participant createdUser="user1" height="27" id="l5CKC1)le1" orderNum="0" tabSearch="l5CI91)le1" width="12" x="0" y="12"/>
+        <participant createdUser="user1" height="12" id="l5CLC1)le1" orderNum="1" tabChart="l5CGC1)le1" width="6" x="6" y="0"/>
+        <participant createdUser="user1" height="12" id="l5CMC1)le1" orderNum="2" tabChart="l5CHC1)le1" width="6" x="0" y="0"/>
+      </participants>
+    </tab>
+    <tab columns="12" id="l5CNC1)le1" orderNum="1" tabSearch="l5CaB1)le1" title="Bloomberg non-Loan Exceptions">
+      <participants>
+        <participant createdUser="user1" height="27" id="l5COC1)le1" orderNum="0" tabSearch="l5CaB1)le1" width="12" x="0" y="12"/>
+        <participant createdUser="user1" height="12" id="l5CRC1)le1" orderNum="1" tabChart="l5CPC1)le1" width="6" x="0" y="0"/>
+        <participant createdUser="user1" height="12" id="l5CSC1)le1" orderNum="2" tabChart="l5CQC1)le1" width="6" x="6" y="0"/>
+      </participants>
+    </tab>
+  </tabs>
+</root>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<MappingDef type="OMDX" version="1.0">
+  <Options>
+    <Option key="MappingComment"/>
+    <Option key="MappingVersion">1.0.0.0</Option>
+    <Option key="MappingAuthor"/>
+    <Option key="MessageTranslatorVersion">8.1.1.1</Option>
+    <Option key="RCode"/>
+    <Option key="LastChangedTms">2024-09-05 at 06:18:46 IST</Option>
+    <Option key="MappingDesignerVersion">8.8.1.10</Option>
+    <Option key="OMDX.Base">FitchRDS_IssueRatings.mdx</Option>
+  </Options>
+  <Input vendorType="BB">
+    <Options/>
+    <Layout>
+      <Override/>
+    </Layout>
+  </Input>
+  <Output>
+    <MappingFragments/>
+    <OutputDef/>
+  </Output>
+  <Translation/>
+  <Expressions>
+    <Expression enabled="true" ident="GSDMFiltering">
+      <expr><![CDATA[if (AllHaveValue(FitchIssueIDNumber, Select("", "", "select isid.iss_id from ft_t_isid isid,ft_t_isgp isgp,ft_t_isgr isgr where isid.id_ctxt_typ = 'FITCH' and isid.end_tms is null and isgp.instr_id = isid.instr_id and isgp.end_tms is null and isgp.prnt_iss_grp_oid =isgr.iss_grp_oid and isgr.end_tms is null and isgr.iss_grp_oid in ('LEVFIN0001','LEVFIN0002','LEVFIN0003','LEVFIN0004') and isid.iss_id=:1", FitchIssueIDNumber, "", "", "", "")))
+	return "false";
+else
+	return "true";]]></expr>
+    </Expression>
+  </Expressions>
+</MappingDef>

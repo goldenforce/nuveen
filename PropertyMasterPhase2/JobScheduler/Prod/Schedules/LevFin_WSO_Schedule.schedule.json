@@ -1,0 +1,25 @@
+{
+  "version" : "1.6.6",
+  "workflowNames" : [ "Nuveen_LevFin_WSO_Load_Process" ],
+  "title" : "LevFin_WSO_Schedule",
+  "submitOrderToControllerWhenPlanned" : true,
+  "planOrderAutomatically" : true,
+  "calendars" : [ {
+    "calendarName" : "LevFin_Process_Calendar",
+    "timeZone" : "America/New_York",
+    "includes" : {
+      "weekdays" : [ {
+        "from" : "2023-10-30",
+        "days" : [ 1, 2, 3, 4, 5 ]
+      } ]
+    },
+    "periods" : [ {
+      "singleStart" : "23:30:00",
+      "whenHoliday" : "SUPPRESS"
+    } ]
+  } ],
+  "nonWorkingDayCalendars" : [ {
+    "calendarName" : "LevFin_SamedayJobHolidayCalandar"
+  } ],
+  "orderParameterisations" : [ ]
+}

@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<root createdUser="user1" entityName="NuveenCredit" entitySubType="[]" id="&amp;WDF918F81" isDefault="Y" isPublic="Y" screenType="SYSTEMFORM" title="F: CreditForm">
+  <control caption="Institution Details" columns="3" fullQualPath="NuveenCredit.FinancialInstitutionDetails" hideDetail="N" id="8AvFq&amp;gt;~OO1" labelName="" lazyInd="N" orderNum="0" pageSize="0" parentId="" relatedPath="" screenId="&amp;amp;WDF918F81" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="RECORD">
+    <config>{"DETAIL_CHART_CONFIG":[]}</config>
+    <control caption="Institution Name" columns="2" fullQualPath="NuveenCredit.FinancialInstitutionDetails.FinancialInstitutionName" hideDetail="N" id="8AvNq&amp;gt;~OO1" isColumnInTable="N" labelName="" lazyInd="N" orderNum="0" pageSize="0" parentId="8AvFq&amp;gt;~OO1" relatedPath="" screenId="&amp;amp;WDF918F81" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+      <config>{"DETAIL_CHART_CONFIG":[]}</config>
+    </control>
+    <control caption="Institution Description" columns="2" fullQualPath="NuveenCredit.FinancialInstitutionDetails.InstitutionDescription" hideDetail="N" id="8AvPq&amp;gt;~OO1" isColumnInTable="N" labelName="" lazyInd="N" orderNum="1" pageSize="0" parentId="8AvFq&amp;gt;~OO1" relatedPath="" screenId="&amp;amp;WDF918F81" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+      <config>{"DETAIL_CHART_CONFIG":[]}</config>
+    </control>
+    <control caption="Institution Type" columns="2" fullQualPath="NuveenCredit.FinancialInstitutionDetails.InstitutionType" hideDetail="N" id="8AvRq&amp;gt;~OO1" isColumnInTable="N" labelName="" lazyInd="N" orderNum="2" pageSize="0" parentId="8AvFq&amp;gt;~OO1" relatedPath="" screenId="&amp;amp;WDF918F81" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+      <config>{"DETAIL_CHART_CONFIG":[]}</config>
+    </control>
+    <control caption="Merritt Credit Name" columns="2" fullQualPath="NuveenCredit.FinancialInstitutionDetails.NuveenMerrittCreditName" hideDetail="N" id="8AvTq&amp;gt;~OO1" isColumnInTable="N" labelName="" lazyInd="N" orderNum="3" pageSize="0" parentId="8AvFq&amp;gt;~OO1" relatedPath="" screenId="&amp;amp;WDF918F81" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+      <config>{"DETAIL_CHART_CONFIG":[]}</config>
+    </control>
+    <control caption="Credit State" columns="2" fullQualPath="NuveenCredit.FinancialInstitutionDetails.NuveenCreditState" hideDetail="N" id="8AvVq&amp;gt;~OO1" isColumnInTable="N" labelName="" lazyInd="N" orderNum="4" pageSize="0" parentId="8AvFq&amp;gt;~OO1" relatedPath="" screenId="&amp;amp;WDF918F81" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+      <config>{"DETAIL_CHART_CONFIG":[]}</config>
+    </control>
+    <control caption="Credit City" columns="2" fullQualPath="NuveenCredit.FinancialInstitutionDetails.NuveenCreditCity" hideDetail="N" id="8AvXq&amp;gt;~OO1" isColumnInTable="N" labelName="" lazyInd="N" orderNum="5" pageSize="0" parentId="8AvFq&amp;gt;~OO1" relatedPath="" screenId="&amp;amp;WDF918F81" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+      <config>{"DETAIL_CHART_CONFIG":[]}</config>
+    </control>
+  </control>
+  <control caption="Identifiers" columns="3" fullQualPath="NuveenCredit.FinancialInstitutionIdentifiers" hideDetail="N" id="8AvZq&amp;gt;~OO1" labelName="" lazyInd="N" orderNum="1" pageSize="0" parentId="" relatedPath="" screenId="&amp;amp;WDF918F81" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="RECORD">
+    <config>{"DETAIL_CHART_CONFIG":[]}</config>
+    <control caption="System Credit Identifier" columns="2" fullQualPath="NuveenCredit.FinancialInstitutionIdentifiers.SystemCreditID" hideDetail="N" id="8Avfq&amp;gt;~OO1" isColumnInTable="N" labelName="" lazyInd="N" orderNum="0" pageSize="0" parentId="8AvZq&amp;gt;~OO1" relatedPath="" screenId="&amp;amp;WDF918F81" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+      <config>{"DETAIL_CHART_CONFIG":[]}</config>
+    </control>
+    <control caption="Credit Number" columns="2" fullQualPath="NuveenCredit.FinancialInstitutionIdentifiers.NuveenCreditNumber" hideDetail="N" id="8Avhq&amp;gt;~OO1" isColumnInTable="N" labelName="" lazyInd="N" orderNum="1" pageSize="0" parentId="8AvZq&amp;gt;~OO1" relatedPath="" screenId="&amp;amp;WDF918F81" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+      <config>{"DETAIL_CHART_CONFIG":[]}</config>
+    </control>
+    <control caption="Hub Credit ID" columns="2" fullQualPath="NuveenCredit.FinancialInstitutionIdentifiers.NuveenHubCreditId" hideDetail="N" id="8Avjq&amp;gt;~OO1" isColumnInTable="N" labelName="" lazyInd="N" orderNum="2" pageSize="0" parentId="8AvZq&amp;gt;~OO1" relatedPath="" screenId="&amp;amp;WDF918F81" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+      <config>{"DETAIL_CHART_CONFIG":[]}</config>
+    </control>
+    <control caption="Merritt Credit ID" columns="2" fullQualPath="NuveenCredit.FinancialInstitutionIdentifiers.NuveenMerrittCreditId" hideDetail="N" id="8Avlq&amp;gt;~OO1" isColumnInTable="N" labelName="" lazyInd="N" orderNum="3" pageSize="0" parentId="8AvZq&amp;gt;~OO1" relatedPath="" screenId="&amp;amp;WDF918F81" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+      <config>{"DETAIL_CHART_CONFIG":[]}</config>
+    </control>
+  </control>
+  <control caption="Classification" columns="3" fullQualPath="NuveenCredit.FinancialInstitutionClassification" hideDetail="N" id="8Avnq&amp;gt;~OO1" labelName="" lazyInd="N" orderNum="2" pageSize="0" parentId="" relatedPath="" screenId="&amp;amp;WDF918F81" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="RECORD">
+    <config>{"DETAIL_CHART_CONFIG":[]}</config>
+    <control caption="Security Code" columns="2" fullQualPath="NuveenCredit.FinancialInstitutionClassification.NuveenSecurityCode" hideDetail="N" id="8Avsq&amp;gt;~OO1" isColumnInTable="N" labelName="" lazyInd="N" orderNum="0" pageSize="0" parentId="8Avnq&amp;gt;~OO1" relatedPath="" screenId="&amp;amp;WDF918F81" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+      <config>{"DETAIL_CHART_CONFIG":[]}</config>
+    </control>
+    <control caption="Muni Sector Code" columns="2" fullQualPath="NuveenCredit.FinancialInstitutionClassification.NuveenMuniSectorCode" hideDetail="N" id="8Avuq&amp;gt;~OO1" isColumnInTable="N" labelName="" lazyInd="N" orderNum="1" pageSize="0" parentId="8Avnq&amp;gt;~OO1" relatedPath="" screenId="&amp;amp;WDF918F81" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+      <config>{"DETAIL_CHART_CONFIG":[]}</config>
+    </control>
+    <control caption="Merritt Sector Name" columns="2" fullQualPath="NuveenCredit.FinancialInstitutionClassification.NuveenMerrittSectorName" hideDetail="N" id="8Avwq&amp;gt;~OO1" isColumnInTable="N" labelName="" lazyInd="N" orderNum="2" pageSize="0" parentId="8Avnq&amp;gt;~OO1" relatedPath="" screenId="&amp;amp;WDF918F81" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+      <config>{"DETAIL_CHART_CONFIG":[]}</config>
+    </control>
+  </control>
+  <control caption="Indenture" columns="3" fullQualPath="NuveenCredit.NuveenIndentureDetails" hideDetail="N" id="8Avyq&amp;gt;~OO1" labelName="" lazyInd="N" orderNum="3" pageSize="0" parentId="" relatedPath="" screenId="&amp;amp;WDF918F81" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="RECORD">
+    <config>{"DETAIL_CHART_CONFIG":[]}</config>
+  </control>
+  <control caption="Credit Details" columns="2" fullQualPath="" hideDetail="N" id="8Av$q&amp;gt;~OO1" labelName="" lazyInd="N" orderNum="4" pageSize="0" parentId="" relatedPath="" screenId="&amp;amp;WDF918F81" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="TABSHEET">
+    <config>{"DETAIL_CHART_CONFIG":[]}</config>
+    <control caption="Ratings" columns="3" fullQualPath="NuveenCredit.RatingsOpinion.Ratings" hideDetail="N" id="8Avur&amp;gt;~OO1" isColumnInTable="N" labelName="" lazyInd="N" orderNum="0" pageSize="5" parentId="8Av$q&amp;gt;~OO1" relatedPath="" screenId="&amp;amp;WDF918F81" show="Y" showAsTable="Y" showDetailOnTop="N" showOneBelowAnother="N" type="LIST">
+      <control caption="Rating History" columns="2" fullQualPath="NuveenCredit.RatingsOpinion.Ratings.RatingHist" hideDetail="N" id="8Av&amp;amp;r&amp;gt;~OO1" isColumnInTable="N" labelName="" lazyInd="N" orderNum="0" pageSize="0" parentId="8Avur&amp;gt;~OO1" relatedPath="" screenId="&amp;amp;WDF918F81" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="LIST">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Rating Name" columns="2" fullQualPath="NuveenCredit.RatingsOpinion.Ratings.RatingName" hideDetail="N" id="8Av-r&amp;gt;~OO1" isColumnInTable="N" labelName="" lazyInd="N" orderNum="1" pageSize="0" parentId="8Avur&amp;gt;~OO1" relatedPath="" screenId="&amp;amp;WDF918F81" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Rating Value" columns="2" fullQualPath="NuveenCredit.RatingsOpinion.Ratings.RatingValue" hideDetail="N" id="8Av/r&amp;gt;~OO1" isColumnInTable="N" labelName="" lazyInd="N" orderNum="2" pageSize="0" parentId="8Avur&amp;gt;~OO1" relatedPath="" screenId="&amp;amp;WDF918F81" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Rating Effective Date" columns="2" fullQualPath="NuveenCredit.RatingsOpinion.Ratings.RatingEffectiveDate" hideDetail="N" id="8Av)r&amp;gt;~OO1" isColumnInTable="N" labelName="" lazyInd="N" orderNum="3" pageSize="0" parentId="8Avur&amp;gt;~OO1" relatedPath="" screenId="&amp;amp;WDF918F81" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Rating Purpose" columns="2" fullQualPath="NuveenCredit.RatingsOpinion.Ratings.RatingPurpose" hideDetail="N" id="8Av?r&amp;gt;~OO1" isColumnInTable="N" labelName="" lazyInd="N" orderNum="4" pageSize="0" parentId="8Avur&amp;gt;~OO1" relatedPath="" screenId="&amp;amp;WDF918F81" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Rating Data Source Id" columns="2" fullQualPath="NuveenCredit.RatingsOpinion.Ratings.RatingDataSourceId" hideDetail="N" id="8Av&amp;gt;r&amp;gt;~OO1" isColumnInTable="N" labelName="" lazyInd="N" orderNum="5" pageSize="0" parentId="8Avur&amp;gt;~OO1" relatedPath="" screenId="&amp;amp;WDF918F81" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Rating Effective End Date" columns="2" fullQualPath="NuveenCredit.RatingsOpinion.Ratings.RatingEffectiveEndDate" hideDetail="N" id="8Av1s&amp;gt;~OO1" isColumnInTable="N" labelName="" lazyInd="N" orderNum="6" pageSize="0" parentId="8Avur&amp;gt;~OO1" relatedPath="" screenId="&amp;amp;WDF918F81" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <config>{"DETAIL_CHART_CONFIG":[]}</config>
+    </control>
+    <control caption="Watch Opinion" columns="3" fullQualPath="NuveenCredit.RatingsOpinion.WatchOpinion" hideDetail="N" id="8Av3s&amp;gt;~OO1" isColumnInTable="N" labelName="" lazyInd="N" orderNum="1" pageSize="5" parentId="8Av$q&amp;gt;~OO1" relatedPath="" screenId="&amp;amp;WDF918F81" show="Y" showAsTable="Y" showDetailOnTop="N" showOneBelowAnother="N" type="LIST">
+      <control caption="History" columns="2" fullQualPath="NuveenCredit.RatingsOpinion.WatchOpinion.WatchHistOpinion" hideDetail="N" id="8AvHs&amp;gt;~OO1" isColumnInTable="N" labelName="" lazyInd="N" orderNum="0" pageSize="0" parentId="8Av3s&amp;gt;~OO1" relatedPath="" screenId="&amp;amp;WDF918F81" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="LIST">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Rating Name" columns="2" fullQualPath="NuveenCredit.RatingsOpinion.WatchOpinion.WatchRatingName" hideDetail="N" id="8AvJs&amp;gt;~OO1" isColumnInTable="N" labelName="" lazyInd="N" orderNum="1" pageSize="0" parentId="8Av3s&amp;gt;~OO1" relatedPath="" screenId="&amp;amp;WDF918F81" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Direction" columns="2" fullQualPath="NuveenCredit.RatingsOpinion.WatchOpinion.WatchDirection" hideDetail="N" id="8AvLs&amp;gt;~OO1" isColumnInTable="N" labelName="" lazyInd="N" orderNum="2" pageSize="0" parentId="8Av3s&amp;gt;~OO1" relatedPath="" screenId="&amp;amp;WDF918F81" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Effective Date" columns="2" fullQualPath="NuveenCredit.RatingsOpinion.WatchOpinion.WatchEffectiveDate" hideDetail="N" id="8AvNs&amp;gt;~OO1" isColumnInTable="N" labelName="" lazyInd="N" orderNum="3" pageSize="0" parentId="8Av3s&amp;gt;~OO1" relatedPath="" screenId="&amp;amp;WDF918F81" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Comments" columns="2" fullQualPath="NuveenCredit.RatingsOpinion.WatchOpinion.WatchComments" hideDetail="N" id="8AvPs&amp;gt;~OO1" isColumnInTable="N" labelName="" lazyInd="N" orderNum="4" pageSize="0" parentId="8Av3s&amp;gt;~OO1" relatedPath="" screenId="&amp;amp;WDF918F81" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="WL Forbearance" columns="2" fullQualPath="NuveenCredit.RatingsOpinion.WatchOpinion.NuveenCreditWLForbearance" hideDetail="N" id="8AvRs&amp;gt;~OO1" isColumnInTable="N" labelName="" lazyInd="N" orderNum="5" pageSize="0" parentId="8Av3s&amp;gt;~OO1" relatedPath="" screenId="&amp;amp;WDF918F81" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Effective End Date" columns="2" fullQualPath="NuveenCredit.RatingsOpinion.WatchOpinion.WatchEffectiveEndDate" hideDetail="N" id="8AvTs&amp;gt;~OO1" isColumnInTable="N" labelName="" lazyInd="N" orderNum="6" pageSize="0" parentId="8Av3s&amp;gt;~OO1" relatedPath="" screenId="&amp;amp;WDF918F81" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="WL Accuring Interest" columns="2" fullQualPath="NuveenCredit.RatingsOpinion.WatchOpinion.NuveenCreditWLAccruingInterest" hideDetail="N" id="8AvVs&amp;gt;~OO1" isColumnInTable="N" labelName="" lazyInd="N" orderNum="7" pageSize="0" parentId="8Av3s&amp;gt;~OO1" relatedPath="" screenId="&amp;amp;WDF918F81" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="WL Tier" columns="2" fullQualPath="NuveenCredit.RatingsOpinion.WatchOpinion.NuveenCreditWLTier" hideDetail="N" id="8AvXs&amp;gt;~OO1" isColumnInTable="N" labelName="" lazyInd="N" orderNum="8" pageSize="0" parentId="8Av3s&amp;gt;~OO1" relatedPath="" screenId="&amp;amp;WDF918F81" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="WL Monetary Default" columns="2" fullQualPath="NuveenCredit.RatingsOpinion.WatchOpinion.NuveenWLCreditWLMonetaryDefault" hideDetail="N" id="8AvZs&amp;gt;~OO1" isColumnInTable="N" labelName="" lazyInd="N" orderNum="9" pageSize="0" parentId="8Av3s&amp;gt;~OO1" relatedPath="" screenId="&amp;amp;WDF918F81" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="WL Cusip" columns="2" fullQualPath="NuveenCredit.RatingsOpinion.WatchOpinion.NuveenWLCusip" hideDetail="N" id="8Avbs&amp;gt;~OO1" isColumnInTable="N" labelName="" lazyInd="N" orderNum="10" pageSize="0" parentId="8Av3s&amp;gt;~OO1" relatedPath="" screenId="&amp;amp;WDF918F81" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Data Source Id" columns="2" fullQualPath="NuveenCredit.RatingsOpinion.WatchOpinion.WatchDataSourceId" hideDetail="N" id="8Avds&amp;gt;~OO1" isColumnInTable="N" labelName="" lazyInd="N" orderNum="11" pageSize="0" parentId="8Av3s&amp;gt;~OO1" relatedPath="" screenId="&amp;amp;WDF918F81" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <config>{"DETAIL_CHART_CONFIG":[]}</config>
+    </control>
+    <control caption="Outlook Opinion" columns="3" fullQualPath="NuveenCredit.RatingsOpinion.OutlookOpinion" hideDetail="N" id="8Avfs&amp;gt;~OO1" isColumnInTable="N" labelName="" lazyInd="N" orderNum="2" pageSize="5" parentId="8Av$q&amp;gt;~OO1" relatedPath="" screenId="&amp;amp;WDF918F81" show="Y" showAsTable="Y" showDetailOnTop="N" showOneBelowAnother="N" type="LIST">
+      <control caption="History" columns="2" fullQualPath="NuveenCredit.RatingsOpinion.OutlookOpinion.OutlookHistOpinion" hideDetail="N" id="8Avos&amp;gt;~OO1" isColumnInTable="N" labelName="" lazyInd="N" orderNum="0" pageSize="0" parentId="8Avfs&amp;gt;~OO1" relatedPath="" screenId="&amp;amp;WDF918F81" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="LIST">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Rating Name" columns="2" fullQualPath="NuveenCredit.RatingsOpinion.OutlookOpinion.OutlookRatingName" hideDetail="N" id="8Avqs&amp;gt;~OO1" isColumnInTable="N" labelName="" lazyInd="N" orderNum="1" pageSize="0" parentId="8Avfs&amp;gt;~OO1" relatedPath="" screenId="&amp;amp;WDF918F81" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Effective Date" columns="2" fullQualPath="NuveenCredit.RatingsOpinion.OutlookOpinion.OutlookEffectiveDate" hideDetail="N" id="8Avss&amp;gt;~OO1" isColumnInTable="N" labelName="" lazyInd="N" orderNum="2" pageSize="0" parentId="8Avfs&amp;gt;~OO1" relatedPath="" screenId="&amp;amp;WDF918F81" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Direction" columns="2" fullQualPath="NuveenCredit.RatingsOpinion.OutlookOpinion.OutlookDirection" hideDetail="N" id="8Avus&amp;gt;~OO1" isColumnInTable="N" labelName="" lazyInd="N" orderNum="3" pageSize="0" parentId="8Avfs&amp;gt;~OO1" relatedPath="" screenId="&amp;amp;WDF918F81" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Comments" columns="2" fullQualPath="NuveenCredit.RatingsOpinion.OutlookOpinion.OutlookComments" hideDetail="N" id="8Avws&amp;gt;~OO1" isColumnInTable="N" labelName="" lazyInd="N" orderNum="4" pageSize="0" parentId="8Avfs&amp;gt;~OO1" relatedPath="" screenId="&amp;amp;WDF918F81" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Effective End Date" columns="2" fullQualPath="NuveenCredit.RatingsOpinion.OutlookOpinion.OutlookEffectiveEndDate" hideDetail="N" id="8Avys&amp;gt;~OO1" isColumnInTable="N" labelName="" lazyInd="N" orderNum="5" pageSize="0" parentId="8Avfs&amp;gt;~OO1" relatedPath="" screenId="&amp;amp;WDF918F81" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Data Source Id" columns="2" fullQualPath="NuveenCredit.RatingsOpinion.OutlookOpinion.OutlookDataSourceId" hideDetail="N" id="8Av$s&amp;gt;~OO1" isColumnInTable="N" labelName="" lazyInd="N" orderNum="6" pageSize="0" parentId="8Avfs&amp;gt;~OO1" relatedPath="" screenId="&amp;amp;WDF918F81" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <config>{"DETAIL_CHART_CONFIG":[]}</config>
+    </control>
+    <control caption="Credit Reports" columns="3" fullQualPath="NuveenCredit.NuveenCreditReports" hideDetail="N" id="8Av@s&amp;gt;~OO1" isColumnInTable="N" labelName="" lazyInd="N" orderNum="3" pageSize="5" parentId="8Av$q&amp;gt;~OO1" relatedPath="" screenId="&amp;amp;WDF918F81" show="Y" showAsTable="Y" showDetailOnTop="N" showOneBelowAnother="N" type="LIST">
+      <control caption="Credit Report Jnuveen Long Rating" columns="2" fullQualPath="NuveenCredit.NuveenCreditReports.NuveenCreditReportLongRating" hideDetail="N" id="8Av6t&amp;gt;~OO1" isColumnInTable="N" labelName="" lazyInd="N" orderNum="0" pageSize="0" parentId="8Av@s&amp;gt;~OO1" relatedPath="" screenId="&amp;amp;WDF918F81" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Employee Name" columns="2" fullQualPath="NuveenCredit.NuveenCreditReports.NuveenCRReviewAnalyst.Employee.EmployeeDetail.EMPLEmployeeName" hideDetail="N" id="8Av8t&amp;gt;~OO1" isColumnInTable="N" labelName="" lazyInd="N" orderNum="1" pageSize="0" parentId="8Av@s&amp;gt;~OO1" relatedPath="" screenId="&amp;amp;WDF918F81" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Employee Number" columns="2" fullQualPath="NuveenCredit.NuveenCreditReports.NuveenCRReviewAnalyst.Employee.EmployeeDetail.EMIDEMPLEmployeeNum" hideDetail="N" id="8AvAt&amp;gt;~OO1" isColumnInTable="N" labelName="" lazyInd="N" orderNum="2" pageSize="0" parentId="8Av@s&amp;gt;~OO1" relatedPath="" screenId="&amp;amp;WDF918F81" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Credit Report Number" columns="2" fullQualPath="NuveenCredit.NuveenCreditReports.NuveenCreditReportNumber" hideDetail="N" id="8AvCt&amp;gt;~OO1" isColumnInTable="N" labelName="" lazyInd="N" orderNum="3" pageSize="0" parentId="8Av@s&amp;gt;~OO1" relatedPath="" screenId="&amp;amp;WDF918F81" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Employee Name" columns="2" fullQualPath="NuveenCredit.NuveenCreditReports.NuveenCRResponsibleAnalyst.Employee.EmployeeDetail.EMPLEmployeeName" hideDetail="N" id="8AvEt&amp;gt;~OO1" isColumnInTable="N" labelName="" lazyInd="N" orderNum="4" pageSize="0" parentId="8Av@s&amp;gt;~OO1" relatedPath="" screenId="&amp;amp;WDF918F81" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Employee Number" columns="2" fullQualPath="NuveenCredit.NuveenCreditReports.NuveenCRResponsibleAnalyst.Employee.EmployeeDetail.EMIDEMPLEmployeeNum" hideDetail="N" id="8AvGt&amp;gt;~OO1" isColumnInTable="N" labelName="" lazyInd="N" orderNum="5" pageSize="0" parentId="8Av@s&amp;gt;~OO1" relatedPath="" screenId="&amp;amp;WDF918F81" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Credit Report Jnuveen Outlook" columns="2" fullQualPath="NuveenCredit.NuveenCreditReports.NuveenCreditReportOutlook" hideDetail="N" id="8AvIt&amp;gt;~OO1" isColumnInTable="N" labelName="" lazyInd="N" orderNum="6" pageSize="0" parentId="8Av@s&amp;gt;~OO1" relatedPath="" screenId="&amp;amp;WDF918F81" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Employee Name" columns="2" fullQualPath="NuveenCredit.NuveenCreditReports.NuveenCRAuthor.Employee.EmployeeDetail.EMPLEmployeeName" hideDetail="N" id="8AvKt&amp;gt;~OO1" isColumnInTable="N" labelName="" lazyInd="N" orderNum="7" pageSize="0" parentId="8Av@s&amp;gt;~OO1" relatedPath="" screenId="&amp;amp;WDF918F81" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Employee Number" columns="2" fullQualPath="NuveenCredit.NuveenCreditReports.NuveenCRAuthor.Employee.EmployeeDetail.EMIDEMPLEmployeeNum" hideDetail="N" id="8AvMt&amp;gt;~OO1" isColumnInTable="N" labelName="" lazyInd="N" orderNum="8" pageSize="0" parentId="8Av@s&amp;gt;~OO1" relatedPath="" screenId="&amp;amp;WDF918F81" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Credit Report Comments" columns="2" fullQualPath="NuveenCredit.NuveenCreditReports.NuveenCreditReportComment" hideDetail="N" id="8AvOt&amp;gt;~OO1" isColumnInTable="N" labelName="" lazyInd="N" orderNum="9" pageSize="0" parentId="8Av@s&amp;gt;~OO1" relatedPath="" screenId="&amp;amp;WDF918F81" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Credit Report Date" columns="2" fullQualPath="NuveenCredit.NuveenCreditReports.NuveenCreditReportDate" hideDetail="N" id="8AvQt&amp;gt;~OO1" isColumnInTable="N" labelName="" lazyInd="N" orderNum="10" pageSize="0" parentId="8Av@s&amp;gt;~OO1" relatedPath="" screenId="&amp;amp;WDF918F81" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Credit Report Info Date" columns="2" fullQualPath="NuveenCredit.NuveenCreditReports.NuveenCreditReportInfoDate" hideDetail="N" id="8AvSt&amp;gt;~OO1" isColumnInTable="N" labelName="" lazyInd="N" orderNum="11" pageSize="0" parentId="8Av@s&amp;gt;~OO1" relatedPath="" screenId="&amp;amp;WDF918F81" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Credit Report Rationale" columns="2" fullQualPath="NuveenCredit.NuveenCreditReports.NuveenCreditReportRationale" hideDetail="N" id="8AvUt&amp;gt;~OO1" isColumnInTable="N" labelName="" lazyInd="N" orderNum="12" pageSize="0" parentId="8Av@s&amp;gt;~OO1" relatedPath="" screenId="&amp;amp;WDF918F81" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Credit Report Status" columns="2" fullQualPath="NuveenCredit.NuveenCreditReports.NuveenCreditReportStatus" hideDetail="N" id="8AvWt&amp;gt;~OO1" isColumnInTable="N" labelName="" lazyInd="N" orderNum="13" pageSize="0" parentId="8Av@s&amp;gt;~OO1" relatedPath="" screenId="&amp;amp;WDF918F81" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Credit Report Type" columns="2" fullQualPath="NuveenCredit.NuveenCreditReports.NuveenCreditreportType" hideDetail="N" id="8AvYt&amp;gt;~OO1" isColumnInTable="N" labelName="" lazyInd="N" orderNum="14" pageSize="0" parentId="8Av@s&amp;gt;~OO1" relatedPath="" screenId="&amp;amp;WDF918F81" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Credit Report Sources" columns="2" fullQualPath="NuveenCredit.NuveenCreditReports.NuveenCreditReportSource" hideDetail="N" id="8Avat&amp;gt;~OO1" isColumnInTable="N" labelName="" lazyInd="N" orderNum="15" pageSize="0" parentId="8Av@s&amp;gt;~OO1" relatedPath="" screenId="&amp;amp;WDF918F81" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <config>{"DETAIL_CHART_CONFIG":[]}</config>
+    </control>
+    <control caption="Underlying Issues" columns="3" fullQualPath="NuveenCredit.NuveenLUnderlyingIssues" hideDetail="N" id="8Avct&amp;gt;~OO1" isColumnInTable="N" labelName="" lazyInd="N" orderNum="4" pageSize="5" parentId="8Av$q&amp;gt;~OO1" relatedPath="" screenId="&amp;amp;WDF918F81" show="Y" showAsTable="Y" showDetailOnTop="N" showOneBelowAnother="N" type="LIST">
+      <control caption="System Issue ID" columns="2" fullQualPath="NuveenCredit.NuveenLUnderlyingIssues.NuveenLinkedIssue.FullInstrument.Identifiers.InstrumentLevelIdentifiers.NuveenSystemIssueID" hideDetail="N" id="8Avjt&amp;gt;~OO1" isColumnInTable="N" labelName="" lazyInd="N" orderNum="0" pageSize="0" parentId="8Avct&amp;gt;~OO1" relatedPath="" screenId="&amp;amp;WDF918F81" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Instrument Name" columns="2" fullQualPath="NuveenCredit.NuveenLUnderlyingIssues.NuveenLinkedIssue.FullInstrument.InstrumentDetails.PreferredInstrumentName" hideDetail="N" id="8Avlt&amp;gt;~OO1" isColumnInTable="N" labelName="" lazyInd="N" orderNum="1" pageSize="0" parentId="8Avct&amp;gt;~OO1" relatedPath="" screenId="&amp;amp;WDF918F81" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Purpose" columns="2" fullQualPath="NuveenCredit.NuveenLUnderlyingIssues.NuveenLinkedIssue.FullInstrument.NuveenStatistics.NuveenIssuePurpose" hideDetail="N" id="8Avnt&amp;gt;~OO1" isColumnInTable="N" labelName="" lazyInd="N" orderNum="2" pageSize="0" parentId="8Avct&amp;gt;~OO1" relatedPath="" screenId="&amp;amp;WDF918F81" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Merritt Issue ID" columns="2" fullQualPath="NuveenCredit.NuveenLUnderlyingIssues.NuveenLinkedIssue.FullInstrument.Identifiers.InstrumentLevelIdentifiers.NuveenMerrittIssueID" hideDetail="N" id="8Avpt&amp;gt;~OO1" isColumnInTable="N" labelName="" lazyInd="N" orderNum="3" pageSize="0" parentId="8Avct&amp;gt;~OO1" relatedPath="" screenId="&amp;amp;WDF918F81" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Legal Description" columns="2" fullQualPath="NuveenCredit.NuveenLUnderlyingIssues.NuveenLinkedIssue.FullInstrument.NuveenStatistics.NuveenIssueLegalDesc" hideDetail="N" id="8Avrt&amp;gt;~OO1" isColumnInTable="N" labelName="" lazyInd="N" orderNum="4" pageSize="0" parentId="8Avct&amp;gt;~OO1" relatedPath="" screenId="&amp;amp;WDF918F81" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <config>{"DETAIL_CHART_CONFIG":[]}</config>
+    </control>
+    <control caption="All Institution Relations" columns="3" fullQualPath="NuveenCredit.AllInstitutionRelations" hideDetail="N" id="8Avtt&amp;gt;~OO1" isColumnInTable="N" labelName="" lazyInd="N" orderNum="5" pageSize="5" parentId="8Av$q&amp;gt;~OO1" relatedPath="" screenId="&amp;amp;WDF918F81" show="Y" showAsTable="Y" showDetailOnTop="N" showOneBelowAnother="N" type="LIST">
+      <control caption="Institution Name" columns="2" fullQualPath="NuveenCredit.AllInstitutionRelations.AllInstRelations.FinancialInstitution.FinancialInstitutionDetails.FinancialInstitutionName" hideDetail="N" id="8Avxt&amp;gt;~OO1" isColumnInTable="N" labelName="" lazyInd="N" orderNum="0" pageSize="0" parentId="8Avtt&amp;gt;~OO1" relatedPath="" screenId="&amp;amp;WDF918F81" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Relationship Type" columns="2" fullQualPath="NuveenCredit.AllInstitutionRelations.InstRelType" hideDetail="N" id="8Avzt&amp;gt;~OO1" isColumnInTable="N" labelName="" lazyInd="N" orderNum="1" pageSize="0" parentId="8Avtt&amp;gt;~OO1" relatedPath="" screenId="&amp;amp;WDF918F81" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <config>{"DETAIL_CHART_CONFIG":[]}</config>
+    </control>
+    <control caption="Related Employees" columns="3" fullQualPath="NuveenCredit.NuveenRelatedEmployees" hideDetail="N" id="8Av%t&amp;gt;~OO1" isColumnInTable="N" labelName="" lazyInd="N" orderNum="6" pageSize="5" parentId="8Av$q&amp;gt;~OO1" relatedPath="" screenId="&amp;amp;WDF918F81" show="Y" showAsTable="Y" showDetailOnTop="N" showOneBelowAnother="N" type="LIST">
+      <control caption="Employee Name" columns="2" fullQualPath="NuveenCredit.NuveenRelatedEmployees.Employee.Employee.EmployeeDetail.EMPLEmployeeName" hideDetail="N" id="8Av-t&amp;gt;~OO1" isColumnInTable="N" labelName="" lazyInd="N" orderNum="0" pageSize="0" parentId="8Av%t&amp;gt;~OO1" relatedPath="" screenId="&amp;amp;WDF918F81" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Role" columns="2" fullQualPath="NuveenCredit.NuveenRelatedEmployees.NuveenFinsEmployeeRoleType" hideDetail="N" id="8Av/t&amp;gt;~OO1" isColumnInTable="N" labelName="" lazyInd="N" orderNum="1" pageSize="0" parentId="8Av%t&amp;gt;~OO1" relatedPath="" screenId="&amp;amp;WDF918F81" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <config>{"DETAIL_CHART_CONFIG":[]}</config>
+    </control>
+    <control caption="ESG Details" columns="3" fullQualPath="NuveenCredit.NuveenESGDetails" hideDetail="N" id="8Av)t&amp;gt;~OO1" labelName="" lazyInd="N" orderNum="7" pageSize="0" parentId="8Av$q&amp;gt;~OO1" relatedPath="" screenId="&amp;amp;WDF918F81" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="RECORD">
+      <control caption="ESG Ineligible" columns="2" fullQualPath="NuveenCredit.NuveenESGDetails.NuveenESGIneligible" hideDetail="N" id="8Av4u&amp;gt;~OO1" isColumnInTable="N" labelName="" lazyInd="N" orderNum="0" pageSize="0" parentId="8Av)t&amp;gt;~OO1" relatedPath="" screenId="&amp;amp;WDF918F81" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="ESG Model" columns="2" fullQualPath="NuveenCredit.NuveenESGDetails.NuveenESGModel" hideDetail="N" id="8Av6u&amp;gt;~OO1" isColumnInTable="N" labelName="" lazyInd="N" orderNum="1" pageSize="0" parentId="8Av)t&amp;gt;~OO1" relatedPath="" screenId="&amp;amp;WDF918F81" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Nuveen ESG Score" columns="2" fullQualPath="NuveenCredit.NuveenESGDetails.NuveenESGScore" hideDetail="N" id="8Av8u&amp;gt;~OO1" isColumnInTable="N" labelName="" lazyInd="N" orderNum="2" pageSize="0" parentId="8Av)t&amp;gt;~OO1" relatedPath="" screenId="&amp;amp;WDF918F81" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="ESG Score Date" columns="2" fullQualPath="NuveenCredit.NuveenESGDetails.NuveenESGScoredate" hideDetail="N" id="8AvAu&amp;gt;~OO1" isColumnInTable="N" labelName="" lazyInd="N" orderNum="3" pageSize="0" parentId="8Av)t&amp;gt;~OO1" relatedPath="" screenId="&amp;amp;WDF918F81" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="GNIS County Code" columns="2" fullQualPath="NuveenCredit.NuveenESGDetails.NuveenGNISCountyCode" hideDetail="N" id="8AvCu&amp;gt;~OO1" isColumnInTable="N" labelName="" lazyInd="N" orderNum="4" pageSize="0" parentId="8Av)t&amp;gt;~OO1" relatedPath="" screenId="&amp;amp;WDF918F81" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="GNIS Feature ID" columns="2" fullQualPath="NuveenCredit.NuveenESGDetails.NuveenGNISFeatureCode" hideDetail="N" id="8AvEu&amp;gt;~OO1" isColumnInTable="N" labelName="" lazyInd="N" orderNum="5" pageSize="0" parentId="8Av)t&amp;gt;~OO1" relatedPath="" screenId="&amp;amp;WDF918F81" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="GNIS State Code" columns="2" fullQualPath="NuveenCredit.NuveenESGDetails.NuveenGNISStateCode" hideDetail="N" id="8AvGu&amp;gt;~OO1" isColumnInTable="N" labelName="" lazyInd="N" orderNum="6" pageSize="0" parentId="8Av)t&amp;gt;~OO1" relatedPath="" screenId="&amp;amp;WDF918F81" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <config>{"DETAIL_CHART_CONFIG":[]}</config>
+    </control>
+    <control caption="Credit Exceptions" columns="2" fullQualPath="NuveenCredit.CreditExceptions" hideDetail="N" id="8AvIu&amp;gt;~OO1" isColumnInTable="N" labelName="" lazyInd="N" orderNum="8" pageSize="0" parentId="8Av$q&amp;gt;~OO1" relatedPath="" screenId="&amp;amp;WDF918F81" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="LIST"/>
+    <control caption="Other Credit Details" columns="3" fullQualPath="NuveenCredit.NuveenOtherCreditDetails" hideDetail="N" id="8AvKu&amp;gt;~OO1" labelName="" lazyInd="N" orderNum="9" pageSize="0" parentId="8Av$q&amp;gt;~OO1" relatedPath="" screenId="&amp;amp;WDF918F81" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="RECORD">
+      <config>{"DETAIL_CHART_CONFIG":[]}</config>
+    </control>
+  </control>
+</root>

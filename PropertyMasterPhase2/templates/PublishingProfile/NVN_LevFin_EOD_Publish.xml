@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<root>
+  <Subscriptions>
+    <Subscription description="Publishing profile to publish LevFin instruments EOD" id="++9Kmf7S2etbS03W" name="NVN_LevFin_EOD_Publish" ruleText="0 0 0 1 1 ? *" sourceId="" type="BATCH" workflow="PublishingWorkflow">
+      <destinations>
+        <destination id="++9Kmf7S2etbS03R" outputType="JSON" participantRules="">
+          <subscriptionProperties>
+            <subscriptionProperty id="++9Kmf7S2etbS03S" propertyDesc="" propertyName="FILE_NAME" propertyValue="LevFin_EOD_Securities"/>
+            <subscriptionProperty id="++9Kmf7S2etbS03T" propertyDesc="" propertyName="FILE_EXTENSION" propertyValue=".json"/>
+          </subscriptionProperties>
+          <downstream connectionFactory="" deadline="" deadlineTime="" description="Publishing directory for LevFin EOD Files" downstreamDestinationType="File" downstreamValue="/edmfs/app/outbound/output/levfin/smf/eod/done" dwdfOid="gp$~r&gt;h0e1" id="MUt1m?-1e1" name="Nuveen_LevFin_EOD" preferredLanguageCode="" preferredVendorId="" subscriberType="" typeFlag="" validityPriority="null"/>
+        </destination>
+      </destinations>
+      <messageTypes/>
+      <filters>
+        <filter dataSourceId="" deltaMode="NONE" entity="++5TZs2y2etse000" entityCaption="Full Instrument" entityName="FullInstrument" entityType="BUSINESS_ENTITY" filterEQLJsonText="" filterRuleText="&lt;sql&gt; instR_id in (select issu.instr_id from ft_t_isgp isgp, ft_t_issu issu where isgp.instr_id = issu.instr_id and issu.end_tms is null and isgp.end_tms is null and prnt_iss_grp_oid  in (select iss_grp_oid  from ft_t_isgr where iss_grp_id like 'LEVFIN%' and end_tms is null)) &lt;/sql&gt;" id="++9Kmf7S2etbS03U" publishingModelName="FullInstrument" ruleText="Bonds.PopulateNuveencontractIndicatorForPublish" screen="VG8B41-qW1" tableType="ISSU"/>
+      </filters>
+    </Subscription>
+  </Subscriptions>
+</root>

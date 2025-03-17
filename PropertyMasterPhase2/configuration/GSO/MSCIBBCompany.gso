@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entities cleanUnusedFields="false" nameSpace="NUVEEN">
+  <entiyTypes>
+    <entiyType desc="Generated default type for table FT_E_MSC1" id="MSC1000000000001" mainTable="FT_E_MSC1" name="MSCIBBCompany" nameSpace="NUVEEN"/>
+  </entiyTypes>
+  <beFields>
+    <beField class="BETEXT" displayCaption="Bloomberg Company ID" entityTypeId="MSC1000000000001" id="++8lmAcy2etbS00D" mandatory="0" multiplicity="SINGLE_OR_NULL" name="BBGCompanyID" nameSpace="NUVEEN"/>
+    <beField class="BETEXT" customDesc="CUSIP from MSCI file" displayCaption="CUSIP" entityTypeId="MSC1000000000001" id="++8lmAcy2etbS00H" mandatory="0" multiplicity="SINGLE_OR_NULL" name="MSCICUSIP" nameSpace="NUVEEN"/>
+    <beField class="BETEXT" customDesc="ISIN from MSCI RI file" displayCaption="ISIN" entityTypeId="MSC1000000000001" id="008j2R7i2etbS00G" mandatory="0" multiplicity="SINGLE_OR_NULL" name="MSCIISIN" nameSpace="NUVEEN"/>
+    <beField class="BETEXT" customDesc="MSCI specific Issuer ID from  MSCI RI file" displayCaption="MSCI Issuer ID" entityTypeId="MSC1000000000001" id="008j2R7i2etbS00E" mandatory="0" multiplicity="SINGLE_OR_NULL" name="MSCIIssuerID" nameSpace="NUVEEN"/>
+    <beField class="BETEXT" customDesc="MSCI specific Issuer Name from MSCI RI file" displayCaption="MSCI Issuer Name" entityTypeId="MSC1000000000001" id="008j2R7i2etbS00D" mandatory="0" multiplicity="SINGLE_OR_NULL" name="MSCIIssuerName" nameSpace="NUVEEN"/>
+    <beField class="BETEXT" customDesc="SEDOL from MSCI RI file" displayCaption="SEDOL" entityTypeId="MSC1000000000001" id="++8lmAcy2etbS00J" mandatory="0" multiplicity="SINGLE_OR_NULL" name="MSCISEDOL" nameSpace="NUVEEN"/>
+    <beField class="BETEXT" customDesc="Status specific to Request reply from BBG and enrichment of BB Company" displayCaption="Status" entityTypeId="MSC1000000000001" id="++8lmAcy2etbS00I" mandatory="0" multiplicity="SINGLE_OR_NULL" name="MSCIStatus" nameSpace="NUVEEN"/>
+    <beField class="BETEXT" displayCaption="MSCI Issuer Description" entityTypeId="MSC1000000000001" id="++8oRBEy2es18014" mandatory="0" multiplicity="SINGLE_OR_NULL" name="MSCIIssuerDescription" nameSpace="NUVEEN"/>
+  </beFields>
+  <dataGroups>
+    <dataGroup customInd="0" displayCaption="MSCIBBCompanyDetails" entityTypeId="MSC1000000000001" frequencyInd="0" id="++8lmAcy2etbS00Z" ignoreDeleteChildren="false" multiplicity="SINGLE_OR_NULL" name="MSCIBBCompanyDetails" nameSpace="NUVEEN">
+      <part beRelationId="008lmgqC2etbS005" defNameSpace="NUVEEN" id="008lmgqC2etbS009" label="MSCIISSURelation" prntReqdInd="0" seq="0"/>
+      <part defNameSpace="NUVEEN" fieldId="++8lmAcy2etbS00D" id="++8lmAcy2etbS00a" prntReqdInd="0" seq="1"/>
+      <part defNameSpace="NUVEEN" fieldId="++8lmAcy2etbS00H" id="++8lmAcy2etbS00b" prntReqdInd="0" seq="2"/>
+      <part defNameSpace="NUVEEN" fieldId="008j2R7i2etbS00G" id="++8lmAcy2etbS00c" prntReqdInd="0" seq="3"/>
+      <part defNameSpace="NUVEEN" fieldId="008j2R7i2etbS00E" id="++8lmAcy2etbS00d" prntReqdInd="0" seq="4"/>
+      <part defNameSpace="NUVEEN" fieldId="008j2R7i2etbS00D" id="++8lmAcy2etbS00e" prntReqdInd="0" seq="5"/>
+      <part defNameSpace="NUVEEN" fieldId="++8lmAcy2etbS00J" id="++8lmAcy2etbS00f" prntReqdInd="0" seq="6"/>
+      <part defNameSpace="NUVEEN" fieldId="++8lmAcy2etbS00I" id="++8lmAcy2etbS00g" prntReqdInd="0" seq="7"/>
+      <part defNameSpace="NUVEEN" fieldId="++8oRBEy2es18014" id="++8oRBEy2es18016" prntReqdInd="0" seq="8"/>
+    </dataGroup>
+    <dataGroup customInd="0" displayCaption="MSCIBBGCompanyDetails" entityTypeId="MSC1000000000001" frequencyInd="0" id="++8lmAcy2etbS00F" ignoreDeleteChildren="false" multiplicity="SINGLE_OR_NULL" name="MSCIBBGCompanyDetails" nameSpace="NUVEEN">
+      <part dataGroupId="++8lmAcy2etbS00Z" defNameSpace="NUVEEN" id="++8lmAcy2etbS00i" prntReqdInd="0" seq="0"/>
+    </dataGroup>
+  </dataGroups>
+  <relations>
+    <relation id="008lmgqC2etbS007" name="FT_E_MSC1-To-FT_T_ISSU00" nameSpace="NUVEEN" srcTable="FT_E_MSC1" tgtTable="FT_T_ISSU">
+      <field fromColumn="INSTR_ID" id="008lmgqC2etbS008" nameSpace="NUVEEN" toColumn="INSTR_ID" type="RELATION_FIELD" valueType="COLUMN"/>
+    </relation>
+  </relations>
+  <occurrences>
+    <occurrence desc="Occurrence for MSCI RI with BBCompanyID" id="++8lmAcy2etbS001" ignoreDeleteChildren="false" multiplicity="SINGLE_OR_NULL" name="ISSU_MSC1_NVN" nameSpace="NUVEEN" table="FT_E_MSC1" timeSeries="LOGICAL_DELETE">
+      <field id="008lmgqC2etbS006" nameSpace="NUVEEN" relationId="008lmgqC2etbS007"/>
+      <field id="++8lmAcy2etbS00O" name="CUSIP" nameSpace="NUVEEN"/>
+      <field id="++8lmAcy2etbS006" name="ID_BB_COMPANY" nameSpace="NUVEEN"/>
+      <field id="++8lmAcy2etbS00K" name="ISIN" nameSpace="NUVEEN"/>
+      <field id="++8oRBEy2es18013" name="MSC1_ISSR_DESC" nameSpace="NUVEEN"/>
+      <field id="++8lmAcy2etbS00N" name="MSCI_ISSR_ID" nameSpace="NUVEEN"/>
+      <field id="++8lmAcy2etbS00M" name="MSCI_ISSR_NME" nameSpace="NUVEEN"/>
+      <field id="++8lmAcy2etbS00L" name="SEDOL" nameSpace="NUVEEN"/>
+      <option id="008wvuYi2es1801d" nameSpace="NUVEEN" type="DEFAULT_ACTION" value="UNKNOWN"/>
+    </occurrence>
+  </occurrences>
+  <mappings>
+    <mapping beFieldId="++8lmAcy2etbS00D" groupMapping="0" id="++8lmAcy2etbS00E" nameSpace="NUVEEN" occFieldId="++8lmAcy2etbS006"/>
+    <mapping beFieldId="++8lmAcy2etbS00H" groupMapping="0" id="++8lmAcy2etbS00P" nameSpace="NUVEEN" occFieldId="++8lmAcy2etbS00O"/>
+    <mapping beFieldId="++8lmAcy2etbS00J" groupMapping="0" id="++8lmAcy2etbS00Q" nameSpace="NUVEEN" occFieldId="++8lmAcy2etbS00L"/>
+    <mapping beFieldId="008j2R7i2etbS00G" groupMapping="0" id="++8lmAcy2etbS00R" nameSpace="NUVEEN" occFieldId="++8lmAcy2etbS00K"/>
+    <mapping beFieldId="008j2R7i2etbS00D" groupMapping="0" id="++8lmAcy2etbS00S" nameSpace="NUVEEN" occFieldId="++8lmAcy2etbS00M"/>
+    <mapping beFieldId="008j2R7i2etbS00E" groupMapping="0" id="++8lmAcy2etbS00T" nameSpace="NUVEEN" occFieldId="++8lmAcy2etbS00N"/>
+    <mapping beFieldId="++8oRBEy2es18014" groupMapping="0" id="++8oRBEy2es18015" nameSpace="NUVEEN" occFieldId="++8oRBEy2es18013"/>
+    <mapping beRelationId="008lmgqC2etbS005" groupMapping="0" id="008lmgqC2etbS00A" nameSpace="NUVEEN" occFieldId="008lmgqC2etbS006"/>
+  </mappings>
+  <businessEntities>
+    <businessEntity cachedisableInd="I" dataGroupId="++8lmAcy2etbS00F" defaultInd="0" displayCaption="MSCI BBG Company" entityTypeId="MSC1000000000001" id="MSC1sj1meN65u000" mavenVersion="15.0" name="MSCIBBGCompany" nameSpace="NUVEEN" ruleVersion="2.0" version="15.0"/>
+  </businessEntities>
+  <entityRelations>
+    <entityRelation entityId="MSC1sj1meN65u000" id="008lmgqC2etbS005" lookupField="005Q5i8i2etse002" multiplicity="SINGLE_OR_NULL" name="MSCIISSURelation" nameSpace="NUVEEN" rltdEntityId="++5TZs2y2etse000">
+      <part forPublishing="1" forUI="1" id="008lmgqC2etbS00H" nameSpace="NUVEEN" partId="++4u-kJy2etzO00d"/>
+      <part forPublishing="1" forUI="1" id="008lmgqC2etbS00D" nameSpace="NUVEEN" partId="005Q5i8i2etse002"/>
+      <part forPublishing="1" forUI="1" id="008lmgqC2etbS00F" nameSpace="NUVEEN" partId="005Q5i8i2etse004"/>
+      <part forPublishing="1" forUI="1" id="008lmgqC2etbS00G" nameSpace="NUVEEN" partId="005Q5i8i2etse005"/>
+    </entityRelation>
+  </entityRelations>
+</entities>

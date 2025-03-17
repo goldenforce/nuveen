@@ -1,0 +1,253 @@
+{
+  "TYPE" : "Workflow",
+  "version" : "1.6.6",
+  "timeZone" : "America/New_York",
+  "orderPreparation" : {
+    "parameters" : {
+      "checkDependency" : {
+        "type" : "Boolean",
+        "default" : "true"
+      },
+      "file_pattern" : {
+        "type" : "String",
+        "default" : "'creditscope_goldensource.*\\.csv'"
+      },
+      "dayMinus" : {
+        "type" : "String",
+        "default" : "'0'"
+      },
+      "jobConfigText" : {
+        "type" : "String",
+        "default" : "'CreditScope Dataload Job'"
+      },
+      "bfNme" : {
+        "type" : "String",
+        "default" : "'NuveenCreditScope'"
+      }
+    },
+    "allowUndeclared" : false
+  },
+  "instructions" : [ {
+    "TYPE" : "If",
+    "predicate" : "$checkDependency==true",
+    "then" : {
+      "instructions" : [ {
+        "TYPE" : "Execute.Named",
+        "jobName" : "Echo_Dependency_Check",
+        "label" : "Echo_Dependency_Check"
+      }, {
+        "TYPE" : "Try",
+        "try" : {
+          "instructions" : [ {
+            "TYPE" : "Execute.Named",
+            "jobName" : "DependentJob_JBLG_Check",
+            "label" : "DependentJob_JBLG_Check"
+          }, {
+            "TYPE" : "If",
+            "predicate" : "$count.toNumber == 0",
+            "then" : {
+              "instructions" : [ {
+                "TYPE" : "Execute.Named",
+                "jobName" : "Echo_Fileload_Completed",
+                "label" : "Echo_Fileload_Completed"
+              }, {
+                "TYPE" : "Execute.Named",
+                "jobName" : "Nuveen_CreditScope_Load_Process",
+                "label" : "CS_Load_With_Dependency"
+              } ]
+            },
+            "else" : {
+              "instructions" : [ {
+                "TYPE" : "Execute.Named",
+                "jobName" : "Echo_Fileload_Not_Completed",
+                "label" : "Echo_Fileload_Not_Completed"
+              } ]
+            }
+          }, {
+            "TYPE" : "Execute.Named",
+            "jobName" : "DependentJob_JBLG_Check_copy_1",
+            "label" : "DependentJob_JBLG_Check_copy_1"
+          }, {
+            "TYPE" : "Execute.Named",
+            "jobName" : "JBLG_All_Records_Fail_Check",
+            "label" : "JBLG_All_Records_Fail_Check"
+          }, {
+            "TYPE" : "If",
+            "predicate" : "$cscount.toNumber == 1  && $rcount.toNumber == 0",
+            "then" : {
+              "instructions" : [ {
+                "TYPE" : "PostNotices",
+                "noticeBoardNames" : [ "CS_Load_NoticeBoard" ],
+                "label" : "CS_Load_NoticeBoard"
+              } ]
+            },
+            "else" : {
+              "instructions" : [ {
+                "TYPE" : "Fail",
+                "outcome" : {
+                  "returnCode" : 1
+                },
+                "uncatchable" : false
+              } ]
+            }
+          } ]
+        },
+        "catch" : {
+          "instructions" : [ {
+            "TYPE" : "Retry"
+          } ]
+        },
+        "maxTries" : 10,
+        "retryDelays" : [ 600 ]
+      } ]
+    },
+    "else" : {
+      "instructions" : [ {
+        "TYPE" : "Execute.Named",
+        "jobName" : "Echo_No_Dependency",
+        "label" : "Echo_No_Dependency"
+      }, {
+        "TYPE" : "Execute.Named",
+        "jobName" : "Nuveen_CreditScope_Load_Process",
+        "label" : "CS_Load_Without_Dependency"
+      } ]
+    }
+  } ],
+  "jobs" : {
+    "Echo_Dependency_Check" : {
+      "agentName" : "JSAgent",
+      "withSubagentClusterIdExpr" : false,
+      "executable" : {
+        "TYPE" : "ShellScriptExecutable",
+        "script" : "echo \"Dependency check\"",
+        "v1Compatible" : false
+      },
+      "skipIfNoAdmissionForOrderDay" : false,
+      "parallelism" : 1,
+      "graceTimeout" : 1,
+      "failOnErrWritten" : false,
+      "warnOnErrWritten" : false
+    },
+    "DependentJob_JBLG_Check" : {
+      "agentName" : "JSAgent",
+      "withSubagentClusterIdExpr" : false,
+      "executable" : {
+        "TYPE" : "InternalExecutable",
+        "className" : "com.sos.jitl.jobs.db.SQLExecutorJob",
+        "internalType" : "JITL",
+        "arguments" : {
+          "command" : "\"select count(*) as count from ser_gs_gc.ft_t_jblg where job_id in ( SELECT prnt_job_id   FROM ser_gs_gc.ft_t_jblg WHERE (UPPER(job_input_txt) ~* (UPPER('$file_pattern') ) AND UPPER(bf_nme) ~* (UPPER('$bfNme'))) \nAND date_trunc('day', ser_gs_gc.sysdate() - interval '$dayMinus days') = date_trunc('day', job_start_tms) AND substring(job_input_txt from '(([2][0][0-9][0-9])([1][0-2]|[0][1-9])([3][0-1]|[2][0-9]|[1][0-9]|[0][1-9]))')::timestamp = ser_gs_gc.sysdate()::date - INTERVAL '$dayMinus day' AND job_end_tms IS NOT null) and job_config_txt = '$jobConfigText' and job_stat_typ ='CLOSED'\"",
+          "resultset_as_variables" : "\"column_value\"",
+          "hibernate_configuration_file" : "\"/ext/app/jobscheduler/base/sos-berlin.com/joc/resources/joc/hibernate.cfg.xml\""
+        }
+      },
+      "skipIfNoAdmissionForOrderDay" : false,
+      "parallelism" : 1,
+      "graceTimeout" : 1,
+      "failOnErrWritten" : false,
+      "warnOnErrWritten" : false
+    },
+    "Echo_Fileload_Completed" : {
+      "agentName" : "JSAgent",
+      "withSubagentClusterIdExpr" : false,
+      "executable" : {
+        "TYPE" : "ShellScriptExecutable",
+        "script" : "echo \"File has been loaded. Proceeding!\"",
+        "v1Compatible" : false
+      },
+      "skipIfNoAdmissionForOrderDay" : false,
+      "parallelism" : 1,
+      "graceTimeout" : 1,
+      "failOnErrWritten" : false,
+      "warnOnErrWritten" : false,
+      "title" : "Echo_Fileload_Completed"
+    },
+    "Nuveen_CreditScope_Load_Process" : {
+      "agentName" : "JSAgent",
+      "withSubagentClusterIdExpr" : false,
+      "executable" : {
+        "TYPE" : "ShellScriptExecutable",
+        "script" : "cd $scripts_home\n./jobutilities execWkf $input_param_file $event_name $target_application",
+        "env" : {
+          "scripts_home" : "'/ext/app/jobscheduler/scripts/'",
+          "input_param_file" : "'/edmfs/app/InputParams/Nuveen_CreditScope_Load_Process.json'",
+          "event_name" : "'Nuveen_CreditScope_PFD_Wrapper'",
+          "target_application" : "'fileloading'"
+        },
+        "v1Compatible" : false
+      },
+      "skipIfNoAdmissionForOrderDay" : false,
+      "parallelism" : 1,
+      "graceTimeout" : 1,
+      "failOnErrWritten" : false,
+      "warnOnErrWritten" : false,
+      "title" : "Nuveen_CreditScope_Load_ProcesseditScope_Load_Process"
+    },
+    "Echo_Fileload_Not_Completed" : {
+      "agentName" : "JSAgent",
+      "withSubagentClusterIdExpr" : false,
+      "executable" : {
+        "TYPE" : "ShellScriptExecutable",
+        "script" : "echo \"File has not been loaded\"",
+        "v1Compatible" : false
+      },
+      "skipIfNoAdmissionForOrderDay" : false,
+      "parallelism" : 1,
+      "graceTimeout" : 1,
+      "failOnErrWritten" : false,
+      "warnOnErrWritten" : false
+    },
+    "DependentJob_JBLG_Check_copy_1" : {
+      "agentName" : "JSAgent",
+      "withSubagentClusterIdExpr" : false,
+      "executable" : {
+        "TYPE" : "InternalExecutable",
+        "className" : "com.sos.jitl.jobs.db.SQLExecutorJob",
+        "internalType" : "JITL",
+        "arguments" : {
+          "command" : "\"select count(*) as cscount from ser_gs_gc.ft_t_jblg where job_id in ( SELECT prnt_job_id   FROM ser_gs_gc.ft_t_jblg WHERE (UPPER(job_input_txt) ~* (UPPER('$file_pattern') ) AND UPPER(bf_nme) ~* (UPPER('$bfNme'))) \nAND date_trunc('day', ser_gs_gc.sysdate() - interval '$dayMinus days') = date_trunc('day', job_start_tms) AND substring(job_input_txt from '(([2][0][0-9][0-9])([1][0-2]|[0][1-9])([3][0-1]|[2][0-9]|[1][0-9]|[0][1-9]))')::timestamp = ser_gs_gc.sysdate()::date - INTERVAL '$dayMinus day' AND job_end_tms IS NOT null) and job_config_txt = '$jobConfigText' and job_stat_typ ='CLOSED'\"",
+          "resultset_as_variables" : "\"column_value\"",
+          "hibernate_configuration_file" : "\"/ext/app/jobscheduler/base/sos-berlin.com/joc/resources/joc/hibernate.cfg.xml\""
+        }
+      },
+      "skipIfNoAdmissionForOrderDay" : false,
+      "parallelism" : 1,
+      "graceTimeout" : 1,
+      "failOnErrWritten" : false,
+      "warnOnErrWritten" : false
+    },
+    "JBLG_All_Records_Fail_Check" : {
+      "agentName" : "JSAgent",
+      "withSubagentClusterIdExpr" : false,
+      "executable" : {
+        "TYPE" : "InternalExecutable",
+        "className" : "com.sos.jitl.jobs.db.SQLExecutorJob",
+        "internalType" : "JITL",
+        "arguments" : {
+          "command" : "\"SELECT count(*) as rcount FROM ser_gs_gc.ft_t_jblg WHERE (UPPER(job_input_txt) ~* (UPPER('$file_pattern') ) AND UPPER(bf_nme) ~* (UPPER('$bfNme'))) AND date_trunc('day', ser_gs_gc.sysdate() - interval '$dayMinus days') = date_trunc('day', job_start_tms) AND substring(job_input_txt from '(([2][0][0-9][0-9])([1][0-2]|[0][1-9])([3][0-1]|[2][0-9]|[1][0-9]|[0][1-9]))')::timestamp = ser_gs_gc.sysdate()::date - INTERVAL '$dayMinus day' AND job_end_tms IS NOT null and job_stat_typ ='CLOSED' and task_tot_cnt = task_failed_cnt and task_tot_cnt <> 0\"",
+          "resultset_as_variables" : "\"column_value\"",
+          "hibernate_configuration_file" : "\"/ext/app/jobscheduler/base/sos-berlin.com/joc/resources/joc/hibernate.cfg.xml\""
+        }
+      },
+      "skipIfNoAdmissionForOrderDay" : false,
+      "parallelism" : 1,
+      "graceTimeout" : 1,
+      "failOnErrWritten" : false,
+      "warnOnErrWritten" : false
+    },
+    "Echo_No_Dependency" : {
+      "agentName" : "JSAgent",
+      "withSubagentClusterIdExpr" : false,
+      "executable" : {
+        "TYPE" : "ShellScriptExecutable",
+        "script" : "echo \"no dependency check\"",
+        "v1Compatible" : false
+      },
+      "skipIfNoAdmissionForOrderDay" : false,
+      "parallelism" : 1,
+      "graceTimeout" : 1,
+      "failOnErrWritten" : false,
+      "warnOnErrWritten" : false
+    }
+  }
+}

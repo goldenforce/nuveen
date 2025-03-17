@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<root>
+  <Subscriptions>
+    <Subscription description="" id="++9gCmrMHJzUq0im" name="Nuveen_Muni_Publishing" ruleText="0 0 0 1 1 ? *" sourceId="" type="BATCH" workflow="PublishingWorkflow">
+      <destinations>
+        <destination id="++9gCmrMHJzUq0ij" outputType="JSON" participantRules="">
+          <subscriptionProperties>
+            <subscriptionProperty id="++9gCmrMHJzUq0j3" propertyDesc="" propertyName="FILE_EXTENSION" propertyValue=".json"/>
+            <subscriptionProperty id="++9gCmrMHJzUq0j2" propertyDesc="" propertyName="FILE_NAME" propertyValue="Muni_SMF_EOD"/>
+          </subscriptionProperties>
+          <downstream connectionFactory="" deadline="" deadlineTime="" description="Nuveen_Munis" downstreamDestinationType="File" downstreamValue="/edmfs/app/outbound/output/CreditScope/Munis/done/" dwdfOid="++9gCmrMHJzUq0ih" id="++9gCmrMHJzUq0ii" name="Nuveen_Munis" preferredLanguageCode="" preferredVendorId="" subscriberType="" typeFlag="" validityPriority="null"/>
+        </destination>
+      </destinations>
+      <messageTypes/>
+      <filters>
+        <filter dataSourceId="" deltaMode="CHANGED" entity="++5TZs2y2etse000" entityCaption="Full Instrument" entityName="FullInstrument" entityType="BUSINESS_ENTITY" filterEQLJsonText="&lt;sql&gt; instr_id in (select instr_id from ft_t_issu where iss_typ = 'MUNI' and end_tms is null) &lt;/sql&gt;" filterRuleText="&lt;sql&gt; instr_id in (select instr_id from ft_t_issu where iss_typ = 'MUNI' and end_tms is null) &lt;/sql&gt;" id="++9gCmrMHJzUq0ik" publishingModelName="FullInstrument" ruleText="" screen="LD9g614gO1" tableType="ISSU"/>
+      </filters>
+    </Subscription>
+  </Subscriptions>
+</root>

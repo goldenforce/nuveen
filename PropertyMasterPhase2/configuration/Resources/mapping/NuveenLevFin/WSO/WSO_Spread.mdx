@@ -1,0 +1,525 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<MappingDef type="MSF" version="1.0">
+  <Options>
+    <Option key="MappingComment">2023-11-19 Added SQL in GSDM/VDDB filter for missing WSO Asset record </Option>
+    <Option key="MappingVersion">1.0.0.0</Option>
+    <Option key="MappingAuthor"/>
+    <Option key="MessageTranslatorVersion">8.1.1.1</Option>
+    <Option key="RCode"/>
+    <Option key="LastChangedTms">2023-11-19 at 02:45:00 EST</Option>
+    <Option key="MappingDesignerVersion">8.8.2.01</Option>
+  </Options>
+  <Input vendorType="VARIABLE">
+    <Options>
+      <Option key="DecimalSeparator">.</Option>
+      <Option key="TrimFields">BOTH</Option>
+      <Option key="NullIdentifiers"/>
+      <Option key="splitter">LineByLine.xml</Option>
+      <Option key="QuotationMark">"</Option>
+      <Option key="DDLName"/>
+      <Option key="IsSingleCharDataDelimiter">true</Option>
+      <Option key="InputDataDelimiter">|</Option>
+      <Option key="IndexBasedLookUp">true</Option>
+      <Option key="TimeStampFormat">%Y%M%D%H%I%S.%f</Option>
+      <Option key="MessageType"/>
+      <Option key="DateTimeFormat">%Y%M%D%H%I%S</Option>
+      <Option key="EscapeChar"/>
+    </Options>
+    <Layout>
+      <Override/>
+      <field decimals="0" desc="" excludedNullIdentifiers="" ident="&quot;facilityID&quot;" length="255" mandatory="false" mapable="true" match="false" multiple="false" name="facilityID" pattern="" pos="0" readonly="false" type="String"/>
+      <field decimals="0" desc="" excludedNullIdentifiers="" ident="&quot;letterofCreditSpread&quot;" length="255" mandatory="false" mapable="true" match="false" multiple="false" name="letterofCreditSpread" pattern="" pos="0" readonly="false" type="String"/>
+      <field decimals="0" desc="" excludedNullIdentifiers="" ident="&quot;FacitlityFee&quot;" length="255" mandatory="false" mapable="true" match="false" multiple="false" name="FacitlityFee" pattern="" pos="0" readonly="false" type="String"/>
+      <field decimals="0" desc="" excludedNullIdentifiers="" ident="&quot;UnfundedFee&quot;" length="255" mandatory="false" mapable="true" match="false" multiple="false" name="UnfundedFee" pattern="" pos="0" readonly="false" type="String"/>
+      <field decimals="0" desc="" excludedNullIdentifiers="" ident="&quot;m_sFacilitySpread&quot;" length="255" mandatory="false" mapable="true" match="false" multiple="false" name="m_sFacilitySpread" pattern="" pos="0" readonly="false" type="String"/>
+      <field decimals="0" desc="" excludedNullIdentifiers="" ident="&quot;m_sfacilityoption&quot;" length="255" mandatory="false" mapable="true" match="false" multiple="false" name="m_sfacilityoption" pattern="" pos="0" readonly="false" type="String"/>
+      <field decimals="0" desc="" excludedNullIdentifiers="" ident="&quot;m_dtStartDate&quot;" length="255" mandatory="false" mapable="true" match="false" multiple="false" name="m_dtStartDate" pattern="" pos="0" readonly="false" type="String"/>
+      <field decimals="0" desc="" excludedNullIdentifiers="" ident="&quot;m_dtEndDate&quot;" length="255" mandatory="false" mapable="true" match="false" multiple="false" name="m_dtEndDate" pattern="" pos="0" readonly="false" type="String"/>
+      <field decimals="0" desc="" excludedNullIdentifiers="" ident="&quot;AssetID&quot;" length="255" mandatory="false" mapable="true" match="false" multiple="false" name="AssetID" pattern="" pos="0" readonly="false" type="String"/>
+      <field decimals="0" desc="" excludedNullIdentifiers="" ident="&quot;LoanXid&quot;" length="255" mandatory="false" mapable="true" match="false" multiple="false" name="LoanXid" pattern="" pos="0" readonly="false" type="String"/>
+      <field decimals="0" desc="" excludedNullIdentifiers="" ident="&quot;CUSIP&quot;" length="255" mandatory="false" mapable="true" match="false" multiple="false" name="CUSIP" pattern="" pos="0" readonly="false" type="String"/>
+      <field decimals="0" desc="" excludedNullIdentifiers="" ident="&quot;LIN&quot;" length="255" mandatory="false" mapable="true" match="false" multiple="false" name="LIN" pattern="" pos="0" readonly="false" type="String"/>
+      <field decimals="0" desc="" excludedNullIdentifiers="" ident="&quot;ISIN&quot;" length="255" mandatory="false" mapable="true" match="false" multiple="false" name="ISIN" pattern="" pos="0" readonly="false" type="String"/>
+      <field decimals="0" desc="" excludedNullIdentifiers="" ident="&quot;BBGID&quot;" length="255" mandatory="false" mapable="true" match="false" multiple="false" name="BBGID" pattern="" pos="0" readonly="false" type="String"/>
+      <field decimals="0" desc="" excludedNullIdentifiers="" ident="&quot;SourceSystem&quot;" length="255" mandatory="false" mapable="true" match="false" multiple="false" name="SourceSystem" pattern="" pos="0" readonly="false" type="String"/>
+      <field decimals="0" desc="" excludedNullIdentifiers="" ident="&quot;HeldIndicator&quot;" length="255" mandatory="false" mapable="true" match="false" multiple="false" name="HeldIndicator" pattern="" pos="0" readonly="false" type="String"/>
+    </Layout>
+  </Input>
+  <Output>
+    <Options>
+      <Option key="TimeStampOutputFormat">%M-%D-%Y %H:%I:%S.%f %A</Option>
+      <Option key="DateTimeOutputFormat">%M-%D-%Y %H:%I:%S %A</Option>
+      <Option key="OutputEncoding">UTF-8</Option>
+      <Option key="DefaultEmptyNumericsToZero">FALSE</Option>
+      <Option key="messageformat">BERepo</Option>
+      <Option key="AddTZIndicators">true</Option>
+      <Option key="AddVendorMnemonic">true</Option>
+    </Options>
+    <MappingFragments/>
+    <OutputDef>
+      <Node displayName="FullInstrument" messageformat="BE" name="GoldenSourceObjectMessage" type="message">
+        <Options/>
+        <comment><![CDATA[see Mapping Comments]]></comment>
+        <Node name="xmlns" type="attribute">
+          <expr><![CDATA[return "http://www.thegoldensource.com/business-entities/BusinessEntityMessage";]]></expr>
+        </Node>
+        <Node name="xmlns:xsi" type="attribute">
+          <expr><![CDATA[return "http://www.w3.org/2001/XMLSchema-instance";]]></expr>
+        </Node>
+        <Node name="xsi:schemaLocation" type="attribute">
+          <expr><![CDATA[return "http://www.thegoldensource.com/business-entities/BusinessEntityMessage.xsd";]]></expr>
+        </Node>
+        <Node name="GSOHeader" type="element">
+          <Node name="GSO_ELM_TYPE" type="attribute">
+            <expr><![CDATA[return "group";]]></expr>
+          </Node>
+          <Node name="DateFormat" type="element">
+            <Node name="GSO_ELM_TYPE" type="attribute">
+              <expr><![CDATA[return "field";]]></expr>
+            </Node>
+            <Node name="req" type="attribute">
+              <expr><![CDATA[return "false";]]></expr>
+            </Node>
+          </Node>
+          <Node name="DefaultTimestamp" type="element">
+            <Node name="GSO_ELM_TYPE" type="attribute">
+              <expr><![CDATA[return "field";]]></expr>
+            </Node>
+            <Node name="req" type="attribute">
+              <expr><![CDATA[return "false";]]></expr>
+            </Node>
+          </Node>
+          <Node name="Language" type="element">
+            <Node name="GSO_ELM_TYPE" type="attribute">
+              <expr><![CDATA[return "field";]]></expr>
+            </Node>
+            <Node name="req" type="attribute">
+              <expr><![CDATA[return "false";]]></expr>
+            </Node>
+          </Node>
+          <Node name="MainEntityId" type="element">
+            <expr><![CDATA[return AssetID;]]></expr>
+            <Node name="GSO_ELM_TYPE" type="attribute">
+              <expr><![CDATA[return "field";]]></expr>
+            </Node>
+            <Node name="req" type="attribute">
+              <expr><![CDATA[return "false";]]></expr>
+            </Node>
+          </Node>
+          <Node name="MainEntityIdContext" type="element">
+            <expr><![CDATA[if (UpperCase(SourceSystem) == "WSOADMIN")
+	return "WSOADMASSET";
+else if (UpperCase(SourceSystem) == "WSOWEB")
+	return "WSOWEBASSET";
+else
+	return "ERROR";]]></expr>
+            <Node name="GSO_ELM_TYPE" type="attribute">
+              <expr><![CDATA[return "field";]]></expr>
+            </Node>
+            <Node name="req" type="attribute">
+              <expr><![CDATA[return "false";]]></expr>
+            </Node>
+          </Node>
+          <Node name="MainEntityName" type="element">
+            <Node name="GSO_ELM_TYPE" type="attribute">
+              <expr><![CDATA[return "field";]]></expr>
+            </Node>
+            <Node name="req" type="attribute">
+              <expr><![CDATA[return "false";]]></expr>
+            </Node>
+          </Node>
+          <Node name="MainEntityType" type="element">
+            <Node name="GSO_ELM_TYPE" type="attribute">
+              <expr><![CDATA[return "field";]]></expr>
+            </Node>
+            <Node name="req" type="attribute">
+              <expr><![CDATA[return "false";]]></expr>
+            </Node>
+          </Node>
+          <Node name="MessageClassification" type="element">
+            <Node name="GSO_ELM_TYPE" type="attribute">
+              <expr><![CDATA[return "field";]]></expr>
+            </Node>
+            <Node name="req" type="attribute">
+              <expr><![CDATA[return "false";]]></expr>
+            </Node>
+          </Node>
+          <Node name="TimeZone" type="element">
+            <Node name="GSO_ELM_TYPE" type="attribute">
+              <expr><![CDATA[return "field";]]></expr>
+            </Node>
+            <Node name="req" type="attribute">
+              <expr><![CDATA[return "false";]]></expr>
+            </Node>
+          </Node>
+          <Node name="User" type="element">
+            <expr><![CDATA[return "WSO_ASSET_SPREAD";]]></expr>
+            <Node name="GSO_ELM_TYPE" type="attribute">
+              <expr><![CDATA[return "field";]]></expr>
+            </Node>
+            <Node name="req" type="attribute">
+              <expr><![CDATA[return "false";]]></expr>
+            </Node>
+          </Node>
+          <Node name="VendorSource" type="element">
+            <expr><![CDATA[if (UpperCase(SourceSystem) == "WSOADMIN")
+	return "WSO_ADMIN";
+else if (UpperCase(SourceSystem) == "WSOWEB")
+	return "WSO_WEB";
+else
+	return "ERROR";]]></expr>
+            <Node name="GSO_ELM_TYPE" type="attribute">
+              <expr><![CDATA[return "field";]]></expr>
+            </Node>
+            <Node name="req" type="attribute">
+              <expr><![CDATA[return "false";]]></expr>
+            </Node>
+          </Node>
+          <Node name="ChangeVddbAction" type="element">
+            <Node name="GSO_ELM_TYPE" type="attribute">
+              <expr><![CDATA[return "field";]]></expr>
+            </Node>
+            <Node name="req" type="attribute">
+              <expr><![CDATA[return "false";]]></expr>
+            </Node>
+          </Node>
+          <Node name="MainEntityTableType" type="element">
+            <expr><![CDATA[return "ISSU";]]></expr>
+            <Node name="GSO_ELM_TYPE" type="attribute">
+              <expr><![CDATA[return "field";]]></expr>
+            </Node>
+            <Node name="req" type="attribute">
+              <expr><![CDATA[return "false";]]></expr>
+            </Node>
+          </Node>
+          <Node name="ChangeModel" type="element">
+            <Node name="GSO_ELM_TYPE" type="attribute">
+              <expr><![CDATA[return "field";]]></expr>
+            </Node>
+            <Node name="req" type="attribute">
+              <expr><![CDATA[return "false";]]></expr>
+            </Node>
+          </Node>
+          <Node name="UpdateModel" type="element">
+            <Node name="GSO_ELM_TYPE" type="attribute">
+              <expr><![CDATA[return "field";]]></expr>
+            </Node>
+            <Node name="req" type="attribute">
+              <expr><![CDATA[return "false";]]></expr>
+            </Node>
+          </Node>
+          <Node name="SecurityBasedIssuerMatching" type="element">
+            <Node name="GSO_ELM_TYPE" type="attribute">
+              <expr><![CDATA[return "field";]]></expr>
+            </Node>
+            <Node name="req" type="attribute">
+              <expr><![CDATA[return "false";]]></expr>
+            </Node>
+          </Node>
+          <Node name="MessageCondition" type="element">
+            <Node name="GSO_ELM_TYPE" type="attribute">
+              <expr><![CDATA[return "field";]]></expr>
+            </Node>
+            <Node name="req" type="attribute">
+              <expr><![CDATA[return "false";]]></expr>
+            </Node>
+          </Node>
+        </Node>
+        <Node name="FullInstrument" type="element">
+          <Node name="GSO_ELM_TYPE" type="attribute">
+            <expr><![CDATA[return "gso";]]></expr>
+          </Node>
+          <Node name="xmlns" type="attribute">
+            <expr><![CDATA[return "http://www.thegoldensource.com/business-entities/FullInstrument";]]></expr>
+          </Node>
+          <Node name="xsi:schemaLocation" type="attribute">
+            <expr><![CDATA[return "http://www.thegoldensource.com/business-entities/FullInstrument.xsd";]]></expr>
+          </Node>
+          <Node name="Identifiers" type="element">
+            <Node name="GSO_ELM_TYPE" type="attribute">
+              <expr><![CDATA[return "group";]]></expr>
+            </Node>
+            <Node name="req" type="attribute">
+              <expr><![CDATA[return "false";]]></expr>
+            </Node>
+            <Node name="InstrumentLevelIdentifiers" type="element">
+              <Node name="GSO_ELM_TYPE" type="attribute">
+                <expr><![CDATA[return "group";]]></expr>
+              </Node>
+              <Node name="req" type="attribute">
+                <expr><![CDATA[return "false";]]></expr>
+              </Node>
+              <Node name="NuveenWSOAdminAssetID" type="element">
+                <expr><![CDATA[return AssetID;]]></expr>
+                <condition><![CDATA[return UpperCase(SourceSystem) == "WSOADMIN";]]></condition>
+                <Node name="ACTION" type="attribute">
+                  <expr><![CDATA[return "REFERENCE";]]></expr>
+                </Node>
+                <Node name="GSO_ELM_TYPE" type="attribute">
+                  <expr><![CDATA[return "field";]]></expr>
+                </Node>
+                <Node name="MATCH" type="attribute">
+                  <expr><![CDATA[return "ISID3_ID_CTXT_ISS_ID";]]></expr>
+                </Node>
+                <Node name="NESTED_ERR_LVL" type="attribute">
+                  <expr><![CDATA[return "WARNING";]]></expr>
+                </Node>
+                <Node name="req" type="attribute">
+                  <expr><![CDATA[return "false";]]></expr>
+                </Node>
+              </Node>
+              <Node name="NuveenWSOWebAssetID" type="element">
+                <expr><![CDATA[return AssetID;]]></expr>
+                <condition><![CDATA[return UpperCase(SourceSystem) == "WSOWEB";]]></condition>
+                <Node name="ACTION" type="attribute">
+                  <expr><![CDATA[return "REFERENCE";]]></expr>
+                </Node>
+                <Node name="GSO_ELM_TYPE" type="attribute">
+                  <expr><![CDATA[return "field";]]></expr>
+                </Node>
+                <Node name="MATCH" type="attribute">
+                  <expr><![CDATA[return "ISID3_ID_CTXT_ISS_ID";]]></expr>
+                </Node>
+                <Node name="NESTED_ERR_LVL" type="attribute">
+                  <expr><![CDATA[return "WARNING";]]></expr>
+                </Node>
+                <Node name="req" type="attribute">
+                  <expr><![CDATA[return "false";]]></expr>
+                </Node>
+              </Node>
+            </Node>
+          </Node>
+          <Node name="InstrumentDetails" type="element">
+            <Node name="GSO_ELM_TYPE" type="attribute">
+              <expr><![CDATA[return "group";]]></expr>
+            </Node>
+            <Node name="req" type="attribute">
+              <expr><![CDATA[return "true";]]></expr>
+            </Node>
+            <Node name="InstrumentType" type="element">
+              <expr><![CDATA[return "LOAN";]]></expr>
+              <Node name="ACTION" type="attribute">
+                <expr><![CDATA[return "REFERENCE";]]></expr>
+              </Node>
+              <Node name="GSO_ELM_TYPE" type="attribute">
+                <expr><![CDATA[return "field";]]></expr>
+              </Node>
+              <Node name="INSERT_ONLY" type="attribute">
+                <expr><![CDATA[return "Y";]]></expr>
+              </Node>
+              <Node name="req" type="attribute">
+                <expr><![CDATA[return "true";]]></expr>
+              </Node>
+            </Node>
+            <Node name="InstrumentSystemStatus" type="element">
+              <expr><![CDATA[return "ACTIVE";]]></expr>
+              <Node name="GSO_ELM_TYPE" type="attribute">
+                <expr><![CDATA[return "field";]]></expr>
+              </Node>
+              <Node name="INSERT_ONLY" type="attribute">
+                <expr><![CDATA[return "Y";]]></expr>
+              </Node>
+              <Node name="req" type="attribute">
+                <expr><![CDATA[return "true";]]></expr>
+              </Node>
+            </Node>
+          </Node>
+          <Node disabled="1" name="ExtendedIncomeDetails" type="element">
+            <condition>
+              <comment><![CDATA[Same condition in GSDM filter]]></comment><![CDATA[if (OneHasValue(m_dtStartDate) && ((((UpperCase(m_sFacilitySpread) == "UNFND") && OneHasValue(UnfundedFee)) || ((UpperCase(m_sFacilitySpread) == "FEE") && OneHasValue(FacitlityFee))) || ((UpperCase(m_sFacilitySpread) == "LOC") && OneHasValue(letterofCreditSpread))))
+	return "true";
+else
+	return "";]]>
+            </condition>
+            <Node name="GSO_ELM_TYPE" type="attribute">
+              <expr><![CDATA[return "group";]]></expr>
+            </Node>
+            <Node name="req" type="attribute">
+              <expr><![CDATA[return "false";]]></expr>
+            </Node>
+            <Node name="IncomeEventType" type="element">
+              <expr><![CDATA[if (UpperCase(m_sFacilitySpread) == "FEE")
+	return "WSOFCFEE";
+else if (UpperCase(m_sFacilitySpread) == "UNFND")
+	return "WSOUNFND";
+else if (UpperCase(m_sFacilitySpread) == "LOC")
+	return "WSOLCSRD";
+else
+	return "";]]></expr>
+              <Node name="ACTION" type="attribute">
+                <expr><![CDATA[return "UNKNOWN";]]></expr>
+              </Node>
+              <Node name="ONLY" type="attribute">
+                <expr><![CDATA[return "Y";]]></expr>
+              </Node>
+              <Node name="GSO_ELM_TYPE" type="attribute">
+                <expr><![CDATA[return "field";]]></expr>
+              </Node>
+              <Node name="MATCH" type="attribute">
+                <comment><![CDATA[Instr_id, Ev_Typ, Start_Tms]]></comment>
+                <expr><![CDATA[return "IEDF_EV_TYP";]]></expr>
+              </Node>
+              <Node name="req" type="attribute">
+                <expr><![CDATA[return "true";]]></expr>
+              </Node>
+            </Node>
+            <Node name="IncomeEventPaymentDate" type="element">
+              <expr><![CDATA[if (OneHasValue(StrReplaceAll(SubString(m_dtStartDate, 1, 10), "-", "")))
+	return DateFromString(StrReplaceAll(SubString(m_dtStartDate, 1, 10), "-", ""), "%Y%M%D");
+else
+	return "";]]></expr>
+              <Node name="GSO_ELM_TYPE" type="attribute">
+                <expr><![CDATA[return "field";]]></expr>
+              </Node>
+              <Node name="req" type="attribute">
+                <expr><![CDATA[return "true";]]></expr>
+              </Node>
+            </Node>
+            <Node name="FloatRatePercentage" type="element">
+              <expr><![CDATA[if (UpperCase(m_sFacilitySpread) == "FEE")
+	return String2Float(FacitlityFee, 0) * 100;
+else if (UpperCase(m_sFacilitySpread) == "UNFND")
+	return String2Float(UnfundedFee, 0) * 100;
+else if (UpperCase(m_sFacilitySpread) == "LOC")
+	return String2Float(letterofCreditSpread, 0) * 100;
+else
+	return "";]]></expr>
+              <Node name="GSO_ELM_TYPE" type="attribute">
+                <expr><![CDATA[return "field";]]></expr>
+              </Node>
+              <Node name="req" type="attribute">
+                <expr><![CDATA[return "false";]]></expr>
+              </Node>
+            </Node>
+            <Node name="IncomeEventPeriodEndDateTime" type="element">
+              <expr><![CDATA[if (OneHasValue(StrReplaceAll(SubString(m_dtEndDate, 1, 10), "-", "")))
+	return DateFromString(StrReplaceAll(SubString(m_dtEndDate, 1, 10), "-", ""), "%Y%M%D");
+else
+	return "";]]></expr>
+              <Node name="GSO_ELM_TYPE" type="attribute">
+                <expr><![CDATA[return "field";]]></expr>
+              </Node>
+              <Node name="req" type="attribute">
+                <expr><![CDATA[return "false";]]></expr>
+              </Node>
+            </Node>
+          </Node>
+          <Node name="AllIncomeDetails" type="element">
+            <condition>
+              <comment><![CDATA[Same condition in GSDM filter]]></comment><![CDATA[if ((((UpperCase(m_sFacilitySpread) == "UNFND") && OneHasValue(UnfundedFee)) || ((UpperCase(m_sFacilitySpread) == "FEE") && OneHasValue(FacitlityFee))) || ((UpperCase(m_sFacilitySpread) == "LOC") && OneHasValue(letterofCreditSpread)))
+	return "true";
+else
+	return "";]]>
+            </condition>
+            <Node name="ONLY" type="attribute">
+              <comment><![CDATA[20231119: only if parent exists]]></comment>
+              <expr><![CDATA[return "Y";]]></expr>
+            </Node>
+            <Node name="GSO_ELM_TYPE" type="attribute">
+              <expr><![CDATA[return "group";]]></expr>
+            </Node>
+            <Node name="req" type="attribute">
+              <expr><![CDATA[return "false";]]></expr>
+            </Node>
+            <Node name="AllIncomeEventType" type="element">
+              <expr><![CDATA[if (UpperCase(m_sFacilitySpread) == "FEE")
+	return "WSOFCFEE";
+else if (UpperCase(m_sFacilitySpread) == "UNFND")
+	return "WSOUNFND";
+else if (UpperCase(m_sFacilitySpread) == "LOC")
+	return "WSOLCSRD";
+else
+	return "";]]></expr>
+              <Node name="ACTION" type="attribute">
+                <expr><![CDATA[return "UNKNOWN";]]></expr>
+              </Node>
+              <Node name="ONLY" type="attribute">
+                <comment><![CDATA[20231119: only if parent exists]]></comment>
+                <expr><![CDATA[return "Y";]]></expr>
+              </Node>
+              <Node name="GSO_ELM_TYPE" type="attribute">
+                <expr><![CDATA[return "field";]]></expr>
+              </Node>
+              <Node name="MATCH" type="attribute">
+                <expr><![CDATA[return "IEDF_EV_TYP";]]></expr>
+              </Node>
+              <Node name="req" type="attribute">
+                <expr><![CDATA[return "true";]]></expr>
+              </Node>
+            </Node>
+            <Node name="AllIncomeEventPeriodEndDateTime" type="element">
+              <comment><![CDATA[20231031 Marc email]]></comment>
+              <expr><![CDATA[if (OneHasValue(StrReplaceAll(SubString(m_dtEndDate, 1, 10), "-", "")))
+	return DateFromString(StrReplaceAll(SubString(m_dtEndDate, 1, 10), "-", ""), "%Y%M%D");
+else
+	return "";]]></expr>
+              <Node name="GSO_ELM_TYPE" type="attribute">
+                <expr><![CDATA[return "field";]]></expr>
+              </Node>
+              <Node name="req" type="attribute">
+                <expr><![CDATA[return "false";]]></expr>
+              </Node>
+            </Node>
+            <Node name="AllIncomeFloatRatePercentage" type="element">
+              <expr><![CDATA[if (UpperCase(m_sFacilitySpread) == "FEE")
+	return String2Float(FacitlityFee, 0) * 100;
+else if (UpperCase(m_sFacilitySpread) == "UNFND")
+	return String2Float(UnfundedFee, 0) * 100;
+else if (UpperCase(m_sFacilitySpread) == "LOC")
+	return String2Float(letterofCreditSpread, 0) * 100;
+else
+	return "";]]></expr>
+              <Node name="GSO_ELM_TYPE" type="attribute">
+                <expr><![CDATA[return "field";]]></expr>
+              </Node>
+              <Node name="req" type="attribute">
+                <expr><![CDATA[return "false";]]></expr>
+              </Node>
+            </Node>
+            <Node name="AllIncomeStartDateTime" type="element">
+              <comment><![CDATA[20231101 default if missing]]></comment>
+              <expr><![CDATA[if (OneHasValue(StrReplaceAll(SubString(m_dtStartDate, 1, 10), "-", "")))
+	return DateFromString(StrReplaceAll(SubString(m_dtStartDate, 1, 10), "-", ""), "%Y%M%D");
+else
+	return DateFromString("19000101", "%Y%M%D");]]></expr>
+              <Node name="GSO_ELM_TYPE" type="attribute">
+                <expr><![CDATA[return "field";]]></expr>
+              </Node>
+              <Node name="MATCH" type="attribute">
+                <expr><![CDATA[return "IEDF_EV_TYP";]]></expr>
+              </Node>
+              <Node name="req" type="attribute">
+                <expr><![CDATA[return "false";]]></expr>
+              </Node>
+            </Node>
+          </Node>
+        </Node>
+      </Node>
+    </OutputDef>
+  </Output>
+  <Translation/>
+  <Expressions>
+    <Expression enabled="true" ident="KeyStreaming">
+      <expr><![CDATA[return AssetID;]]></expr>
+    </Expression>
+    <Expression enabled="false" ident="RecordIdentifier">
+      <expr><![CDATA[return "";]]></expr>
+    </Expression>
+    <Expression enabled="true" ident="GSDMFiltering">
+      <expr><![CDATA[if (OneHasValue(Select("", "", "select 1 from ft_t_isid where end_tms is null and iss_id = :1", AssetID, "", "", "", "")) && ((((UpperCase(m_sFacilitySpread) == "UNFND") && OneHasValue(UnfundedFee)) || ((UpperCase(m_sFacilitySpread) == "FEE") && OneHasValue(FacitlityFee))) || ((UpperCase(m_sFacilitySpread) == "LOC") && OneHasValue(letterofCreditSpread))))
+	return "false";
+else
+	return "true";]]></expr>
+    </Expression>
+    <Expression enabled="false" ident="VDSFiltering">
+      <expr><![CDATA[return "";]]></expr>
+    </Expression>
+    <Expression enabled="true" ident="VDDBFiltering">
+      <expr><![CDATA[if (OneHasValue(Select("", "", "select 1 from ft_t_isid where end_tms is null and iss_id = :1", AssetID, "", "", "", "")) && ((((UpperCase(m_sFacilitySpread) == "UNFND") && OneHasValue(UnfundedFee)) || ((UpperCase(m_sFacilitySpread) == "FEE") && OneHasValue(FacitlityFee))) || ((UpperCase(m_sFacilitySpread) == "LOC") && OneHasValue(letterofCreditSpread))))
+	return "false";
+else
+	return "true";]]></expr>
+    </Expression>
+  </Expressions>
+</MappingDef>

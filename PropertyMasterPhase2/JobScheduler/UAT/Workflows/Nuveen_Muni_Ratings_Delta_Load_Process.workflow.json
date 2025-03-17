@@ -1,0 +1,762 @@
+{
+  "TYPE" : "Workflow",
+  "version" : "1.6.6",
+  "timeZone" : "America/New_York",
+  "title" : "Nuveen LevFin Ratings Delta Load Process",
+  "orderPreparation" : {
+    "parameters" : {
+      "checkDependency" : {
+        "type" : "Boolean",
+        "default" : "true"
+      },
+      "muni_file_pattern" : {
+        "type" : "String",
+        "default" : "'EAGLE_GS_SMF_SOI_EOD_*'"
+      },
+      "muni_dayMinus" : {
+        "type" : "String",
+        "default" : "'0'"
+      },
+      "muni_jobConfigText" : {
+        "type" : "String",
+        "default" : "'Eagle Muni Dataload Job'"
+      },
+      "muni_msg_typ" : {
+        "type" : "String",
+        "default" : "'NuveenEagleMuniSOI'"
+      },
+      "target_application" : {
+        "type" : "String",
+        "default" : "'fileloading'"
+      },
+      "scripts_home" : {
+        "type" : "String",
+        "default" : "'/ext/app/jobscheduler/scripts/'"
+      },
+      "dayMinus" : {
+        "type" : "String",
+        "default" : "0"
+      },
+      "fitch_file_pattern" : {
+        "type" : "String",
+        "default" : "'RDSIssueReport.*dis'"
+      },
+      "fitch_msg_type" : {
+        "type" : "String",
+        "default" : "'FitchRDS_IssueRatings_NuveenMuni'"
+      },
+      "fitch_dayMinus" : {
+        "type" : "String",
+        "default" : "'0'"
+      },
+      "moodys_file_pattern" : {
+        "type" : "String",
+        "default" : "'pfg_inst_current_rating_.*_Utf8_24Hour_Delta.*split'"
+      },
+      "moodys_msg_type" : {
+        "type" : "String",
+        "default" : "'MoodysRDS_Instrument_NuveenMuni'"
+      },
+      "moodys_dayMinus" : {
+        "type" : "String",
+        "default" : "'0'"
+      },
+      "snp_file_pattern" : {
+        "type" : "String",
+        "default" : "'\\.security'"
+      },
+      "snp_bf_nme" : {
+        "type" : "String",
+        "default" : "'S&P_XF_GR_Security_Ratings_NuveenMuni'"
+      },
+      "snp_dayMinus" : {
+        "type" : "String",
+        "default" : "'0'"
+      }
+    },
+    "allowUndeclared" : false
+  },
+  "jobResourceNames" : [ "curDteJob" ],
+  "instructions" : [ {
+    "TYPE" : "Lock",
+    "lockedWorkflow" : {
+      "instructions" : [ {
+        "TYPE" : "ConsumeNotices",
+        "noticeBoardNames" : "'EagleMuniLoadNoticeBoard'",
+        "subworkflow" : {
+          "instructions" : [ ]
+        },
+        "label" : "EagleMuniLoadNoticeBoard"
+      }, {
+        "TYPE" : "Execute.Named",
+        "jobName" : "Muni_Ratings_Delta_Workflow_Start",
+        "label" : "Muni_Ratings_Delta_Wkflw_Start"
+      }, {
+        "TYPE" : "If",
+        "predicate" : "$checkDependency==true",
+        "then" : {
+          "instructions" : [ {
+            "TYPE" : "Execute.Named",
+            "jobName" : "Echo_Dependency_Check",
+            "label" : "Echo_Dependency_Check"
+          }, {
+            "TYPE" : "Execute.Named",
+            "jobName" : "Muni_Load_Check",
+            "label" : "Muni_Load_Check"
+          }, {
+            "TYPE" : "If",
+            "predicate" : "$muniloadcount.toNumber == 1",
+            "then" : {
+              "instructions" : [ {
+                "TYPE" : "Execute.Named",
+                "jobName" : "Muni_Load_Completed",
+                "label" : "Muni_Load_Completed"
+              }, {
+                "TYPE" : "Execute.Named",
+                "jobName" : "Muni_SNP_Load_Check",
+                "label" : "Muni_SNP_Load_Check"
+              }, {
+                "TYPE" : "If",
+                "predicate" : "$munisnpscount.toNumber == 0",
+                "then" : {
+                  "instructions" : [ {
+                    "TYPE" : "Execute.Named",
+                    "jobName" : "Muni_SNP_Instrument_Ratings_Delta",
+                    "label" : "Muni_SNP_Instrument_Ratings_Delta"
+                  }, {
+                    "TYPE" : "Execute.Named",
+                    "jobName" : "Muni_SNP_Load_Completed",
+                    "label" : "Muni_SNP_Load_Completed"
+                  } ]
+                },
+                "else" : {
+                  "instructions" : [ {
+                    "TYPE" : "Execute.Named",
+                    "jobName" : "Muni_SNP_Load_Not_Completed",
+                    "label" : "Muni_SNP_Load_Not_Completed"
+                  } ]
+                }
+              }, {
+                "TYPE" : "Execute.Named",
+                "jobName" : "Muni_SNP_Load_Check1",
+                "label" : "Muni_SNP_Load_Check1"
+              }, {
+                "TYPE" : "Execute.Named",
+                "jobName" : "Muni_Moodys_Load_Check",
+                "label" : "Muni_Moodys_Load_Check"
+              }, {
+                "TYPE" : "If",
+                "predicate" : "$munisnpscount.toNumber == 1 && $munimoodyscount.toNumber == 0",
+                "then" : {
+                  "instructions" : [ {
+                    "TYPE" : "Execute.Named",
+                    "jobName" : "Muni_Moodys_Instrument_Ratings_Delta",
+                    "label" : "Muni_Moodys_Instrument_Ratings"
+                  }, {
+                    "TYPE" : "Execute.Named",
+                    "jobName" : "Muni_Moodys_Load_Completed",
+                    "label" : "Muni_Moodys_Load_Completed"
+                  } ]
+                },
+                "else" : {
+                  "instructions" : [ {
+                    "TYPE" : "Execute.Named",
+                    "jobName" : "Muni_Moodys_Load_Not_Completed",
+                    "label" : "Muni_Moodys_Load_Not_Completed"
+                  } ]
+                }
+              } ]
+            },
+            "else" : {
+              "instructions" : [ {
+                "TYPE" : "Execute.Named",
+                "jobName" : "Muni_Load_Not_Completed",
+                "label" : "Muni_Load_Not_Completed"
+              }, {
+                "TYPE" : "Finish"
+              } ]
+            }
+          } ]
+        },
+        "else" : {
+          "instructions" : [ {
+            "TYPE" : "Execute.Named",
+            "jobName" : "Echo_No_Dependency_Check",
+            "label" : "Echo_No_Dependency_Check"
+          }, {
+            "TYPE" : "Execute.Named",
+            "jobName" : "Muni_Ratings_Delta_Load_End_NDC",
+            "label" : "Muni_Ratings_Delta_Load_End_ND"
+          } ]
+        }
+      }, {
+        "TYPE" : "Execute.Named",
+        "jobName" : "Muni_Ratings_Delta_Workflow_End",
+        "label" : "Muni_Ratings_Delta_Workflow_En"
+      }, {
+        "TYPE" : "Execute.Named",
+        "jobName" : "Muni_SNP_Load_Check3",
+        "label" : "Muni_SNP_Load_Check3"
+      }, {
+        "TYPE" : "Execute.Named",
+        "jobName" : "Muni_Moodys_Load_Check2",
+        "label" : "Muni_Moodys_Load_Check2"
+      }, {
+        "TYPE" : "Execute.Named",
+        "jobName" : "Muni_Fitch_Load_Check1",
+        "label" : "Muni_Fitch_Load_Check1"
+      }, {
+        "TYPE" : "Execute.Named",
+        "jobName" : "JBLG_SnP_All_Records_Fail_Check",
+        "label" : "JBLG_SnP_All_Records_Fail_Chec"
+      }, {
+        "TYPE" : "Execute.Named",
+        "jobName" : "JBLG_Mdy_All_Records_Fail_Check",
+        "label" : "JBLG_Mdy_All_Records_Fail_Chec"
+      }, {
+        "TYPE" : "Execute.Named",
+        "jobName" : "JBLG_Fitch_All_Records_Fail_Check",
+        "label" : "JBLG_Fitch_All_Records_Fail_Ch"
+      }, {
+        "TYPE" : "If",
+        "predicate" : "$munisnpscount.toNumber == 1 && $munimoodyscount.toNumber == 1 && $munifitchcount.toNumber == 1 && $rsnpcount.toNumber == 0 && $rmoodycount.toNumber == 0 && $rfitchcount.toNumber == 0",
+        "then" : {
+          "instructions" : [ {
+            "TYPE" : "PostNotices",
+            "noticeBoardNames" : [ "RatingsMuniNoticeBoard" ],
+            "label" : "RatingsMuniNoticeBoard"
+          } ]
+        },
+        "else" : {
+          "instructions" : [ {
+            "TYPE" : "Finish"
+          } ]
+        }
+      } ]
+    },
+    "demands" : [ {
+      "lockName" : "Nuveen_Muni_Ratings_Delta_Load_RL"
+    } ],
+    "label" : "Nvn_Muni_Ratings_Delta_RL"
+  } ],
+  "jobs" : {
+    "Muni_Ratings_Delta_Workflow_Start" : {
+      "agentName" : "JSAgent",
+      "withSubagentClusterIdExpr" : false,
+      "executable" : {
+        "TYPE" : "ShellScriptExecutable",
+        "script" : "echo \"Muni Ratings Delta Workflow Start\"",
+        "v1Compatible" : false
+      },
+      "skipIfNoAdmissionForOrderDay" : false,
+      "parallelism" : 1,
+      "graceTimeout" : 1,
+      "failOnErrWritten" : false,
+      "warnOnErrWritten" : false,
+      "title" : "Muni Ratings Delta Workflow Start"
+    },
+    "Echo_Dependency_Check" : {
+      "agentName" : "JSAgent",
+      "withSubagentClusterIdExpr" : false,
+      "executable" : {
+        "TYPE" : "ShellScriptExecutable",
+        "script" : "echo \"Dependency Check\"",
+        "v1Compatible" : false
+      },
+      "skipIfNoAdmissionForOrderDay" : false,
+      "parallelism" : 1,
+      "graceTimeout" : 1,
+      "failOnErrWritten" : false,
+      "warnOnErrWritten" : false,
+      "title" : "Echo Dependency Check"
+    },
+    "Muni_Load_Check" : {
+      "agentName" : "JSAgent",
+      "withSubagentClusterIdExpr" : false,
+      "executable" : {
+        "TYPE" : "InternalExecutable",
+        "className" : "com.sos.jitl.jobs.db.SQLExecutorJob",
+        "internalType" : "JITL",
+        "arguments" : {
+          "command" : "\"select count(*) as muniloadcount from ser_gs_gc.ft_t_jblg where (UPPER(job_input_txt) ~* (UPPER('$muni_file_pattern')) or UPPER(job_msg_typ) ~* (UPPER('$muni_msg_typ'))) and date_trunc('day', ser_gs_gc.sysdate() - interval '$muni_dayMinus days') = date_trunc('day', job_start_tms) AND substring( job_input_txt  FROM '(\\\\d{4}\\\\d{2}\\\\d{2})')::date= ser_gs_gc.sysdate()::date - INTERVAL '$muni_dayMinus day' and job_end_tms is not null and job_stat_typ = 'CLOSED'\"",
+          "resultset_as_variables" : "\"column_value\"",
+          "hibernate_configuration_file" : "\"/ext/app/jobscheduler/base/sos-berlin.com/joc/resources/joc/hibernate.cfg.xml\""
+        }
+      },
+      "skipIfNoAdmissionForOrderDay" : false,
+      "parallelism" : 1,
+      "graceTimeout" : 1,
+      "failOnErrWritten" : false,
+      "warnOnErrWritten" : false,
+      "title" : "Muni Load Check"
+    },
+    "Muni_Load_Completed" : {
+      "agentName" : "JSAgent",
+      "withSubagentClusterIdExpr" : false,
+      "executable" : {
+        "TYPE" : "ShellScriptExecutable",
+        "script" : "echo \"Muni load has processed\"",
+        "v1Compatible" : false
+      },
+      "skipIfNoAdmissionForOrderDay" : false,
+      "parallelism" : 1,
+      "graceTimeout" : 1,
+      "failOnErrWritten" : false,
+      "warnOnErrWritten" : false,
+      "title" : "Muni Load Completed"
+    },
+    "Muni_SNP_Load_Check" : {
+      "agentName" : "JSAgent",
+      "withSubagentClusterIdExpr" : false,
+      "executable" : {
+        "TYPE" : "InternalExecutable",
+        "className" : "com.sos.jitl.jobs.db.SQLExecutorJob",
+        "internalType" : "JITL",
+        "arguments" : {
+          "command" : "\"select count(*) as munisnpscount from ser_gs_gc.ft_t_jblg where job_id in (SELECT prnt_job_id from ser_gs_gc.ft_t_jblg \\nwhere (UPPER(job_input_txt) ~* (UPPER('$snp_file_pattern')) or UPPER(bf_nme) ~* (UPPER('$snp_bf_nme'))) and date_trunc('day', ser_gs_gc.sysdate() - interval '$snp_dayMinus days') = date_trunc('day', job_start_tms) \\nAND substring( job_input_txt  FROM '(\\\\d{4}\\\\d{2}\\\\d{2})')::date= ser_gs_gc.sysdate()::date - INTERVAL '$snp_dayMinus day' and job_end_tms is not null) and job_config_txt = 'RATINGS_DELTA' and job_stat_typ ='CLOSED'\"",
+          "resultset_as_variables" : "\"column_value\"",
+          "hibernate_configuration_file" : "\"/ext/app/jobscheduler/base/sos-berlin.com/joc/resources/joc/hibernate.cfg.xml\""
+        }
+      },
+      "skipIfNoAdmissionForOrderDay" : false,
+      "parallelism" : 1,
+      "graceTimeout" : 1,
+      "failOnErrWritten" : false,
+      "warnOnErrWritten" : false,
+      "title" : "Muni SNP Load Check"
+    },
+    "Muni_SNP_Instrument_Ratings_Delta" : {
+      "agentName" : "JSAgent",
+      "withSubagentClusterIdExpr" : false,
+      "executable" : {
+        "TYPE" : "ShellScriptExecutable",
+        "script" : "jq -r '.FilePatterns[]' $input_param_file | while read fileName; do\n\tfileDte=$(date --date=\"$BUS_DTE $dayMinus days ago\" +\"%Y%m%d\")\n\tfileNameBusDte=${fileName/$busDteRegex/$fileDte}\n    fileNameRegex=${fileName//'.'/'\\.'}\n    fileNameRegex=${fileNameRegex//'*'/'\\*'}\n    sed -i \"s|$fileNameRegex|$fileNameBusDte|\" $input_param_file\ndone\n\ncd $scripts_home\n./jobutilities execWkf $input_param_file $event_name $target_application",
+        "env" : {
+          "input_param_file" : "'/edmfs/app/InputParams/ratings/Nuveen_Muni_SNP_Instrument_Ratings_Delta_Load.json'",
+          "event_name" : "'Nuveen_EVT_Muni_SNP_Ratings'",
+          "target_application" : "$target_application",
+          "scripts_home" : "$scripts_home",
+          "dayMinus" : "$dayMinus"
+        },
+        "v1Compatible" : false
+      },
+      "skipIfNoAdmissionForOrderDay" : false,
+      "parallelism" : 1,
+      "graceTimeout" : 1,
+      "failOnErrWritten" : false,
+      "warnOnErrWritten" : false,
+      "title" : "Muni SNP Instrument Ratings Delta"
+    },
+    "Muni_SNP_Load_Completed" : {
+      "agentName" : "JSAgent",
+      "withSubagentClusterIdExpr" : false,
+      "executable" : {
+        "TYPE" : "ShellScriptExecutable",
+        "script" : "echo \"Muni SNP load has processed\"",
+        "v1Compatible" : false
+      },
+      "skipIfNoAdmissionForOrderDay" : false,
+      "parallelism" : 1,
+      "graceTimeout" : 1,
+      "failOnErrWritten" : false,
+      "warnOnErrWritten" : false,
+      "title" : "Muni SNP Load Completed"
+    },
+    "Muni_SNP_Load_Not_Completed" : {
+      "agentName" : "JSAgent",
+      "withSubagentClusterIdExpr" : false,
+      "executable" : {
+        "TYPE" : "ShellScriptExecutable",
+        "script" : "echo \"Muni SNP load has not processed\"",
+        "v1Compatible" : false
+      },
+      "skipIfNoAdmissionForOrderDay" : false,
+      "parallelism" : 1,
+      "graceTimeout" : 1,
+      "failOnErrWritten" : false,
+      "warnOnErrWritten" : false,
+      "title" : "Muni SNP Load Not Completed"
+    },
+    "Muni_SNP_Load_Check1" : {
+      "agentName" : "JSAgent",
+      "withSubagentClusterIdExpr" : false,
+      "executable" : {
+        "TYPE" : "InternalExecutable",
+        "className" : "com.sos.jitl.jobs.db.SQLExecutorJob",
+        "internalType" : "JITL",
+        "arguments" : {
+          "command" : "\"select count(*) as munisnpscount from ser_gs_gc.ft_t_jblg where job_id in (SELECT prnt_job_id from ser_gs_gc.ft_t_jblg \\nwhere (UPPER(job_input_txt) ~* (UPPER('$snp_file_pattern')) or UPPER(bf_nme) ~* (UPPER('$snp_bf_nme'))) and date_trunc('day', ser_gs_gc.sysdate() - interval '$snp_dayMinus days') = date_trunc('day', job_start_tms) \\nAND substring( job_input_txt  FROM '(\\\\d{4}\\\\d{2}\\\\d{2})')::date= ser_gs_gc.sysdate()::date - INTERVAL '$snp_dayMinus day' and job_end_tms is not null) and job_config_txt = 'RATINGS_DELTA' and job_stat_typ ='CLOSED'\"",
+          "resultset_as_variables" : "\"column_value\"",
+          "hibernate_configuration_file" : "\"/ext/app/jobscheduler/base/sos-berlin.com/joc/resources/joc/hibernate.cfg.xml\""
+        }
+      },
+      "skipIfNoAdmissionForOrderDay" : false,
+      "parallelism" : 1,
+      "graceTimeout" : 1,
+      "failOnErrWritten" : false,
+      "warnOnErrWritten" : false,
+      "title" : "Muni SNP Load Check1"
+    },
+    "Muni_Moodys_Load_Check" : {
+      "agentName" : "JSAgent",
+      "withSubagentClusterIdExpr" : false,
+      "executable" : {
+        "TYPE" : "InternalExecutable",
+        "className" : "com.sos.jitl.jobs.db.SQLExecutorJob",
+        "internalType" : "JITL",
+        "arguments" : {
+          "command" : "\"select count(*) as munimoodyscount from ser_gs_gc.ft_t_jblg where job_id in (select prnt_job_id from ser_gs_gc.ft_t_jblg where (UPPER(job_input_txt) ~* (UPPER('$moodys_file_pattern')) and UPPER(job_msg_typ) ~* (UPPER('$moodys_msg_type'))) \\nand date_trunc('day', ser_gs_gc.sysdate() - interval '$moodys_dayMinus days') = date_trunc('day', job_start_tms) AND substring( job_input_txt  FROM '(\\\\d{4}\\\\d{2}\\\\d{2})')::date= ser_gs_gc.sysdate()::date - INTERVAL '$moodys_dayMinus day' \\nand job_end_tms is not null) and job_stat_typ ='CLOSED'\"",
+          "resultset_as_variables" : "\"column_value\"",
+          "hibernate_configuration_file" : "\"/ext/app/jobscheduler/base/sos-berlin.com/joc/resources/joc/hibernate.cfg.xml\""
+        }
+      },
+      "skipIfNoAdmissionForOrderDay" : false,
+      "parallelism" : 1,
+      "graceTimeout" : 1,
+      "failOnErrWritten" : false,
+      "warnOnErrWritten" : false,
+      "title" : "Muni Moodys Load Check"
+    },
+    "Muni_Moodys_Instrument_Ratings_Delta" : {
+      "agentName" : "JSAgent",
+      "withSubagentClusterIdExpr" : false,
+      "executable" : {
+        "TYPE" : "ShellScriptExecutable",
+        "script" : "jq -r '.Pattern[]' $input_param_file | while read fileName; do\n\tfileDte=$(date --date=\"$BUS_DTE $dayMinus days ago\" +\"%Y%m%d\")\n\tfileNameBusDte=${fileName/$busDteRegex/$fileDte}\n    fileNameRegex=${fileName//'.'/'\\.'}\n    fileNameRegex=${fileNameRegex//'*'/'\\*'}\n    sed -i \"s|$fileNameRegex|$fileNameBusDte|\" $input_param_file\ndone\n\ncd $scripts_home\n./jobutilities execWkf $input_param_file $event_name $target_application",
+        "env" : {
+          "input_param_file" : "'/edmfs/app/InputParams/ratings/Nuveen_Muni_Moodys_Instrument_Ratings_Delta_Load.json'",
+          "event_name" : "'Nuveen_EVT_Muni_Moodys_Ratings'",
+          "target_application" : "$target_application",
+          "scripts_home" : "$scripts_home",
+          "dayMinus" : "$dayMinus"
+        },
+        "v1Compatible" : false
+      },
+      "skipIfNoAdmissionForOrderDay" : false,
+      "parallelism" : 1,
+      "graceTimeout" : 1,
+      "failOnErrWritten" : false,
+      "warnOnErrWritten" : false,
+      "title" : "Muni Moodys Instrument Ratings Delta"
+    },
+    "Muni_Moodys_Load_Completed" : {
+      "agentName" : "JSAgent",
+      "withSubagentClusterIdExpr" : false,
+      "executable" : {
+        "TYPE" : "ShellScriptExecutable",
+        "script" : "echo \"Muni Moodys load has processed\"",
+        "v1Compatible" : false
+      },
+      "skipIfNoAdmissionForOrderDay" : false,
+      "parallelism" : 1,
+      "graceTimeout" : 1,
+      "failOnErrWritten" : false,
+      "warnOnErrWritten" : false,
+      "title" : "Muni Moodys Load Completed"
+    },
+    "Muni_Moodys_Load_Not_Completed" : {
+      "agentName" : "JSAgent",
+      "withSubagentClusterIdExpr" : false,
+      "executable" : {
+        "TYPE" : "ShellScriptExecutable",
+        "script" : "echo \"Muni Moodys load has not processed\"",
+        "v1Compatible" : false
+      },
+      "skipIfNoAdmissionForOrderDay" : false,
+      "parallelism" : 1,
+      "graceTimeout" : 1,
+      "failOnErrWritten" : false,
+      "warnOnErrWritten" : false,
+      "title" : "Muni Moodys Load Not Completed"
+    },
+    "Muni_SNP_Load_Check2" : {
+      "agentName" : "JSAgent",
+      "withSubagentClusterIdExpr" : false,
+      "executable" : {
+        "TYPE" : "InternalExecutable",
+        "className" : "com.sos.jitl.jobs.db.SQLExecutorJob",
+        "internalType" : "JITL",
+        "arguments" : {
+          "command" : "\"select count(*) as munisnpscount from ser_gs_gc.ft_t_jblg where job_id in (SELECT prnt_job_id from ser_gs_gc.ft_t_jblg \\nwhere (UPPER(job_input_txt) ~* (UPPER('$snp_file_pattern')) or UPPER(bf_nme) ~* (UPPER('$snp_bf_nme'))) and date_trunc('day', ser_gs_gc.sysdate() - interval '$snp_dayMinus days') = date_trunc('day', job_start_tms) \\nAND substring( job_input_txt  FROM '(\\\\d{4}\\\\d{2}\\\\d{2})')::date= ser_gs_gc.sysdate()::date - INTERVAL '$snp_dayMinus day' and job_end_tms is not null) and job_config_txt = 'RATINGS_DELTA' and job_stat_typ ='CLOSED'\"",
+          "resultset_as_variables" : "\"column_value\"",
+          "hibernate_configuration_file" : "\"/ext/app/jobscheduler/base/sos-berlin.com/joc/resources/joc/hibernate.cfg.xml\""
+        }
+      },
+      "skipIfNoAdmissionForOrderDay" : false,
+      "parallelism" : 1,
+      "graceTimeout" : 1,
+      "failOnErrWritten" : false,
+      "warnOnErrWritten" : false,
+      "title" : "Muni SNP Load Check2"
+    },
+    "Muni_Moodys_Load_Check1" : {
+      "agentName" : "JSAgent",
+      "withSubagentClusterIdExpr" : false,
+      "executable" : {
+        "TYPE" : "InternalExecutable",
+        "className" : "com.sos.jitl.jobs.db.SQLExecutorJob",
+        "internalType" : "JITL",
+        "arguments" : {
+          "command" : "\"select count(*) as munimoodyscount from ser_gs_gc.ft_t_jblg where job_id in (select prnt_job_id from ser_gs_gc.ft_t_jblg where (UPPER(job_input_txt) ~* (UPPER('$moodys_file_pattern')) and UPPER(job_msg_typ) ~* (UPPER('$moodys_msg_type'))) \\nand date_trunc('day', ser_gs_gc.sysdate() - interval '$moodys_dayMinus days') = date_trunc('day', job_start_tms) AND substring( job_input_txt  FROM '(\\\\d{4}\\\\d{2}\\\\d{2})')::date= ser_gs_gc.sysdate()::date - INTERVAL '$moodys_dayMinus day' \\nand job_end_tms is not null) and job_stat_typ ='CLOSED'\"",
+          "resultset_as_variables" : "\"column_value\"",
+          "hibernate_configuration_file" : "\"/ext/app/jobscheduler/base/sos-berlin.com/joc/resources/joc/hibernate.cfg.xml\""
+        }
+      },
+      "skipIfNoAdmissionForOrderDay" : false,
+      "parallelism" : 1,
+      "graceTimeout" : 1,
+      "failOnErrWritten" : false,
+      "warnOnErrWritten" : false,
+      "title" : "Muni Moodys Load Check1"
+    },
+    "Muni_Fitch_Load_Check" : {
+      "agentName" : "JSAgent",
+      "withSubagentClusterIdExpr" : false,
+      "executable" : {
+        "TYPE" : "InternalExecutable",
+        "className" : "com.sos.jitl.jobs.db.SQLExecutorJob",
+        "internalType" : "JITL",
+        "arguments" : {
+          "command" : "\"select count(*) as munifitchcount from ser_gs_gc.ft_t_jblg where (UPPER(job_input_txt) ~* (UPPER('$fitch_file_pattern')) and UPPER(job_msg_typ) ~* (UPPER('$fitch_msg_type'))) \\nand date_trunc('day', ser_gs_gc.sysdate() - interval '$fitch_dayMinus days') = date_trunc('day', job_start_tms) AND substring( job_input_txt  FROM '(\\\\d{4}\\\\d{2}\\\\d{2})')::date= ser_gs_gc.sysdate()::date - INTERVAL '$fitch_dayMinus day' \\nand job_end_tms is not null and job_stat_typ = 'CLOSED'\"",
+          "resultset_as_variables" : "\"column_value\"",
+          "hibernate_configuration_file" : "\"/ext/app/jobscheduler/base/sos-berlin.com/joc/resources/joc/hibernate.cfg.xml\""
+        }
+      },
+      "skipIfNoAdmissionForOrderDay" : false,
+      "parallelism" : 1,
+      "graceTimeout" : 1,
+      "failOnErrWritten" : false,
+      "warnOnErrWritten" : false,
+      "title" : "Muni Fitch Load Check"
+    },
+    "Muni_Fitch_Instrument_Ratings_Delta" : {
+      "agentName" : "JSAgent",
+      "withSubagentClusterIdExpr" : false,
+      "executable" : {
+        "TYPE" : "ShellScriptExecutable",
+        "script" : "jq -r '.FilePatterns[]' $input_param_file | while read fileName; do\n\tfileDte=$(date --date=\"$BUS_DTE $dayMinus days ago\" +\"%Y%m%d\")\n\tfileNameBusDte=${fileName/$busDteRegex/$fileDte}\n    fileNameRegex=${fileName//'.'/'\\.'}\n    fileNameRegex=${fileNameRegex//'*'/'\\*'}\n    sed -i \"s|$fileNameRegex|$fileNameBusDte|\" $input_param_file\ndone\n\ncd $scripts_home\n./jobutilities execWkf $input_param_file $event_name $target_application",
+        "env" : {
+          "input_param_file" : "'/edmfs/app/InputParams/ratings/Nuveen_Muni_Fitch_Instrument_Ratings_Delta_Load.json'",
+          "event_name" : "'Nuveen_EVT_Muni_Fitch_Ratings'",
+          "target_application" : "$target_application",
+          "scripts_home" : "$scripts_home",
+          "dayMinus" : "$dayMinus"
+        },
+        "v1Compatible" : false
+      },
+      "skipIfNoAdmissionForOrderDay" : false,
+      "parallelism" : 1,
+      "graceTimeout" : 1,
+      "failOnErrWritten" : false,
+      "warnOnErrWritten" : false,
+      "title" : "Muni Fitch Instrument Ratings Delta"
+    },
+    "Muni_Fitch_Load_Completed" : {
+      "agentName" : "JSAgent",
+      "withSubagentClusterIdExpr" : false,
+      "executable" : {
+        "TYPE" : "ShellScriptExecutable",
+        "script" : "echo \"Muni Fitch load has processed\"",
+        "v1Compatible" : false
+      },
+      "skipIfNoAdmissionForOrderDay" : false,
+      "parallelism" : 1,
+      "graceTimeout" : 1,
+      "failOnErrWritten" : false,
+      "warnOnErrWritten" : false,
+      "title" : "Muni Fitch Load Completed"
+    },
+    "Muni_Fitch_Load_Not_Completed" : {
+      "agentName" : "JSAgent",
+      "withSubagentClusterIdExpr" : false,
+      "executable" : {
+        "TYPE" : "ShellScriptExecutable",
+        "script" : "echo \"Muni Fitch load has not processed\"",
+        "v1Compatible" : false
+      },
+      "skipIfNoAdmissionForOrderDay" : false,
+      "parallelism" : 1,
+      "graceTimeout" : 1,
+      "failOnErrWritten" : false,
+      "warnOnErrWritten" : false,
+      "title" : "Muni Fitch Load Not Completed"
+    },
+    "Muni_Load_Not_Completed" : {
+      "agentName" : "JSAgent",
+      "withSubagentClusterIdExpr" : false,
+      "executable" : {
+        "TYPE" : "ShellScriptExecutable",
+        "script" : "echo \"Muni load has not processed, Finish the job\"",
+        "v1Compatible" : false
+      },
+      "skipIfNoAdmissionForOrderDay" : false,
+      "parallelism" : 1,
+      "graceTimeout" : 1,
+      "failOnErrWritten" : false,
+      "warnOnErrWritten" : false,
+      "title" : "Muni Load Not Completed"
+    },
+    "Echo_No_Dependency_Check" : {
+      "agentName" : "JSAgent",
+      "withSubagentClusterIdExpr" : false,
+      "executable" : {
+        "TYPE" : "ShellScriptExecutable",
+        "script" : "echo \"No Dependency Check\"",
+        "v1Compatible" : false
+      },
+      "skipIfNoAdmissionForOrderDay" : false,
+      "parallelism" : 1,
+      "graceTimeout" : 1,
+      "failOnErrWritten" : false,
+      "warnOnErrWritten" : false,
+      "title" : "Echo No Dependency Check"
+    },
+    "Muni_Ratings_Delta_Load_End_NDC" : {
+      "agentName" : "JSAgent",
+      "withSubagentClusterIdExpr" : false,
+      "executable" : {
+        "TYPE" : "ShellScriptExecutable",
+        "script" : "echo \"Muni Ratings Delta Load End NDC\"",
+        "v1Compatible" : false
+      },
+      "skipIfNoAdmissionForOrderDay" : false,
+      "parallelism" : 1,
+      "graceTimeout" : 1,
+      "failOnErrWritten" : false,
+      "warnOnErrWritten" : false,
+      "title" : "Muni Ratings Delta Load End NDC"
+    },
+    "Muni_Ratings_Delta_Workflow_End" : {
+      "agentName" : "JSAgent",
+      "withSubagentClusterIdExpr" : false,
+      "executable" : {
+        "TYPE" : "ShellScriptExecutable",
+        "script" : "echo \"Muni Ratings Delta Workflow End\"",
+        "v1Compatible" : false
+      },
+      "skipIfNoAdmissionForOrderDay" : false,
+      "parallelism" : 1,
+      "graceTimeout" : 1,
+      "failOnErrWritten" : false,
+      "warnOnErrWritten" : false,
+      "title" : "Muni Ratings Delta Workflow End"
+    },
+    "Muni_SNP_Load_Check3" : {
+      "agentName" : "JSAgent",
+      "withSubagentClusterIdExpr" : false,
+      "executable" : {
+        "TYPE" : "InternalExecutable",
+        "className" : "com.sos.jitl.jobs.db.SQLExecutorJob",
+        "internalType" : "JITL",
+        "arguments" : {
+          "command" : "\"select count(*) as munisnpscount from ser_gs_gc.ft_t_jblg where job_id in (SELECT prnt_job_id from ser_gs_gc.ft_t_jblg \\nwhere (UPPER(job_input_txt) ~* (UPPER('$snp_file_pattern')) or UPPER(bf_nme) ~* (UPPER('$snp_bf_nme'))) and date_trunc('day', ser_gs_gc.sysdate() - interval '$snp_dayMinus days') = date_trunc('day', job_start_tms) \\nAND substring( job_input_txt  FROM '(\\\\d{4}\\\\d{2}\\\\d{2})')::date= ser_gs_gc.sysdate()::date - INTERVAL '$snp_dayMinus day' and job_end_tms is not null) and job_config_txt = 'RATINGS_DELTA' and job_stat_typ ='CLOSED'\"",
+          "resultset_as_variables" : "\"column_value\"",
+          "hibernate_configuration_file" : "\"/ext/app/jobscheduler/base/sos-berlin.com/joc/resources/joc/hibernate.cfg.xml\""
+        }
+      },
+      "skipIfNoAdmissionForOrderDay" : false,
+      "parallelism" : 1,
+      "graceTimeout" : 1,
+      "failOnErrWritten" : false,
+      "warnOnErrWritten" : false,
+      "title" : "Muni SNP Load Check3"
+    },
+    "Muni_Moodys_Load_Check2" : {
+      "agentName" : "JSAgent",
+      "withSubagentClusterIdExpr" : false,
+      "executable" : {
+        "TYPE" : "InternalExecutable",
+        "className" : "com.sos.jitl.jobs.db.SQLExecutorJob",
+        "internalType" : "JITL",
+        "arguments" : {
+          "command" : "\"select count(*) as munimoodyscount from ser_gs_gc.ft_t_jblg where job_id in (select prnt_job_id from ser_gs_gc.ft_t_jblg where (UPPER(job_input_txt) ~* (UPPER('$moodys_file_pattern')) and UPPER(job_msg_typ) ~* (UPPER('$moodys_msg_type'))) \\nand date_trunc('day', ser_gs_gc.sysdate() - interval '$moodys_dayMinus days') = date_trunc('day', job_start_tms) AND substring( job_input_txt  FROM '(\\\\d{4}\\\\d{2}\\\\d{2})')::date= ser_gs_gc.sysdate()::date - INTERVAL '$moodys_dayMinus day' \\nand job_end_tms is not null) and job_stat_typ ='CLOSED'\"",
+          "resultset_as_variables" : "\"column_value\"",
+          "hibernate_configuration_file" : "\"/ext/app/jobscheduler/base/sos-berlin.com/joc/resources/joc/hibernate.cfg.xml\""
+        }
+      },
+      "skipIfNoAdmissionForOrderDay" : false,
+      "parallelism" : 1,
+      "graceTimeout" : 1,
+      "failOnErrWritten" : false,
+      "warnOnErrWritten" : false,
+      "title" : "Muni Moodys Load Check2"
+    },
+    "Muni_Fitch_Load_Check1" : {
+      "agentName" : "JSAgent",
+      "withSubagentClusterIdExpr" : false,
+      "executable" : {
+        "TYPE" : "InternalExecutable",
+        "className" : "com.sos.jitl.jobs.db.SQLExecutorJob",
+        "internalType" : "JITL",
+        "arguments" : {
+          "command" : "\"select count(*) as munifitchcount from ser_gs_gc.ft_t_jblg where (UPPER(job_input_txt) ~* (UPPER('$fitch_file_pattern')) and UPPER(job_msg_typ) ~* (UPPER('$fitch_msg_type'))) \\nand date_trunc('day', ser_gs_gc.sysdate() - interval '$fitch_dayMinus days') = date_trunc('day', job_start_tms) AND substring( job_input_txt  FROM '(\\\\d{4}\\\\d{2}\\\\d{2})')::date= ser_gs_gc.sysdate()::date - INTERVAL '$fitch_dayMinus day' \\nand job_end_tms is not null and job_stat_typ = 'CLOSED'\"",
+          "resultset_as_variables" : "\"column_value\"",
+          "hibernate_configuration_file" : "\"/ext/app/jobscheduler/base/sos-berlin.com/joc/resources/joc/hibernate.cfg.xml\""
+        }
+      },
+      "skipIfNoAdmissionForOrderDay" : false,
+      "parallelism" : 1,
+      "graceTimeout" : 1,
+      "failOnErrWritten" : false,
+      "warnOnErrWritten" : false,
+      "title" : "Muni Fitch Load Check1"
+    },
+    "JBLG_SnP_All_Records_Fail_Check" : {
+      "agentName" : "JSAgent",
+      "withSubagentClusterIdExpr" : false,
+      "executable" : {
+        "TYPE" : "InternalExecutable",
+        "className" : "com.sos.jitl.jobs.db.SQLExecutorJob",
+        "internalType" : "JITL",
+        "arguments" : {
+          "command" : "\"SELECT count(*) as rsnpcount from ser_gs_gc.ft_t_jblg where (UPPER(job_input_txt) ~* (UPPER('$snp_file_pattern')) or UPPER(bf_nme) ~* (UPPER('$snp_bf_nme'))) and date_trunc('day', ser_gs_gc.sysdate() - interval '$snp_dayMinus days') = date_trunc('day', job_start_tms) AND substring( job_input_txt  FROM '(\\\\d{4}\\\\d{2}\\\\d{2})')::date= ser_gs_gc.sysdate()::date - INTERVAL '$snp_dayMinus day' and job_end_tms is not null and job_stat_typ ='CLOSED' and task_tot_cnt = task_failed_cnt and task_tot_cnt <> 0\"",
+          "resultset_as_variables" : "\"column_value\"",
+          "hibernate_configuration_file" : "\"/ext/app/jobscheduler/base/sos-berlin.com/joc/resources/joc/hibernate.cfg.xml\""
+        }
+      },
+      "skipIfNoAdmissionForOrderDay" : false,
+      "parallelism" : 1,
+      "graceTimeout" : 1,
+      "failOnErrWritten" : false,
+      "warnOnErrWritten" : false
+    },
+    "JBLG_Mdy_All_Records_Fail_Check" : {
+      "agentName" : "JSAgent",
+      "withSubagentClusterIdExpr" : false,
+      "executable" : {
+        "TYPE" : "InternalExecutable",
+        "className" : "com.sos.jitl.jobs.db.SQLExecutorJob",
+        "internalType" : "JITL",
+        "arguments" : {
+          "command" : "\"select count(*) as rmoodycount from ser_gs_gc.ft_t_jblg where (UPPER(job_input_txt) ~* (UPPER('$moodys_file_pattern')) and UPPER(job_msg_typ) ~* (UPPER('$moodys_msg_type'))) and date_trunc('day', ser_gs_gc.sysdate() - interval '$moodys_dayMinus days') = date_trunc('day', job_start_tms) AND substring( job_input_txt  FROM '(\\\\d{4}\\\\d{2}\\\\d{2})')::date= ser_gs_gc.sysdate()::date - INTERVAL '$moodys_dayMinus day' and job_end_tms is not null and job_stat_typ = 'CLOSED' and task_tot_cnt = task_failed_cnt and task_tot_cnt <> 0\"",
+          "resultset_as_variables" : "\"column_value\"",
+          "hibernate_configuration_file" : "\"/ext/app/jobscheduler/base/sos-berlin.com/joc/resources/joc/hibernate.cfg.xml\""
+        }
+      },
+      "skipIfNoAdmissionForOrderDay" : false,
+      "parallelism" : 1,
+      "graceTimeout" : 1,
+      "failOnErrWritten" : false,
+      "warnOnErrWritten" : false
+    },
+    "JBLG_Fitch_All_Records_Fail_Check" : {
+      "agentName" : "JSAgent",
+      "withSubagentClusterIdExpr" : false,
+      "executable" : {
+        "TYPE" : "InternalExecutable",
+        "className" : "com.sos.jitl.jobs.db.SQLExecutorJob",
+        "internalType" : "JITL",
+        "arguments" : {
+          "command" : "\"select count(*) as rfitchcount from ser_gs_gc.ft_t_jblg where (UPPER(job_input_txt) ~* (UPPER('$fitch_file_pattern')) and UPPER(job_msg_typ) ~* (UPPER('$fitch_msg_type'))) and date_trunc('day', ser_gs_gc.sysdate() - interval '$fitch_dayMinus days') = date_trunc('day', job_start_tms) AND substring( job_input_txt  FROM '(\\\\d{4}\\\\d{2}\\\\d{2})')::date= ser_gs_gc.sysdate()::date - INTERVAL '$fitch_dayMinus day' and job_end_tms is not null and job_stat_typ = 'CLOSED' and task_tot_cnt = task_failed_cnt and task_tot_cnt <> 0\"",
+          "resultset_as_variables" : "\"column_value\"",
+          "hibernate_configuration_file" : "\"/ext/app/jobscheduler/base/sos-berlin.com/joc/resources/joc/hibernate.cfg.xml\""
+        }
+      },
+      "skipIfNoAdmissionForOrderDay" : false,
+      "parallelism" : 1,
+      "graceTimeout" : 1,
+      "failOnErrWritten" : false,
+      "warnOnErrWritten" : false
+    }
+  }
+}

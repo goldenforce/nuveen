@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<root baseLookup="FinancialInstitution" createdUser="user1" freezeColumns="0" id="&amp;WD8918F81" isDefault="N" isPublic="Y" lookupId="NuveenCredit" pageSize="50" screenType="SYSTEMSRCH" title="CreditSearch">
+  <config>{}</config>
+  <buttons/>
+  <columns>
+    <column caption="" columnName="Institution Name" fieldName="NuveenCredit.FinancialInstitutionDetails.FinancialInstitutionName" filterFromNum="" filterFromTms="" filterToNum="" filterToTms="" filterValue="" filterable="Y" fromRange="" id="&amp;amp;WD9918F81" isRange="N" mobileTemplate="" operator="" orderNum="0" showRelLink="" sort="" toRange="" width=""/>
+    <column caption="" columnName="System Credit Identifier" fieldName="NuveenCredit.FinancialInstitutionIdentifiers.SystemCreditID" filterFromNum="" filterFromTms="" filterToNum="" filterToTms="" filterValue="" filterable="Y" fromRange="" id="&amp;amp;WDA918F81" isRange="N" mobileTemplate="" operator="" orderNum="1" showRelLink="" sort="" toRange="" width=""/>
+    <column caption="" columnName="Hub Credit ID" fieldName="NuveenCredit.FinancialInstitutionIdentifiers.NuveenHubCreditId" filterFromNum="" filterFromTms="" filterToNum="" filterToTms="" filterValue="" filterable="Y" fromRange="" id="&amp;amp;WDB918F81" isRange="N" mobileTemplate="" operator="" orderNum="2" showRelLink="" sort="" toRange="" width=""/>
+    <column caption="" columnName="Merritt Credit ID" fieldName="NuveenCredit.FinancialInstitutionIdentifiers.NuveenMerrittCreditId" filterFromNum="" filterFromTms="" filterToNum="" filterToTms="" filterValue="" filterable="Y" fromRange="" id="&amp;amp;WDC918F81" isRange="N" mobileTemplate="" operator="" orderNum="3" showRelLink="" sort="" toRange="" width=""/>
+    <column caption="" columnName="Credit Number" fieldName="NuveenCredit.FinancialInstitutionIdentifiers.NuveenCreditNumber" filterFromNum="" filterFromTms="" filterToNum="" filterToTms="" filterValue="" filterable="Y" fromRange="" id="&amp;amp;WDD918F81" isRange="N" mobileTemplate="" operator="" orderNum="4" showRelLink="" sort="" toRange="" width=""/>
+    <column caption="" columnName="Institution Description" fieldName="NuveenCredit.FinancialInstitutionDetails.InstitutionDescription" filterFromNum="" filterFromTms="" filterToNum="" filterToTms="" filterValue="" filterable="Y" fromRange="" id="&amp;amp;WDE918F81" isRange="N" mobileTemplate="" operator="" orderNum="5" showRelLink="" sort="" toRange="" width=""/>
+  </columns>
+</root>

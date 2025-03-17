@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entities cleanUnusedFields="false" nameSpace="NUVEEN">
+  <entiyTypes>
+    <entiyType desc="PropertySubtype" id="009nb5wi2etbS004" mainTable="FT_T_PPS1" name="PropertySubtype" nameSpace="NUVEEN"/>
+  </entiyTypes>
+  <beFields>
+    <beField class="BETEXT" customDesc="" customDomainSQL="" customSQL="" desc="" displayCaption="DealPath EMEA" entityTypeId="009nb5wi2etbS004" id="009nb5wi2etbS00B" mandatory="0" multiplicity="SINGLE_OR_NULL" name="DealPathEMEA" nameSpace="NUVEEN"/>
+    <beField class="BETEXT" customDesc="" customDomainSQL="" customSQL="" desc="" displayCaption="Deal Path US" entityTypeId="009nb5wi2etbS004" id="009nb5wi2etbS00A" mandatory="0" multiplicity="SINGLE_OR_NULL" name="DealPathUS" nameSpace="NUVEEN"/>
+    <beField class="BETEXT" customDesc="" customDomainSQL="" customSQL="" desc="" displayCaption="Property Subtype (Global)" entityTypeId="009nb5wi2etbS004" id="009nb5wi2etbS007" mandatory="0" multiplicity="SINGLE_OR_NULL" name="PropertySubtype" nameSpace="NUVEEN"/>
+    <beField class="BETEXT" customDesc="" customDomainSQL="" customSQL="" desc="" displayCaption="Property Subtype EMEA" entityTypeId="009nb5wi2etbS004" id="009nb5wi2etbS008" mandatory="0" multiplicity="SINGLE_OR_NULL" name="PropertySubtypeEMEA" nameSpace="NUVEEN"/>
+    <beField class="BETEXT" customDesc="" customDomainSQL="" customSQL="" desc="" displayCaption="Property Subtype US" entityTypeId="009nb5wi2etbS004" id="009nb5wi2etbS009" mandatory="0" multiplicity="SINGLE_OR_NULL" name="PropertySubtypeUS" nameSpace="NUVEEN"/>
+    <beField class="BETSTAMP" customDesc="" customDomainSQL="" customSQL="" desc="" displayCaption="End Tms" entityTypeId="009nb5wi2etbS004" id="++9oIacy2etbS020" mandatory="0" multiplicity="SINGLE_OR_NULL" name="PropertyEndTms" nameSpace="NUVEEN"/>
+    <beField class="BETSTAMP" customDesc="" customDomainSQL="" customSQL="" desc="" displayCaption="Last Change Tms" entityTypeId="009nb5wi2etbS004" id="++9oIacy2etbS01z" mandatory="0" multiplicity="SINGLE_AND_READONLY" name="PropertyLastChgTms" nameSpace="NUVEEN"/>
+    <beField class="BETEXT" customDesc="" customDomainSQL="" customSQL="" desc="" displayCaption="Last Change User Id" entityTypeId="009nb5wi2etbS004" id="++9oIacy2etbS01-" mandatory="0" multiplicity="SINGLE_AND_READONLY" name="PropertyLastChgUsrId" nameSpace="NUVEEN"/>
+    <beField class="BETSTAMP" customDesc="" customDomainSQL="" customSQL="" desc="" displayCaption="Start Tms" entityTypeId="009nb5wi2etbS004" id="++9oIacy2etbS01+" mandatory="0" multiplicity="SINGLE_OR_NULL" name="PropertyStartTms" nameSpace="NUVEEN"/>
+    <beField class="BETEXT" customDesc="" customDomainSQL="" customSQL="" desc="" displayCaption="Property Type (NCREIF)" entityTypeId="009nb5wi2etbS004" id="009sySpC2etbS2Su" mandatory="0" multiplicity="SINGLE_OR_NULL" name="PropertyTypeNCREIF" nameSpace="NUVEEN"/>
+    <beField class="BETEXT" customDesc="" customDomainSQL="" customSQL="" desc="" displayCaption="Design (NCREIF)" entityTypeId="009nb5wi2etbS004" id="009sySpC2etbS2Sw" mandatory="0" multiplicity="SINGLE_OR_NULL" name="DesignNCREIF" nameSpace="NUVEEN"/>
+    <beField class="BETEXT" customDesc="" customDomainSQL="" customSQL="" desc="" displayCaption="Usage (NCREIF)" entityTypeId="009nb5wi2etbS004" id="009sySpC2etbS2Sy" mandatory="0" multiplicity="SINGLE_OR_NULL" name="UsageNCREIF" nameSpace="NUVEEN"/>
+    <beField class="BETEXT" customDesc="" customDomainSQL="" customSQL="" desc="" displayCaption="Leasing (NCREIF)" entityTypeId="009nb5wi2etbS004" id="009sySpC2etbS2S-" mandatory="0" multiplicity="SINGLE_OR_NULL" name="LeasingNCREIF" nameSpace="NUVEEN"/>
+    <beField class="BETEXT" customDesc="" customDomainSQL="" customSQL="" desc="" displayCaption="GRESB Property Sector" entityTypeId="009nb5wi2etbS004" id="009sySpC2etbS2T0" mandatory="0" multiplicity="SINGLE_OR_NULL" name="PropertySectorGRESB" nameSpace="NUVEEN"/>
+    <beField class="BETEXT" customDesc="" customDomainSQL="" customSQL="" desc="" displayCaption="GRESB Property Type" entityTypeId="009nb5wi2etbS004" id="009sySpC2etbS2T2" mandatory="0" multiplicity="SINGLE_OR_NULL" name="PropertyTypeGRESB" nameSpace="NUVEEN"/>
+    <beField class="BETEXT" customDesc="" customDomainSQL="" customSQL="" desc="" displayCaption="GRESB Property Subtype" entityTypeId="009nb5wi2etbS004" id="009sySpC2etbS2T4" mandatory="0" multiplicity="SINGLE_OR_NULL" name="PropertySubtypeGRESB" nameSpace="NUVEEN"/>
+    <beField class="BETEXT" customDesc="&#10;" customDomainSQL="" customSQL="" desc="" displayCaption="MSCI (U.S.) Subtype" entityTypeId="009nb5wi2etbS004" id="009sySpC2etbS2T6" mandatory="0" multiplicity="SINGLE_OR_NULL" name="SubtypeMSCIUS" nameSpace="NUVEEN"/>
+    <beField class="BETEXT" customDesc="&#10;" customDomainSQL="" customSQL="" desc="" displayCaption="MSCI (EMEA_APAC) Subtype" entityTypeId="009nb5wi2etbS004" id="009sySpC2etbS2T8" mandatory="0" multiplicity="SINGLE_OR_NULL" name="SubtypeMSCIEMEAAPAC" nameSpace="NUVEEN"/>
+    <beField class="BETEXT" customDesc="&#10;" customDomainSQL="" customSQL="" desc="" displayCaption="INREV (EMEA)" entityTypeId="009nb5wi2etbS004" id="009sySpC2etbS2TA" mandatory="0" multiplicity="SINGLE_OR_NULL" name="INREVEMEA" nameSpace="NUVEEN"/>
+    <beField class="BETEXT" customDesc="" customDomainSQL="" customSQL="" desc="" displayCaption="ANREV (APAC)" entityTypeId="009nb5wi2etbS004" id="009sySpC2etbS2TC" mandatory="0" multiplicity="SINGLE_OR_NULL" name="ANREVAPAC" nameSpace="NUVEEN"/>
+    <beField class="BEDEC" customDesc="" customDomainSQL="" customSQL="" desc="" displayCaption="GRESB GFA Max Ratio" entityTypeId="009nb5wi2etbS004" id="009usEWC2etbS04-" mandatory="0" multiplicity="SINGLE_OR_NULL" name="GFAMaxRatioGRESB" nameSpace="NUVEEN">
+      <fieldConfig id="009usEWC2etbS04+" nameSpace="NUVEEN" type="ALLOW_NEGATIVE" value="N"/>
+    </beField>
+    <beField class="BEDEC" customDesc="" customDomainSQL="" customSQL="" desc="" displayCaption="GRESB GFA Min Ratio" entityTypeId="009nb5wi2etbS004" id="009usEWC2etbS04z" mandatory="0" multiplicity="SINGLE_OR_NULL" name="GFAMinRatioGRESB" nameSpace="NUVEEN">
+      <fieldConfig id="009usEWC2etbS050" nameSpace="NUVEEN" type="ALLOW_NEGATIVE" value="N"/>
+    </beField>
+  </beFields>
+  <dataGroups>
+    <dataGroup customInd="0" desc="" displayCaption="Property Subtype" entityTypeId="009nb5wi2etbS004" frequencyInd="0" id="009nb5wi2etbS00C" ignoreDeleteChildren="false" multiplicity="SINGLE_OR_NULL" name="PropertySubtypeDG" nameSpace="NUVEEN">
+      <part defNameSpace="NUVEEN" fieldId="009nb5wi2etbS00B" id="009nb5wi2etbS00J" prntReqdInd="0" seq="0"/>
+      <part defNameSpace="NUVEEN" fieldId="009nb5wi2etbS00A" id="009nb5wi2etbS00K" prntReqdInd="0" seq="1"/>
+      <part defNameSpace="NUVEEN" fieldId="009nb5wi2etbS007" id="009nb5wi2etbS00L" prntReqdInd="0" seq="2"/>
+      <part defNameSpace="NUVEEN" fieldId="009nb5wi2etbS008" id="009nb5wi2etbS00M" prntReqdInd="0" seq="3"/>
+      <part defNameSpace="NUVEEN" fieldId="009nb5wi2etbS009" id="009nb5wi2etbS00N" prntReqdInd="0" seq="4"/>
+      <part defNameSpace="NUVEEN" fieldId="++9oIacy2etbS020" id="++9oIacy2etbS025" prntReqdInd="0" seq="5"/>
+      <part defNameSpace="NUVEEN" fieldId="++9oIacy2etbS01z" id="++9oIacy2etbS026" prntReqdInd="0" seq="6"/>
+      <part defNameSpace="NUVEEN" fieldId="++9oIacy2etbS01-" id="++9oIacy2etbS027" prntReqdInd="0" seq="7"/>
+      <part defNameSpace="NUVEEN" fieldId="++9oIacy2etbS01+" id="++9oIacy2etbS028" prntReqdInd="0" seq="8"/>
+      <part defNameSpace="NUVEEN" fieldId="009sySpC2etbS2Su" id="009sySpC2etbS2Sv" prntReqdInd="0" seq="9"/>
+      <part defNameSpace="NUVEEN" fieldId="009sySpC2etbS2Sw" id="009sySpC2etbS2Sx" prntReqdInd="0" seq="10"/>
+      <part defNameSpace="NUVEEN" fieldId="009sySpC2etbS2Sy" id="009sySpC2etbS2Sz" prntReqdInd="0" seq="11"/>
+      <part defNameSpace="NUVEEN" fieldId="009sySpC2etbS2S-" id="009sySpC2etbS2S+" prntReqdInd="0" seq="12"/>
+      <part defNameSpace="NUVEEN" fieldId="009sySpC2etbS2T0" id="009sySpC2etbS2T1" prntReqdInd="0" seq="13"/>
+      <part defNameSpace="NUVEEN" fieldId="009sySpC2etbS2T2" id="009sySpC2etbS2T3" prntReqdInd="0" seq="14"/>
+      <part defNameSpace="NUVEEN" fieldId="009sySpC2etbS2T4" id="009sySpC2etbS2T5" prntReqdInd="0" seq="15"/>
+      <part defNameSpace="NUVEEN" fieldId="009sySpC2etbS2T6" id="009sySpC2etbS2T7" prntReqdInd="0" seq="16"/>
+      <part defNameSpace="NUVEEN" fieldId="009sySpC2etbS2T8" id="009sySpC2etbS2T9" prntReqdInd="0" seq="17"/>
+      <part defNameSpace="NUVEEN" fieldId="009sySpC2etbS2TA" id="009sySpC2etbS2TB" prntReqdInd="0" seq="18"/>
+      <part defNameSpace="NUVEEN" fieldId="009sySpC2etbS2TC" id="009sySpC2etbS2TD" prntReqdInd="0" seq="19"/>
+      <part defNameSpace="NUVEEN" fieldId="009usEWC2etbS04-" id="009usEWC2etbS053" prntReqdInd="0" seq="20"/>
+      <part defNameSpace="NUVEEN" fieldId="009usEWC2etbS04z" id="009usEWC2etbS054" prntReqdInd="0" seq="21"/>
+    </dataGroup>
+    <dataGroup customInd="0" entityTypeId="009nb5wi2etbS004" frequencyInd="0" id="009nb5wi2etbS006" ignoreDeleteChildren="false" multiplicity="SINGLE" name="PropertySubtype- Root DataGroup" nameSpace="NUVEEN">
+      <part dataGroupId="009nb5wi2etbS00C" defNameSpace="NUVEEN" id="009nb5wi2etbS00D" multiplicity="SINGLE_OR_NULL" prntReqdInd="0" seq="0"/>
+    </dataGroup>
+  </dataGroups>
+  <occurrences>
+    <occurrence desc="Occurrence for Property Subtype" id="009nC2Yi2etbS002" ignoreDeleteChildren="false" multiplicity="SINGLE_OR_NULL" name="PPS1_01" nameSpace="NUVEEN" table="FT_T_PPS1" timeSeries="NONE">
+      <field desc="ANREV APAC" id="009sySpC2etbS2TE" name="ANREV_APAC" nameSpace="NUVEEN"/>
+      <field desc="Data Source ID" id="009sySpC2etbS2TF" name="DATA_SRC_ID" nameSpace="NUVEEN"/>
+      <field desc="Deal Path EMEA" id="009nC2Yi2etbS007" name="DL_PATH_EMEA" nameSpace="NUVEEN"/>
+      <field desc="Deal Path US" id="009nC2Yi2etbS008" name="DL_PATH_US" nameSpace="NUVEEN"/>
+      <field desc="End Date/Time" id="++9oIacy2etbS01v" name="END_TMS" nameSpace="NUVEEN"/>
+      <field desc="GRESB GFA Max Ratio" id="009sySpC2etbS2TG" name="GRESB_GFA_MAX_RATION" nameSpace="NUVEEN"/>
+      <field desc="GRESB GFA Min Ratio" id="009sySpC2etbS2TH" name="GRESB_GFA_MIN_RATION" nameSpace="NUVEEN"/>
+      <field desc="GRESB Property Sector" id="009sySpC2etbS2TI" name="GRESB_PROP_SECT" nameSpace="NUVEEN"/>
+      <field desc="GRESB Property Subtype" id="009sySpC2etbS2TJ" name="GRESB_PROP_SUBTYP" nameSpace="NUVEEN"/>
+      <field desc="GRESB Property Type" id="009sySpC2etbS2TK" name="GRESB_PROP_TYP" nameSpace="NUVEEN"/>
+      <field desc="INREV EMEA" id="009sySpC2etbS2TL" name="INREV_EMEA" nameSpace="NUVEEN"/>
+      <field desc="Last Change Date/Time" id="++9oIacy2etbS01w" name="LAST_CHG_TMS" nameSpace="NUVEEN"/>
+      <field desc="Last Change User ID" id="++9oIacy2etbS01x" name="LAST_CHG_USR_ID" nameSpace="NUVEEN"/>
+      <field desc="MSCI EMEA_APAC Subtype" id="009sySpC2etbS2TM" name="MSCI_EMEA_APAC_SUBTYP" nameSpace="NUVEEN"/>
+      <field desc="MSCI US Subtype" id="009sySpC2etbS2TN" name="MSCI_US_SUBTYP" nameSpace="NUVEEN"/>
+      <field desc="Design NCREIF" id="009sySpC2etbS2TO" name="NCREIF_DESIGN" nameSpace="NUVEEN"/>
+      <field desc="Leasing NCREIF" id="009sySpC2etbS2TP" name="NCREIF_LEASING" nameSpace="NUVEEN"/>
+      <field desc="Property Type NCREIF" id="009sySpC2etbS2TQ" name="NCREIF_PROP_TYP" nameSpace="NUVEEN"/>
+      <field desc="Usage NCREIF" id="009sySpC2etbS2TR" name="NCREIF_USAGE" nameSpace="NUVEEN"/>
+      <field desc="Property Subtype" id="009nC2Yi2etbS00A" name="PROP_SUBTYP" nameSpace="NUVEEN"/>
+      <field desc="Property Subtype EMEA" id="009nC2Yi2etbS005" name="PROP_SUBTYP_EMEA" nameSpace="NUVEEN"/>
+      <field desc="Property Subtype US" id="009nC2Yi2etbS006" name="PROP_SUBTYP_US" nameSpace="NUVEEN"/>
+      <field desc="Start Date/Time" id="++9oIacy2etbS01y" name="START_TMS" nameSpace="NUVEEN"/>
+      <option id="009nC2Yi2etbS003" nameSpace="NUVEEN" type="DEFAULT_ACTION" value="UNKNOWN"/>
+    </occurrence>
+  </occurrences>
+  <mappings>
+    <mapping beFieldId="++9oIacy2etbS01z" groupMapping="0" id="++9oIacy2etbS021" nameSpace="NUVEEN" occFieldId="++9oIacy2etbS01w"/>
+    <mapping beFieldId="++9oIacy2etbS01-" groupMapping="0" id="++9oIacy2etbS022" nameSpace="NUVEEN" occFieldId="++9oIacy2etbS01x"/>
+    <mapping beFieldId="++9oIacy2etbS01+" groupMapping="0" id="++9oIacy2etbS023" nameSpace="NUVEEN" occFieldId="++9oIacy2etbS01y"/>
+    <mapping beFieldId="++9oIacy2etbS020" groupMapping="0" id="++9oIacy2etbS024" nameSpace="NUVEEN" occFieldId="++9oIacy2etbS01v"/>
+    <mapping beFieldId="009nb5wi2etbS007" groupMapping="0" id="009nb5wi2etbS00E" nameSpace="NUVEEN" occFieldId="009nC2Yi2etbS00A"/>
+    <mapping beFieldId="009nb5wi2etbS008" groupMapping="0" id="009nb5wi2etbS00F" nameSpace="NUVEEN" occFieldId="009nC2Yi2etbS005"/>
+    <mapping beFieldId="009nb5wi2etbS009" groupMapping="0" id="009nb5wi2etbS00G" nameSpace="NUVEEN" occFieldId="009nC2Yi2etbS006"/>
+    <mapping beFieldId="009nb5wi2etbS00A" groupMapping="0" id="009nb5wi2etbS00H" nameSpace="NUVEEN" occFieldId="009nC2Yi2etbS008"/>
+    <mapping beFieldId="009nb5wi2etbS00B" groupMapping="0" id="009nb5wi2etbS00I" nameSpace="NUVEEN" occFieldId="009nC2Yi2etbS007"/>
+    <mapping beFieldId="009sySpC2etbS2TC" groupMapping="0" id="009sySpC2etbS2TS" nameSpace="NUVEEN" occFieldId="009sySpC2etbS2TE"/>
+    <mapping beFieldId="009sySpC2etbS2Sw" groupMapping="0" id="009sySpC2etbS2TT" nameSpace="NUVEEN" occFieldId="009sySpC2etbS2TO"/>
+    <mapping beFieldId="009sySpC2etbS2TA" groupMapping="0" id="009sySpC2etbS2TU" nameSpace="NUVEEN" occFieldId="009sySpC2etbS2TL"/>
+    <mapping beFieldId="009sySpC2etbS2S-" groupMapping="0" id="009sySpC2etbS2TV" nameSpace="NUVEEN" occFieldId="009sySpC2etbS2TP"/>
+    <mapping beFieldId="009sySpC2etbS2T0" groupMapping="0" id="009sySpC2etbS2TX" nameSpace="NUVEEN" occFieldId="009sySpC2etbS2TI"/>
+    <mapping beFieldId="009sySpC2etbS2T4" groupMapping="0" id="009sySpC2etbS2TY" nameSpace="NUVEEN" occFieldId="009sySpC2etbS2TJ"/>
+    <mapping beFieldId="009sySpC2etbS2T2" groupMapping="0" id="009sySpC2etbS2TZ" nameSpace="NUVEEN" occFieldId="009sySpC2etbS2TK"/>
+    <mapping beFieldId="009sySpC2etbS2Su" groupMapping="0" id="009sySpC2etbS2Ta" nameSpace="NUVEEN" occFieldId="009sySpC2etbS2TQ"/>
+    <mapping beFieldId="009sySpC2etbS2T8" groupMapping="0" id="009sySpC2etbS2Tb" nameSpace="NUVEEN" occFieldId="009sySpC2etbS2TM"/>
+    <mapping beFieldId="009sySpC2etbS2T6" groupMapping="0" id="009sySpC2etbS2Tc" nameSpace="NUVEEN" occFieldId="009sySpC2etbS2TN"/>
+    <mapping beFieldId="009sySpC2etbS2Sy" groupMapping="0" id="009sySpC2etbS2Td" nameSpace="NUVEEN" occFieldId="009sySpC2etbS2TR"/>
+    <mapping beFieldId="009usEWC2etbS04-" groupMapping="0" id="009usEWC2etbS051" nameSpace="NUVEEN" occFieldId="009sySpC2etbS2TG"/>
+    <mapping beFieldId="009usEWC2etbS04z" groupMapping="0" id="009usEWC2etbS052" nameSpace="NUVEEN" occFieldId="009sySpC2etbS2TH"/>
+  </mappings>
+  <businessEntities>
+    <businessEntity cachedisableInd="N" dataGroupId="009nb5wi2etbS006" defaultInd="1" desc="Property Subtype" displayCaption="Property Subtype" entityTypeId="009nb5wi2etbS004" id="009nb5wi2etbS005" mavenVersion="13.0" name="PropertySubtype" nameSpace="NUVEEN" ruleVersion="0.0" version="21.0"/>
+  </businessEntities>
+</entities>

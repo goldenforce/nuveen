@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entities cleanUnusedFields="false" nameSpace="NUVEEN">
+  <beFields>
+    <beField class="BETEXT" displayCaption="NuveenRatingTypeIndicator" entityTypeId="++3qwBhS2etxm003" id="008pRKBC2etbS00A" mandatory="0" multiplicity="MULTIPLE_OR_NULL" name="NuveenRatingTypeIndicator" nameSpace="NUVEEN"/>
+    <beField class="BETSTAMP" displayCaption="NuveenInstrumentRatingStartDate" entityTypeId="++3qwBhS2etxm003" id="++8rJBCS2es1800G" mandatory="0" multiplicity="MULTIPLE_OR_NULL" name="NuveenInstrumentRatingStartDate" nameSpace="NUVEEN"/>
+    <beField class="BETEXT" displayCaption="NuveenNumericalRating" entityTypeId="++3qwBhS2etxm003" id="++8rLpJy2es18001" mandatory="0" multiplicity="MULTIPLE" name="NuveenNumericalRating" nameSpace="NUVEEN"/>
+    <beField class="BETEXT" displayCaption="NuveenSrcIntfcInst" entityTypeId="++3qwBhS2etxm003" id="++8rLscS2es18002" mandatory="0" multiplicity="MULTIPLE" name="NuveenSrcIntfcInst" nameSpace="NUVEEN"/>
+    <beField class="BETEXT" displayCaption="NuveenRatingsProvider" entityTypeId="++3qwBhS2etxm003" id="008rM0Ni2es18005" mandatory="0" multiplicity="MULTIPLE" name="NuveenRatingsProvider" nameSpace="NUVEEN"/>
+    <beField class="BEDATE" displayCaption="NuveenAllRtngOpinionLastChgTms" entityTypeId="++3qwBhS2etxm003" id="++8tcO2S2es18001" mandatory="0" multiplicity="MULTIPLE_OR_NULL" name="NuveenAllRtngOpinionLastChgTms" nameSpace="NUVEEN"/>
+    <beField class="BEDATE" displayCaption="NuveenAllRtngOpinionStartTms" entityTypeId="++3qwBhS2etxm003" id="++8tcO2S2es18005" mandatory="0" multiplicity="MULTIPLE_OR_NULL" name="NuveenAllRtngOpinionStartTms" nameSpace="NUVEEN"/>
+    <beField class="BETEXT" displayCaption="NuveenAllRtngOpinionProvider" entityTypeId="++3qwBhS2etxm003" id="++8tcO2S2es18009" mandatory="0" multiplicity="MULTIPLE_OR_NULL" name="NuveenAllRtngOpinionProvider" nameSpace="NUVEEN"/>
+  </beFields>
+  <dataGroups>
+    <dataGroup customInd="0" desc="Ratings" displayCaption="Ratings" entityTypeId="++3qwBhS2etxm003" frequencyInd="0" id="++6vC+Jy2euPC000" ignoreDeleteChildren="false" multiplicity="MULTIPLE_OR_NULL" name="AllInstrumentRatings" nameSpace="GSC">
+      <part defNameSpace="NUVEEN" fieldId="008pRKBC2etbS00A" id="008pRKBC2etbS00D" prntReqdInd="0" seq="45"/>
+      <part defNameSpace="NUVEEN" fieldId="++8rJBCS2es1800G" id="++8rJBCS2es1800I" prntReqdInd="0" seq="46"/>
+      <part defNameSpace="NUVEEN" fieldId="++8rLpJy2es18001" id="++8rLscS2es18000" prntReqdInd="1" seq="48"/>
+      <part defNameSpace="NUVEEN" fieldId="++8rLscS2es18002" id="++8rLscS2es18004" prntReqdInd="1" seq="49"/>
+      <part defNameSpace="NUVEEN" fieldId="008rM0Ni2es18005" id="008rM0Ni2es18007" prntReqdInd="1" seq="50"/>
+    </dataGroup>
+    <dataGroup customInd="0" desc="All Instrument Rating Opinion" displayCaption="All Instrument Rating Opinion" entityTypeId="++3qwBhS2etxm003" frequencyInd="0" id="++6vC+Jy2euPC02x" ignoreDeleteChildren="false" multiplicity="MULTIPLE_OR_NULL" name="AllInstrRatingOpinion" nameSpace="GSC">
+      <part defNameSpace="NUVEEN" fieldId="++8tcO2S2es18001" id="++8tcO2S2es18003" prntReqdInd="0" seq="18"/>
+      <part defNameSpace="NUVEEN" fieldId="++8tcO2S2es18005" id="++8tcO2S2es18007" prntReqdInd="0" seq="19"/>
+      <part defNameSpace="NUVEEN" fieldId="++8tcO2S2es18009" id="++8tcO2S2es1800B" prntReqdInd="0" seq="20"/>
+    </dataGroup>
+  </dataGroups>
+  <occurrences>
+    <occurrence desc="Occurence for Issue Rating" id="JKKBUTVBCVEKEDGU" ignoreDeleteChildren="false" multiplicity="MULTIPLE_OR_NULL" name="ISRT_ALL" nameSpace="GSC" parentId="++4Gmmty2ettS01A" table="FT_T_ISRT" timeSeries="CURRENT_AND_FUTURE_ACTIVE">
+      <field id="++8rJBCS2es1800F" name="START_TMS" nameSpace="NUVEEN"/>
+      <option id="MYVJOJZISJHJNCHI" nameSpace="GSC" type="DEFAULT_ACTION" value="UNKNOWN"/>
+      <option id="SNRHPFSGKNANCTFM" nameSpace="GSC" type="DEFAULT_MATCH_KEY"/>
+      <option id="UZTTMFDKWYQDIAOF" nameSpace="GSC" type="LOOKUP_ONLY" value="false"/>
+      <option id="VCUUNPGTYKPWNBNP" nameSpace="GSC" type="UI_PUB_ONLY" value="false"/>
+    </occurrence>
+    <occurrence desc="Occurrence for Rating Value" id="++6vC+Jy2euPC00m" ignoreDeleteChildren="false" multiplicity="SINGLE_OR_NULL" name="RTVL_ALL" nameSpace="GSC" parentId="JKKBUTVBCVEKEDGU" relationId="++5gmvwS2etge03Q" table="FT_T_RTVL" timeSeries="LOGICAL_DELETE">
+      <field id="++8rLpJy2es18000" name="RTNG_ID" nameSpace="NUVEEN"/>
+      <option id="++6vC+Jy2euPC00o" nameSpace="GSC" type="LOOKUP_ONLY" value="true"/>
+      <option id="++6vC+Jy2euPC00p" nameSpace="GSC" type="DEFAULT_ACTION" value="REFERENCE"/>
+      <option id="++8hZedS2euPC001" nameSpace="GSC" type="DEFAULT_MATCH_KEY" value="RTVL_MATCH_1"/>
+    </occurrence>
+    <occurrence desc="Occurrence for Rating Set Definition" id="++6vC+Jy2euPC00r" ignoreDeleteChildren="false" multiplicity="SINGLE_OR_NULL" name="RTNG_ALL" nameSpace="GSC" parentId="++6vC+Jy2euPC00m" relationId="006vr+mi2euPC000" table="FT_T_RTNG" timeSeries="LOGICAL_DELETE">
+      <field id="008rM0Ni2es18004" name="INST_MNEM" nameSpace="NUVEEN"/>
+      <field id="++8rLscS2es18001" name="RTNG_SET_NME" nameSpace="NUVEEN"/>
+      <field id="008pRKBC2etbS009" name="RTNG_TENOR_MNEM" nameSpace="NUVEEN"/>
+      <option id="++6vC+Jy2euPC00s" nameSpace="GSC" type="UI_PUB_ONLY" value="true"/>
+      <option id="++6vC+Jy2euPC00t" nameSpace="GSC" type="LOOKUP_ONLY" value="true"/>
+      <option id="++7zhoiS2etee000" nameSpace="GSC" type="DEFAULT_MATCH_KEY" value="RTNG_MATCH_1"/>
+      <option id="006vr+mi2euPC002" nameSpace="GSC" type="DEFAULT_ACTION" value="REFERENCE"/>
+    </occurrence>
+    <occurrence desc="Occurence for Rating Opinions" id="NXGIUYSJHFMDBEDV" ignoreDeleteChildren="false" multiplicity="MULTIPLE_OR_NULL" name="RTOP_ALL" nameSpace="GSC" parentId="++4Gmmty2ettS01A" table="FT_T_RTOP" timeSeries="LOGICAL_DELETE">
+      <field id="++8tcO2S2es18000" name="LAST_CHG_TMS" nameSpace="NUVEEN"/>
+      <field id="++8tcO2S2es18004" name="START_TMS" nameSpace="NUVEEN"/>
+      <option id="FALWJBHFWNAJQVAT" nameSpace="GSC" type="UI_PUB_ONLY" value="false"/>
+      <option id="IBRNWGIERYHSPRDQ" nameSpace="GSC" type="DEFAULT_MATCH_KEY"/>
+      <option id="LUUUCFZTNDMKSUYS" nameSpace="GSC" type="DEFAULT_ACTION" value="UNKNOWN"/>
+      <option id="ZGXEJCOWEEXPBHWX" nameSpace="GSC" type="LOOKUP_ONLY" value="false"/>
+    </occurrence>
+    <occurrence desc="Occurrence for Rating Set Definition" id="++6vC+Jy2euPC034" ignoreDeleteChildren="false" multiplicity="SINGLE_OR_NULL" name="RTOP_ALL_RTNG" nameSpace="GSC" parentId="NXGIUYSJHFMDBEDV" table="FT_T_RTNG" timeSeries="LOGICAL_DELETE">
+      <field id="++8tcO2S2es18008" name="INST_MNEM" nameSpace="NUVEEN"/>
+      <option id="++6vC+Jy2euPC035" nameSpace="GSC" type="LOOKUP_ONLY" value="true"/>
+      <option id="row14WUXQOXMYDPR" nameSpace="GSC" type="DEFAULT_MATCH_KEY" value="RTNG_MATCH_1"/>
+    </occurrence>
+  </occurrences>
+  <mappings>
+    <mapping beFieldId="++8rJBCS2es1800G" groupMapping="0" id="++8rJBCS2es1800H" nameSpace="NUVEEN" occFieldId="++8rJBCS2es1800F"/>
+    <mapping beFieldId="++8rLpJy2es18001" groupMapping="0" id="++8rLpJy2es18002" nameSpace="NUVEEN" occFieldId="++8rLpJy2es18000"/>
+    <mapping beFieldId="++8rLscS2es18002" groupMapping="0" id="++8rLscS2es18003" nameSpace="NUVEEN" occFieldId="++8rLscS2es18001"/>
+    <mapping beFieldId="008pRKBC2etbS00A" groupMapping="0" id="008pRKBC2etbS00B" nameSpace="NUVEEN" occFieldId="008pRKBC2etbS009"/>
+    <mapping beFieldId="008rM0Ni2es18005" groupMapping="0" id="008rM0Ni2es18006" nameSpace="NUVEEN" occFieldId="008rM0Ni2es18004"/>
+    <mapping beFieldId="++8tcO2S2es18001" groupMapping="0" id="++8tcO2S2es18002" nameSpace="NUVEEN" occFieldId="++8tcO2S2es18000"/>
+    <mapping beFieldId="++8tcO2S2es18005" groupMapping="0" id="++8tcO2S2es18006" nameSpace="NUVEEN" occFieldId="++8tcO2S2es18004"/>
+    <mapping beFieldId="++8tcO2S2es18009" groupMapping="0" id="++8tcO2S2es1800A" nameSpace="NUVEEN" occFieldId="++8tcO2S2es18008"/>
+  </mappings>
+</entities>

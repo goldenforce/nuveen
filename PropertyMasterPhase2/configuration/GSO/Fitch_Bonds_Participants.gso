@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entities cleanUnusedFields="false" nameSpace="NUVEEN">
+  <beFields>
+    <beField class="BETEXT" customDesc="" customDomainSQL="" customSQL="" desc="" displayCaption="Soft Delete Indicator" entityTypeId="++3qwBhS2etxm003" id="009vqUu6HIi8400E" mandatory="0" multiplicity="MULTIPLE_OR_NULL" name="FitchSoftDeleteIndicator" nameSpace="NUVEEN"/>
+  </beFields>
+  <dataGroups>
+    <dataGroup customInd="0" desc="Fitch Ratings" displayCaption="Fitch Ratings" entityTypeId="++3qwBhS2etxm003" frequencyInd="0" id="++5jTbey2etqS09g" ignoreDeleteChildren="false" multiplicity="MULTIPLE_OR_NULL" name="FitchRatings" nameSpace="GSC">
+      <part defNameSpace="NUVEEN" fieldId="009vqUu6HIi8400E" id="++9vrpCsHIKSK0X6" prntReqdInd="0" seq="31"/>
+    </dataGroup>
+  </dataGroups>
+  <relations>
+    <relation customSQL="" id="++9vstysHIi840xO" name="ISRT-SOFTDELT-FITCH-CUSTOM-GNCM" nameSpace="NUVEEN" srcTable="FT_T_ISRT" tgtTable="FT_T_GNCM">
+      <field fromColumn="ISS_RTNG_OID" id="++9vstysHIi840xP" nameSpace="NUVEEN" toColumn="CROSS_REF_ID" type="RELATION_FIELD" valueType="COLUMN"/>
+    </relation>
+  </relations>
+  <occurrences>
+    <occurrence desc="Occurrence for General Table Comment" id="009vqUu6HIi84006" ignoreDeleteChildren="false" multiplicity="SINGLE_OR_NULL" name="GNCM_ISRT_FITCH_SOFTDELT" nameSpace="NUVEEN" parentId="++5jTbey2etqS0Cg" relationId="++9vstysHIi840xO" table="FT_T_GNCM" timeSeries="LOGICAL_DELETE">
+      <field desc="Comment Text" id="009vqUu6HIi8400D" name="CMNT_TXT" nameSpace="NUVEEN"/>
+      <value id="009vqUu6HIi84009" name="COMM_REAS_MNEM" nameSpace="NUVEEN" type="FILTER_FIELD" value="SOFTDELT" valueType="CONSTANT"/>
+      <value id="009vqUu6HIi8400A" name="GNCM_TBL_TYP" nameSpace="NUVEEN" type="FILTER_FIELD" value="ISRT" valueType="CONSTANT"/>
+      <value id="009vqUu6HIi8400B" name="LN_NUM" nameSpace="NUVEEN" type="FILTER_FIELD" value="1" valueType="CONSTANT"/>
+      <value id="009vqUu6HIi8400C" name="NLS_CDE" nameSpace="NUVEEN" type="FILTER_FIELD" value="ENGLISH" valueType="CONSTANT"/>
+      <option id="009vqUu6HIi84007" nameSpace="NUVEEN" type="DEFAULT_ACTION" value="UNKNOWN"/>
+    </occurrence>
+  </occurrences>
+  <mappings>
+    <mapping beFieldId="009vqUu6HIi8400E" groupMapping="0" id="009vqUu6HIi8400F" nameSpace="NUVEEN" occFieldId="009vqUu6HIi8400D"/>
+  </mappings>
+</entities>

@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entities cleanUnusedFields="false" nameSpace="NUVEEN">
+  <beFields>
+    <beField class="BETEXT" customDesc="Fix in GS | Internal name of contract" desc="" displayCaption="Contract Name" entityTypeId="++3qwBhS2etxm003" id="009HJEZi2etbS007" mandatory="0" multiplicity="MULTIPLE_OR_NULL" name="NuveenContractName" nameSpace="NUVEEN"/>
+    <beField class="BETEXT" customDesc="Fix in GS | Indicate if the contract is Active." customDomainSQL="" customSQL="" desc="" displayCaption="Contract Active Indicator" entityTypeId="++3qwBhS2etxm003" id="009HJEZi2etbS009" mandatory="0" multiplicity="MULTIPLE_OR_NULL" name="NuveencontractActive" nameSpace="NUVEEN"/>
+    <beField class="BEDEC" customDesc="Fix in GS | Global amount of the contract" desc="" displayCaption="Contract Global Amount" entityTypeId="++3qwBhS2etxm003" id="009HJEZi2etbS00B" mandatory="0" multiplicity="MULTIPLE_OR_NULL" name="NuveenContractGlobalAmount" nameSpace="NUVEEN"/>
+    <beField class="BEDEC" customDesc="Fix in GS | Base rate of the contract" desc="" displayCaption="Contract Base Rate" entityTypeId="++3qwBhS2etxm003" id="009HJEZi2etbS00D" mandatory="0" multiplicity="MULTIPLE_OR_NULL" name="NuveenContractbaseRate" nameSpace="NUVEEN"/>
+    <beField class="BEDEC" customDesc="Fix in GS | Sum of the base rate and the margin.  Used to calculate the amount of accrued interest" desc="" displayCaption="Base Rate All In" entityTypeId="++3qwBhS2etxm003" id="009HJEZi2etbS00F" mandatory="0" multiplicity="MULTIPLE_OR_NULL" name="NuveenContractBaseRateAllIn" nameSpace="NUVEEN"/>
+    <beField class="BETSTAMP" customDesc="Fix in GS | End date of accrual period" desc="" displayCaption="Contract Maturity Date" entityTypeId="++3qwBhS2etxm003" id="009HJEZi2etbS00H" mandatory="0" multiplicity="MULTIPLE_OR_NULL" name="NuveenContractMaturityDate" nameSpace="NUVEEN"/>
+    <beField class="BETSTAMP" customDesc="Fix in GS | Date of the next scheduled interest payment." desc="" displayCaption="Contract Next Payment Date" entityTypeId="++3qwBhS2etxm003" id="009HJEZi2etbS00J" mandatory="0" multiplicity="MULTIPLE_OR_NULL" name="NuveenContractNextPaymentDate" nameSpace="NUVEEN"/>
+    <beField class="BETSTAMP" customDesc="Fix in GS | Begin date of accrual period" desc="" displayCaption="Contract Start Date" entityTypeId="++3qwBhS2etxm003" id="009HJEZi2etbS00L" mandatory="0" multiplicity="MULTIPLE_OR_NULL" name="NuveenContractStartDate" nameSpace="NUVEEN"/>
+    <beField class="BETEXT" customDesc="Fix in GS | Internal ID assigned to a Contract" desc="" displayCaption="Contract ID" entityTypeId="++3qwBhS2etxm003" id="009HJEZi2etbS00N" mandatory="0" multiplicity="MULTIPLE_OR_NULL" name="NuveenContractID" nameSpace="NUVEEN"/>
+    <beField class="BETEXT" customDesc="Fix in GS | Type of Contract (Funded, Unfunded, etc)" desc="" displayCaption="Contract Type" entityTypeId="++3qwBhS2etxm003" id="009HJEZi2etbS00P" mandatory="0" multiplicity="MULTIPLE_OR_NULL" name="NuveenContractType" nameSpace="NUVEEN"/>
+    <beField class="BETEXT" customDesc="Fix in GS | Frequency of Contract" desc="" displayCaption="Contract Frequency" entityTypeId="++3qwBhS2etxm003" id="009HJEZi2etbS00R" mandatory="0" multiplicity="MULTIPLE_OR_NULL" name="NuveenContractFrequency" nameSpace="NUVEEN"/>
+    <beField class="BETEXT" customDesc="Fix in GS | Details regarding the specific contract, if applicable" desc="" displayCaption="WSO - Contract Notes" entityTypeId="++3qwBhS2etxm003" id="009HJEZi2etbS00T" mandatory="0" multiplicity="MULTIPLE_OR_NULL" name="NuveenWSOContractNotes" nameSpace="NUVEEN"/>
+    <beField class="BETEXT" customDesc="Fix in GS | Basis on how the contract accrues (Commitment, Funded, Contract)" desc="" displayCaption="Contract Accrual Basis" entityTypeId="++3qwBhS2etxm003" id="009HJEZi2etbS00V" mandatory="0" multiplicity="MULTIPLE_OR_NULL" name="NuveenContractAccrualBasis" nameSpace="NUVEEN"/>
+    <beField class="BETEXT" customDesc="Fix in GS | Month count convention used to calculate accrued interest" desc="" displayCaption="Contract Month Count" entityTypeId="++3qwBhS2etxm003" id="009HJEZi2etbS00X" mandatory="0" multiplicity="MULTIPLE_OR_NULL" name="NuveenContractMonthCount" nameSpace="NUVEEN"/>
+    <beField class="BEDEC" customDesc="" desc="" displayCaption="Spread Adjustment" entityTypeId="++3qwBhS2etxm003" id="009L0Uoi2etbS001" mandatory="0" multiplicity="MULTIPLE_OR_NULL" name="NuveenContractSpreadAdjustment" nameSpace="NUVEEN"/>
+    <beField class="BEDEC" customDesc="Fix in GS | Spread Rate of the Contract" customDomainSQL="" customSQL="" desc="" displayCaption="Contract Spread Rate" entityTypeId="++3qwBhS2etxm003" id="++9OH52S2etbS004" mandatory="0" multiplicity="MULTIPLE_OR_NULL" name="NuveenContractSpreadRate" nameSpace="NUVEEN">
+      <fieldConfig id="++9OH52S2etbS005" nameSpace="NUVEEN" type="ALLOW_NEGATIVE" value="N"/>
+    </beField>
+    <beField class="BETEXT" customDesc="Contract Rate Option " desc="" displayCaption="Contract Rate Option" entityTypeId="++3qwBhS2etxm003" id="009cjY0i2etbS000" mandatory="0" multiplicity="MULTIPLE_OR_NULL" name="NuveenContractRateOption" nameSpace="NUVEEN"/>
+  </beFields>
+  <dataGroups>
+    <dataGroup category="" customInd="0" desc="" displayCaption="Loan Contract Details" entityTypeId="++3qwBhS2etxm003" frequencyInd="0" id="009HJEZi2etbS005" multiplicity="MULTIPLE_OR_NULL" name="NuveenLoanContractDetails" nameSpace="NUVEEN">
+      <part defNameSpace="NUVEEN" fieldId="009HJEZi2etbS007" id="009HJEZi2etbS006" prntReqdInd="0" seq="0"/>
+      <part defNameSpace="NUVEEN" fieldId="009HJEZi2etbS009" id="009HJEZi2etbS008" prntReqdInd="0" seq="1"/>
+      <part defNameSpace="NUVEEN" fieldId="009HJEZi2etbS00B" id="009HJEZi2etbS00A" prntReqdInd="0" seq="2"/>
+      <part defNameSpace="NUVEEN" fieldId="009HJEZi2etbS00D" id="009HJEZi2etbS00C" prntReqdInd="0" seq="3"/>
+      <part defNameSpace="NUVEEN" fieldId="009HJEZi2etbS00F" id="009HJEZi2etbS00E" prntReqdInd="0" seq="4"/>
+      <part defNameSpace="NUVEEN" fieldId="009HJEZi2etbS00H" id="009HJEZi2etbS00G" prntReqdInd="0" seq="5"/>
+      <part defNameSpace="NUVEEN" fieldId="009HJEZi2etbS00J" id="009HJEZi2etbS00I" prntReqdInd="0" seq="6"/>
+      <part defNameSpace="NUVEEN" fieldId="009HJEZi2etbS00L" id="009HJEZi2etbS00K" prntReqdInd="0" seq="7"/>
+      <part defNameSpace="NUVEEN" fieldId="009HJEZi2etbS00N" id="009HJEZi2etbS00M" prntReqdInd="0" seq="8"/>
+      <part defNameSpace="NUVEEN" fieldId="009HJEZi2etbS00P" id="009HJEZi2etbS00O" prntReqdInd="0" seq="9"/>
+      <part defNameSpace="NUVEEN" fieldId="009HJEZi2etbS00R" id="009HJEZi2etbS00Q" prntReqdInd="0" seq="10"/>
+      <part defNameSpace="NUVEEN" fieldId="009HJEZi2etbS00T" id="009HJEZi2etbS00S" prntReqdInd="0" seq="11"/>
+      <part defNameSpace="NUVEEN" fieldId="009HJEZi2etbS00V" id="009HJEZi2etbS00U" prntReqdInd="0" seq="12"/>
+      <part defNameSpace="NUVEEN" fieldId="009HJEZi2etbS00X" id="009HJEZi2etbS00W" prntReqdInd="0" seq="13"/>
+      <part defNameSpace="NUVEEN" fieldId="009L0Uoi2etbS001" id="009L0Uoi2etbS000" prntReqdInd="0" seq="14"/>
+      <part defNameSpace="NUVEEN" fieldId="++9OH52S2etbS004" id="++9OH52S2etbS007" prntReqdInd="0" seq="15"/>
+      <part defNameSpace="NUVEEN" fieldId="009cjY0i2etbS000" id="009cjY0i2etbS003" prntReqdInd="0" seq="16"/>
+    </dataGroup>
+    <dataGroup customInd="0" entityTypeId="++3qwBhS2etxm003" frequencyInd="0" id="++5SQ0Ly2etse001" multiplicity="SINGLE" name="Base- Root DataGroup" nameSpace="GSC">
+      <part dataGroupId="009HJEZi2etbS005" defNameSpace="NUVEEN" id="009HJEZi2etbS004" prntReqdInd="0" seq="0"/>
+    </dataGroup>
+  </dataGroups>
+  <occurrences>
+    <occurrence desc="Occurrence for Loan Contract Details" id="009HJEZi2etbS00l" ignoreDeleteChildren="false" multiplicity="MULTIPLE_OR_NULL" name="CNT1_NVN_01" nameSpace="NUVEEN" parentId="++4Gmmty2ettS01A" table="FT_E_CNT1" timeSeries="LOGICAL_DELETE">
+      <field id="009HJEZi2etbS00q" name="CNT1_OID" nameSpace="NUVEEN"/>
+      <field id="009HJEZi2etbS013" name="CNTRCT_ACCRL_BASIS" nameSpace="NUVEEN"/>
+      <field id="009HJEZi2etbS011" name="CNTRCT_BASE_CRTE" nameSpace="NUVEEN"/>
+      <field id="009HJEZi2etbS010" name="CNTRCT_BASE_CRTE_ALL_IN" nameSpace="NUVEEN"/>
+      <field id="009cjY0i2etbS001" name="CNTRCT_CRTE_OPTN" nameSpace="NUVEEN"/>
+      <field id="009HJEZi2etbS00+" name="CNTRCT_FREQ" nameSpace="NUVEEN"/>
+      <field id="009HJEZi2etbS00-" name="CNTRCT_GLOB_AMT" nameSpace="NUVEEN"/>
+      <field id="009HJEZi2etbS00z" name="CNTRCT_MAT_EXP_DTE" nameSpace="NUVEEN"/>
+      <field id="009HJEZi2etbS00y" name="CNTRCT_MNTH_CNT" nameSpace="NUVEEN"/>
+      <field id="009HJEZi2etbS00x" name="CNTRCT_NXT_PAY_DTE" nameSpace="NUVEEN"/>
+      <field desc="Contract Spread Rate" id="++9OH52S2etbS003" name="CNTRCT_SPREAD_CRTE" nameSpace="NUVEEN"/>
+      <field id="009HJEZi2etbS00t" name="CNTRCT_TYPE" nameSpace="NUVEEN"/>
+      <field id="009HJEZi2etbS00p" name="CONTRACT_NME" nameSpace="NUVEEN"/>
+      <field id="009HJEZi2etbS00w" name="DATA_SRC_ID" nameSpace="NUVEEN"/>
+      <field id="009HJEZi2etbS00v" name="END_TMS" nameSpace="NUVEEN"/>
+      <field id="009HJEZi2etbS00u" name="INSTR_ID" nameSpace="NUVEEN"/>
+      <field id="009HJEZi2etbS012" name="IS_CONTRACT_ACTIVE" nameSpace="NUVEEN"/>
+      <field id="009HJEZi2etbS00s" name="LAST_CHG_TMS" nameSpace="NUVEEN"/>
+      <field id="009HJEZi2etbS00r" name="LAST_CHG_USR_ID" nameSpace="NUVEEN"/>
+      <field id="009L0Uoi2etbS002" name="SPREAD_ADJ" nameSpace="NUVEEN"/>
+      <field id="009HJEZi2etbS00o" name="START_TMS" nameSpace="NUVEEN"/>
+      <field id="009HJEZi2etbS01I" name="WSO_CNTRCT_ID" nameSpace="NUVEEN"/>
+      <field id="009HJEZi2etbS00m" name="WSO_CNTRCT_NOTES" nameSpace="NUVEEN"/>
+      <option id="009Js4xC2etbS018" nameSpace="NUVEEN" type="DEFAULT_ACTION" value="UNKNOWN"/>
+      <option id="009Js4xC2etbS019" nameSpace="NUVEEN" type="DEFAULT_MATCH_KEY" value="CNT1_CNTRCTID"/>
+    </occurrence>
+  </occurrences>
+  <mappings>
+    <mapping beFieldId="009HJEZi2etbS007" groupMapping="0" id="009HJEZi2etbS014" nameSpace="NUVEEN" occFieldId="009HJEZi2etbS00p"/>
+    <mapping beFieldId="009HJEZi2etbS009" groupMapping="0" id="009HJEZi2etbS015" nameSpace="NUVEEN" occFieldId="009HJEZi2etbS012"/>
+    <mapping beFieldId="009HJEZi2etbS00B" groupMapping="0" id="009HJEZi2etbS016" nameSpace="NUVEEN" occFieldId="009HJEZi2etbS00-"/>
+    <mapping beFieldId="009HJEZi2etbS00D" groupMapping="0" id="009HJEZi2etbS017" nameSpace="NUVEEN" occFieldId="009HJEZi2etbS011"/>
+    <mapping beFieldId="009HJEZi2etbS00F" groupMapping="0" id="009HJEZi2etbS018" nameSpace="NUVEEN" occFieldId="009HJEZi2etbS010"/>
+    <mapping beFieldId="009HJEZi2etbS00H" groupMapping="0" id="009HJEZi2etbS019" nameSpace="NUVEEN" occFieldId="009HJEZi2etbS00z"/>
+    <mapping beFieldId="009HJEZi2etbS00J" groupMapping="0" id="009HJEZi2etbS01A" nameSpace="NUVEEN" occFieldId="009HJEZi2etbS00x"/>
+    <mapping beFieldId="009HJEZi2etbS00L" groupMapping="0" id="009HJEZi2etbS01B" nameSpace="NUVEEN" occFieldId="009HJEZi2etbS00o"/>
+    <mapping beFieldId="009HJEZi2etbS00N" groupMapping="0" id="009HJEZi2etbS01J" nameSpace="NUVEEN" occFieldId="009HJEZi2etbS01I"/>
+    <mapping beFieldId="009HJEZi2etbS00P" groupMapping="0" id="009HJEZi2etbS01D" nameSpace="NUVEEN" occFieldId="009HJEZi2etbS00t"/>
+    <mapping beFieldId="009HJEZi2etbS00R" groupMapping="0" id="009HJEZi2etbS01E" nameSpace="NUVEEN" occFieldId="009HJEZi2etbS00+"/>
+    <mapping beFieldId="009HJEZi2etbS00T" groupMapping="0" id="009HJEZi2etbS01F" nameSpace="NUVEEN" occFieldId="009HJEZi2etbS00m"/>
+    <mapping beFieldId="009HJEZi2etbS00V" groupMapping="0" id="009HJEZi2etbS01G" nameSpace="NUVEEN" occFieldId="009HJEZi2etbS013"/>
+    <mapping beFieldId="009HJEZi2etbS00X" groupMapping="0" id="009HJEZi2etbS01H" nameSpace="NUVEEN" occFieldId="009HJEZi2etbS00y"/>
+    <mapping beFieldId="009L0Uoi2etbS001" groupMapping="0" id="009L0Uoi2etbS003" nameSpace="NUVEEN" occFieldId="009L0Uoi2etbS002"/>
+    <mapping beFieldId="++9OH52S2etbS004" groupMapping="0" id="++9OH52S2etbS006" nameSpace="NUVEEN" occFieldId="++9OH52S2etbS003"/>
+    <mapping beFieldId="009cjY0i2etbS000" groupMapping="0" id="009cjY0i2etbS002" nameSpace="NUVEEN" occFieldId="009cjY0i2etbS001"/>
+  </mappings>
+  <naturalKeys>
+    <naturalKey dataGroupId="009HJEZi2etbS005" id="009HJEZi2etbS00a" name="NuveenLoanContractDetailsNaturalKey" nameSpace="NUVEEN">
+      <part beFieldId="009HJEZi2etbS006" id="009HJEZi2etbS00k" nameSpace="NUVEEN"/>
+      <part beFieldId="009HJEZi2etbS008" id="009HJEZi2etbS00b" nameSpace="NUVEEN"/>
+      <part beFieldId="009HJEZi2etbS00A" id="009HJEZi2etbS00f" nameSpace="NUVEEN"/>
+      <part beFieldId="009HJEZi2etbS00C" id="009HJEZi2etbS00g" nameSpace="NUVEEN"/>
+      <part beFieldId="009HJEZi2etbS00E" id="009HJEZi2etbS00i" nameSpace="NUVEEN"/>
+      <part beFieldId="009HJEZi2etbS00G" id="009HJEZi2etbS00d" nameSpace="NUVEEN"/>
+      <part beFieldId="009HJEZi2etbS00I" id="009HJEZi2etbS00c" nameSpace="NUVEEN"/>
+      <part beFieldId="009HJEZi2etbS00K" id="009HJEZi2etbS00e" nameSpace="NUVEEN"/>
+      <part beFieldId="009HJEZi2etbS00M" id="009HJEZi2etbS00h" nameSpace="NUVEEN"/>
+      <part beFieldId="009HJEZi2etbS00O" id="009HJEZi2etbS00j" nameSpace="NUVEEN"/>
+    </naturalKey>
+  </naturalKeys>
+</entities>

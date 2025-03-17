@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE vsh SYSTEM "VSH.dtd">
+<vsh process_unknown_vendor="low" update_empty_field="low_equal">
+	<!-- Default for a particular Issue Type-->
+	<!-- If table for an occurrence element is set to value of ALL, that means that the VSH listed is being applied as a default VSH to every segment that comes from a message containing an ISS_TYP in the message header information set to value of BOND-->
+		<occurrence table="ft_t_issu">
+		<option id="issu-1">
+			<vendorSource>
+				<source vendor="MARKIT_LRD" rank="1"/>
+				<source vendor="WSO_WEB" rank="2"/>
+				<source vendor="WSO_ADMIN" rank="3"/>
+				<source vendor="NUVEEN" rank="4"/>
+				<source vendor="BB" rank="4"/>
+			</vendorSource>
+			<where>
+				<field lookup="header" dataType="STRING" value="LOAN" name="iss_typ"/>
+			</where>
+			<occurrenceFields>
+			<field name="ft_t_issu.DENOM_CURR_CDE" dataType="STRING" update_equal_rank="true" update_empty_field="low_equal" update_high_ranked_source="no">
+			<vendorSource>
+			    <source vendor="NUVEEN" rank="1"/>
+				<source vendor="BB" rank="2"/>
+				<source vendor="MARKIT_LRD" rank="3"/>
+				<source vendor="WSO_WEB" rank="4"/>
+				<source vendor="WSO_ADMIN" rank="5"/>
+			</vendorSource>
+			</field>
+			</occurrenceFields>
+		</option>
+		<option id="issu-2">
+			<vendorSource>
+				<!-- <source vendor="MARKIT_LRD" rank="1"/> -->
+				<source vendor="NUVEEN" rank="1"/>
+				<source vendor="BB" rank="1"/>
+				<source vendor="WSO_ADMIN" rank="2"/>
+				<source vendor="WSO_WEB" rank="3"/>
+			</vendorSource>
+			<where>
+				<field lookup="header" dataType="STRING" value="MISC" name="iss_typ"/>
+			</where>
+			<occurrenceFields>
+			<field name="ft_t_issu.DENOM_CURR_CDE" dataType="STRING" update_equal_rank="true" update_empty_field="low_equal" update_high_ranked_source="no">
+			<vendorSource>
+			    <source vendor="NUVEEN" rank="1"/>
+				<source vendor="BB" rank="2"/>
+				<source vendor="WSO_WEB" rank="3"/>
+				<source vendor="WSO_ADMIN" rank="4"/>
+			</vendorSource>
+			</field>
+			</occurrenceFields>
+		</option>
+	</occurrence>
+	<occurrence table="ft_t_iscl">
+		<option id="iscl-1">
+			<vendorSource>
+				<source vendor="NUVEEN" rank="1"/>
+				<source vendor="BB" rank="2"/>
+			</vendorSource>
+			<where>
+				<field dataType="STRING" value="GICS" name="indus_cl_set_id"/>
+			</where>
+		</option>
+	</occurrence>
+	<occurrence table="all">
+		<option id="all-1">
+			<vendorSource>
+				<source vendor="MARKIT_LRD" rank="1"/>
+				<source vendor="WSO_WEB" rank="2"/>
+				<source vendor="WSO_ADMIN" rank="3"/>
+				<source vendor="NUVEEN" rank="4"/>
+				<source vendor="BB" rank="4"/>
+			</vendorSource>
+			<where>
+				<field lookup="header" dataType="STRING" value="LOAN" name="iss_typ"/>
+			</where>
+		</option>
+		<option id="all-muni">
+			<vendorSource>
+				<source vendor="NUVEEN" rank="1"/>
+				<source vendor="SNPXF_RT" rank="2"/>
+				<source vendor="MOODYS_RDS" rank="3"/>
+				<source vendor="FITCH" rank="4"/>
+				<source vendor="CREDSCOPE" rank="5"/>
+			</vendorSource>
+			<where>
+				<field lookup="header" dataType="STRING" value="MUNI" name="iss_typ"/>
+			</where>
+		</option>
+		<!-- Default for all Issue Types-->
+		<!-- If table for an occurrence element is set to value of ALL, that means that the VSH listed is being applied as a default VSH to every segment that did not match any of the above table occurrences.-->
+		<option id="all-2">
+			<vendorSource>
+				<!-- <source vendor="MARKIT_LRD" rank="1"/> -->
+				<source vendor="NUVEEN" rank="1"/>
+				<source vendor="BB" rank="1"/>
+				<source vendor="WSO_ADMIN" rank="2"/>
+				<source vendor="WSO_WEB" rank="3"/>
+			</vendorSource>
+		</option>
+	</occurrence>
+</vsh>

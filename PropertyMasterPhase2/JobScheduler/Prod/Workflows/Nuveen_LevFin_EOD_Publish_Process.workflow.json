@@ -1,0 +1,364 @@
+{
+  "TYPE" : "Workflow",
+  "version" : "1.6.6",
+  "timeZone" : "America/New_York",
+  "orderPreparation" : {
+    "parameters" : {
+      "checkDependency" : {
+        "type" : "Boolean",
+        "default" : "true"
+      },
+      "fitch_deltafilePattern" : {
+        "type" : "String",
+        "default" : "\"RDSIssue\""
+      },
+      "fitch_dayMinus" : {
+        "type" : "String",
+        "default" : "0"
+      },
+      "fitch_jobMsgTyp" : {
+        "type" : "String",
+        "default" : "\"FitchRDS_IssueRatings\""
+      },
+      "moody_filePattern" : {
+        "type" : "String",
+        "default" : "\"Daily\""
+      },
+      "moody_dayMinus" : {
+        "type" : "String",
+        "default" : "0"
+      },
+      "moody_jobMsgTyp" : {
+        "type" : "String",
+        "default" : "\"MoodysRDS_Organization','MoodysRDS_Instrument\""
+      },
+      "snp_filePattern" : {
+        "type" : "String",
+        "default" : "\"snp\""
+      },
+      "snp_dayMinus" : {
+        "type" : "String",
+        "default" : "0"
+      },
+      "snp_jobConfigText" : {
+        "type" : "String",
+        "default" : "\"RATINGS_DELTA\""
+      },
+      "fitch_fullfilePattern" : {
+        "type" : "String",
+        "default" : "\"mis.zip\""
+      },
+      "fitch_onedayMinus" : {
+        "type" : "String",
+        "default" : "1"
+      }
+    },
+    "allowUndeclared" : false
+  },
+  "instructions" : [ {
+    "TYPE" : "If",
+    "predicate" : "$checkDependency == true",
+    "then" : {
+      "instructions" : [ {
+        "TYPE" : "Execute.Named",
+        "jobName" : "Echo_Dependency_Check",
+        "label" : "Echo_Dependency_Check"
+      }, {
+        "TYPE" : "Fork",
+        "branches" : [ {
+          "id" : "fitch",
+          "workflow" : {
+            "instructions" : [ {
+              "TYPE" : "Execute.Named",
+              "jobName" : "fitch_fulload",
+              "label" : "fitch_fulload"
+            }, {
+              "TYPE" : "Execute.Named",
+              "jobName" : "fitch_alldeltaload",
+              "label" : "fitch_alldeltaload"
+            }, {
+              "TYPE" : "Execute.Named",
+              "jobName" : "fitch_latestDeltaLoad",
+              "label" : "fitch_latestDeltaLoad"
+            } ],
+            "result" : {
+              "fitchfullfilecount" : "$fitchfullfilecount",
+              "fitchdeltafilecountall" : "$fitchdeltafilecountall",
+              "fitchdeltafilelatestcount" : "$fitchdeltafilelatestcount"
+            }
+          }
+        }, {
+          "id" : "moody",
+          "workflow" : {
+            "instructions" : [ {
+              "TYPE" : "Execute.Named",
+              "jobName" : "moody",
+              "label" : "moody"
+            } ],
+            "result" : {
+              "mdyloadcount" : "$mdyloadcount"
+            }
+          }
+        }, {
+          "id" : "snp",
+          "workflow" : {
+            "instructions" : [ {
+              "TYPE" : "Execute.Named",
+              "jobName" : "snp",
+              "label" : "snp"
+            } ],
+            "result" : {
+              "snploadcount" : "$snploadcount"
+            }
+          }
+        }, {
+          "id" : "soicheck",
+          "workflow" : {
+            "instructions" : [ {
+              "TYPE" : "Execute.Named",
+              "jobName" : "soicheck",
+              "label" : "soicheck"
+            } ],
+            "result" : {
+              "soicheck" : "$soicheck"
+            }
+          }
+        } ],
+        "joinIfFailed" : false
+      }, {
+        "TYPE" : "If",
+        "predicate" : "($fitchfullfilecount.toNumber > 0 && $fitchdeltafilecountall.toNumber > 0 && $fitchdeltafilelatestcount.toNumber > 0 && $mdyloadcount.toNumber > 0 && $snploadcount.toNumber > 0 && $soicheck.toNumber >= 9000)",
+        "then" : {
+          "instructions" : [ {
+            "TYPE" : "Execute.Named",
+            "jobName" : "Nuveen_LevFin_EOD_Publish_Job",
+            "label" : "Nuveen_LevFin_EOD_Publish_Job"
+          } ]
+        },
+        "else" : {
+          "instructions" : [ {
+            "TYPE" : "Execute.Named",
+            "jobName" : "Ratings_Load_Incomplete",
+            "label" : "Ratings_Load_Incomplete"
+          } ]
+        }
+      } ]
+    },
+    "else" : {
+      "instructions" : [ {
+        "TYPE" : "Execute.Named",
+        "jobName" : "Echo_No_Dependency_Check",
+        "label" : "Echo_No_Dependency_Check"
+      }, {
+        "TYPE" : "Execute.Named",
+        "jobName" : "Nuveen_LevFin_EOD_Publish_Job_ND",
+        "label" : "Nuvn_LevFin_EOD_Publish_Job_ND"
+      } ]
+    }
+  } ],
+  "jobs" : {
+    "Echo_Dependency_Check" : {
+      "agentName" : "JSAgent",
+      "withSubagentClusterIdExpr" : false,
+      "executable" : {
+        "TYPE" : "ShellScriptExecutable",
+        "script" : "echo \"Dependency Check\"",
+        "v1Compatible" : false
+      },
+      "skipIfNoAdmissionForOrderDay" : false,
+      "parallelism" : 1,
+      "graceTimeout" : 1,
+      "failOnErrWritten" : false,
+      "warnOnErrWritten" : false,
+      "title" : "Echo Dependency Check"
+    },
+    "fitch_fulload" : {
+      "agentName" : "JSAgent",
+      "withSubagentClusterIdExpr" : false,
+      "executable" : {
+        "TYPE" : "InternalExecutable",
+        "className" : "com.sos.jitl.jobs.db.SQLExecutorJob",
+        "internalType" : "JITL",
+        "arguments" : {
+          "command" : "\"SELECT count(*) as fitchfullfilecount\nFROM ser_gs_gc.ft_t_jblg \nWHERE (UPPER(job_input_txt) ~* (UPPER('$fitch_fullfilePattern'))and\nUPPER(job_msg_typ) = (UPPER('$fitch_jobMsgTyp')))\n AND DATE_TRUNC('day', ser_gs_gc.sysdate() - INTERVAL '$fitch_dayMinus days') = DATE_TRUNC('day', job_start_tms) \n  and job_end_tms is not null and job_stat_typ = 'CLOSED'\"",
+          "resultset_as_variables" : "\"column_value\"",
+          "hibernate_configuration_file" : "\"/ext/app/jobscheduler/base/sos-berlin.com/joc/resources/joc/hibernate.cfg.xml\""
+        }
+      },
+      "skipIfNoAdmissionForOrderDay" : false,
+      "parallelism" : 1,
+      "graceTimeout" : 1,
+      "failOnErrWritten" : false,
+      "warnOnErrWritten" : false
+    },
+    "fitch_alldeltaload" : {
+      "agentName" : "JSAgent",
+      "withSubagentClusterIdExpr" : false,
+      "executable" : {
+        "TYPE" : "InternalExecutable",
+        "className" : "com.sos.jitl.jobs.db.SQLExecutorJob",
+        "internalType" : "JITL",
+        "arguments" : {
+          "command" : "\"SELECT count(*) as fitchdeltafilecountall FROM ser_gs_gc.ft_t_jblg WHERE UPPER(job_input_txt) ~* (UPPER('$fitch_deltafilePattern')) and UPPER(job_msg_typ) = (UPPER('$fitch_jobMsgTyp')) AND DATE_TRUNC('day', ser_gs_gc.sysdate() - INTERVAL '$fitch_dayMinus days') = DATE_TRUNC('day', job_start_tms)  and job_end_tms is not null and job_stat_typ = 'CLOSED'\"",
+          "resultset_as_variables" : "\"column_value\"",
+          "hibernate_configuration_file" : "\"/ext/app/jobscheduler/base/sos-berlin.com/joc/resources/joc/hibernate.cfg.xml\""
+        }
+      },
+      "skipIfNoAdmissionForOrderDay" : false,
+      "parallelism" : 1,
+      "graceTimeout" : 1,
+      "failOnErrWritten" : false,
+      "warnOnErrWritten" : false,
+      "title" : "fitch_alldeltaload"
+    },
+    "fitch_latestDeltaLoad" : {
+      "agentName" : "JSAgent",
+      "withSubagentClusterIdExpr" : false,
+      "executable" : {
+        "TYPE" : "InternalExecutable",
+        "className" : "com.sos.jitl.jobs.db.SQLExecutorJob",
+        "internalType" : "JITL",
+        "arguments" : {
+          "command" : "\"SELECT COUNT(*) AS fitchdeltafilelatestcount\n    FROM ser_gs_gc.ft_t_jblg\n    WHERE UPPER(job_input_txt) ~* UPPER('$fitch_deltafilePattern')\n      AND UPPER(job_msg_typ) = UPPER('$fitch_jobMsgTyp')\n      AND job_end_tms IS NOT NULL\n      AND job_stat_typ = 'CLOSED'\n      AND DATE_TRUNC('day', job_start_tms) = DATE_TRUNC('day', ser_gs_gc.sysdate() - INTERVAL '$fitch_dayMinus days')\n      AND SUBSTRING(job_input_txt FROM '(([2][0][0-9][0-9])([1][0-2]|[0][1-9])([3][0-1]|[2][0-9]|[1][0-9]|[0][1-9]))')::\n      timestamp = ser_gs_gc.sysdate()::date - INTERVAL '$fitch_onedayMinus days'\"",
+          "resultset_as_variables" : "\"column_value\"",
+          "hibernate_configuration_file" : "\"/ext/app/jobscheduler/base/sos-berlin.com/joc/resources/joc/hibernate.cfg.xml\""
+        }
+      },
+      "skipIfNoAdmissionForOrderDay" : false,
+      "parallelism" : 1,
+      "graceTimeout" : 1,
+      "failOnErrWritten" : false,
+      "warnOnErrWritten" : false,
+      "title" : "fitch_latestDeltaLoad"
+    },
+    "moody" : {
+      "agentName" : "JSAgent",
+      "withSubagentClusterIdExpr" : false,
+      "executable" : {
+        "TYPE" : "InternalExecutable",
+        "className" : "com.sos.jitl.jobs.db.SQLExecutorJob",
+        "internalType" : "JITL",
+        "arguments" : {
+          "command" : "\"select count(*) as mdyloadcount from ser_gs_gc.ft_t_jblg where job_id in (select prnt_job_id from ser_gs_gc.ft_t_jblg where UPPER(job_input_txt) ~* UPPER('$moody_filePattern') and date_trunc('day', ser_gs_gc.sysdate() - interval '$moody_dayMinus days') = date_trunc('day', job_start_tms) and job_end_tms is not null and job_msg_typ in ('$moody_jobMsgTyp')) and job_stat_typ = 'CLOSED'\"",
+          "resultset_as_variables" : "\"column_value\"",
+          "hibernate_configuration_file" : "\"/ext/app/jobscheduler/base/sos-berlin.com/joc/resources/joc/hibernate.cfg.xml\""
+        }
+      },
+      "skipIfNoAdmissionForOrderDay" : false,
+      "parallelism" : 1,
+      "graceTimeout" : 1,
+      "failOnErrWritten" : false,
+      "warnOnErrWritten" : false
+    },
+    "snp" : {
+      "agentName" : "JSAgent",
+      "withSubagentClusterIdExpr" : false,
+      "executable" : {
+        "TYPE" : "InternalExecutable",
+        "className" : "com.sos.jitl.jobs.db.SQLExecutorJob",
+        "internalType" : "JITL",
+        "arguments" : {
+          "command" : "\"select count(*) as snploadcount from ser_gs_gc.ft_t_jblg where job_id in (select prnt_job_id from ser_gs_gc.ft_t_jblg where UPPER(job_input_txt) ~* UPPER('$snp_filePattern') and date_trunc('day', ser_gs_gc.sysdate() - interval '$snp_dayMinus days') = date_trunc('day', job_start_tms) and job_end_tms is not null) and job_config_txt = '$snp_jobConfigText' and job_stat_typ = 'CLOSED'\"",
+          "resultset_as_variables" : "\"column_value\"",
+          "hibernate_configuration_file" : "\"/ext/app/jobscheduler/base/sos-berlin.com/joc/resources/joc/hibernate.cfg.xml\""
+        }
+      },
+      "skipIfNoAdmissionForOrderDay" : false,
+      "parallelism" : 1,
+      "graceTimeout" : 1,
+      "failOnErrWritten" : false,
+      "warnOnErrWritten" : false
+    },
+    "soicheck" : {
+      "agentName" : "JSAgent",
+      "withSubagentClusterIdExpr" : false,
+      "executable" : {
+        "TYPE" : "InternalExecutable",
+        "className" : "com.sos.jitl.jobs.db.SQLExecutorJob",
+        "internalType" : "JITL",
+        "arguments" : {
+          "command" : "\"select count(1) as soicheck from ser_gs_gc.ft_t_isgp where prnt_iss_grp_oid in (select iss_grp_oid from ser_gs_gc.ft_t_isgr where iss_grp_id in ('LEVFININVESTLOANS','LEVFINHELDLOANS','LEVFINHELDNONLOANS','LEVFININVESTNONLOANS'))and data_stat_typ = 'ACTIVE' and end_tms is null  and  instr_id not in (select instr_id from ser_gs_gc.ft_t_issu where end_tms is  not null)\"",
+          "resultset_as_variables" : "\"column_value\"",
+          "hibernate_configuration_file" : "\"/ext/app/jobscheduler/base/sos-berlin.com/joc/resources/joc/hibernate.cfg.xml\""
+        }
+      },
+      "skipIfNoAdmissionForOrderDay" : false,
+      "parallelism" : 1,
+      "graceTimeout" : 1,
+      "failOnErrWritten" : false,
+      "warnOnErrWritten" : false
+    },
+    "Nuveen_LevFin_EOD_Publish_Job" : {
+      "agentName" : "JSAgent",
+      "withSubagentClusterIdExpr" : false,
+      "executable" : {
+        "TYPE" : "ShellScriptExecutable",
+        "script" : "cd $scripts_home\n./jobutilities execWkf $inputfile $event_name $target_application",
+        "env" : {
+          "event_name" : "'Nuveen_LevFin_Publish_Wrapper'",
+          "scripts_home" : "'/ext/app/jobscheduler/scripts/'",
+          "target_application" : "'publishing'",
+          "inputfile" : "'/edmfs/app/InputParams/Nuveen_LevFin_EOD_Publish.json'"
+        },
+        "v1Compatible" : false
+      },
+      "skipIfNoAdmissionForOrderDay" : false,
+      "parallelism" : 1,
+      "graceTimeout" : 1,
+      "failOnErrWritten" : false,
+      "warnOnErrWritten" : false,
+      "title" : "Nuveen LevFin EOD Publish Job"
+    },
+    "Ratings_Load_Incomplete" : {
+      "agentName" : "JSAgent",
+      "withSubagentClusterIdExpr" : false,
+      "executable" : {
+        "TYPE" : "ShellScriptExecutable",
+        "script" : "echo \"Ratings Load Incomplete\"",
+        "v1Compatible" : false
+      },
+      "skipIfNoAdmissionForOrderDay" : false,
+      "parallelism" : 1,
+      "graceTimeout" : 1,
+      "failOnErrWritten" : false,
+      "warnOnErrWritten" : false,
+      "title" : "Ratings Load Incomplete"
+    },
+    "Echo_No_Dependency_Check" : {
+      "agentName" : "JSAgent",
+      "withSubagentClusterIdExpr" : false,
+      "executable" : {
+        "TYPE" : "ShellScriptExecutable",
+        "script" : "echo \"No Dependency Check\"",
+        "v1Compatible" : false
+      },
+      "skipIfNoAdmissionForOrderDay" : false,
+      "parallelism" : 1,
+      "graceTimeout" : 1,
+      "failOnErrWritten" : false,
+      "warnOnErrWritten" : false,
+      "title" : "Echo No Dependency Check"
+    },
+    "Nuveen_LevFin_EOD_Publish_Job_ND" : {
+      "agentName" : "JSAgent",
+      "withSubagentClusterIdExpr" : false,
+      "executable" : {
+        "TYPE" : "ShellScriptExecutable",
+        "script" : "cd $scripts_home\n./jobutilities execWkf $inputfile $event_name $target_application",
+        "env" : {
+          "event_name" : "'Nuveen_LevFin_Publish_Wrapper'",
+          "scripts_home" : "'/ext/app/jobscheduler/scripts/'",
+          "target_application" : "'publishing'",
+          "inputfile" : "'/edmfs/app/InputParams/Nuveen_LevFin_EOD_Publish.json'"
+        },
+        "v1Compatible" : false
+      },
+      "skipIfNoAdmissionForOrderDay" : false,
+      "parallelism" : 1,
+      "graceTimeout" : 1,
+      "failOnErrWritten" : false,
+      "warnOnErrWritten" : false,
+      "title" : "Nuveen LevFin EOD Publish Job ND"
+    }
+  }
+}

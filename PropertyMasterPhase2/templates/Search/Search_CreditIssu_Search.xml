@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<root baseLookup="Base" createdUser="user1" freezeColumns="" id="8AvCv&gt;~OO1" isDefault="N" isPublic="N" lookupId="NuveenCreditIssue" pageSize="50" screenType="SYSTEMSRCH" title="CreditIssu_Search">
+  <buttons/>
+  <columns>
+    <column caption="" columnName="System Issue ID" fieldName="NuveenCreditIssue.Identifiers.InstrumentLevelIdentifiers.NuveenSystemIssueID" filterFromNum="" filterFromTms="" filterToNum="" filterToTms="" filterValue="" filterable="Y" fromRange="" id="cqv0m&amp;gt;KQO1" isRange="N" mobileTemplate="" operator="" orderNum="0" showRelLink="" sort="" toRange="" width=""/>
+    <column caption="" columnName="Merritt Issue ID" fieldName="NuveenCreditIssue.Identifiers.InstrumentLevelIdentifiers.NuveenMerrittIssueID" filterFromNum="" filterFromTms="" filterToNum="" filterToTms="" filterValue="" filterable="Y" fromRange="" id="cqv1m&amp;gt;KQO1" isRange="N" mobileTemplate="" operator="" orderNum="1" showRelLink="" sort="" toRange="" width=""/>
+    <column caption="" columnName="Security Name" fieldName="NuveenCreditIssue.InstrumentDetails.PreferredInstrumentName" filterFromNum="" filterFromTms="" filterToNum="" filterToTms="" filterValue="" filterable="Y" fromRange="" id="cqv2m&amp;gt;KQO1" isRange="N" mobileTemplate="" operator="" orderNum="2" showRelLink="" sort="" toRange="" width=""/>
+    <column caption="" columnName="Instrument Type" fieldName="NuveenCreditIssue.InstrumentDetails.InstrumentType" filterFromNum="" filterFromTms="" filterToNum="" filterToTms="" filterValue="" filterable="Y" fromRange="" id="cqv3m&amp;gt;KQO1" isRange="N" mobileTemplate="" operator="" orderNum="3" showRelLink="" sort="" toRange="" width=""/>
+  </columns>
+</root>

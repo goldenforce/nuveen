@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entities cleanUnusedFields="false" nameSpace="NUVEEN">
+  <beFields>
+    <beField class="BETEXT" displayCaption="CTD Sedol" entityTypeId="++3qwBhS2etxm003" id="++8q6sFy2es18003" mandatory="0" multiplicity="SINGLE_OR_NULL" name="NuvennFUTCDSED" nameSpace="NUVEEN"/>
+  </beFields>
+  <dataGroups>
+    <dataGroup customInd="0" desc="Underlying Identifiers" displayCaption="Underlying Identifiers" entityTypeId="++3qwBhS2etxm003" frequencyInd="0" id="005pv1ki2etne07l" ignoreDeleteChildren="false" multiplicity="SINGLE_OR_NULL" name="UnderlyingIdentifiers" nameSpace="GSC">
+      <part defNameSpace="NUVEEN" fieldId="++8q6sFy2es18003" id="++8q6sFy2es18005" prntReqdInd="0" seq="6"/>
+    </dataGroup>
+  </dataGroups>
+  <occurrences>
+    <occurrence desc="Occurrence for Issue Statistic" id="++8q7a3S2es18000" ignoreDeleteChildren="false" multiplicity="SINGLE_OR_NULL" name="ISST_NVN_FUTCDSED" nameSpace="NUVEEN" parentId="++4Gmmty2ettS01A" table="FT_T_ISST" timeSeries="LOGICAL_DELETE">
+      <field id="++8q7a3S2es18002" name="STAT_CHAR_VAL_TXT" nameSpace="NUVEEN"/>
+      <value id="++8q7a3S2es18001" name="STAT_DEF_ID" nameSpace="NUVEEN" type="FILTER_FIELD" value="FUTCDSED" valueType="CONSTANT"/>
+      <option id="008wvuYi2es1802C" nameSpace="NUVEEN" type="DEFAULT_ACTION" value="UNKNOWN"/>
+    </occurrence>
+  </occurrences>
+  <mappings>
+    <mapping beFieldId="++8q6sFy2es18003" groupMapping="0" id="++8q7a3S2es18003" nameSpace="NUVEEN" occFieldId="++8q7a3S2es18002"/>
+  </mappings>
+  <entityRelations>
+    <entityRelation desc="CUSTOM:Relation Participant" entityId="++5TeW-S2etse007" id="=0000000FF" lookupField="005Q5i8i2etse002" multiplicity="MULTIPLE_OR_NULL" name="UnderlyingDerivative" nameSpace="GSC" rltdEntityId="++5SQ0Ly2etse000">
+      <part forPublishing="1" forUI="0" id="++5jTbey2etqS0Lz" nameSpace="GSC" partId="++4u-kJy2etzO00d"/>
+      <part forPublishing="1" forUI="1" id="++8oItuS2es18003" nameSpace="NUVEEN" partId="++5aK3ky2etse01t"/>
+      <part forPublishing="1" forUI="1" id="++8oItuS2es18000" nameSpace="NUVEEN" partId="++5aK3ky2etse024"/>
+      <part forPublishing="1" forUI="1" id="++8oItuS2es18002" nameSpace="NUVEEN" partId="004aIFeC2etv4001"/>
+      <part forPublishing="1" forUI="1" id="++8oItuS2es18001" nameSpace="NUVEEN" partId="004aIFeC2etv4008"/>
+      <part forPublishing="1" forUI="1" id="=000000100" nameSpace="GSC" partId="005Q5i8i2etse002"/>
+      <part forPublishing="1" forUI="0" id="++5jTbey2etqS0Ly" nameSpace="GSC" partId="005Q5i8i2etse003"/>
+      <part forPublishing="1" forUI="0" id="=000000101" nameSpace="GSC" partId="005Q5i8i2etse004"/>
+      <part forPublishing="1" forUI="0" id="=000000102" nameSpace="GSC" partId="005Q5i8i2etse005"/>
+    </entityRelation>
+  </entityRelations>
+</entities>

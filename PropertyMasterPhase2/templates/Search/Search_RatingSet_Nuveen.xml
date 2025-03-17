@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<root baseLookup="RatingSetDefinition" createdUser="user1" freezeColumns="" id="7KA101@8G1" isDefault="Y" isPublic="Y" lookupId="RatingSetDefinition" pageSize="50" screenType="SYSTEMSRCH" title="RatingSet:Nuveen">
+  <buttons/>
+  <columns>
+    <column caption="" columnName="Rating Set Mnemonic" fieldName="RatingSetDefinition.RatingSetInformation.RatingSetMnemonic" filterFromNum="" filterFromTms="" filterToNum="" filterToTms="" filterValue="" filterable="Y" fromRange="" id="7KA201@8G1" isRange="N" mobileTemplate="" operator="" orderNum="0" showRelLink="" sort="" toRange="" width=""/>
+    <column caption="" columnName="Rating Set Name" fieldName="RatingSetDefinition.RatingSetInformation.RatingSetName" filterFromNum="" filterFromTms="" filterToNum="" filterToTms="" filterValue="" filterable="Y" fromRange="" id="7KA301@8G1" isRange="N" mobileTemplate="" operator="" orderNum="1" showRelLink="" sort="" toRange="" width=""/>
+    <column caption="" columnName="Rating Set Description" fieldName="RatingSetDefinition.RatingSetInformation.RatingSetDescription" filterFromNum="" filterFromTms="" filterToNum="" filterToTms="" filterValue="" filterable="Y" fromRange="" id="7KA401@8G1" isRange="N" mobileTemplate="" operator="" orderNum="2" showRelLink="" sort="" toRange="" width=""/>
+    <column caption="" columnName="Rating Set Applicablity" fieldName="RatingSetDefinition.RatingSetInformation.RatingSetApplicablity" filterFromNum="" filterFromTms="" filterToNum="" filterToTms="" filterValue="" filterable="Y" fromRange="" id="7KA601@8G1" isRange="N" mobileTemplate="" operator="" orderNum="3" showRelLink="" sort="" toRange="" width=""/>
+    <column caption="" columnName="Rating Set Scale Type" fieldName="RatingSetDefinition.RatingSetInformation.RatingSetScaleType" filterFromNum="" filterFromTms="" filterToNum="" filterToTms="" filterValue="" filterable="Y" fromRange="" id="7KA701@8G1" isRange="N" mobileTemplate="" operator="" orderNum="4" showRelLink="" sort="" toRange="" width=""/>
+    <column caption="" columnName="Institution Name" fieldName="RatingSetDefinition.RatingSetInformation.RatingSetToFinancialInstitution.FinancialInstitution.FinancialInstitutionDetails.FinancialInstitutionName" filterFromNum="" filterFromTms="" filterToNum="" filterToTms="" filterValue="" filterable="Y" fromRange="" id="7KA501@8G1" isRange="N" mobileTemplate="" operator="" orderNum="5" showRelLink="" sort="" toRange="" width=""/>
+  </columns>
+</root>

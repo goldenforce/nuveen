@@ -1,0 +1,4 @@
+IDUniquenessCheckMatchKeySet=ID_UNIQ
+VSH_GC=VSH
+SetMatchKey=MATCHKEY
+ConditionalTimeSeries=TSCONDNL

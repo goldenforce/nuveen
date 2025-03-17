@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<root>
+  <Subscriptions>
+    <Subscription description="" id="++9bBCbsHIiky00C" name="Nuveen_CreditIssue_Publishing" ruleText="0 0 0 1 1 ? *" sourceId="" type="BATCH" workflow="PublishingWorkflow">
+      <destinations>
+        <destination id="++9bBCbsHIiky009" outputType="JSON" participantRules="">
+          <subscriptionProperties>
+            <subscriptionProperty id="009j1ZScHITD400X" propertyDesc="" propertyName="FILE_EXTENSION" propertyValue=".json"/>
+            <subscriptionProperty id="009j1ZScHITD400W" propertyDesc="" propertyName="FILE_NAME" propertyValue="Muni_Issue_EOD"/>
+          </subscriptionProperties>
+          <downstream connectionFactory="" deadline="" deadlineTime="" description="Nuveen_CS_Issue" downstreamDestinationType="File" downstreamValue="/edmfs/app/outbound/output/CreditScope/CreditIssue/done" dwdfOid="++9bBCbsHIiky007" id="++9bBCbsHIiky008" name="Nuveen_CS_Issue" preferredLanguageCode="" preferredVendorId="" subscriberType="" typeFlag="" validityPriority="null"/>
+        </destination>
+      </destinations>
+      <messageTypes/>
+      <filters>
+        <filter dataSourceId="" deltaMode="CHANGED" entity="009V00nC2etbS03m" entityCaption="Credit Issue" entityName="NuveenCreditIssue" entityType="BUSINESS_ENTITY" filterEQLJsonText="&lt;sql&gt; instr_id in (select instr_id from ft_t_issu where iss_typ = 'CRDTISSU')&lt;/sql&gt;)" filterRuleText="&lt;sql&gt; instr_id in (select instr_id from ft_t_issu where iss_typ = 'CRDTISSU')&lt;/sql&gt;)" id="++9bBCbsHIiky00A" publishingModelName="NuveenCreditIssue" ruleText="" screen="S6xLn&gt;ONG1" tableType="ISSU"/>
+      </filters>
+    </Subscription>
+  </Subscriptions>
+</root>

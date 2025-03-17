@@ -1,0 +1,1 @@
+Delete from ft_T_bech where cache_typ != 'CONCRETE_JAR';

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<root>
+  <Subscriptions>
+    <Subscription description="NVN_Muni_Issuer_EOD_Delta_Publish" id="009lWxC6HK6Sa00f" name="NVN_Muni_Issuer_EOD_Delta_Publish" ruleText="0 0 0 1 1 ? *" sourceId="" type="BATCH" workflow="PublishingWorkflow">
+      <destinations>
+        <destination id="009lWxC6HK6Sa00Z" outputType="JSON" participantRules="">
+          <subscriptionProperties>
+            <subscriptionProperty id="009lWxC6HK6Sa00a" propertyDesc="" propertyName="FILE_NAME" propertyValue="Muni_Issuer_EOD"/>
+            <subscriptionProperty id="009lWxC6HK6Sa00b" propertyDesc="" propertyName="FILE_EXTENSION" propertyValue=".json"/>
+          </subscriptionProperties>
+          <downstream connectionFactory="" deadline="" deadlineTime="" description="NVN_Muni_Issuer_EOD" downstreamDestinationType="File" downstreamValue="/edmfs/app/outbound/output/CreditScope/Issuer/done" dwdfOid="009j3r76HIkke00B" id="009j3r76HIkke00C" name="NVN_Muni_Issuer_EOD" preferredLanguageCode="" preferredVendorId="" subscriberType="" typeFlag="" validityPriority="null"/>
+        </destination>
+      </destinations>
+      <messageTypes/>
+      <filters>
+        <filter dataSourceId="" deltaMode="CHANGED" entity="++4HwLjy2etpy007" entityCaption="Financial Institution" entityName="FinancialInstitution" entityType="BUSINESS_ENTITY" filterEQLJsonText="&lt;sql&gt; 1=1) and inst_mnem in ( select fins_inst_mnem from ft_t_issr issr where instr_issr_id in (select instr_issr_id from ft_t_issu where iss_typ = 'MUNI' and end_tms is null) &lt;/sql&gt;" filterRuleText="&lt;sql&gt; 1=1) and inst_mnem in ( select fins_inst_mnem from ft_t_issr issr where instr_issr_id in (select instr_issr_id from ft_t_issu where iss_typ = 'MUNI' and end_tms is null) &lt;/sql&gt;" id="009lWxC6HK6Sa00d" publishingModelName="FinancialInstitution" ruleText="" screen="ZCBT81-Qe1" tableType="FINS"/>
+      </filters>
+    </Subscription>
+  </Subscriptions>
+</root>

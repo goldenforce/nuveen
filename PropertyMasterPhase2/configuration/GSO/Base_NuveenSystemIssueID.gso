@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entities cleanUnusedFields="false" nameSpace="NUVEEN">
+  <beFields>
+    <beField class="BETEXT" customDesc="" desc="" displayCaption="System Issue ID" entityTypeId="++3qwBhS2etxm003" id="009V00nC2etbS03k" mandatory="0" multiplicity="SINGLE_OR_NULL" name="NuveenSystemIssueID" nameSpace="NUVEEN"/>
+  </beFields>
+  <dataGroups>
+    <dataGroup customInd="0" desc="Instrument Level Identifiers" displayCaption="Instrument Level Identifiers" entityTypeId="++3qwBhS2etxm003" frequencyInd="0" id="++4GrmAy2etwa000" ignoreDeleteChildren="false" multiplicity="SINGLE_OR_NULL" name="InstrumentLevelIdentifiers" nameSpace="GSC">
+      <part defNameSpace="NUVEEN" fieldId="009V00nC2etbS03k" id="009V00nC2etbS03v" prntReqdInd="0" seq="115"/>
+    </dataGroup>
+  </dataGroups>
+  <occurrences>
+    <occurrence desc="Occurrence for Issue Identifier" id="009V00nC2etbS03g" ignoreDeleteChildren="false" multiplicity="SINGLE_OR_NULL" name="ISID_NVN_NVNSYSISSID" nameSpace="NUVEEN" parentId="++4Gmmty2ettS01A" table="FT_T_ISID" timeSeries="LOGICAL_DELETE">
+      <field id="009V00nC2etbS03j" name="ISS_ID" nameSpace="NUVEEN"/>
+      <value id="009V00nC2etbS03i" name="ID_CTXT_TYP" nameSpace="NUVEEN" type="FILTER_FIELD" value="NVNSYSISSID" valueType="CONSTANT"/>
+      <option id="009V00nC2etbS03h" nameSpace="NUVEEN" type="DEFAULT_MATCH_KEY" value="ISID1_INSTR_ID_CNTXT"/>
+    </occurrence>
+  </occurrences>
+  <mappings>
+    <mapping beFieldId="009V00nC2etbS03k" groupMapping="0" id="009V00nC2etbS03l" nameSpace="NUVEEN" occFieldId="009V00nC2etbS03j"/>
+  </mappings>
+</entities>

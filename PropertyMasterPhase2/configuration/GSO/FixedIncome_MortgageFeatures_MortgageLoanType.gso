@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entities cleanUnusedFields="false" nameSpace="GSC">
+  <beFields>
+    <beField class="BETEXT" customDesc="" customDomainSQL="SELECT INTRNL_DMN_VAL_TXT CODE, INTRNL_DMN_VAL_NME DISPLAY_NAME FROM FT_T_IDMV WHERE FLD_DATA_CL_ID = 'LOANTYPE'" desc="" displayCaption="Loan Type" entityTypeId="++3qwBhS2etxm003" id="009HJEZi2etbS001" mandatory="0" multiplicity="SINGLE_OR_NULL" name="MortgageLoanType" nameSpace="GSC"/>
+  </beFields>
+  <dataGroups>
+    <dataGroup customInd="0" desc="Mortgage Features" displayCaption="Mortgage Features" entityTypeId="++3qwBhS2etxm003" frequencyInd="0" id="++5Ral9S2etse04j" ignoreDeleteChildren="false" multiplicity="SINGLE_OR_NULL" name="MortgageFeatures" nameSpace="GSC">
+      <part defNameSpace="GSC" fieldId="009HJEZi2etbS001" id="009HJEZi2etbS000" prntReqdInd="0" seq="151"/>
+    </dataGroup>
+  </dataGroups>
+  <occurrences>
+    <occurrence desc="Occurrence for Loan/Mortgage Characteristics" id="004JftOi2etwa00f" ignoreDeleteChildren="false" multiplicity="SINGLE_OR_NULL" name="LMCH_01" nameSpace="GSC" parentId="++4Gmmty2ettS01A" table="FT_T_LMCH" timeSeries="LOGICAL_DELETE">
+      <field id="009HJEZi2etbS002" name="LOAN_TYP" nameSpace="GSC"/>
+    </occurrence>
+  </occurrences>
+  <mappings>
+    <mapping beFieldId="009HJEZi2etbS001" groupMapping="0" id="009HJEZi2etbS003" nameSpace="GSC" occFieldId="009HJEZi2etbS002"/>
+  </mappings>
+</entities>

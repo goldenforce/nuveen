@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<root createdUser="user1" entityName="Property" entitySubType="[]" id="3R8Q11Xg01" isDefault="N" isPublic="Y" screenType="SYSTEMGRID" title="S: Property Bulk Upload">
+  <control caption="" fullQualPath="Property.PropertyDetails" id="3R8R11Xg01" lazyInd="N" orderNum="0" parentId="" relatedPath="" screenId="3R8Q11Xg01" show="Y">
+    <control caption="" fullQualPath="Property.PropertyDetails.RelatedPropertyType.PropertyType.PropertyTypeDetails.PropertyType" id="3R8S11Xg01" lazyInd="N" orderNum="0" parentId="3R8R11Xg01" relatedPath="" screenType="3R8Q11Xg01" show="Y"/>
+    <control caption="" fullQualPath="Property.PropertyDetails.RelatedPropertyType.PropertyType.PropertyTypeDetails.PropertyTypeName" id="3R8T11Xg01" lazyInd="N" orderNum="1" parentId="3R8R11Xg01" relatedPath="" screenType="3R8Q11Xg01" show="Y"/>
+    <control caption="" fullQualPath="Property.PropertyDetails.PropertyName" id="3R8U11Xg01" lazyInd="N" orderNum="2" parentId="3R8R11Xg01" relatedPath="" screenType="3R8Q11Xg01" show="Y"/>
+    <control caption="" fullQualPath="Property.PropertyDetails.PropertySubType" id="3R8u11Xg01" lazyInd="N" orderNum="3" parentId="3R8R11Xg01" relatedPath="" screenType="3R8Q11Xg01" show="Y"/>
+  </control>
+  <control caption="" fullQualPath="Property.PropertyIdentifiers" id="3R8v11Xg01" lazyInd="N" orderNum="1" parentId="" relatedPath="" screenId="3R8Q11Xg01" show="Y">
+    <control caption="" fullQualPath="Property.PropertyIdentifiers.PropertyIdentifierContext" id="3R8a31Xg01" lazyInd="N" orderNum="0" parentId="3R8v11Xg01" relatedPath="" screenType="3R8Q11Xg01" show="Y"/>
+    <control caption="" fullQualPath="Property.PropertyIdentifiers.PropertyIdentifier" id="3R8b31Xg01" lazyInd="N" orderNum="1" parentId="3R8v11Xg01" relatedPath="" screenType="3R8Q11Xg01" show="Y"/>
+  </control>
+  <control caption="" fullQualPath="Property.PropertyAddressDetails" id="3R8w11Xg01" lazyInd="N" orderNum="2" parentId="" relatedPath="" screenId="3R8Q11Xg01" show="Y">
+    <control caption="" fullQualPath="Property.PropertyAddressDetails.PropertyAddressPurpose" id="3R8-11Xg01" lazyInd="N" orderNum="0" parentId="3R8w11Xg01" relatedPath="" screenType="3R8Q11Xg01" show="Y">
+      <control caption="" fullQualPath="Property.PropertyAddressDetails.PropertyAddressPurpose.PropADPUAddressPurpose" id="3R8.11Xg01" lazyInd="N" orderNum="0" parentId="3R8-11Xg01" relatedPath="" screenType="3R8Q11Xg01" show="Y"/>
+      <control caption="" fullQualPath="Property.PropertyAddressDetails.PropertyAddressPurpose.PropADPUAddressPurposeDescription" id="3R8/11Xg01" lazyInd="N" orderNum="1" parentId="3R8-11Xg01" relatedPath="" screenType="3R8Q11Xg01" show="Y"/>
+    </control>
+    <control caption="" fullQualPath="Property.PropertyAddressDetails.AccountAddressMailing" id="3R8F21Xg01" lazyInd="N" orderNum="1" parentId="3R8w11Xg01" relatedPath="" screenType="3R8Q11Xg01" show="Y">
+      <control caption="" fullQualPath="Property.PropertyAddressDetails.AccountAddressMailing.PropMADRAddressLine1" id="3R8G21Xg01" lazyInd="N" orderNum="0" parentId="3R8F21Xg01" relatedPath="" screenType="3R8Q11Xg01" show="Y"/>
+      <control caption="" fullQualPath="Property.PropertyAddressDetails.AccountAddressMailing.PropMADRAddressLine2" id="3R8H21Xg01" lazyInd="N" orderNum="1" parentId="3R8F21Xg01" relatedPath="" screenType="3R8Q11Xg01" show="Y"/>
+      <control caption="" fullQualPath="Property.PropertyAddressDetails.AccountAddressMailing.PropMADRAddressLine3" id="3R8I21Xg01" lazyInd="N" orderNum="2" parentId="3R8F21Xg01" relatedPath="" screenType="3R8Q11Xg01" show="Y"/>
+      <control caption="" fullQualPath="Property.PropertyAddressDetails.AccountAddressMailing.PropMADRAddressLine4" id="3R8J21Xg01" lazyInd="N" orderNum="3" parentId="3R8F21Xg01" relatedPath="" screenType="3R8Q11Xg01" show="Y"/>
+      <control caption="" fullQualPath="Property.PropertyAddressDetails.AccountAddressMailing.PropMADRAddressLine5" id="3R8K21Xg01" lazyInd="N" orderNum="4" parentId="3R8F21Xg01" relatedPath="" screenType="3R8Q11Xg01" show="Y"/>
+      <control caption="" fullQualPath="Property.PropertyAddressDetails.AccountAddressMailing.PropMADRAddressLocale" id="3R8L21Xg01" lazyInd="N" orderNum="5" parentId="3R8F21Xg01" relatedPath="" screenType="3R8Q11Xg01" show="Y"/>
+      <control caption="" fullQualPath="Property.PropertyAddressDetails.AccountAddressMailing.PropMADRAddressStatus" id="3R8M21Xg01" lazyInd="N" orderNum="6" parentId="3R8F21Xg01" relatedPath="" screenType="3R8Q11Xg01" show="Y"/>
+      <control caption="" fullQualPath="Property.PropertyAddressDetails.AccountAddressMailing.PropMADRAddressStatusDateTime" id="3R8N21Xg01" lazyInd="N" orderNum="7" parentId="3R8F21Xg01" relatedPath="" screenType="3R8Q11Xg01" show="Y"/>
+      <control caption="" fullQualPath="Property.PropertyAddressDetails.AccountAddressMailing.PropMADRCityCode" id="3R8O21Xg01" lazyInd="N" orderNum="8" parentId="3R8F21Xg01" relatedPath="" screenType="3R8Q11Xg01" show="Y"/>
+      <control caption="" fullQualPath="Property.PropertyAddressDetails.AccountAddressMailing.PropMADRCityCodeType" id="3R8P21Xg01" lazyInd="N" orderNum="9" parentId="3R8F21Xg01" relatedPath="" screenType="3R8Q11Xg01" show="Y"/>
+      <control caption="" fullQualPath="Property.PropertyAddressDetails.AccountAddressMailing.PropMADRCityTownName" id="3R8Q21Xg01" lazyInd="N" orderNum="10" parentId="3R8F21Xg01" relatedPath="" screenType="3R8Q11Xg01" show="Y"/>
+      <control caption="" fullQualPath="Property.PropertyAddressDetails.AccountAddressMailing.PropMADRPostalCode" id="3R8R21Xg01" lazyInd="N" orderNum="11" parentId="3R8F21Xg01" relatedPath="" screenType="3R8Q11Xg01" show="Y"/>
+      <control caption="" fullQualPath="Property.PropertyAddressDetails.AccountAddressMailing.PropMADRStateProvinceCode" id="3R8S21Xg01" lazyInd="N" orderNum="12" parentId="3R8F21Xg01" relatedPath="" screenType="3R8Q11Xg01" show="Y"/>
+      <control caption="" fullQualPath="Property.PropertyAddressDetails.AccountAddressMailing.PropMADRStateProvinceName" id="3R8T21Xg01" lazyInd="N" orderNum="13" parentId="3R8F21Xg01" relatedPath="" screenType="3R8Q11Xg01" show="Y"/>
+      <control caption="" fullQualPath="Property.PropertyAddressDetails.AccountAddressMailing.PropMADRCountryCode" id="3R8U21Xg01" lazyInd="N" orderNum="14" parentId="3R8F21Xg01" relatedPath="" screenType="3R8Q11Xg01" show="Y"/>
+      <control caption="" fullQualPath="Property.PropertyAddressDetails.AccountAddressMailing.PropMADRCountryName" id="3R8V21Xg01" lazyInd="N" orderNum="15" parentId="3R8F21Xg01" relatedPath="" screenType="3R8Q11Xg01" show="Y"/>
+      <control caption="" fullQualPath="Property.PropertyAddressDetails.AccountAddressMailing.PropMADRCountyCode" id="3R8W21Xg01" lazyInd="N" orderNum="16" parentId="3R8F21Xg01" relatedPath="" screenType="3R8Q11Xg01" show="Y"/>
+      <control caption="" fullQualPath="Property.PropertyAddressDetails.AccountAddressMailing.PropMADRCountyCodeType" id="3R8X21Xg01" lazyInd="N" orderNum="17" parentId="3R8F21Xg01" relatedPath="" screenType="3R8Q11Xg01" show="Y"/>
+      <control caption="" fullQualPath="Property.PropertyAddressDetails.AccountAddressMailing.PropMADRCountyName" id="3R8Y21Xg01" lazyInd="N" orderNum="18" parentId="3R8F21Xg01" relatedPath="" screenType="3R8Q11Xg01" show="Y"/>
+      <control caption="" fullQualPath="Property.PropertyAddressDetails.AccountAddressMailing.PropMADRContinentCode" id="3R8Z21Xg01" lazyInd="N" orderNum="19" parentId="3R8F21Xg01" relatedPath="" screenType="3R8Q11Xg01" show="Y"/>
+      <control caption="" fullQualPath="Property.PropertyAddressDetails.AccountAddressMailing.PropMADRAttentionText" id="3R8a21Xg01" lazyInd="N" orderNum="20" parentId="3R8F21Xg01" relatedPath="" screenType="3R8Q11Xg01" show="Y"/>
+      <control caption="" fullQualPath="Property.PropertyAddressDetails.AccountAddressMailing.PropMADRChangeOfAddressEffectiveDate" id="3R8b21Xg01" lazyInd="N" orderNum="21" parentId="3R8F21Xg01" relatedPath="" screenType="3R8Q11Xg01" show="Y"/>
+      <control caption="" fullQualPath="Property.PropertyAddressDetails.AccountAddressMailing.PropMADRChangeOfAddressSource" id="3R8c21Xg01" lazyInd="N" orderNum="22" parentId="3R8F21Xg01" relatedPath="" screenType="3R8Q11Xg01" show="Y"/>
+      <control caption="" fullQualPath="Property.PropertyAddressDetails.AccountAddressMailing.PropMADRCourierName" id="3R8d21Xg01" lazyInd="N" orderNum="23" parentId="3R8F21Xg01" relatedPath="" screenType="3R8Q11Xg01" show="Y"/>
+      <control caption="" fullQualPath="Property.PropertyAddressDetails.AccountAddressMailing.PropMADRMailDeliveryType" id="3R8e21Xg01" lazyInd="N" orderNum="24" parentId="3R8F21Xg01" relatedPath="" screenType="3R8Q11Xg01" show="Y"/>
+      <control caption="" fullQualPath="Property.PropertyAddressDetails.AccountAddressMailing.PropMADRMetropolitanStatisticalAreaCode" id="3R8f21Xg01" lazyInd="N" orderNum="25" parentId="3R8F21Xg01" relatedPath="" screenType="3R8Q11Xg01" show="Y"/>
+      <control caption="" fullQualPath="Property.PropertyAddressDetails.AccountAddressMailing.PropMADRNeighborhoodName" id="3R8g21Xg01" lazyInd="N" orderNum="26" parentId="3R8F21Xg01" relatedPath="" screenType="3R8Q11Xg01" show="Y"/>
+      <control caption="" fullQualPath="Property.PropertyAddressDetails.AccountAddressMailing.PropMADRRegisteredAddressIndicator" id="3R8h21Xg01" lazyInd="N" orderNum="27" parentId="3R8F21Xg01" relatedPath="" screenType="3R8Q11Xg01" show="Y"/>
+      <control caption="" fullQualPath="Property.PropertyAddressDetails.AccountAddressMailing.PropMADRReturnPostOfficeCode" id="3R8i21Xg01" lazyInd="N" orderNum="28" parentId="3R8F21Xg01" relatedPath="" screenType="3R8Q11Xg01" show="Y"/>
+      <control caption="" fullQualPath="Property.PropertyAddressDetails.AccountAddressMailing.PropMADRReturnPostOfficeDate" id="3R8j21Xg01" lazyInd="N" orderNum="29" parentId="3R8F21Xg01" relatedPath="" screenType="3R8Q11Xg01" show="Y"/>
+      <control caption="" fullQualPath="Property.PropertyAddressDetails.AccountAddressMailing.PropMADRRuralIndicator" id="3R8k21Xg01" lazyInd="N" orderNum="30" parentId="3R8F21Xg01" relatedPath="" screenType="3R8Q11Xg01" show="Y"/>
+      <control caption="" fullQualPath="Property.PropertyAddressDetails.AccountAddressMailing.PropMADRThoroughfareName" id="3R8l21Xg01" lazyInd="N" orderNum="31" parentId="3R8F21Xg01" relatedPath="" screenType="3R8Q11Xg01" show="Y"/>
+      <control caption="" fullQualPath="Property.PropertyAddressDetails.AccountAddressMailing.PropMADRTownshipMunicipalityName" id="3R8m21Xg01" lazyInd="N" orderNum="32" parentId="3R8F21Xg01" relatedPath="" screenType="3R8Q11Xg01" show="Y"/>
+      <control caption="" fullQualPath="Property.PropertyAddressDetails.AccountAddressMailing.PropMADRVanityCityTownName" id="3R8n21Xg01" lazyInd="N" orderNum="33" parentId="3R8F21Xg01" relatedPath="" screenType="3R8Q11Xg01" show="Y"/>
+      <control caption="" fullQualPath="Property.PropertyAddressDetails.AccountAddressMailing.PropMADRLatitudeDegrees" id="3R8o21Xg01" lazyInd="N" orderNum="34" parentId="3R8F21Xg01" relatedPath="" screenType="3R8Q11Xg01" show="Y"/>
+      <control caption="" fullQualPath="Property.PropertyAddressDetails.AccountAddressMailing.PropMADRLongitudeDegrees" id="3R8p21Xg01" lazyInd="N" orderNum="35" parentId="3R8F21Xg01" relatedPath="" screenType="3R8Q11Xg01" show="Y"/>
+    </control>
+    <control caption="" fullQualPath="Property.PropertyAddressDetails.PropADTPAddressType" id="3R8q21Xg01" lazyInd="N" orderNum="2" parentId="3R8w11Xg01" relatedPath="" screenType="3R8Q11Xg01" show="Y"/>
+    <control caption="" fullQualPath="Property.PropertyAddressDetails.PropADTPAddressStatus" id="3R8r21Xg01" lazyInd="N" orderNum="3" parentId="3R8w11Xg01" relatedPath="" screenType="3R8Q11Xg01" show="Y"/>
+    <control caption="" fullQualPath="Property.PropertyAddressDetails.PropADTPAddressStatusDateTime" id="3R8s21Xg01" lazyInd="N" orderNum="4" parentId="3R8w11Xg01" relatedPath="" screenType="3R8Q11Xg01" show="Y"/>
+  </control>
+  <control caption="" fullQualPath="Property.RelatedProperty" id="3R8x11Xg01" lazyInd="N" orderNum="3" parentId="" relatedPath="" screenId="3R8Q11Xg01" show="Y">
+    <control caption="" fullQualPath="Property.RelatedProperty.PropertyToPropertyRelation.Property.PropertyDetails.PropertyName" id="3R8%11Xg01" lazyInd="N" orderNum="0" parentId="3R8x11Xg01" relatedPath="" screenType="3R8Q11Xg01" show="Y"/>
+    <control caption="" fullQualPath="Property.RelatedProperty.PropertyPropertyRoleType" id="3R8@11Xg01" lazyInd="N" orderNum="1" parentId="3R8x11Xg01" relatedPath="" screenType="3R8Q11Xg01" show="Y"/>
+  </control>
+</root>

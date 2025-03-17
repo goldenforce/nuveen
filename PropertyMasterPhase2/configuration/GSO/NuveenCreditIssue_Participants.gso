@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entities cleanUnusedFields="false" nameSpace="NUVEEN">
+  <beFields>
+    <beField class="BETEXT" customDesc="Credit Scope Hub Issue ID" customDomainSQL="" customSQL="" desc="" displayCaption="Hub Issue ID" entityTypeId="++3qwBhS2etxm003" id="++9pWDpsHIVBK001" mandatory="0" multiplicity="SINGLE_OR_NULL" name="HubIssueID" nameSpace="NUVEEN"/>
+  </beFields>
+  <dataGroups>
+    <dataGroup customInd="0" desc="Instrument Level Identifiers" displayCaption="Instrument Level Identifiers" entityTypeId="++3qwBhS2etxm003" frequencyInd="0" id="++4GrmAy2etwa000" ignoreDeleteChildren="false" multiplicity="SINGLE_OR_NULL" name="InstrumentLevelIdentifiers" nameSpace="GSC">
+      <part defNameSpace="NUVEEN" fieldId="++9pWDpsHIVBK001" id="009pbDb6HIcbW000" prntReqdInd="0" seq="116"/>
+    </dataGroup>
+  </dataGroups>
+  <occurrences>
+    <occurrence desc="Occurrence for Issue Identifier" id="++9pWDpsHIVBK006" ignoreDeleteChildren="false" multiplicity="SINGLE_OR_NULL" name="ISID_NVN_CSHUBISSID" nameSpace="NUVEEN" parentId="++4Gmmty2ettS01A" table="FT_T_ISID" timeSeries="LOGICAL_DELETE">
+      <field desc="Issue ID" id="++9pWDpsHIVBK009" name="ISS_ID" nameSpace="NUVEEN"/>
+      <value id="++9pWDpsHIVBK008" name="ID_CTXT_TYP" nameSpace="NUVEEN" type="FILTER_FIELD" value="CSHUBISSID" valueType="CONSTANT"/>
+      <option id="++9pWDpsHIVBK007" nameSpace="NUVEEN" type="DEFAULT_ACTION" value="UNKNOWN"/>
+    </occurrence>
+  </occurrences>
+  <mappings>
+    <mapping beFieldId="++9pWDpsHIVBK001" groupMapping="0" id="++9pWDpsHIVBK00A" nameSpace="NUVEEN" occFieldId="++9pWDpsHIVBK009"/>
+  </mappings>
+</entities>

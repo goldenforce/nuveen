@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entities cleanUnusedFields="false" nameSpace="NUVEEN">
+  <beFields>
+    <beField class="BEDEC" customDesc="Fix in GS | Spread Rate of the Contract" customDomainSQL="" customSQL="" desc="" displayCaption="Contract Spread Rate" entityTypeId="++3qwBhS2etxm003" id="++9OH52S2etbS004" mandatory="0" multiplicity="MULTIPLE_OR_NULL" name="NuveenContractSpreadRate" nameSpace="NUVEEN">
+      <fieldConfig id="++9OH52S2etbS005" nameSpace="NUVEEN" type="ALLOW_NEGATIVE" value="N"/>
+    </beField>
+  </beFields>
+  <dataGroups>
+    <dataGroup category="" customInd="0" desc="" displayCaption="Loan Contract Details" entityTypeId="++3qwBhS2etxm003" frequencyInd="0" id="009HJEZi2etbS005" ignoreDeleteChildren="false" multiplicity="MULTIPLE_OR_NULL" name="NuveenLoanContractDetails" nameSpace="NUVEEN">
+      <part defNameSpace="NUVEEN" fieldId="++9OH52S2etbS004" id="++9OH52S2etbS007" prntReqdInd="0" seq="15"/>
+    </dataGroup>
+  </dataGroups>
+  <occurrences>
+    <occurrence desc="Occurrence for Loan Contract Details" id="009HJEZi2etbS00l" ignoreDeleteChildren="false" multiplicity="MULTIPLE_OR_NULL" name="CNT1_NVN_01" nameSpace="NUVEEN" parentId="++4Gmmty2ettS01A" table="FT_E_CNT1" timeSeries="LOGICAL_DELETE">
+      <field id="009HJEZi2etbS00q" name="CNT1_OID" nameSpace="NUVEEN"/>
+      <field id="009HJEZi2etbS013" name="CNTRCT_ACCRL_BASIS" nameSpace="NUVEEN"/>
+      <field id="009HJEZi2etbS011" name="CNTRCT_BASE_CRTE" nameSpace="NUVEEN"/>
+      <field id="009HJEZi2etbS010" name="CNTRCT_BASE_CRTE_ALL_IN" nameSpace="NUVEEN"/>
+      <field id="009HJEZi2etbS00+" name="CNTRCT_FREQ" nameSpace="NUVEEN"/>
+      <field id="009HJEZi2etbS00-" name="CNTRCT_GLOB_AMT" nameSpace="NUVEEN"/>
+      <field id="009HJEZi2etbS00z" name="CNTRCT_MAT_EXP_DTE" nameSpace="NUVEEN"/>
+      <field id="009HJEZi2etbS00y" name="CNTRCT_MNTH_CNT" nameSpace="NUVEEN"/>
+      <field id="009HJEZi2etbS00x" name="CNTRCT_NXT_PAY_DTE" nameSpace="NUVEEN"/>
+      <field desc="Contract Spread Rate" id="++9OH52S2etbS003" name="CNTRCT_SPREAD_CRTE" nameSpace="NUVEEN"/>
+      <field id="009HJEZi2etbS00t" name="CNTRCT_TYPE" nameSpace="NUVEEN"/>
+      <field id="009HJEZi2etbS00p" name="CONTRACT_NME" nameSpace="NUVEEN"/>
+      <field id="009HJEZi2etbS00w" name="DATA_SRC_ID" nameSpace="NUVEEN"/>
+      <field id="009HJEZi2etbS00v" name="END_TMS" nameSpace="NUVEEN"/>
+      <field id="009HJEZi2etbS00u" name="INSTR_ID" nameSpace="NUVEEN"/>
+      <field id="009HJEZi2etbS012" name="IS_CONTRACT_ACTIVE" nameSpace="NUVEEN"/>
+      <field id="009HJEZi2etbS00s" name="LAST_CHG_TMS" nameSpace="NUVEEN"/>
+      <field id="009HJEZi2etbS00r" name="LAST_CHG_USR_ID" nameSpace="NUVEEN"/>
+      <field id="009L0Uoi2etbS002" name="SPREAD_ADJ" nameSpace="NUVEEN"/>
+      <field id="009HJEZi2etbS00o" name="START_TMS" nameSpace="NUVEEN"/>
+      <field id="009HJEZi2etbS01I" name="WSO_CNTRCT_ID" nameSpace="NUVEEN"/>
+      <field id="009HJEZi2etbS00m" name="WSO_CNTRCT_NOTES" nameSpace="NUVEEN"/>
+      <option id="009Js4xC2etbS018" nameSpace="NUVEEN" type="DEFAULT_ACTION" value="UNKNOWN"/>
+      <option id="009Js4xC2etbS019" nameSpace="NUVEEN" type="DEFAULT_MATCH_KEY" value="CNT1_CNTRCTID"/>
+    </occurrence>
+  </occurrences>
+  <mappings>
+    <mapping beFieldId="++9OH52S2etbS004" groupMapping="0" id="++9OH52S2etbS006" nameSpace="NUVEEN" occFieldId="++9OH52S2etbS003"/>
+  </mappings>
+</entities>

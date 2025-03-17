@@ -1,0 +1,6 @@
+<vendor-definition>
+	<name>json</name>
+	<messageSplitter type="com.j2fe.feeds.generic.splitters.JsonPathSplitter">
+		<dataPath>WSODataFacilities</dataPath>
+	</messageSplitter>/>
+</vendor-definition>

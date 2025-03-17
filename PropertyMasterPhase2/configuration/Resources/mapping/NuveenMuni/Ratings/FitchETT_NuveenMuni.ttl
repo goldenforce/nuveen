@@ -1,0 +1,6976 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<MappingDef type="TRT" version="1.0">
+  <Options>
+    <Option key="MappingComment"/>
+    <Option key="MappingVersion">1.0.0.0</Option>
+    <Option key="MappingAuthor"/>
+    <Option key="MessageTranslatorVersion">8.1.1.1</Option>
+    <Option key="LastChangedTms">2017-06-21 at 04:03:02 IST</Option>
+    <Option key="MappingDesignerVersion">8.7.0.11</Option>
+  </Options>
+  <Translation>
+    <table name="FitchETT">
+      <Options>
+        <Option key="description">imported from old external translation table</Option>
+      </Options>
+      <header>
+        <col name="MSFTYPE"/>
+        <col name="col"/>
+        <col name="Destination"/>
+      </header>
+      <data>
+        <row>
+          <col>STATE_CODE</col>
+          <col>ALABAMA</col>
+          <col>AL</col>
+        </row>
+        <row>
+          <col>STATE_CODE</col>
+          <col>ALASKA</col>
+          <col>AK</col>
+        </row>
+        <row>
+          <col>STATE_CODE</col>
+          <col>ANTIOQUIA</col>
+          <col>AN</col>
+        </row>
+        <row>
+          <col>STATE_CODE</col>
+          <col>AQUITAINE</col>
+          <col>AQ</col>
+        </row>
+        <row>
+          <col>STATE_CODE</col>
+          <col>ARIZONA</col>
+          <col>AZ</col>
+        </row>
+        <row>
+          <col>STATE_CODE</col>
+          <col>ARKANSAS</col>
+          <col>AR</col>
+        </row>
+        <row>
+          <col>STATE_CODE</col>
+          <col>BAJA CALIFORNIA SUR</col>
+          <col>BS</col>
+        </row>
+        <row>
+          <col>STATE_CODE</col>
+          <col>CALIFORNIA</col>
+          <col>CA</col>
+        </row>
+        <row>
+          <col>STATE_CODE</col>
+          <col>COAHUILA DE ZARAGOZA</col>
+          <col>CR</col>
+        </row>
+        <row>
+          <col>STATE_CODE</col>
+          <col>COLORADO</col>
+          <col>CO</col>
+        </row>
+        <row>
+          <col>STATE_CODE</col>
+          <col>CONNECTICUT</col>
+          <col>CT</col>
+        </row>
+        <row>
+          <col>STATE_CODE</col>
+          <col>DELAWARE</col>
+          <col>DE</col>
+        </row>
+        <row>
+          <col>STATE_CODE</col>
+          <col>DISTRICT OF COLUMBIA</col>
+          <col>DC</col>
+        </row>
+        <row>
+          <col>STATE_CODE</col>
+          <col>DISTRITO FEDERAL</col>
+          <col>DF</col>
+        </row>
+        <row>
+          <col>STATE_CODE</col>
+          <col>FLORIDA</col>
+          <col>FL</col>
+        </row>
+        <row>
+          <col>STATE_CODE</col>
+          <col>GEORGIA</col>
+          <col>GA</col>
+        </row>
+        <row>
+          <col>STATE_CODE</col>
+          <col>GUAM</col>
+          <col>GU</col>
+        </row>
+        <row>
+          <col>STATE_CODE</col>
+          <col>HAWAII</col>
+          <col>HI</col>
+        </row>
+        <row>
+          <col>STATE_CODE</col>
+          <col>IDAHO</col>
+          <col>ID</col>
+        </row>
+        <row>
+          <col>STATE_CODE</col>
+          <col>ILLINOIS</col>
+          <col>IL</col>
+        </row>
+        <row>
+          <col>STATE_CODE</col>
+          <col>INDIANA</col>
+          <col>IN</col>
+        </row>
+        <row>
+          <col>STATE_CODE</col>
+          <col>IOWA</col>
+          <col>IA</col>
+        </row>
+        <row>
+          <col>STATE_CODE</col>
+          <col>KANSAS</col>
+          <col>KS</col>
+        </row>
+        <row>
+          <col>STATE_CODE</col>
+          <col>KENTUCKY</col>
+          <col>KY</col>
+        </row>
+        <row>
+          <col>STATE_CODE</col>
+          <col>LOUISIANA</col>
+          <col>LA</col>
+        </row>
+        <row>
+          <col>STATE_CODE</col>
+          <col>MAHARASHTRA</col>
+          <col>MH</col>
+        </row>
+        <row>
+          <col>STATE_CODE</col>
+          <col>MAINE</col>
+          <col>ME</col>
+        </row>
+        <row>
+          <col>STATE_CODE</col>
+          <col>MARYLAND</col>
+          <col>MD</col>
+        </row>
+        <row>
+          <col>STATE_CODE</col>
+          <col>MASSACHUSETTS</col>
+          <col>MA</col>
+        </row>
+        <row>
+          <col>STATE_CODE</col>
+          <col>MICHIGAN</col>
+          <col>MI</col>
+        </row>
+        <row>
+          <col>STATE_CODE</col>
+          <col>MINNESOTA</col>
+          <col>MN</col>
+        </row>
+        <row>
+          <col>STATE_CODE</col>
+          <col>MISSISSIPPI</col>
+          <col>MS</col>
+        </row>
+        <row>
+          <col>STATE_CODE</col>
+          <col>MISSOURI</col>
+          <col>MO</col>
+        </row>
+        <row>
+          <col>STATE_CODE</col>
+          <col>MONTANA</col>
+          <col>MT</col>
+        </row>
+        <row>
+          <col>STATE_CODE</col>
+          <col>NEBRASKA</col>
+          <col>NE</col>
+        </row>
+        <row>
+          <col>STATE_CODE</col>
+          <col>NEVADA</col>
+          <col>NV</col>
+        </row>
+        <row>
+          <col>STATE_CODE</col>
+          <col>NEW HAMPSHIRE</col>
+          <col>NH</col>
+        </row>
+        <row>
+          <col>STATE_CODE</col>
+          <col>NEW JERSEY</col>
+          <col>NJ</col>
+        </row>
+        <row>
+          <col>STATE_CODE</col>
+          <col>NEW MEXICO</col>
+          <col>NM</col>
+        </row>
+        <row>
+          <col>STATE_CODE</col>
+          <col>NEW YORK</col>
+          <col>NY</col>
+        </row>
+        <row>
+          <col>STATE_CODE</col>
+          <col>NOORD-HOLLAND</col>
+          <col>NOHO</col>
+        </row>
+        <row>
+          <col>STATE_CODE</col>
+          <col>NORTH CAROLINA</col>
+          <col>NC</col>
+        </row>
+        <row>
+          <col>STATE_CODE</col>
+          <col>NORTH DAKOTA</col>
+          <col>ND</col>
+        </row>
+        <row>
+          <col>STATE_CODE</col>
+          <col>NUEVO LEON</col>
+          <col>NO</col>
+        </row>
+        <row>
+          <col>STATE_CODE</col>
+          <col>OHIO</col>
+          <col>OH</col>
+        </row>
+        <row>
+          <col>STATE_CODE</col>
+          <col>OKLAHOMA</col>
+          <col>OK</col>
+        </row>
+        <row>
+          <col>STATE_CODE</col>
+          <col>OREGON</col>
+          <col>OR</col>
+        </row>
+        <row>
+          <col>STATE_CODE</col>
+          <col>PENNSYLVANIA</col>
+          <col>PA</col>
+        </row>
+        <row>
+          <col>STATE_CODE</col>
+          <col>PUERTO RICO</col>
+          <col>PR</col>
+        </row>
+        <row>
+          <col>STATE_CODE</col>
+          <col>QUERETARO DE ARTEAGA</col>
+          <col>QA</col>
+        </row>
+        <row>
+          <col>STATE_CODE</col>
+          <col>RHODE ISLAND</col>
+          <col>RI</col>
+        </row>
+        <row>
+          <col>STATE_CODE</col>
+          <col>SOUTH CAROLINA</col>
+          <col>SC</col>
+        </row>
+        <row>
+          <col>STATE_CODE</col>
+          <col>SOUTH DAKOTA</col>
+          <col>SD</col>
+        </row>
+        <row>
+          <col>STATE_CODE</col>
+          <col>TENNESSEE</col>
+          <col>TN</col>
+        </row>
+        <row>
+          <col>STATE_CODE</col>
+          <col>TEXAS</col>
+          <col>TX</col>
+        </row>
+        <row>
+          <col>STATE_CODE</col>
+          <col>UTAH</col>
+          <col>UT</col>
+        </row>
+        <row>
+          <col>STATE_CODE</col>
+          <col>VERMONT</col>
+          <col>VT</col>
+        </row>
+        <row>
+          <col>STATE_CODE</col>
+          <col>VIRGIN ISLANDS</col>
+          <col>VI</col>
+        </row>
+        <row>
+          <col>STATE_CODE</col>
+          <col>VIRGINIA</col>
+          <col>VA</col>
+        </row>
+        <row>
+          <col>STATE_CODE</col>
+          <col>WASHINGTON</col>
+          <col>WA</col>
+        </row>
+        <row>
+          <col>STATE_CODE</col>
+          <col>WEST VIRGINIA</col>
+          <col>WV</col>
+        </row>
+        <row>
+          <col>STATE_CODE</col>
+          <col>WISCONSIN</col>
+          <col>WI</col>
+        </row>
+        <row>
+          <col>STATE_CODE</col>
+          <col>WYOMING</col>
+          <col>WY</col>
+        </row>
+        <row>
+          <col>STATE_CODE</col>
+          <col>ZACATECAS</col>
+          <col>ZC</col>
+        </row>
+        <row>
+          <col>STATE_CODE</col>
+          <col>ILE-DE-FRANCE</col>
+          <col>ILFR</col>
+        </row>
+        <row>
+          <col>STATE_CODE</col>
+          <col>PERNAMBUCO</col>
+          <col>BR-PE</col>
+        </row>
+        <row>
+          <col>STATE_CODE</col>
+          <col>RIO DE JANEIRO</col>
+          <col>BR-RJ</col>
+        </row>
+        <row>
+          <col>STATE_CODE</col>
+          <col>RIO GRANDE DO NORTE</col>
+          <col>BR-RN</col>
+        </row>
+        <row>
+          <col>STATE_CODE</col>
+          <col>SAO PAULO</col>
+          <col>BRSAOPAU</col>
+        </row>
+        <row>
+          <col>STATE_CODE</col>
+          <col>SANTA CATARINA</col>
+          <col>BR-SC</col>
+        </row>
+        <row>
+          <col>STATE_CODE</col>
+          <col>GENEVE</col>
+          <col>CHGENEVA</col>
+        </row>
+        <row>
+          <col>STATE_CODE</col>
+          <col>ZUG</col>
+          <col>CH-ZG</col>
+        </row>
+        <row>
+          <col>STATE_CODE</col>
+          <col>ZURICH</col>
+          <col>CH-ZH</col>
+        </row>
+        <row>
+          <col>STATE_CODE</col>
+          <col>ANTOFAGASTA</col>
+          <col>CL-AN</col>
+        </row>
+        <row>
+          <col>STATE_CODE</col>
+          <col>COQUIMBO</col>
+          <col>CL-CO</col>
+        </row>
+        <row>
+          <col>STATE_CODE</col>
+          <col>REGION METROPOLITANA</col>
+          <col>CL-RM</col>
+        </row>
+        <row>
+          <col>STATE_CODE</col>
+          <col>TIANJIN</col>
+          <col>CN-12</col>
+        </row>
+        <row>
+          <col>STATE_CODE</col>
+          <col>SHANXI</col>
+          <col>CN-14</col>
+        </row>
+        <row>
+          <col>STATE_CODE</col>
+          <col>SHANGHAI</col>
+          <col>CN-31</col>
+        </row>
+        <row>
+          <col>STATE_CODE</col>
+          <col>JIANGSU</col>
+          <col>CN-32</col>
+        </row>
+        <row>
+          <col>STATE_CODE</col>
+          <col>ZHEJIANG</col>
+          <col>CN-33</col>
+        </row>
+        <row>
+          <col>STATE_CODE</col>
+          <col>ANHUI</col>
+          <col>CN-34</col>
+        </row>
+        <row>
+          <col>STATE_CODE</col>
+          <col>FUJIAN</col>
+          <col>CN-35</col>
+        </row>
+        <row>
+          <col>STATE_CODE</col>
+          <col>HUBEI</col>
+          <col>CN-42</col>
+        </row>
+        <row>
+          <col>STATE_CODE</col>
+          <col>HUNAN</col>
+          <col>CN-43</col>
+        </row>
+        <row>
+          <col>STATE_CODE</col>
+          <col>GUANGDONG</col>
+          <col>CN-44</col>
+        </row>
+        <row>
+          <col>STATE_CODE</col>
+          <col>GUANGXI</col>
+          <col>CN-45</col>
+        </row>
+        <row>
+          <col>STATE_CODE</col>
+          <col>CHONGQING</col>
+          <col>CN-50</col>
+        </row>
+        <row>
+          <col>STATE_CODE</col>
+          <col>SICHUAN</col>
+          <col>CN-51</col>
+        </row>
+        <row>
+          <col>STATE_CODE</col>
+          <col>GUIZHOU</col>
+          <col>CN-52</col>
+        </row>
+        <row>
+          <col>STATE_CODE</col>
+          <col>YUNNAN</col>
+          <col>CN-53</col>
+        </row>
+        <row>
+          <col>STATE_CODE</col>
+          <col>GANSU</col>
+          <col>CN-62</col>
+        </row>
+        <row>
+          <col>STATE_CODE</col>
+          <col>BEIJING</col>
+          <col>CNBEIJIN</col>
+        </row>
+        <row>
+          <col>STATE_CODE</col>
+          <col>MADRID</col>
+          <col>ES-M</col>
+        </row>
+        <row>
+          <col>STATE_CODE</col>
+          <col>NORD-PAS-DE-CALAIS</col>
+          <col>FR-O</col>
+        </row>
+        <row>
+          <col>STATE_CODE</col>
+          <col>ESSEX</col>
+          <col>GB-ESS</col>
+        </row>
+        <row>
+          <col>STATE_CODE</col>
+          <col>T'BILISI</col>
+          <col>GETBILIS</col>
+        </row>
+        <row>
+          <col>STATE_CODE</col>
+          <col>GUATEMALA</col>
+          <col>GTGUATEM</col>
+        </row>
+        <row>
+          <col>STATE_CODE</col>
+          <col>JAKARTA RAYA</col>
+          <col>ID-JK</col>
+        </row>
+        <row>
+          <col>STATE_CODE</col>
+          <col>SUMATERA UTARA</col>
+          <col>ID-SU</col>
+        </row>
+        <row>
+          <col>STATE_CODE</col>
+          <col>GUJARAT</col>
+          <col>IN-GJ</col>
+        </row>
+        <row>
+          <col>STATE_CODE</col>
+          <col>MILANO</col>
+          <col>IT-MI</col>
+        </row>
+        <row>
+          <col>STATE_CODE</col>
+          <col>REGGIO EMILIA</col>
+          <col>IT-RE</col>
+        </row>
+        <row>
+          <col>STATE_CODE</col>
+          <col>VICENZA</col>
+          <col>IT-VI</col>
+        </row>
+        <row>
+          <col>STATE_CODE</col>
+          <col>LUXEMBOURG</col>
+          <col>LULUXEMB</col>
+        </row>
+        <row>
+          <col>STATE_CODE</col>
+          <col>PORT LOUIS</col>
+          <col>MUPORTLO</col>
+        </row>
+        <row>
+          <col>STATE_CODE</col>
+          <col>CAMPECHE</col>
+          <col>MX-CAM</col>
+        </row>
+        <row>
+          <col>STATE_CODE</col>
+          <col>CHIHUAHUA</col>
+          <col>MX-CHH</col>
+        </row>
+        <row>
+          <col>STATE_CODE</col>
+          <col>DURANGO</col>
+          <col>MX-DUR</col>
+        </row>
+        <row>
+          <col>STATE_CODE</col>
+          <col>MEXICO</col>
+          <col>MX-EM</col>
+        </row>
+        <row>
+          <col>STATE_CODE</col>
+          <col>GUERRERO</col>
+          <col>MX-GRO</col>
+        </row>
+        <row>
+          <col>STATE_CODE</col>
+          <col>GUANAJUATO</col>
+          <col>MX-GUA</col>
+        </row>
+        <row>
+          <col>STATE_CODE</col>
+          <col>HIDALGO</col>
+          <col>MX-HID</col>
+        </row>
+        <row>
+          <col>STATE_CODE</col>
+          <col>JALISCO</col>
+          <col>MX-JAL</col>
+        </row>
+        <row>
+          <col>STATE_CODE</col>
+          <col>NAYARIT</col>
+          <col>MX-NAY</col>
+        </row>
+        <row>
+          <col>STATE_CODE</col>
+          <col>OAXACA</col>
+          <col>MX-OAX</col>
+        </row>
+        <row>
+          <col>STATE_CODE</col>
+          <col>PUEBLA</col>
+          <col>MX-PUE</col>
+        </row>
+        <row>
+          <col>STATE_CODE</col>
+          <col>QUINTANA ROO</col>
+          <col>MX-ROO</col>
+        </row>
+        <row>
+          <col>STATE_CODE</col>
+          <col>SINALOA</col>
+          <col>MX-SIN</col>
+        </row>
+        <row>
+          <col>STATE_CODE</col>
+          <col>SONORA</col>
+          <col>MX-SON</col>
+        </row>
+        <row>
+          <col>STATE_CODE</col>
+          <col>TABASCO</col>
+          <col>MX-TAB</col>
+        </row>
+        <row>
+          <col>STATE_CODE</col>
+          <col>TAMAULIPAS</col>
+          <col>MX-TAM</col>
+        </row>
+        <row>
+          <col>STATE_CODE</col>
+          <col>VERACRUZ</col>
+          <col>MX-VER</col>
+        </row>
+        <row>
+          <col>STATE_CODE</col>
+          <col>YUCATAN</col>
+          <col>MX-YUC</col>
+        </row>
+        <row>
+          <col>STATE_CODE</col>
+          <col>NO. MARIANA ISLANDS</col>
+          <col>NI</col>
+        </row>
+        <row>
+          <col>STATE_CODE</col>
+          <col>MANAGUA</col>
+          <col>NIMANAGU</col>
+        </row>
+        <row>
+          <col>STATE_CODE</col>
+          <col>LIMBURG</col>
+          <col>NL-LI</col>
+        </row>
+        <row>
+          <col>STATE_CODE</col>
+          <col>ZUID-HOLLAND</col>
+          <col>NL-ZH</col>
+        </row>
+        <row>
+          <col>STATE_CODE</col>
+          <col>NEW SOUTH WALES</col>
+          <col>NSW</col>
+        </row>
+        <row>
+          <col>STATE_CODE</col>
+          <col>ONTARIO</col>
+          <col>ON</col>
+        </row>
+        <row>
+          <col>STATE_CODE</col>
+          <col>ISLAMABAD</col>
+          <col>PKISLAMA</col>
+        </row>
+        <row>
+          <col>STATE_CODE</col>
+          <col>LENINGRAD</col>
+          <col>RU-LEN</col>
+        </row>
+        <row>
+          <col>STATE_CODE</col>
+          <col>MOSCOW</col>
+          <col>RUMOSCOW</col>
+        </row>
+        <row>
+          <col>STATE_CODE</col>
+          <col>NIZHNIY NOVGOROD</col>
+          <col>RU-NGR</col>
+        </row>
+        <row>
+          <col>STATE_CODE</col>
+          <col>NOVOSIBIRSK</col>
+          <col>RU-NVS</col>
+        </row>
+        <row>
+          <col>STATE_CODE</col>
+          <col>SVERDLOVSK</col>
+          <col>RU-SVE</col>
+        </row>
+        <row>
+          <col>STATE_CODE</col>
+          <col>VOLGOGRAD</col>
+          <col>RU-VGG</col>
+        </row>
+        <row>
+          <col>STATE_CODE</col>
+          <col>STOCKHOLM</col>
+          <col>SE-AB</col>
+        </row>
+        <row>
+          <col>STATE_CODE</col>
+          <col>SAN SALVADOR</col>
+          <col>SVSANSA</col>
+        </row>
+        <row>
+          <col>STATE_CODE</col>
+          <col>VIENNA</col>
+          <col>VE</col>
+        </row>
+        <row>
+          <col>STATE_CODE</col>
+          <col>BOLIVAR</col>
+          <col>VE-F</col>
+        </row>
+        <row>
+          <col>STATE_CODE</col>
+          <col>VICTORIA</col>
+          <col>VICT</col>
+        </row>
+        <row>
+          <col>STATE_CODE</col>
+          <col>GAUTENG</col>
+          <col>ZA-GT</col>
+        </row>
+        <row>
+          <col>STATE_CODE</col>
+          <col>NORTHERN CAPE</col>
+          <col>ZA-NC</col>
+        </row>
+        <row>
+          <col>STATE_CODE</col>
+          <col>KRUNG THEP</col>
+          <col>THBANGKO</col>
+        </row>
+        <row>
+          <col>STATE_CODE</col>
+          <col>DUBLIN</col>
+          <col>IEDUBLIN</col>
+        </row>
+        <row>
+          <col>STATE_CODE</col>
+          <col>HARYANA</col>
+          <col>IN-HR</col>
+        </row>
+        <row>
+          <col>STATE_CODE</col>
+          <col>NEW DELHI</col>
+          <col>INDELHI</col>
+        </row>
+        <row>
+          <col>STATE_CODE</col>
+          <col>GOIAS</col>
+          <col>BR-GO</col>
+        </row>
+        <row>
+          <col>STATE_CODE</col>
+          <col>KARNTEN</col>
+          <col>AT-2</col>
+        </row>
+        <row>
+          <col>STATE_CODE</col>
+          <col>MORDOVIA</col>
+          <col>RU-MO</col>
+        </row>
+        <row>
+          <col>STATE_CODE</col>
+          <col>PARANA</col>
+          <col>BR-PR</col>
+        </row>
+        <row>
+          <col>STATE_CODE</col>
+          <col>TULA</col>
+          <col>RU-TUL</col>
+        </row>
+        <row>
+          <col>STATE_CODE</col>
+          <col>GELDERLAND</col>
+          <col>NL-GE</col>
+        </row>
+        <row>
+          <col>STATE_CODE</col>
+          <col>KENT</col>
+          <col>GB-KEN</col>
+        </row>
+        <row>
+          <col>STATE_CODE</col>
+          <col>EAST JAVA</col>
+          <col>ID-JI</col>
+        </row>
+        <row>
+          <col>STATE_CODE</col>
+          <col>DISTRITO NACIONAL</col>
+          <col>DOSANTO</col>
+        </row>
+        <row>
+          <col>STATE_CODE</col>
+          <col>DISTRITO CAPITAL</col>
+          <col>COBOGOTA</col>
+        </row>
+        <row>
+          <col>STATE_CODE</col>
+          <col>GRAND CASABLANCA</col>
+          <col>MACASABL</col>
+        </row>
+        <row>
+          <col>STATE_CODE</col>
+          <col>CITY OF LONDON</col>
+          <col>GBLONDON</col>
+        </row>
+        <row>
+          <col>STATE_CODE</col>
+          <col>PANAMA</col>
+          <col>PAPANAMA</col>
+        </row>
+        <row>
+          <col>STATE_CODE</col>
+          <col>CALDAS</col>
+          <col>CO-CAL</col>
+        </row>
+        <row>
+          <col>STATE_CODE</col>
+          <col>CAMDEN</col>
+          <col>GB-CMD</col>
+        </row>
+        <row>
+          <col>STATE_CODE</col>
+          <col>CESAR</col>
+          <col>CO-CES</col>
+        </row>
+        <row>
+          <col>STATE_CODE</col>
+          <col>CORTES</col>
+          <col>HN-CR</col>
+        </row>
+        <row>
+          <col>STATE_CODE</col>
+          <col>CUNDINAMARCA</col>
+          <col>CO-CUN</col>
+        </row>
+        <row>
+          <col>STATE_CODE</col>
+          <col>MAGDALENA</col>
+          <col>CO-MAG</col>
+        </row>
+        <row>
+          <col>STATE_CODE</col>
+          <col>MARITIME</col>
+          <col>TG-M</col>
+        </row>
+        <row>
+          <col>STATE_CODE</col>
+          <col>META</col>
+          <col>CO-MET</col>
+        </row>
+        <row>
+          <col>STATE_CODE</col>
+          <col>OTAGO</col>
+          <col>NZ-OTA</col>
+        </row>
+        <row>
+          <col>STATE_CODE</col>
+          <col>QUINDIO</col>
+          <col>CO-QUI</col>
+        </row>
+        <row>
+          <col>STATE_CODE</col>
+          <col>RISARALDA</col>
+          <col>CO-RIS</col>
+        </row>
+        <row>
+          <col>STATE_CODE</col>
+          <col>SUCRE</col>
+          <col>CO-SUC</col>
+        </row>
+        <row>
+          <col>STATE_CODE</col>
+          <col>WESTERN</col>
+          <col>LK-1</col>
+        </row>
+        <row>
+          <col>STATE_CODE</col>
+          <col>VALLE DEL CAUCA</col>
+          <col>CO-VAC</col>
+        </row>
+        <row>
+          <col>STATE_CODE</col>
+          <col>AUCKLAND</col>
+          <col>NZAUCKLA</col>
+        </row>
+        <row>
+          <col>STATE_CODE</col>
+          <col>BASEL-COUNTRY</col>
+          <col>BL</col>
+        </row>
+        <row>
+          <col>STATE_CODE</col>
+          <col>HESSEN</col>
+          <col>DE-HE</col>
+        </row>
+        <row>
+          <col>STATE_CODE</col>
+          <col>SOLIHULL</col>
+          <col>GB-SOL</col>
+        </row>
+        <row>
+          <col>STATE_CODE</col>
+          <col>TAMIL NADU</col>
+          <col>IN-TN</col>
+        </row>
+        <row>
+          <col>STATE_CODE</col>
+          <col>TREVISO</col>
+          <col>IT-TV</col>
+        </row>
+        <row>
+          <col>STATE_CODE</col>
+          <col>WELLINGTON</col>
+          <col>NZWELLIN</col>
+        </row>
+        <row>
+          <col>STATE_CODE</col>
+          <col>QUEENSLAND</col>
+          <col>QNSL</col>
+        </row>
+        <row>
+          <col>STATE_CODE</col>
+          <col>SOUTH AUSTRALIA</col>
+          <col>SA</col>
+        </row>
+        <row>
+          <col>STATE_CODE</col>
+          <col>TASMANIA</col>
+          <col>TASM</col>
+        </row>
+        <row>
+          <col>STATE_CODE</col>
+          <col>WESTERN AUSTRALIA</col>
+          <col>WAUS</col>
+        </row>
+        <row>
+          <col>STATE_CODE</col>
+          <col>ALBERTA</col>
+          <col>AB</col>
+        </row>
+        <row>
+          <col>STATE_CODE</col>
+          <col>BANTEN</col>
+          <col>ID-BT</col>
+        </row>
+        <row>
+          <col>STATE_CODE</col>
+          <col>CORDOBA</col>
+          <col>AR-X</col>
+        </row>
+        <row>
+          <col>STATE_CODE</col>
+          <col>CUSCATLAN</col>
+          <col>SV-CU</col>
+        </row>
+        <row>
+          <col>STATE_CODE</col>
+          <col>DUBAI</col>
+          <col>AEDUBAI</col>
+        </row>
+        <row>
+          <col>STATE_CODE</col>
+          <col>KALIMANTAN TIMUR</col>
+          <col>ID-KI</col>
+        </row>
+        <row>
+          <col>STATE_CODE</col>
+          <col>LA GUAJIRA</col>
+          <col>CO-LAG</col>
+        </row>
+        <row>
+          <col>STATE_CODE</col>
+          <col>QUEBEC</col>
+          <col>QC</col>
+        </row>
+        <row>
+          <col>STATE_CODE</col>
+          <col>SANTANDER</col>
+          <col>SNTNDER</col>
+        </row>
+        <row>
+          <col>STATE_CODE</col>
+          <col>SCHLESWIG-HOLSTEIN</col>
+          <col>DE-SH</col>
+        </row>
+        <row>
+          <col>STATE_CODE</col>
+          <col>SHANDONG</col>
+          <col>CN-37</col>
+        </row>
+        <row>
+          <col>STATE_CODE</col>
+          <col>TOKYO</col>
+          <col>JP-13</col>
+        </row>
+		<row>
+			<col>STATE_CODE</col>
+			<col>RIO GRANDE DO SUL</col>
+			<col>BR-RS</col>
+		</row>
+		<row>
+			<col>STATE_CODE</col>
+			<col>BRISTOL</col>
+			<col>GB-BST</col>
+		</row>
+		<row>
+			<col>STATE_CODE</col>
+			<col>ATLANTICO</col>
+			<col>CO-ATL</col>
+		</row>
+		<row>
+			<col>STATE_CODE</col>
+			<col>BREMEN</col>
+			<col>DE-HB</col>
+		</row>
+		<row>
+			<col>STATE_CODE</col>
+			<col>BRITISH COLUMBIA</col>
+			<col>BC</col>
+		</row>
+		<row>
+			<col>STATE_CODE</col>
+			<col>BRUSSELS (BRUXELLES)</col>
+			<col>BE-BRU</col>
+		</row>
+		<row>
+			<col>STATE_CODE</col>
+			<col>BUENOS AIRES</col>
+			<col>AR-B</col>
+		</row>
+		<row>
+			<col>STATE_CODE</col>
+			<col>CEARA</col>
+			<col>BR-CE</col>
+		</row>
+		<row>
+			<col>STATE_CODE</col>
+			<col>CREEK</col>
+			<col>BZ-SC</col>
+		</row>
+		<row>
+			<col>STATE_CODE</col>
+			<col>DEVONSHIRE</col>
+			<col>GB-DEV</col>
+		</row>
+		<row>
+			<col>STATE_CODE</col>
+			<col>HA NOI</col>
+			<col>VN-HN</col>
+		</row>
+		<row>
+			<col>STATE_CODE</col>
+			<col>HAMILTON</col>
+			<col>BMHAMILT</col>
+		</row>
+		<row>
+			<col>STATE_CODE</col>
+			<col>HEBEI</col>
+			<col>HE</col>
+		</row>
+		<row>
+			<col>STATE_CODE</col>
+			<col>HENAN</col>
+			<col>CN-HA</col>
+		</row>
+		<row>
+			<col>STATE_CODE</col>
+			<col>HO CHI MINH</col>
+			<col>VN-SG</col>
+		</row>
+		<row>
+			<col>STATE_CODE</col>
+			<col>JIANGXI</col>
+			<col>JX</col>
+		</row>
+		<row>
+			<col>STATE_CODE</col>
+			<col>LABUAN</col>
+			<col>MY-15</col>
+		</row>
+		<row>
+			<col>STATE_CODE</col>
+			<col>LISBOA</col>
+			<col>PTLISBOA</col>
+		</row>
+		<row>
+			<col>STATE_CODE</col>
+			<col>MARANHAO</col>
+			<col>BR-MA</col>
+		</row>
+		<row>
+			<col>STATE_CODE</col>
+			<col>MASQAT</col>
+			<col>OMMUSCAT</col>
+		</row>
+		<row>
+			<col>STATE_CODE</col>
+			<col>MATO GROSSO</col>
+			<col>BR-MT</col>
+		</row>
+		<row>
+			<col>STATE_CODE</col>
+			<col>MATO GROSSO DO SUL</col>
+			<col>BR-MS</col>
+		</row>
+		<row>
+			<col>STATE_CODE</col>
+			<col>MINAS GERAIS</col>
+			<col>BR-MG</col>
+		</row>
+		<row>
+			<col>STATE_CODE</col>
+			<col>NEI MONGOL (INNER MONGOLIA)</col>
+			<col>CN-NM</col>
+		</row>
+		<row>
+			<col>STATE_CODE</col>
+			<col>NOVA SCOTIA</col>
+			<col>NS</col>
+		</row>
+		<row>
+			<col>STATE_CODE</col>
+			<col>PATHUM THANI</col>
+			<col>TH-13</col>
+		</row>
+		<row>
+			<col>STATE_CODE</col>
+			<col>PETERBOROUGH</col>
+			<col>GB-PTE</col>
+		</row>
+		<row>
+			<col>STATE_CODE</col>
+			<col>PIAUI</col>
+			<col>BR-PI</col>
+		</row>
+		<row>
+			<col>STATE_CODE</col>
+			<col>PLAINES WILHEMS</col>
+			<col>MU-PW</col>
+		</row>
+		<row>
+			<col>STATE_CODE</col>
+			<col>RATCHABURI</col>
+			<col>TH-70</col>
+		</row>
+		<row>
+			<col>STATE_CODE</col>
+			<col>SAN VICENTE</col>
+			<col>SV-SV</col>
+		</row>
+		<row>
+			<col>STATE_CODE</col>
+			<col>SELANGOR</col>
+			<col>MY-10</col>
+		</row>
+		<row>
+			<col>STATE_CODE</col>
+			<col>SHAANXI</col>
+			<col>CN-SN</col>
+		</row>
+		<row>
+			<col>STATE_CODE</col>
+			<col>ST. PETER PORT</col>
+			<col>GGSPETER</col>
+		</row>
+		<row>
+			<col>STATE_CODE</col>
+			<col>STAFFORDSHIRE</col>
+			<col>GB-STS</col>
+		</row>
+		<row>
+			<col>STATE_CODE</col>
+			<col>TORINO</col>
+			<col>IT-TO</col>
+		</row>
+		<row>
+			<col>STATE_CODE</col>
+			<col>TOWER HAMLETS</col>
+			<col>GB-TWH</col>
+		</row>
+		<row>
+			<col>STATE_CODE</col>
+			<col>WEST BENGAL</col>
+			<col>IN-WB</col>
+		</row>
+		<row>
+			<col>STATE_CODE</col>
+			<col>WESTMINSTER</col>
+			<col>GB-WSM</col>
+		</row>
+		<row>
+			<col>STATE_CODE</col>
+			<col>XINJIANG</col>
+			<col>CN-XJ</col>
+		</row>		
+        <row>
+          <col>FITCHINCL1</col>
+          <col>01</col>
+          <col>Corporate Finance</col>
+        </row>
+        <row>
+          <col>FITCHINCL1</col>
+          <col>02</col>
+          <col>Structured Credit</col>
+        </row>
+        <row>
+          <col>FITCHINCL1</col>
+          <col>03</col>
+          <col>Structured Finance</col>
+        </row>
+        <row>
+          <col>FITCHINCL1</col>
+          <col>04</col>
+          <col>U.S. Public Finance</col>
+        </row>
+        <row>
+          <col>FITCHINCL1</col>
+          <col>05</col>
+          <col>Sovereigns</col>
+        </row>
+        <row>
+          <col>FITCHINCL1</col>
+          <col>06</col>
+          <col>International Public Finance</col>
+        </row>
+        <row>
+          <col>FITCHINCL1</col>
+          <col>07</col>
+          <col>Global Infrastructure and Project Finance</col>
+        </row>
+        <row>
+          <col>FITCHINCL1</col>
+          <col>08</col>
+          <col>Fund and Asset Manager Ratings</col>
+        </row>
+        <row>
+          <col>FITCHINCL1</col>
+          <col>09</col>
+          <col>Financial Services</col>
+        </row>
+        <row>
+          <col>FITCHINCL1</col>
+          <col>12</col>
+          <col>Global Credit Derivatives</col>
+        </row>
+        <row>
+          <col>FITCHINCL1</col>
+          <col>14</col>
+          <col>Subprime Market</col>
+        </row>
+        <row>
+          <col>FITCHINCL2</col>
+          <col>0101</col>
+          <col>Financial Institutions</col>
+        </row>
+        <row>
+          <col>FITCHINCL2</col>
+          <col>0102</col>
+          <col>Global Power</col>
+        </row>
+        <row>
+          <col>FITCHINCL2</col>
+          <col>0103</col>
+          <col>Corporates</col>
+        </row>
+        <row>
+          <col>FITCHINCL2</col>
+          <col>0104</col>
+          <col>Bank Loans</col>
+        </row>
+        <row>
+          <col>FITCHINCL2</col>
+          <col>0105</col>
+          <col>Commercial Paper</col>
+        </row>
+        <row>
+          <col>FITCHINCL2</col>
+          <col>0106</col>
+          <col>Leveraged Finance</col>
+        </row>
+        <row>
+          <col>FITCHINCL2</col>
+          <col>0107</col>
+          <col>Leveraged Finance</col>
+        </row>
+        <row>
+          <col>FITCHINCL2</col>
+          <col>0108</col>
+          <col>Hybrids &amp; Capital Securities</col>
+        </row>
+        <row>
+          <col>FITCHINCL2</col>
+          <col>0201</col>
+          <col>Bank Loans</col>
+        </row>
+        <row>
+          <col>FITCHINCL2</col>
+          <col>0202</col>
+          <col>CDOs</col>
+        </row>
+        <row>
+          <col>FITCHINCL2</col>
+          <col>0203</col>
+          <col>Managed Funds</col>
+        </row>
+        <row>
+          <col>FITCHINCL2</col>
+          <col>0301</col>
+          <col>Asset-Backed Securities</col>
+        </row>
+        <row>
+          <col>FITCHINCL2</col>
+          <col>0302</col>
+          <col>Commercial Mortgage</col>
+        </row>
+        <row>
+          <col>FITCHINCL2</col>
+          <col>0303</col>
+          <col>Residential Mortgage</col>
+        </row>
+        <row>
+          <col>FITCHINCL2</col>
+          <col>0304</col>
+          <col>Emerging Markets</col>
+        </row>
+        <row>
+          <col>FITCHINCL2</col>
+          <col>0305</col>
+          <col>European Structured Finance</col>
+        </row>
+        <row>
+          <col>FITCHINCL2</col>
+          <col>0306</col>
+          <col>Operational Risk Group</col>
+        </row>
+        <row>
+          <col>FITCHINCL2</col>
+          <col>0401</col>
+          <col>Tax-Supported</col>
+        </row>
+        <row>
+          <col>FITCHINCL2</col>
+          <col>0402</col>
+          <col>Revenue Supported</col>
+        </row>
+        <row>
+          <col>FITCHINCL2</col>
+          <col>0403</col>
+          <col>Healthcare</col>
+        </row>
+        <row>
+          <col>FITCHINCL2</col>
+          <col>0404</col>
+          <col>Municipal Structured Finance</col>
+        </row>
+        <row>
+          <col>FITCHINCL2</col>
+          <col>0405</col>
+          <col>Financial Guaranties</col>
+        </row>
+        <row>
+          <col>FITCHINCL2</col>
+          <col>0406</col>
+          <col>Native American Finance</col>
+        </row>
+        <row>
+          <col>FITCHINCL2</col>
+          <col>0407</col>
+          <col>Education and Nonprofit Institutions</col>
+        </row>
+        <row>
+          <col>FITCHINCL2</col>
+          <col>0408</col>
+          <col>Tax-Exempt Housing</col>
+        </row>
+        <row>
+          <col>FITCHINCL2</col>
+          <col>0409</col>
+          <col>Tobacco Settlements - USPF</col>
+        </row>
+        <row>
+          <col>FITCHINCL2</col>
+          <col>0410</col>
+          <col>Student Loans Non-Profit - USPF</col>
+        </row>
+        <row>
+          <col>FITCHINCL2</col>
+          <col>0501</col>
+          <col>Supranationals</col>
+        </row>
+        <row>
+          <col>FITCHINCL2</col>
+          <col>0502</col>
+          <col>Common Country Ceiling</col>
+        </row>
+        <row>
+          <col>FITCHINCL2</col>
+          <col>0601</col>
+          <col>Local and Regional Governments</col>
+        </row>
+        <row>
+          <col>FITCHINCL2</col>
+          <col>0602</col>
+          <col>Public Entities</col>
+        </row>
+        <row>
+          <col>FITCHINCL2</col>
+          <col>0701</col>
+          <col>Power Projects</col>
+        </row>
+        <row>
+          <col>FITCHINCL2</col>
+          <col>0702</col>
+          <col>Industrial &amp; Energy Projects</col>
+        </row>
+        <row>
+          <col>FITCHINCL2</col>
+          <col>0703</col>
+          <col>Public Infrastructure Projects; Sports &amp; Other Facilities</col>
+        </row>
+        <row>
+          <col>FITCHINCL2</col>
+          <col>0704</col>
+          <col>Infrastructure (PPP/PFI)</col>
+        </row>
+        <row>
+          <col>FITCHINCL2</col>
+          <col>0705</col>
+          <col>Energy</col>
+        </row>
+        <row>
+          <col>FITCHINCL2</col>
+          <col>0706</col>
+          <col>Industrials</col>
+        </row>
+        <row>
+          <col>FITCHINCL2</col>
+          <col>0707</col>
+          <col>Other Utilities &amp; Public Infrastructure</col>
+        </row>
+        <row>
+          <col>FITCHINCL2</col>
+          <col>0708</col>
+          <col>Social Infrastructure</col>
+        </row>
+        <row>
+          <col>FITCHINCL2</col>
+          <col>0709</col>
+          <col>Sports/Entertainment</col>
+        </row>
+        <row>
+          <col>FITCHINCL2</col>
+          <col>0710</col>
+          <col>Transportation</col>
+        </row>
+        <row>
+          <col>FITCHINCL2</col>
+          <col>0711</col>
+          <col>CDOs/CLOs</col>
+        </row>
+        <row>
+          <col>FITCHINCL2</col>
+          <col>0712</col>
+          <col>PPP/PFI</col>
+        </row>
+        <row>
+          <col>FITCHINCL2</col>
+          <col>0713</col>
+          <col>Project Finance</col>
+        </row>
+        <row>
+          <col>FITCHINCL2</col>
+          <col>0714</col>
+          <col>Whole Business Securitizations</col>
+        </row>
+        <row>
+          <col>FITCHINCL2</col>
+          <col>0801</col>
+          <col>Funds</col>
+        </row>
+        <row>
+          <col>FITCHINCL2</col>
+          <col>0802</col>
+          <col>Asset Managers</col>
+        </row>
+        <row>
+          <col>FITCHINCL2</col>
+          <col>0803</col>
+          <col>Closed-End Funds</col>
+        </row>
+        <row>
+          <col>FITCHINCL2</col>
+          <col>0307</col>
+          <col>Structured Credit</col>
+        </row>
+        <row>
+          <col>FITCHINCL3</col>
+          <col>030163</col>
+          <col>Insurance Premium</col>
+        </row>
+        <row>
+          <col>FITCHINCL3</col>
+          <col>030164</col>
+          <col>Solar</col>
+        </row>
+        <row>
+          <col>FITCHINCL3</col>
+          <col>030165</col>
+          <col>PACE</col>
+        </row>
+        <row>
+          <col>FITCHINCL3</col>
+          <col>030166</col>
+          <col>Container Leasing</col>
+        </row>
+        <row>
+          <col>FITCHINCL3</col>
+          <col>030213</col>
+          <col>Colocation Data Centres</col>
+        </row>
+        <row>
+          <col>FITCHINCL3</col>
+          <col>010101</col>
+          <col>Banks</col>
+        </row>
+        <row>
+          <col>FITCHINCL3</col>
+          <col>010102</col>
+          <col>Non-Bank Financial Institutions</col>
+        </row>
+        <row>
+          <col>FITCHINCL3</col>
+          <col>010103</col>
+          <col>Insurance</col>
+        </row>
+        <row>
+          <col>FITCHINCL3</col>
+          <col>010104</col>
+          <col>Svgs Banks, S&amp;Ls, Bldg Societies</col>
+        </row>
+        <row>
+          <col>FITCHINCL3</col>
+          <col>010105</col>
+          <col>Derivative Product Companies</col>
+        </row>
+        <row>
+          <col>FITCHINCL3</col>
+          <col>010106</col>
+          <col>Real Estate Investment Trusts</col>
+        </row>
+        <row>
+          <col>FITCHINCL3</col>
+          <col>010107</col>
+          <col>Covered Bonds</col>
+        </row>
+        <row>
+          <col>FITCHINCL3</col>
+          <col>010108</col>
+          <col>Multi-Issuers</col>
+        </row>
+        <row>
+          <col>FITCHINCL3</col>
+          <col>010201</col>
+          <col>Electric-Corporate</col>
+        </row>
+        <row>
+          <col>FITCHINCL3</col>
+          <col>010202</col>
+          <col>Public Power</col>
+        </row>
+        <row>
+          <col>FITCHINCL3</col>
+          <col>010203</col>
+          <col>Natural Gas &amp; Propane</col>
+        </row>
+        <row>
+          <col>FITCHINCL3</col>
+          <col>010204</col>
+          <col>Energy Project Finance</col>
+        </row>
+        <row>
+          <col>FITCHINCL3</col>
+          <col>010205</col>
+          <col>IOU Commercial Paper</col>
+        </row>
+        <row>
+          <col>FITCHINCL3</col>
+          <col>010206</col>
+          <col>Public Power Commercial Paper</col>
+        </row>
+        <row>
+          <col>FITCHINCL3</col>
+          <col>010207</col>
+          <col>Project Finance</col>
+        </row>
+        <row>
+          <col>FITCHINCL3</col>
+          <col>010208</col>
+          <col>Industrial Revenue &amp; Pollution Control</col>
+        </row>
+        <row>
+          <col>FITCHINCL3</col>
+          <col>010209</col>
+          <col>Water/Waste Water Utility</col>
+        </row>
+        <row>
+          <col>FITCHINCL3</col>
+          <col>010210</col>
+          <col>Global Power Projects</col>
+        </row>
+        <row>
+          <col>FITCHINCL3</col>
+          <col>010211</col>
+          <col>Investor-Owned Water</col>
+        </row>
+        <row>
+          <col>FITCHINCL3</col>
+          <col>010212</col>
+          <col>Power Markets &amp; Generation</col>
+        </row>
+        <row>
+          <col>FITCHINCL3</col>
+          <col>010301</col>
+          <col>Food, Beverage &amp; Tobacco</col>
+        </row>
+        <row>
+          <col>FITCHINCL3</col>
+          <col>010302</col>
+          <col>Consumer</col>
+        </row>
+        <row>
+          <col>FITCHINCL3</col>
+          <col>010303</col>
+          <col>Retailing</col>
+        </row>
+        <row>
+          <col>FITCHINCL3</col>
+          <col>010304</col>
+          <col>Telecommunications</col>
+        </row>
+        <row>
+          <col>FITCHINCL3</col>
+          <col>010305</col>
+          <col>Technology</col>
+        </row>
+        <row>
+          <col>FITCHINCL3</col>
+          <col>010306</col>
+          <col>Aerospace &amp; Defense</col>
+        </row>
+        <row>
+          <col>FITCHINCL3</col>
+          <col>010307</col>
+          <col>Media &amp; Entertainment</col>
+        </row>
+        <row>
+          <col>FITCHINCL3</col>
+          <col>010308</col>
+          <col>Transportation</col>
+        </row>
+        <row>
+          <col>FITCHINCL3</col>
+          <col>010309</col>
+          <col>Building Materials &amp; Construction</col>
+        </row>
+        <row>
+          <col>FITCHINCL3</col>
+          <col>010310</col>
+          <col>Energy (Oil &amp; Gas)</col>
+        </row>
+        <row>
+          <col>FITCHINCL3</col>
+          <col>010311</col>
+          <col>Chemicals</col>
+        </row>
+        <row>
+          <col>FITCHINCL3</col>
+          <col>010312</col>
+          <col>Natural Resources</col>
+        </row>
+        <row>
+          <col>FITCHINCL3</col>
+          <col>010313</col>
+          <col>Auto &amp; Related</col>
+        </row>
+        <row>
+          <col>FITCHINCL3</col>
+          <col>010314</col>
+          <col>Capital Goods</col>
+        </row>
+        <row>
+          <col>FITCHINCL3</col>
+          <col>010315</col>
+          <col>Diversified Manufacturing</col>
+        </row>
+        <row>
+          <col>FITCHINCL3</col>
+          <col>010316</col>
+          <col>Diversified Services</col>
+        </row>
+        <row>
+          <col>FITCHINCL3</col>
+          <col>010317</col>
+          <col>Health Care</col>
+        </row>
+        <row>
+          <col>FITCHINCL3</col>
+          <col>010318</col>
+          <col>Property/Real Estate</col>
+        </row>
+        <row>
+          <col>FITCHINCL3</col>
+          <col>010319</col>
+          <col>Water/Wastewater Utility</col>
+        </row>
+        <row>
+          <col>FITCHINCL3</col>
+          <col>010320</col>
+          <col>Lodging</col>
+        </row>
+        <row>
+          <col>FITCHINCL3</col>
+          <col>010321</col>
+          <col>Gaming, Lodging &amp; Leisure</col>
+        </row>
+        <row>
+          <col>FITCHINCL3</col>
+          <col>010322</col>
+          <col>Utilities - Non US</col>
+        </row>
+        <row>
+          <col>FITCHINCL3</col>
+          <col>010323</col>
+          <col>Environmental Services</col>
+        </row>
+        <row>
+          <col>FITCHINCL3</col>
+          <col>010324</col>
+          <col>Homebuilding</col>
+        </row>
+        <row>
+          <col>FITCHINCL3</col>
+          <col>010340</col>
+          <col>Food Services</col>
+        </row>
+        <row>
+          <col>FITCHINCL3</col>
+          <col>010341</col>
+          <col>Post Utility</col>
+        </row>
+        <row>
+          <col>FITCHINCL3</col>
+          <col>010342</col>
+          <col>Food Retail</col>
+        </row>
+        <row>
+          <col>FITCHINCL3</col>
+          <col>010343</col>
+          <col>General Retail</col>
+        </row>
+        <row>
+          <col>FITCHINCL3</col>
+          <col>010344</col>
+          <col>Food</col>
+        </row>
+        <row>
+          <col>FITCHINCL3</col>
+          <col>010345</col>
+          <col>Beverage</col>
+        </row>
+        <row>
+          <col>FITCHINCL3</col>
+          <col>010346</col>
+          <col>Tobacco</col>
+        </row>
+        <row>
+          <col>FITCHINCL3</col>
+          <col>010347</col>
+          <col>Building Materials</col>
+        </row>
+        <row>
+          <col>FITCHINCL3</col>
+          <col>010348</col>
+          <col>Construction</col>
+        </row>
+        <row>
+          <col>FITCHINCL3</col>
+          <col>010349</col>
+          <col>Paper &amp; Forest Products</col>
+        </row>
+        <row>
+          <col>FITCHINCL3</col>
+          <col>010350</col>
+          <col>Metals &amp; Mining</col>
+        </row>
+        <row>
+          <col>FITCHINCL3</col>
+          <col>010351</col>
+          <col>Other Natural Resources</col>
+        </row>
+        <row>
+          <col>FITCHINCL3</col>
+          <col>010352</col>
+          <col>Operating Transportation</col>
+        </row>
+        <row>
+          <col>FITCHINCL3</col>
+          <col>010353</col>
+          <col>Transportation Infrastructure</col>
+        </row>
+        <row>
+          <col>FITCHINCL3</col>
+          <col>010354</col>
+          <col>Acute &amp; Long-Term Care</col>
+        </row>
+        <row>
+          <col>FITCHINCL3</col>
+          <col>010355</col>
+          <col>Medical Devices</col>
+        </row>
+        <row>
+          <col>FITCHINCL3</col>
+          <col>010356</col>
+          <col>Pharmaceuticals</col>
+        </row>
+        <row>
+          <col>FITCHINCL3</col>
+          <col>010357</col>
+          <col>Distribution/Postal Services</col>
+        </row>
+        <row>
+          <col>FITCHINCL3</col>
+          <col>020201</col>
+          <col>Structured Finance CDOs</col>
+        </row>
+        <row>
+          <col>FITCHINCL3</col>
+          <col>020202</col>
+          <col>Market Value CDOs</col>
+        </row>
+        <row>
+          <col>FITCHINCL3</col>
+          <col>020203</col>
+          <col>HY Bond CDOs</col>
+        </row>
+        <row>
+          <col>FITCHINCL3</col>
+          <col>020204</col>
+          <col>HY Loan CDOs</col>
+        </row>
+        <row>
+          <col>FITCHINCL3</col>
+          <col>020205</col>
+          <col>IG Corporate CDOs</col>
+        </row>
+        <row>
+          <col>FITCHINCL3</col>
+          <col>020206</col>
+          <col>SME CDOs</col>
+        </row>
+        <row>
+          <col>FITCHINCL3</col>
+          <col>020207</col>
+          <col>Trust Preferred CDOs</col>
+        </row>
+        <row>
+          <col>FITCHINCL3</col>
+          <col>020208</col>
+          <col>Other CDOs</col>
+        </row>
+        <row>
+          <col>FITCHINCL3</col>
+          <col>020209</col>
+          <col>Structured Credit Products</col>
+        </row>
+        <row>
+          <col>FITCHINCL3</col>
+          <col>020210</col>
+          <col>Multi-Issuer of Covered Bonds</col>
+        </row>
+        <row>
+          <col>FITCHINCL3</col>
+          <col>020301</col>
+          <col>Bond Fund Ratings</col>
+        </row>
+        <row>
+          <col>FITCHINCL3</col>
+          <col>020302</col>
+          <col>Local Government Investment Pools</col>
+        </row>
+        <row>
+          <col>FITCHINCL3</col>
+          <col>020303</col>
+          <col>Money Market Funds</col>
+        </row>
+        <row>
+          <col>FITCHINCL3</col>
+          <col>020304</col>
+          <col>Closed End Funds</col>
+        </row>
+        <row>
+          <col>FITCHINCL3</col>
+          <col>020305</col>
+          <col>Mutual Fund Fee Receivable Securitizations</col>
+        </row>
+        <row>
+          <col>FITCHINCL3</col>
+          <col>020306</col>
+          <col>Other Managed Funds</col>
+        </row>
+        <row>
+          <col>FITCHINCL3</col>
+          <col>030101</col>
+          <col>Commercial</col>
+        </row>
+        <row>
+          <col>FITCHINCL3</col>
+          <col>030102</col>
+          <col>Consumer</col>
+        </row>
+        <row>
+          <col>FITCHINCL3</col>
+          <col>030103</col>
+          <col>Student Loans For Profit</col>
+        </row>
+        <row>
+          <col>FITCHINCL3</col>
+          <col>030104</col>
+          <col>Asset Backed Commercial Paper</col>
+        </row>
+        <row>
+          <col>FITCHINCL3</col>
+          <col>030105</col>
+          <col>Other Asset Types</col>
+        </row>
+        <row>
+          <col>FITCHINCL3</col>
+          <col>030106</col>
+          <col>Home Equity Loans</col>
+        </row>
+        <row>
+          <col>FITCHINCL3</col>
+          <col>030107</col>
+          <col>Credit Card Receivables</col>
+        </row>
+        <row>
+          <col>FITCHINCL3</col>
+          <col>030108</col>
+          <col>Unsecured Consumer Loans</col>
+        </row>
+        <row>
+          <col>FITCHINCL3</col>
+          <col>030109</col>
+          <col>Auto Loans</col>
+        </row>
+        <row>
+          <col>FITCHINCL3</col>
+          <col>030110</col>
+          <col>Aircraft Finance</col>
+        </row>
+        <row>
+          <col>FITCHINCL3</col>
+          <col>030111</col>
+          <col>Auto Leases</col>
+        </row>
+        <row>
+          <col>FITCHINCL3</col>
+          <col>030112</col>
+          <col>Insurance Linked Securities</col>
+        </row>
+        <row>
+          <col>FITCHINCL3</col>
+          <col>030113</col>
+          <col>Dealer Floor Plan</col>
+        </row>
+        <row>
+          <col>FITCHINCL3</col>
+          <col>030114</col>
+          <col>Equipment Leasing/Loans</col>
+        </row>
+        <row>
+          <col>FITCHINCL3</col>
+          <col>030115</col>
+          <col>Student Loans Non-Profit</col>
+        </row>
+        <row>
+          <col>FITCHINCL3</col>
+          <col>030116</col>
+          <col>Franchise Loans</col>
+        </row>
+        <row>
+          <col>FITCHINCL3</col>
+          <col>030117</col>
+          <col>Healthcare Receivables</col>
+        </row>
+        <row>
+          <col>FITCHINCL3</col>
+          <col>030118</col>
+          <col>RV/Marine/Recreational Vehicle Loans</col>
+        </row>
+        <row>
+          <col>FITCHINCL3</col>
+          <col>030119</col>
+          <col>Rental Car</col>
+        </row>
+        <row>
+          <col>FITCHINCL3</col>
+          <col>030120</col>
+          <col>Utility Tariff Bonds</col>
+        </row>
+        <row>
+          <col>FITCHINCL3</col>
+          <col>030121</col>
+          <col>Small Business Loans</col>
+        </row>
+        <row>
+          <col>FITCHINCL3</col>
+          <col>030122</col>
+          <col>Sports/Stadium Financing</col>
+        </row>
+        <row>
+          <col>FITCHINCL3</col>
+          <col>030123</col>
+          <col>Timeshare Receivables</col>
+        </row>
+        <row>
+          <col>FITCHINCL3</col>
+          <col>030124</col>
+          <col>Future Flow Receivables</col>
+        </row>
+        <row>
+          <col>FITCHINCL3</col>
+          <col>030125</col>
+          <col>Provincial Debt</col>
+        </row>
+        <row>
+          <col>FITCHINCL3</col>
+          <col>030126</col>
+          <col>Social Housing</col>
+        </row>
+        <row>
+          <col>FITCHINCL3</col>
+          <col>030127</col>
+          <col>Marine Loans</col>
+        </row>
+        <row>
+          <col>FITCHINCL3</col>
+          <col>030128</col>
+          <col>Truck Loans</col>
+        </row>
+        <row>
+          <col>FITCHINCL3</col>
+          <col>030129</col>
+          <col>Insurance Premium Receivables</col>
+        </row>
+        <row>
+          <col>FITCHINCL3</col>
+          <col>030130</col>
+          <col>Life Settlements</col>
+        </row>
+        <row>
+          <col>FITCHINCL3</col>
+          <col>030131</col>
+          <col>Operating Company Securitization</col>
+        </row>
+        <row>
+          <col>FITCHINCL3</col>
+          <col>030132</col>
+          <col>Structured Debt/Repackaged Securities</col>
+        </row>
+        <row>
+          <col>FITCHINCL3</col>
+          <col>030133</col>
+          <col>Structured Settlements</col>
+        </row>
+        <row>
+          <col>FITCHINCL3</col>
+          <col>030134</col>
+          <col>12B-1 Fees/Annuities</col>
+        </row>
+        <row>
+          <col>FITCHINCL3</col>
+          <col>030135</col>
+          <col>Tobacco Settlements</col>
+        </row>
+        <row>
+          <col>FITCHINCL3</col>
+          <col>030136</col>
+          <col>Trade Receivables</col>
+        </row>
+        <row>
+          <col>FITCHINCL3</col>
+          <col>030137</col>
+          <col>Variable Annuity Fees</col>
+        </row>
+        <row>
+          <col>FITCHINCL3</col>
+          <col>030138</col>
+          <col>ABS Servicers</col>
+        </row>
+        <row>
+          <col>FITCHINCL3</col>
+          <col>030139</col>
+          <col>Repackaged Securities</col>
+        </row>
+        <row>
+          <col>FITCHINCL3</col>
+          <col>030140</col>
+          <col>ABS Franchise Loan Servicers</col>
+        </row>
+        <row>
+          <col>FITCHINCL3</col>
+          <col>030141</col>
+          <col>Inventory</col>
+        </row>
+        <row>
+          <col>FITCHINCL3</col>
+          <col>030142</col>
+          <col>SME ABS</col>
+        </row>
+        <row>
+          <col>FITCHINCL3</col>
+          <col>030143</col>
+          <col>Transportation</col>
+        </row>
+        <row>
+          <col>FITCHINCL3</col>
+          <col>030144</col>
+          <col>Esoteric</col>
+        </row>
+        <row>
+          <col>FITCHINCL3</col>
+          <col>030145</col>
+          <col>Hospital</col>
+        </row>
+        <row>
+          <col>FITCHINCL3</col>
+          <col>030146</col>
+          <col>Utilities</col>
+        </row>
+        <row>
+          <col>FITCHINCL3</col>
+          <col>030147</col>
+          <col>Corporate Securitization</col>
+        </row>
+        <row>
+          <col>FITCHINCL3</col>
+          <col>030148</col>
+          <col>Government</col>
+        </row>
+        <row>
+          <col>FITCHINCL3</col>
+          <col>030150</col>
+          <col>Future Flow Receivables</col>
+        </row>
+        <row>
+          <col>FITCHINCL3</col>
+          <col>030151</col>
+          <col>Rail</col>
+        </row>
+        <row>
+          <col>FITCHINCL3</col>
+          <col>030152</col>
+          <col>Social Housing</col>
+        </row>
+        <row>
+          <col>FITCHINCL3</col>
+          <col>030153</col>
+          <col>Construction Bridge-Loans</col>
+        </row>
+        <row>
+          <col>FITCHINCL3</col>
+          <col>030154</col>
+          <col>Non-Conforming Auto Loans (Non-US)</col>
+        </row>
+        <row>
+          <col>FITCHINCL3</col>
+          <col>030155</col>
+          <col>Single Loan Sell Down</col>
+        </row>
+        <row>
+          <col>FITCHINCL3</col>
+          <col>030156</col>
+          <col>Non-Performing Assets</col>
+        </row>
+        <row>
+          <col>FITCHINCL3</col>
+          <col>030157</col>
+          <col>Trade Finance Loans</col>
+        </row>
+        <row>
+          <col>FITCHINCL3</col>
+          <col>030158</col>
+          <col>Corporate Bonds</col>
+        </row>
+        <row>
+          <col>FITCHINCL3</col>
+          <col>030159</col>
+          <col>Sports/Stadium Financing</col>
+        </row>
+        <row>
+          <col>FITCHINCL3</col>
+          <col>030160</col>
+          <col>Synthetic CDO</col>
+        </row>
+        <row>
+          <col>FITCHINCL3</col>
+          <col>030161</col>
+          <col>Rolling Stock</col>
+        </row>
+        <row>
+          <col>FITCHINCL3</col>
+          <col>030162</col>
+          <col>Pension Backed Home Loans</col>
+        </row>
+        <row>
+          <col>FITCHINCL3</col>
+          <col>030201</col>
+          <col>Borrower Type</col>
+        </row>
+        <row>
+          <col>FITCHINCL3</col>
+          <col>030202</col>
+          <col>Originator Type</col>
+        </row>
+        <row>
+          <col>FITCHINCL3</col>
+          <col>030203</col>
+          <col>Nonperforming</col>
+        </row>
+        <row>
+          <col>FITCHINCL3</col>
+          <col>030204</col>
+          <col>Credit Tenant Lease-backed</col>
+        </row>
+        <row>
+          <col>FITCHINCL3</col>
+          <col>030206</col>
+          <col>CMBS Seller/Servicers</col>
+        </row>
+        <row>
+          <col>FITCHINCL3</col>
+          <col>030207</col>
+          <col>Other</col>
+        </row>
+        <row>
+          <col>FITCHINCL3</col>
+          <col>030208</col>
+          <col>Tax Exempt</col>
+        </row>
+        <row>
+          <col>FITCHINCL3</col>
+          <col>030209</col>
+          <col>Multiborrower</col>
+        </row>
+        <row>
+          <col>FITCHINCL3</col>
+          <col>030210</col>
+          <col>Single Borrower</col>
+        </row>
+        <row>
+          <col>FITCHINCL3</col>
+          <col>030211</col>
+          <col>Real Estate Investment Trusts</col>
+        </row>
+        <row>
+          <col>FITCHINCL3</col>
+          <col>030212</col>
+          <col>Large Loans</col>
+        </row>
+        <row>
+          <col>FITCHINCL3</col>
+          <col>030213</col>
+          <col>Credit Linked</col>
+        </row>
+        <row>
+          <col>FITCHINCL3</col>
+          <col>030214</col>
+          <col>Restructured</col>
+        </row>
+        <row>
+          <col>FITCHINCL3</col>
+          <col>030215</col>
+          <col>Small Balance</col>
+        </row>
+        <row>
+          <col>FITCHINCL3</col>
+          <col>030216</col>
+          <col>CREL CDO</col>
+        </row>
+        <row>
+          <col>FITCHINCL3</col>
+          <col>030301</col>
+          <col>Residential Single Family 1st Liens</col>
+        </row>
+        <row>
+          <col>FITCHINCL3</col>
+          <col>030302</col>
+          <col>Sub and Nonperforming Residential Mortgage Loans</col>
+        </row>
+        <row>
+          <col>FITCHINCL3</col>
+          <col>030303</col>
+          <col>Subprime</col>
+        </row>
+        <row>
+          <col>FITCHINCL3</col>
+          <col>030304</col>
+          <col>Manufactured Housing</col>
+        </row>
+        <row>
+          <col>FITCHINCL3</col>
+          <col>030305</col>
+          <col>Tax Liens</col>
+        </row>
+        <row>
+          <col>FITCHINCL3</col>
+          <col>030306</col>
+          <col>State Agencies</col>
+        </row>
+        <row>
+          <col>FITCHINCL3</col>
+          <col>030307</col>
+          <col>Local Agencies</col>
+        </row>
+        <row>
+          <col>FITCHINCL3</col>
+          <col>030308</col>
+          <col>Commercial</col>
+        </row>
+        <row>
+          <col>FITCHINCL3</col>
+          <col>030309</col>
+          <col>Residential</col>
+        </row>
+        <row>
+          <col>FITCHINCL3</col>
+          <col>030310</col>
+          <col>Asset-Backed</col>
+        </row>
+        <row>
+          <col>FITCHINCL3</col>
+          <col>030311</col>
+          <col>RMBS Servicers</col>
+        </row>
+        <row>
+          <col>FITCHINCL3</col>
+          <col>030312</col>
+          <col>RMBS Originators</col>
+        </row>
+        <row>
+          <col>FITCHINCL3</col>
+          <col>030313</col>
+          <col>Tax-Exempt</col>
+        </row>
+        <row>
+          <col>FITCHINCL3</col>
+          <col>030314</col>
+          <col>Government</col>
+        </row>
+        <row>
+          <col>FITCHINCL3</col>
+          <col>030315</col>
+          <col>Prime RMBS</col>
+        </row>
+        <row>
+          <col>FITCHINCL3</col>
+          <col>030316</col>
+          <col>AltA RMBS</col>
+        </row>
+        <row>
+          <col>FITCHINCL3</col>
+          <col>030317</col>
+          <col>Specialty</col>
+        </row>
+        <row>
+          <col>FITCHINCL3</col>
+          <col>030319</col>
+          <col>High Loan to Value (HLTV/125s)</col>
+        </row>
+        <row>
+          <col>FITCHINCL3</col>
+          <col>030320</col>
+          <col>Manufactured Housing</col>
+        </row>
+        <row>
+          <col>FITCHINCL3</col>
+          <col>030321</col>
+          <col>RMBS NIMs</col>
+        </row>
+        <row>
+          <col>FITCHINCL3</col>
+          <col>030322</col>
+          <col>Scratch &amp; Dent</col>
+        </row>
+        <row>
+          <col>FITCHINCL3</col>
+          <col>030323</col>
+          <col>Government - RMBS</col>
+        </row>
+        <row>
+          <col>FITCHINCL3</col>
+          <col>030324</col>
+          <col>Tax-Exempt Housing - RMBS</col>
+        </row>
+        <row>
+          <col>FITCHINCL3</col>
+          <col>030325</col>
+          <col>Other Mortgage &amp; Real Estate-Related Residential Assets</col>
+        </row>
+        <row>
+          <col>FITCHINCL3</col>
+          <col>030326</col>
+          <col>RMBS Seller/Servicers</col>
+        </row>
+        <row>
+          <col>FITCHINCL3</col>
+          <col>030327</col>
+          <col>RMBS Originators/Issuers</col>
+        </row>
+        <row>
+          <col>FITCHINCL3</col>
+          <col>030328</col>
+          <col>Prime/AltA RMBS</col>
+        </row>
+        <row>
+          <col>FITCHINCL3</col>
+          <col>030329</col>
+          <col>Subprime/Home Equity RMBS</col>
+        </row>
+        <row>
+          <col>FITCHINCL3</col>
+          <col>030330</col>
+          <col>Subprime / HLTV RMBS</col>
+        </row>
+        <row>
+          <col>FITCHINCL3</col>
+          <col>030340</col>
+          <col>Buy to Let</col>
+        </row>
+        <row>
+          <col>FITCHINCL3</col>
+          <col>030341</col>
+          <col>Reverse Mortgage</col>
+        </row>
+        <row>
+          <col>FITCHINCL3</col>
+          <col>030342</col>
+          <col>Non-Conforming (Non-US)</col>
+        </row>
+        <row>
+          <col>FITCHINCL3</col>
+          <col>030343</col>
+          <col>RMBS Near Prime</col>
+        </row>
+        <row>
+          <col>FITCHINCL3</col>
+          <col>030401</col>
+          <col>Future Flow</col>
+        </row>
+        <row>
+          <col>FITCHINCL3</col>
+          <col>030402</col>
+          <col>Existing Asset</col>
+        </row>
+        <row>
+          <col>FITCHINCL3</col>
+          <col>030403</col>
+          <col>Political Risk Protected</col>
+        </row>
+        <row>
+          <col>FITCHINCL3</col>
+          <col>030501</col>
+          <col>Servicers</col>
+        </row>
+        <row>
+          <col>FITCHINCL3</col>
+          <col>030502</col>
+          <col>Whole Business</col>
+        </row>
+        <row>
+          <col>FITCHINCL3</col>
+          <col>030503</col>
+          <col>Structured Investment Vehicles</col>
+        </row>
+        <row>
+          <col>FITCHINCL3</col>
+          <col>030504</col>
+          <col>Balance Sheet</col>
+        </row>
+        <row>
+          <col>FITCHINCL3</col>
+          <col>030505</col>
+          <col>Managed/High Yield Arbitrage</col>
+        </row>
+        <row>
+          <col>FITCHINCL3</col>
+          <col>030506</col>
+          <col>Fully Supported</col>
+        </row>
+        <row>
+          <col>FITCHINCL3</col>
+          <col>030507</col>
+          <col>Partially Supported</col>
+        </row>
+        <row>
+          <col>FITCHINCL3</col>
+          <col>030508</col>
+          <col>Pubs</col>
+        </row>
+        <row>
+          <col>FITCHINCL3</col>
+          <col>030509</col>
+          <col>Reverse Mortgages</col>
+        </row>
+        <row>
+          <col>FITCHINCL3</col>
+          <col>030510</col>
+          <col>Securities-Backed</col>
+        </row>
+        <row>
+          <col>FITCHINCL3</col>
+          <col>030511</col>
+          <col>Shared Lease</col>
+        </row>
+        <row>
+          <col>FITCHINCL3</col>
+          <col>030512</col>
+          <col>Trade Payment Rights</col>
+        </row>
+        <row>
+          <col>FITCHINCL3</col>
+          <col>030513</col>
+          <col>UK Prime</col>
+        </row>
+        <row>
+          <col>FITCHINCL3</col>
+          <col>030514</col>
+          <col>Worker Remittances</col>
+        </row>
+        <row>
+          <col>FITCHINCL3</col>
+          <col>030515</col>
+          <col>Synthetics/Derivatives</col>
+        </row>
+        <row>
+          <col>FITCHINCL3</col>
+          <col>030516</col>
+          <col>Managed/Arbitrage/Cashflow</col>
+        </row>
+        <row>
+          <col>FITCHINCL3</col>
+          <col>030517</col>
+          <col>Nonconforming/Subprime</col>
+        </row>
+        <row>
+          <col>FITCHINCL3</col>
+          <col>030518</col>
+          <col>Non UK Prime</col>
+        </row>
+        <row>
+          <col>FITCHINCL3</col>
+          <col>030519</col>
+          <col>Cashflow Arbitrage</col>
+        </row>
+        <row>
+          <col>FITCHINCL3</col>
+          <col>030520</col>
+          <col>Credit Derivatives</col>
+        </row>
+        <row>
+          <col>FITCHINCL3</col>
+          <col>030521</col>
+          <col>Alternative Investments</col>
+        </row>
+        <row>
+          <col>FITCHINCL3</col>
+          <col>030601</col>
+          <col>Trust Manager</col>
+        </row>
+        <row>
+          <col>FITCHINCL3</col>
+          <col>030602</col>
+          <col>Structured Finance Trustee</col>
+        </row>
+        <row>
+          <col>FITCHINCL3</col>
+          <col>040101</col>
+          <col>State Obligations</col>
+        </row>
+        <row>
+          <col>FITCHINCL3</col>
+          <col>040102</col>
+          <col>County Obligations</col>
+        </row>
+        <row>
+          <col>FITCHINCL3</col>
+          <col>040103</col>
+          <col>City Obligations</col>
+        </row>
+        <row>
+          <col>FITCHINCL3</col>
+          <col>040104</col>
+          <col>School District Obligations</col>
+        </row>
+        <row>
+          <col>FITCHINCL3</col>
+          <col>040105</col>
+          <col>Special District Obligations</col>
+        </row>
+        <row>
+          <col>FITCHINCL3</col>
+          <col>040201</col>
+          <col>Water &amp; Sewer</col>
+        </row>
+        <row>
+          <col>FITCHINCL3</col>
+          <col>040202</col>
+          <col>Toll Road/Bridge/Tunnel</col>
+        </row>
+        <row>
+          <col>FITCHINCL3</col>
+          <col>040203</col>
+          <col>Stadium/Convention Center</col>
+        </row>
+        <row>
+          <col>FITCHINCL3</col>
+          <col>040204</col>
+          <col>Airport</col>
+        </row>
+        <row>
+          <col>FITCHINCL3</col>
+          <col>040205</col>
+          <col>State Revolving Fund</col>
+        </row>
+        <row>
+          <col>FITCHINCL3</col>
+          <col>040206</col>
+          <col>Parking Facilities</col>
+        </row>
+        <row>
+          <col>FITCHINCL3</col>
+          <col>040207</col>
+          <col>Ports</col>
+        </row>
+        <row>
+          <col>FITCHINCL3</col>
+          <col>040208</col>
+          <col>Solid Waste/Resource Recovery</col>
+        </row>
+        <row>
+          <col>FITCHINCL3</col>
+          <col>040209</col>
+          <col>Public Power</col>
+        </row>
+        <row>
+          <col>FITCHINCL3</col>
+          <col>040301</col>
+          <col>Hospital</col>
+        </row>
+        <row>
+          <col>FITCHINCL3</col>
+          <col>040302</col>
+          <col>Life Plan Communities</col>
+        </row>
+        <row>
+          <col>FITCHINCL3</col>
+          <col>040303</col>
+          <col>Nursing Home</col>
+        </row>
+        <row>
+          <col>FITCHINCL3</col>
+          <col>040304</col>
+          <col>Physician Group</col>
+        </row>
+        <row>
+          <col>FITCHINCL3</col>
+          <col>040305</col>
+          <col>Assisted Living</col>
+        </row>
+        <row>
+          <col>FITCHINCL3</col>
+          <col>040401</col>
+          <col>Health Care Receivables</col>
+        </row>
+        <row>
+          <col>FITCHINCL3</col>
+          <col>040402</col>
+          <col>Municipal Secondary Market Derivative</col>
+        </row>
+        <row>
+          <col>FITCHINCL3</col>
+          <col>040501</col>
+          <col>Bond Insurer</col>
+        </row>
+        <row>
+          <col>FITCHINCL3</col>
+          <col>040502</col>
+          <col>School Loan Programs</col>
+        </row>
+        <row>
+          <col>FITCHINCL3</col>
+          <col>040701</col>
+          <col>Higher Education</col>
+        </row>
+        <row>
+          <col>FITCHINCL3</col>
+          <col>040702</col>
+          <col>Nonprofit Institutions</col>
+        </row>
+        <row>
+          <col>FITCHINCL3</col>
+          <col>040703</col>
+          <col>Other Education</col>
+        </row>
+        <row>
+          <col>FITCHINCL3</col>
+          <col>040801</col>
+          <col>State Housing Agencies</col>
+        </row>
+        <row>
+          <col>FITCHINCL3</col>
+          <col>040802</col>
+          <col>Local Housing Agencies</col>
+        </row>
+        <row>
+          <col>FITCHINCL3</col>
+          <col>070301</col>
+          <col>Sports Facilities</col>
+        </row>
+        <row>
+          <col>FITCHINCL3</col>
+          <col>070302</col>
+          <col>Water, Wastewater &amp; Solid Waste Projects</col>
+        </row>
+        <row>
+          <col>FITCHINCL3</col>
+          <col>070303</col>
+          <col>Transportation Projects</col>
+        </row>
+        <row>
+          <col>FITCHINCL3</col>
+          <col>070304</col>
+          <col>Other Facilities</col>
+        </row>
+        <row>
+          <col>FITCHINCL3</col>
+          <col>070501</col>
+          <col>Power</col>
+        </row>
+        <row>
+          <col>FITCHINCL3</col>
+          <col>070502</col>
+          <col>Oil &amp; Gas</col>
+        </row>
+        <row>
+          <col>FITCHINCL3</col>
+          <col>070503</col>
+          <col>Other Energy</col>
+        </row>
+        <row>
+          <col>FITCHINCL3</col>
+          <col>070601</col>
+          <col>Mining</col>
+        </row>
+        <row>
+          <col>FITCHINCL3</col>
+          <col>070602</col>
+          <col>Other Industrials</col>
+        </row>
+        <row>
+          <col>FITCHINCL3</col>
+          <col>070701</col>
+          <col>Solid Waste</col>
+        </row>
+        <row>
+          <col>FITCHINCL3</col>
+          <col>070702</col>
+          <col>Telecom</col>
+        </row>
+        <row>
+          <col>FITCHINCL3</col>
+          <col>070703</col>
+          <col>Water/Wastewater</col>
+        </row>
+        <row>
+          <col>FITCHINCL3</col>
+          <col>070801</col>
+          <col>Education</col>
+        </row>
+        <row>
+          <col>FITCHINCL3</col>
+          <col>070802</col>
+          <col>Healthcare</col>
+        </row>
+        <row>
+          <col>FITCHINCL3</col>
+          <col>070803</col>
+          <col>Housing</col>
+        </row>
+        <row>
+          <col>FITCHINCL3</col>
+          <col>070804</col>
+          <col>Prisons</col>
+        </row>
+        <row>
+          <col>FITCHINCL3</col>
+          <col>070805</col>
+          <col>Other Social Infrastructure</col>
+        </row>
+        <row>
+          <col>FITCHINCL3</col>
+          <col>070901</col>
+          <col>Sports</col>
+        </row>
+        <row>
+          <col>FITCHINCL3</col>
+          <col>070902</col>
+          <col>Other Facilities/Venues</col>
+        </row>
+        <row>
+          <col>FITCHINCL3</col>
+          <col>071001</col>
+          <col>Airports</col>
+        </row>
+        <row>
+          <col>FITCHINCL3</col>
+          <col>071002</col>
+          <col>Parking</col>
+        </row>
+        <row>
+          <col>FITCHINCL3</col>
+          <col>071003</col>
+          <col>Seaports</col>
+        </row>
+        <row>
+          <col>FITCHINCL3</col>
+          <col>071004</col>
+          <col>Toll Roads</col>
+        </row>
+        <row>
+          <col>FITCHINCL3</col>
+          <col>071005</col>
+          <col>Transit/Rail</col>
+        </row>
+        <row>
+          <col>FITCHINCL3</col>
+          <col>071006</col>
+          <col>Other Transportation</col>
+        </row>
+        <row>
+          <col>FITCHINCL3</col>
+          <col>080101</col>
+          <col>Money Market Funds</col>
+        </row>
+        <row>
+          <col>FITCHINCL3</col>
+          <col>080102</col>
+          <col>Local Government Investment Pools (LGIPs)</col>
+        </row>
+        <row>
+          <col>FITCHINCL3</col>
+          <col>080103</col>
+          <col>Closed End Funds</col>
+        </row>
+        <row>
+          <col>FITCHINCL3</col>
+          <col>080104</col>
+          <col>Fixed Income Funds</col>
+        </row>
+        <row>
+          <col>FITCHINCL3</col>
+          <col>080105</col>
+          <col>Tradeable Credit Baskets</col>
+        </row>
+        <row>
+          <col>FITCHINCL3</col>
+          <col>080106</col>
+          <col>Enhanced Cash Funds</col>
+        </row>
+        <row>
+          <col>FITCHINCL3</col>
+          <col>080107</col>
+          <col>Constant Net Asset Value (CNAV)</col>
+        </row>
+        <row>
+          <col>FITCHINCL3</col>
+          <col>080108</col>
+          <col>Latin America Funds</col>
+        </row>
+        <row>
+          <col>FITCHINCL3</col>
+          <col>080109</col>
+          <col>Equity Funds</col>
+        </row>
+        <row>
+          <col>FITCHINCL3</col>
+          <col>080110</col>
+          <col>Real Estate Funds</col>
+        </row>
+        <row>
+          <col>FITCHINCL3</col>
+          <col>080111</col>
+          <col>Balanced Funds</col>
+        </row>
+        <row>
+          <col>FITCHINCL3</col>
+          <col>080112</col>
+          <col>Alternative and Other Funds</col>
+        </row>
+        <row>
+          <col>FITCHINCL3</col>
+          <col>080113</col>
+          <col>Pension Funds</col>
+        </row>
+        <row>
+          <col>FITCHINCL3</col>
+          <col>080201</col>
+          <col>Traditional Asset Managers</col>
+        </row>
+        <row>
+          <col>FITCHINCL3</col>
+          <col>080202</col>
+          <col>Alternative Asset Manager Ratings</col>
+        </row>
+        <row>
+          <col>FITCHINCL3</col>
+          <col>080203</col>
+          <col>Credit Asset Managers</col>
+        </row>
+        <row>
+          <col>FITCHINCL3</col>
+          <col>080204</col>
+          <col>Investment Processes</col>
+        </row>
+        <row>
+          <col>FITCHINCL3</col>
+          <col>080205</col>
+          <col>Custody Ratings</col>
+        </row>
+        <row>
+          <col>FITCHINCL3</col>
+          <col>080206</col>
+          <col>Trustee Rating</col>
+        </row>
+        <row>
+          <col>FITCHINCL3</col>
+          <col>080207</col>
+          <col>Real Estate Asset Managers</col>
+        </row>
+        <row>
+          <col>FITCHINCL3</col>
+          <col>080208</col>
+          <col>Fund of Hedge Fund Managers</col>
+        </row>
+        <row>
+          <col>FITCHINCL3</col>
+          <col>030217</col>
+          <col>US Agency</col>
+        </row>
+        <row>
+          <col>FITCHINCL3</col>
+          <col>030218</col>
+          <col>Single Family Rental</col>
+        </row>
+        <row>
+          <col>FITCHINCL3</col>
+          <col>030344</col>
+          <col>Credit Risk Transfer</col>
+        </row>
+        <row>
+          <col>FITCHINCL3</col>
+          <col>030345</col>
+          <col>Nonperforming</col>
+        </row>
+        <row>
+          <col>FITCHINCL3</col>
+          <col>030346</col>
+          <col>Re-Remic</col>
+        </row>
+        <row>
+          <col>FITCHINCL3</col>
+          <col>030347</col>
+          <col>Servicer Advance Receivable Trust (SART)</col>
+        </row>
+        <row>
+          <col>FITCHINCL3</col>
+          <col>030701</col>
+          <col>Structured Finance CDOs</col>
+        </row>
+        <row>
+          <col>FITCHINCL3</col>
+          <col>030702</col>
+          <col>Market Value CDOs</col>
+        </row>
+        <row>
+          <col>FITCHINCL3</col>
+          <col>030703</col>
+          <col>CBOs</col>
+        </row>
+        <row>
+          <col>FITCHINCL3</col>
+          <col>030704</col>
+          <col>CLOs</col>
+        </row>
+        <row>
+          <col>FITCHINCL3</col>
+          <col>030705</col>
+          <col>IG Corporate CDOs</col>
+        </row>
+        <row>
+          <col>FITCHINCL3</col>
+          <col>030706</col>
+          <col>SME CDOs</col>
+        </row>
+        <row>
+          <col>FITCHINCL3</col>
+          <col>030707</col>
+          <col>Trust Preferred CDOs</col>
+        </row>
+        <row>
+          <col>FITCHINCL3</col>
+          <col>030708</col>
+          <col>Other CDOs</col>
+        </row>
+        <row>
+          <col>FITCHINCL3</col>
+          <col>030709</col>
+          <col>Structured Credit Products</col>
+        </row>
+        <row>
+          <col>FITCHINCL3</col>
+          <col>030710</col>
+          <col>Multi-Issuer of Covered Bonds</col>
+        </row>
+        <row>
+          <col>FITCHINCL3</col>
+          <col>030711</col>
+          <col>Credit Linked Notes</col>
+        </row>
+        <row>
+          <col>FITCHINCL3</col>
+          <col>030712</col>
+          <col>Nonperforming</col>
+        </row>
+        <row>
+          <col>FITCHINCL3</col>
+          <col>080114</col>
+          <col>Fund Finance</col>
+        </row>
+        <row>
+          <col>FITCHINCL4</col>
+          <col>08011401</col>
+          <col>Subscription Finance</col>
+        </row>
+        <row>
+          <col>FITCHINCL4</col>
+          <col>08011402</col>
+          <col>NAV Finance</col>
+        </row>
+        <row>
+          <col>FITCHINCL4</col>
+          <col>01010115</col>
+          <col>Credit Union</col>
+        </row>        
+        <row>
+          <col>FITCHINCL4</col>
+          <col>03015005</col>
+          <col>FF - Utilities</col>
+        </row>
+        <row>
+          <col>FITCHINCL4</col>
+          <col>03015006</col>
+          <col>FF - Airline Tickets</col>
+        </row>
+        <row>
+          <col>FITCHINCL4</col>
+          <col>03015007</col>
+          <col>FF - Loyalty Program</col>
+        </row>
+        <row>
+          <col>FITCHINCL4</col>
+          <col>03015009</col>
+          <col>FF - Tax Backed</col>
+        </row>
+        <row>
+          <col>FITCHINCL4</col>
+          <col>03015008</col>
+          <col>FF - Oil &amp; Gas</col>
+        </row>
+        <row>
+          <col>FITCHINCL4</col>
+          <col>03071101</col>
+          <col>CLN - Data Centres</col>
+        </row>
+        <row>
+          <col>FITCHINCL4</col>
+          <col>03071102</col>
+          <col>CLN - Credit Tenant Leases</col>
+        </row>
+		<row>
+          <col>FITCHINCL4</col>
+          <col>03071103</col>
+          <col>CLN - Government Backed</col>
+        </row>
+        <row>
+          <col>FITCHINCL4</col>
+          <col>01010101</col>
+          <col>Corporate Credit Union</col>
+        </row>
+        <row>
+          <col>FITCHINCL4</col>
+          <col>01010102</col>
+          <col>Bank Financing Vehicles/Special Purpose Entities</col>
+        </row>
+        <row>
+          <col>FITCHINCL4</col>
+          <col>01010103</col>
+          <col>Bank Holding Companies</col>
+        </row>
+        <row>
+          <col>FITCHINCL4</col>
+          <col>01010104</col>
+          <col>Development Banks</col>
+        </row>
+        <row>
+          <col>FITCHINCL4</col>
+          <col>01010105</col>
+          <col>Islamic Banks</col>
+        </row>
+        <row>
+          <col>FITCHINCL4</col>
+          <col>01010106</col>
+          <col>Private banks</col>
+        </row>
+        <row>
+          <col>FITCHINCL4</col>
+          <col>01010107</col>
+          <col>Retail &amp; Consumer Banks</col>
+        </row>
+        <row>
+          <col>FITCHINCL4</col>
+          <col>01010108</col>
+          <col>Trade Finance Banks</col>
+        </row>
+        <row>
+          <col>FITCHINCL4</col>
+          <col>01010109</col>
+          <col>Trading &amp; Investment Banks</col>
+        </row>
+        <row>
+          <col>FITCHINCL4</col>
+          <col>01010110</col>
+          <col>Trust &amp; Processing Banks</col>
+        </row>
+        <row>
+          <col>FITCHINCL4</col>
+          <col>01010111</col>
+          <col>Universal Commercial Banks</col>
+        </row>
+        <row>
+          <col>FITCHINCL4</col>
+          <col>01010112</col>
+          <col>Wholesale Commercial Banks</col>
+        </row>
+        <row>
+          <col>FITCHINCL4</col>
+          <col>01010113</col>
+          <col>Other Banks</col>
+        </row>
+        <row>
+          <col>FITCHINCL4</col>
+          <col>01010201</col>
+          <col>Credit Card Companies</col>
+        </row>
+        <row>
+          <col>FITCHINCL4</col>
+          <col>01010202</col>
+          <col>Mortgage Companies</col>
+        </row>
+        <row>
+          <col>FITCHINCL4</col>
+          <col>01010203</col>
+          <col>Broker/Dealers</col>
+        </row>
+        <row>
+          <col>FITCHINCL4</col>
+          <col>01010204</col>
+          <col>Derivative Product Companies</col>
+        </row>
+        <row>
+          <col>FITCHINCL4</col>
+          <col>01010205</col>
+          <col>Diversified Finance Companies</col>
+        </row>
+        <row>
+          <col>FITCHINCL4</col>
+          <col>01010206</col>
+          <col>Consumer Finance Companies</col>
+        </row>
+        <row>
+          <col>FITCHINCL4</col>
+          <col>01010207</col>
+          <col>Commercial Finance Companies</col>
+        </row>
+        <row>
+          <col>FITCHINCL4</col>
+          <col>01010208</col>
+          <col>Leasing Companies</col>
+        </row>
+        <row>
+          <col>FITCHINCL4</col>
+          <col>01010209</col>
+          <col>Asset Management Companies</col>
+        </row>
+        <row>
+          <col>FITCHINCL4</col>
+          <col>01010210</col>
+          <col>Real Estate Investment Trusts</col>
+        </row>
+        <row>
+          <col>FITCHINCL4</col>
+          <col>01010211</col>
+          <col>Business Development Companies</col>
+        </row>
+        <row>
+          <col>FITCHINCL4</col>
+          <col>01010212</col>
+          <col>Exchange, Clearing and Settlement Companies</col>
+        </row>
+        <row>
+          <col>FITCHINCL4</col>
+          <col>01010213</col>
+          <col>Finance &amp; Leasing Companies</col>
+        </row>
+        <row>
+          <col>FITCHINCL4</col>
+          <col>01010214</col>
+          <col>Government Sponsored Enterprises (GSEs)</col>
+        </row>
+        <row>
+          <col>FITCHINCL4</col>
+          <col>01010215</col>
+          <col>Investment Managers</col>
+        </row>
+        <row>
+          <col>FITCHINCL4</col>
+          <col>01010216</col>
+          <col>Islamic Finance Companies</col>
+        </row>
+        <row>
+          <col>FITCHINCL4</col>
+          <col>01010217</col>
+          <col>Non-bank FI Financing Vehicles/Special Purpose Entities</col>
+        </row>
+        <row>
+          <col>FITCHINCL4</col>
+          <col>01010218</col>
+          <col>Non-bank Holding Companies</col>
+        </row>
+        <row>
+          <col>FITCHINCL4</col>
+          <col>01010219</col>
+          <col>Securities Firms</col>
+        </row>
+        <row>
+          <col>FITCHINCL4</col>
+          <col>01010220</col>
+          <col>Other Non-bank Financial Institutions</col>
+        </row>
+        <row>
+          <col>FITCHINCL4</col>
+          <col>01010301</col>
+          <col>Financial Guarantors</col>
+        </row>
+        <row>
+          <col>FITCHINCL4</col>
+          <col>01010302</col>
+          <col>Diversified Holding Companies</col>
+        </row>
+        <row>
+          <col>FITCHINCL4</col>
+          <col>01010303</col>
+          <col>Life Insurers</col>
+        </row>
+        <row>
+          <col>FITCHINCL4</col>
+          <col>01010304</col>
+          <col>Health Insurers</col>
+        </row>
+        <row>
+          <col>FITCHINCL4</col>
+          <col>01010305</col>
+          <col>Mortgage Insurers</col>
+        </row>
+        <row>
+          <col>FITCHINCL4</col>
+          <col>01010306</col>
+          <col>Composite Insurers</col>
+        </row>
+        <row>
+          <col>FITCHINCL4</col>
+          <col>01010307</col>
+          <col>National Title Insurers</col>
+        </row>
+        <row>
+          <col>FITCHINCL4</col>
+          <col>01010308</col>
+          <col>Non-Life Insurers</col>
+        </row>
+        <row>
+          <col>FITCHINCL4</col>
+          <col>01010309</col>
+          <col>Reinsurers</col>
+        </row>
+        <row>
+          <col>FITCHINCL4</col>
+          <col>01010310</col>
+          <col>Title Insurers</col>
+        </row>
+        <row>
+          <col>FITCHINCL4</col>
+          <col>01010311</col>
+          <col>Title Reinsurers</col>
+        </row>
+        <row>
+          <col>FITCHINCL4</col>
+          <col>01010312</col>
+          <col>Trade Credit Insurers</col>
+        </row>
+        <row>
+          <col>FITCHINCL4</col>
+          <col>01010313</col>
+          <col>Insurance Brokers</col>
+        </row>
+        <row>
+          <col>FITCHINCL4</col>
+          <col>01010314</col>
+          <col>Captive Insurers</col>
+        </row>
+        <row>
+          <col>FITCHINCL4</col>
+          <col>01010315</col>
+          <col>Insurance-Linked Securities</col>
+        </row>
+        <row>
+          <col>FITCHINCL4</col>
+          <col>01010701</col>
+          <col>Multi Issuer</col>
+        </row>
+        <row>
+          <col>FITCHINCL4</col>
+          <col>01030101</col>
+          <col>Food</col>
+        </row>
+        <row>
+          <col>FITCHINCL4</col>
+          <col>01030102</col>
+          <col>Beverage</col>
+        </row>
+        <row>
+          <col>FITCHINCL4</col>
+          <col>01030103</col>
+          <col>Tobacco</col>
+        </row>
+        <row>
+          <col>FITCHINCL4</col>
+          <col>01030301</col>
+          <col>Food Retailing</col>
+        </row>
+        <row>
+          <col>FITCHINCL4</col>
+          <col>01030302</col>
+          <col>General Retailing</col>
+        </row>
+        <row>
+          <col>FITCHINCL4</col>
+          <col>01030801</col>
+          <col>Infrastructure</col>
+        </row>
+        <row>
+          <col>FITCHINCL4</col>
+          <col>01030802</col>
+          <col>Operating</col>
+        </row>
+        <row>
+          <col>FITCHINCL4</col>
+          <col>01030901</col>
+          <col>Building Materials</col>
+        </row>
+        <row>
+          <col>FITCHINCL4</col>
+          <col>01030902</col>
+          <col>Construction</col>
+        </row>
+        <row>
+          <col>FITCHINCL4</col>
+          <col>01031201</col>
+          <col>Paper &amp; Forest Products</col>
+        </row>
+        <row>
+          <col>FITCHINCL4</col>
+          <col>01031202</col>
+          <col>Metals &amp; Mining</col>
+        </row>
+        <row>
+          <col>FITCHINCL4</col>
+          <col>01031203</col>
+          <col>Other Natural Resources</col>
+        </row>
+        <row>
+          <col>FITCHINCL4</col>
+          <col>01031301</col>
+          <col>Automotive Manufacturer</col>
+        </row>
+        <row>
+          <col>FITCHINCL4</col>
+          <col>01031302</col>
+          <col>Auto Suppliers</col>
+        </row>
+        <row>
+          <col>FITCHINCL4</col>
+          <col>01031701</col>
+          <col>Acute &amp; Long-Term Care</col>
+        </row>
+        <row>
+          <col>FITCHINCL4</col>
+          <col>01031702</col>
+          <col>Medical Devices</col>
+        </row>
+        <row>
+          <col>FITCHINCL4</col>
+          <col>01031703</col>
+          <col>Pharmaceuticals</col>
+        </row>
+        <row>
+          <col>FITCHINCL4</col>
+          <col>01032101</col>
+          <col>Gaming</col>
+        </row>
+        <row>
+          <col>FITCHINCL4</col>
+          <col>02020101</col>
+          <col>Real Estate SF CDOs</col>
+        </row>
+        <row>
+          <col>FITCHINCL4</col>
+          <col>02020102</col>
+          <col>Diversified SF CDOs</col>
+        </row>
+        <row>
+          <col>FITCHINCL4</col>
+          <col>02020103</col>
+          <col>CDOs of CDOs</col>
+        </row>
+        <row>
+          <col>FITCHINCL4</col>
+          <col>02020201</col>
+          <col>Corporate Market Value CDOs</col>
+        </row>
+        <row>
+          <col>FITCHINCL4</col>
+          <col>02020202</col>
+          <col>Mortgage Market Value CDOs</col>
+        </row>
+        <row>
+          <col>FITCHINCL4</col>
+          <col>02020203</col>
+          <col>Alternative Investment Market Value CDOs</col>
+        </row>
+        <row>
+          <col>FITCHINCL4</col>
+          <col>02030101</col>
+          <col>Bond Funds</col>
+        </row>
+        <row>
+          <col>FITCHINCL4</col>
+          <col>02030102</col>
+          <col>Tradeable Credit Baskets</col>
+        </row>
+        <row>
+          <col>FITCHINCL4</col>
+          <col>03010101</col>
+          <col>Equipment Lease</col>
+        </row>
+        <row>
+          <col>FITCHINCL4</col>
+          <col>03010102</col>
+          <col>Equipment Loan</col>
+        </row>
+        <row>
+          <col>FITCHINCL4</col>
+          <col>03010103</col>
+          <col>Aircraft Lease</col>
+        </row>
+        <row>
+          <col>FITCHINCL4</col>
+          <col>03010104</col>
+          <col>Timeshare</col>
+        </row>
+        <row>
+          <col>FITCHINCL4</col>
+          <col>03010105</col>
+          <col>Stranded Costs/Utility</col>
+        </row>
+        <row>
+          <col>FITCHINCL4</col>
+          <col>03010106</col>
+          <col>Utility</col>
+        </row>
+        <row>
+          <col>FITCHINCL4</col>
+          <col>03010107</col>
+          <col>Franchise</col>
+        </row>
+        <row>
+          <col>FITCHINCL4</col>
+          <col>03010108</col>
+          <col>Entertainment</col>
+        </row>
+        <row>
+          <col>FITCHINCL4</col>
+          <col>03010109</col>
+          <col>Health Care</col>
+        </row>
+        <row>
+          <col>FITCHINCL4</col>
+          <col>03010110</col>
+          <col>Catastrophic Risk</col>
+        </row>
+        <row>
+          <col>FITCHINCL4</col>
+          <col>03010201</col>
+          <col>Auto Loans</col>
+        </row>
+        <row>
+          <col>FITCHINCL4</col>
+          <col>03010202</col>
+          <col>Credit Card Receivables</col>
+        </row>
+        <row>
+          <col>FITCHINCL4</col>
+          <col>03010203</col>
+          <col>Corporate</col>
+        </row>
+        <row>
+          <col>FITCHINCL4</col>
+          <col>03010204</col>
+          <col>Auto Lease</col>
+        </row>
+        <row>
+          <col>FITCHINCL4</col>
+          <col>03010205</col>
+          <col>Dealer Floorplan</col>
+        </row>
+        <row>
+          <col>FITCHINCL4</col>
+          <col>03010206</col>
+          <col>Rental Car</col>
+        </row>
+        <row>
+          <col>FITCHINCL4</col>
+          <col>03010207</col>
+          <col>Unsecured Consumer Loans</col>
+        </row>
+        <row>
+          <col>FITCHINCL4</col>
+          <col>03010301</col>
+          <col>ABS</col>
+        </row>
+        <row>
+          <col>FITCHINCL4</col>
+          <col>03010302</col>
+          <col>Municipal</col>
+        </row>
+        <row>
+          <col>FITCHINCL4</col>
+          <col>03010303</col>
+          <col>150(B)</col>
+        </row>
+        <row>
+          <col>FITCHINCL4</col>
+          <col>03010304</col>
+          <col>Student Loans - Private</col>
+        </row>
+        <row>
+          <col>FITCHINCL4</col>
+          <col>03010305</col>
+          <col>Student Loans - FFELPS</col>
+        </row>
+        <row>
+          <col>FITCHINCL4</col>
+          <col>03010306</col>
+          <col>Student Loans - Mixed</col>
+        </row>
+        <row>
+          <col>FITCHINCL4</col>
+          <col>03010401</col>
+          <col>ABCP - Hybrid</col>
+        </row>
+        <row>
+          <col>FITCHINCL4</col>
+          <col>03010402</col>
+          <col>ABCP - Securities Backed</col>
+        </row>
+        <row>
+          <col>FITCHINCL4</col>
+          <col>03010403</col>
+          <col>ABCP - Market Value</col>
+        </row>
+        <row>
+          <col>FITCHINCL4</col>
+          <col>03010404</col>
+          <col>Multiseller (Face Spectrum)</col>
+        </row>
+        <row>
+          <col>FITCHINCL4</col>
+          <col>03010405</col>
+          <col>ABCP - Repurchase</col>
+        </row>
+        <row>
+          <col>FITCHINCL4</col>
+          <col>03010406</col>
+          <col>ABCP - Mortgage</col>
+        </row>
+        <row>
+          <col>FITCHINCL4</col>
+          <col>03010407</col>
+          <col>ABCP - Other</col>
+        </row>
+        <row>
+          <col>FITCHINCL4</col>
+          <col>03010408</col>
+          <col>ABCP - Loan Backed</col>
+        </row>
+        <row>
+          <col>FITCHINCL4</col>
+          <col>03010410</col>
+          <col>ABCP - Multi-Seller</col>
+        </row>
+        <row>
+          <col>FITCHINCL4</col>
+          <col>03010420</col>
+          <col>ABCP - Single Seller</col>
+        </row>
+        <row>
+          <col>FITCHINCL4</col>
+          <col>03010501</col>
+          <col>SBA</col>
+        </row>
+        <row>
+          <col>FITCHINCL4</col>
+          <col>03010502</col>
+          <col>Arena</col>
+        </row>
+        <row>
+          <col>FITCHINCL4</col>
+          <col>03010503</col>
+          <col>Other Asset Types: Other</col>
+        </row>
+        <row>
+          <col>FITCHINCL4</col>
+          <col>03010701</col>
+          <col>Credit Cards - Prime</col>
+        </row>
+        <row>
+          <col>FITCHINCL4</col>
+          <col>03010702</col>
+          <col>Credit Cards - Sub-Prime</col>
+        </row>
+        <row>
+          <col>FITCHINCL4</col>
+          <col>03010703</col>
+          <col>Credit Cards - Retail</col>
+        </row>
+        <row>
+          <col>FITCHINCL4</col>
+          <col>03010704</col>
+          <col>Credit Cards - Prime/Sub-Prime</col>
+        </row>
+        <row>
+          <col>FITCHINCL4</col>
+          <col>03010901</col>
+          <col>Auto Loans - Prime/Sub-Prime</col>
+        </row>
+        <row>
+          <col>FITCHINCL4</col>
+          <col>03010902</col>
+          <col>Auto Loans - Prime</col>
+        </row>
+        <row>
+          <col>FITCHINCL4</col>
+          <col>03010903</col>
+          <col>Auto Loans - Sub-Prime</col>
+        </row>
+        <row>
+          <col>FITCHINCL4</col>
+          <col>03010904</col>
+          <col>Prime/Sub-Prime</col>
+        </row>
+        <row>
+          <col>FITCHINCL4</col>
+          <col>03011001</col>
+          <col>Aircraft Finance - EETC</col>
+        </row>
+        <row>
+          <col>FITCHINCL4</col>
+          <col>03011002</col>
+          <col>Aircraft Finance - Pool</col>
+        </row>
+        <row>
+          <col>FITCHINCL4</col>
+          <col>03011101</col>
+          <col>Auto Leases - Prime/Sub-Prime</col>
+        </row>
+        <row>
+          <col>FITCHINCL4</col>
+          <col>03011102</col>
+          <col>Auto Leases - Prime</col>
+        </row>
+        <row>
+          <col>FITCHINCL4</col>
+          <col>03011103</col>
+          <col>Auto Leases - Sub-Prime</col>
+        </row>
+        <row>
+          <col>FITCHINCL4</col>
+          <col>03011301</col>
+          <col>Dealer Floor Plan - Auto</col>
+        </row>
+        <row>
+          <col>FITCHINCL4</col>
+          <col>03011302</col>
+          <col>Dealer Floor Plan - Other</col>
+        </row>
+        <row>
+          <col>FITCHINCL4</col>
+          <col>03011303</col>
+          <col>Dealer Floor Plan - Consumer RV</col>
+        </row>
+        <row>
+          <col>FITCHINCL4</col>
+          <col>03011304</col>
+          <col>Dealer Floor Plan - Commercial</col>
+        </row>
+        <row>
+          <col>FITCHINCL4</col>
+          <col>03011305</col>
+          <col>Dealer Floor Plan - Equipment</col>
+        </row>
+        <row>
+          <col>FITCHINCL4</col>
+          <col>03011306</col>
+          <col>Dealer Floor Plan - Auto &amp; Equipment</col>
+        </row>
+        <row>
+          <col>FITCHINCL4</col>
+          <col>03011401</col>
+          <col>Other Equipment Leasing/Loans</col>
+        </row>
+        <row>
+          <col>FITCHINCL4</col>
+          <col>03011501</col>
+          <col>Contract</col>
+        </row>
+        <row>
+          <col>FITCHINCL4</col>
+          <col>03011502</col>
+          <col>Films</col>
+        </row>
+        <row>
+          <col>FITCHINCL4</col>
+          <col>03011503</col>
+          <col>Licensing</col>
+        </row>
+        <row>
+          <col>FITCHINCL4</col>
+          <col>03011504</col>
+          <col>Music</col>
+        </row>
+        <row>
+          <col>FITCHINCL4</col>
+          <col>03011505</col>
+          <col>Intellectual</col>
+        </row>
+        <row>
+          <col>FITCHINCL4</col>
+          <col>03011506</col>
+          <col>Writers</col>
+        </row>
+        <row>
+          <col>FITCHINCL4</col>
+          <col>03011601</col>
+          <col>Franchise Loans - Enterprise</col>
+        </row>
+        <row>
+          <col>FITCHINCL4</col>
+          <col>03011701</col>
+          <col>Healthcare - Asset Based Loans</col>
+        </row>
+        <row>
+          <col>FITCHINCL4</col>
+          <col>03011702</col>
+          <col>Healthcare - Fee Simple</col>
+        </row>
+        <row>
+          <col>FITCHINCL4</col>
+          <col>03011703</col>
+          <col>Healthcare - True Sale</col>
+        </row>
+        <row>
+          <col>FITCHINCL4</col>
+          <col>03011801</col>
+          <col>RV/Marine - Mortgage Lease</col>
+        </row>
+        <row>
+          <col>FITCHINCL4</col>
+          <col>03012001</col>
+          <col>Utility Tariff Bonds - State</col>
+        </row>
+        <row>
+          <col>FITCHINCL4</col>
+          <col>03012101</col>
+          <col>SBA - Conventional Small Business</col>
+        </row>
+        <row>
+          <col>FITCHINCL4</col>
+          <col>03012102</col>
+          <col>SBA - Others</col>
+        </row>
+        <row>
+          <col>FITCHINCL4</col>
+          <col>03012103</col>
+          <col>SBA</col>
+        </row>
+        <row>
+          <col>FITCHINCL4</col>
+          <col>03012301</col>
+          <col>Timeshare - Enterprise</col>
+        </row>
+        <row>
+          <col>FITCHINCL4</col>
+          <col>03012302</col>
+          <col>Timeshare - Fee Simple</col>
+        </row>
+        <row>
+          <col>FITCHINCL4</col>
+          <col>03012303</col>
+          <col>Timeshare - Mortgage Lease</col>
+        </row>
+        <row>
+          <col>FITCHINCL4</col>
+          <col>03012701</col>
+          <col>New</col>
+        </row>
+        <row>
+          <col>FITCHINCL4</col>
+          <col>03012702</col>
+          <col>Used</col>
+        </row>
+        <row>
+          <col>FITCHINCL4</col>
+          <col>03012801</col>
+          <col>Personal</col>
+        </row>
+        <row>
+          <col>FITCHINCL4</col>
+          <col>03012802</col>
+          <col>Commercial</col>
+        </row>
+        <row>
+          <col>FITCHINCL4</col>
+          <col>03013201</col>
+          <col>Other Timeshare Receivables</col>
+        </row>
+        <row>
+          <col>FITCHINCL4</col>
+          <col>03013501</col>
+          <col>Tobacco - Revenues</col>
+        </row>
+        <row>
+          <col>FITCHINCL4</col>
+          <col>03013502</col>
+          <col>Tobacco - Legal fees</col>
+        </row>
+        <row>
+          <col>FITCHINCL4</col>
+          <col>03013601</col>
+          <col>Other Trade Receivables</col>
+        </row>
+        <row>
+          <col>FITCHINCL4</col>
+          <col>03013801</col>
+          <col>ABS Auto Loan Servicer</col>
+        </row>
+        <row>
+          <col>FITCHINCL4</col>
+          <col>03013802</col>
+          <col>ABS Auto Loan Seller/Servicer</col>
+        </row>
+        <row>
+          <col>FITCHINCL4</col>
+          <col>03013803</col>
+          <col>ABS Credit Card Seller/Servicer</col>
+        </row>
+        <row>
+          <col>FITCHINCL4</col>
+          <col>03013804</col>
+          <col>ABS Student Loan Servicer-FFELP</col>
+        </row>
+        <row>
+          <col>FITCHINCL4</col>
+          <col>03013805</col>
+          <col>ABS Student Loan Servicer-Private</col>
+        </row>
+        <row>
+          <col>FITCHINCL4</col>
+          <col>03013806</col>
+          <col>ABS Student Loan Seller/Servicer-Private</col>
+        </row>
+        <row>
+          <col>FITCHINCL4</col>
+          <col>03013807</col>
+          <col>ABS Seller/Servicers</col>
+        </row>
+        <row>
+          <col>FITCHINCL4</col>
+          <col>03013808</col>
+          <col>ABS Special Servicer</col>
+        </row>
+        <row>
+          <col>FITCHINCL4</col>
+          <col>03013809</col>
+          <col>ABS Primary Servicer</col>
+        </row>
+        <row>
+          <col>FITCHINCL4</col>
+          <col>03013810</col>
+          <col>ABS Master Seller/Servicer</col>
+        </row>
+        <row>
+          <col>FITCHINCL4</col>
+          <col>03013811</col>
+          <col>ABS Master Servicer</col>
+        </row>
+        <row>
+          <col>FITCHINCL4</col>
+          <col>03020101</col>
+          <col>Single Borrower</col>
+        </row>
+        <row>
+          <col>FITCHINCL4</col>
+          <col>03020102</col>
+          <col>Multiborrower</col>
+        </row>
+        <row>
+          <col>FITCHINCL4</col>
+          <col>03020201</col>
+          <col>Bank/Thrift</col>
+        </row>
+        <row>
+          <col>FITCHINCL4</col>
+          <col>03020202</col>
+          <col>Conduit</col>
+        </row>
+        <row>
+          <col>FITCHINCL4</col>
+          <col>03020203</col>
+          <col>Developer</col>
+        </row>
+        <row>
+          <col>FITCHINCL4</col>
+          <col>03020204</col>
+          <col>Insurance Company</col>
+        </row>
+        <row>
+          <col>FITCHINCL4</col>
+          <col>03020205</col>
+          <col>Pension Fund</col>
+        </row>
+        <row>
+          <col>FITCHINCL4</col>
+          <col>03020601</col>
+          <col>CMBS Primary Servicer</col>
+        </row>
+        <row>
+          <col>FITCHINCL4</col>
+          <col>03020602</col>
+          <col>CMBS Master Servicer</col>
+        </row>
+        <row>
+          <col>FITCHINCL4</col>
+          <col>03020603</col>
+          <col>CMBS Special Servicer</col>
+        </row>
+        <row>
+          <col>FITCHINCL4</col>
+          <col>03020604</col>
+          <col>CMBS Commercial Construction Loan Servicer</col>
+        </row>
+        <row>
+          <col>FITCHINCL4</col>
+          <col>03020605</col>
+          <col>Small Balance Commercial Primary Servicer</col>
+        </row>
+        <row>
+          <col>FITCHINCL4</col>
+          <col>03020606</col>
+          <col>Small Balance Commercial Special Servicer</col>
+        </row>
+        <row>
+          <col>FITCHINCL4</col>
+          <col>03020607</col>
+          <col>Small Balance Commercial Primary Seller/Servicer</col>
+        </row>
+        <row>
+          <col>FITCHINCL4</col>
+          <col>03020608</col>
+          <col>CMBS Loan Level Special Servicer</col>
+        </row>
+        <row>
+          <col>FITCHINCL4</col>
+          <col>03020801</col>
+          <col>Housing Authority</col>
+        </row>
+        <row>
+          <col>FITCHINCL4</col>
+          <col>03020802</col>
+          <col>Government Agency</col>
+        </row>
+        <row>
+          <col>FITCHINCL4</col>
+          <col>03021600</col>
+          <col>CREL CDO</col>
+        </row>
+        <row>
+          <col>FITCHINCL4</col>
+          <col>03030301</col>
+          <col>Subprime Mortgage Home Equity</col>
+        </row>
+        <row>
+          <col>FITCHINCL4</col>
+          <col>03030302</col>
+          <col>Subprime Mortgage HELOCs</col>
+        </row>
+        <row>
+          <col>FITCHINCL4</col>
+          <col>03030303</col>
+          <col>Subprime Mortgage B&amp;C 1st Liens</col>
+        </row>
+        <row>
+          <col>FITCHINCL4</col>
+          <col>03030304</col>
+          <col>Subprime Mortgage Home Improvement</col>
+        </row>
+        <row>
+          <col>FITCHINCL4</col>
+          <col>03030305</col>
+          <col>Subprime Mortgage Title 1s</col>
+        </row>
+        <row>
+          <col>FITCHINCL4</col>
+          <col>03030306</col>
+          <col>Subprime Mortgage 125 LTVs</col>
+        </row>
+        <row>
+          <col>FITCHINCL4</col>
+          <col>03030601</col>
+          <col>State Housing Finance Agencies Single-Family</col>
+        </row>
+        <row>
+          <col>FITCHINCL4</col>
+          <col>03030602</col>
+          <col>State Housing Finance Agencies Multifamily</col>
+        </row>
+        <row>
+          <col>FITCHINCL4</col>
+          <col>03030603</col>
+          <col>State Housing Finance Agencies General Obligations</col>
+        </row>
+        <row>
+          <col>FITCHINCL4</col>
+          <col>03030604</col>
+          <col>State Housing Finance Agencies Insurance/Guarantee Funds</col>
+        </row>
+        <row>
+          <col>FITCHINCL4</col>
+          <col>03030605</col>
+          <col>State Housing Finance Agencies Servicing &amp; Other</col>
+        </row>
+        <row>
+          <col>FITCHINCL4</col>
+          <col>03030701</col>
+          <col>Local Housing Finance Agencies Single-Family</col>
+        </row>
+        <row>
+          <col>FITCHINCL4</col>
+          <col>03030702</col>
+          <col>Local Housing Finance Agencies Multifamily</col>
+        </row>
+        <row>
+          <col>FITCHINCL4</col>
+          <col>03031201</col>
+          <col>Prime Originator</col>
+        </row>
+        <row>
+          <col>FITCHINCL4</col>
+          <col>03031202</col>
+          <col>Alt-A Originator</col>
+        </row>
+        <row>
+          <col>FITCHINCL4</col>
+          <col>03031203</col>
+          <col>Subprime Originator</col>
+        </row>
+        <row>
+          <col>FITCHINCL4</col>
+          <col>03031204</col>
+          <col>High Loan to Value (HLTV)</col>
+        </row>
+        <row>
+          <col>FITCHINCL4</col>
+          <col>03031205</col>
+          <col>Home Equity/Home Equity Lines of Credit</col>
+        </row>
+        <row>
+          <col>FITCHINCL4</col>
+          <col>03031206</col>
+          <col>Specialty Originator</col>
+        </row>
+        <row>
+          <col>FITCHINCL4</col>
+          <col>03031501</col>
+          <col>Prime RMBS - 30yr Fixed Rate Mortgages</col>
+        </row>
+        <row>
+          <col>FITCHINCL4</col>
+          <col>03031502</col>
+          <col>Prime RMBS - 15yr Fixed Rate Mortgages</col>
+        </row>
+        <row>
+          <col>FITCHINCL4</col>
+          <col>03031503</col>
+          <col>Prime RMBS - ARMs (Traditional &amp; Hybrid)</col>
+        </row>
+        <row>
+          <col>FITCHINCL4</col>
+          <col>03031504</col>
+          <col>Prime RMBS - Relocation Programs</col>
+        </row>
+        <row>
+          <col>FITCHINCL4</col>
+          <col>03031505</col>
+          <col>Prime RMBS - Other 1st Lien Mortgage Products</col>
+        </row>
+        <row>
+          <col>FITCHINCL4</col>
+          <col>03031506</col>
+          <col>Prime RMBS - Closed End Second Liens</col>
+        </row>
+        <row>
+          <col>FITCHINCL4</col>
+          <col>03031507</col>
+          <col>Prime RMBS - HELOCs</col>
+        </row>
+        <row>
+          <col>FITCHINCL4</col>
+          <col>03031508</col>
+          <col>Prime RMBS - High Net Worth &amp; Pledged Asset Programs</col>
+        </row>
+        <row>
+          <col>FITCHINCL4</col>
+          <col>03031509</col>
+          <col>Prime RMBS - Resecuritizations</col>
+        </row>
+        <row>
+          <col>FITCHINCL4</col>
+          <col>03031510</col>
+          <col>Prime RMBS - Balloons</col>
+        </row>
+        <row>
+          <col>FITCHINCL4</col>
+          <col>03031511</col>
+          <col>Prime RMBS - FRMs &amp; ARMs</col>
+        </row>
+        <row>
+          <col>FITCHINCL4</col>
+          <col>03031512</col>
+          <col>Prime RMBS - FRMs &amp; Balloons</col>
+        </row>
+        <row>
+          <col>FITCHINCL4</col>
+          <col>03031513</col>
+          <col>Prime RMBS - Mixed FRMs</col>
+        </row>
+        <row>
+          <col>FITCHINCL4</col>
+          <col>03031514</col>
+          <col>Prime HLTV</col>
+        </row>
+        <row>
+          <col>FITCHINCL4</col>
+          <col>03031601</col>
+          <col>AltA RMBS - 30yr Fixed Rate Mortgages</col>
+        </row>
+        <row>
+          <col>FITCHINCL4</col>
+          <col>03031602</col>
+          <col>AltA RMBS - 15yr Fixed Rate Mortgages</col>
+        </row>
+        <row>
+          <col>FITCHINCL4</col>
+          <col>03031603</col>
+          <col>AltA RMBS - ARMs (Traditional &amp; Hybrid)</col>
+        </row>
+        <row>
+          <col>FITCHINCL4</col>
+          <col>03031604</col>
+          <col>AltA RMBS - Balloons</col>
+        </row>
+        <row>
+          <col>FITCHINCL4</col>
+          <col>03031605</col>
+          <col>AltA RMBS - FRMs, ARMs &amp; Balloons</col>
+        </row>
+        <row>
+          <col>FITCHINCL4</col>
+          <col>03031606</col>
+          <col>AltA RMBS - Mixed FRMs</col>
+        </row>
+        <row>
+          <col>FITCHINCL4</col>
+          <col>03031607</col>
+          <col>Alt-A HLTV</col>
+        </row>
+        <row>
+          <col>FITCHINCL4</col>
+          <col>03032001</col>
+          <col>Manufactured Housing</col>
+        </row>
+        <row>
+          <col>FITCHINCL4</col>
+          <col>03032201</col>
+          <col>Underperforming</col>
+        </row>
+        <row>
+          <col>FITCHINCL4</col>
+          <col>03032301</col>
+          <col>FHA/VA Reperforming - RMBS</col>
+        </row>
+        <row>
+          <col>FITCHINCL4</col>
+          <col>03032302</col>
+          <col>HUD SBA &amp; VA Sales - RMBS</col>
+        </row>
+        <row>
+          <col>FITCHINCL4</col>
+          <col>03032401</col>
+          <col>State Housing Agencies - RMBS</col>
+        </row>
+        <row>
+          <col>FITCHINCL4</col>
+          <col>03032402</col>
+          <col>Local Housing Agencies - RMBS</col>
+        </row>
+        <row>
+          <col>FITCHINCL4</col>
+          <col>03032403</col>
+          <col>Other Agencies - RMBS</col>
+        </row>
+        <row>
+          <col>FITCHINCL4</col>
+          <col>03032501</col>
+          <col>Scratch &amp; Dent - RMBS</col>
+        </row>
+        <row>
+          <col>FITCHINCL4</col>
+          <col>03032502</col>
+          <col>Reverse Residential Mortgages</col>
+        </row>
+        <row>
+          <col>FITCHINCL4</col>
+          <col>03032503</col>
+          <col>Tax Liens - RMBS</col>
+        </row>
+        <row>
+          <col>FITCHINCL4</col>
+          <col>03032504</col>
+          <col>Other RMBS Real Estate Assets</col>
+        </row>
+        <row>
+          <col>FITCHINCL4</col>
+          <col>03032601</col>
+          <col>RMBS Primary Prime Servicer</col>
+        </row>
+        <row>
+          <col>FITCHINCL4</col>
+          <col>03032602</col>
+          <col>RMBS Primary Alt-A Servicer</col>
+        </row>
+        <row>
+          <col>FITCHINCL4</col>
+          <col>03032603</col>
+          <col>RMBS Primary Subprime Servicer</col>
+        </row>
+        <row>
+          <col>FITCHINCL4</col>
+          <col>03032604</col>
+          <col>RMBS Primary High Loan to Value (HLTV) Servicer</col>
+        </row>
+        <row>
+          <col>FITCHINCL4</col>
+          <col>03032605</col>
+          <col>RMBS Primary Home Equity/HELOC Servicer</col>
+        </row>
+        <row>
+          <col>FITCHINCL4</col>
+          <col>03032606</col>
+          <col>RMBS Master Servicer</col>
+        </row>
+        <row>
+          <col>FITCHINCL4</col>
+          <col>03032607</col>
+          <col>RMBS Special Servicer</col>
+        </row>
+        <row>
+          <col>FITCHINCL4</col>
+          <col>03032608</col>
+          <col>RMBS Primary Specialty Servicer - Manufactured Housing</col>
+        </row>
+        <row>
+          <col>FITCHINCL4</col>
+          <col>03032609</col>
+          <col>RMBS Primary Specialty Servicer - Option ARM</col>
+        </row>
+        <row>
+          <col>FITCHINCL4</col>
+          <col>03032610</col>
+          <col>RMBS Primary Specialty Servicer - Reverse Mortgage</col>
+        </row>
+        <row>
+          <col>FITCHINCL4</col>
+          <col>03032611</col>
+          <col>RMBS Primary Specialty Servicer - Second Lien</col>
+        </row>
+        <row>
+          <col>FITCHINCL4</col>
+          <col>03032612</col>
+          <col>RMBS Primary Specialty Servicer - Subservicer</col>
+        </row>
+        <row>
+          <col>FITCHINCL4</col>
+          <col>03032613</col>
+          <col>RMBS Primary Prime Seller/Servicer</col>
+        </row>
+        <row>
+          <col>FITCHINCL4</col>
+          <col>03032614</col>
+          <col>RMBS Primary Subprime Seller/Servicer</col>
+        </row>
+        <row>
+          <col>FITCHINCL4</col>
+          <col>03032615</col>
+          <col>RMBS Special Seller/Servicer</col>
+        </row>
+        <row>
+          <col>FITCHINCL4</col>
+          <col>03032616</col>
+          <col>RMBS Master Seller/Servicer</col>
+        </row>
+        <row>
+          <col>FITCHINCL4</col>
+          <col>03032617</col>
+          <col>RMBS Primary Conforming Servicer</col>
+        </row>
+        <row>
+          <col>FITCHINCL4</col>
+          <col>03032618</col>
+          <col>RMBS Primary Non-Conforming Servicer</col>
+        </row>
+        <row>
+          <col>FITCHINCL4</col>
+          <col>03032619</col>
+          <col>RMBS Special Conforming Servicer</col>
+        </row>
+        <row>
+          <col>FITCHINCL4</col>
+          <col>03032620</col>
+          <col>RMBS Special Non-Conforming Servicer</col>
+        </row>
+        <row>
+          <col>FITCHINCL4</col>
+          <col>03032621</col>
+          <col>RMBS Master Conforming Servicer</col>
+        </row>
+        <row>
+          <col>FITCHINCL4</col>
+          <col>03032622</col>
+          <col>RMBS Master Non-Conforming Servicer</col>
+        </row>
+        <row>
+          <col>FITCHINCL4</col>
+          <col>03032623</col>
+          <col>RMBS Primary Conforming Seller/Servicer</col>
+        </row>
+        <row>
+          <col>FITCHINCL4</col>
+          <col>03032624</col>
+          <col>RMBS Special Conforming Seller/Servicer</col>
+        </row>
+        <row>
+          <col>FITCHINCL4</col>
+          <col>03032625</col>
+          <col>RMBS Master Non-Conforming Seller/Servicer</col>
+        </row>
+        <row>
+          <col>FITCHINCL4</col>
+          <col>03032626</col>
+          <col>RMBS Primary Servicer</col>
+        </row>
+        <row>
+          <col>FITCHINCL4</col>
+          <col>03032701</col>
+          <col>RMBS Prime Originator/Issuer</col>
+        </row>
+        <row>
+          <col>FITCHINCL4</col>
+          <col>03032702</col>
+          <col>RMBS AltA Originator/Issuer</col>
+        </row>
+        <row>
+          <col>FITCHINCL4</col>
+          <col>03032703</col>
+          <col>RMBS Subprime Originator/Issuer</col>
+        </row>
+        <row>
+          <col>FITCHINCL4</col>
+          <col>03032704</col>
+          <col>RMBS High Loan to Value (HLTV) Originator/Issuer</col>
+        </row>
+        <row>
+          <col>FITCHINCL4</col>
+          <col>03032705</col>
+          <col>RMBS Home Equity/HELOC Originator/Issuer</col>
+        </row>
+        <row>
+          <col>FITCHINCL4</col>
+          <col>03032706</col>
+          <col>RMBS Specialty Originator/Issuer</col>
+        </row>
+        <row>
+          <col>FITCHINCL4</col>
+          <col>03032801</col>
+          <col>Prime/AltA RMBS - Mixed</col>
+        </row>
+        <row>
+          <col>FITCHINCL4</col>
+          <col>03032802</col>
+          <col>Prime/AltA RMBS - Resecuritizations</col>
+        </row>
+        <row>
+          <col>FITCHINCL4</col>
+          <col>03032901</col>
+          <col>Subprime RMBS - Fixed Rate Mortgages</col>
+        </row>
+        <row>
+          <col>FITCHINCL4</col>
+          <col>03032902</col>
+          <col>Subprime RMBS - ARMs (Traditional &amp; Hybrid)</col>
+        </row>
+        <row>
+          <col>FITCHINCL4</col>
+          <col>03032903</col>
+          <col>Subprime RMBS - FRMs &amp; ARMs</col>
+        </row>
+        <row>
+          <col>FITCHINCL4</col>
+          <col>03032904</col>
+          <col>Subprime RMBS - FRMs &amp; Balloons</col>
+        </row>
+        <row>
+          <col>FITCHINCL4</col>
+          <col>03032905</col>
+          <col>Subprime RMBS - FRMs, ARMs &amp; Balloons</col>
+        </row>
+        <row>
+          <col>FITCHINCL4</col>
+          <col>03032906</col>
+          <col>Subprime RMBS - Resecuritizations</col>
+        </row>
+        <row>
+          <col>FITCHINCL4</col>
+          <col>03032907</col>
+          <col>Subprime HLTV</col>
+        </row>
+        <row>
+          <col>FITCHINCL4</col>
+          <col>03033001</col>
+          <col>Subprime / HLTV RMBS - Mixed</col>
+        </row>
+        <row>
+          <col>FITCHINCL4</col>
+          <col>03060101</col>
+          <col>Trust Manager</col>
+        </row>
+        <row>
+          <col>FITCHINCL4</col>
+          <col>03060201</col>
+          <col>Structured Finance Trustee</col>
+        </row>
+        <row>
+          <col>FITCHINCL4</col>
+          <col>04010101</col>
+          <col>State General Obligation</col>
+        </row>
+        <row>
+          <col>FITCHINCL4</col>
+          <col>04010102</col>
+          <col>State Lease</col>
+        </row>
+        <row>
+          <col>FITCHINCL4</col>
+          <col>04010103</col>
+          <col>State Special Tax</col>
+        </row>
+        <row>
+          <col>FITCHINCL4</col>
+          <col>04010104</col>
+          <col>State Short-Term Obligations</col>
+        </row>
+        <row>
+          <col>FITCHINCL4</col>
+          <col>04010105</col>
+          <col>State Guarantee Programs</col>
+        </row>
+        <row>
+          <col>FITCHINCL4</col>
+          <col>04010201</col>
+          <col>County General Obligation</col>
+        </row>
+        <row>
+          <col>FITCHINCL4</col>
+          <col>04010202</col>
+          <col>County Lease</col>
+        </row>
+        <row>
+          <col>FITCHINCL4</col>
+          <col>04010203</col>
+          <col>County Special Tax</col>
+        </row>
+        <row>
+          <col>FITCHINCL4</col>
+          <col>04010204</col>
+          <col>County Short-Term Obligations</col>
+        </row>
+        <row>
+          <col>FITCHINCL4</col>
+          <col>04010301</col>
+          <col>City General Obligation</col>
+        </row>
+        <row>
+          <col>FITCHINCL4</col>
+          <col>04010302</col>
+          <col>City Lease</col>
+        </row>
+        <row>
+          <col>FITCHINCL4</col>
+          <col>04010303</col>
+          <col>City Special Tax</col>
+        </row>
+        <row>
+          <col>FITCHINCL4</col>
+          <col>04010304</col>
+          <col>City Short-Term Obligations</col>
+        </row>
+        <row>
+          <col>FITCHINCL4</col>
+          <col>04010401</col>
+          <col>School District General Obligations</col>
+        </row>
+        <row>
+          <col>FITCHINCL4</col>
+          <col>04010402</col>
+          <col>School District Lease</col>
+        </row>
+        <row>
+          <col>FITCHINCL4</col>
+          <col>04010403</col>
+          <col>School District Special Tax</col>
+        </row>
+        <row>
+          <col>FITCHINCL4</col>
+          <col>04010404</col>
+          <col>School District Short-Term Obligations</col>
+        </row>
+        <row>
+          <col>FITCHINCL4</col>
+          <col>04010501</col>
+          <col>Special District General Obligation</col>
+        </row>
+        <row>
+          <col>FITCHINCL4</col>
+          <col>04010502</col>
+          <col>Special District Lease</col>
+        </row>
+        <row>
+          <col>FITCHINCL4</col>
+          <col>04010503</col>
+          <col>Special District Special Tax</col>
+        </row>
+        <row>
+          <col>FITCHINCL4</col>
+          <col>04010504</col>
+          <col>Special District Short-Term Obligations</col>
+        </row>
+        <row>
+          <col>FITCHINCL4</col>
+          <col>04020101</col>
+          <col>Water/Wastewater</col>
+        </row>
+        <row>
+          <col>FITCHINCL4</col>
+          <col>04020102</col>
+          <col>Solid Waste/Resource Recovery</col>
+        </row>
+        <row>
+          <col>FITCHINCL4</col>
+          <col>04020401</col>
+          <col>Airport Revenue Bond</col>
+        </row>
+        <row>
+          <col>FITCHINCL4</col>
+          <col>04020402</col>
+          <col>Airport Passenger Facility Charge</col>
+        </row>
+        <row>
+          <col>FITCHINCL4</col>
+          <col>04030101</col>
+          <col>Hospital</col>
+        </row>
+        <row>
+          <col>FITCHINCL4</col>
+          <col>04030102</col>
+          <col>Continuing Care Retirement Community (CCRC)</col>
+        </row>
+        <row>
+          <col>FITCHINCL4</col>
+          <col>04030103</col>
+          <col>Nursing Home</col>
+        </row>
+        <row>
+          <col>FITCHINCL4</col>
+          <col>04030104</col>
+          <col>Physician Group</col>
+        </row>
+        <row>
+          <col>FITCHINCL4</col>
+          <col>04030105</col>
+          <col>Assisted Living</col>
+        </row>
+        <row>
+          <col>FITCHINCL4</col>
+          <col>01010114</col>
+          <col>Central Banks</col>
+        </row>
+        <row>
+          <col>FITCHINCL4</col>
+          <col>03010307</col>
+          <col>Non Profit - Private Student Loans</col>
+        </row>
+        <row>
+          <col>FITCHINCL4</col>
+          <col>03010308</col>
+          <col>Non Profit - FFELP Student Loans</col>
+        </row>
+        <row>
+          <col>FITCHINCL4</col>
+          <col>03010905</col>
+          <col>Auto - Lease</col>
+        </row>
+        <row>
+          <col>FITCHINCL4</col>
+          <col>03010906</col>
+          <col>Auto - Dealer Floorplan</col>
+        </row>
+        <row>
+          <col>FITCHINCL4</col>
+          <col>03010907</col>
+          <col>Auto - Corporate Fleet</col>
+        </row>
+        <row>
+          <col>FITCHINCL4</col>
+          <col>03010908</col>
+          <col>Auto - Rental Fleet</col>
+        </row>
+        <row>
+          <col>FITCHINCL4</col>
+          <col>03010909</col>
+          <col>Auto - Other</col>
+        </row>
+        <row>
+          <col>FITCHINCL4</col>
+          <col>03011402</col>
+          <col>Equipment - Floorplan</col>
+        </row>
+        <row>
+          <col>FITCHINCL4</col>
+          <col>03015001</col>
+          <col>DPR</col>
+        </row>
+        <row>
+          <col>FITCHINCL4</col>
+          <col>03015002</col>
+          <col>Credit Card</col>
+        </row>
+        <row>
+          <col>FITCHINCL4</col>
+          <col>03015003</col>
+          <col>Export</col>
+        </row>
+        <row>
+          <col>FITCHINCL4</col>
+          <col>03015004</col>
+          <col>Other</col>
+        </row>
+        <row>
+          <col>FITCHINCL4</col>
+          <col>03021701</col>
+          <col>US Agency Pass Through</col>
+        </row>
+        <row>
+          <col>FITCHINCL4</col>
+          <col>03021900</col>
+          <col>Wireless Tower Sites</col>
+        </row>
+        <row>
+          <col>FITCHINCL4</col>
+          <col>03022100</col>
+          <col>CRE CLO</col>
+        </row>
+        <row>
+          <col>FITCHINCL4</col>
+          <col>03070101</col>
+          <col>Real Estate SF CDOs</col>
+        </row>
+        <row>
+          <col>FITCHINCL4</col>
+          <col>03070102</col>
+          <col>Diversified SF CDOs</col>
+        </row>
+        <row>
+          <col>FITCHINCL4</col>
+          <col>03070103</col>
+          <col>CDOs of CDOs</col>
+        </row>
+        <row>
+          <col>FITCHINCL4</col>
+          <col>03070201</col>
+          <col>Corporate Market Value CDOs</col>
+        </row>
+        <row>
+          <col>FITCHINCL4</col>
+          <col>03070202</col>
+          <col>Mortgage Market Value CDOs</col>
+        </row>
+        <row>
+          <col>FITCHINCL4</col>
+          <col>03070203</col>
+          <col>Alternative Investment Market Value CDOs</col>
+        </row>
+        <row>
+          <col>FITCHINCL4</col>
+          <col>03070401</col>
+          <col>Broadly Syndicated Loans (BSL)</col>
+        </row>
+        <row>
+          <col>FITCHINCL4</col>
+          <col>03070402</col>
+          <col>Middle Market Loans (MM)</col>
+        </row>
+        <row>
+          <col>STATE_CODE_TYP</col>
+          <col>PERNAMBUCO</col>
+          <col>STATE</col>
+        </row>
+        <row>
+          <col>STATE_CODE_TYP</col>
+          <col>RIO DE JANEIRO</col>
+          <col>STATE</col>
+        </row>
+        <row>
+          <col>STATE_CODE_TYP</col>
+          <col>RIO GRANDE DO NORTE</col>
+          <col>STATE</col>
+        </row>
+        <row>
+          <col>STATE_CODE_TYP</col>
+          <col>SAO PAULO</col>
+          <col>CITY</col>
+        </row>
+        <row>
+          <col>STATE_CODE_TYP</col>
+          <col>SANTA CATARINA</col>
+          <col>STATE</col>
+        </row>
+        <row>
+          <col>STATE_CODE_TYP</col>
+          <col>GENEVE</col>
+          <col>CITY</col>
+        </row>
+        <row>
+          <col>STATE_CODE_TYP</col>
+          <col>ZUG</col>
+          <col>CANTON</col>
+        </row>
+        <row>
+          <col>STATE_CODE_TYP</col>
+          <col>ZURICH</col>
+          <col>CANTON</col>
+        </row>
+        <row>
+          <col>STATE_CODE_TYP</col>
+          <col>ANTOFAGASTA</col>
+          <col>STATE</col>
+        </row>
+        <row>
+          <col>STATE_CODE_TYP</col>
+          <col>COQUIMBO</col>
+          <col>STATE</col>
+        </row>
+        <row>
+          <col>STATE_CODE_TYP</col>
+          <col>REGION METROPOLITANA</col>
+          <col>STATE</col>
+        </row>
+        <row>
+          <col>STATE_CODE_TYP</col>
+          <col>TIANJIN</col>
+          <col>PROVINCE</col>
+        </row>
+        <row>
+          <col>STATE_CODE_TYP</col>
+          <col>SHANXI</col>
+          <col>PROVINCE</col>
+        </row>
+        <row>
+          <col>STATE_CODE_TYP</col>
+          <col>SHANGHAI</col>
+          <col>MUNPALTY</col>
+        </row>
+        <row>
+          <col>STATE_CODE_TYP</col>
+          <col>JIANGSU</col>
+          <col>PROVINCE</col>
+        </row>
+        <row>
+          <col>STATE_CODE_TYP</col>
+          <col>ZHEJIANG</col>
+          <col>PROVINCE</col>
+        </row>
+        <row>
+          <col>STATE_CODE_TYP</col>
+          <col>ANHUI</col>
+          <col>PROVINCE</col>
+        </row>
+        <row>
+          <col>STATE_CODE_TYP</col>
+          <col>FUJIAN</col>
+          <col>PROVINCE</col>
+        </row>
+        <row>
+          <col>STATE_CODE_TYP</col>
+          <col>HUBEI</col>
+          <col>PROVINCE</col>
+        </row>
+        <row>
+          <col>STATE_CODE_TYP</col>
+          <col>HUNAN</col>
+          <col>PROVINCE</col>
+        </row>
+        <row>
+          <col>STATE_CODE_TYP</col>
+          <col>GUANGDONG</col>
+          <col>PROVINCE</col>
+        </row>
+        <row>
+          <col>STATE_CODE_TYP</col>
+          <col>GUANGXI</col>
+          <col>REGION</col>
+        </row>
+        <row>
+          <col>STATE_CODE_TYP</col>
+          <col>CHONGQING</col>
+          <col>MUNPALTY</col>
+        </row>
+        <row>
+          <col>STATE_CODE_TYP</col>
+          <col>SICHUAN</col>
+          <col>PROVINCE</col>
+        </row>
+        <row>
+          <col>STATE_CODE_TYP</col>
+          <col>GUIZHOU</col>
+          <col>PROVINCE</col>
+        </row>
+        <row>
+          <col>STATE_CODE_TYP</col>
+          <col>YUNNAN</col>
+          <col>PROVINCE</col>
+        </row>
+        <row>
+          <col>STATE_CODE_TYP</col>
+          <col>GANSU</col>
+          <col>PROVINCE</col>
+        </row>
+        <row>
+          <col>STATE_CODE_TYP</col>
+          <col>BEIJING</col>
+          <col>CITY</col>
+        </row>
+        <row>
+          <col>STATE_CODE_TYP</col>
+          <col>COAHUILA DE ZARAGOZA</col>
+          <col>STATE</col>
+        </row>
+        <row>
+          <col>STATE_CODE_TYP</col>
+          <col>MADRID</col>
+          <col>STATE</col>
+        </row>
+        <row>
+          <col>STATE_CODE_TYP</col>
+          <col>NORD-PAS-DE-CALAIS</col>
+          <col>STATE</col>
+        </row>
+        <row>
+          <col>STATE_CODE_TYP</col>
+          <col>ESSEX</col>
+          <col>COUNTY</col>
+        </row>
+        <row>
+          <col>STATE_CODE_TYP</col>
+          <col>T'BILISI</col>
+          <col>CITY</col>
+        </row>
+        <row>
+          <col>STATE_CODE_TYP</col>
+          <col>GUATEMALA</col>
+          <col>CITY</col>
+        </row>
+        <row>
+          <col>STATE_CODE_TYP</col>
+          <col>JAKARTA RAYA</col>
+          <col>STATE</col>
+        </row>
+        <row>
+          <col>STATE_CODE_TYP</col>
+          <col>SUMATERA UTARA</col>
+          <col>PROVINCE</col>
+        </row>
+        <row>
+          <col>STATE_CODE_TYP</col>
+          <col>GUJARAT</col>
+          <col>STATE</col>
+        </row>
+        <row>
+          <col>STATE_CODE_TYP</col>
+          <col>MILANO</col>
+          <col>PROVINCE</col>
+        </row>
+        <row>
+          <col>STATE_CODE_TYP</col>
+          <col>REGGIO EMILIA</col>
+          <col>PROVINCE</col>
+        </row>
+        <row>
+          <col>STATE_CODE_TYP</col>
+          <col>VICENZA</col>
+          <col>PROVINCE</col>
+        </row>
+        <row>
+          <col>STATE_CODE_TYP</col>
+          <col>LUXEMBOURG</col>
+          <col>CITY</col>
+        </row>
+        <row>
+          <col>STATE_CODE_TYP</col>
+          <col>PORT LOUIS</col>
+          <col>CITY</col>
+        </row>
+        <row>
+          <col>STATE_CODE_TYP</col>
+          <col>CAMPECHE</col>
+          <col>STATE</col>
+        </row>
+        <row>
+          <col>STATE_CODE_TYP</col>
+          <col>CHIHUAHUA</col>
+          <col>STATE</col>
+        </row>
+        <row>
+          <col>STATE_CODE_TYP</col>
+          <col>DURANGO</col>
+          <col>STATE</col>
+        </row>
+        <row>
+          <col>STATE_CODE_TYP</col>
+          <col>MEXICO</col>
+          <col>STATE</col>
+        </row>
+        <row>
+          <col>STATE_CODE_TYP</col>
+          <col>GUERRERO</col>
+          <col>STATE</col>
+        </row>
+        <row>
+          <col>STATE_CODE_TYP</col>
+          <col>GUANAJUATO</col>
+          <col>STATE</col>
+        </row>
+        <row>
+          <col>STATE_CODE_TYP</col>
+          <col>HIDALGO</col>
+          <col>STATE</col>
+        </row>
+        <row>
+          <col>STATE_CODE_TYP</col>
+          <col>JALISCO</col>
+          <col>STATE</col>
+        </row>
+        <row>
+          <col>STATE_CODE_TYP</col>
+          <col>NAYARIT</col>
+          <col>STATE</col>
+        </row>
+        <row>
+          <col>STATE_CODE_TYP</col>
+          <col>OAXACA</col>
+          <col>STATE</col>
+        </row>
+        <row>
+          <col>STATE_CODE_TYP</col>
+          <col>PUEBLA</col>
+          <col>STATE</col>
+        </row>
+        <row>
+          <col>STATE_CODE_TYP</col>
+          <col>QUINTANA ROO</col>
+          <col>STATE</col>
+        </row>
+        <row>
+          <col>STATE_CODE_TYP</col>
+          <col>SINALOA</col>
+          <col>STATE</col>
+        </row>
+        <row>
+          <col>STATE_CODE_TYP</col>
+          <col>SONORA</col>
+          <col>STATE</col>
+        </row>
+        <row>
+          <col>STATE_CODE_TYP</col>
+          <col>TABASCO</col>
+          <col>STATE</col>
+        </row>
+        <row>
+          <col>STATE_CODE_TYP</col>
+          <col>TAMAULIPAS</col>
+          <col>STATE</col>
+        </row>
+        <row>
+          <col>STATE_CODE_TYP</col>
+          <col>VERACRUZ</col>
+          <col>STATE</col>
+        </row>
+        <row>
+          <col>STATE_CODE_TYP</col>
+          <col>YUCATAN</col>
+          <col>STATE</col>
+        </row>
+        <row>
+          <col>STATE_CODE_TYP</col>
+          <col>NO. MARIANA ISLANDS</col>
+          <col>STATE</col>
+        </row>
+        <row>
+          <col>STATE_CODE_TYP</col>
+          <col>MANAGUA</col>
+          <col>CITY</col>
+        </row>
+        <row>
+          <col>STATE_CODE_TYP</col>
+          <col>LIMBURG</col>
+          <col>PROVINCE</col>
+        </row>
+        <row>
+          <col>STATE_CODE_TYP</col>
+          <col>ZUID-HOLLAND</col>
+          <col>PROVINCE</col>
+        </row>
+        <row>
+          <col>STATE_CODE_TYP</col>
+          <col>NEW SOUTH WALES</col>
+          <col>STATE</col>
+        </row>
+        <row>
+          <col>STATE_CODE_TYP</col>
+          <col>ONTARIO</col>
+          <col>STATE</col>
+        </row>
+        <row>
+          <col>STATE_CODE_TYP</col>
+          <col>ISLAMABAD</col>
+          <col>CITY</col>
+        </row>
+        <row>
+          <col>STATE_CODE_TYP</col>
+          <col>LENINGRAD</col>
+          <col>REGION</col>
+        </row>
+        <row>
+          <col>STATE_CODE_TYP</col>
+          <col>MOSCOW</col>
+          <col>CITY</col>
+        </row>
+        <row>
+          <col>STATE_CODE_TYP</col>
+          <col>NIZHNIY NOVGOROD</col>
+          <col>REGION</col>
+        </row>
+        <row>
+          <col>STATE_CODE_TYP</col>
+          <col>NOVOSIBIRSK</col>
+          <col>REGION</col>
+        </row>
+        <row>
+          <col>STATE_CODE_TYP</col>
+          <col>SVERDLOVSK</col>
+          <col>REGION</col>
+        </row>
+        <row>
+          <col>STATE_CODE_TYP</col>
+          <col>VOLGOGRAD</col>
+          <col>REGION</col>
+        </row>
+        <row>
+          <col>STATE_CODE_TYP</col>
+          <col>STOCKHOLM</col>
+          <col>COUNTY</col>
+        </row>
+        <row>
+          <col>STATE_CODE_TYP</col>
+          <col>SAN SALVADOR</col>
+          <col>CITY</col>
+        </row>
+        <row>
+          <col>STATE_CODE_TYP</col>
+          <col>VIENNA</col>
+          <col>STATE</col>
+        </row>
+        <row>
+          <col>STATE_CODE_TYP</col>
+          <col>BOLIVAR</col>
+          <col>STATE</col>
+        </row>
+        <row>
+          <col>STATE_CODE_TYP</col>
+          <col>VICTORIA</col>
+          <col>STATE</col>
+        </row>
+        <row>
+          <col>STATE_CODE_TYP</col>
+          <col>GAUTENG</col>
+          <col>PROVINCE</col>
+        </row>
+        <row>
+          <col>STATE_CODE_TYP</col>
+          <col>NORTHERN CAPE</col>
+          <col>PROVINCE</col>
+        </row>
+        <row>
+          <col>STATE_CODE_TYP</col>
+          <col>KRUNG THEP</col>
+          <col>CITY</col>
+        </row>
+        <row>
+          <col>STATE_CODE_TYP</col>
+          <col>DUBLIN</col>
+          <col>CITY</col>
+        </row>
+        <row>
+          <col>STATE_CODE_TYP</col>
+          <col>HARYANA</col>
+          <col>STATE</col>
+        </row>
+        <row>
+          <col>STATE_CODE_TYP</col>
+          <col>NEW DELHI</col>
+          <col>CITY</col>
+        </row>
+        <row>
+          <col>STATE_CODE_TYP</col>
+          <col>GOIAS</col>
+          <col>STATE</col>
+        </row>
+        <row>
+          <col>STATE_CODE_TYP</col>
+          <col>KARNTEN</col>
+          <col>STATE</col>
+        </row>
+        <row>
+          <col>STATE_CODE_TYP</col>
+          <col>MORDOVIA</col>
+          <col>STATE</col>
+        </row>
+        <row>
+          <col>STATE_CODE_TYP</col>
+          <col>PARANA</col>
+          <col>STATE</col>
+        </row>
+        <row>
+          <col>STATE_CODE_TYP</col>
+          <col>TULA</col>
+          <col>REGION</col>
+        </row>
+        <row>
+          <col>STATE_CODE_TYP</col>
+          <col>GELDERLAND</col>
+          <col>PROVINCE</col>
+        </row>
+        <row>
+          <col>STATE_CODE_TYP</col>
+          <col>KENT</col>
+          <col>COUNTY</col>
+        </row>
+        <row>
+          <col>STATE_CODE_TYP</col>
+          <col>EAST JAVA</col>
+          <col>PROVINCE</col>
+        </row>
+        <row>
+          <col>STATE_CODE_TYP</col>
+          <col>DISTRITO NACIONAL</col>
+          <col>CITY</col>
+        </row>
+        <row>
+          <col>STATE_CODE_TYP</col>
+          <col>DISTRITO CAPITAL</col>
+          <col>CITY</col>
+        </row>
+        <row>
+          <col>STATE_CODE_TYP</col>
+          <col>GRAND CASABLANCA</col>
+          <col>CITY</col>
+        </row>
+        <row>
+          <col>STATE_CODE_TYP</col>
+          <col>CITY OF LONDON</col>
+          <col>CITY</col>
+        </row>
+        <row>
+          <col>STATE_CODE_TYP</col>
+          <col>PANAMA</col>
+          <col>CITY</col>
+        </row>
+        <row>
+          <col>STATE_CODE_TYP</col>
+          <col>CALDAS</col>
+          <col>DEPRTMNT</col>
+        </row>
+        <row>
+          <col>STATE_CODE_TYP</col>
+          <col>CAMDEN</col>
+          <col>BOROUGH</col>
+        </row>
+        <row>
+          <col>STATE_CODE_TYP</col>
+          <col>CESAR</col>
+          <col>DEPRTMNT</col>
+        </row>
+        <row>
+          <col>STATE_CODE_TYP</col>
+          <col>CORTES</col>
+          <col>DEPRTMNT</col>
+        </row>
+        <row>
+          <col>STATE_CODE_TYP</col>
+          <col>CUNDINAMARCA</col>
+          <col>DEPRTMNT</col>
+        </row>
+        <row>
+          <col>STATE_CODE_TYP</col>
+          <col>MAGDALENA</col>
+          <col>DEPRTMNT</col>
+        </row>
+        <row>
+          <col>STATE_CODE_TYP</col>
+          <col>MARITIME</col>
+          <col>REGION</col>
+        </row>
+        <row>
+          <col>STATE_CODE_TYP</col>
+          <col>META</col>
+          <col>DEPRTMNT</col>
+        </row>
+        <row>
+          <col>STATE_CODE_TYP</col>
+          <col>OTAGO</col>
+          <col>REGION</col>
+        </row>
+        <row>
+          <col>STATE_CODE_TYP</col>
+          <col>QUINDIO</col>
+          <col>DEPRTMNT</col>
+        </row>
+        <row>
+          <col>STATE_CODE_TYP</col>
+          <col>RISARALDA</col>
+          <col>DEPRTMNT</col>
+        </row>
+        <row>
+          <col>STATE_CODE_TYP</col>
+          <col>SUCRE</col>
+          <col>DEPRTMNT</col>
+        </row>
+        <row>
+          <col>STATE_CODE_TYP</col>
+          <col>WESTERN</col>
+          <col>PROVINCE</col>
+        </row>
+        <row>
+          <col>STATE_CODE_TYP</col>
+          <col>VALLE DEL CAUCA</col>
+          <col>DEPRTMNT</col>
+        </row>
+        <row>
+          <col>STATE_CODE_TYP</col>
+          <col>BASEL-COUNTRY</col>
+          <col>CANTON</col>
+        </row>
+        <row>
+          <col>STATE_CODE_TYP</col>
+          <col>HESSEN</col>
+          <col>STATE</col>
+        </row>
+        <row>
+          <col>STATE_CODE_TYP</col>
+          <col>SOLIHULL</col>
+          <col>BOROUGH</col>
+        </row>
+        <row>
+          <col>STATE_CODE_TYP</col>
+          <col>TAMIL NADU</col>
+          <col>STATE</col>
+        </row>
+        <row>
+          <col>STATE_CODE_TYP</col>
+          <col>TREVISO</col>
+          <col>PROVINCE</col>
+        </row>
+        <row>
+          <col>STATE_CODE_TYP</col>
+          <col>AUCKLAND</col>
+          <col>CITY</col>
+        </row>
+        <row>
+          <col>STATE_CODE_TYP</col>
+          <col>WELLINGTON</col>
+          <col>CITY</col>
+        </row>
+        <row>
+          <col>STATE_CODE_TYP</col>
+          <col>QUEENSLAND</col>
+          <col>STATE</col>
+        </row>
+        <row>
+          <col>STATE_CODE_TYP</col>
+          <col>SOUTH AUSTRALIA</col>
+          <col>STATE</col>
+        </row>
+        <row>
+          <col>STATE_CODE_TYP</col>
+          <col>TASMANIA</col>
+          <col>STATE</col>
+        </row>
+        <row>
+          <col>STATE_CODE_TYP</col>
+          <col>WESTERN AUSTRALIA</col>
+          <col>STATE</col>
+        </row>
+        <row>
+          <col>STATE_CODE_TYP</col>
+          <col>ALBERTA</col>
+          <col>STATE</col>
+        </row>
+        <row>
+          <col>STATE_CODE_TYP</col>
+          <col>BANTEN</col>
+          <col>PROVINCE</col>
+        </row>
+        <row>
+          <col>STATE_CODE_TYP</col>
+          <col>CORDOBA</col>
+          <col>PROVINCE</col>
+        </row>
+        <row>
+          <col>STATE_CODE_TYP</col>
+          <col>CUSCATLAN</col>
+          <col>DEPRTMNT</col>
+        </row>
+        <row>
+          <col>STATE_CODE_TYP</col>
+          <col>DUBAI</col>
+          <col>CITY</col>
+        </row>
+        <row>
+          <col>STATE_CODE_TYP</col>
+          <col>KALIMANTAN TIMUR</col>
+          <col>PROVINCE</col>
+        </row>
+        <row>
+          <col>STATE_CODE_TYP</col>
+          <col>LA GUAJIRA</col>
+          <col>DEPRTMNT</col>
+        </row>
+        <row>
+          <col>STATE_CODE_TYP</col>
+          <col>QUEBEC</col>
+          <col>PROVINCE</col>
+        </row>
+        <row>
+          <col>STATE_CODE_TYP</col>
+          <col>SANTANDER</col>
+          <col>CITY</col>
+        </row>
+        <row>
+          <col>STATE_CODE_TYP</col>
+          <col>SCHLESWIG-HOLSTEIN</col>
+          <col>STATE</col>
+        </row>
+        <row>
+          <col>STATE_CODE_TYP</col>
+          <col>SHANDONG</col>
+          <col>PROVINCE</col>
+        </row>
+        <row>
+          <col>STATE_CODE_TYP</col>
+          <col>TOKYO</col>
+          <col>STATE</col>
+        </row>
+		<row>
+			<col>STATE_CODE_TYP</col>
+			<col>RIO GRANDE DO SUL</col>
+			<col>STATE</col>
+		</row>
+		<row>
+			<col>STATE_CODE_TYP</col>
+			<col>BRISTOL</col>
+			<col>CITY</col>
+		</row>
+		<row>
+			<col>STATE_CODE_TYP</col>
+			<col>ATLANTICO</col>
+			<col>DEPRTMNT</col>
+		</row>
+		<row>
+			<col>STATE_CODE_TYP</col>
+			<col>BREMEN</col>
+			<col>STATE</col>
+		</row>
+		<row>
+			<col>STATE_CODE_TYP</col>
+			<col>BRITISH COLUMBIA</col>
+			<col>STATE</col>
+		</row>
+		<row>
+			<col>STATE_CODE_TYP</col>
+			<col>BRUSSELS (BRUXELLES)</col>
+			<col>REGION</col>
+		</row>
+		<row>
+			<col>STATE_CODE_TYP</col>
+			<col>BUENOS AIRES</col>
+			<col>PROVINCE</col>
+		</row>
+		<row>
+			<col>STATE_CODE_TYP</col>
+			<col>CEARA</col>
+			<col>STATE</col>
+		</row>
+		<row>
+			<col>STATE_CODE_TYP</col>
+			<col>CREEK</col>
+			<col>DISTRICT</col>
+		</row>
+		<row>
+			<col>STATE_CODE_TYP</col>
+			<col>DEVONSHIRE</col>
+			<col>COUNTY</col>
+		</row>
+		<row>
+			<col>STATE_CODE_TYP</col>
+			<col>HA NOI</col>
+			<col>MUNPALTY</col>
+		</row>
+		<row>
+			<col>STATE_CODE_TYP</col>
+			<col>HAMILTON</col>
+			<col>CITY</col>
+		</row>
+		<row>
+			<col>STATE_CODE_TYP</col>
+			<col>HEBEI</col>
+			<col>PROVINCE</col>
+		</row>
+		<row>
+			<col>STATE_CODE_TYP</col>
+			<col>HENAN</col>
+			<col>PROVINCE</col>
+		</row>
+		<row>
+			<col>STATE_CODE_TYP</col>
+			<col>HO CHI MINH</col>
+			<col>MUNPALTY</col>
+		</row>
+		<row>
+			<col>STATE_CODE_TYP</col>
+			<col>JIANGXI</col>
+			<col>PROVINCE</col>
+		</row>
+		<row>
+			<col>STATE_CODE_TYP</col>
+			<col>LABUAN</col>
+			<col>STATE</col>
+		</row>
+		<row>
+			<col>STATE_CODE_TYP</col>
+			<col>LISBOA</col>
+			<col>CITY</col>
+		</row>
+		<row>
+			<col>STATE_CODE_TYP</col>
+			<col>MARANHAO</col>
+			<col>STATE</col>
+		</row>
+		<row>
+			<col>STATE_CODE_TYP</col>
+			<col>MASQAT</col>
+			<col>CITY</col>
+		</row>
+		<row>
+			<col>STATE_CODE_TYP</col>
+			<col>MATO GROSSO</col>
+			<col>STATE</col>
+		</row>
+		<row>
+			<col>STATE_CODE_TYP</col>
+			<col>MATO GROSSO DO SUL</col>
+			<col>STATE</col>
+		</row>
+		<row>
+			<col>STATE_CODE_TYP</col>
+			<col>MINAS GERAIS</col>
+			<col>STATE</col>
+		</row>
+		<row>
+			<col>STATE_CODE_TYP</col>
+			<col>NEI MONGOL (INNER MONGOLIA)</col>
+			<col>REGION</col>
+		</row>
+		<row>
+			<col>STATE_CODE_TYP</col>
+			<col>NOVA SCOTIA</col>
+			<col>STATE</col>
+		</row>
+		<row>
+			<col>STATE_CODE_TYP</col>
+			<col>PATHUM THANI</col>
+			<col>PROVINCE</col>
+		</row>
+		<row>
+			<col>STATE_CODE_TYP</col>
+			<col>PETERBOROUGH</col>
+			<col>CITY</col>
+		</row>
+		<row>
+			<col>STATE_CODE_TYP</col>
+			<col>PIAUI</col>
+			<col>STATE</col>
+		</row>
+		<row>
+			<col>STATE_CODE_TYP</col>
+			<col>PLAINES WILHEMS</col>
+			<col>DISTRICT</col>
+		</row>
+		<row>
+			<col>STATE_CODE_TYP</col>
+			<col>RATCHABURI</col>
+			<col>PROVINCE</col>
+		</row>
+		<row>
+			<col>STATE_CODE_TYP</col>
+			<col>SAN VICENTE</col>
+			<col>DEPRTMNT</col>
+		</row>
+		<row>
+			<col>STATE_CODE_TYP</col>
+			<col>SELANGOR</col>
+			<col>STATE</col>
+		</row>
+		<row>
+			<col>STATE_CODE_TYP</col>
+			<col>SHAANXI</col>
+			<col>PROVINCE</col>
+		</row>
+		<row>
+			<col>STATE_CODE_TYP</col>
+			<col>ST. PETER PORT</col>
+			<col>CITY</col>
+		</row>
+		<row>
+			<col>STATE_CODE_TYP</col>
+			<col>STAFFORDSHIRE</col>
+			<col>COUNTY</col>
+		</row>
+		<row>
+			<col>STATE_CODE_TYP</col>
+			<col>TORINO</col>
+			<col>CITY</col>
+		</row>
+		<row>
+			<col>STATE_CODE_TYP</col>
+			<col>TOWER HAMLETS</col>
+			<col>BOROUGH</col>
+		</row>
+		<row>
+			<col>STATE_CODE_TYP</col>
+			<col>WEST BENGAL</col>
+			<col>STATE</col>
+		</row>
+		<row>
+			<col>STATE_CODE_TYP</col>
+			<col>WESTMINSTER</col>
+			<col>BOROUGH</col>
+		</row>
+		<row>
+			<col>STATE_CODE_TYP</col>
+			<col>XINJIANG</col>
+			<col>REGION</col>
+		</row>		
+        <row>
+          <col>STATUS_CODE</col>
+          <col>S</col>
+          <col>Sell Side Rating</col>
+        </row>
+        <row>
+          <col>STATUS_CODE</col>
+          <col>B</col>
+          <col>Buy Side Rating</col>
+        </row>
+        <row>
+          <col>STATUS_CODE</col>
+          <col>U</col>
+          <col>Unsolicited</col>
+        </row>
+        <row>
+          <col>CLO_SECTOR</col>
+          <col>Technology, Media, and Telecommunications</col>
+          <col>Technology, Media and Telecommunications</col>
+        </row>
+        <row>
+          <col>CLO_SECTOR</col>
+          <col>Retailing, Leisure, and Consumer Products</col>
+          <col>Retailing, Leisure and Consumer Products</col>
+        </row>
+		<row>
+		  <col>REAS_TYP</col>
+          <col>Matured</col>
+          <col>02</col>
+        </row>
+        <row>
+		  <col>REAS_TYP</col>
+          <col>Paid Out</col>
+          <col>PO</col>
+        </row>
+        <row>
+		  <col>REAS_TYP</col>
+          <col>Delete</col>
+          <col>DL</col>
+        </row>
+        <row>
+		  <col>REAS_TYP</col>
+          <col>Called</col>
+          <col>36</col>
+        </row>		
+		<row>
+		 <col>COUNTRY_CODES</col>
+          <col>BGD</col>
+          <col>BD</col>
+        </row>
+         <row>
+		 <col>COUNTRY_CODES</col>
+          <col>BHR</col>
+          <col>BH</col>
+        </row>
+         <row>
+		 <col>COUNTRY_CODES</col>
+          <col>CAN</col>
+          <col>CA</col>
+        </row>
+         <row>
+		 <col>COUNTRY_CODES</col>
+          <col>CHL</col>
+          <col>CL</col>
+        </row>
+         <row>
+		 <col>COUNTRY_CODES</col>
+          <col>ETH</col>
+          <col>ET</col>
+        </row>
+         <row>
+		 <col>COUNTRY_CODES</col>
+          <col>GIB</col>
+          <col>GI</col>
+        </row>
+         <row>
+		 <col>COUNTRY_CODES</col>
+          <col>GNB</col>
+          <col>GW</col>
+        </row>
+        <row>
+		 <col>COUNTRY_CODES</col>
+         <col>HRV</col>
+         <col>HR</col>
+        </row>
+         <row>
+		 <col>COUNTRY_CODES</col>
+          <col>HUN</col>
+          <col>HU</col>
+        </row>
+         <row>
+		  <col>COUNTRY_CODES</col>
+          <col>JER</col>
+          <col>JE</col>
+        </row>
+         <row>
+		  <col>COUNTRY_CODES</col>
+          <col>JOR</col>
+          <col>JO</col>
+        </row>
+         <row>
+		  <col>COUNTRY_CODES</col>
+          <col>KIR</col>
+          <col>KI</col>
+        </row>
+         <row>
+		 <col>COUNTRY_CODES</col>
+          <col>KAZ</col>
+          <col>KZ</col>
+        </row>
+         <row>
+		 <col>COUNTRY_CODES</col>
+          <col>LBN</col>
+          <col>LB</col>
+        </row>
+         <row>
+		 <col>COUNTRY_CODES</col>
+          <col>MHL</col>
+          <col>MH</col>
+        </row>
+         <row>
+		 <col>COUNTRY_CODES</col>
+          <col>MKD</col>
+          <col>MK</col>
+        </row>
+         <row>
+		 <col>COUNTRY_CODES</col>
+          <col>MNP</col>
+          <col>MP</col>
+        </row>
+         <row>
+		 <col>COUNTRY_CODES</col>
+          <col>POL</col>
+          <col>PL</col>
+        </row>
+         <row>
+		 <col>COUNTRY_CODES</col>
+          <col>PCN</col>
+          <col>PN</col>
+        </row>
+         <row>
+		 <col>COUNTRY_CODES</col>
+          <col>QAT</col>
+          <col>QA</col>
+        </row>
+         <row>
+		 <col>COUNTRY_CODES</col>
+          <col>SLB</col>
+          <col>SB</col>
+        </row>
+         <row>
+		 <col>COUNTRY_CODES</col>
+          <col>SEN</col>
+          <col>SN</col>
+        </row>
+         <row>
+		 <col>COUNTRY_CODES</col>
+          <col>SUR</col>
+          <col>SR</col>
+        </row>
+         <row>
+		 <col>COUNTRY_CODES</col>
+          <col>SLV</col>
+          <col>SV</col>
+        </row>
+         <row>
+		 <col>COUNTRY_CODES</col>
+          <col>SWZ</col>
+          <col>SZ</col>
+        </row>
+         <row>
+		 <col>COUNTRY_CODES</col>
+          <col>TKL</col>
+          <col>TK</col>
+        </row>
+         <row>
+		 <col>COUNTRY_CODES</col>
+          <col>TUV</col>
+          <col>TV</col>
+        </row>
+         <row>
+		 <col>COUNTRY_CODES</col>
+          <col>VAT</col>
+          <col>VA</col>
+        </row>
+         <row>
+		 <col>COUNTRY_CODES</col>
+          <col>VUT</col>
+          <col>VU</col>
+        </row>
+         <row>
+		 <col>COUNTRY_CODES</col>
+          <col>MYT</col>
+          <col>YT</col>
+        </row>
+         <row>
+		 <col>COUNTRY_CODES</col>
+          <col>ZAF</col>
+          <col>ZA</col>
+        </row>
+         <row>
+		 <col>COUNTRY_CODES</col>
+          <col>ARE</col>
+          <col>AE</col>
+        </row>
+         <row>
+		 <col>COUNTRY_CODES</col>
+          <col>AFG</col>
+          <col>AF</col>
+        </row>
+         <row>
+		 <col>COUNTRY_CODES</col>
+          <col>ALA</col>
+          <col>AX</col>
+        </row>
+         <row>
+		 <col>COUNTRY_CODES</col>
+          <col>BFA</col>
+          <col>BF</col>
+        </row>
+         <row>
+		 <col>COUNTRY_CODES</col>
+          <col>BHS</col>
+          <col>BS</col>
+        </row>
+         <row>
+		 <col>COUNTRY_CODES</col>
+          <col>COK</col>
+          <col>CK</col>
+        </row>
+         <row>
+		 <col>COUNTRY_CODES</col>
+          <col>CZE</col>
+          <col>CZ</col>
+        </row>
+         <row>
+		 <col>COUNTRY_CODES</col>
+          <col>DNK</col>
+          <col>DK</col>
+        </row>
+         <row>
+		 <col>COUNTRY_CODES</col>
+          <col>ECU</col>
+          <col>EC</col>
+        </row>
+         <row>
+		 <col>COUNTRY_CODES</col>
+          <col>FLK</col>
+          <col>FK</col>
+        </row>
+         <row>
+		 <col>COUNTRY_CODES</col>
+          <col>FRO</col>
+          <col>FO</col>
+        </row>
+         <row>
+		 <col>COUNTRY_CODES</col>
+          <col>GGY</col>
+          <col>GG</col>
+        </row>
+         <row>
+		 <col>COUNTRY_CODES</col>
+          <col>IRQ</col>
+          <col>IQ</col>
+        </row>
+         <row>
+		 <col>COUNTRY_CODES</col>
+          <col>JAM</col>
+          <col>JM</col>
+        </row>
+         <row>
+		 <col>COUNTRY_CODES</col>
+          <col>LKA</col>
+          <col>LK</col>
+        </row>
+         <row>
+		 <col>COUNTRY_CODES</col>
+          <col>LBY</col>
+          <col>LY</col>
+        </row>
+         <row>
+		 <col>COUNTRY_CODES</col>
+          <col>MDG</col>
+          <col>MG</col>
+        </row>
+         <row>
+		 <col>COUNTRY_CODES</col>
+          <col>MLI</col>
+          <col>ML</col>
+        </row>
+         <row>
+		 <col>COUNTRY_CODES</col>
+          <col>MNG</col>
+          <col>MN</col>
+        </row>
+         <row>
+		 <col>COUNTRY_CODES</col>
+          <col>NIU</col>
+          <col>NU</col>
+        </row>
+         <row>
+		 <col>COUNTRY_CODES</col>
+          <col>PRY</col>
+          <col>PY</col>
+        </row>
+         <row>
+		 <col>COUNTRY_CODES</col>
+          <col>REU</col>
+          <col>RE</col>
+        </row>
+         <row>
+		 <col>COUNTRY_CODES</col>
+          <col>ROU</col>
+          <col>RO</col>
+        </row>
+         <row>
+		 <col>COUNTRY_CODES</col>
+          <col>TCA</col>
+          <col>TC</col>
+        </row>
+         <row>
+		 <col>COUNTRY_CODES</col>
+          <col>THA</col>
+          <col>TH</col>
+        </row>
+         <row>
+		 <col>COUNTRY_CODES</col>
+          <col>TKM</col>
+          <col>TM</col>
+        </row>
+         <row>
+		 <col>COUNTRY_CODES</col>
+          <col>UGA</col>
+          <col>UG</col>
+        </row>
+         <row>
+		 <col>COUNTRY_CODES</col>
+          <col>URY</col>
+          <col>UY</col>
+        </row>
+         <row>
+		 <col>COUNTRY_CODES</col>
+          <col>VNM</col>
+          <col>VN</col>
+        </row>
+         <row>
+		 <col>COUNTRY_CODES</col>
+          <col>ZWE</col>
+          <col>ZW</col>
+        </row>
+         <row>
+		 <col>COUNTRY_CODES</col>
+          <col>ALB</col>
+          <col>AL</col>
+        </row>
+         <row>
+		 <col>COUNTRY_CODES</col>
+          <col>ANT</col>
+          <col>AN</col>
+        </row>
+         <row>
+		 <col>COUNTRY_CODES</col>
+          <col>BLZ</col>
+          <col>BZ</col>
+        </row>
+         <row>
+		 <col>COUNTRY_CODES</col>
+          <col>CAF</col>
+          <col>CF</col>
+        </row>
+         <row>
+		 <col>COUNTRY_CODES</col>
+          <col>CHN</col>
+          <col>CN</col>
+        </row>
+         <row>
+		 <col>COUNTRY_CODES</col>
+          <col>COL</col>
+          <col>CO</col>
+        </row>
+         <row>
+		 <col>COUNTRY_CODES</col>
+          <col>CXR</col>
+          <col>CX</col>
+        </row>
+         <row>
+		 <col>COUNTRY_CODES</col>
+          <col>ESP</col>
+          <col>ES</col>
+        </row>
+         <row>
+		 <col>COUNTRY_CODES</col>
+          <col>GAB</col>
+          <col>GA</col>
+        </row>
+         <row>
+		 <col>COUNTRY_CODES</col>
+          <col>GIN</col>
+          <col>GN</col>
+        </row>
+         <row>
+		 <col>COUNTRY_CODES</col>
+          <col>GLP</col>
+          <col>GP</col>
+        </row>
+         <row>
+		 <col>COUNTRY_CODES</col>
+          <col>HMD</col>
+          <col>HM</col>
+        </row>
+         <row>
+		 <col>COUNTRY_CODES</col>
+          <col>ISL</col>
+          <col>IS</col>
+        </row>
+         <row>
+		 <col>COUNTRY_CODES</col>
+          <col>JPN</col>
+          <col>JP</col>
+        </row>
+         <row>
+		 <col>COUNTRY_CODES</col>
+          <col>KEN</col>
+          <col>KE</col>
+        </row>
+         <row>
+		 <col>COUNTRY_CODES</col>
+          <col>MSR</col>
+          <col>MS</col>
+        </row>
+         <row>
+		 <col>COUNTRY_CODES</col>
+          <col>MLT</col>
+          <col>MT</col>
+        </row>
+         <row>
+		 <col>COUNTRY_CODES</col>
+          <col>NLD</col>
+          <col>NL</col>
+        </row>
+         <row>
+		 <col>COUNTRY_CODES</col>
+          <col>SVN</col>
+          <col>SI</col>
+        </row>
+         <row>
+		 <col>COUNTRY_CODES</col>
+          <col>SMR</col>
+          <col>SM</col>
+        </row>
+         <row>
+		 <col>COUNTRY_CODES</col>
+          <col>STP</col>
+          <col>ST</col>
+        </row>
+         <row>
+		 <col>COUNTRY_CODES</col>
+          <col>TUN</col>
+          <col>TN</col>
+        </row>
+         <row>
+		 <col>COUNTRY_CODES</col>
+          <col>UKR</col>
+          <col>UA</col>
+        </row>
+         <row>
+		 <col>COUNTRY_CODES</col>
+          <col>VCT</col>
+          <col>VC</col>
+        </row>
+         <row>
+		 <col>COUNTRY_CODES</col>
+          <col>ZAR</col>
+          <col>ZR</col>
+        </row>
+         <row>
+		 <col>COUNTRY_CODES</col>
+          <col>AIA</col>
+          <col>AI</col>
+        </row>
+         <row>
+		 <col>COUNTRY_CODES</col>
+          <col>ARG</col>
+          <col>AR</col>
+        </row>
+         <row>
+		 <col>COUNTRY_CODES</col>
+          <col>AUS</col>
+          <col>AU</col>
+        </row>
+         <row>
+		 <col>COUNTRY_CODES</col>
+          <col>ABW</col>
+          <col>AW</col>
+        </row>
+         <row>
+		 <col>COUNTRY_CODES</col>
+          <col>BMU</col>
+          <col>BM</col>
+        </row>
+         <row>
+		 <col>COUNTRY_CODES</col>
+          <col>BRA</col>
+          <col>BR</col>
+        </row>
+         <row>
+		 <col>COUNTRY_CODES</col>
+          <col>BWA</col>
+          <col>BW</col>
+        </row>
+         <row>
+		 <col>COUNTRY_CODES</col>
+          <col>CHE</col>
+          <col>CH</col>
+        </row>
+         <row>
+		 <col>COUNTRY_CODES</col>
+          <col>DZA</col>
+          <col>DZ</col>
+        </row>
+         <row>
+		 <col>COUNTRY_CODES</col>
+          <col>GHA</col>
+          <col>GH</col>
+        </row>
+         <row>
+		 <col>COUNTRY_CODES</col>
+          <col>GUM</col>
+          <col>GU</col>
+        </row>
+         <row>
+		 <col>COUNTRY_CODES</col>
+          <col>HKG</col>
+          <col>HK</col>
+        </row>
+         <row>
+		 <col>COUNTRY_CODES</col>
+          <col>COM</col>
+          <col>KM</col>
+        </row>
+         <row>
+		 <col>COUNTRY_CODES</col>
+          <col>KNA</col>
+          <col>KN</col>
+        </row>
+         <row>
+		 <col>COUNTRY_CODES</col>
+          <col>CYM</col>
+          <col>KY</col>
+        </row>
+         <row>
+		 <col>COUNTRY_CODES</col>
+          <col>LCA</col>
+          <col>LC</col>
+        </row>
+         <row>
+		 <col>COUNTRY_CODES</col>
+          <col>LIE</col>
+          <col>LI</col>
+        </row>
+         <row>
+		 <col>COUNTRY_CODES</col>
+          <col>LSO</col>
+          <col>LS</col>
+        </row>
+         <row>
+		 <col>COUNTRY_CODES</col>
+          <col>MCO</col>
+          <col>MC</col>
+        </row>
+         <row>
+		 <col>COUNTRY_CODES</col>
+          <col>NFK</col>
+          <col>NF</col>
+        </row>
+         <row>
+		 <col>COUNTRY_CODES</col>
+          <col>NIC</col>
+          <col>NI</col>
+        </row>
+         <row>
+		 <col>COUNTRY_CODES</col>
+          <col>NUK</col>
+          <col>NU</col>
+        </row>
+         <row>
+		 <col>COUNTRY_CODES</col>
+          <col>PLW</col>
+          <col>PW</col>
+        </row>
+         <row>
+		 <col>COUNTRY_CODES</col>
+          <col>ROM</col>
+          <col>RO</col>
+        </row>
+         <row>
+		 <col>COUNTRY_CODES</col>
+          <col>SAU</col>
+          <col>SA</col>
+        </row>
+         <row>
+		 <col>COUNTRY_CODES</col>
+          <col>SLE</col>
+          <col>SL</col>
+        </row>
+         <row>
+		 <col>COUNTRY_CODES</col>
+          <col>TJK</col>
+          <col>TJ</col>
+        </row>
+         <row>
+		 <col>COUNTRY_CODES</col>
+          <col>TLS</col>
+          <col>TL</col>
+        </row>
+         <row>
+		 <col>COUNTRY_CODES</col>
+          <col>USA</col>
+          <col>US</col>
+        </row>
+         <row>
+		 <col>COUNTRY_CODES</col>
+          <col>AUT</col>
+          <col>AT</col>
+        </row>
+         <row>
+		 <col>COUNTRY_CODES</col>
+          <col>BRB</col>
+          <col>BB</col>
+        </row>
+         <row>
+		 <col>COUNTRY_CODES</col>
+          <col>BGR</col>
+          <col>BG</col>
+        </row>
+         <row>
+		 <col>COUNTRY_CODES</col>
+          <col>BLR</col>
+          <col>BY</col>
+        </row>
+         <row>
+		 <col>COUNTRY_CODES</col>
+          <col>COD</col>
+          <col>CD</col>
+        </row>
+         <row>
+		 <col>COUNTRY_CODES</col>
+          <col>ESH</col>
+          <col>EH</col>
+        </row>
+         <row>
+		 <col>COUNTRY_CODES</col>
+          <col>GBR</col>
+          <col>GB</col>
+        </row>
+         <row>
+		 <col>COUNTRY_CODES</col>
+          <col>GRL</col>
+          <col>GL</col>
+        </row>
+         <row>
+		 <col>COUNTRY_CODES</col>
+          <col>GMB</col>
+          <col>GM</col>
+        </row>
+         <row>
+		 <col>COUNTRY_CODES</col>
+          <col>IDN</col>
+          <col>ID</col>
+        </row>
+         <row>
+		 <col>COUNTRY_CODES</col>
+          <col>IND</col>
+          <col>IN</col>
+        </row>
+         <row>
+		 <col>COUNTRY_CODES</col>
+          <col>LBR</col>
+          <col>LR</col>
+        </row>
+         <row>
+		 <col>COUNTRY_CODES</col>
+          <col>LUX</col>
+          <col>LU</col>
+        </row>
+         <row>
+		 <col>COUNTRY_CODES</col>
+          <col>MAR</col>
+          <col>MA</col>
+        </row>
+         <row>
+		 <col>COUNTRY_CODES</col>
+          <col>MEX</col>
+          <col>MX</col>
+        </row>
+         <row>
+		 <col>COUNTRY_CODES</col>
+          <col>NER</col>
+          <col>NE</col>
+        </row>
+         <row>
+		 <col>COUNTRY_CODES</col>
+          <col>NOR</col>
+          <col>NO</col>
+        </row>
+         <row>
+		 <col>COUNTRY_CODES</col>
+          <col>NPL</col>
+          <col>NP</col>
+        </row>
+         <row>
+		 <col>COUNTRY_CODES</col>
+          <col>NZL</col>
+          <col>NZ</col>
+        </row>
+         <row>
+		 <col>COUNTRY_CODES</col>
+          <col>OMN</col>
+          <col>OM</col>
+        </row>
+         <row>
+		 <col>COUNTRY_CODES</col>
+          <col>PYF</col>
+          <col>PF</col>
+        </row>
+         <row>
+		 <col>COUNTRY_CODES</col>
+          <col>SDN</col>
+          <col>SD</col>
+        </row>
+         <row>
+		 <col>COUNTRY_CODES</col>
+          <col>SGP</col>
+          <col>SG</col>
+        </row>
+         <row>
+		 <col>COUNTRY_CODES</col>
+          <col>SYR</col>
+          <col>SY</col>
+        </row>
+         <row>
+		 <col>COUNTRY_CODES</col>
+          <col>TCD</col>
+          <col>TD</col>
+        </row>
+         <row>
+		 <col>COUNTRY_CODES</col>
+          <col>ATF</col>
+          <col>TF</col>
+        </row>
+         <row>
+		 <col>COUNTRY_CODES</col>
+          <col>TWN</col>
+          <col>TW</col>
+        </row>
+         <row>
+		 <col>COUNTRY_CODES</col>
+          <col>ATG</col>
+          <col>AG</col>
+        </row>
+         <row>
+		 <col>COUNTRY_CODES</col>
+          <col>AGO</col>
+          <col>AO</col>
+        </row>
+         <row>
+		 <col>COUNTRY_CODES</col>
+          <col>ASM</col>
+          <col>AS</col>
+        </row>
+         <row>
+		 <col>COUNTRY_CODES</col>
+          <col>DJI</col>
+          <col>DJ</col>
+        </row>
+         <row>
+		 <col>COUNTRY_CODES</col>
+          <col>DMA</col>
+          <col>DM</col>
+        </row>
+         <row
+		 ><col>COUNTRY_CODES</col>
+          <col>FSM</col>
+          <col>FM</col>
+        </row>
+         <row>
+		 <col>COUNTRY_CODES</col>
+          <col>GNQ</col>
+          <col>GQ</col>
+        </row>
+         <row>
+		 <col>COUNTRY_CODES</col>
+          <col>GRC</col>
+          <col>GR</col>
+        </row>
+         <row>
+		 <col>COUNTRY_CODES</col>
+          <col>GUY</col>
+          <col>GY</col>
+        </row>
+         <row>
+		 <col>COUNTRY_CODES</col>
+          <col>LAO</col>
+          <col>LA</col>
+        </row>
+         <row>
+		 <col>COUNTRY_CODES</col>
+          <col>LTU</col>
+          <col>LT</col>
+        </row>
+         <row>
+		 <col>COUNTRY_CODES</col>
+          <col>MDA</col>
+          <col>MD</col>
+        </row>
+         <row>
+		 <col>COUNTRY_CODES</col>
+          <col>MUS</col>
+          <col>MU</col>
+        </row>
+         <row>
+		 <col>COUNTRY_CODES</col>
+          <col>NAM</col>
+          <col>NA</col>
+        </row>
+         <row>
+		 <col>COUNTRY_CODES</col>
+          <col>NRU</col>
+          <col>NR</col>
+        </row>
+         <row>
+		 <col>COUNTRY_CODES</col>
+          <col>PAK</col>
+          <col>PK</col>
+        </row>
+         <row>
+		 <col>COUNTRY_CODES</col>
+          <col>SPM</col>
+          <col>PM</col>
+        </row>
+         <row>
+		 <col>COUNTRY_CODES</col>
+          <col>PRI</col>
+          <col>PR</col>
+        </row>
+         <row>
+		 <col>COUNTRY_CODES</col>
+          <col>RUS</col>
+          <col>RU</col>
+        </row>
+         <row>
+		 <col>COUNTRY_CODES</col>
+          <col>UMI</col>
+          <col>UM</col>
+        </row>
+         <row>
+		 <col>COUNTRY_CODES</col>
+          <col>YEM</col>
+          <col>YE</col>
+        </row>
+         <row>
+		 <col>COUNTRY_CODES</col>
+          <col>YUG</col>
+          <col>YU</col>
+        </row>
+         <row>
+		 <col>COUNTRY_CODES</col>
+          <col>AND</col>
+          <col>AD</col>
+        </row>
+         <row>
+		 <col>COUNTRY_CODES</col>
+          <col>BIH</col>
+          <col>BA</col>
+        </row>
+         <row>
+		 <col>COUNTRY_CODES</col>
+          <col>BEL</col>
+          <col>BE</col>
+        </row>
+         <row>
+		 <col>COUNTRY_CODES</col>
+          <col>BRN</col>
+          <col>BN</col>
+        </row>
+         <row>
+		 <col>COUNTRY_CODES</col>
+          <col>BOL</col>
+          <col>BO</col>
+        </row>
+         <row>
+		 <col>COUNTRY_CODES</col>
+          <col>BVT</col>
+          <col>BV</col>
+        </row>
+         <row>
+		 <col>COUNTRY_CODES</col>
+          <col>CIV</col>
+          <col>CI</col>
+        </row>
+         <row>
+		 <col>COUNTRY_CODES</col>
+          <col>CMR</col>
+          <col>CM</col>
+        </row>
+         <row>
+		 <col>COUNTRY_CODES</col>
+          <col>CYP</col>
+          <col>CY</col>
+        </row>
+         <row>
+		 <col>COUNTRY_CODES</col>
+          <col>EST</col>
+          <col>EE</col>
+        </row>
+         <row>
+		 <col>COUNTRY_CODES</col>
+          <col>FIN</col>
+          <col>FI</col>
+        </row>
+         <row>
+		 <col>COUNTRY_CODES</col>
+          <col>FXX</col>
+          <col>FX</col>
+        </row>
+         <row>
+		 <col>COUNTRY_CODES</col>
+          <col>GRD</col>
+          <col>GD</col>
+        </row>
+         <row>
+		 <col>COUNTRY_CODES</col>
+          <col>GUF</col>
+          <col>GF</col>
+        </row>
+         <row>
+		 <col>COUNTRY_CODES</col>
+          <col>IRL</col>
+          <col>IE</col>
+        </row>
+         <row>
+		 <col>COUNTRY_CODES</col>
+          <col>IOT</col>
+          <col>IO</col>
+        </row>
+         <row>
+		 <col>COUNTRY_CODES</col>
+          <col>KGZ</col>
+          <col>KG</col>
+        </row>
+         <row>
+		 <col>COUNTRY_CODES</col>
+          <col>KOR</col>
+          <col>KR</col>
+        </row>
+         <row>
+		 <col>COUNTRY_CODES</col>
+          <col>KWT</col>
+          <col>KW</col>
+        </row>
+         <row>
+		 <col>COUNTRY_CODES</col>
+          <col>MMR</col>
+          <col>MM</col>
+        </row>
+         <row>
+		 <col>COUNTRY_CODES</col>
+          <col>MDV</col>
+          <col>MV</col>
+        </row>
+         <row>
+		 <col>COUNTRY_CODES</col>
+          <col>MOZ</col>
+          <col>MZ</col>
+        </row>
+         <row>
+		 <col>COUNTRY_CODES</col>
+          <col>NCL</col>
+          <col>NC</col>
+        </row>
+         <row>
+		 <col>COUNTRY_CODES</col>
+          <col>PER</col>
+          <col>PE</col>
+        </row>
+         <row>
+		 <col>COUNTRY_CODES</col>
+          <col>PRT</col>
+          <col>PT</col>
+        </row>
+         <row>
+		 <col>COUNTRY_CODES</col>
+          <col>SUN</col>
+          <col>SU</col>
+        </row>
+         <row>
+		 <col>COUNTRY_CODES</col>
+          <col>TMP</col>
+          <col>TL</col>
+        </row>
+         <row>
+		 <col>COUNTRY_CODES</col>
+          <col>TON</col>
+          <col>TO</col>
+        </row>
+         <row>
+		 <col>COUNTRY_CODES</col>
+          <col>TUR</col>
+          <col>TR</col>
+        </row>
+         <row>
+		 <col>COUNTRY_CODES</col>
+          <col>UZB</col>
+          <col>UZ</col>
+        </row>
+         <row>
+		 <col>COUNTRY_CODES</col>
+          <col>VIR</col>
+          <col>VI</col>
+        </row>
+         <row>
+		 <col>COUNTRY_CODES</col>
+          <col>BDI</col>
+          <col>BI</col>
+        </row>
+         <row>
+		 <col>COUNTRY_CODES</col>
+          <col>COG</col>
+          <col>CG</col>
+        </row>
+         <row>
+		 <col>COUNTRY_CODES</col>
+          <col>CRI</col>
+          <col>CR</col>
+        </row>
+         <row>
+		 <col>COUNTRY_CODES</col>
+          <col>DEU</col>
+          <col>DE</col>
+        </row>
+         <row>
+		 <col>COUNTRY_CODES</col>
+          <col>FJI</col>
+          <col>FJ</col>
+        </row>
+         <row>
+		 <col>COUNTRY_CODES</col>
+          <col>FRA</col>
+          <col>FR</col>
+        </row>
+         <row>
+		 <col>COUNTRY_CODES</col>
+          <col>SGS</col>
+          <col>GS</col>
+        </row>
+         <row>
+		 <col>COUNTRY_CODES</col>
+          <col>GTM</col>
+          <col>GT</col>
+        </row>
+         <row>
+		 <col>COUNTRY_CODES</col>
+          <col>ITA</col>
+          <col>IT</col>
+        </row>
+         <row>
+		 <col>COUNTRY_CODES</col>
+          <col>JEY</col>
+          <col>JE</col>
+        </row>
+         <row>
+		 <col>COUNTRY_CODES</col>
+          <col>PRK</col>
+          <col>KP</col>
+        </row>
+         <row>
+		 <col>COUNTRY_CODES</col>
+          <col>LVA</col>
+          <col>LV</col>
+        </row>
+         <row>
+		 <col>COUNTRY_CODES</col>
+          <col>MTQ</col>
+          <col>MQ</col>
+        </row>
+         <row>
+		 <col>COUNTRY_CODES</col>
+          <col>MWI</col>
+          <col>MW</col>
+        </row>
+         <row>
+		 <col>COUNTRY_CODES</col>
+          <col>PSE</col>
+          <col>PS</col>
+        </row>
+         <row>
+		 <col>COUNTRY_CODES</col>
+          <col>TTO</col>
+          <col>TT</col>
+        </row>
+         <row>
+		 <col>COUNTRY_CODES</col>
+          <col>WSM</col>
+          <col>WS</col>
+        </row>
+         <row>
+		 <col>COUNTRY_CODES</col>
+          <col>BEN</col>
+          <col>BJ</col>
+        </row>
+         <row>
+		 <col>COUNTRY_CODES</col>
+          <col>BTN</col>
+          <col>BT</col>
+        </row>
+         <row>
+		 <col>COUNTRY_CODES</col>
+          <col>CUB</col>
+          <col>CU</col>
+        </row>
+         <row>
+		 <col>COUNTRY_CODES</col>
+          <col>CPV</col>
+          <col>CV</col>
+        </row>
+         <row>
+		 <col>COUNTRY_CODES</col>
+          <col>HND</col>
+          <col>HN</col>
+        </row>
+         <row>
+		 <col>COUNTRY_CODES</col>
+          <col>ISR</col>
+          <col>IL</col>
+        </row>
+         <row>
+		 <col>COUNTRY_CODES</col>
+          <col>IMN</col>
+          <col>IM</col>
+        </row>
+         <row>
+		 <col>COUNTRY_CODES</col>
+          <col>IRN</col>
+          <col>IR</col>
+        </row>
+         <row>
+		 <col>COUNTRY_CODES</col>
+          <col>MRT</col>
+          <col>MR</col>
+        </row>
+         <row>
+		 <col>COUNTRY_CODES</col>
+          <col>PAN</col>
+          <col>PA</col>
+        </row>
+         <row>
+		 <col>COUNTRY_CODES</col>
+          <col>PHL</col>
+          <col>PH</col>
+        </row>
+         <row>
+		 <col>COUNTRY_CODES</col>
+          <col>SHN</col>
+          <col>SH</col>
+        </row>
+         <row>
+		 <col>COUNTRY_CODES</col>
+          <col>VEN</col>
+          <col>VE</col>
+        </row>
+         <row>
+		 <col>COUNTRY_CODES</col>
+          <col>VGB</col>
+          <col>VG</col>
+        </row>
+         <row>
+		 <col>COUNTRY_CODES</col>
+          <col>WLF</col>
+          <col>WF</col>
+        </row>
+         <row>
+		 <col>COUNTRY_CODES</col>
+          <col>ZMB</col>
+          <col>ZM</col>
+        </row>
+         <row>
+		 <col>COUNTRY_CODES</col>
+          <col>ARM</col>
+          <col>AM</col>
+        </row>
+         <row>
+		 <col>COUNTRY_CODES</col>
+          <col>ATA</col>
+          <col>AQ</col>
+        </row>
+         <row>
+		 <col>COUNTRY_CODES</col>
+          <col>AZE</col>
+          <col>AZ</col>
+        </row>
+         <row>
+		 <col>COUNTRY_CODES</col>
+          <col>CCK</col>
+          <col>CC</col>
+        </row>
+         <row>
+		 <col>COUNTRY_CODES</col>
+          <col>DOM</col>
+          <col>DO</col>
+        </row>
+         <row>
+		 <col>COUNTRY_CODES</col>
+          <col>EGY</col>
+          <col>EG</col>
+        </row>
+         <row>
+		 <col>COUNTRY_CODES</col>
+          <col>ERI</col>
+          <col>ER</col>
+        </row>
+         <row>
+		 <col>COUNTRY_CODES</col>
+          <col>GEO</col>
+          <col>GE</col>
+        </row>
+         <row>
+		 <col>COUNTRY_CODES</col>
+          <col>CHA</col>
+          <col>HA</col>
+        </row>
+         <row>
+		 <col>COUNTRY_CODES</col>
+          <col>HTI</col>
+          <col>HT</col>
+        </row>
+         <row>
+		 <col>COUNTRY_CODES</col>
+          <col>KHM</col>
+          <col>KH</col>
+        </row>
+         <row>
+		 <col>COUNTRY_CODES</col>
+          <col>MNE</col>
+          <col>ME</col>
+        </row>
+         <row>
+		 <col>COUNTRY_CODES</col>
+          <col>MAC</col>
+          <col>MO</col>
+        </row>
+         <row>
+		 <col>COUNTRY_CODES</col>
+          <col>MYS</col>
+          <col>MY</col>
+        </row>
+         <row>
+		 <col>COUNTRY_CODES</col>
+          <col>NGA</col>
+          <col>NG</col>
+        </row>
+         <row>
+		 <col>COUNTRY_CODES</col>
+          <col>PNG</col>
+          <col>PG</col>
+        </row>
+         <row>
+		 <col>COUNTRY_CODES</col>
+          <col>RWA</col>
+          <col>RW</col>
+        </row>
+         <row>
+		 <col>COUNTRY_CODES</col>
+          <col>SYC</col>
+          <col>SC</col>
+        </row>
+         <row>
+		 <col>COUNTRY_CODES</col>
+          <col>SWE</col>
+          <col>SE</col>
+        </row>
+         <row>
+		 <col>COUNTRY_CODES</col>
+          <col>SJM</col>
+          <col>SJ</col>
+        </row>
+         <row>
+		 <col>COUNTRY_CODES</col>
+          <col>SVK</col>
+          <col>SK</col>
+        </row>
+         <row>
+		 <col>COUNTRY_CODES</col>
+          <col>SOM</col>
+          <col>SO</col>
+        </row>
+         <row>
+		 <col>COUNTRY_CODES</col>
+          <col>TGO</col>
+          <col>TG</col>
+        </row>
+         <row>
+		 <col>COUNTRY_CODES</col>
+          <col>TZA</col>
+          <col>TZ</col>
+        </row>
+      </data>
+    </table>
+  </Translation>
+</MappingDef>

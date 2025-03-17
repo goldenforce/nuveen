@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<root createdUser="user1" entityName="Property" entitySubType="[]" id="2-o9t&gt;)Me1" isDefault="Y" isPublic="N" screenType="SYSTEMFORM" title="F: PropertyDetails_NRE">
+  <users>
+    <user id="NREUISH020" user="" userGroup="" userRole="pm_governance_&amp;_operations"/>
+    <user id="NREUISH024" user="" userGroup="" userRole="pm_finance_operations_fund"/>
+    <user id="NREUISH023" user="" userGroup="" userRole="pm_sustainability"/>
+    <user id="NREUISH027" user="" userGroup="" userRole="pm_data_governance"/>
+    <user id="NREUISH026" user="" userGroup="" userRole="pm_readonly"/>
+    <user id="NREUISH022" user="" userGroup="" userRole="pm_asset_management"/>
+    <user id="NREUISH021" user="" userGroup="" userRole="pm_real_assets_technology"/>
+    <user id="NREUISH025" user="" userGroup="" userRole="pm_users"/>
+    <user id="NREUISH019" user="" userGroup="" userRole="pm_finance_operations_property"/>
+  </users>
+  <control caption="Property Details" columns="2" fullQualPath="Property.PropertyDetails" hideDetail="N" id="%B3RE1/581" labelName="" lazyInd="N" orderNum="0" pageSize="0" parentId="" relatedPath="" screenId="2-o9t&amp;gt;)Me1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="RECORD">
+    <config>{"DETAIL_CHART_CONFIG":[]}</config>
+    <control caption="Property Type" columns="2" fullQualPath="Property.PropertyDetails.RelatedPropertyType.PropertyType.PropertyTypeDetails.PropertyType" hideDetail="N" id="%B3lE1/581" isColumnInTable="N" labelName="" lazyInd="N" orderNum="0" pageSize="0" parentId="%B3RE1/581" relatedPath="" screenId="2-o9t&amp;gt;)Me1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+      <config>{"DETAIL_CHART_CONFIG":[]}</config>
+    </control>
+    <control caption="Property Type Name" columns="2" fullQualPath="Property.PropertyDetails.RelatedPropertyType.PropertyType.PropertyTypeDetails.PropertyTypeName" hideDetail="N" id="%B3nE1/581" isColumnInTable="N" labelName="" lazyInd="N" orderNum="1" pageSize="0" parentId="%B3RE1/581" relatedPath="" screenId="2-o9t&amp;gt;)Me1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+      <config>{"DETAIL_CHART_CONFIG":[]}</config>
+    </control>
+    <control caption="Property Name" columns="2" fullQualPath="Property.PropertyDetails.PropertyName" hideDetail="N" id="%B3pE1/581" isColumnInTable="N" labelName="" lazyInd="N" orderNum="2" pageSize="0" parentId="%B3RE1/581" relatedPath="" screenId="2-o9t&amp;gt;)Me1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+      <config>{"DETAIL_CHART_CONFIG":[]}</config>
+    </control>
+    <control caption="Property Description" columns="2" fullQualPath="Property.PropertyDetails.PropertyDescription" hideDetail="N" id="%B3rE1/581" isColumnInTable="N" labelName="" lazyInd="N" orderNum="3" pageSize="0" parentId="%B3RE1/581" relatedPath="" screenId="2-o9t&amp;gt;)Me1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+      <config>{"CSS_CLASS_NAME":[{"CSS_CLASS_NAME":""}],"DETAIL_CHART_CONFIG":[]}</config>
+    </control>
+    <control caption="Property Sub Type (Global)" columns="2" fullQualPath="Property.PropertyDetails.PropertySubType" hideDetail="N" id="%B3tE1/581" isColumnInTable="N" labelName="" lazyInd="N" orderNum="4" pageSize="0" parentId="%B3RE1/581" relatedPath="" screenId="2-o9t&amp;gt;)Me1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+      <config>{"CSS_CLASS_NAME":[{"CSS_CLASS_NAME":"gsRedBorderColor"}]}</config>
+    </control>
+    <control caption="Number of Living Units" columns="2" fullQualPath="Property.PropertyDetails.NumberOfLivingUnits" hideDetail="N" id="%B3vE1/581" isColumnInTable="N" labelName="" lazyInd="N" orderNum="5" pageSize="0" parentId="%B3RE1/581" relatedPath="" screenId="2-o9t&amp;gt;)Me1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+      <config>{"CSS_CLASS_NAME":[{"CSS_CLASS_NAME":""}],"DETAIL_CHART_CONFIG":[]}</config>
+    </control>
+    <control caption="Number of Bedrooms" columns="2" fullQualPath="Property.PropertyDetails.NumberofBedrooms" hideDetail="N" id="%B3xE1/581" isColumnInTable="N" labelName="" lazyInd="N" orderNum="6" pageSize="0" parentId="%B3RE1/581" relatedPath="" screenId="2-o9t&amp;gt;)Me1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+      <config>{"DETAIL_CHART_CONFIG":[]}</config>
+    </control>
+    <control caption="Accounting Company" columns="2" fullQualPath="Property.PropertyDetails.NREAccountingCompany" hideDetail="N" id="%B3zE1/581" isColumnInTable="N" labelName="" lazyInd="N" orderNum="7" pageSize="0" parentId="%B3RE1/581" relatedPath="" screenId="2-o9t&amp;gt;)Me1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+      <config>{"CSS_CLASS_NAME":[{"CSS_CLASS_NAME":"gsRedBorderColor"}],"DETAIL_CHART_CONFIG":[]}</config>
+    </control>
+    <control caption="Cert of Occ Completed Date" columns="2" fullQualPath="Property.PropertyDetails.NRECertofOccCompletedDate" hideDetail="N" id="%B3%E1/581" isColumnInTable="N" labelName="" lazyInd="N" orderNum="8" pageSize="0" parentId="%B3RE1/581" relatedPath="" screenId="2-o9t&amp;gt;)Me1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+      <config>{"DETAIL_CHART_CONFIG":[]}</config>
+    </control>
+    <control caption="Management Company" columns="2" fullQualPath="Property.PropertyDetails.NREManagementCompany" hideDetail="N" id="%B3&amp;amp;E1/581" isColumnInTable="N" labelName="" lazyInd="N" orderNum="9" pageSize="0" parentId="%B3RE1/581" relatedPath="" screenId="2-o9t&amp;gt;)Me1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+      <config>{"CSS_CLASS_NAME":[{"CSS_CLASS_NAME":"gsRedBorderColor"}],"DETAIL_CHART_CONFIG":[]}</config>
+    </control>
+    <control caption="Net Rentable Area" columns="2" fullQualPath="Property.PropertyDetails.NRENetRentableArea" hideDetail="N" id="%B3-E1/581" isColumnInTable="N" labelName="" lazyInd="N" orderNum="10" pageSize="0" parentId="%B3RE1/581" relatedPath="" screenId="2-o9t&amp;gt;)Me1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+      <config>{"DETAIL_CHART_CONFIG":[]}</config>
+    </control>
+    <control caption="Number of Floors" columns="2" fullQualPath="Property.PropertyDetails.NRENumberofFloors" hideDetail="N" id="%B3/E1/581" isColumnInTable="N" labelName="" lazyInd="N" orderNum="11" pageSize="0" parentId="%B3RE1/581" relatedPath="" screenId="2-o9t&amp;gt;)Me1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+      <config>{"DETAIL_CHART_CONFIG":[]}</config>
+    </control>
+    <control caption="Currency" columns="2" fullQualPath="Property.PropertyDetails.NREPropertyCurrency" hideDetail="N" id="%B3)E1/581" isColumnInTable="N" labelName="" lazyInd="N" orderNum="12" pageSize="0" parentId="%B3RE1/581" relatedPath="" screenId="2-o9t&amp;gt;)Me1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+      <config>{"DETAIL_CHART_CONFIG":[]}</config>
+    </control>
+    <control caption="Developer" columns="2" fullQualPath="Property.PropertyDetails.NREPropertyDeveloper" hideDetail="N" id="%B3?E1/581" isColumnInTable="N" labelName="" lazyInd="N" orderNum="13" pageSize="0" parentId="%B3RE1/581" relatedPath="" screenId="2-o9t&amp;gt;)Me1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+      <config>{"DETAIL_CHART_CONFIG":[]}</config>
+    </control>
+    <control caption="Joint Venture Partner" columns="2" fullQualPath="Property.PropertyDetails.NREPropertyJVPartner" hideDetail="N" id="%B3&amp;gt;E1/581" isColumnInTable="N" labelName="" lazyInd="N" orderNum="14" pageSize="0" parentId="%B3RE1/581" relatedPath="" screenId="2-o9t&amp;gt;)Me1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+      <config>{"DETAIL_CHART_CONFIG":[]}</config>
+    </control>
+    <control caption="Land Acreage" columns="2" fullQualPath="Property.PropertyDetails.NREPropertyLandAcreage" hideDetail="N" id="%B31F1/581" isColumnInTable="N" labelName="" lazyInd="N" orderNum="15" pageSize="0" parentId="%B3RE1/581" relatedPath="" screenId="2-o9t&amp;gt;)Me1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+      <config>{"DETAIL_CHART_CONFIG":[]}</config>
+    </control>
+    <control caption="Real Estate Owned Indicator" columns="2" fullQualPath="Property.PropertyDetails.RealEstateOwnedIndicator" hideDetail="N" id="%B33F1/581" isColumnInTable="N" labelName="" lazyInd="N" orderNum="16" pageSize="0" parentId="%B3RE1/581" relatedPath="" screenId="2-o9t&amp;gt;)Me1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+      <config>{"DETAIL_CHART_CONFIG":[]}</config>
+    </control>
+    <control caption="Number of Buildings" columns="2" fullQualPath="Property.PropertyDetails.NRENumberofBuildings" hideDetail="N" id="%B35F1/581" isColumnInTable="N" labelName="" lazyInd="N" orderNum="17" pageSize="0" parentId="%B3RE1/581" relatedPath="" screenId="2-o9t&amp;gt;)Me1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+      <config>{"DETAIL_CHART_CONFIG":[]}</config>
+    </control>
+  </control>
+  <control caption="Other Property Details" columns="3" fullQualPath="" hideDetail="N" id="%B37F1/581" labelName="" lazyInd="N" orderNum="1" pageSize="0" parentId="" relatedPath="" screenId="2-o9t&amp;gt;)Me1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="TABSHEET">
+    <config>{"DETAIL_CHART_CONFIG":[]}</config>
+    <control caption="Related Property" columns="2" fullQualPath="Property.RelatedProperty" hideDetail="N" id="%B3%F1/581" isColumnInTable="N" labelName="" lazyInd="N" orderNum="0" pageSize="5" parentId="%B37F1/581" relatedPath="" screenId="2-o9t&amp;gt;)Me1" show="Y" showAsTable="Y" showDetailOnTop="N" showOneBelowAnother="N" type="LIST">
+      <control caption="Property Name" columns="2" fullQualPath="Property.RelatedProperty.PropertyToPropertyRelation.Property.PropertyDetails.PropertyName" hideDetail="N" id="%B3?F1/581" isColumnInTable="Y" labelName="" lazyInd="N" orderNum="0" pageSize="0" parentId="%B3%F1/581" relatedPath="" screenId="2-o9t&amp;gt;)Me1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD"/>
+      <control caption="Role Type" columns="2" fullQualPath="Property.RelatedProperty.PropertyPropertyRoleType" hideDetail="N" id="%B3&amp;gt;F1/581" isColumnInTable="Y" labelName="" lazyInd="N" orderNum="1" pageSize="0" parentId="%B3%F1/581" relatedPath="" screenId="2-o9t&amp;gt;)Me1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD"/>
+      <control caption="Investment ID" columns="2" fullQualPath="Property.RelatedProperty.PropertyToPropertyRelation.Property.AllPropertyIdentifier.InvestmentIDPropertyId" hideDetail="N" id="Yky1m&amp;gt;/581" isColumnInTable="Y" labelName="" lazyInd="N" orderNum="2" pageSize="0" parentId="%B3%F1/581" relatedPath="" screenId="2-o9t&amp;gt;)Me1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD"/>
+      <control caption="Asset No" columns="2" fullQualPath="Property.RelatedProperty.PropertyToPropertyRelation.Property.AllPropertyIdentifier.AssetNoPropertyId" hideDetail="N" id="Yky3m&amp;gt;/581" isColumnInTable="N" labelName="" lazyInd="N" orderNum="3" pageSize="0" parentId="%B3%F1/581" relatedPath="" screenId="2-o9t&amp;gt;)Me1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD"/>
+      <control caption="Property ID" columns="2" fullQualPath="Property.RelatedProperty.PropertyToPropertyRelation.Property.AllPropertyIdentifier.PropIDPropertyId" hideDetail="N" id="Yky5m&amp;gt;/581" isColumnInTable="Y" labelName="" lazyInd="N" orderNum="4" pageSize="0" parentId="%B3%F1/581" relatedPath="" screenId="2-o9t&amp;gt;)Me1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD"/>
+      <control caption="Building ID" columns="2" fullQualPath="Property.RelatedProperty.PropertyToPropertyRelation.Property.AllPropertyIdentifier.BuildingIDPropertyId" hideDetail="N" id="Yky7m&amp;gt;/581" isColumnInTable="Y" labelName="" lazyInd="N" orderNum="5" pageSize="0" parentId="%B3%F1/581" relatedPath="" screenId="2-o9t&amp;gt;)Me1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD"/>
+      <control caption="DealPath Deal ID" columns="2" fullQualPath="Property.RelatedProperty.PropertyToPropertyRelation.Property.AllPropertyIdentifier.DealPathDealIDPropertyId" hideDetail="N" id="Yky9m&amp;gt;/581" isColumnInTable="N" labelName="" lazyInd="N" orderNum="6" pageSize="0" parentId="%B3%F1/581" relatedPath="" screenId="2-o9t&amp;gt;)Me1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD"/>
+      <control caption="DealPath Prop ID" columns="2" fullQualPath="Property.RelatedProperty.PropertyToPropertyRelation.Property.AllPropertyIdentifier.DealPathPropIDPropertyId" hideDetail="N" id="YkyBm&amp;gt;/581" isColumnInTable="Y" labelName="" lazyInd="N" orderNum="7" pageSize="0" parentId="%B3%F1/581" relatedPath="" screenId="2-o9t&amp;gt;)Me1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD"/>
+    </control>
+    <control caption="Address Details" columns="3" fullQualPath="Property.PropertyAddressDetails" hideDetail="N" id="YkyDm&amp;gt;/581" isColumnInTable="N" labelName="" lazyInd="N" orderNum="1" pageSize="3" parentId="%B37F1/581" relatedPath="" screenId="2-o9t&amp;gt;)Me1" show="Y" showAsTable="Y" showDetailOnTop="N" showOneBelowAnother="N" type="LIST">
+      <buttons>
+        <button caption="Verify Address Details" id="Ykygm&gt;/581">
+          <property name="Event Name" value="NRE_EVT_PostVerifyAddress"/>
+          <property name="addTypDG" value="Property.PropertyAddressDetails"/>
+          <property name="Event Type" value="GenericEvent"/>
+          <property name="mailAddDG" value="Property.PropertyAddressDetails.AccountAddressMailing"/>
+          <property name="Type" value="event"/>
+          <property name="CountryCode" value="Property.PropertyAddressDetails.AccountAddressMailing.PropMADRCountryName"/>
+          <property name="Current User" value="Logged in User"/>
+          <property name="addTyp" value="Property.PropertyAddressDetails.PropADTPAddressType"/>
+          <property name="PPRY_OID" value="ENT_OID"/>
+          <property name="Shared Role" value="pm_real_assets_technology,pm_data_governance"/>
+        </button>
+      </buttons>
+      <control caption="Address Purpose" columns="2" fullQualPath="Property.PropertyAddressDetails.PropertyAddressPurpose" hideDetail="N" id="Ykysm&amp;gt;/581" labelName="" lazyInd="N" orderNum="0" pageSize="0" parentId="YkyDm&amp;gt;/581" relatedPath="" screenId="2-o9t&amp;gt;)Me1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="RECORD">
+        <control caption="Address Purpose" columns="2" fullQualPath="Property.PropertyAddressDetails.PropertyAddressPurpose.PropADPUAddressPurpose" hideDetail="N" id="Ykywm&amp;gt;/581" isColumnInTable="N" labelName="" lazyInd="N" orderNum="0" pageSize="0" parentId="Ykysm&amp;gt;/581" relatedPath="" screenId="2-o9t&amp;gt;)Me1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Address Purpose Description" columns="2" fullQualPath="Property.PropertyAddressDetails.PropertyAddressPurpose.PropADPUAddressPurposeDescription" hideDetail="N" id="Ykyym&amp;gt;/581" isColumnInTable="N" labelName="" lazyInd="N" orderNum="1" pageSize="0" parentId="Ykysm&amp;gt;/581" relatedPath="" screenId="2-o9t&amp;gt;)Me1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Address Type" columns="2" fullQualPath="Property.PropertyAddressDetails.PropADTPAddressType" hideDetail="N" id="Yky$m&amp;gt;/581" isColumnInTable="N" labelName="" lazyInd="N" orderNum="1" pageSize="0" parentId="YkyDm&amp;gt;/581" relatedPath="" screenId="2-o9t&amp;gt;)Me1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"CSS_CLASS_NAME":[{"CSS_CLASS_NAME":"gsRedBorderColor"}],"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Mailing Address" columns="3" fullQualPath="Property.PropertyAddressDetails.AccountAddressMailing" hideDetail="N" id="Yky@m&amp;gt;/581" labelName="" lazyInd="N" orderNum="2" pageSize="3" parentId="YkyDm&amp;gt;/581" relatedPath="" screenId="2-o9t&amp;gt;)Me1" show="Y" showAsTable="Y" showDetailOnTop="N" showOneBelowAnother="N" type="RECORD">
+        <buttons>
+          <button caption="Verify Address Details" id="Yky&gt;m&gt;/581">
+            <property name="addTypDG" value="Property.PropertyAddressDetails"/>
+            <property name="Shared Role" value="pm_real_assets_technology,pm_data_governance"/>
+            <property name="Event Type" value="GenericEvent"/>
+            <property name="addTyp" value="Property.PropertyAddressDetails.PropADTPAddressType"/>
+            <property name="Event Name" value="NRE_EVT_PostVerifyAddress"/>
+            <property name="Type" value="event"/>
+            <property name="Current User" value="Logged in User"/>
+            <property name="mailAddDG" value="Property.PropertyAddressDetails.AccountAddressMailing"/>
+            <property name="PPRY_OID" value="ENT_OID"/>
+          </button>
+        </buttons>
+        <control caption="Address Line 1" columns="2" fullQualPath="Property.PropertyAddressDetails.AccountAddressMailing.PropMADRAddressLine1" hideDetail="N" id="YkyAn&amp;gt;/581" isColumnInTable="Y" labelName="" lazyInd="N" orderNum="0" pageSize="0" parentId="Yky@m&amp;gt;/581" relatedPath="" screenId="2-o9t&amp;gt;)Me1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"CSS_CLASS_NAME":[{"CSS_CLASS_NAME":"gsRedBorderColor"}],"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Address Line 2" columns="2" fullQualPath="Property.PropertyAddressDetails.AccountAddressMailing.PropMADRAddressLine2" hideDetail="N" id="YkyCn&amp;gt;/581" isColumnInTable="Y" labelName="" lazyInd="N" orderNum="1" pageSize="0" parentId="Yky@m&amp;gt;/581" relatedPath="" screenId="2-o9t&amp;gt;)Me1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="City/Town Name" columns="2" fullQualPath="Property.PropertyAddressDetails.AccountAddressMailing.PropMADRCityTownName" hideDetail="N" id="YkyEn&amp;gt;/581" isColumnInTable="Y" labelName="" lazyInd="N" orderNum="2" pageSize="0" parentId="Yky@m&amp;gt;/581" relatedPath="" screenId="2-o9t&amp;gt;)Me1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Postal Code" columns="2" fullQualPath="Property.PropertyAddressDetails.AccountAddressMailing.PropMADRPostalCode" hideDetail="N" id="YkyGn&amp;gt;/581" isColumnInTable="Y" labelName="" lazyInd="N" orderNum="3" pageSize="0" parentId="Yky@m&amp;gt;/581" relatedPath="" screenId="2-o9t&amp;gt;)Me1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="State/Province Name" columns="2" fullQualPath="Property.PropertyAddressDetails.AccountAddressMailing.PropMADRStateProvinceName" hideDetail="N" id="YkyIn&amp;gt;/581" isColumnInTable="Y" labelName="" lazyInd="N" orderNum="4" pageSize="0" parentId="Yky@m&amp;gt;/581" relatedPath="" screenId="2-o9t&amp;gt;)Me1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Country Name" columns="2" fullQualPath="Property.PropertyAddressDetails.AccountAddressMailing.PropMADRCountryName" hideDetail="N" id="YkyKn&amp;gt;/581" isColumnInTable="Y" labelName="" lazyInd="N" orderNum="5" pageSize="0" parentId="Yky@m&amp;gt;/581" relatedPath="" screenId="2-o9t&amp;gt;)Me1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="County Name" columns="2" fullQualPath="Property.PropertyAddressDetails.AccountAddressMailing.PropMADRCountyName" hideDetail="N" id="YkyMn&amp;gt;/581" isColumnInTable="Y" labelName="" lazyInd="N" orderNum="6" pageSize="0" parentId="Yky@m&amp;gt;/581" relatedPath="" screenId="2-o9t&amp;gt;)Me1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Ext Latitude Decimal Degrees" columns="2" fullQualPath="Property.PropertyAddressDetails.AccountAddressMailing.PropMADRLatitudeDegrees" hideDetail="N" id="YkyOn&amp;gt;/581" isColumnInTable="Y" labelName="" lazyInd="N" orderNum="7" pageSize="0" parentId="Yky@m&amp;gt;/581" relatedPath="" screenId="2-o9t&amp;gt;)Me1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Longitude Decimal Degrees" columns="2" fullQualPath="Property.PropertyAddressDetails.AccountAddressMailing.PropMADRLongitudeDegrees" hideDetail="N" id="YkyQn&amp;gt;/581" isColumnInTable="Y" labelName="" lazyInd="N" orderNum="8" pageSize="0" parentId="Yky@m&amp;gt;/581" relatedPath="" screenId="2-o9t&amp;gt;)Me1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Neighborhood Name" columns="2" fullQualPath="Property.PropertyAddressDetails.AccountAddressMailing.PropMADRNeighborhoodName" hideDetail="N" id="YkySn&amp;gt;/581" isColumnInTable="Y" labelName="" lazyInd="N" orderNum="9" pageSize="0" parentId="Yky@m&amp;gt;/581" relatedPath="" screenId="2-o9t&amp;gt;)Me1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Address Status" columns="2" fullQualPath="Property.PropertyAddressDetails.PropADTPAddressStatus" hideDetail="N" id="YkyUn&amp;gt;/581" isColumnInTable="N" labelName="" lazyInd="N" orderNum="3" pageSize="0" parentId="YkyDm&amp;gt;/581" relatedPath="" screenId="2-o9t&amp;gt;)Me1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Address Status Date/Time" columns="2" fullQualPath="Property.PropertyAddressDetails.PropADTPAddressStatusDateTime" hideDetail="N" id="YkyWn&amp;gt;/581" isColumnInTable="N" labelName="" lazyInd="N" orderNum="4" pageSize="0" parentId="YkyDm&amp;gt;/581" relatedPath="" screenId="2-o9t&amp;gt;)Me1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Default Address" columns="2" fullQualPath="Property.PropertyAddressDetails.PropADTPDefaultAddress" hideDetail="N" id="YkyYn&amp;gt;/581" isColumnInTable="N" labelName="" lazyInd="N" orderNum="5" pageSize="0" parentId="YkyDm&amp;gt;/581" relatedPath="" screenId="2-o9t&amp;gt;)Me1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <config>{"DETAIL_CHART_CONFIG":[]}</config>
+    </control>
+    <control caption="Identifiers" columns="3" fullQualPath="Property.PropertyIdentifiers" hideDetail="N" id="Ykyan&amp;gt;/581" isColumnInTable="N" labelName="" lazyInd="N" orderNum="2" pageSize="5" parentId="%B37F1/581" relatedPath="" screenId="2-o9t&amp;gt;)Me1" show="Y" showAsTable="Y" showDetailOnTop="N" showOneBelowAnother="N" type="LIST">
+      <control caption="Property Identifier Context" columns="2" fullQualPath="Property.PropertyIdentifiers.PropertyIdentifierContext" hideDetail="N" id="Ykyen&amp;gt;/581" isColumnInTable="N" labelName="" lazyInd="N" orderNum="0" pageSize="0" parentId="Ykyan&amp;gt;/581" relatedPath="" screenId="2-o9t&amp;gt;)Me1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Property Identifier" columns="2" fullQualPath="Property.PropertyIdentifiers.PropertyIdentifier" hideDetail="N" id="Ykygn&amp;gt;/581" isColumnInTable="N" labelName="" lazyInd="N" orderNum="1" pageSize="0" parentId="Ykyan&amp;gt;/581" relatedPath="" screenId="2-o9t&amp;gt;)Me1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <config>{"DETAIL_CHART_CONFIG":[]}</config>
+    </control>
+    <control caption="Acquisition Details" columns="2" fullQualPath="Property.AcquisitionDetails" hideDetail="N" id="Ykyin&amp;gt;/581" labelName="" lazyInd="N" orderNum="3" pageSize="0" parentId="%B37F1/581" relatedPath="" screenId="2-o9t&amp;gt;)Me1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="RECORD">
+      <config>{"DETAIL_CHART_CONFIG":[]}</config>
+    </control>
+    <control caption="Disposition Details" columns="2" fullQualPath="Property.DispositionDetails" hideDetail="N" id="Ykykn&amp;gt;/581" labelName="" lazyInd="N" orderNum="4" pageSize="0" parentId="%B37F1/581" relatedPath="" screenId="2-o9t&amp;gt;)Me1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="RECORD">
+      <config>{"DETAIL_CHART_CONFIG":[]}</config>
+    </control>
+  </control>
+</root>

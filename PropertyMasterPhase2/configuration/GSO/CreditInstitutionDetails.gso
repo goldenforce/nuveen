@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entities cleanUnusedFields="false" nameSpace="NUVEEN">
+  <entiyTypes>
+    <entiyType desc="Generated default type for table FT_T_FINS" id="++3qwBhS2etxm001" mainTable="FT_T_FINS" name="FinancialInstitution" nameSpace="GSC"/>
+  </entiyTypes>
+  <beFields>
+    <beField class="BETEXT" customDesc="" customDomainSQL="" customSQL="" desc="" displayCaption="InstitutionAuthorizedGrade" entityTypeId="++3qwBhS2etxm001" id="++9rEJRsHIkVS00H" mandatory="0" multiplicity="SINGLE_OR_NULL" name="InstitutionAuthorizedGrade" nameSpace="NUVEEN"/>
+    <beField class="BEDATE" customDesc="" customDomainSQL="" customSQL="" desc="" displayCaption="InstitutionCharterRenewalDate" entityTypeId="++3qwBhS2etxm001" id="++9rEJRsHIkVS00I" mandatory="0" multiplicity="SINGLE_OR_NULL" name="InstitutionCharterRenewalDate" nameSpace="NUVEEN"/>
+    <beField class="BETEXT" customDesc="" customDomainSQL="" customSQL="" desc="" displayCaption="InstitutionEnrollmentCapacity" entityTypeId="++3qwBhS2etxm001" id="++9rEJRsHIkVS00L" mandatory="0" multiplicity="SINGLE_OR_NULL" name="InstitutionEnrollmentCapacity" nameSpace="NUVEEN"/>
+    <beField class="BETEXT" customDesc="" customDomainSQL="" customSQL="" desc="" displayCaption="InstitutionAuthorizer" entityTypeId="++3qwBhS2etxm001" id="++9rEJRsHIkVS00N" mandatory="0" multiplicity="SINGLE_OR_NULL" name="InstitutionAuthorizer" nameSpace="NUVEEN"/>
+    <beField class="BETEXT" customDesc="" customDomainSQL="" customSQL="" desc="" displayCaption="InstitutionSponsorship" entityTypeId="++3qwBhS2etxm001" id="++9rEJRsHIkVS00P" mandatory="0" multiplicity="SINGLE_OR_NULL" name="InstitutionSponsorship" nameSpace="NUVEEN"/>
+    <beField class="BETEXT" customDesc="" customDomainSQL="" customSQL="" desc="" displayCaption="InstitutionPropertyName" entityTypeId="++3qwBhS2etxm001" id="++9rEJRsHIkVS00R" mandatory="0" multiplicity="SINGLE_OR_NULL" name="InstitutionPropertyName" nameSpace="NUVEEN"/>
+    <beField class="BETEXT" customDesc="" customDomainSQL="" customSQL="" desc="" displayCaption="InstitutionSystemType" entityTypeId="++3qwBhS2etxm001" id="++9rEJRsHIkVS00T" mandatory="0" multiplicity="SINGLE_OR_NULL" name="InstitutionSystemType" nameSpace="NUVEEN"/>
+    <beField class="BETEXT" customDesc="" customDomainSQL="" customSQL="" desc="" displayCaption="InstitutionLocation" entityTypeId="++3qwBhS2etxm001" id="++9rEJRsHIkVS00X" mandatory="0" multiplicity="SINGLE_OR_NULL" name="InstitutionLocation" nameSpace="NUVEEN"/>
+    <beField class="BETEXT" customDesc="" customDomainSQL="" customSQL="" desc="" displayCaption="InstitutionMetroSeriveArea" entityTypeId="++3qwBhS2etxm001" id="++9rEJRsHIkVS00Z" mandatory="0" multiplicity="SINGLE_OR_NULL" name="InstitutionMetroSeriveArea" nameSpace="NUVEEN"/>
+    <beField class="BETEXT" customDesc="" customDomainSQL="" customSQL="" desc="" displayCaption="InstitutionMarketServiceArea" entityTypeId="++3qwBhS2etxm001" id="++9rEJRsHIkVS00b" mandatory="0" multiplicity="SINGLE_OR_NULL" name="InstitutionMarketServiceArea" nameSpace="NUVEEN"/>
+    <beField class="BETEXT" customDesc="" customDomainSQL="" customSQL="" desc="" displayCaption="InstitutionMarketType" entityTypeId="++3qwBhS2etxm001" id="++9rEJRsHIkVS00d" mandatory="0" multiplicity="SINGLE_OR_NULL" name="InstitutionMarketType" nameSpace="NUVEEN"/>
+    <beField class="BETEXT" customDesc="" customDomainSQL="" customSQL="" desc="" displayCaption="InstitutionCompetativeEnvironment" entityTypeId="++3qwBhS2etxm001" id="++9rEJRsHIkVS00f" mandatory="0" multiplicity="SINGLE_OR_NULL" name="InstitutionCompetativeEnvironment" nameSpace="NUVEEN"/>
+    <beField class="BETEXT" customDesc="" customDomainSQL="" customSQL="" desc="" displayCaption="ExtendedInstitutionType" entityTypeId="++3qwBhS2etxm001" id="++9rEJRsHIkVS00j" mandatory="0" multiplicity="SINGLE_OR_NULL" name="ExtendedInstitutionType" nameSpace="NUVEEN"/>
+    <beField class="BETEXT" customDesc="" customDomainSQL="" customSQL="" desc="" displayCaption="EducationManagementCorporation" entityTypeId="++3qwBhS2etxm001" id="++9rEJRsHIkVS00h" mandatory="0" multiplicity="SINGLE_OR_NULL" name="EducationManagementCorporation" nameSpace="NUVEEN"/>
+    <beField class="BETEXT" customDesc="" customDomainSQL="" customSQL="" desc="" displayCaption="FacilityType" entityTypeId="++3qwBhS2etxm001" id="++9rEJRsHIkVS00V" mandatory="0" multiplicity="SINGLE_OR_NULL" name="FacilityType" nameSpace="NUVEEN"/>
+    <beField class="BETEXT" customDesc="" customDomainSQL="" customSQL="" desc="" displayCaption="InstitutionServiceType" entityTypeId="++3qwBhS2etxm001" id="009rjSYcHIkke001" mandatory="0" multiplicity="SINGLE_OR_NULL" name="InstitutionServiceType" nameSpace="NUVEEN"/>
+  </beFields>
+  <dataGroups>
+    <dataGroup customInd="0" desc="" displayCaption="Credit Institution Details" entityTypeId="++3qwBhS2etxm001" frequencyInd="0" id="009rESYcHIdtG005" ignoreDeleteChildren="false" multiplicity="SINGLE_OR_NULL" name="CreditInstitutionDetails" nameSpace="NUVEEN">
+      <part defNameSpace="NUVEEN" fieldId="++9rEJRsHIkVS00H" id="009rESYcHIdtG006" prntReqdInd="0" seq="0"/>
+      <part defNameSpace="NUVEEN" fieldId="++9rEJRsHIkVS00I" id="009rESYcHIdtG007" prntReqdInd="0" seq="1"/>
+      <part defNameSpace="NUVEEN" fieldId="++9rEJRsHIkVS00L" id="009rESYcHIdtG008" prntReqdInd="0" seq="2"/>
+      <part defNameSpace="NUVEEN" fieldId="++9rEJRsHIkVS00N" id="009rESYcHIdtG009" prntReqdInd="0" seq="3"/>
+      <part defNameSpace="NUVEEN" fieldId="++9rEJRsHIkVS00P" id="009rESYcHIdtG00A" prntReqdInd="0" seq="4"/>
+      <part defNameSpace="NUVEEN" fieldId="++9rEJRsHIkVS00R" id="009rESYcHIdtG00B" prntReqdInd="0" seq="5"/>
+      <part defNameSpace="NUVEEN" fieldId="++9rEJRsHIkVS00T" id="009rESYcHIdtG00C" prntReqdInd="0" seq="6"/>
+      <part defNameSpace="NUVEEN" fieldId="++9rEJRsHIkVS00X" id="009rESYcHIdtG00D" prntReqdInd="0" seq="7"/>
+      <part defNameSpace="NUVEEN" fieldId="++9rEJRsHIkVS00Z" id="009rESYcHIdtG00E" prntReqdInd="0" seq="8"/>
+      <part defNameSpace="NUVEEN" fieldId="++9rEJRsHIkVS00b" id="009rESYcHIdtG00F" prntReqdInd="0" seq="9"/>
+      <part defNameSpace="NUVEEN" fieldId="++9rEJRsHIkVS00d" id="009rESYcHIdtG00G" prntReqdInd="0" seq="10"/>
+      <part defNameSpace="NUVEEN" fieldId="++9rEJRsHIkVS00f" id="009rESYcHIdtG00H" prntReqdInd="0" seq="11"/>
+      <part defNameSpace="NUVEEN" fieldId="++9rEJRsHIkVS00j" id="009rESYcHIdtG00I" prntReqdInd="0" seq="12"/>
+      <part defNameSpace="NUVEEN" fieldId="++9rEJRsHIkVS00h" id="009rESYcHIdtG00J" prntReqdInd="0" seq="13"/>
+      <part defNameSpace="NUVEEN" fieldId="++9rEJRsHIkVS00V" id="009rESYcHIdtG00K" prntReqdInd="0" seq="14"/>
+      <part defNameSpace="NUVEEN" fieldId="009rjSYcHIkke001" id="009rjSYcHIkke003" prntReqdInd="0" seq="15"/>
+    </dataGroup>
+  </dataGroups>
+  <relations>
+    <relation id="006pa+fi2euPC00R" name="FINS-LegalName-FILF" nameSpace="GSC" srcTable="FT_T_FINS" tgtTable="FT_T_FILF">
+      <field fromColumn="FILF_OID" id="006pa+fi2euPC00S" nameSpace="GSC" toColumn="FILF_OID" type="RELATION_FIELD" valueType="COLUMN"/>
+    </relation>
+    <relation id="008s8K1C2es18007" name="FT_T_FINS-To-FT_T_ISSR00" nameSpace="NUVEEN" srcTable="FT_T_FINS" tgtTable="FT_T_ISSR">
+      <field fromColumn="INST_MNEM" id="008s8K1C2es18008" nameSpace="NUVEEN" toColumn="FINS_INST_MNEM" type="RELATION_FIELD" valueType="COLUMN"/>
+    </relation>
+  </relations>
+  <occurrences>
+    <occurrence desc="Occurrence for Financial Institution" id="++4HwLjy2etpy00a" ignoreDeleteChildren="false" multiplicity="SINGLE_OR_NULL" name="FINS_01" nameSpace="GSC" table="FT_T_FINS" timeSeries="NONE">
+      <field id="006pa+fi2euPC00Q" nameSpace="GSC" relationId="006pa+fi2euPC00R"/>
+      <field id="008s8K1C2es18006" nameSpace="NUVEEN" relationId="008s8K1C2es18007"/>
+      <field id="++5ckBRS2etse025" name="ACQ_BY_PRNT_IND" nameSpace="GSC"/>
+      <field id="007j1-li2euPC005" name="BANKRUPT_IND" nameSpace="GSC"/>
+      <field id="++5ckBRS2etse01E" name="BUSINESS_STRUCTURE_TYP" nameSpace="GSC"/>
+      <field id="008th6uC2es2C000" name="DATA_SRC_ID" nameSpace="GSC"/>
+      <field id="006gcFgi2etgK003" name="DELETE_REAS_TYP" nameSpace="GSC"/>
+      <field id="++5ckBRS2etse01c" name="DISSOLUTION_DTE" nameSpace="GSC"/>
+      <field id="++5ckBRS2etse01I" name="FISCAL_YR_END_TYP" nameSpace="GSC"/>
+      <field id="++5ckBRS2etse022" name="FUND_SRCE_TYP" nameSpace="GSC"/>
+      <field id="005ovm8i2etne00z" name="GOVT_AGENCY_FILING_IND" nameSpace="GSC"/>
+      <field desc="Hierarchy Level Number" id="0092YmFi2es2C000" name="HIER_LEVEL_NUM" nameSpace="GSC"/>
+      <field id="006qlZUC2euPC000" name="HOLDING_COMPANY_IND" nameSpace="GSC"/>
+      <field id="++5ckBRS2etse01J" name="INCORPORATION_DTE" nameSpace="GSC"/>
+      <field id="++6omlmy2etqG000" name="INST_CAT_TYP" nameSpace="GSC"/>
+      <field id="++5ckBRS2etse01X" name="INST_DESC" nameSpace="GSC"/>
+      <field desc="Institution Founding Date" id="++8z7uly2es2C00F" name="INST_FOUNDING_DTE" nameSpace="GSC"/>
+      <field id="++5ckBRS2etse01j" name="INST_LEGAL_FORM_TYP" nameSpace="GSC"/>
+      <field id="++5ckBRS2etse01g" name="INST_LEGAL_NME" nameSpace="GSC"/>
+      <field id="++4HwLjy2etpy00g" name="INST_NME" nameSpace="GSC"/>
+      <field id="++8PW21S2es2C03i" name="INST_STAT_TMS" nameSpace="GSC"/>
+      <field id="++5ckBRS2etse01-" name="INST_STAT_TYP" nameSpace="GSC"/>
+      <field id="004gu4GC2etry00F" name="INST_TYP" nameSpace="GSC"/>
+      <field id="++8qjEGy2es2C00B" name="LAST_CHG_TMS" nameSpace="GSC"/>
+      <field id="++5ckBRS2etse01w" name="LEI_LEGAL_FORM_TXT" nameSpace="GSC"/>
+      <field id="005q9LpC2etne01+" name="LEI_NME" nameSpace="GSC"/>
+      <field id="005q9LpC2etne022" name="LEI_RECORD_STAT_TXT" nameSpace="GSC"/>
+      <field id="++7skcay2euPC00C" name="NO_PARENT_IND" nameSpace="GSC"/>
+      <field id="++5ckBRS2etse01T" name="OBLIGOR_CL_VALUE" nameSpace="GSC"/>
+      <field id="++8cCHMy2es2C000" name="PREF_CURR_CDE" nameSpace="GSC"/>
+      <field id="++5ZqLUy2etse0Dg" name="PREF_FINS_ID" nameSpace="GSC"/>
+      <field id="004dLuXC2etv4006" name="PREF_FINS_ID_CTXT_TYP" nameSpace="GSC"/>
+      <field id="++5ckBRS2etse01q" name="PUBLIC_CORP_IND" nameSpace="GSC"/>
+      <field id="008x9CNi2es2C001" name="PUBLIC_PRIVATE_IND" nameSpace="GSC"/>
+      <field id="++5ckBRS2etse01o" name="SEC_FORM_15_IND" nameSpace="GSC"/>
+      <field id="++8exDzS2eu9y00L" name="START_TMS" nameSpace="GSC"/>
+      <field id="++5ckBRS2etse01N" name="SUBSIDIARY_IND" nameSpace="GSC"/>
+      <field id="006gcFgi2etgK000" name="TERMIN_DTE" nameSpace="GSC"/>
+    </occurrence>
+    <occurrence desc="Occurrence for Institution Details Extended" id="++9rEJRsHIkVS000" ignoreDeleteChildren="false" multiplicity="SINGLE_OR_NULL" name="INE1_01" nameSpace="NUVEEN" parentId="++4HwLjy2etpy00a" table="FT_E_INE1" timeSeries="LOGICAL_DELETE">
+      <field desc="Institution Authorized Grade" id="++9rEJRsHIkVS002" name="AUTHORIZED_GRADE" nameSpace="NUVEEN"/>
+      <field desc="Institution Charter Renewal Date" id="++9rEJRsHIkVS003" name="CHARTER_RENEWAL_DTE" nameSpace="NUVEEN"/>
+      <field desc="Institution Competative Environment" id="++9rEJRsHIkVS004" name="COMPETATIVE_ENV" nameSpace="NUVEEN"/>
+      <field desc="Education Management Corporation" id="++9rEJRsHIkVS005" name="EDU_MGMNT_CORP" nameSpace="NUVEEN"/>
+      <field desc="Institution Enrollment Capacity" id="++9rEJRsHIkVS006" name="ENROL_CPCT" nameSpace="NUVEEN"/>
+      <field desc="Extended Institution Type" id="++9rEJRsHIkVS007" name="INSTITUTION_TYP" nameSpace="NUVEEN"/>
+      <field desc="Institution Authorizer" id="++9rEJRsHIkVS008" name="INST_AUTHORIZER" nameSpace="NUVEEN"/>
+      <field desc="Facility Type" id="++9rEJRsHIkVS009" name="INST_FCLTY_TYP" nameSpace="NUVEEN"/>
+      <field desc="Institution Location" id="++9rEJRsHIkVS00A" name="INST_LOCATION" nameSpace="NUVEEN"/>
+      <field desc="Institution Metro Serive Area" id="++9rEJRsHIkVS00B" name="INST_METRO_SVRC_AREA" nameSpace="NUVEEN"/>
+      <field desc="Institution Market Service Area" id="++9rEJRsHIkVS00C" name="INST_MRKT_SRVC_AREA" nameSpace="NUVEEN"/>
+      <field desc="Institution Market Type" id="++9rEJRsHIkVS00D" name="INST_MRKT_TYP" nameSpace="NUVEEN"/>
+      <field desc="Institution Property Name" id="++9rEJRsHIkVS00E" name="INST_PROPERTY_NME" nameSpace="NUVEEN"/>
+      <field desc="Institution Service Type" id="009rjSYcHIkke000" name="INST_SERVICE_TYP" nameSpace="NUVEEN"/>
+      <field desc="Institution Sponsorship" id="++9rEJRsHIkVS00F" name="INST_SPORNSORSHIP" nameSpace="NUVEEN"/>
+      <field desc="Institution System Type" id="++9rEJRsHIkVS00G" name="INST_SYSTEM_TYP" nameSpace="NUVEEN"/>
+      <option id="++9rEJRsHIkVS001" nameSpace="NUVEEN" type="DEFAULT_ACTION" value="UNKNOWN"/>
+    </occurrence>
+  </occurrences>
+  <mappings>
+    <mapping beFieldId="++9rEJRsHIkVS00H" groupMapping="0" id="++9rEJRsHIkVS00J" nameSpace="NUVEEN" occFieldId="++9rEJRsHIkVS002"/>
+    <mapping beFieldId="++9rEJRsHIkVS00I" groupMapping="0" id="++9rEJRsHIkVS00K" nameSpace="NUVEEN" occFieldId="++9rEJRsHIkVS003"/>
+    <mapping beFieldId="++9rEJRsHIkVS00L" groupMapping="0" id="++9rEJRsHIkVS00M" nameSpace="NUVEEN" occFieldId="++9rEJRsHIkVS006"/>
+    <mapping beFieldId="++9rEJRsHIkVS00N" groupMapping="0" id="++9rEJRsHIkVS00O" nameSpace="NUVEEN" occFieldId="++9rEJRsHIkVS008"/>
+    <mapping beFieldId="++9rEJRsHIkVS00P" groupMapping="0" id="++9rEJRsHIkVS00Q" nameSpace="NUVEEN" occFieldId="++9rEJRsHIkVS00F"/>
+    <mapping beFieldId="++9rEJRsHIkVS00R" groupMapping="0" id="++9rEJRsHIkVS00S" nameSpace="NUVEEN" occFieldId="++9rEJRsHIkVS00E"/>
+    <mapping beFieldId="++9rEJRsHIkVS00T" groupMapping="0" id="++9rEJRsHIkVS00U" nameSpace="NUVEEN" occFieldId="++9rEJRsHIkVS00G"/>
+    <mapping beFieldId="++9rEJRsHIkVS00X" groupMapping="0" id="++9rEJRsHIkVS00Y" nameSpace="NUVEEN" occFieldId="++9rEJRsHIkVS00A"/>
+    <mapping beFieldId="++9rEJRsHIkVS00Z" groupMapping="0" id="++9rEJRsHIkVS00a" nameSpace="NUVEEN" occFieldId="++9rEJRsHIkVS00B"/>
+    <mapping beFieldId="++9rEJRsHIkVS00b" groupMapping="0" id="++9rEJRsHIkVS00c" nameSpace="NUVEEN" occFieldId="++9rEJRsHIkVS00C"/>
+    <mapping beFieldId="++9rEJRsHIkVS00d" groupMapping="0" id="++9rEJRsHIkVS00e" nameSpace="NUVEEN" occFieldId="++9rEJRsHIkVS00D"/>
+    <mapping beFieldId="++9rEJRsHIkVS00f" groupMapping="0" id="++9rEJRsHIkVS00g" nameSpace="NUVEEN" occFieldId="++9rEJRsHIkVS004"/>
+    <mapping beFieldId="++9rEJRsHIkVS00j" groupMapping="0" id="++9rEJRsHIkVS00k" nameSpace="NUVEEN" occFieldId="++9rEJRsHIkVS007"/>
+    <mapping beFieldId="++9rEJRsHIkVS00h" groupMapping="0" id="++9rEJRsHIkVS00i" nameSpace="NUVEEN" occFieldId="++9rEJRsHIkVS005"/>
+    <mapping beFieldId="++9rEJRsHIkVS00V" groupMapping="0" id="++9rEJRsHIkVS00W" nameSpace="NUVEEN" occFieldId="++9rEJRsHIkVS009"/>
+    <mapping beFieldId="009rjSYcHIkke001" groupMapping="0" id="009rjSYcHIkke002" nameSpace="NUVEEN" occFieldId="009rjSYcHIkke000"/>
+  </mappings>
+</entities>

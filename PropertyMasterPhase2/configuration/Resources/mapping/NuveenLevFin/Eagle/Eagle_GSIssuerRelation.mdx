@@ -1,0 +1,433 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<MappingDef type="MSF" version="1.0">
+  <Options>
+    <Option key="MappingComment"/>
+    <Option key="MappingVersion">1.0.0.0</Option>
+    <Option key="MappingAuthor"/>
+    <Option key="MessageTranslatorVersion">8.1.1.1</Option>
+    <Option key="RCode"/>
+    <Option key="LastChangedTms">2024-04-18 at 07:05:41 EDT</Option>
+    <Option key="MappingDesignerVersion">8.8.2.01</Option>
+  </Options>
+  <Input vendorType="VARIABLE">
+    <Options>
+      <Option key="DecimalSeparator">.</Option>
+      <Option key="TrimFields">BOTH</Option>
+      <Option key="NullIdentifiers"/>
+      <Option key="splitter">LineByLine.xml</Option>
+      <Option key="QuotationMark"/>
+      <Option key="DDLName"/>
+      <Option key="IsSingleCharDataDelimiter">TRUE</Option>
+      <Option key="InputDataDelimiter">|</Option>
+      <Option key="IndexBasedLookUp">TRUE</Option>
+      <Option key="TimeStampFormat">%Y%M%D%H%I%S.%f</Option>
+      <Option key="MessageType"/>
+      <Option key="DateTimeFormat">%Y%M%D%H%I%S</Option>
+      <Option key="EscapeChar"/>
+    </Options>
+    <Layout>
+      <Override/>
+      <field decimals="0" desc="This is the current entity in the Eagle database" excludedNullIdentifiers="" ident="FROM_ISSUER_ALIAS" length="255" mandatory="false" mapable="true" match="false" multiple="false" name="FROM_ISSUER_ALIAS" pattern="" pos="0" readonly="false" type="String"/>
+      <field decimals="0" desc="This is the parent or ult-parent or obligor entity in the Eagle database" excludedNullIdentifiers="" ident="TO_ISSUER_ALIAS" length="255" mandatory="false" mapable="true" match="false" multiple="false" name="TO_ISSUER_ALIAS" pattern="" pos="0" readonly="false" type="String"/>
+      <field decimals="0" desc="Issuers defined in (To) play this role for Issuers defined in (From)" excludedNullIdentifiers="" ident="ROLE_TYPE" length="255" mandatory="false" mapable="true" match="false" multiple="false" name="ROLE_TYPE" pattern="" pos="0" readonly="false" type="String"/>
+      <field decimals="0" desc="" excludedNullIdentifiers="" ident="EFFECTIVE_DATE" length="255" mandatory="false" mapable="true" match="false" multiple="false" name="EFFECTIVE_DATE" pattern="" pos="0" readonly="false" type="String"/>
+      <field decimals="0" desc="ETL_UPD_DT" excludedNullIdentifiers="" ident="ETL_UPD_DT" length="255" mandatory="false" mapable="true" match="false" multiple="false" name="ETL_UPD_DT" pattern="" pos="0" readonly="false" type="String"/>
+      <field decimals="0" desc="" excludedNullIdentifiers="" ident="UPDATE_DATE" length="255" mandatory="false" mapable="true" match="false" multiple="false" name="UPDATE_DATE" pattern="" pos="0" readonly="false" type="String"/>
+    </Layout>
+  </Input>
+  <Output>
+    <Options>
+      <Option key="TimeStampOutputFormat">%M-%D-%Y %H:%I:%S.%f %A</Option>
+      <Option key="DateTimeOutputFormat">%D-%M-%Y %H:%I:%S %A</Option>
+      <Option key="OutputEncoding">UTF-8</Option>
+      <Option key="DefaultEmptyNumericsToZero">FALSE</Option>
+      <Option key="messageformat">BERepo</Option>
+      <Option key="AddTZIndicators">true</Option>
+      <Option key="AddVendorMnemonic">true</Option>
+    </Options>
+    <MappingFragments/>
+    <OutputDef>
+      <Node displayName="FinancialInstitution" messageformat="BE" name="GoldenSourceObjectMessage" type="message">
+        <Options>
+          <Option key="OutputEncoding">UTF-8</Option>
+        </Options>
+        <comment><![CDATA[20240417 REF action]]></comment>
+        <Node name="xmlns" type="attribute">
+          <expr><![CDATA[return "http://www.thegoldensource.com/business-entities/BusinessEntityMessage";]]></expr>
+        </Node>
+        <Node name="xmlns:xsi" type="attribute">
+          <expr><![CDATA[return "http://www.w3.org/2001/XMLSchema-instance";]]></expr>
+        </Node>
+        <Node name="xsi:schemaLocation" type="attribute">
+          <expr><![CDATA[return "http://www.thegoldensource.com/business-entities/BusinessEntityMessage.xsd";]]></expr>
+        </Node>
+        <Node name="GSOHeader" type="element">
+          <Node name="GSO_ELM_TYPE" type="attribute">
+            <expr><![CDATA[return "group";]]></expr>
+          </Node>
+          <Node name="DateFormat" type="element">
+            <Node name="GSO_ELM_TYPE" type="attribute">
+              <expr><![CDATA[return "field";]]></expr>
+            </Node>
+            <Node name="req" type="attribute">
+              <expr><![CDATA[return "false";]]></expr>
+            </Node>
+          </Node>
+          <Node name="DefaultTimestamp" type="element">
+            <expr><![CDATA[return TimeStamp();]]></expr>
+            <Node name="GSO_ELM_TYPE" type="attribute">
+              <expr><![CDATA[return "field";]]></expr>
+            </Node>
+            <Node name="req" type="attribute">
+              <expr><![CDATA[return "false";]]></expr>
+            </Node>
+          </Node>
+          <Node name="Language" type="element">
+            <Node name="GSO_ELM_TYPE" type="attribute">
+              <expr><![CDATA[return "field";]]></expr>
+            </Node>
+            <Node name="req" type="attribute">
+              <expr><![CDATA[return "false";]]></expr>
+            </Node>
+          </Node>
+          <Node name="MainEntityId" type="element">
+            <expr><![CDATA[return FROM_ISSUER_ALIAS;]]></expr>
+            <Node name="GSO_ELM_TYPE" type="attribute">
+              <expr><![CDATA[return "field";]]></expr>
+            </Node>
+            <Node name="req" type="attribute">
+              <expr><![CDATA[return "false";]]></expr>
+            </Node>
+          </Node>
+          <Node name="MainEntityIdContext" type="element">
+            <expr><![CDATA[return "NVEENISSRID";]]></expr>
+            <Node name="GSO_ELM_TYPE" type="attribute">
+              <expr><![CDATA[return "field";]]></expr>
+            </Node>
+            <Node name="req" type="attribute">
+              <expr><![CDATA[return "false";]]></expr>
+            </Node>
+          </Node>
+          <Node name="MainEntityName" type="element">
+            <Node name="GSO_ELM_TYPE" type="attribute">
+              <expr><![CDATA[return "field";]]></expr>
+            </Node>
+            <Node name="req" type="attribute">
+              <expr><![CDATA[return "false";]]></expr>
+            </Node>
+          </Node>
+          <Node name="MainEntityType" type="element">
+            <Node name="GSO_ELM_TYPE" type="attribute">
+              <expr><![CDATA[return "field";]]></expr>
+            </Node>
+            <Node name="req" type="attribute">
+              <expr><![CDATA[return "false";]]></expr>
+            </Node>
+          </Node>
+          <Node name="MessageClassification" type="element">
+            <Node name="GSO_ELM_TYPE" type="attribute">
+              <expr><![CDATA[return "field";]]></expr>
+            </Node>
+            <Node name="req" type="attribute">
+              <expr><![CDATA[return "false";]]></expr>
+            </Node>
+          </Node>
+          <Node name="TimeZone" type="element">
+            <Node name="GSO_ELM_TYPE" type="attribute">
+              <expr><![CDATA[return "field";]]></expr>
+            </Node>
+            <Node name="req" type="attribute">
+              <expr><![CDATA[return "false";]]></expr>
+            </Node>
+          </Node>
+          <Node name="User" type="element">
+            <expr><![CDATA[return "INITIALSEEDING_ISSR";]]></expr>
+            <Node name="GSO_ELM_TYPE" type="attribute">
+              <expr><![CDATA[return "field";]]></expr>
+            </Node>
+            <Node name="req" type="attribute">
+              <expr><![CDATA[return "false";]]></expr>
+            </Node>
+          </Node>
+          <Node name="VendorSource" type="element">
+            <expr><![CDATA[return "NUVEEN";]]></expr>
+            <Node name="GSO_ELM_TYPE" type="attribute">
+              <expr><![CDATA[return "field";]]></expr>
+            </Node>
+            <Node name="req" type="attribute">
+              <expr><![CDATA[return "false";]]></expr>
+            </Node>
+          </Node>
+          <Node name="ChangeVddbAction" type="element">
+            <Node name="GSO_ELM_TYPE" type="attribute">
+              <expr><![CDATA[return "field";]]></expr>
+            </Node>
+            <Node name="req" type="attribute">
+              <expr><![CDATA[return "false";]]></expr>
+            </Node>
+          </Node>
+          <Node name="MainEntityTableType" type="element">
+            <expr><![CDATA[return "FINS";]]></expr>
+            <Node name="GSO_ELM_TYPE" type="attribute">
+              <expr><![CDATA[return "field";]]></expr>
+            </Node>
+            <Node name="req" type="attribute">
+              <expr><![CDATA[return "false";]]></expr>
+            </Node>
+          </Node>
+          <Node name="ChangeModel" type="element">
+            <Node name="GSO_ELM_TYPE" type="attribute">
+              <expr><![CDATA[return "field";]]></expr>
+            </Node>
+            <Node name="req" type="attribute">
+              <expr><![CDATA[return "false";]]></expr>
+            </Node>
+          </Node>
+          <Node name="UpdateModel" type="element">
+            <Node name="GSO_ELM_TYPE" type="attribute">
+              <expr><![CDATA[return "field";]]></expr>
+            </Node>
+            <Node name="req" type="attribute">
+              <expr><![CDATA[return "false";]]></expr>
+            </Node>
+          </Node>
+          <Node name="SecurityBasedIssuerMatching" type="element">
+            <Node name="GSO_ELM_TYPE" type="attribute">
+              <expr><![CDATA[return "field";]]></expr>
+            </Node>
+            <Node name="req" type="attribute">
+              <expr><![CDATA[return "false";]]></expr>
+            </Node>
+          </Node>
+        </Node>
+        <Node name="FinancialInstitution" type="element">
+          <Node name="xmlns" type="attribute">
+            <expr><![CDATA[return "http://www.thegoldensource.com/business-entities/FinancialInstitution";]]></expr>
+          </Node>
+          <Node name="xsi:schemaLocation" type="attribute">
+            <expr><![CDATA[return "http://www.thegoldensource.com/business-entities/FinancialInstitution.xsd";]]></expr>
+          </Node>
+          <Node name="GSO_ELM_TYPE" type="attribute">
+            <expr><![CDATA[return "gso";]]></expr>
+          </Node>
+          <Node name="FinancialInstitutionDetails" type="element">
+            <Node name="GSO_ELM_TYPE" type="attribute">
+              <expr><![CDATA[return "group";]]></expr>
+            </Node>
+            <Node name="req" type="attribute">
+              <expr><![CDATA[return "false";]]></expr>
+            </Node>
+            <Node name="Issuer" type="element">
+              <Node name="GSO_ELM_TYPE" type="attribute">
+                <expr><![CDATA[return "rel";]]></expr>
+              </Node>
+              <Node name="req" type="attribute">
+                <expr><![CDATA[return "false";]]></expr>
+              </Node>
+              <Node name="xmlns" type="attribute">
+                <expr><![CDATA[return "http://www.thegoldensource.com/business-entities/Issuer";]]></expr>
+              </Node>
+              <Node name="IssuerIdentifiers" type="element">
+                <Node name="GSO_ELM_TYPE" type="attribute">
+                  <expr><![CDATA[return "group";]]></expr>
+                </Node>
+                <Node name="req" type="attribute">
+                  <expr><![CDATA[return "false";]]></expr>
+                </Node>
+                <Node name="NuveenIssuerAliasID" type="element">
+                  <expr><![CDATA[return FROM_ISSUER_ALIAS;]]></expr>
+                  <Node name="ACTION" type="attribute">
+                    <expr><![CDATA[return "REFERENCE";]]></expr>
+                  </Node>
+                  <Node name="ERROR" type="attribute">
+                    <expr><![CDATA[return "N";]]></expr>
+                  </Node>
+                  <Node name="GSO_ELM_TYPE" type="attribute">
+                    <expr><![CDATA[return "field";]]></expr>
+                  </Node>
+                  <Node name="req" type="attribute">
+                    <expr><![CDATA[return "false";]]></expr>
+                  </Node>
+                </Node>
+              </Node>
+            </Node>
+            <Node name="FinancialInstitutionName" type="element">
+              <expr><![CDATA[return FROM_ISSUER_ALIAS;]]></expr>
+              <Node name="ACTION" type="attribute">
+                <expr><![CDATA[return "REFERENCE";]]></expr>
+              </Node>
+              <Node name="ERROR" type="attribute">
+                <expr><![CDATA[return "N";]]></expr>
+              </Node>
+              <Node name="GSO_ELM_TYPE" type="attribute">
+                <expr><![CDATA[return "field";]]></expr>
+              </Node>
+              <Node name="INSERT_ONLY" type="attribute">
+                <expr><![CDATA[return "Y";]]></expr>
+              </Node>
+              <Node name="req" type="attribute">
+                <expr><![CDATA[return "true";]]></expr>
+              </Node>
+            </Node>
+          </Node>
+          <Node name="FinancialInstitutionIdentifiers" type="element">
+            <Node name="GSO_ELM_TYPE" type="attribute">
+              <expr><![CDATA[return "group";]]></expr>
+            </Node>
+            <Node name="req" type="attribute">
+              <expr><![CDATA[return "false";]]></expr>
+            </Node>
+            <Node name="NuveenIssuerAliasId" type="element">
+              <expr><![CDATA[return FROM_ISSUER_ALIAS;]]></expr>
+              <Node name="ACTION" type="attribute">
+                <expr><![CDATA[return "REFERENCE";]]></expr>
+              </Node>
+              <Node name="ERROR" type="attribute">
+                <expr><![CDATA[return "N";]]></expr>
+              </Node>
+              <Node name="GSO_ELM_TYPE" type="attribute">
+                <expr><![CDATA[return "field";]]></expr>
+              </Node>
+              <Node name="req" type="attribute">
+                <expr><![CDATA[return "false";]]></expr>
+              </Node>
+            </Node>
+          </Node>
+          <Node name="AllInstitutionRelations" type="element">
+            <Node name="GSO_ELM_TYPE" type="attribute">
+              <expr><![CDATA[return "group";]]></expr>
+            </Node>
+            <Node name="req" type="attribute">
+              <expr><![CDATA[return "false";]]></expr>
+            </Node>
+            <Node name="AllInstRelations" type="element">
+              <Node name="GSO_ELM_TYPE" type="attribute">
+                <expr><![CDATA[return "rel";]]></expr>
+              </Node>
+              <Node name="req" type="attribute">
+                <expr><![CDATA[return "true";]]></expr>
+              </Node>
+              <Node name="xmlns" type="attribute">
+                <expr><![CDATA[return "http://www.thegoldensource.com/business-entities/FinancialInstitution";]]></expr>
+              </Node>
+              <Node name="FinancialInstitutionIdentifiers" type="element">
+                <Node name="GSO_ELM_TYPE" type="attribute">
+                  <expr><![CDATA[return "group";]]></expr>
+                </Node>
+                <Node name="req" type="attribute">
+                  <expr><![CDATA[return "false";]]></expr>
+                </Node>
+                <Node name="NuveenIssuerAliasId" type="element">
+                  <expr><![CDATA[return TO_ISSUER_ALIAS;]]></expr>
+                  <Node name="ACTION" type="attribute">
+                    <expr><![CDATA[return "REFERENCE";]]></expr>
+                  </Node>
+                  <Node name="ERROR" type="attribute">
+                    <expr><![CDATA[return "N";]]></expr>
+                  </Node>
+                  <Node name="GSO_ELM_TYPE" type="attribute">
+                    <expr><![CDATA[return "field";]]></expr>
+                  </Node>
+                  <Node name="MATCH" type="attribute">
+                    <expr><![CDATA[return "FIID1_ID_CTXT_FINSID";]]></expr>
+                  </Node>
+                  <Node name="req" type="attribute">
+                    <expr><![CDATA[return "false";]]></expr>
+                  </Node>
+                </Node>
+              </Node>
+            </Node>
+            <Node name="InstRelType" type="element">
+              <expr><![CDATA[if (OneHasValue(ROLE_TYPE))
+	return Translate(RELTYP, false, ROLE_TYPE);
+else
+	return ROLE_TYPE;]]></expr>
+              <Node name="ERROR" type="attribute">
+                <expr><![CDATA[return "N";]]></expr>
+              </Node>
+              <Node name="GSO_ELM_TYPE" type="attribute">
+                <expr><![CDATA[return "field";]]></expr>
+              </Node>
+              <Node name="req" type="attribute">
+                <expr><![CDATA[return "true";]]></expr>
+              </Node>
+            </Node>
+            <Node name="InstRelDataStatus" type="element">
+              <expr><![CDATA[return "ACTIVE";]]></expr>
+              <Node name="GSO_ELM_TYPE" type="attribute">
+                <expr><![CDATA[return "field";]]></expr>
+              </Node>
+              <Node name="req" type="attribute">
+                <expr><![CDATA[return "false";]]></expr>
+              </Node>
+            </Node>
+            <Node name="NuveenInstRelLastChangeDateTime" type="element">
+              <expr><![CDATA[return DateFromString(UPDATE_DATE, "%Y%M%D%H%I%S");]]></expr>
+              <Node name="GSO_ELM_TYPE" type="attribute">
+                <expr><![CDATA[return "field";]]></expr>
+              </Node>
+              <Node name="req" type="attribute">
+                <expr><![CDATA[return "true";]]></expr>
+              </Node>
+            </Node>
+            <Node name="NuveenFFRLStartTms" type="element">
+              <expr><![CDATA[return DateFromString(EFFECTIVE_DATE, "%Y%M%D");]]></expr>
+              <Node name="GSO_ELM_TYPE" type="attribute">
+                <expr><![CDATA[return "field";]]></expr>
+              </Node>
+              <Node name="req" type="attribute">
+                <expr><![CDATA[return "false";]]></expr>
+              </Node>
+            </Node>
+          </Node>
+        </Node>
+      </Node>
+    </OutputDef>
+  </Output>
+  <Translation>
+    <table name="RELTYP">
+      <Options>
+        <Option key="description">RELTYP</Option>
+      </Options>
+      <header>
+        <col name="Source"/>
+        <col name="Destination"/>
+      </header>
+      <data>
+        <row>
+          <col>OBLIGOR</col>
+          <col>OBLIGOR</col>
+        </row>
+        <row>
+          <col>ULTPRNT</col>
+          <col>PARNTCOF</col>
+        </row>
+        <row>
+          <col>PARENT</col>
+          <col>CURRORGN</col>
+        </row>
+      </data>
+    </table>
+  </Translation>
+  <Expressions>
+    <Expression enabled="true" ident="KeyStreaming">
+      <expr><![CDATA[if (OneHasValue(FROM_ISSUER_ALIAS))
+	return FROM_ISSUER_ALIAS;
+else
+	return "";]]></expr>
+    </Expression>
+    <Expression enabled="false" ident="RecordIdentifier">
+      <expr><![CDATA[return "";]]></expr>
+    </Expression>
+    <Expression enabled="false" ident="GSDMFiltering">
+      <expr><![CDATA[return "";]]></expr>
+    </Expression>
+    <Expression enabled="false" ident="VDSFiltering">
+      <expr><![CDATA[return "";]]></expr>
+    </Expression>
+    <Expression enabled="false" ident="VDDBFiltering">
+      <expr><![CDATA[return "";]]></expr>
+    </Expression>
+  </Expressions>
+</MappingDef>

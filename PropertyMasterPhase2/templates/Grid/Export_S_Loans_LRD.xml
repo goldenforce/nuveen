@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<root createdUser="yogesh.raut@nuveen.com" entityName="FullInstrument" entitySubType="[]" id="t-vs%&lt;F3e1" isDefault="N" isPublic="N" screenType="SYSTEMGRID" title="S: Loans_LRD">
+  <control caption="" fullQualPath="FullInstrument.NuveenInstrumentFields" id="t-vt%&amp;lt;F3e1" lazyInd="N" orderNum="0" parentId="" relatedPath="" screenId="t-vs%&amp;lt;F3e1" show="Y">
+    <control caption="" fullQualPath="FullInstrument.NuveenInstrumentFields.LoanXID" id="R29C01d4e1" lazyInd="N" orderNum="0" parentId="t-vt%&amp;lt;F3e1" relatedPath="" screenType="t-vs%&amp;lt;F3e1" show="Y"/>
+    <control caption="" fullQualPath="FullInstrument.NuveenInstrumentFields.LoanIDNumberLIN" id="R29D01d4e1" lazyInd="N" orderNum="1" parentId="t-vt%&amp;lt;F3e1" relatedPath="" screenType="t-vs%&amp;lt;F3e1" show="Y"/>
+    <control caption="" fullQualPath="FullInstrument.NuveenInstrumentFields.LRDSubscriptionFlag" id="R29?31d4e1" lazyInd="N" orderNum="2" parentId="t-vt%&amp;lt;F3e1" relatedPath="" screenType="t-vs%&amp;lt;F3e1" show="Y"/>
+  </control>
+  <control caption="" fullQualPath="FullInstrument.Identifiers.InstrumentLevelIdentifiers" id="R29211d4e1" lazyInd="N" orderNum="1" parentId="" relatedPath="" screenId="t-vs%&amp;lt;F3e1" show="Y">
+    <control caption="" fullQualPath="FullInstrument.Identifiers.InstrumentLevelIdentifiers.NuveenLRDFacilityID" id="R29o21d4e1" lazyInd="N" orderNum="0" parentId="R29211d4e1" relatedPath="" screenType="t-vs%&amp;lt;F3e1" show="Y"/>
+  </control>
+  <control caption="" fullQualPath="FullInstrument.InstrumentAsAParticipant" id="N1A021NKe1" lazyInd="N" orderNum="2" parentId="" relatedPath="" screenId="t-vs%&amp;lt;F3e1" show="Y">
+    <control caption="" fullQualPath="FullInstrument.InstrumentAsAParticipant.InstrumentGroup" id="N1A321NKe1" lazyInd="N" orderNum="0" parentId="N1A021NKe1" relatedPath="" screenType="t-vs%&amp;lt;F3e1" show="Y"/>
+  </control>
+</root>

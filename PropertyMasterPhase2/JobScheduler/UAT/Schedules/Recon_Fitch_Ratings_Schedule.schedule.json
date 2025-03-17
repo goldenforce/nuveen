@@ -1,0 +1,25 @@
+{
+  "version" : "1.6.6",
+  "workflowNames" : [ "Nuveen_Rating_Recon_Fitch_Process" ],
+  "title" : "Recon_Fitch_Ratings_Schedule",
+  "submitOrderToControllerWhenPlanned" : true,
+  "planOrderAutomatically" : true,
+  "calendars" : [ {
+    "calendarName" : "LevFin_Process_Calendar",
+    "timeZone" : "America/New_York",
+    "includes" : {
+      "monthdays" : [ {
+        "from" : "2025-01-10",
+        "weeklyDays" : [ {
+          "day" : 6,
+          "weekOfMonth" : 1
+        } ]
+      } ]
+    },
+    "periods" : [ {
+      "singleStart" : "08:00:00",
+      "whenHoliday" : "SUPPRESS"
+    } ]
+  } ],
+  "orderParameterisations" : [ ]
+}

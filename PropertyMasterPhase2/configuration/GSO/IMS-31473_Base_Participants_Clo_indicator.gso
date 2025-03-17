@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entities cleanUnusedFields="false" nameSpace="NUVEEN">
+  <beFields>
+    <beField class="BETEXT" displayCaption="CLO Indicator" entityTypeId="++3qwBhS2etxm003" id="++9PjrSy2etbS004" mandatory="0" multiplicity="SINGLE_OR_NULL" name="NuveenCLOIndicator" nameSpace="NUVEEN"/>
+  </beFields>
+  <dataGroups>
+    <dataGroup customInd="0" displayCaption="NuveenStatistics" entityTypeId="++3qwBhS2etxm003" frequencyInd="0" id="008mcntC2etbS04Q" ignoreDeleteChildren="false" multiplicity="SINGLE_OR_NULL" name="NuveenStatistics" nameSpace="NUVEEN">
+      <part defNameSpace="NUVEEN" fieldId="++9PjrSy2etbS004" id="++9PjrSy2etbS006" prntReqdInd="0" seq="131"/>
+    </dataGroup>
+  </dataGroups>
+  <occurrences>
+    <occurrence desc="Occurrence for Issue Statistic" id="++9PjrSy2etbS001" ignoreDeleteChildren="false" multiplicity="SINGLE_OR_NULL" name="ISST_NVN_CLOINDIC" nameSpace="NUVEEN" parentId="++4Gmmty2ettS01A" table="FT_T_ISST" timeSeries="LOGICAL_DELETE">
+      <field id="++9PjrSy2etbS002" name="STAT_CHAR_VAL_TXT" nameSpace="NUVEEN"/>
+      <value id="++9PjrSy2etbS003" name="STAT_DEF_ID" nameSpace="NUVEEN" type="FILTER_FIELD" value="NVCLOIND" valueType="CONSTANT"/>
+    </occurrence>
+  </occurrences>
+  <mappings>
+    <mapping beFieldId="++9PjrSy2etbS004" groupMapping="0" id="++9PjrSy2etbS005" nameSpace="NUVEEN" occFieldId="++9PjrSy2etbS002"/>
+  </mappings>
+</entities>

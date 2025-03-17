@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<root createdUser="user1" entityName="Issuer" entitySubType="[]" id="jy7-71(mW1" isDefault="Y" isPublic="Y" screenType="SYSTEMFORM" title="F: Issuer:Nuveen">
+  <control caption="Issuer Information" columns="3" fullQualPath="Issuer.IssuerInformation" hideDetail="N" id="ZL3w41R-W1" labelName="" lazyInd="N" orderNum="0" pageSize="0" parentId="" relatedPath="" screenId="jy7-71(mW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="RECORD">
+    <config>{"DETAIL_CHART_CONFIG":[]}</config>
+    <control caption="Institution Name" columns="2" fullQualPath="Issuer.IssuerInformation.FinancialInstitution.FinancialInstitution.FinancialInstitutionDetails.FinancialInstitutionName" hideDetail="N" id="ZL3(41R-W1" isColumnInTable="N" labelName="" lazyInd="N" orderNum="0" pageSize="0" parentId="ZL3w41R-W1" relatedPath="Issuer.IssuerInformation.FinancialInstitution" screenId="jy7-71(mW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+      <config>{"DETAIL_CHART_CONFIG":[]}</config>
+    </control>
+    <control caption="Issuer Name" columns="2" fullQualPath="Issuer.IssuerInformation.IssuerName" hideDetail="N" id="ZL3~41R-W1" isColumnInTable="N" labelName="" lazyInd="N" orderNum="1" pageSize="0" parentId="ZL3w41R-W1" relatedPath="" screenId="jy7-71(mW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+      <config>{"DETAIL_CHART_CONFIG":[]}</config>
+    </control>
+    <control caption="Short Code" columns="2" fullQualPath="Issuer.IssuerInformation.IssuerShortCode" hideDetail="N" id="ZL3&amp;lt;41R-W1" isColumnInTable="N" labelName="" lazyInd="N" orderNum="2" pageSize="0" parentId="ZL3w41R-W1" relatedPath="" screenId="jy7-71(mW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+      <config>{"DETAIL_CHART_CONFIG":[]}</config>
+    </control>
+    <control caption="Long Name" columns="2" fullQualPath="Issuer.IssuerInformation.IssuerLongName" hideDetail="N" id="ZL3051R-W1" isColumnInTable="N" labelName="" lazyInd="N" orderNum="3" pageSize="0" parentId="ZL3w41R-W1" relatedPath="" screenId="jy7-71(mW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+      <config>{"DETAIL_CHART_CONFIG":[]}</config>
+    </control>
+    <control caption="Type" columns="2" fullQualPath="Issuer.IssuerInformation.IssuerType" hideDetail="N" id="ZL3251R-W1" isColumnInTable="N" labelName="" lazyInd="N" orderNum="4" pageSize="0" parentId="ZL3w41R-W1" relatedPath="" screenId="jy7-71(mW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+      <config>{"DETAIL_CHART_CONFIG":[]}</config>
+    </control>
+    <control caption="System Status" columns="2" fullQualPath="Issuer.IssuerInformation.IssuerSystemStatus" hideDetail="N" id="ZL3451R-W1" isColumnInTable="N" labelName="" lazyInd="N" orderNum="5" pageSize="0" parentId="ZL3w41R-W1" relatedPath="" screenId="jy7-71(mW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+      <config>{"DETAIL_CHART_CONFIG":[]}</config>
+    </control>
+    <control caption="Preferred Identifier" columns="2" fullQualPath="Issuer.IssuerInformation.PreferredIssuerIdentifier" hideDetail="N" id="ZL3651R-W1" isColumnInTable="N" labelName="" lazyInd="N" orderNum="6" pageSize="0" parentId="ZL3w41R-W1" relatedPath="" screenId="jy7-71(mW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+      <config>{"DETAIL_CHART_CONFIG":[]}</config>
+    </control>
+    <control caption="Preferred Identifier Type" columns="2" fullQualPath="Issuer.IssuerInformation.PreferredIssuerIdentifierType" hideDetail="N" id="ZL3851R-W1" isColumnInTable="N" labelName="" lazyInd="N" orderNum="7" pageSize="0" parentId="ZL3w41R-W1" relatedPath="" screenId="jy7-71(mW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+      <config>{"DETAIL_CHART_CONFIG":[]}</config>
+    </control>
+    <control caption="Legal Name" columns="2" fullQualPath="Issuer.IssuerInformation.IssuerLegalName" hideDetail="N" id="ZL3A51R-W1" isColumnInTable="N" labelName="" lazyInd="N" orderNum="8" pageSize="0" parentId="ZL3w41R-W1" relatedPath="" screenId="jy7-71(mW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+      <config>{"DETAIL_CHART_CONFIG":[]}</config>
+    </control>
+    <control caption="Institution Legal Form" columns="2" fullQualPath="Issuer.IssuerInformation.InstitutionLegalForm" hideDetail="N" id="ZL3C51R-W1" isColumnInTable="N" labelName="" lazyInd="N" orderNum="9" pageSize="0" parentId="ZL3w41R-W1" relatedPath="" screenId="jy7-71(mW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+      <config>{"DETAIL_CHART_CONFIG":[]}</config>
+    </control>
+  </control>
+  <control caption="Issuer" columns="2" fullQualPath="" hideDetail="N" id="ZL3E51R-W1" labelName="" lazyInd="N" orderNum="1" pageSize="0" parentId="" relatedPath="" screenId="jy7-71(mW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="TABSHEET">
+    <config>{"DETAIL_CHART_CONFIG":[]}</config>
+    <control caption="Identifiers" columns="3" fullQualPath="Issuer.IssuerIdentifiers" hideDetail="N" id="ZL3n51R-W1" labelName="" lazyInd="N" orderNum="0" pageSize="0" parentId="ZL3E51R-W1" relatedPath="" screenId="jy7-71(mW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="RECORD">
+      <control caption="BB Company Identifier" columns="2" fullQualPath="Issuer.IssuerIdentifiers.BBCompanyIdentifier" hideDetail="N" id="ZL3v51R-W1" isColumnInTable="N" labelName="" lazyInd="N" orderNum="0" pageSize="0" parentId="ZL3n51R-W1" relatedPath="" screenId="jy7-71(mW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD"/>
+      <control caption="BB Global Company" columns="2" fullQualPath="Issuer.IssuerIdentifiers.BBGlobalCompany" hideDetail="N" id="ZL3x51R-W1" isColumnInTable="N" labelName="" lazyInd="N" orderNum="1" pageSize="0" parentId="ZL3n51R-W1" relatedPath="" screenId="jy7-71(mW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD"/>
+      <control caption="Legal Entity Identifier" columns="2" fullQualPath="Issuer.IssuerIdentifiers.LegalEntityIdentifier" hideDetail="N" id="ZL3z51R-W1" isColumnInTable="N" labelName="" lazyInd="N" orderNum="2" pageSize="0" parentId="ZL3n51R-W1" relatedPath="" screenId="jy7-71(mW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD"/>
+      <control caption="BB Company Corp Ticker" columns="2" fullQualPath="Issuer.IssuerIdentifiers.BBCompanyCorpTicker" hideDetail="N" id="ZL3%51R-W1" isColumnInTable="N" labelName="" lazyInd="N" orderNum="3" pageSize="0" parentId="ZL3n51R-W1" relatedPath="" screenId="jy7-71(mW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD"/>
+      <control caption="Nuveen Issuer Alias ID" columns="2" fullQualPath="Issuer.IssuerIdentifiers.NuveenIssuerAliasID" hideDetail="N" id="ZL3&amp;amp;51R-W1" isColumnInTable="N" labelName="" lazyInd="N" orderNum="4" pageSize="0" parentId="ZL3n51R-W1" relatedPath="" screenId="jy7-71(mW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD"/>
+      <control caption="Nuveen LRD Issuer ID" columns="2" fullQualPath="Issuer.IssuerIdentifiers.NuveenLRDIssuerID" hideDetail="N" id="ZL3-51R-W1" isColumnInTable="N" labelName="" lazyInd="N" orderNum="5" pageSize="0" parentId="ZL3n51R-W1" relatedPath="" screenId="jy7-71(mW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD"/>
+    </control>
+    <control caption="Issuer Description" columns="3" fullQualPath="Issuer.IssuerDescription" hideDetail="N" id="ZL3/51R-W1" isColumnInTable="N" labelName="" lazyInd="N" orderNum="1" pageSize="0" parentId="ZL3E51R-W1" relatedPath="" screenId="jy7-71(mW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="LIST">
+      <config>{"DETAIL_CHART_CONFIG":[]}</config>
+    </control>
+    <control caption="Classification" columns="3" fullQualPath="Issuer.IssuerClassification" hideDetail="N" id="ZL3)51R-W1" labelName="" lazyInd="N" orderNum="2" pageSize="0" parentId="ZL3E51R-W1" relatedPath="" screenId="jy7-71(mW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="RECORD">
+      <control caption="BICS Level 1" columns="2" fullQualPath="Issuer.IssuerClassification.BICSLevel1" hideDetail="N" id="ZL3D61R-W1" isColumnInTable="N" labelName="" lazyInd="N" orderNum="0" pageSize="0" parentId="ZL3)51R-W1" relatedPath="" screenId="jy7-71(mW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="BICS Level 2" columns="2" fullQualPath="Issuer.IssuerClassification.BICSLevel2" hideDetail="N" id="ZL3F61R-W1" isColumnInTable="N" labelName="" lazyInd="N" orderNum="1" pageSize="0" parentId="ZL3)51R-W1" relatedPath="" screenId="jy7-71(mW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="BICS Level 3" columns="2" fullQualPath="Issuer.IssuerClassification.BICSLevel3" hideDetail="N" id="ZL3H61R-W1" isColumnInTable="N" labelName="" lazyInd="N" orderNum="2" pageSize="0" parentId="ZL3)51R-W1" relatedPath="" screenId="jy7-71(mW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="SIC Code - Level 1" columns="2" fullQualPath="Issuer.IssuerClassification.SICCodeLevel1" hideDetail="N" id="ZL3J61R-W1" isColumnInTable="N" labelName="" lazyInd="N" orderNum="3" pageSize="0" parentId="ZL3)51R-W1" relatedPath="" screenId="jy7-71(mW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="SIC Code - Level 2" columns="2" fullQualPath="Issuer.IssuerClassification.SICCodeLevel2" hideDetail="N" id="ZL3L61R-W1" isColumnInTable="N" labelName="" lazyInd="N" orderNum="4" pageSize="0" parentId="ZL3)51R-W1" relatedPath="" screenId="jy7-71(mW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="SIC Code - Level 3" columns="2" fullQualPath="Issuer.IssuerClassification.SICCodeLevel3" hideDetail="N" id="ZL3N61R-W1" isColumnInTable="N" labelName="" lazyInd="N" orderNum="5" pageSize="0" parentId="ZL3)51R-W1" relatedPath="" screenId="jy7-71(mW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Primary Insurance NAICS" columns="2" fullQualPath="Issuer.IssuerClassification.PrimaryInsuranceNAICS" hideDetail="N" id="ZL3P61R-W1" isColumnInTable="N" labelName="" lazyInd="N" orderNum="6" pageSize="0" parentId="ZL3)51R-W1" relatedPath="" screenId="jy7-71(mW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="NAICS Code - Level 1" columns="2" fullQualPath="Issuer.IssuerClassification.NAICSCodeLevel1" hideDetail="N" id="ZL3R61R-W1" isColumnInTable="N" labelName="" lazyInd="N" orderNum="7" pageSize="0" parentId="ZL3)51R-W1" relatedPath="" screenId="jy7-71(mW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="NAICS Code - Level 2" columns="2" fullQualPath="Issuer.IssuerClassification.NAICSCodeLevel2" hideDetail="N" id="ZL3T61R-W1" isColumnInTable="N" labelName="" lazyInd="N" orderNum="8" pageSize="0" parentId="ZL3)51R-W1" relatedPath="" screenId="jy7-71(mW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="NAICS Code - Level 3" columns="2" fullQualPath="Issuer.IssuerClassification.NAICSCodeLevel3" hideDetail="N" id="ZL3V61R-W1" isColumnInTable="N" labelName="" lazyInd="N" orderNum="9" pageSize="0" parentId="ZL3)51R-W1" relatedPath="" screenId="jy7-71(mW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="NAICS Code - Level 4" columns="2" fullQualPath="Issuer.IssuerClassification.NAICSCodeLevel4" hideDetail="N" id="ZL3X61R-W1" isColumnInTable="N" labelName="" lazyInd="N" orderNum="10" pageSize="0" parentId="ZL3)51R-W1" relatedPath="" screenId="jy7-71(mW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="NAICS Code - Level 5" columns="2" fullQualPath="Issuer.IssuerClassification.NAICSCodeLevel5" hideDetail="N" id="ZL3Z61R-W1" isColumnInTable="N" labelName="" lazyInd="N" orderNum="11" pageSize="0" parentId="ZL3)51R-W1" relatedPath="" screenId="jy7-71(mW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="GICS Code" columns="2" fullQualPath="Issuer.IssuerClassification.GICSSector" hideDetail="N" id="ZL3b61R-W1" isColumnInTable="N" labelName="" lazyInd="N" orderNum="12" pageSize="0" parentId="ZL3)51R-W1" relatedPath="" screenId="jy7-71(mW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Refinitiv Industry Code" columns="2" fullQualPath="Issuer.IssuerClassification.RefinitivIndustryCode" hideDetail="N" id="ZL3d61R-W1" isColumnInTable="N" labelName="" lazyInd="N" orderNum="13" pageSize="0" parentId="ZL3)51R-W1" relatedPath="" screenId="jy7-71(mW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Refinitiv Industry Sector Code" columns="2" fullQualPath="Issuer.IssuerClassification.RefinitivIndustrySectorCode" hideDetail="N" id="ZL3f61R-W1" isColumnInTable="N" labelName="" lazyInd="N" orderNum="14" pageSize="0" parentId="ZL3)51R-W1" relatedPath="" screenId="jy7-71(mW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Refinitiv Industry Sub-Sector" columns="2" fullQualPath="Issuer.IssuerClassification.RefinitivIndustrySubSector" hideDetail="N" id="ZL3h61R-W1" isColumnInTable="N" labelName="" lazyInd="N" orderNum="15" pageSize="0" parentId="ZL3)51R-W1" relatedPath="" screenId="jy7-71(mW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <config>{"DETAIL_CHART_CONFIG":[]}</config>
+    </control>
+    <control caption="ISO Geographic Details" columns="3" fullQualPath="Issuer.ISOGeographicDetails" hideDetail="N" id="ZL3j61R-W1" labelName="" lazyInd="N" orderNum="3" pageSize="0" parentId="ZL3E51R-W1" relatedPath="" screenId="jy7-71(mW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="RECORD">
+      <control caption="Country Of Residence" columns="2" fullQualPath="Issuer.ISOGeographicDetails.CountryOfResidence" hideDetail="N" id="ZL3q61R-W1" isColumnInTable="N" labelName="" lazyInd="N" orderNum="0" pageSize="0" parentId="ZL3j61R-W1" relatedPath="" screenId="jy7-71(mW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Country Of Incorporation" columns="2" fullQualPath="Issuer.ISOGeographicDetails.CountryOfIncorporation" hideDetail="N" id="ZL3s61R-W1" isColumnInTable="N" labelName="" lazyInd="N" orderNum="1" pageSize="0" parentId="ZL3j61R-W1" relatedPath="" screenId="jy7-71(mW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Country Of Taxation" columns="2" fullQualPath="Issuer.ISOGeographicDetails.CountryOfTaxation" hideDetail="N" id="ZL3u61R-W1" isColumnInTable="N" labelName="" lazyInd="N" orderNum="2" pageSize="0" parentId="ZL3j61R-W1" relatedPath="" screenId="jy7-71(mW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Primary Country Of Risk" columns="2" fullQualPath="Issuer.ISOGeographicDetails.PrimaryCountryOfRisk" hideDetail="N" id="ZL3w61R-W1" isColumnInTable="N" labelName="" lazyInd="N" orderNum="3" pageSize="0" parentId="ZL3j61R-W1" relatedPath="" screenId="jy7-71(mW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Country Of Domicile" columns="2" fullQualPath="Issuer.ISOGeographicDetails.CountryOfDomicile" hideDetail="N" id="ZL3y61R-W1" isColumnInTable="N" labelName="" lazyInd="N" orderNum="4" pageSize="0" parentId="ZL3j61R-W1" relatedPath="" screenId="jy7-71(mW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD"/>
+      <config>{"DETAIL_CHART_CONFIG":[]}</config>
+    </control>
+    <control caption="All Statistics" columns="3" fullQualPath="Issuer.AllIssuerStatistics" hideDetail="N" id="ZL3$61R-W1" isColumnInTable="N" labelName="" lazyInd="N" orderNum="4" pageSize="0" parentId="ZL3E51R-W1" relatedPath="" screenId="jy7-71(mW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="LIST"/>
+    <control caption="All Classifications" columns="3" fullQualPath="Issuer.AllIssuerClassifications" hideDetail="N" id="ZL3@61R-W1" isColumnInTable="N" labelName="" lazyInd="N" orderNum="5" pageSize="0" parentId="ZL3E51R-W1" relatedPath="" screenId="jy7-71(mW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="LIST"/>
+  </control>
+</root>

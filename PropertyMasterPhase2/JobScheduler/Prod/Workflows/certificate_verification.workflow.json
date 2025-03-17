@@ -1,0 +1,27 @@
+{
+  "TYPE" : "Workflow",
+  "version" : "1.6.6",
+  "timeZone" : "Asia/Calcutta",
+  "instructions" : [ {
+    "TYPE" : "Execute.Named",
+    "jobName" : "certificate_verification",
+    "label" : "certificate_verification"
+  } ],
+  "jobs" : {
+    "certificate_verification" : {
+      "agentName" : "JSAgent",
+      "withSubagentClusterIdExpr" : false,
+      "executable" : {
+        "TYPE" : "ShellScriptExecutable",
+        "script" : ". /staging/secrets/datasource.properties\n\nsource /staging/secrets/datasource.properties\n\nsed -i -e 's|${Service_Account_Password}|'${Service_Account_Password}'|g' /ext/app/jobscheduler/scripts/jobutilities\n\nsed -i '1i export cerfificate_curl_options=\"--cacert /ext/app/protected/Certificates/ui/*.cer\"' /ext/app/jobscheduler/scripts/jobutilities",
+        "v1Compatible" : false
+      },
+      "skipIfNoAdmissionForOrderDay" : false,
+      "parallelism" : 1,
+      "graceTimeout" : 1,
+      "failOnErrWritten" : false,
+      "warnOnErrWritten" : false,
+      "title" : "certificate_verification"
+    }
+  }
+}

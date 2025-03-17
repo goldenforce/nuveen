@@ -1,0 +1,55 @@
+{
+  "TYPE" : "Workflow",
+  "version" : "1.6.6",
+  "timeZone" : "America/New_York",
+  "title" : "Nuveen_LevFin_EOD_Publish_Process",
+  "orderPreparation" : {
+    "parameters" : {
+      "checkDependency" : {
+        "type" : "Boolean",
+        "default" : "false"
+      },
+      "file_pattern" : {
+        "type" : "String",
+        "default" : "'GS.*\\.OUT'"
+      },
+      "dayMinus" : {
+        "type" : "String",
+        "default" : "'0'"
+      },
+      "jobConfigText" : {
+        "type" : "String",
+        "default" : "'LevFin - Bloomberg Per Security Job'"
+      }
+    },
+    "allowUndeclared" : false
+  },
+  "instructions" : [ {
+    "TYPE" : "Execute.Named",
+    "jobName" : "Nuveen_levFin_EOD_Instrument_Publish_Process",
+    "label" : "LevFin_EOD_Instr_Pub"
+  } ],
+  "jobs" : {
+    "Nuveen_levFin_EOD_Instrument_Publish_Process" : {
+      "agentName" : "JSAgent",
+      "withSubagentClusterIdExpr" : false,
+      "executable" : {
+        "TYPE" : "ShellScriptExecutable",
+        "script" : "cd $scripts_home\n./jobutilities execWkf $input_param_file $event_name $target_application",
+        "env" : {
+          "scripts_home" : "'/ext/app/jobscheduler/scripts/'",
+          "input_param_file" : "'/edmfs/app/InputParams/Nuveen_LevFin_EOD_Publish_Process.json'",
+          "event_name" : "'Nuveen_PublishingWrapper'",
+          "target_application" : "'publishing'"
+        },
+        "v1Compatible" : false
+      },
+      "skipIfNoAdmissionForOrderDay" : false,
+      "parallelism" : 1,
+      "graceTimeout" : 1,
+      "failOnErrWritten" : false,
+      "warnOnErrWritten" : false,
+      "title" : "Nuveen_levFin_EOD_Instrument_Publish_Process"
+    }
+  }
+}

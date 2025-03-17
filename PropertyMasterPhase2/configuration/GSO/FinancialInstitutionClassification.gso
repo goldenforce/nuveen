@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entities cleanUnusedFields="false" nameSpace="NUVEEN">
+  <beFields>
+    <beField class="BETEXT" customDesc="Nuveen Security Code Description" customDomainSQL="" customSQL="" desc="" displayCaption="Nuveen Security Code Description" entityTypeId="++3qwBhS2etxm001" id="++9ritZMHIV+u002" mandatory="0" multiplicity="SINGLE_OR_NULL" name="NuveenSecurityCodeDesc" nameSpace="NUVEEN"/>
+    <beField class="BETEXT" customDomainSQL="select CL_VALUE CODE, cl_value || ' - ' ||cl_nme DISPLAY_NAME FROM FT_T_INCL where INDUS_CL_SET_ID ='GICS' AND LEVEL_NUM = '1' AND END_TMS IS NULL" customSQL="select CL_VALUE CODE, CONCAT( CONCAT(CL_VALUE , ' - '  ) , CL_NME ) DISPLAY_NAME FROM FT_T_INCL where INDUS_CL_SET_ID ='GICS' AND LEVEL_NUM = '1' AND END_TMS IS NULL" desc="GICS Sector" displayCaption="GICS Sector" entityTypeId="++3qwBhS2etxm001" id="++5ckBRS2etse05O" mandatory="0" multiplicity="SINGLE_OR_NULL" name="GICSSector" nameSpace="GSC"/>
+    <beField class="BETEXT" customDomainSQL="select CL_VALUE CODE, cl_value || ' - ' ||cl_nme DISPLAY_NAME FROM FT_T_INCL where INDUS_CL_SET_ID ='GICS' AND LEVEL_NUM = '2' AND END_TMS IS NULL" customSQL="select CL_VALUE CODE, CONCAT( CONCAT(CL_VALUE , ' - '  ) , CL_NME ) DISPLAY_NAME FROM FT_T_INCL where INDUS_CL_SET_ID ='GICS' AND LEVEL_NUM = '2' AND END_TMS IS NULL" desc="GICS Industry Group" displayCaption="GICS Industry Group" entityTypeId="++3qwBhS2etxm001" id="++5ckBRS2etse04S" mandatory="0" multiplicity="SINGLE_OR_NULL" name="GICSIndustryGroup" nameSpace="GSC"/>
+    <beField class="BETEXT" customDomainSQL="select CL_VALUE CODE, cl_value || ' - ' ||cl_nme DISPLAY_NAME FROM FT_T_INCL where INDUS_CL_SET_ID ='GICS' AND LEVEL_NUM = '3' AND END_TMS IS NULL" customSQL="select CL_VALUE CODE, CONCAT( CONCAT(CL_VALUE , ' - '  ) , CL_NME ) DISPLAY_NAME FROM FT_T_INCL where INDUS_CL_SET_ID ='GICS' AND LEVEL_NUM = '3' AND END_TMS IS NULL" desc="Code representing the new S&amp;P/MSCI company classification scheme. Referred to as GICS." displayCaption="GICS Industry" entityTypeId="++3qwBhS2etxm001" id="++5ckBRS2etse04w" mandatory="0" multiplicity="SINGLE_OR_NULL" name="GICSIndustry" nameSpace="GSC"/>
+    <beField class="BETEXT" customDomainSQL="select CL_VALUE CODE, cl_value || ' - ' ||cl_nme DISPLAY_NAME FROM FT_T_INCL where INDUS_CL_SET_ID ='GICS' AND LEVEL_NUM = '4' AND END_TMS IS NULL" customSQL="select CL_VALUE CODE, CONCAT( CONCAT(CL_VALUE , ' - '  ) , CL_NME ) DISPLAY_NAME FROM FT_T_INCL where INDUS_CL_SET_ID ='GICS' AND LEVEL_NUM = '4' AND END_TMS IS NULL" desc="GICS Sub-industry" displayCaption="GICS Sub-industry" entityTypeId="++3qwBhS2etxm001" id="++5ckBRS2etse05y" mandatory="0" multiplicity="SINGLE_OR_NULL" name="GICSSubIndustry" nameSpace="GSC"/>
+    <beField class="BETEXT  " customDesc="Fix in GS and Eagle | Legacy BICS (Bloomberg Industry Classification System) level I classification of the security based on its business or economic function and characteristics. The sector is one level above the Industry Group (DS201, INDUSTRY_GROUP). The numeric version of this field is Industry Sector Number (DS289, INDUSTRY_SECTOR_NUM).         See Classification Level 1 Name (BI071, CLASSIFICATION_LEVEL_1_NAME) used in conjunction with Classification Scheme Name (DY841, CLASSIFICATION_SCHEME) set to 'BICS' to view the current BICS scheme.        Mortgages:      Industry Sector Number (DS289, INDUSTRY_SECTOR_NUM) is not available for mortgages.        US agencies:    Under the equity yellow key, this field returns the industry sector that the company is in. Under the Corp yellow key, this field will display a &quot;sovereign&quot; classification. " customSQL="select CL_VALUE CODE, CL_NME DISPLAY_NAME FROM FT_T_INCL where INDUS_CL_SET_ID ='BBINDSEC' AND LEVEL_NUM IS NULL AND END_TMS IS NULL" desc="BICS (Bloomberg Industry Classification System) level I classification of the institution based on its business or economic function and characteristics." displayCaption="BICS Level I" entityTypeId="++3qwBhS2etxm001" id="005kiLnC2etqS010" mandatory="0" multiplicity="SINGLE_OR_NULL" name="BICSLevelI" nameSpace="GSC"/>
+    <beField class="BETEXT  " customDesc="Fix in GS and Eagle | Legacy BICS (Bloomberg Industry Classification System) level II classification of the security based on its business or economic function and characteristics. The group is one level below the Industry Sector (DS199, INDUSTRY_SECTOR) and one level above the Industry Subgroup (DS202, INDUSTRY_SUBGROUP). The numeric version of this field is Industry Group Number (DS287, INDUSTRY_GROUP_NUM).         See Classification Level 2 Name (BI072, CLASSIFICATION_LEVEL_2_NAME) used in conjunction with Classification Scheme Name (DY841, CLASSIFICATION_SCHEME) set to 'BICS' to view the current BICS scheme.          Mortgages:      Industry Group Number (DS287, INDUSTRY_GROUP_NUM) is not available for mortgages.        US agencies:    Under the equity yellow key, this field returns the industry sector that the company is in. Under the Corp yellow key, this field will display a &quot;sovereign&quot; classification.        For mortgage securities within the Single Security Initiative of Fannie Mae and Freddie Mac, various descriptive fields reflect changes that became effective upon the market implementation of the Single Security Initiative in June 2019. " customSQL="select CL_VALUE CODE, CL_NME DISPLAY_NAME FROM FT_T_INCL where INDUS_CL_SET_ID ='BBINDGRP' AND LEVEL_NUM IS NULL AND END_TMS IS NULL" desc="BICS (Bloomberg Industry Classification System) level II classification of the institution based on its business or economic function and characteristics." displayCaption="BICS Level II" entityTypeId="++3qwBhS2etxm001" id="005kiLnC2etqS01K" mandatory="0" multiplicity="SINGLE_OR_NULL" name="BICSLevelII" nameSpace="GSC"/>
+    <beField class="BETEXT  " customDesc="Fix in GS and Eagle | Legacy BICS (Bloomberg Industry Classification System) level III classification of the security based on its business or economic function and characteristics. The subgroup is one level below the Industry Group (DS201, INDUSTRY_GROUP). The numeric version of this field is Industry Subgroup Number (DS288, INDUSTRY_SUBGROUP_NUM).         See Classification Level 3 Name (BI073, CLASSIFICATION_LEVEL_3_NAME) used in conjunction with Classification Scheme Name (DY841, CLASSIFICATION_SCHEME) set to 'BICS' to view the current BICS scheme.        US agencies:    Under the equity yellow key, this field returns the industry sector that the company is in. Under the Corp yellow key, this field will display a &quot;sovereign&quot; classification.        For mortgage securities within the Single Security Initiative of Fannie Mae and Freddie Mac, various descriptive fields reflect changes that became effective upon the market implementation of the Single Security Initiative in June 2019. " customSQL="select CL_VALUE CODE, CL_NME DISPLAY_NAME FROM FT_T_INCL where INDUS_CL_SET_ID ='BBINDSGR' AND LEVEL_NUM IS NULL AND END_TMS IS NULL" desc="BICS (Bloomberg Industry Classification System) level III classification of the issuer based on its business or economic function and characteristics." displayCaption="BICS Level III" entityTypeId="++3qwBhS2etxm001" id="005kiLnC2etqS01i" mandatory="0" multiplicity="SINGLE_OR_NULL" name="BICSLevelIII" nameSpace="GSC"/>
+    <beField class="BETEXT" customDomainSQL="select CL_VALUE CODE, cl_value || ' - ' ||cl_nme DISPLAY_NAME FROM FT_T_INCL where INDUS_CL_SET_ID ='RGCDINSC' AND LEVEL_NUM IS NULL AND END_TMS IS NULL" customSQL="select CL_VALUE CODE, CONCAT( CONCAT(CL_VALUE , ' - '  ) , CL_NME ) DISPLAY_NAME FROM FT_T_INCL where INDUS_CL_SET_ID ='RGCDINSC' AND LEVEL_NUM IS NULL AND END_TMS IS NULL" desc="Code assigned by Refinitiv identifying the industry of the institution." displayCaption="Industrial Sector" entityTypeId="++3qwBhS2etxm001" id="++5pqIIS2etne00g" mandatory="0" multiplicity="SINGLE_OR_NULL" name="IndustrialSector" nameSpace="GSC"/>
+    <beField class="BETEXT" customDomainSQL="select CL_VALUE CODE, cl_value || ' - ' ||cl_nme DISPLAY_NAME FROM FT_T_INCL where INDUS_CL_SET_ID ='RGCDINSU' AND LEVEL_NUM IS NULL AND END_TMS IS NULL" customSQL="select CL_VALUE CODE, CONCAT( CONCAT(CL_VALUE , ' - '  ) , CL_NME ) DISPLAY_NAME FROM FT_T_INCL where INDUS_CL_SET_ID ='RGCDINSU' AND LEVEL_NUM IS NULL AND END_TMS IS NULL" desc="Code assigned by Refinitiv representing a further breakdown of the industry of the institution." displayCaption="Industrial Sub-Sector" entityTypeId="++3qwBhS2etxm001" id="++5pqIIS2etne014" mandatory="0" multiplicity="SINGLE_OR_NULL" name="IndustrialSubSector" nameSpace="GSC"/>
+    <beField class="BETEXT" customDomainSQL="select CL_VALUE CODE, cl_value || ' - ' ||cl_nme DISPLAY_NAME FROM FT_T_INCL where INDUS_CL_SET_ID ='FTSE' AND LEVEL_NUM IS NULL AND END_TMS IS NULL" customSQL="select CL_VALUE CODE, CONCAT( CONCAT(CL_VALUE , ' - '  ) , CL_NME ) DISPLAY_NAME FROM FT_T_INCL where INDUS_CL_SET_ID ='FTSE' AND LEVEL_NUM IS NULL AND END_TMS IS NULL" desc="FTSE Industrial Classification Code" displayCaption="FTSE Industrial Classification Code" entityTypeId="++3qwBhS2etxm001" id="++5puVHS2etne019" mandatory="0" multiplicity="SINGLE_OR_NULL" name="FTSEIndustrialClassification" nameSpace="GSC"/>
+    <beField class="BETEXT" customDomainSQL="SELECT CL_VALUE CODE, cl_value || ' - ' ||cl_nme DISPLAY_NAME FROM FT_T_INCL WHERE INDUS_CL_SET_ID ='NACE' AND LEVEL_NUM = '1' AND END_TMS IS NULL" customSQL="SELECT CL_VALUE CODE, CONCAT( CONCAT(CL_VALUE , ' - '  ) , CL_NME ) DISPLAY_NAME FROM FT_T_INCL WHERE INDUS_CL_SET_ID ='NACE' AND LEVEL_NUM = '1' AND END_TMS IS NULL" displayCaption="NACE Sector Code" entityTypeId="++3qwBhS2etxm001" id="++8VhdZy2es3801q" mandatory="0" multiplicity="SINGLE_OR_NULL" name="NACESectorCode" nameSpace="GSC"/>
+    <beField class="BETEXT" customDomainSQL="SELECT CL_VALUE CODE, cl_value || ' - ' ||cl_nme DISPLAY_NAME FROM FT_T_INCL WHERE INDUS_CL_SET_ID ='NACE' AND LEVEL_NUM = '4' AND END_TMS IS NULL" customSQL="SELECT CL_VALUE CODE, CONCAT( CONCAT(CL_VALUE , ' - '  ) , CL_NME ) DISPLAY_NAME FROM FT_T_INCL WHERE INDUS_CL_SET_ID ='NACE' AND LEVEL_NUM = '4' AND END_TMS IS NULL" displayCaption="NACE Class Code" entityTypeId="++3qwBhS2etxm001" id="++8VhdZy2es3801t" mandatory="0" multiplicity="SINGLE_OR_NULL" name="NACEClassCode" nameSpace="GSC"/>
+    <beField class="BETEXT" customDomainSQL="select CL_VALUE CODE, cl_value || ' - ' ||cl_nme DISPLAY_NAME FROM FT_T_INCL WHERE INDUS_CL_SET_ID ='NACE' AND LEVEL_NUM = '2' AND END_TMS IS NULL" customSQL="select CL_VALUE CODE, CONCAT( CONCAT(CL_VALUE , ' - '  ) , CL_NME ) DISPLAY_NAME FROM FT_T_INCL WHERE INDUS_CL_SET_ID ='NACE' AND LEVEL_NUM = '2' AND END_TMS IS NULL" displayCaption="NACE Division Code" entityTypeId="++3qwBhS2etxm001" id="++8VhdZy2es3801r" mandatory="0" multiplicity="SINGLE_OR_NULL" name="NACEDivisionCode" nameSpace="GSC"/>
+    <beField class="BETEXT" customDomainSQL="SELECT CL_VALUE CODE, cl_value || ' - ' ||cl_nme DISPLAY_NAME FROM FT_T_INCL WHERE INDUS_CL_SET_ID ='NACE' AND LEVEL_NUM = '3' AND END_TMS IS NULL" customSQL="SELECT CL_VALUE CODE, CONCAT( CONCAT(CL_VALUE , ' - '  ) , CL_NME ) DISPLAY_NAME FROM FT_T_INCL WHERE INDUS_CL_SET_ID ='NACE' AND LEVEL_NUM = '3' AND END_TMS IS NULL" displayCaption="NACE Group Code" entityTypeId="++3qwBhS2etxm001" id="++8VhdZy2es3801s" mandatory="0" multiplicity="SINGLE_OR_NULL" name="NACEGroupCode" nameSpace="GSC"/>
+    <beField class="BETEXT" customDomainSQL="select CL_VALUE CODE, cl_value || ' - ' ||cl_nme DISPLAY_NAME FROM FT_T_INCL where INDUS_CL_SET_ID ='MDYBRDBL' AND END_TMS IS NULL" customSQL="select CL_VALUE CODE, CONCAT( CONCAT(CL_VALUE , ' - '  ) , CL_NME ) DISPLAY_NAME FROM FT_T_INCL where INDUS_CL_SET_ID ='MDYBRDBL' AND END_TMS IS NULL" desc="This field stores the Moody's Broad Business Line Code." displayCaption="Moody's Broad Business Line Code" entityTypeId="++3qwBhS2etxm001" id="++8cCHMy2es2C00d" mandatory="0" multiplicity="SINGLE_OR_NULL" name="MoodyBroadBusinessLineCode" nameSpace="GSC"/>
+    <beField class="BETEXT" customDomainSQL="select CL_VALUE CODE, cl_value || ' - ' ||cl_nme DISPLAY_NAME FROM FT_T_INCL where INDUS_CL_SET_ID ='MDYSPCBL' AND END_TMS IS NULL" customSQL="select CL_VALUE CODE, CONCAT( CONCAT(CL_VALUE , ' - '  ) , CL_NME ) DISPLAY_NAME FROM FT_T_INCL where INDUS_CL_SET_ID ='MDYSPCBL' AND END_TMS IS NULL" desc="This field stores the Moody's Specific Business Line Code" displayCaption="Moody's Specific Business Line Code" entityTypeId="++3qwBhS2etxm001" id="++8cCHMy2es2C00a" mandatory="0" multiplicity="SINGLE_OR_NULL" name="MoodySpecificBusinessLineCode" nameSpace="GSC"/>
+    <beField class="BETEXT" customDomainSQL="select CL_VALUE CODE, cl_value || ' - ' ||cl_nme DISPLAY_NAME FROM FT_T_INCL where INDUS_CL_SET_ID ='SIC' AND LEVEL_NUM = '1' AND END_TMS IS NULL" customSQL="select CL_VALUE CODE, CONCAT( CONCAT(CL_VALUE , ' - '  ) , CL_NME) DISPLAY_NAME FROM FT_T_INCL where INDUS_CL_SET_ID ='SIC' AND LEVEL_NUM = '1' AND END_TMS IS NULL" desc="Industry of the Financial institution based on the Bureau of the Budget SIC code." displayCaption="SIC Code - Level 1" entityTypeId="++3qwBhS2etxm001" id="++8cCHMy2es2C01A" mandatory="0" multiplicity="SINGLE_OR_NULL" name="SICCodeLevel1" nameSpace="GSC"/>
+    <beField class="BETEXT" customDomainSQL="select CL_VALUE CODE, cl_value || ' - ' ||cl_nme DISPLAY_NAME FROM FT_T_INCL where INDUS_CL_SET_ID ='SIC' AND LEVEL_NUM = '3' AND END_TMS IS NULL" customSQL="select CL_VALUE CODE, CONCAT( CONCAT(CL_VALUE , ' - '  ) , CL_NME) DISPLAY_NAME FROM FT_T_INCL where INDUS_CL_SET_ID ='SIC' AND LEVEL_NUM = '3' AND END_TMS IS NULL" desc="Industry of the Financial institution based on the Bureau of the Budget SIC code." displayCaption="SIC Code - Level 3" entityTypeId="++3qwBhS2etxm001" id="++8cCHMy2es2C017" mandatory="0" multiplicity="SINGLE_OR_NULL" name="SICCodeLevel3" nameSpace="GSC"/>
+    <beField class="BETEXT" displayCaption="Nuveen Rusell Sector Code" entityTypeId="++3qwBhS2etxm001" id="008zD6dC2es1800G" mandatory="0" multiplicity="SINGLE_OR_NULL" name="NuveenRusellSectorCode" nameSpace="NUVEEN"/>
+    <beField class="BETEXT" displayCaption="Nuveen Russell Industry Code" entityTypeId="++3qwBhS2etxm001" id="008zD6dC2es1800U" mandatory="0" multiplicity="SINGLE_OR_NULL" name="NuveenRussellIndustryCode" nameSpace="NUVEEN"/>
+    <beField class="BETEXT" customDomainSQL="select CL_VALUE CODE, CL_NME DISPLAY_NAME FROM FT_T_INCL where INDUS_CL_SET_ID ='NUVSECCDE' AND END_TMS IS NULL" displayCaption="Security Code" entityTypeId="++3qwBhS2etxm001" id="009V00nC2etbS013" mandatory="0" multiplicity="SINGLE_OR_NULL" name="NuveenSecurityCode" nameSpace="NUVEEN"/>
+    <beField class="BETEXT" customDomainSQL="select CL_VALUE CODE, CL_NME DISPLAY_NAME FROM FT_T_INCL where INDUS_CL_SET_ID ='MRTSECNUM' AND END_TMS IS NULL" displayCaption="Merritt Sector Name" entityTypeId="++3qwBhS2etxm001" id="009V00nC2etbS01Q" mandatory="0" multiplicity="SINGLE_OR_NULL" name="NuveenMerrittSectorName" nameSpace="NUVEEN"/>
+    <beField class="BETEXT" customDomainSQL="select CL_VALUE CODE, CL_NME || ' - ' || CL_VALUE DISPLAY_NAME FROM FT_T_INCL where INDUS_CL_SET_ID ='NUVSECNUM' AND END_TMS IS NULL" displayCaption="Muni Sector Code" entityTypeId="++3qwBhS2etxm001" id="009V00nC2etbS01D" mandatory="0" multiplicity="SINGLE_OR_NULL" name="NuveenMuniSectorCode" nameSpace="NUVEEN"/>
+    <beField class="BETEXT" displayCaption="Muni Sector Name" entityTypeId="++3qwBhS2etxm001" id="009V00nC2etbS01H" mandatory="0" multiplicity="SINGLE_AND_READONLY" name="NuveenMuniSectorName" nameSpace="NUVEEN"/>
+  </beFields>
+  <dataGroups>
+    <dataGroup customInd="0" desc="Classification" displayCaption="Classification" entityTypeId="++3qwBhS2etxm001" frequencyInd="0" id="++5ckBRS2etse00o" ignoreDeleteChildren="false" multiplicity="SINGLE_OR_NULL" name="FinancialInstitutionClassification" nameSpace="GSC">
+      <part defNameSpace="NUVEEN" fieldId="++9ritZMHIV+u002" id="++9ritZMHIV+u004" prntReqdInd="0" seq="0"/>
+      <part defNameSpace="NUVEEN" fieldId="008zD6dC2es1800G" id="008zD6dC2es1800X" prntReqdInd="0" seq="37"/>
+      <part defNameSpace="NUVEEN" fieldId="008zD6dC2es1800U" id="008zD6dC2es1800Y" prntReqdInd="0" seq="38"/>
+      <part defNameSpace="NUVEEN" fieldId="009V00nC2etbS013" id="009V00nC2etbS04b" prntReqdInd="0" seq="39"/>
+      <part defNameSpace="NUVEEN" fieldId="009V00nC2etbS01Q" id="009V00nC2etbS04c" prntReqdInd="0" seq="40"/>
+      <part defNameSpace="NUVEEN" fieldId="009V00nC2etbS01D" id="009V00nC2etbS04d" prntReqdInd="0" seq="41"/>
+      <part defNameSpace="NUVEEN" fieldId="009V00nC2etbS01H" id="009V00nC2etbS04e" prntReqdInd="0" seq="42"/>
+    </dataGroup>
+  </dataGroups>
+  <relations>
+    <relation id="008s8K1C2es18007" name="FT_T_FINS-To-FT_T_ISSR00" nameSpace="NUVEEN" srcTable="FT_T_FINS" tgtTable="FT_T_ISSR">
+      <field fromColumn="INST_MNEM" id="008s8K1C2es18008" nameSpace="NUVEEN" toColumn="FINS_INST_MNEM" type="RELATION_FIELD" valueType="COLUMN"/>
+    </relation>
+    <relation id="009ZtXqi2etbS00A" name="FT_T_FICL-To-FT_T_INCL02_NVN" nameSpace="NUVEEN" srcTable="FT_T_FICL" tgtTable="FT_T_INCL">
+      <field fromColumn="CLSF_OID" id="009ZtXqi2etbS00B" nameSpace="NUVEEN" toColumn="CLSF_OID" type="RELATION_FIELD" valueType="COLUMN"/>
+    </relation>
+  </relations>
+  <occurrences>
+    <occurrence desc="Occurrence for Financial Institution" id="++4HwLjy2etpy00a" ignoreDeleteChildren="false" multiplicity="SINGLE_OR_NULL" name="FINS_01" nameSpace="GSC" table="FT_T_FINS" timeSeries="NONE">
+      <field id="008s8K1C2es18006" nameSpace="NUVEEN" relationId="008s8K1C2es18007"/>
+    </occurrence>
+    <occurrence desc="Occurrence for Financial Institution Classification" id="008zD6dC2es18007" ignoreDeleteChildren="false" multiplicity="SINGLE_OR_NULL" name="FICL_RUSSLSEC" nameSpace="NUVEEN" parentId="++4HwLjy2etpy00a" table="FT_T_FICL" timeSeries="LOGICAL_DELETE">
+      <field id="008zD6dC2es1800A" name="CL_VALUE" nameSpace="NUVEEN"/>
+      <value id="008zD6dC2es18009" name="CLSF_PURP_TYP" nameSpace="NUVEEN" type="FILTER_FIELD" value="BBRUSSLSEC" valueType="CONSTANT"/>
+      <value id="008zD6dC2es18008" name="INDUS_CL_SET_ID" nameSpace="NUVEEN" type="FILTER_FIELD" value="RUSSLSEC" valueType="CONSTANT"/>
+      <option id="++8ze2My2es1800Q" nameSpace="NUVEEN" type="DEFAULT_MATCH_KEY" value="FICL_MATCH_SET"/>
+      <option id="++8ze2My2es1800R" nameSpace="NUVEEN" type="DEFAULT_ACTION" value="UNKNOWN"/>
+    </occurrence>
+    <occurrence desc="Occurrence for Industry Classification" id="008zD6dC2es1800B" ignoreDeleteChildren="false" multiplicity="SINGLE_OR_NULL" name="FICL_RUSSLSEC_INCL" nameSpace="NUVEEN" parentId="008zD6dC2es18007" table="FT_T_INCL" timeSeries="LOGICAL_DELETE">
+      <field id="008zD6dC2es1800F" name="CL_VALUE" nameSpace="NUVEEN"/>
+      <value id="008zD6dC2es1800E" name="INDUS_CL_SET_ID" nameSpace="NUVEEN" type="FILTER_FIELD" value="RUSSLSEC" valueType="CONSTANT"/>
+      <value id="008zD6dC2es1800D" name="LEVEL_NUM" nameSpace="NUVEEN" type="FILTER_FIELD" value="2" valueType="CONSTANT"/>
+      <option id="008zD6dC2es1800C" nameSpace="NUVEEN" type="LOOKUP_ONLY" value="true"/>
+      <option id="008zD6dC2es1800H" nameSpace="NUVEEN" type="DEFAULT_ACTION" value="REFERENCE"/>
+    </occurrence>
+    <occurrence desc="Occurrence for Financial Institution Classification" id="008zD6dC2es1800L" ignoreDeleteChildren="false" multiplicity="SINGLE_OR_NULL" name="FICL_RUSSLIND" nameSpace="NUVEEN" parentId="++4HwLjy2etpy00a" table="FT_T_FICL" timeSeries="LOGICAL_DELETE">
+      <field id="008zD6dC2es1800O" name="CL_VALUE" nameSpace="NUVEEN"/>
+      <value id="008zD6dC2es1800M" name="CLSF_PURP_TYP" nameSpace="NUVEEN" type="FILTER_FIELD" value="BBRUSSLIND" valueType="CONSTANT"/>
+      <value id="008zD6dC2es1800N" name="INDUS_CL_SET_ID" nameSpace="NUVEEN" type="FILTER_FIELD" value="RUSSLIND" valueType="CONSTANT"/>
+      <option id="++8ze2My2es1800O" nameSpace="NUVEEN" type="DEFAULT_MATCH_KEY" value="FICL_MATCH_SET"/>
+      <option id="++8ze2My2es1800P" nameSpace="NUVEEN" type="DEFAULT_ACTION" value="UNKNOWN"/>
+    </occurrence>
+    <occurrence desc="Occurrence for Industry Classification" id="008zD6dC2es1800P" ignoreDeleteChildren="false" multiplicity="SINGLE_OR_NULL" name="FICL_RUSSLIND_INCL" nameSpace="NUVEEN" parentId="008zD6dC2es1800L" table="FT_T_INCL" timeSeries="LOGICAL_DELETE">
+      <field id="008zD6dC2es1800T" name="CL_VALUE" nameSpace="NUVEEN"/>
+      <value id="008zD6dC2es1800R" name="INDUS_CL_SET_ID" nameSpace="NUVEEN" type="FILTER_FIELD" value="RUSSLIND" valueType="CONSTANT"/>
+      <value id="008zD6dC2es1800S" name="LEVEL_NUM" nameSpace="NUVEEN" type="FILTER_FIELD" value="1" valueType="CONSTANT"/>
+      <option id="008zD6dC2es1800Q" nameSpace="NUVEEN" type="LOOKUP_ONLY" value="true"/>
+    </occurrence>
+    <occurrence desc="Occurrence for Financial Institution Classification" id="009V00nC2etbS00y" ignoreDeleteChildren="false" multiplicity="SINGLE_OR_NULL" name="FICL_NVN_NUVSECCDE" nameSpace="NUVEEN" parentId="++4HwLjy2etpy00a" table="FT_T_FICL" timeSeries="LOGICAL_DELETE">
+      <field id="009ZtXqi2etbS009" nameSpace="NUVEEN" relationId="009ZtXqi2etbS00A"/>
+      <field id="009V00nC2etbS011" name="CL_VALUE" nameSpace="NUVEEN"/>
+      <value id="009V00nC2etbS00z" name="INDUS_CL_SET_ID" nameSpace="NUVEEN" type="FILTER_FIELD" value="NUVSECCDE" valueType="CONSTANT"/>
+    </occurrence>
+    <occurrence desc="Occurrence for Industry Classification" id="009V00nC2etbS00-" ignoreDeleteChildren="false" multiplicity="SINGLE_OR_NULL" name="FICL_NVN_NUVSECCDE_INCL_Looku" nameSpace="NUVEEN" parentId="009V00nC2etbS00y" table="FT_T_INCL" timeSeries="LOGICAL_DELETE">
+      <field desc="Class Name" id="++9ritZMHIV+u001" name="CL_NME" nameSpace="NUVEEN"/>
+      <field id="009V00nC2etbS012" name="CL_VALUE" nameSpace="NUVEEN"/>
+      <value id="009V00nC2etbS010" name="INDUS_CL_SET_ID" nameSpace="NUVEEN" type="FILTER_FIELD" value="NUVSECCDE" valueType="CONSTANT"/>
+      <option id="++9WYlFy2etbS002" nameSpace="NUVEEN" type="DEFAULT_ACTION" value="REFERENCE"/>
+      <option id="++9WYlFy2etbS003" nameSpace="NUVEEN" type="DEFAULT_MATCH_KEY" value="INCL_VALUE"/>
+      <option id="009V00nC2etbS00+" nameSpace="NUVEEN" type="LOOKUP_ONLY" value="true"/>
+    </occurrence>
+    <occurrence desc="Occurrence for Financial Institution Classification" id="009V00nC2etbS016" ignoreDeleteChildren="false" multiplicity="SINGLE_OR_NULL" name="FICL_NVN_NUVSECNUM" nameSpace="NUVEEN" parentId="++4HwLjy2etpy00a" table="FT_T_FICL" timeSeries="LOGICAL_DELETE">
+      <field id="009V00nC2etbS01C" name="CL_VALUE" nameSpace="NUVEEN"/>
+      <value id="009V00nC2etbS01B" name="INDUS_CL_SET_ID" nameSpace="NUVEEN" type="FILTER_FIELD" value="NUVSECNUM" valueType="CONSTANT"/>
+    </occurrence>
+    <occurrence desc="Occurrence for Industry Classification" id="009V00nC2etbS017" ignoreDeleteChildren="false" multiplicity="SINGLE_OR_NULL" name="FICL_NVN_NUVSECNUM_INCL_Looku" nameSpace="NUVEEN" parentId="009V00nC2etbS016" table="FT_T_INCL" timeSeries="LOGICAL_DELETE">
+      <field id="009V00nC2etbS01G" name="CL_NME" nameSpace="NUVEEN"/>
+      <field id="009V00nC2etbS01A" name="CL_VALUE" nameSpace="NUVEEN"/>
+      <value id="009V00nC2etbS019" name="INDUS_CL_SET_ID" nameSpace="NUVEEN" type="FILTER_FIELD" value="NUVSECNUM" valueType="CONSTANT"/>
+      <option id="++9WYlFy2etbS004" nameSpace="NUVEEN" type="DEFAULT_ACTION" value="REFERENCE"/>
+      <option id="++9WYlFy2etbS005" nameSpace="NUVEEN" type="DEFAULT_MATCH_KEY" value="INCL_VALUE"/>
+      <option id="009V00nC2etbS018" nameSpace="NUVEEN" type="LOOKUP_ONLY" value="true"/>
+    </occurrence>
+    <occurrence desc="Occurrence for Financial Institution Classification" id="009V00nC2etbS01J" ignoreDeleteChildren="false" multiplicity="SINGLE_OR_NULL" name="FICL_NVN_MRTSECNUM" nameSpace="NUVEEN" parentId="++4HwLjy2etpy00a" table="FT_T_FICL" timeSeries="LOGICAL_DELETE">
+      <field id="009V00nC2etbS01P" name="CL_VALUE" nameSpace="NUVEEN"/>
+      <value id="009V00nC2etbS01K" name="INDUS_CL_SET_ID" nameSpace="NUVEEN" type="FILTER_FIELD" value="MRTSECNUM" valueType="CONSTANT"/>
+    </occurrence>
+    <occurrence desc="Occurrence for Industry Classification" id="009V00nC2etbS01L" ignoreDeleteChildren="false" multiplicity="SINGLE_OR_NULL" name="FICL_NVN_MRTSECNUM_INCL_Looku" nameSpace="NUVEEN" parentId="009V00nC2etbS01J" table="FT_T_INCL" timeSeries="LOGICAL_DELETE">
+      <field id="009V00nC2etbS01O" name="CL_VALUE" nameSpace="NUVEEN"/>
+      <value id="009V00nC2etbS01N" name="INDUS_CL_SET_ID" nameSpace="NUVEEN" type="FILTER_FIELD" value="MRTSECNUM" valueType="CONSTANT"/>
+      <option id="++9WYlFy2etbS000" nameSpace="NUVEEN" type="DEFAULT_ACTION" value="REFERENCE"/>
+      <option id="++9WYlFy2etbS001" nameSpace="NUVEEN" type="DEFAULT_MATCH_KEY" value="INCL_VALUE"/>
+      <option id="009V00nC2etbS01M" nameSpace="NUVEEN" type="LOOKUP_ONLY" value="true"/>
+    </occurrence>
+  </occurrences>
+  <mappings>
+    <mapping beFieldId="++9ritZMHIV+u002" groupMapping="0" id="++9ritZMHIV+u003" nameSpace="NUVEEN" occFieldId="++9ritZMHIV+u001"/>
+    <mapping beFieldId="++5ckBRS2etse05O" groupMapping="0" id="++5ckBRS2etse05n" nameSpace="GSC" occFieldId="++5ckBRS2etse05b"/>
+    <mapping beFieldId="++5ckBRS2etse05O" groupMapping="0" id="++5ckBRS2etse05o" nameSpace="GSC" occFieldId="++5ckBRS2etse05R"/>
+    <mapping beFieldId="++5ckBRS2etse04S" groupMapping="0" id="++5ckBRS2etse04c" nameSpace="GSC" occFieldId="++5ckBRS2etse04V"/>
+    <mapping beFieldId="++5ckBRS2etse04S" groupMapping="0" id="++5ckBRS2etse04p" nameSpace="GSC" occFieldId="++5ckBRS2etse04g"/>
+    <mapping beFieldId="++5ckBRS2etse04w" groupMapping="0" id="++5ckBRS2etse05G" nameSpace="GSC" occFieldId="++5ckBRS2etse04z"/>
+    <mapping beFieldId="++5ckBRS2etse04w" groupMapping="0" id="++5ckBRS2etse05H" nameSpace="GSC" occFieldId="++5ckBRS2etse057"/>
+    <mapping beFieldId="++5ckBRS2etse05y" groupMapping="0" id="++5ckBRS2etse06M" nameSpace="GSC" occFieldId="++5ckBRS2etse05+"/>
+    <mapping beFieldId="++5ckBRS2etse05y" groupMapping="0" id="++5ckBRS2etse06N" nameSpace="GSC" occFieldId="++5ckBRS2etse06D"/>
+    <mapping beFieldId="005kiLnC2etqS010" groupMapping="0" id="005kiLnC2etqS011" nameSpace="GSC" occFieldId="005kiLnC2etqS00-"/>
+    <mapping beFieldId="005kiLnC2etqS010" groupMapping="0" id="006AzXZC2etvy01N" nameSpace="GSC" occFieldId="005k2kDC2etqS052"/>
+    <mapping beFieldId="005kiLnC2etqS01K" groupMapping="0" id="005kiLnC2etqS01L" nameSpace="GSC" occFieldId="005kiLnC2etqS01E"/>
+    <mapping beFieldId="005kiLnC2etqS01K" groupMapping="0" id="006AzXZC2etvy01M" nameSpace="GSC" occFieldId="005kiLnC2etqS01P"/>
+    <mapping beFieldId="005kiLnC2etqS01i" groupMapping="0" id="005kiLnC2etqS01j" nameSpace="GSC" occFieldId="005kiLnC2etqS01c"/>
+    <mapping beFieldId="005kiLnC2etqS01i" groupMapping="0" id="006AzXZC2etvy01O" nameSpace="GSC" occFieldId="005kiLnC2etqS01S"/>
+    <mapping beFieldId="++5pqIIS2etne00g" groupMapping="0" id="++5pqIIS2etne00h" nameSpace="GSC" occFieldId="++5pqIIS2etne00Y"/>
+    <mapping beFieldId="++5pqIIS2etne00g" groupMapping="0" id="006AzXZC2etvy01U" nameSpace="GSC" occFieldId="006AzXZC2etvy01T"/>
+    <mapping beFieldId="++5pqIIS2etne014" groupMapping="0" id="++5pqIIS2etne015" nameSpace="GSC" occFieldId="++5pqIIS2etne012"/>
+    <mapping beFieldId="++5pqIIS2etne014" groupMapping="0" id="006AzXZC2etvy01W" nameSpace="GSC" occFieldId="006AzXZC2etvy01V"/>
+    <mapping beFieldId="++5puVHS2etne019" groupMapping="0" id="++5puVHS2etne01A" nameSpace="GSC" occFieldId="++5puVHS2etne011"/>
+    <mapping beFieldId="++5puVHS2etne019" groupMapping="0" id="006AzXZC2etvy01Q" nameSpace="GSC" occFieldId="006AzXZC2etvy01P"/>
+    <mapping beFieldId="++8VhdZy2es3801q" groupMapping="0" id="++8VhdZy2es3801u" nameSpace="GSC" occFieldId="++8VhdZy2es3800l"/>
+    <mapping beFieldId="++8VhdZy2es3801q" groupMapping="0" id="++8VhdZy2es3801v" nameSpace="GSC" occFieldId="++8VhdZy2es3800c"/>
+    <mapping beFieldId="++8VhdZy2es3801t" groupMapping="0" id="++8VhdZy2es3801+" nameSpace="GSC" occFieldId="++8VhdZy2es3801L"/>
+    <mapping beFieldId="++8VhdZy2es3801t" groupMapping="0" id="++8VhdZy2es3801-" nameSpace="GSC" occFieldId="++8VhdZy2es3801U"/>
+    <mapping beFieldId="++8VhdZy2es3801r" groupMapping="0" id="++8VhdZy2es3801w" nameSpace="GSC" occFieldId="++8VhdZy2es38012"/>
+    <mapping beFieldId="++8VhdZy2es3801r" groupMapping="0" id="++8VhdZy2es3801x" nameSpace="GSC" occFieldId="++8VhdZy2es3800v"/>
+    <mapping beFieldId="++8VhdZy2es3801s" groupMapping="0" id="++8VhdZy2es3801y" nameSpace="GSC" occFieldId="++8VhdZy2es3801G"/>
+    <mapping beFieldId="++8VhdZy2es3801s" groupMapping="0" id="++8VhdZy2es3801z" nameSpace="GSC" occFieldId="++8VhdZy2es38017"/>
+    <mapping beFieldId="++8cCHMy2es2C00d" groupMapping="0" id="++8cCHMy2es2C00e" nameSpace="GSC" occFieldId="++8cCHMy2es2C00J"/>
+    <mapping beFieldId="++8cCHMy2es2C00d" groupMapping="0" id="++8cCHMy2es2C00f" nameSpace="GSC" occFieldId="++8cCHMy2es2C00B"/>
+    <mapping beFieldId="++8cCHMy2es2C00a" groupMapping="0" id="++8cCHMy2es2C00b" nameSpace="GSC" occFieldId="++8cCHMy2es2C00X"/>
+    <mapping beFieldId="++8cCHMy2es2C00a" groupMapping="0" id="++8cCHMy2es2C00c" nameSpace="GSC" occFieldId="++8cCHMy2es2C00P"/>
+    <mapping beFieldId="++8cCHMy2es2C01A" groupMapping="0" id="++8cCHMy2es2C01B" nameSpace="GSC" occFieldId="++8cCHMy2es2C00s"/>
+    <mapping beFieldId="++8cCHMy2es2C01A" groupMapping="0" id="++8cCHMy2es2C01C" nameSpace="GSC" occFieldId="++8cCHMy2es2C00h"/>
+    <mapping beFieldId="++8cCHMy2es2C017" groupMapping="0" id="++8cCHMy2es2C018" nameSpace="GSC" occFieldId="++8cCHMy2es2C013"/>
+    <mapping beFieldId="++8cCHMy2es2C017" groupMapping="0" id="++8cCHMy2es2C019" nameSpace="GSC" occFieldId="++8cCHMy2es2C00x"/>
+    <mapping beFieldId="008zD6dC2es1800G" groupMapping="0" id="008zD6dC2es1800I" nameSpace="NUVEEN" occFieldId="008zD6dC2es1800A"/>
+    <mapping beFieldId="008zD6dC2es1800G" groupMapping="0" id="008zD6dC2es1800J" nameSpace="NUVEEN" occFieldId="008zD6dC2es1800F"/>
+    <mapping beFieldId="008zD6dC2es1800U" groupMapping="0" id="008zD6dC2es1800V" nameSpace="NUVEEN" occFieldId="008zD6dC2es1800O"/>
+    <mapping beFieldId="008zD6dC2es1800U" groupMapping="0" id="008zD6dC2es1800W" nameSpace="NUVEEN" occFieldId="008zD6dC2es1800T"/>
+    <mapping beFieldId="009V00nC2etbS013" groupMapping="0" id="009V00nC2etbS014" nameSpace="NUVEEN" occFieldId="009V00nC2etbS011"/>
+    <mapping beFieldId="009V00nC2etbS013" groupMapping="0" id="009V00nC2etbS015" nameSpace="NUVEEN" occFieldId="009V00nC2etbS012"/>
+    <mapping beFieldId="009V00nC2etbS01Q" groupMapping="0" id="009V00nC2etbS01R" nameSpace="NUVEEN" occFieldId="009V00nC2etbS01P"/>
+    <mapping beFieldId="009V00nC2etbS01Q" groupMapping="0" id="009V00nC2etbS01S" nameSpace="NUVEEN" occFieldId="009V00nC2etbS01O"/>
+    <mapping beFieldId="009V00nC2etbS01D" groupMapping="0" id="009V00nC2etbS01E" nameSpace="NUVEEN" occFieldId="009V00nC2etbS01C"/>
+    <mapping beFieldId="009V00nC2etbS01D" groupMapping="0" id="009V00nC2etbS01F" nameSpace="NUVEEN" occFieldId="009V00nC2etbS01A"/>
+    <mapping beFieldId="009V00nC2etbS01H" groupMapping="0" id="009V00nC2etbS01I" nameSpace="NUVEEN" occFieldId="009V00nC2etbS01G"/>
+  </mappings>
+</entities>

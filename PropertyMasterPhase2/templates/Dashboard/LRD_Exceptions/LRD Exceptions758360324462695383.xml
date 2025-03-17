@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<root createdUser="user1" id="l5CBC1)le1" screenType="DASHBOARD" title="LRD Exceptions">
+  <users>
+    <user id="5NDd31lke1" user="" userGroup="" userRole="readonly"/>
+    <user id="icz/x&gt;&gt;.e1" user="" userGroup="" userRole="sm_users"/>
+    <user id="icz(x&gt;&gt;.e1" user="" userGroup="" userRole="sm_readonly"/>
+    <user id="5NDf31lke1" user="" userGroup="" userRole="users"/>
+    <user id="5NDe31lke1" user="" userGroup="" userRole="administrators"/>
+  </users>
+  <tabs>
+    <tab columns="12" id="l5CCC1)le1" orderNum="0" tabSearch="l5Cm81)le1" title="LRD Loan Exceptions">
+      <participants>
+        <participant createdUser="user1" height="27" id="l5CDC1)le1" orderNum="0" tabSearch="l5Cm81)le1" width="12" x="0" y="12"/>
+        <participant createdUser="user1" height="12" id="l5CEC1)le1" orderNum="1" tabChart="l5CAC1)le1" width="6" x="0" y="39"/>
+        <participant createdUser="user1" height="12" id="l5CFC1)le1" orderNum="2" tabChart="l5C9C1)le1" width="6" x="6" y="0"/>
+      </participants>
+    </tab>
+  </tabs>
+</root>

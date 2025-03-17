@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<root chartName="Eagle All Exceptions by Type" chartTemplateId="3NDu21lke1" createdUser="user1" id="3NDR31lke1" screenType="SYSTEMCHART">
+  <property>{"CHART_TYPE":"LINE","ENTITY_NAME":"InstrumentException","Y_FIELD":"InstrumentException.ExceptionDetail.ExceptionSubType","SHOW_3D":false,"DRILL_TOP":false,"SHOW_DONUT":false,"Y_GROUP_FIELD":[],"Y_GROUP_FIELD_TYPE":[],"ADDON_CONFIG":{"InstrumentException.ExceptionDetail.ExceptionSubType":{"CHART_TYPE":"LINE","SKIP_GROUP_BY_CLAUSE":"N"}},"OPEN_IN_EXCEL":false,"SHOW_SPLINE":false,"SHOW_GRADIENT":false,"SKIP_GROUP_BY_CLAUSE":false,"SIMPLE_DATA_STORE":false,"TOGGLE_DATA_SERIES":false,"AGGREGATION":true}</property>
+</root>

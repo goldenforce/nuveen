@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entities cleanUnusedFields="false" nameSpace="NUVEEN">
+  <beFields>
+    <beField class="BEDATE" customDesc="The last date on which the underlying may be delivered into a futures contract." desc="The last date on which the underlying may be delivered into a futures contract. " displayCaption="Last Delivery Date" entityTypeId="++3qwBhS2etxm003" id="++5Ral9S2etse00d" mandatory="0" multiplicity="SINGLE_OR_NULL" name="LastDeliveryDate" nameSpace="GSC"/>
+  </beFields>
+  <mappings>
+    <mapping beFieldId="++5Ral9S2etse00d" groupMapping="0" id="++5Ral9S2etse00e" nameSpace="GSC" occFieldId="++5Ral9S2etse00U"/>
+  </mappings>
+</entities>

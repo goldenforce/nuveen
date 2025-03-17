@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<root baseLookup="Base" createdUser="user1" freezeColumns="" id="UvyJo&gt;i3G1" isDefault="N" isPublic="Y" lookupId="Bonds" pageSize="50" screenType="SYSTEMSRCH" title="CreditIssue_Search">
+  <config>{}</config>
+  <buttons/>
+  <columns>
+    <column caption="" columnName="System Issue ID" fieldName="Bonds.Identifiers.InstrumentLevelIdentifiers.NuveenSystemIssueID" filterFromNum="" filterFromTms="" filterToNum="" filterToTms="" filterValue="" filterable="Y" fromRange="" id="UvyMo&amp;gt;i3G1" isRange="N" mobileTemplate="" operator="" orderNum="0" showRelLink="" sort="" toRange="" width=""/>
+    <column caption="" columnName="Merritt Issue ID" fieldName="Bonds.Identifiers.InstrumentLevelIdentifiers.NuveenMerrittIssueID" filterFromNum="" filterFromTms="" filterToNum="" filterToTms="" filterValue="" filterable="Y" fromRange="" id="UvyLo&amp;gt;i3G1" isRange="N" mobileTemplate="" operator="" orderNum="1" showRelLink="" sort="" toRange="" width=""/>
+    <column caption="" columnName="Security Name" fieldName="Bonds.InstrumentDetails.PreferredInstrumentName" filterFromNum="" filterFromTms="" filterToNum="" filterToTms="" filterValue="" filterable="Y" fromRange="" id="UvyKo&amp;gt;i3G1" isRange="N" mobileTemplate="" operator="" orderNum="2" showRelLink="" sort="" toRange="" width=""/>
+    <column caption="" columnName="Instrument Type" fieldName="Bonds.InstrumentDetails.InstrumentType" filterFromNum="" filterFromTms="" filterToNum="" filterToTms="" filterValue="CRDTISSU" filterable="Y" fromRange="" id="UvyNo&amp;gt;i3G1" isRange="N" mobileTemplate="" operator="" orderNum="3" showRelLink="" sort="" toRange="" width=""/>
+  </columns>
+</root>

@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<root createdUser="user1" entityName="Bonds" entitySubType="[]" id="ezr$n&gt;JoW1" isDefault="N" isPublic="Y" screenType="SYSTEMGRID" title="S: Nuveen:Loans">
+  <control caption="Instrument Details" fullQualPath="Bonds.InstrumentDetails" id="ezr@n&amp;gt;JoW1" lazyInd="N" orderNum="0" parentId="" relatedPath="" screenId="ezr$n&amp;gt;JoW1" show="Y">
+    <control caption="" fullQualPath="Bonds.InstrumentDetails.InstrumentType" id="-(5a313ee1" lazyInd="N" orderNum="0" parentId="ezr@n&amp;gt;JoW1" relatedPath="" screenType="ezr$n&amp;gt;JoW1" show="Y"/>
+    <control caption="" fullQualPath="Bonds.InstrumentDetails.PrincipalCurrency" id="-(5b313ee1" lazyInd="N" orderNum="1" parentId="ezr@n&amp;gt;JoW1" relatedPath="" screenType="ezr$n&amp;gt;JoW1" show="Y"/>
+    <control caption="" fullQualPath="Bonds.InstrumentDetails.DistributionCurrency" id="-(5c313ee1" lazyInd="N" orderNum="2" parentId="ezr@n&amp;gt;JoW1" relatedPath="" screenType="ezr$n&amp;gt;JoW1" show="Y"/>
+    <control caption="" fullQualPath="Bonds.InstrumentDetails.IssueDate" id="-(5i313ee1" lazyInd="N" orderNum="3" parentId="ezr@n&amp;gt;JoW1" relatedPath="" screenType="ezr$n&amp;gt;JoW1" show="Y"/>
+    <control caption="" fullQualPath="Bonds.InstrumentDetails.MaturityDate" id="-(5j313ee1" lazyInd="N" orderNum="4" parentId="ezr@n&amp;gt;JoW1" relatedPath="" screenType="ezr$n&amp;gt;JoW1" show="Y"/>
+    <control caption="" fullQualPath="Bonds.InstrumentDetails.InstrumentSystemStatus" id="-(5k313ee1" lazyInd="N" orderNum="5" parentId="ezr@n&amp;gt;JoW1" relatedPath="" screenType="ezr$n&amp;gt;JoW1" show="Y"/>
+    <control caption="" fullQualPath="Bonds.InstrumentDetails.OriginalMaturityExpirationDate" id="-(56413ee1" lazyInd="N" orderNum="6" parentId="ezr@n&amp;gt;JoW1" relatedPath="" screenType="ezr$n&amp;gt;JoW1" show="Y"/>
+    <control caption="" fullQualPath="Bonds.InstrumentDetails.InstrumentDefaultDateTime" id="-(5U413ee1" lazyInd="N" orderNum="7" parentId="ezr@n&amp;gt;JoW1" relatedPath="" screenType="ezr$n&amp;gt;JoW1" show="Y"/>
+    <control caption="" fullQualPath="Bonds.InstrumentDetails.DescriptionNotes" id="-(5f413ee1" lazyInd="N" orderNum="8" parentId="ezr@n&amp;gt;JoW1" relatedPath="" screenType="ezr$n&amp;gt;JoW1" show="Y"/>
+  </control>
+  <control caption="Instrument Level Identifiers" fullQualPath="Bonds.Identifiers.InstrumentLevelIdentifiers" id="ezr*n&amp;gt;JoW1" lazyInd="N" orderNum="1" parentId="" relatedPath="" screenId="ezr$n&amp;gt;JoW1" show="Y">
+    <control caption="" fullQualPath="Bonds.Identifiers.InstrumentLevelIdentifiers.CUSIP" id="Rb5~213ee1" lazyInd="N" orderNum="0" parentId="ezr*n&amp;gt;JoW1" relatedPath="" screenType="ezr$n&amp;gt;JoW1" show="Y"/>
+    <control caption="" fullQualPath="Bonds.Identifiers.InstrumentLevelIdentifiers.ISIN" id="Rb5?213ee1" lazyInd="N" orderNum="1" parentId="ezr*n&amp;gt;JoW1" relatedPath="" screenType="ezr$n&amp;gt;JoW1" show="Y"/>
+    <control caption="" fullQualPath="Bonds.Identifiers.InstrumentLevelIdentifiers.NuveenWSODataBankdealID" id="Rb5A413ee1" lazyInd="N" orderNum="2" parentId="ezr*n&amp;gt;JoW1" relatedPath="" screenType="ezr$n&amp;gt;JoW1" show="Y"/>
+    <control caption="" fullQualPath="Bonds.Identifiers.InstrumentLevelIdentifiers.NuveenLRDFacilityID" id="Rb5B413ee1" lazyInd="N" orderNum="3" parentId="ezr*n&amp;gt;JoW1" relatedPath="" screenType="ezr$n&amp;gt;JoW1" show="Y"/>
+    <control caption="" fullQualPath="Bonds.Identifiers.InstrumentLevelIdentifiers.BBIdentifier" id="Rb5X413ee1" lazyInd="N" orderNum="4" parentId="ezr*n&amp;gt;JoW1" relatedPath="" screenType="ezr$n&amp;gt;JoW1" show="Y"/>
+    <control caption="" fullQualPath="Bonds.Identifiers.InstrumentLevelIdentifiers.BBGlobalInstrumentLevel" id="Rb5c413ee1" lazyInd="N" orderNum="5" parentId="ezr*n&amp;gt;JoW1" relatedPath="" screenType="ezr$n&amp;gt;JoW1" show="Y"/>
+    <control caption="" fullQualPath="Bonds.Identifiers.InstrumentLevelIdentifiers.BBUniqueIDInstrumentLevel" id="Rb56613ee1" lazyInd="N" orderNum="6" parentId="ezr*n&amp;gt;JoW1" relatedPath="" screenType="ezr$n&amp;gt;JoW1" show="Y"/>
+    <control caption="" fullQualPath="Bonds.Identifiers.InstrumentLevelIdentifiers.RealCUSIP" id="Rb5F613ee1" lazyInd="N" orderNum="7" parentId="ezr*n&amp;gt;JoW1" relatedPath="" screenType="ezr$n&amp;gt;JoW1" show="Y"/>
+    <control caption="" fullQualPath="Bonds.Identifiers.InstrumentLevelIdentifiers.CINSCode" id="Rb5f613ee1" lazyInd="N" orderNum="8" parentId="ezr*n&amp;gt;JoW1" relatedPath="" screenType="ezr$n&amp;gt;JoW1" show="Y"/>
+    <control caption="" fullQualPath="Bonds.Identifiers.InstrumentLevelIdentifiers.NuveenSecurityAlias" id="Rb56713ee1" lazyInd="N" orderNum="9" parentId="ezr*n&amp;gt;JoW1" relatedPath="" screenType="ezr$n&amp;gt;JoW1" show="Y"/>
+    <control caption="" fullQualPath="Bonds.Identifiers.InstrumentLevelIdentifiers.NuveenGlobalSecurityId" id="Rb5K713ee1" lazyInd="N" orderNum="10" parentId="ezr*n&amp;gt;JoW1" relatedPath="" screenType="ezr$n&amp;gt;JoW1" show="Y"/>
+    <control caption="" fullQualPath="Bonds.Identifiers.InstrumentLevelIdentifiers.NuveenWSOAdminFacilityID" id="Rb5R713ee1" lazyInd="N" orderNum="11" parentId="ezr*n&amp;gt;JoW1" relatedPath="" screenType="ezr$n&amp;gt;JoW1" show="Y"/>
+    <control caption="" fullQualPath="Bonds.Identifiers.InstrumentLevelIdentifiers.NuveenWSOAdminAssetID" id="Rb5S713ee1" lazyInd="N" orderNum="12" parentId="ezr*n&amp;gt;JoW1" relatedPath="" screenType="ezr$n&amp;gt;JoW1" show="Y"/>
+    <control caption="" fullQualPath="Bonds.Identifiers.InstrumentLevelIdentifiers.NuveenWSOWebAssetID" id="Rb5T713ee1" lazyInd="N" orderNum="13" parentId="ezr*n&amp;gt;JoW1" relatedPath="" screenType="ezr$n&amp;gt;JoW1" show="Y"/>
+    <control caption="" fullQualPath="Bonds.Identifiers.InstrumentLevelIdentifiers.NuveenWSOWebFacilityID" id="Rb5U713ee1" lazyInd="N" orderNum="14" parentId="ezr*n&amp;gt;JoW1" relatedPath="" screenType="ezr$n&amp;gt;JoW1" show="Y"/>
+    <control caption="" fullQualPath="Bonds.Identifiers.InstrumentLevelIdentifiers.SedolInstrumentLevel" id="Rb5N813ee1" lazyInd="N" orderNum="15" parentId="ezr*n&amp;gt;JoW1" relatedPath="" screenType="ezr$n&amp;gt;JoW1" show="Y"/>
+  </control>
+  <control caption="" fullQualPath="Bonds.NuveenLoanContractDetails" id="aysjp&amp;gt;3ee1" lazyInd="N" orderNum="2" parentId="" relatedPath="" screenId="ezr$n&amp;gt;JoW1" show="Y">
+    <control caption="" fullQualPath="Bonds.NuveenLoanContractDetails.NuveenContractName" id="ayskp&amp;gt;3ee1" lazyInd="N" orderNum="0" parentId="aysjp&amp;gt;3ee1" relatedPath="" screenType="ezr$n&amp;gt;JoW1" show="Y"/>
+    <control caption="" fullQualPath="Bonds.NuveenLoanContractDetails.NuveencontractActive" id="ayslp&amp;gt;3ee1" lazyInd="N" orderNum="1" parentId="aysjp&amp;gt;3ee1" relatedPath="" screenType="ezr$n&amp;gt;JoW1" show="Y"/>
+    <control caption="" fullQualPath="Bonds.NuveenLoanContractDetails.NuveenContractGlobalAmount" id="aysmp&amp;gt;3ee1" lazyInd="N" orderNum="2" parentId="aysjp&amp;gt;3ee1" relatedPath="" screenType="ezr$n&amp;gt;JoW1" show="Y"/>
+    <control caption="" fullQualPath="Bonds.NuveenLoanContractDetails.NuveenContractbaseRate" id="aysnp&amp;gt;3ee1" lazyInd="N" orderNum="3" parentId="aysjp&amp;gt;3ee1" relatedPath="" screenType="ezr$n&amp;gt;JoW1" show="Y"/>
+    <control caption="" fullQualPath="Bonds.NuveenLoanContractDetails.NuveenContractBaseRateAllIn" id="aysop&amp;gt;3ee1" lazyInd="N" orderNum="4" parentId="aysjp&amp;gt;3ee1" relatedPath="" screenType="ezr$n&amp;gt;JoW1" show="Y"/>
+    <control caption="" fullQualPath="Bonds.NuveenLoanContractDetails.NuveenContractMaturityDate" id="ayspp&amp;gt;3ee1" lazyInd="N" orderNum="5" parentId="aysjp&amp;gt;3ee1" relatedPath="" screenType="ezr$n&amp;gt;JoW1" show="Y"/>
+    <control caption="" fullQualPath="Bonds.NuveenLoanContractDetails.NuveenContractNextPaymentDate" id="aysqp&amp;gt;3ee1" lazyInd="N" orderNum="6" parentId="aysjp&amp;gt;3ee1" relatedPath="" screenType="ezr$n&amp;gt;JoW1" show="Y"/>
+    <control caption="" fullQualPath="Bonds.NuveenLoanContractDetails.NuveenContractStartDate" id="aysrp&amp;gt;3ee1" lazyInd="N" orderNum="7" parentId="aysjp&amp;gt;3ee1" relatedPath="" screenType="ezr$n&amp;gt;JoW1" show="Y"/>
+    <control caption="" fullQualPath="Bonds.NuveenLoanContractDetails.NuveenContractID" id="ayssp&amp;gt;3ee1" lazyInd="N" orderNum="8" parentId="aysjp&amp;gt;3ee1" relatedPath="" screenType="ezr$n&amp;gt;JoW1" show="Y"/>
+    <control caption="" fullQualPath="Bonds.NuveenLoanContractDetails.NuveenContractType" id="aystp&amp;gt;3ee1" lazyInd="N" orderNum="9" parentId="aysjp&amp;gt;3ee1" relatedPath="" screenType="ezr$n&amp;gt;JoW1" show="Y"/>
+    <control caption="" fullQualPath="Bonds.NuveenLoanContractDetails.NuveenContractFrequency" id="aysup&amp;gt;3ee1" lazyInd="N" orderNum="10" parentId="aysjp&amp;gt;3ee1" relatedPath="" screenType="ezr$n&amp;gt;JoW1" show="Y"/>
+    <control caption="" fullQualPath="Bonds.NuveenLoanContractDetails.NuveenWSOContractNotes" id="aysvp&amp;gt;3ee1" lazyInd="N" orderNum="11" parentId="aysjp&amp;gt;3ee1" relatedPath="" screenType="ezr$n&amp;gt;JoW1" show="Y"/>
+    <control caption="" fullQualPath="Bonds.NuveenLoanContractDetails.NuveenContractAccrualBasis" id="ayswp&amp;gt;3ee1" lazyInd="N" orderNum="12" parentId="aysjp&amp;gt;3ee1" relatedPath="" screenType="ezr$n&amp;gt;JoW1" show="Y"/>
+    <control caption="" fullQualPath="Bonds.NuveenLoanContractDetails.NuveenContractMonthCount" id="aysxp&amp;gt;3ee1" lazyInd="N" orderNum="13" parentId="aysjp&amp;gt;3ee1" relatedPath="" screenType="ezr$n&amp;gt;JoW1" show="Y"/>
+    <control caption="" fullQualPath="Bonds.NuveenLoanContractDetails.NuveenContractSpreadAdjustment" id="aysyp&amp;gt;3ee1" lazyInd="N" orderNum="14" parentId="aysjp&amp;gt;3ee1" relatedPath="" screenType="ezr$n&amp;gt;JoW1" show="Y"/>
+  </control>
+  <control caption="Description" fullQualPath="Bonds.InstrumentDescription" id="ezr.n&amp;gt;JoW1" lazyInd="N" orderNum="3" parentId="" relatedPath="" screenId="ezr$n&amp;gt;JoW1" show="Y">
+    <control caption="" fullQualPath="Bonds.InstrumentDescription.InstrumentDescriptionUsage" id="-(5mB13ee1" lazyInd="N" orderNum="0" parentId="ezr.n&amp;gt;JoW1" relatedPath="" screenType="ezr$n&amp;gt;JoW1" show="Y"/>
+    <control caption="" fullQualPath="Bonds.InstrumentDescription.InstrumentName" id="-(5nB13ee1" lazyInd="N" orderNum="1" parentId="ezr.n&amp;gt;JoW1" relatedPath="" screenType="ezr$n&amp;gt;JoW1" show="Y"/>
+    <control caption="" fullQualPath="Bonds.InstrumentDescription.SourceOfInstrumentDescription" id="-(5qB13ee1" lazyInd="N" orderNum="2" parentId="ezr.n&amp;gt;JoW1" relatedPath="" screenType="ezr$n&amp;gt;JoW1" show="Y"/>
+  </control>
+  <control caption="Bond Features" fullQualPath="Bonds.BondFeatures" id="ezr~n&amp;gt;JoW1" lazyInd="N" orderNum="5" parentId="" relatedPath="" screenId="ezr$n&amp;gt;JoW1" show="Y">
+    <control caption="" fullQualPath="Bonds.BondFeatures.SeniorIndicator" id="&amp;gt;E5XD1tce1" lazyInd="N" orderNum="0" parentId="ezr~n&amp;gt;JoW1" relatedPath="" screenType="ezr$n&amp;gt;JoW1" show="Y"/>
+    <control caption="" fullQualPath="Bonds.BondFeatures.UnsecuredObligationIndicator" id="&amp;gt;E5ZD1tce1" lazyInd="N" orderNum="1" parentId="ezr~n&amp;gt;JoW1" relatedPath="" screenType="ezr$n&amp;gt;JoW1" show="Y"/>
+    <control caption="" fullQualPath="Bonds.BondFeatures.DefaultedIndicator" id="&amp;gt;E5(D1tce1" lazyInd="N" orderNum="2" parentId="ezr~n&amp;gt;JoW1" relatedPath="" screenType="ezr$n&amp;gt;JoW1" show="Y"/>
+    <control caption="" fullQualPath="Bonds.BondFeatures.Seniority" id="&amp;gt;E5&amp;gt;D1tce1" lazyInd="N" orderNum="3" parentId="ezr~n&amp;gt;JoW1" relatedPath="" screenType="ezr$n&amp;gt;JoW1" show="Y"/>
+    <control caption="" fullQualPath="Bonds.BondFeatures.JuniorIndicator" id="&amp;gt;E5mE1tce1" lazyInd="N" orderNum="4" parentId="ezr~n&amp;gt;JoW1" relatedPath="" screenType="ezr$n&amp;gt;JoW1" show="Y"/>
+    <control caption="" fullQualPath="Bonds.BondFeatures.PaymentInKindIndicator" id="U-qqm&amp;gt;3ee1" lazyInd="N" orderNum="5" parentId="ezr~n&amp;gt;JoW1" relatedPath="" screenType="ezr$n&amp;gt;JoW1" show="Y"/>
+    <control caption="" fullQualPath="Bonds.BondFeatures.Senior" id="U-qum&amp;gt;3ee1" lazyInd="N" orderNum="6" parentId="ezr~n&amp;gt;JoW1" relatedPath="" screenType="ezr$n&amp;gt;JoW1" show="Y"/>
+  </control>
+  <control caption="Classification" fullQualPath="Bonds.InstrumentClassification" id="ezr&amp;lt;n&amp;gt;JoW1" lazyInd="N" orderNum="6" parentId="" relatedPath="" screenId="ezr$n&amp;gt;JoW1" show="Y">
+    <control caption="" fullQualPath="Bonds.InstrumentClassification.BBMarketSector" id="ezrFo&amp;gt;JoW1" lazyInd="N" orderNum="0" parentId="ezr&amp;lt;n&amp;gt;JoW1" relatedPath="" screenType="ezr$n&amp;gt;JoW1" show="Y"/>
+    <control caption="" fullQualPath="Bonds.InstrumentClassification.EagleSecurityType" id="Rb5*B13ee1" lazyInd="N" orderNum="1" parentId="ezr&amp;lt;n&amp;gt;JoW1" relatedPath="" screenType="ezr$n&amp;gt;JoW1" show="Y"/>
+    <control caption="" fullQualPath="Bonds.InstrumentClassification.EagleInvestmentType" id="Rb5?B13ee1" lazyInd="N" orderNum="2" parentId="ezr&amp;lt;n&amp;gt;JoW1" relatedPath="" screenType="ezr$n&amp;gt;JoW1" show="Y"/>
+    <control caption="" fullQualPath="Bonds.InstrumentClassification.LRDSICMoody" id="Rb5lC13ee1" lazyInd="N" orderNum="3" parentId="ezr&amp;lt;n&amp;gt;JoW1" relatedPath="" screenType="ezr$n&amp;gt;JoW1" show="Y"/>
+    <control caption="" fullQualPath="Bonds.InstrumentClassification.LRDSICMoodyCLO" id="Rb5mC13ee1" lazyInd="N" orderNum="4" parentId="ezr&amp;lt;n&amp;gt;JoW1" relatedPath="" screenType="ezr$n&amp;gt;JoW1" show="Y"/>
+    <control caption="" fullQualPath="Bonds.InstrumentClassification.LRDSICSP" id="Rb5nC13ee1" lazyInd="N" orderNum="5" parentId="ezr&amp;lt;n&amp;gt;JoW1" relatedPath="" screenType="ezr$n&amp;gt;JoW1" show="Y"/>
+    <control caption="" fullQualPath="Bonds.InstrumentClassification.LRDSICSPGICS" id="Rb5oC13ee1" lazyInd="N" orderNum="6" parentId="ezr&amp;lt;n&amp;gt;JoW1" relatedPath="" screenType="ezr$n&amp;gt;JoW1" show="Y"/>
+    <control caption="" fullQualPath="Bonds.InstrumentClassification.BICSLevelI" id="-(53013ee1" lazyInd="N" orderNum="7" parentId="ezr&amp;lt;n&amp;gt;JoW1" relatedPath="" screenType="ezr$n&amp;gt;JoW1" show="Y"/>
+    <control caption="" fullQualPath="Bonds.InstrumentClassification.BICSLevelII" id="-(54013ee1" lazyInd="N" orderNum="8" parentId="ezr&amp;lt;n&amp;gt;JoW1" relatedPath="" screenType="ezr$n&amp;gt;JoW1" show="Y"/>
+    <control caption="" fullQualPath="Bonds.InstrumentClassification.BICSLevelIII" id="-(55013ee1" lazyInd="N" orderNum="9" parentId="ezr&amp;lt;n&amp;gt;JoW1" relatedPath="" screenType="ezr$n&amp;gt;JoW1" show="Y"/>
+  </control>
+  <control caption="Geographical Information" fullQualPath="Bonds.InstrumentGeographicalInformation" id="ezrRo&amp;gt;JoW1" lazyInd="N" orderNum="7" parentId="" relatedPath="" screenId="ezr$n&amp;gt;JoW1" show="Y">
+    <control caption="" fullQualPath="Bonds.InstrumentGeographicalInformation.ISOCountry" id="-(5*B13ee1" lazyInd="N" orderNum="0" parentId="ezrRo&amp;gt;JoW1" relatedPath="" screenType="ezr$n&amp;gt;JoW1" show="Y"/>
+    <control caption="" fullQualPath="Bonds.InstrumentGeographicalInformation.CountryOfIssuance" id="-(5(B13ee1" lazyInd="N" orderNum="1" parentId="ezrRo&amp;gt;JoW1" relatedPath="" screenType="ezr$n&amp;gt;JoW1" show="Y"/>
+    <control caption="" fullQualPath="Bonds.InstrumentGeographicalInformation.TaxationJurisdiction" id="-(50C13ee1" lazyInd="N" orderNum="2" parentId="ezrRo&amp;gt;JoW1" relatedPath="" screenType="ezr$n&amp;gt;JoW1" show="Y"/>
+  </control>
+  <control caption="Bond Statistics" fullQualPath="Bonds.BondStatistics" id="ezr&amp;gt;o&amp;gt;JoW1" lazyInd="N" orderNum="10" parentId="" relatedPath="" screenId="ezr$n&amp;gt;JoW1" show="Y">
+    <control caption="" fullQualPath="Bonds.BondStatistics.CallDateBondStatistics" id="U-qgv&amp;gt;3ee1" lazyInd="N" orderNum="0" parentId="ezr&amp;gt;o&amp;gt;JoW1" relatedPath="" screenType="ezr$n&amp;gt;JoW1" show="Y"/>
+    <control caption="" fullQualPath="Bonds.BondStatistics.LastResetDate" id="U-qb%&amp;gt;3ee1" lazyInd="N" orderNum="1" parentId="ezr&amp;gt;o&amp;gt;JoW1" relatedPath="" screenType="ezr$n&amp;gt;JoW1" show="Y"/>
+    <control caption="" fullQualPath="Bonds.BondStatistics.FirstCouponPaymentDate" id="U-qg%&amp;gt;3ee1" lazyInd="N" orderNum="2" parentId="ezr&amp;gt;o&amp;gt;JoW1" relatedPath="" screenType="ezr$n&amp;gt;JoW1" show="Y"/>
+    <control caption="" fullQualPath="Bonds.BondStatistics.BondStatsCurrentInterestRateMargin" id="Zx4h013ee1" lazyInd="N" orderNum="3" parentId="ezr&amp;gt;o&amp;gt;JoW1" relatedPath="" screenType="ezr$n&amp;gt;JoW1" show="Y"/>
+  </control>
+  <control caption="Income Details" fullQualPath="Bonds.IncomeDetails" id="ezr1p&amp;gt;JoW1" lazyInd="N" orderNum="11" parentId="" relatedPath="" screenId="ezr$n&amp;gt;JoW1" show="Y"/>
+  <control caption="Redemption Details" fullQualPath="Bonds.RedemptionDetails" id="ezr3p&amp;gt;JoW1" lazyInd="N" orderNum="12" parentId="" relatedPath="" screenId="ezr$n&amp;gt;JoW1" show="Y">
+    <control caption="" fullQualPath="Bonds.RedemptionDetails.Call" id="pe85513ee1" lazyInd="N" orderNum="0" parentId="ezr3p&amp;gt;JoW1" relatedPath="" screenType="ezr$n&amp;gt;JoW1" show="Y">
+      <control caption="" fullQualPath="Bonds.RedemptionDetails.Call.CallSchedules" id="pe8J813ee1" lazyInd="N" orderNum="0" parentId="pe85513ee1" relatedPath="" screenType="ezr$n&amp;gt;JoW1" show="Y">
+        <control caption="" fullQualPath="Bonds.RedemptionDetails.Call.CallSchedules.CallStartDate" id="pe8K813ee1" lazyInd="N" orderNum="0" parentId="pe8J813ee1" relatedPath="" screenType="ezr$n&amp;gt;JoW1" show="Y"/>
+        <control caption="" fullQualPath="Bonds.RedemptionDetails.Call.CallSchedules.CallPercent" id="pe8M813ee1" lazyInd="N" orderNum="1" parentId="pe8J813ee1" relatedPath="" screenType="ezr$n&amp;gt;JoW1" show="Y"/>
+      </control>
+    </control>
+  </control>
+  <control caption="Underwriting Characteristics" fullQualPath="Bonds.UnderwritingCharacteristics" id="ezr5p&amp;gt;JoW1" lazyInd="N" orderNum="13" parentId="" relatedPath="" screenId="ezr$n&amp;gt;JoW1" show="Y">
+    <control caption="" fullQualPath="Bonds.UnderwritingCharacteristics.OriginalAmountQtyAtIssuance" id="aysjy&amp;gt;3ee1" lazyInd="N" orderNum="0" parentId="ezr5p&amp;gt;JoW1" relatedPath="" screenType="ezr$n&amp;gt;JoW1" show="Y"/>
+    <control caption="" fullQualPath="Bonds.UnderwritingCharacteristics.OfferNumber" id="ays4z&amp;gt;3ee1" lazyInd="N" orderNum="1" parentId="ezr5p&amp;gt;JoW1" relatedPath="" screenType="ezr$n&amp;gt;JoW1" show="Y"/>
+  </control>
+  <control caption="" fullQualPath="Bonds.NuveenStatistics" id="ezr7p&amp;gt;JoW1" lazyInd="N" orderNum="14" parentId="" relatedPath="" screenId="ezr$n&amp;gt;JoW1" show="Y">
+    <control caption="" fullQualPath="Bonds.NuveenStatistics.NuveenMarkitAgentBankID" id="aysgq&amp;gt;3ee1" lazyInd="N" orderNum="0" parentId="ezr7p&amp;gt;JoW1" relatedPath="" screenType="ezr$n&amp;gt;JoW1" show="Y"/>
+    <control caption="" fullQualPath="Bonds.NuveenStatistics.BulletMaturityTypeIndicator" id="ayskr&amp;gt;3ee1" lazyInd="N" orderNum="1" parentId="ezr7p&amp;gt;JoW1" relatedPath="" screenType="ezr$n&amp;gt;JoW1" show="Y"/>
+    <control caption="" fullQualPath="Bonds.NuveenStatistics.IsUnsecured" id="aysxr&amp;gt;3ee1" lazyInd="N" orderNum="2" parentId="ezr7p&amp;gt;JoW1" relatedPath="" screenType="ezr$n&amp;gt;JoW1" show="Y"/>
+    <control caption="" fullQualPath="Bonds.NuveenStatistics.NuveenBBPayRank" id="ays6s&amp;gt;3ee1" lazyInd="N" orderNum="3" parentId="ezr7p&amp;gt;JoW1" relatedPath="" screenType="ezr$n&amp;gt;JoW1" show="Y"/>
+    <control caption="" fullQualPath="Bonds.NuveenStatistics.NuveenAgentBankName" id="aysLs&amp;gt;3ee1" lazyInd="N" orderNum="4" parentId="ezr7p&amp;gt;JoW1" relatedPath="" screenType="ezr$n&amp;gt;JoW1" show="Y"/>
+    <control caption="" fullQualPath="Bonds.NuveenStatistics.NuveenLoanExchange" id="aysMs&amp;gt;3ee1" lazyInd="N" orderNum="5" parentId="ezr7p&amp;gt;JoW1" relatedPath="" screenType="ezr$n&amp;gt;JoW1" show="Y"/>
+    <control caption="" fullQualPath="Bonds.NuveenStatistics.NuveenAgentBankContactName" id="aysNs&amp;gt;3ee1" lazyInd="N" orderNum="6" parentId="ezr7p&amp;gt;JoW1" relatedPath="" screenType="ezr$n&amp;gt;JoW1" show="Y"/>
+    <control caption="" fullQualPath="Bonds.NuveenStatistics.NuveenAgentBankContactPhoneNumber" id="aysOs&amp;gt;3ee1" lazyInd="N" orderNum="7" parentId="ezr7p&amp;gt;JoW1" relatedPath="" screenType="ezr$n&amp;gt;JoW1" show="Y"/>
+    <control caption="" fullQualPath="Bonds.NuveenStatistics.NuveenAgentBankContactEmail" id="aysPs&amp;gt;3ee1" lazyInd="N" orderNum="8" parentId="ezr7p&amp;gt;JoW1" relatedPath="" screenType="ezr$n&amp;gt;JoW1" show="Y"/>
+    <control caption="" fullQualPath="Bonds.NuveenStatistics.NuveenBankDealName" id="aysQs&amp;gt;3ee1" lazyInd="N" orderNum="9" parentId="ezr7p&amp;gt;JoW1" relatedPath="" screenType="ezr$n&amp;gt;JoW1" show="Y"/>
+    <control caption="" fullQualPath="Bonds.NuveenStatistics.NuveenSponsor" id="aysRs&amp;gt;3ee1" lazyInd="N" orderNum="10" parentId="ezr7p&amp;gt;JoW1" relatedPath="" screenType="ezr$n&amp;gt;JoW1" show="Y"/>
+    <control caption="" fullQualPath="Bonds.NuveenStatistics.NuveenLoanLaunchDate" id="aysSs&amp;gt;3ee1" lazyInd="N" orderNum="11" parentId="ezr7p&amp;gt;JoW1" relatedPath="" screenType="ezr$n&amp;gt;JoW1" show="Y"/>
+    <control caption="" fullQualPath="Bonds.NuveenStatistics.NuveenCouponPaymentFrequencyID" id="aysTs&amp;gt;3ee1" lazyInd="N" orderNum="12" parentId="ezr7p&amp;gt;JoW1" relatedPath="" screenType="ezr$n&amp;gt;JoW1" show="Y"/>
+    <control caption="" fullQualPath="Bonds.NuveenStatistics.NuveenBaseRateAllInCap" id="aysUs&amp;gt;3ee1" lazyInd="N" orderNum="13" parentId="ezr7p&amp;gt;JoW1" relatedPath="" screenType="ezr$n&amp;gt;JoW1" show="Y"/>
+    <control caption="" fullQualPath="Bonds.NuveenStatistics.NuveenBaseRateAllInFloor" id="aysVs&amp;gt;3ee1" lazyInd="N" orderNum="14" parentId="ezr7p&amp;gt;JoW1" relatedPath="" screenType="ezr$n&amp;gt;JoW1" show="Y"/>
+    <control caption="" fullQualPath="Bonds.NuveenStatistics.NuveenIsCovLite" id="aysWs&amp;gt;3ee1" lazyInd="N" orderNum="15" parentId="ezr7p&amp;gt;JoW1" relatedPath="" screenType="ezr$n&amp;gt;JoW1" show="Y"/>
+    <control caption="" fullQualPath="Bonds.NuveenStatistics.PIKableIndicator" id="aysXs&amp;gt;3ee1" lazyInd="N" orderNum="16" parentId="ezr7p&amp;gt;JoW1" relatedPath="" screenType="ezr$n&amp;gt;JoW1" show="Y"/>
+    <control caption="" fullQualPath="Bonds.NuveenStatistics.NuveenIsDelayedDraw" id="aysYs&amp;gt;3ee1" lazyInd="N" orderNum="17" parentId="ezr7p&amp;gt;JoW1" relatedPath="" screenType="ezr$n&amp;gt;JoW1" show="Y"/>
+    <control caption="" fullQualPath="Bonds.NuveenStatistics.NuveenIsDip" id="aysZs&amp;gt;3ee1" lazyInd="N" orderNum="18" parentId="ezr7p&amp;gt;JoW1" relatedPath="" screenType="ezr$n&amp;gt;JoW1" show="Y"/>
+    <control caption="" fullQualPath="Bonds.NuveenStatistics.NuveenTradeAccruedInterestIndic" id="aysas&amp;gt;3ee1" lazyInd="N" orderNum="19" parentId="ezr7p&amp;gt;JoW1" relatedPath="" screenType="ezr$n&amp;gt;JoW1" show="Y"/>
+    <control caption="" fullQualPath="Bonds.NuveenStatistics.NuveenSyntheticIndicator" id="aysbs&amp;gt;3ee1" lazyInd="N" orderNum="20" parentId="ezr7p&amp;gt;JoW1" relatedPath="" screenType="ezr$n&amp;gt;JoW1" show="Y"/>
+    <control caption="" fullQualPath="Bonds.NuveenStatistics.NuveenCovenantType" id="ayscs&amp;gt;3ee1" lazyInd="N" orderNum="21" parentId="ezr7p&amp;gt;JoW1" relatedPath="" screenType="ezr$n&amp;gt;JoW1" show="Y"/>
+    <control caption="" fullQualPath="Bonds.NuveenStatistics.NuveenLevFinCLONoteFlag" id="aysds&amp;gt;3ee1" lazyInd="N" orderNum="22" parentId="ezr7p&amp;gt;JoW1" relatedPath="" screenType="ezr$n&amp;gt;JoW1" show="Y"/>
+    <control caption="" fullQualPath="Bonds.NuveenStatistics.NuveenCoveredByManagerFlag" id="ayses&amp;gt;3ee1" lazyInd="N" orderNum="23" parentId="ezr7p&amp;gt;JoW1" relatedPath="" screenType="ezr$n&amp;gt;JoW1" show="Y"/>
+    <control caption="" fullQualPath="Bonds.NuveenStatistics.NuveenIntangibleSecuredFlag" id="aysfs&amp;gt;3ee1" lazyInd="N" orderNum="24" parentId="ezr7p&amp;gt;JoW1" relatedPath="" screenType="ezr$n&amp;gt;JoW1" show="Y"/>
+    <control caption="" fullQualPath="Bonds.NuveenStatistics.NuveenStockSecuredFlag" id="aysgs&amp;gt;3ee1" lazyInd="N" orderNum="25" parentId="ezr7p&amp;gt;JoW1" relatedPath="" screenType="ezr$n&amp;gt;JoW1" show="Y"/>
+    <control caption="" fullQualPath="Bonds.NuveenStatistics.NuveenMainlyStockSecuredFlag" id="ayshs&amp;gt;3ee1" lazyInd="N" orderNum="26" parentId="ezr7p&amp;gt;JoW1" relatedPath="" screenType="ezr$n&amp;gt;JoW1" show="Y"/>
+    <control caption="" fullQualPath="Bonds.NuveenStatistics.NuveenOpCoStockSecuredFlag" id="aysis&amp;gt;3ee1" lazyInd="N" orderNum="27" parentId="ezr7p&amp;gt;JoW1" relatedPath="" screenType="ezr$n&amp;gt;JoW1" show="Y"/>
+    <control caption="" fullQualPath="Bonds.NuveenStatistics.NuveenFirstLienLastOutFlag" id="aysjs&amp;gt;3ee1" lazyInd="N" orderNum="28" parentId="ezr7p&amp;gt;JoW1" relatedPath="" screenType="ezr$n&amp;gt;JoW1" show="Y"/>
+    <control caption="" fullQualPath="Bonds.NuveenStatistics.NuveenFullyPikingFlag" id="aysks&amp;gt;3ee1" lazyInd="N" orderNum="29" parentId="ezr7p&amp;gt;JoW1" relatedPath="" screenType="ezr$n&amp;gt;JoW1" show="Y"/>
+    <control caption="" fullQualPath="Bonds.NuveenStatistics.NuveenSFOFlag" id="aysls&amp;gt;3ee1" lazyInd="N" orderNum="30" parentId="ezr7p&amp;gt;JoW1" relatedPath="" screenType="ezr$n&amp;gt;JoW1" show="Y"/>
+    <control caption="" fullQualPath="Bonds.NuveenStatistics.NuveenFinanceLeaseFlag" id="aysms&amp;gt;3ee1" lazyInd="N" orderNum="31" parentId="ezr7p&amp;gt;JoW1" relatedPath="" screenType="ezr$n&amp;gt;JoW1" show="Y"/>
+    <control caption="" fullQualPath="Bonds.NuveenStatistics.NuveenPIKAblelFlag" id="aysns&amp;gt;3ee1" lazyInd="N" orderNum="32" parentId="ezr7p&amp;gt;JoW1" relatedPath="" screenType="ezr$n&amp;gt;JoW1" show="Y"/>
+    <control caption="" fullQualPath="Bonds.NuveenStatistics.NuveenPartialPIKFlag" id="aysos&amp;gt;3ee1" lazyInd="N" orderNum="33" parentId="ezr7p&amp;gt;JoW1" relatedPath="" screenType="ezr$n&amp;gt;JoW1" show="Y"/>
+    <control caption="" fullQualPath="Bonds.NuveenStatistics.NuveenFirstPostPIKInterestPaymentDate" id="aysps&amp;gt;3ee1" lazyInd="N" orderNum="34" parentId="ezr7p&amp;gt;JoW1" relatedPath="" screenType="ezr$n&amp;gt;JoW1" show="Y"/>
+    <control caption="" fullQualPath="Bonds.NuveenStatistics.NuveenPrincipalOnlyFlag" id="aysqs&amp;gt;3ee1" lazyInd="N" orderNum="35" parentId="ezr7p&amp;gt;JoW1" relatedPath="" screenType="ezr$n&amp;gt;JoW1" show="Y"/>
+    <control caption="" fullQualPath="Bonds.NuveenStatistics.NuveenInterestOnlyFlag" id="aysrs&amp;gt;3ee1" lazyInd="N" orderNum="36" parentId="ezr7p&amp;gt;JoW1" relatedPath="" screenType="ezr$n&amp;gt;JoW1" show="Y"/>
+    <control caption="" fullQualPath="Bonds.NuveenStatistics.NuveenPIKRate" id="aysss&amp;gt;3ee1" lazyInd="N" orderNum="37" parentId="ezr7p&amp;gt;JoW1" relatedPath="" screenType="ezr$n&amp;gt;JoW1" show="Y"/>
+    <control caption="" fullQualPath="Bonds.NuveenStatistics.NuveenFeeAccrualFlag" id="aysts&amp;gt;3ee1" lazyInd="N" orderNum="38" parentId="ezr7p&amp;gt;JoW1" relatedPath="" screenType="ezr$n&amp;gt;JoW1" show="Y"/>
+    <control caption="" fullQualPath="Bonds.NuveenStatistics.NuveenSpreadAdjustment" id="aysus&amp;gt;3ee1" lazyInd="N" orderNum="39" parentId="ezr7p&amp;gt;JoW1" relatedPath="" screenType="ezr$n&amp;gt;JoW1" show="Y"/>
+    <control caption="" fullQualPath="Bonds.NuveenStatistics.NuveenAmtOutIssuerBondsLoans" id="ayszs&amp;gt;3ee1" lazyInd="N" orderNum="40" parentId="ezr7p&amp;gt;JoW1" relatedPath="" screenType="ezr$n&amp;gt;JoW1" show="Y"/>
+    <control caption="" fullQualPath="Bonds.NuveenStatistics.NuveenLoanDistributionAmtOutIssuer" id="ays$s&amp;gt;3ee1" lazyInd="N" orderNum="41" parentId="ezr7p&amp;gt;JoW1" relatedPath="" screenType="ezr$n&amp;gt;JoW1" show="Y"/>
+    <control caption="" fullQualPath="Bonds.NuveenStatistics.NuveenAmountOutstandingMMM" id="ays%s&amp;gt;3ee1" lazyInd="N" orderNum="42" parentId="ezr7p&amp;gt;JoW1" relatedPath="" screenType="ezr$n&amp;gt;JoW1" show="Y"/>
+    <control caption="" fullQualPath="Bonds.NuveenStatistics.NuveenMidYieldToMaturity" id="ays@s&amp;gt;3ee1" lazyInd="N" orderNum="43" parentId="ezr7p&amp;gt;JoW1" relatedPath="" screenType="ezr$n&amp;gt;JoW1" show="Y"/>
+    <control caption="" fullQualPath="Bonds.NuveenStatistics.NuveenDaystoNextCoupon" id="ays&amp;amp;s&amp;gt;3ee1" lazyInd="N" orderNum="44" parentId="ezr7p&amp;gt;JoW1" relatedPath="" screenType="ezr$n&amp;gt;JoW1" show="Y"/>
+    <control caption="" fullQualPath="Bonds.NuveenStatistics.NuveenBenchmarkSpreadAdjustment" id="ays*s&amp;gt;3ee1" lazyInd="N" orderNum="45" parentId="ezr7p&amp;gt;JoW1" relatedPath="" screenType="ezr$n&amp;gt;JoW1" show="Y"/>
+    <control caption="" fullQualPath="Bonds.NuveenStatistics.NuveenCovenantMaintenanceFlag" id="ays-s&amp;gt;3ee1" lazyInd="N" orderNum="46" parentId="ezr7p&amp;gt;JoW1" relatedPath="" screenType="ezr$n&amp;gt;JoW1" show="Y"/>
+    <control caption="" fullQualPath="Bonds.NuveenStatistics.NuveenCovenantSpringingFlag" id="ays.s&amp;gt;3ee1" lazyInd="N" orderNum="47" parentId="ezr7p&amp;gt;JoW1" relatedPath="" screenType="ezr$n&amp;gt;JoW1" show="Y"/>
+    <control caption="" fullQualPath="Bonds.NuveenStatistics.NuveenDebtToEquityFundamentalsTicker" id="ays/s&amp;gt;3ee1" lazyInd="N" orderNum="48" parentId="ezr7p&amp;gt;JoW1" relatedPath="" screenType="ezr$n&amp;gt;JoW1" show="Y"/>
+    <control caption="" fullQualPath="Bonds.NuveenStatistics.NuveenFundingDate" id="ays(s&amp;gt;3ee1" lazyInd="N" orderNum="49" parentId="ezr7p&amp;gt;JoW1" relatedPath="" screenType="ezr$n&amp;gt;JoW1" show="Y"/>
+    <control caption="" fullQualPath="Bonds.NuveenStatistics.NuveenHardCall" id="ays)s&amp;gt;3ee1" lazyInd="N" orderNum="50" parentId="ezr7p&amp;gt;JoW1" relatedPath="" screenType="ezr$n&amp;gt;JoW1" show="Y"/>
+    <control caption="" fullQualPath="Bonds.NuveenStatistics.NuveenISOCountryofObligor" id="ays~s&amp;gt;3ee1" lazyInd="N" orderNum="51" parentId="ezr7p&amp;gt;JoW1" relatedPath="" screenType="ezr$n&amp;gt;JoW1" show="Y"/>
+    <control caption="" fullQualPath="Bonds.NuveenStatistics.NuveenLatestAnnouncementDate" id="ays?s&amp;gt;3ee1" lazyInd="N" orderNum="52" parentId="ezr7p&amp;gt;JoW1" relatedPath="" screenType="ezr$n&amp;gt;JoW1" show="Y"/>
+    <control caption="" fullQualPath="Bonds.NuveenStatistics.NuveenPeriodofLatestAnnouncementDate" id="ays&amp;lt;s&amp;gt;3ee1" lazyInd="N" orderNum="53" parentId="ezr7p&amp;gt;JoW1" relatedPath="" screenType="ezr$n&amp;gt;JoW1" show="Y"/>
+    <control caption="" fullQualPath="Bonds.NuveenStatistics.NuveenSenior" id="ays&amp;gt;s&amp;gt;3ee1" lazyInd="N" orderNum="54" parentId="ezr7p&amp;gt;JoW1" relatedPath="" screenType="ezr$n&amp;gt;JoW1" show="Y"/>
+    <control caption="" fullQualPath="Bonds.NuveenStatistics.NuveenSubordinated" id="ays0t&amp;gt;3ee1" lazyInd="N" orderNum="55" parentId="ezr7p&amp;gt;JoW1" relatedPath="" screenType="ezr$n&amp;gt;JoW1" show="Y"/>
+    <control caption="" fullQualPath="Bonds.NuveenStatistics.NuveenSuperPriority" id="ays1t&amp;gt;3ee1" lazyInd="N" orderNum="56" parentId="ezr7p&amp;gt;JoW1" relatedPath="" screenType="ezr$n&amp;gt;JoW1" show="Y"/>
+    <control caption="" fullQualPath="Bonds.NuveenStatistics.NuveenUnsecured" id="ays2t&amp;gt;3ee1" lazyInd="N" orderNum="57" parentId="ezr7p&amp;gt;JoW1" relatedPath="" screenType="ezr$n&amp;gt;JoW1" show="Y"/>
+    <control caption="" fullQualPath="Bonds.NuveenStatistics.NuveenMakeWholeTerminationDate" id="ays3t&amp;gt;3ee1" lazyInd="N" orderNum="58" parentId="ezr7p&amp;gt;JoW1" relatedPath="" screenType="ezr$n&amp;gt;JoW1" show="Y"/>
+    <control caption="" fullQualPath="Bonds.NuveenStatistics.NuveenSecurityPricingDate" id="ays4t&amp;gt;3ee1" lazyInd="N" orderNum="59" parentId="ezr7p&amp;gt;JoW1" relatedPath="" screenType="ezr$n&amp;gt;JoW1" show="Y"/>
+    <control caption="" fullQualPath="Bonds.NuveenStatistics.NuveenLoanAmendedandRestatedDate" id="ays5t&amp;gt;3ee1" lazyInd="N" orderNum="60" parentId="ezr7p&amp;gt;JoW1" relatedPath="" screenType="ezr$n&amp;gt;JoW1" show="Y"/>
+    <control caption="" fullQualPath="Bonds.NuveenStatistics.NuveenReinvestEndDate" id="ays6t&amp;gt;3ee1" lazyInd="N" orderNum="61" parentId="ezr7p&amp;gt;JoW1" relatedPath="" screenType="ezr$n&amp;gt;JoW1" show="Y"/>
+    <control caption="" fullQualPath="Bonds.NuveenStatistics.NuveenSponsorLed" id="ays7t&amp;gt;3ee1" lazyInd="N" orderNum="62" parentId="ezr7p&amp;gt;JoW1" relatedPath="" screenType="ezr$n&amp;gt;JoW1" show="Y"/>
+    <control caption="" fullQualPath="Bonds.NuveenStatistics.NuveenStructureType" id="ays8t&amp;gt;3ee1" lazyInd="N" orderNum="63" parentId="ezr7p&amp;gt;JoW1" relatedPath="" screenType="ezr$n&amp;gt;JoW1" show="Y"/>
+    <control caption="" fullQualPath="Bonds.NuveenStatistics.NuveenSPLTLocalCurrencyIssuerCreditRatingWatch" id="ays9t&amp;gt;3ee1" lazyInd="N" orderNum="64" parentId="ezr7p&amp;gt;JoW1" relatedPath="" screenType="ezr$n&amp;gt;JoW1" show="Y"/>
+    <control caption="" fullQualPath="Bonds.NuveenStatistics.NuveenTFIEsgInternalScore" id="aysAt&amp;gt;3ee1" lazyInd="N" orderNum="65" parentId="ezr7p&amp;gt;JoW1" relatedPath="" screenType="ezr$n&amp;gt;JoW1" show="Y"/>
+    <control caption="" fullQualPath="Bonds.NuveenStatistics.NuveenTFIEsgRatingCast" id="aysBt&amp;gt;3ee1" lazyInd="N" orderNum="66" parentId="ezr7p&amp;gt;JoW1" relatedPath="" screenType="ezr$n&amp;gt;JoW1" show="Y"/>
+    <control caption="" fullQualPath="Bonds.NuveenStatistics.NuveenTFIEsgRatingIssuer" id="aysCt&amp;gt;3ee1" lazyInd="N" orderNum="67" parentId="ezr7p&amp;gt;JoW1" relatedPath="" screenType="ezr$n&amp;gt;JoW1" show="Y"/>
+    <control caption="" fullQualPath="Bonds.NuveenStatistics.NuveenPrimaryAnalystName" id="aysDt&amp;gt;3ee1" lazyInd="N" orderNum="68" parentId="ezr7p&amp;gt;JoW1" relatedPath="" screenType="ezr$n&amp;gt;JoW1" show="Y"/>
+    <control caption="" fullQualPath="Bonds.NuveenStatistics.NuveenLoanDistributionAmountOutIssuerSubs" id="aysEt&amp;gt;3ee1" lazyInd="N" orderNum="69" parentId="ezr7p&amp;gt;JoW1" relatedPath="" screenType="ezr$n&amp;gt;JoW1" show="Y"/>
+  </control>
+  <control caption="" fullQualPath="Bonds.NuveenDerivedFields" id="ezr8p&amp;gt;JoW1" lazyInd="N" orderNum="15" parentId="" relatedPath="" screenId="ezr$n&amp;gt;JoW1" show="Y">
+    <control caption="" fullQualPath="Bonds.NuveenDerivedFields.NuveenIssuedQuantity" id="aysPn&amp;gt;3ee1" lazyInd="N" orderNum="0" parentId="ezr8p&amp;gt;JoW1" relatedPath="" screenType="ezr$n&amp;gt;JoW1" show="Y"/>
+    <control caption="" fullQualPath="Bonds.NuveenDerivedFields.NuveenPrivatePlacement" id="aysUn&amp;gt;3ee1" lazyInd="N" orderNum="1" parentId="ezr8p&amp;gt;JoW1" relatedPath="" screenType="ezr$n&amp;gt;JoW1" show="Y"/>
+    <control caption="" fullQualPath="Bonds.NuveenDerivedFields.NuveenContractSize" id="aysVn&amp;gt;3ee1" lazyInd="N" orderNum="2" parentId="ezr8p&amp;gt;JoW1" relatedPath="" screenType="ezr$n&amp;gt;JoW1" show="Y"/>
+    <control caption="" fullQualPath="Bonds.NuveenDerivedFields.NuveenDistributionCurrency" id="aysmn&amp;gt;3ee1" lazyInd="N" orderNum="3" parentId="ezr8p&amp;gt;JoW1" relatedPath="" screenType="ezr$n&amp;gt;JoW1" show="Y"/>
+    <control caption="" fullQualPath="Bonds.NuveenDerivedFields.NuveenDatedDate" id="aysrn&amp;gt;3ee1" lazyInd="N" orderNum="4" parentId="ezr8p&amp;gt;JoW1" relatedPath="" screenType="ezr$n&amp;gt;JoW1" show="Y"/>
+    <control caption="" fullQualPath="Bonds.NuveenDerivedFields.NuveenLastIncomeDate" id="aysun&amp;gt;3ee1" lazyInd="N" orderNum="5" parentId="ezr8p&amp;gt;JoW1" relatedPath="" screenType="ezr$n&amp;gt;JoW1" show="Y"/>
+    <control caption="" fullQualPath="Bonds.NuveenDerivedFields.NuveenLiquidFlag" id="ays)n&amp;gt;3ee1" lazyInd="N" orderNum="6" parentId="ezr8p&amp;gt;JoW1" relatedPath="" screenType="ezr$n&amp;gt;JoW1" show="Y"/>
+    <control caption="" fullQualPath="Bonds.NuveenDerivedFields.NuveenShortName" id="0WuFr&amp;gt;3ee1" lazyInd="N" orderNum="7" parentId="ezr8p&amp;gt;JoW1" relatedPath="" screenType="ezr$n&amp;gt;JoW1" show="Y"/>
+  </control>
+  <control caption="" fullQualPath="Bonds.NuveenInstrumentFields" id="ezr9p&amp;gt;JoW1" lazyInd="N" orderNum="16" parentId="" relatedPath="" screenId="ezr$n&amp;gt;JoW1" show="Y">
+    <control caption="" fullQualPath="Bonds.NuveenInstrumentFields.LoanXID" id="aysto&amp;gt;3ee1" lazyInd="N" orderNum="0" parentId="ezr9p&amp;gt;JoW1" relatedPath="" screenType="ezr$n&amp;gt;JoW1" show="Y"/>
+    <control caption="" fullQualPath="Bonds.NuveenInstrumentFields.LoanIDNumberLIN" id="aysuo&amp;gt;3ee1" lazyInd="N" orderNum="1" parentId="ezr9p&amp;gt;JoW1" relatedPath="" screenType="ezr$n&amp;gt;JoW1" show="Y"/>
+    <control caption="" fullQualPath="Bonds.NuveenInstrumentFields.NuveenBBDayCountDescription" id="aysNp&amp;gt;3ee1" lazyInd="N" orderNum="2" parentId="ezr9p&amp;gt;JoW1" relatedPath="" screenType="ezr$n&amp;gt;JoW1" show="Y"/>
+    <control caption="" fullQualPath="Bonds.NuveenInstrumentFields.LRDSubscriptionFlag" id="aysip&amp;gt;3ee1" lazyInd="N" orderNum="3" parentId="ezr9p&amp;gt;JoW1" relatedPath="" screenType="ezr$n&amp;gt;JoW1" show="Y"/>
+  </control>
+  <control caption="" fullQualPath="Bonds.MortgageFeatures" id="gp$%r&amp;gt;h0e1" lazyInd="N" orderNum="17" parentId="" relatedPath="" screenId="ezr$n&amp;gt;JoW1" show="Y">
+    <control caption="" fullQualPath="Bonds.MortgageFeatures.MortgageType" id="Ggs/t&amp;gt;3ee1" lazyInd="N" orderNum="0" parentId="gp$%r&amp;gt;h0e1" relatedPath="" screenType="ezr$n&amp;gt;JoW1" show="Y"/>
+    <control caption="" fullQualPath="Bonds.MortgageFeatures.TrancheType" id="Ggs6u&amp;gt;3ee1" lazyInd="N" orderNum="1" parentId="gp$%r&amp;gt;h0e1" relatedPath="" screenType="ezr$n&amp;gt;JoW1" show="Y"/>
+    <control caption="" fullQualPath="Bonds.MortgageFeatures.OriginalPrincipalLimitAmount" id="Ggs6v&amp;gt;3ee1" lazyInd="N" orderNum="2" parentId="gp$%r&amp;gt;h0e1" relatedPath="" screenType="ezr$n&amp;gt;JoW1" show="Y"/>
+    <control caption="" fullQualPath="Bonds.MortgageFeatures.CollateralDescription" id="Ggsav&amp;gt;3ee1" lazyInd="N" orderNum="3" parentId="gp$%r&amp;gt;h0e1" relatedPath="" screenType="ezr$n&amp;gt;JoW1" show="Y"/>
+    <control caption="" fullQualPath="Bonds.MortgageFeatures.AllInSpread" id="Ggsdv&amp;gt;3ee1" lazyInd="N" orderNum="4" parentId="gp$%r&amp;gt;h0e1" relatedPath="" screenType="ezr$n&amp;gt;JoW1" show="Y"/>
+    <control caption="" fullQualPath="Bonds.MortgageFeatures.LoanSigningDate" id="Ggshv&amp;gt;3ee1" lazyInd="N" orderNum="5" parentId="gp$%r&amp;gt;h0e1" relatedPath="" screenType="ezr$n&amp;gt;JoW1" show="Y"/>
+    <control caption="" fullQualPath="Bonds.MortgageFeatures.BridgeLoanAvailableIndicator" id="Ggsjv&amp;gt;3ee1" lazyInd="N" orderNum="6" parentId="gp$%r&amp;gt;h0e1" relatedPath="" screenType="ezr$n&amp;gt;JoW1" show="Y"/>
+    <control caption="" fullQualPath="Bonds.MortgageFeatures.LoanMortgagePurposeType" id="Ggskv&amp;gt;3ee1" lazyInd="N" orderNum="7" parentId="gp$%r&amp;gt;h0e1" relatedPath="" screenType="ezr$n&amp;gt;JoW1" show="Y"/>
+    <control caption="" fullQualPath="Bonds.MortgageFeatures.FirstLienIndicator" id="Ggsqv&amp;gt;3ee1" lazyInd="N" orderNum="8" parentId="gp$%r&amp;gt;h0e1" relatedPath="" screenType="ezr$n&amp;gt;JoW1" show="Y"/>
+    <control caption="" fullQualPath="Bonds.MortgageFeatures.SecondLienIndicator" id="Ggsrv&amp;gt;3ee1" lazyInd="N" orderNum="9" parentId="gp$%r&amp;gt;h0e1" relatedPath="" screenType="ezr$n&amp;gt;JoW1" show="Y"/>
+    <control caption="" fullQualPath="Bonds.MortgageFeatures.ThirdLienIndicator" id="Ggssv&amp;gt;3ee1" lazyInd="N" orderNum="10" parentId="gp$%r&amp;gt;h0e1" relatedPath="" screenType="ezr$n&amp;gt;JoW1" show="Y"/>
+    <control caption="" fullQualPath="Bonds.MortgageFeatures.OnePointFiveLienIndicator" id="Ggstv&amp;gt;3ee1" lazyInd="N" orderNum="11" parentId="gp$%r&amp;gt;h0e1" relatedPath="" screenType="ezr$n&amp;gt;JoW1" show="Y"/>
+    <control caption="" fullQualPath="Bonds.MortgageFeatures.MortgageLoanType" id="Ggs-v&amp;gt;3ee1" lazyInd="N" orderNum="12" parentId="gp$%r&amp;gt;h0e1" relatedPath="" screenType="ezr$n&amp;gt;JoW1" show="Y"/>
+  </control>
+  <control caption="" fullQualPath="Bonds.MortgageStatistics" id="&amp;gt;E5Z01tce1" lazyInd="N" orderNum="18" parentId="" relatedPath="" screenId="ezr$n&amp;gt;JoW1" show="Y">
+    <control caption="" fullQualPath="Bonds.MortgageStatistics.CurrentLoansOutstanding" id="Ggs2w&amp;gt;3ee1" lazyInd="N" orderNum="0" parentId="&amp;gt;E5Z01tce1" relatedPath="" screenType="ezr$n&amp;gt;JoW1" show="Y"/>
+    <control caption="" fullQualPath="Bonds.MortgageStatistics.PaymentDatePerSettleDate" id="GgsQw&amp;gt;3ee1" lazyInd="N" orderNum="1" parentId="&amp;gt;E5Z01tce1" relatedPath="" screenType="ezr$n&amp;gt;JoW1" show="Y"/>
+    <control caption="" fullQualPath="Bonds.MortgageStatistics.AverageCurrentLoanSize" id="GgsQx&amp;gt;3ee1" lazyInd="N" orderNum="2" parentId="&amp;gt;E5Z01tce1" relatedPath="" screenType="ezr$n&amp;gt;JoW1" show="Y"/>
+    <control caption="" fullQualPath="Bonds.MortgageStatistics.CurrentCommitmentAmount" id="Ggsqy&amp;gt;3ee1" lazyInd="N" orderNum="3" parentId="&amp;gt;E5Z01tce1" relatedPath="" screenType="ezr$n&amp;gt;JoW1" show="Y"/>
+    <control caption="" fullQualPath="Bonds.MortgageStatistics.LoanStatusText" id="Ggsuy&amp;gt;3ee1" lazyInd="N" orderNum="4" parentId="&amp;gt;E5Z01tce1" relatedPath="" screenType="ezr$n&amp;gt;JoW1" show="Y"/>
+    <control caption="" fullQualPath="Bonds.MortgageStatistics.CurrentPrinLimitAmount" id="Ggs0z&amp;gt;3ee1" lazyInd="N" orderNum="5" parentId="&amp;gt;E5Z01tce1" relatedPath="" screenType="ezr$n&amp;gt;JoW1" show="Y"/>
+    <control caption="" fullQualPath="Bonds.MortgageStatistics.LoanAmendmentDate" id="aysSm&amp;gt;3ee1" lazyInd="N" orderNum="6" parentId="&amp;gt;E5Z01tce1" relatedPath="" screenType="ezr$n&amp;gt;JoW1" show="Y"/>
+  </control>
+  <control caption="" fullQualPath="Bonds.InstrumentLevelReportingValues" id="GgsXm&amp;gt;3ee1" lazyInd="N" orderNum="19" parentId="" relatedPath="" screenId="ezr$n&amp;gt;JoW1" show="Y">
+    <control caption="" fullQualPath="Bonds.InstrumentLevelReportingValues.RpValInstrLevelReportBondSeniorityType" id="Ggspm&amp;gt;3ee1" lazyInd="N" orderNum="0" parentId="GgsXm&amp;gt;3ee1" relatedPath="" screenType="ezr$n&amp;gt;JoW1" show="Y"/>
+  </control>
+  <control caption="" fullQualPath="Bonds.InstrumentStatistic" id="GgsGs&amp;gt;3ee1" lazyInd="N" orderNum="20" parentId="" relatedPath="" screenId="ezr$n&amp;gt;JoW1" show="Y">
+    <control caption="" fullQualPath="Bonds.InstrumentStatistic.FloatCouponIndicator" id="GgsIs&amp;gt;3ee1" lazyInd="N" orderNum="0" parentId="GgsGs&amp;gt;3ee1" relatedPath="" screenType="ezr$n&amp;gt;JoW1" show="Y"/>
+    <control caption="" fullQualPath="Bonds.InstrumentStatistic.MostRecentQuarterEndDate" id="GgsSs&amp;gt;3ee1" lazyInd="N" orderNum="1" parentId="GgsGs&amp;gt;3ee1" relatedPath="" screenType="ezr$n&amp;gt;JoW1" show="Y"/>
+    <control caption="" fullQualPath="Bonds.InstrumentStatistic.NuveenEaglePriceMultiplier" id="GgsDt&amp;gt;3ee1" lazyInd="N" orderNum="2" parentId="GgsGs&amp;gt;3ee1" relatedPath="" screenType="ezr$n&amp;gt;JoW1" show="Y"/>
+  </control>
+  <control caption="" fullQualPath="Bonds.ListingDetails" id="GgsEt&amp;gt;3ee1" lazyInd="N" orderNum="21" parentId="" relatedPath="" screenId="ezr$n&amp;gt;JoW1" show="Y">
+    <control caption="" fullQualPath="Bonds.ListingDetails.ListedMarket.FinancialMarket.MarketDetails.MarketName" id="GgsKt&amp;gt;3ee1" lazyInd="N" orderNum="0" parentId="GgsEt&amp;gt;3ee1" relatedPath="" screenType="ezr$n&amp;gt;JoW1" show="Y"/>
+    <control caption="" fullQualPath="Bonds.ListingDetails.AllMktTradingStatus" id="GgsTt&amp;gt;3ee1" lazyInd="N" orderNum="1" parentId="GgsEt&amp;gt;3ee1" relatedPath="" screenType="ezr$n&amp;gt;JoW1" show="Y"/>
+    <control caption="" fullQualPath="Bonds.ListingDetails.AllMktPrimaryTradingMarket" id="GgsUt&amp;gt;3ee1" lazyInd="N" orderNum="2" parentId="GgsEt&amp;gt;3ee1" relatedPath="" screenType="ezr$n&amp;gt;JoW1" show="Y"/>
+    <control caption="" fullQualPath="Bonds.ListingDetails.AllMktSpeculatorInitialMarginLimit" id="Ggstt&amp;gt;3ee1" lazyInd="N" orderNum="3" parentId="GgsEt&amp;gt;3ee1" relatedPath="" screenType="ezr$n&amp;gt;JoW1" show="Y"/>
+  </control>
+  <control caption="" fullQualPath="Bonds.AllInstrumentRegulations" id="ays.w&amp;gt;3ee1" lazyInd="N" orderNum="22" parentId="" relatedPath="" screenId="ezr$n&amp;gt;JoW1" show="Y">
+    <control caption="" fullQualPath="Bonds.AllInstrumentRegulations.AllRegTradingRestrictionIndicator" id="aysXx&amp;gt;3ee1" lazyInd="N" orderNum="0" parentId="ays.w&amp;gt;3ee1" relatedPath="" screenType="ezr$n&amp;gt;JoW1" show="Y"/>
+  </control>
+</root>

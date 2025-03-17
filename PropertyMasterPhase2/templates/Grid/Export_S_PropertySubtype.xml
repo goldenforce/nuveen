@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<root createdUser="user1" entityName="PropertySubtype" entitySubType="[]" id="o$yVo&gt;a8e1" isDefault="N" isPublic="N" screenType="SYSTEMGRID" title="S: PropertySubtype">
+  <control caption="" fullQualPath="PropertySubtype.PropertySubtypeDG" id="o$yXo&amp;gt;a8e1" lazyInd="N" orderNum="0" parentId="" relatedPath="" screenId="o$yVo&amp;gt;a8e1" show="Y">
+    <control caption="" fullQualPath="PropertySubtype.PropertySubtypeDG.PropertySubtype" id="o$yio&amp;gt;a8e1" lazyInd="N" orderNum="0" parentId="o$yXo&amp;gt;a8e1" relatedPath="" screenType="o$yVo&amp;gt;a8e1" show="Y"/>
+    <control caption="" fullQualPath="PropertySubtype.PropertySubtypeDG.PropertySubtypeUS" id="o$yko&amp;gt;a8e1" lazyInd="N" orderNum="1" parentId="o$yXo&amp;gt;a8e1" relatedPath="" screenType="o$yVo&amp;gt;a8e1" show="Y"/>
+    <control caption="" fullQualPath="PropertySubtype.PropertySubtypeDG.PropertySubtypeEMEA" id="o$ymo&amp;gt;a8e1" lazyInd="N" orderNum="2" parentId="o$yXo&amp;gt;a8e1" relatedPath="" screenType="o$yVo&amp;gt;a8e1" show="Y"/>
+    <control caption="" fullQualPath="PropertySubtype.PropertySubtypeDG.DealPathUS" id="o$yoo&amp;gt;a8e1" lazyInd="N" orderNum="3" parentId="o$yXo&amp;gt;a8e1" relatedPath="" screenType="o$yVo&amp;gt;a8e1" show="Y"/>
+    <control caption="" fullQualPath="PropertySubtype.PropertySubtypeDG.DealPathEMEA" id="o$yqo&amp;gt;a8e1" lazyInd="N" orderNum="4" parentId="o$yXo&amp;gt;a8e1" relatedPath="" screenType="o$yVo&amp;gt;a8e1" show="Y"/>
+    <control caption="" fullQualPath="PropertySubtype.PropertySubtypeDG.PropertyStartTms" id="o$yso&amp;gt;a8e1" lazyInd="N" orderNum="5" parentId="o$yXo&amp;gt;a8e1" relatedPath="" screenType="o$yVo&amp;gt;a8e1" show="Y"/>
+    <control caption="" fullQualPath="PropertySubtype.PropertySubtypeDG.PropertyEndTms" id="o$yuo&amp;gt;a8e1" lazyInd="N" orderNum="6" parentId="o$yXo&amp;gt;a8e1" relatedPath="" screenType="o$yVo&amp;gt;a8e1" show="Y"/>
+    <control caption="" fullQualPath="PropertySubtype.PropertySubtypeDG.PropertyLastChgTms" id="o$ywo&amp;gt;a8e1" lazyInd="N" orderNum="7" parentId="o$yXo&amp;gt;a8e1" relatedPath="" screenType="o$yVo&amp;gt;a8e1" show="Y"/>
+    <control caption="" fullQualPath="PropertySubtype.PropertySubtypeDG.PropertyLastChgUsrId" id="o$yyo&amp;gt;a8e1" lazyInd="N" orderNum="8" parentId="o$yXo&amp;gt;a8e1" relatedPath="" screenType="o$yVo&amp;gt;a8e1" show="Y"/>
+    <control caption="" fullQualPath="PropertySubtype.PropertySubtypeDG.PropertyTypeNCREIF" id="mMstm&amp;gt;DC01" lazyInd="N" orderNum="9" parentId="o$yXo&amp;gt;a8e1" relatedPath="" screenType="o$yVo&amp;gt;a8e1" show="Y"/>
+    <control caption="" fullQualPath="PropertySubtype.PropertySubtypeDG.DesignNCREIF" id="mMsum&amp;gt;DC01" lazyInd="N" orderNum="10" parentId="o$yXo&amp;gt;a8e1" relatedPath="" screenType="o$yVo&amp;gt;a8e1" show="Y"/>
+    <control caption="" fullQualPath="PropertySubtype.PropertySubtypeDG.UsageNCREIF" id="mMsvm&amp;gt;DC01" lazyInd="N" orderNum="11" parentId="o$yXo&amp;gt;a8e1" relatedPath="" screenType="o$yVo&amp;gt;a8e1" show="Y"/>
+    <control caption="" fullQualPath="PropertySubtype.PropertySubtypeDG.LeasingNCREIF" id="mMswm&amp;gt;DC01" lazyInd="N" orderNum="12" parentId="o$yXo&amp;gt;a8e1" relatedPath="" screenType="o$yVo&amp;gt;a8e1" show="Y"/>
+    <control caption="" fullQualPath="PropertySubtype.PropertySubtypeDG.PropertySectorGRESB" id="mMsxm&amp;gt;DC01" lazyInd="N" orderNum="13" parentId="o$yXo&amp;gt;a8e1" relatedPath="" screenType="o$yVo&amp;gt;a8e1" show="Y"/>
+    <control caption="" fullQualPath="PropertySubtype.PropertySubtypeDG.PropertyTypeGRESB" id="mMsym&amp;gt;DC01" lazyInd="N" orderNum="14" parentId="o$yXo&amp;gt;a8e1" relatedPath="" screenType="o$yVo&amp;gt;a8e1" show="Y"/>
+    <control caption="" fullQualPath="PropertySubtype.PropertySubtypeDG.PropertySubtypeGRESB" id="mMszm&amp;gt;DC01" lazyInd="N" orderNum="15" parentId="o$yXo&amp;gt;a8e1" relatedPath="" screenType="o$yVo&amp;gt;a8e1" show="Y"/>
+    <control caption="" fullQualPath="PropertySubtype.PropertySubtypeDG.SubtypeMSCIUS" id="mMs$m&amp;gt;DC01" lazyInd="N" orderNum="16" parentId="o$yXo&amp;gt;a8e1" relatedPath="" screenType="o$yVo&amp;gt;a8e1" show="Y"/>
+    <control caption="" fullQualPath="PropertySubtype.PropertySubtypeDG.SubtypeMSCIEMEAAPAC" id="mMs%m&amp;gt;DC01" lazyInd="N" orderNum="17" parentId="o$yXo&amp;gt;a8e1" relatedPath="" screenType="o$yVo&amp;gt;a8e1" show="Y"/>
+    <control caption="" fullQualPath="PropertySubtype.PropertySubtypeDG.INREVEMEA" id="mMs@m&amp;gt;DC01" lazyInd="N" orderNum="18" parentId="o$yXo&amp;gt;a8e1" relatedPath="" screenType="o$yVo&amp;gt;a8e1" show="Y"/>
+    <control caption="" fullQualPath="PropertySubtype.PropertySubtypeDG.ANREVAPAC" id="mMs&amp;amp;m&amp;gt;DC01" lazyInd="N" orderNum="19" parentId="o$yXo&amp;gt;a8e1" relatedPath="" screenType="o$yVo&amp;gt;a8e1" show="Y"/>
+    <control caption="" fullQualPath="PropertySubtype.PropertySubtypeDG.GFAMaxRatioGRESB" id="mMs*u&amp;gt;DC01" lazyInd="N" orderNum="20" parentId="o$yXo&amp;gt;a8e1" relatedPath="" screenType="o$yVo&amp;gt;a8e1" show="Y"/>
+    <control caption="" fullQualPath="PropertySubtype.PropertySubtypeDG.GFAMinRatioGRESB" id="mMs-u&amp;gt;DC01" lazyInd="N" orderNum="21" parentId="o$yXo&amp;gt;a8e1" relatedPath="" screenType="o$yVo&amp;gt;a8e1" show="Y"/>
+  </control>
+</root>

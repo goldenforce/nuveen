@@ -1,0 +1,1835 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<MappingDef type="MSF" version="1.0">
+  <Options>
+    <Option key="MappingComment"/>
+    <Option key="MappingVersion">1.0.0.0</Option>
+    <Option key="MappingAuthor"/>
+    <Option key="MessageTranslatorVersion">8.1.1.1</Option>
+    <Option key="RCode"/>
+    <Option key="LastChangedTms">2025-02-07 at 08:52:25 IST</Option>
+    <Option key="MappingDesignerVersion">8.8.1.15</Option>
+  </Options>
+  <Input vendorType="JSON">
+    <Options>
+      <Option key="DDLName"/>
+      <Option key="TrimFields">BOTH</Option>
+      <Option key="RaiseLayoutWarnings">false</Option>
+      <Option key="TimeStampFormat">%Y%M%D%H%I%S.%f</Option>
+      <Option key="splitter">json.xml</Option>
+      <Option key="MessageType"/>
+      <Option key="DateTimeFormat">%Y%M%D%H%I%S</Option>
+    </Options>
+    <Layout>
+      <Override/>
+      <field decimals="0" desc="" excludedNullIdentifiers="" ident="formatted_address" length="255" mandatory="false" mapable="true" match="false" multiple="false" name="formatted_address" pattern="" pos="0" readonly="false" type="String"/>
+      <field decimals="0" desc="" excludedNullIdentifiers="" ident="ppry_oid" length="255" mandatory="false" mapable="true" match="false" multiple="false" name="ppry_oid" pattern="" pos="0" readonly="false" type="String"/>
+      <record desc="" ident="geometry" mandatory="false" mapable="true" multiple="true" name="geometry">
+        <record desc="" ident="viewport" mandatory="false" mapable="true" multiple="true" name="viewport">
+          <record desc="" ident="southwest" mandatory="false" mapable="true" multiple="true" name="southwest">
+            <field decimals="0" desc="" excludedNullIdentifiers="" ident="lng" length="255" mandatory="false" mapable="true" match="false" multiple="false" name="lng" pattern="" pos="0" readonly="false" type="String"/>
+            <field decimals="0" desc="" excludedNullIdentifiers="" ident="lat" length="255" mandatory="false" mapable="true" match="false" multiple="false" name="lat" pattern="" pos="0" readonly="false" type="String"/>
+          </record>
+          <record desc="" ident="northeast" mandatory="false" mapable="true" multiple="true" name="northeast">
+            <field decimals="0" desc="" excludedNullIdentifiers="" ident="lng" length="255" mandatory="false" mapable="true" match="false" multiple="false" name="lng" pattern="" pos="0" readonly="false" type="String"/>
+            <field decimals="0" desc="" excludedNullIdentifiers="" ident="lat" length="255" mandatory="false" mapable="true" match="false" multiple="false" name="lat" pattern="" pos="0" readonly="false" type="String"/>
+          </record>
+        </record>
+        <record desc="" ident="bounds" mandatory="false" mapable="true" multiple="true" name="bounds">
+          <record desc="" ident="southwest" mandatory="false" mapable="true" multiple="true" name="southwest">
+            <field decimals="0" desc="" excludedNullIdentifiers="" ident="lng" length="255" mandatory="false" mapable="true" match="false" multiple="false" name="lng" pattern="" pos="0" readonly="false" type="String"/>
+            <field decimals="0" desc="" excludedNullIdentifiers="" ident="lat" length="255" mandatory="false" mapable="true" match="false" multiple="false" name="lat" pattern="" pos="0" readonly="false" type="String"/>
+          </record>
+          <record desc="" ident="northeast" mandatory="false" mapable="true" multiple="true" name="northeast">
+            <field decimals="0" desc="" excludedNullIdentifiers="" ident="lng" length="255" mandatory="false" mapable="true" match="false" multiple="false" name="lng" pattern="" pos="0" readonly="false" type="String"/>
+            <field decimals="0" desc="" excludedNullIdentifiers="" ident="lat" length="255" mandatory="false" mapable="true" match="false" multiple="false" name="lat" pattern="" pos="0" readonly="false" type="String"/>
+          </record>
+        </record>
+        <record desc="" ident="location" mandatory="false" mapable="true" multiple="true" name="location">
+          <field decimals="0" desc="" excludedNullIdentifiers="" ident="lng" length="255" mandatory="false" mapable="true" match="false" multiple="false" name="lng" pattern="" pos="0" readonly="false" type="String"/>
+          <field decimals="0" desc="" excludedNullIdentifiers="" ident="lat" length="255" mandatory="false" mapable="true" match="false" multiple="false" name="lat" pattern="" pos="0" readonly="false" type="String"/>
+        </record>
+        <field decimals="0" desc="" excludedNullIdentifiers="" ident="location_type" length="255" mandatory="false" mapable="true" match="false" multiple="false" name="location_type" pattern="" pos="0" readonly="false" type="String"/>
+      </record>
+      <record desc="" ident="address_components" mandatory="false" mapable="true" multiple="true" name="address_components">
+        <field decimals="0" desc="" excludedNullIdentifiers="" ident="short_name" length="255" mandatory="false" mapable="true" match="false" multiple="false" name="short_name" pattern="" pos="0" readonly="false" type="String"/>
+        <field decimals="0" desc="" excludedNullIdentifiers="" ident="type" length="255" mandatory="false" mapable="true" match="false" multiple="false" name="type" pattern="" pos="0" readonly="false" type="String"/>
+        <field decimals="0" desc="" excludedNullIdentifiers="" ident="long_name" length="255" mandatory="false" mapable="true" match="false" multiple="false" name="long_name" pattern="" pos="0" readonly="false" type="String"/>
+      </record>
+      <field decimals="0" desc="" excludedNullIdentifiers="" ident="place_id" length="255" mandatory="false" mapable="true" match="false" multiple="false" name="place_id" pattern="" pos="0" readonly="false" type="String"/>
+    </Layout>
+  </Input>
+  <Output>
+    <Options>
+      <Option key="TimeStampOutputFormat">%M-%D-%Y %H:%I:%S.%f %A</Option>
+      <Option key="DateTimeOutputFormat">%M-%D-%Y %H:%I:%S %A</Option>
+      <Option key="OutputEncoding">UTF-8</Option>
+      <Option key="DefaultEmptyNumericsToZero">FALSE</Option>
+      <Option key="messageformat">BERepo</Option>
+      <Option key="AddTZIndicators">true</Option>
+      <Option key="AddVendorMnemonic">true</Option>
+    </Options>
+    <MappingFragments/>
+    <OutputDef>
+      <Node displayName="Property" messageformat="BE" name="GoldenSourceObjectMessage" type="message">
+        <Options/>
+        <Node name="xmlns" type="attribute">
+          <expr><![CDATA[return "http://www.thegoldensource.com/business-entities/BusinessEntityMessage";]]></expr>
+        </Node>
+        <Node name="xmlns:xsi" type="attribute">
+          <expr><![CDATA[return "http://www.w3.org/2001/XMLSchema-instance";]]></expr>
+        </Node>
+        <Node name="xsi:schemaLocation" type="attribute">
+          <expr><![CDATA[return "http://www.thegoldensource.com/business-entities/BusinessEntityMessage.xsd";]]></expr>
+        </Node>
+        <Execute>
+          <expr><![CDATA[return StoreString("BLDNGID", Select("", "", "select prop_id from ft_T_ppid where ppry_oid =:1 and end_tms is null and prop_id_ctxt_typ IN ('PROP_ID', 'BLDNG_ID')", ppry_oid, "", "", "", ""));]]></expr>
+        </Execute>
+        <ForEach recordType="address_components">
+          <Do>
+            <Execute displayName="premise">
+              <expr><![CDATA[if (StrStr(address_components.type, "premise"))
+	return StoreString("premise", address_components.long_name);
+else
+	return "";]]></expr>
+            </Execute>
+            <Execute displayName="city">
+              <expr><![CDATA[if (StrStr(address_components.type, "locality"))
+	return StoreString("city", address_components.long_name);
+else
+	return "";]]></expr>
+            </Execute>
+            <Execute displayName="county">
+              <expr><![CDATA[if (StrStr(address_components.type, "administrative_area_level_2"))
+	return StoreString("county", address_components.long_name);
+else
+	return "";]]></expr>
+            </Execute>
+            <Execute displayName="state">
+              <expr><![CDATA[if (StrStr(address_components.type, "administrative_area_level_1"))
+	return StoreString("state", address_components.short_name);
+else
+	return "";]]></expr>
+            </Execute>
+            <Execute displayName="country">
+              <expr><![CDATA[if (StrStr(address_components.type, "country"))
+	return StoreString("country", address_components.short_name);
+else
+	return "";]]></expr>
+            </Execute>
+            <Execute displayName="route">
+              <expr><![CDATA[if (StrStr(address_components.type, "route"))
+	return StoreString("route", address_components.long_name);
+else
+	return "";]]></expr>
+            </Execute>
+            <Execute displayName="street number">
+              <expr><![CDATA[if (StrStr(address_components.type, "street_number"))
+	return StoreString("street_number", address_components.long_name);
+else
+	return "";]]></expr>
+            </Execute>
+            <Execute displayName="neighborhood">
+              <expr><![CDATA[if (StrStr(address_components.type, "neighborhood"))
+	return StoreString("neighborhood", address_components.long_name);
+else
+	return "";]]></expr>
+            </Execute>
+            <Execute displayName="postal code">
+              <expr><![CDATA[if (address_components.type == "postal_code")
+	return StoreString("postal_code", address_components.long_name);
+else
+	return "";]]></expr>
+            </Execute>
+          </Do>
+        </ForEach>
+        <Node name="GSOHeader" type="element">
+          <Node name="GSO_ELM_TYPE" type="attribute">
+            <expr><![CDATA[return "group";]]></expr>
+          </Node>
+          <Node name="DateFormat" type="element">
+            <Node name="GSO_ELM_TYPE" type="attribute">
+              <expr><![CDATA[return "field";]]></expr>
+            </Node>
+            <Node name="req" type="attribute">
+              <expr><![CDATA[return "false";]]></expr>
+            </Node>
+          </Node>
+          <Node name="DefaultTimestamp" type="element">
+            <expr><![CDATA[return TimeStamp();]]></expr>
+            <Node name="GSO_ELM_TYPE" type="attribute">
+              <expr><![CDATA[return "field";]]></expr>
+            </Node>
+            <Node name="req" type="attribute">
+              <expr><![CDATA[return "false";]]></expr>
+            </Node>
+          </Node>
+          <Node name="Language" type="element">
+            <Node name="GSO_ELM_TYPE" type="attribute">
+              <expr><![CDATA[return "field";]]></expr>
+            </Node>
+            <Node name="req" type="attribute">
+              <expr><![CDATA[return "false";]]></expr>
+            </Node>
+          </Node>
+          <Node name="MainEntityId" type="element">
+            <expr><![CDATA[return GetStringByKey("BLDNGID");]]></expr>
+            <Node name="GSO_ELM_TYPE" type="attribute">
+              <expr><![CDATA[return "field";]]></expr>
+            </Node>
+            <Node name="req" type="attribute">
+              <expr><![CDATA[return "false";]]></expr>
+            </Node>
+          </Node>
+          <Node name="MainEntityIdContext" type="element">
+            <expr><![CDATA[return ppry_oid;]]></expr>
+            <Node name="GSO_ELM_TYPE" type="attribute">
+              <expr><![CDATA[return "field";]]></expr>
+            </Node>
+            <Node name="req" type="attribute">
+              <expr><![CDATA[return "false";]]></expr>
+            </Node>
+          </Node>
+          <Node name="MainEntityName" type="element">
+            <expr><![CDATA[return "Building";]]></expr>
+            <Node name="GSO_ELM_TYPE" type="attribute">
+              <expr><![CDATA[return "field";]]></expr>
+            </Node>
+            <Node name="req" type="attribute">
+              <expr><![CDATA[return "false";]]></expr>
+            </Node>
+          </Node>
+          <Node name="MainEntityType" type="element">
+            <expr><![CDATA[return "Building";]]></expr>
+            <Node name="GSO_ELM_TYPE" type="attribute">
+              <expr><![CDATA[return "field";]]></expr>
+            </Node>
+            <Node name="req" type="attribute">
+              <expr><![CDATA[return "false";]]></expr>
+            </Node>
+          </Node>
+          <Node name="MessageClassification" type="element">
+            <expr><![CDATA[return "INTLBLD";]]></expr>
+            <Node name="GSO_ELM_TYPE" type="attribute">
+              <expr><![CDATA[return "field";]]></expr>
+            </Node>
+            <Node name="req" type="attribute">
+              <expr><![CDATA[return "false";]]></expr>
+            </Node>
+          </Node>
+          <Node name="TimeZone" type="element">
+            <Node name="GSO_ELM_TYPE" type="attribute">
+              <expr><![CDATA[return "field";]]></expr>
+            </Node>
+            <Node name="req" type="attribute">
+              <expr><![CDATA[return "false";]]></expr>
+            </Node>
+          </Node>
+          <Node name="User" type="element">
+            <expr><![CDATA[return "NRE";]]></expr>
+            <Node name="GSO_ELM_TYPE" type="attribute">
+              <expr><![CDATA[return "field";]]></expr>
+            </Node>
+            <Node name="req" type="attribute">
+              <expr><![CDATA[return "false";]]></expr>
+            </Node>
+          </Node>
+          <Node name="VendorSource" type="element">
+            <expr><![CDATA[return "NRE";]]></expr>
+            <Node name="GSO_ELM_TYPE" type="attribute">
+              <expr><![CDATA[return "field";]]></expr>
+            </Node>
+            <Node name="req" type="attribute">
+              <expr><![CDATA[return "false";]]></expr>
+            </Node>
+          </Node>
+          <Node name="ChangeVddbAction" type="element">
+            <Node name="GSO_ELM_TYPE" type="attribute">
+              <expr><![CDATA[return "field";]]></expr>
+            </Node>
+            <Node name="req" type="attribute">
+              <expr><![CDATA[return "false";]]></expr>
+            </Node>
+          </Node>
+          <Node name="MainEntityTableType" type="element">
+            <Node name="GSO_ELM_TYPE" type="attribute">
+              <expr><![CDATA[return "field";]]></expr>
+            </Node>
+            <Node name="req" type="attribute">
+              <expr><![CDATA[return "false";]]></expr>
+            </Node>
+          </Node>
+          <Node name="ChangeModel" type="element">
+            <Node name="GSO_ELM_TYPE" type="attribute">
+              <expr><![CDATA[return "field";]]></expr>
+            </Node>
+            <Node name="req" type="attribute">
+              <expr><![CDATA[return "false";]]></expr>
+            </Node>
+          </Node>
+          <Node name="UpdateModel" type="element">
+            <Node name="GSO_ELM_TYPE" type="attribute">
+              <expr><![CDATA[return "field";]]></expr>
+            </Node>
+            <Node name="req" type="attribute">
+              <expr><![CDATA[return "false";]]></expr>
+            </Node>
+          </Node>
+          <Node name="SecurityBasedIssuerMatching" type="element">
+            <Node name="GSO_ELM_TYPE" type="attribute">
+              <expr><![CDATA[return "field";]]></expr>
+            </Node>
+            <Node name="req" type="attribute">
+              <expr><![CDATA[return "false";]]></expr>
+            </Node>
+          </Node>
+          <Node name="MessageCondition" type="element">
+            <Node name="GSO_ELM_TYPE" type="attribute">
+              <expr><![CDATA[return "field";]]></expr>
+            </Node>
+            <Node name="req" type="attribute">
+              <expr><![CDATA[return "false";]]></expr>
+            </Node>
+          </Node>
+        </Node>
+        <Node name="Property" type="element">
+          <Node name="xmlns" type="attribute">
+            <expr><![CDATA[return "http://www.thegoldensource.com/business-entities/Property";]]></expr>
+          </Node>
+          <Node name="xsi:schemaLocation" type="attribute">
+            <expr><![CDATA[return "http://www.thegoldensource.com/business-entities/Property.xsd";]]></expr>
+          </Node>
+          <Node name="GSO_ELM_TYPE" type="attribute">
+            <expr><![CDATA[return "gso";]]></expr>
+          </Node>
+          <Node name="PropertyDetails" type="element">
+            <Node name="GSO_ELM_TYPE" type="attribute">
+              <expr><![CDATA[return "group";]]></expr>
+            </Node>
+            <Node name="req" type="attribute">
+              <expr><![CDATA[return "true";]]></expr>
+            </Node>
+            <Node name="RelatedPropertyType" type="element">
+              <Node name="GSO_ELM_TYPE" type="attribute">
+                <expr><![CDATA[return "rel";]]></expr>
+              </Node>
+              <Node name="req" type="attribute">
+                <expr><![CDATA[return "false";]]></expr>
+              </Node>
+              <Node name="xmlns" type="attribute">
+                <expr><![CDATA[return "http://www.thegoldensource.com/business-entities/PropertyType";]]></expr>
+              </Node>
+            </Node>
+            <Node name="PropertyName" type="element">
+              <Node name="GSO_ELM_TYPE" type="attribute">
+                <expr><![CDATA[return "field";]]></expr>
+              </Node>
+              <Node name="req" type="attribute">
+                <expr><![CDATA[return "true";]]></expr>
+              </Node>
+            </Node>
+            <Node name="PropertyDescription" type="element">
+              <Node name="GSO_ELM_TYPE" type="attribute">
+                <expr><![CDATA[return "field";]]></expr>
+              </Node>
+              <Node name="req" type="attribute">
+                <expr><![CDATA[return "false";]]></expr>
+              </Node>
+            </Node>
+            <Node name="ConstructionYear" type="element">
+              <Node name="GSO_ELM_TYPE" type="attribute">
+                <expr><![CDATA[return "field";]]></expr>
+              </Node>
+              <Node name="req" type="attribute">
+                <expr><![CDATA[return "false";]]></expr>
+              </Node>
+            </Node>
+            <Node name="OccupancyType" type="element">
+              <Node name="GSO_ELM_TYPE" type="attribute">
+                <expr><![CDATA[return "field";]]></expr>
+              </Node>
+              <Node name="req" type="attribute">
+                <expr><![CDATA[return "false";]]></expr>
+              </Node>
+            </Node>
+            <Node name="PropertyAgeType" type="element">
+              <Node name="GSO_ELM_TYPE" type="attribute">
+                <expr><![CDATA[return "field";]]></expr>
+              </Node>
+              <Node name="req" type="attribute">
+                <expr><![CDATA[return "false";]]></expr>
+              </Node>
+            </Node>
+            <Node name="PropertyGeoCode" type="element">
+              <Node name="GSO_ELM_TYPE" type="attribute">
+                <expr><![CDATA[return "field";]]></expr>
+              </Node>
+              <Node name="req" type="attribute">
+                <expr><![CDATA[return "false";]]></expr>
+              </Node>
+            </Node>
+            <Node name="NumberOfLivingUnits" type="element">
+              <Node name="GSO_ELM_TYPE" type="attribute">
+                <expr><![CDATA[return "field";]]></expr>
+              </Node>
+              <Node name="req" type="attribute">
+                <expr><![CDATA[return "false";]]></expr>
+              </Node>
+            </Node>
+            <Node name="NumberofBedrooms" type="element">
+              <Node name="GSO_ELM_TYPE" type="attribute">
+                <expr><![CDATA[return "field";]]></expr>
+              </Node>
+              <Node name="req" type="attribute">
+                <expr><![CDATA[return "false";]]></expr>
+              </Node>
+            </Node>
+            <Node name="FloodZoneIndicator" type="element">
+              <Node name="GSO_ELM_TYPE" type="attribute">
+                <expr><![CDATA[return "field";]]></expr>
+              </Node>
+              <Node name="req" type="attribute">
+                <expr><![CDATA[return "false";]]></expr>
+              </Node>
+            </Node>
+            <Node name="LeaseholdIndicator" type="element">
+              <Node name="GSO_ELM_TYPE" type="attribute">
+                <expr><![CDATA[return "field";]]></expr>
+              </Node>
+              <Node name="req" type="attribute">
+                <expr><![CDATA[return "false";]]></expr>
+              </Node>
+            </Node>
+            <Node name="PropertyTransferabilityLimited" type="element">
+              <Node name="GSO_ELM_TYPE" type="attribute">
+                <expr><![CDATA[return "field";]]></expr>
+              </Node>
+              <Node name="req" type="attribute">
+                <expr><![CDATA[return "false";]]></expr>
+              </Node>
+            </Node>
+            <Node name="RentableUnitsIndicator" type="element">
+              <Node name="GSO_ELM_TYPE" type="attribute">
+                <expr><![CDATA[return "field";]]></expr>
+              </Node>
+              <Node name="req" type="attribute">
+                <expr><![CDATA[return "false";]]></expr>
+              </Node>
+            </Node>
+            <Node name="RealEstateOwnedIndicator" type="element">
+              <Node name="GSO_ELM_TYPE" type="attribute">
+                <expr><![CDATA[return "field";]]></expr>
+              </Node>
+              <Node name="req" type="attribute">
+                <expr><![CDATA[return "false";]]></expr>
+              </Node>
+            </Node>
+            <Node name="LatitudeDecimalDegrees" type="element">
+              <expr><![CDATA[return geometry.location.lat;]]></expr>
+              <Node name="GSO_ELM_TYPE" type="attribute">
+                <expr><![CDATA[return "field";]]></expr>
+              </Node>
+              <Node name="req" type="attribute">
+                <expr><![CDATA[return "false";]]></expr>
+              </Node>
+            </Node>
+            <Node name="LongitudeDecimalDegrees" type="element">
+              <expr><![CDATA[return geometry.location.lng;]]></expr>
+              <Node name="GSO_ELM_TYPE" type="attribute">
+                <expr><![CDATA[return "field";]]></expr>
+              </Node>
+              <Node name="req" type="attribute">
+                <expr><![CDATA[return "false";]]></expr>
+              </Node>
+            </Node>
+            <Node name="NREAccountingCompany" type="element">
+              <Node name="GSO_ELM_TYPE" type="attribute">
+                <expr><![CDATA[return "field";]]></expr>
+              </Node>
+              <Node name="req" type="attribute">
+                <expr><![CDATA[return "false";]]></expr>
+              </Node>
+            </Node>
+            <Node name="NRECertofOccCompletedDate" type="element">
+              <Node name="GSO_ELM_TYPE" type="attribute">
+                <expr><![CDATA[return "field";]]></expr>
+              </Node>
+              <Node name="req" type="attribute">
+                <expr><![CDATA[return "false";]]></expr>
+              </Node>
+            </Node>
+            <Node name="NREManagementCompany" type="element">
+              <Node name="GSO_ELM_TYPE" type="attribute">
+                <expr><![CDATA[return "field";]]></expr>
+              </Node>
+              <Node name="req" type="attribute">
+                <expr><![CDATA[return "false";]]></expr>
+              </Node>
+            </Node>
+            <Node name="NRENetRentableArea" type="element">
+              <Node name="GSO_ELM_TYPE" type="attribute">
+                <expr><![CDATA[return "field";]]></expr>
+              </Node>
+              <Node name="req" type="attribute">
+                <expr><![CDATA[return "false";]]></expr>
+              </Node>
+            </Node>
+            <Node name="NRENumberofFloors" type="element">
+              <Node name="GSO_ELM_TYPE" type="attribute">
+                <expr><![CDATA[return "field";]]></expr>
+              </Node>
+              <Node name="req" type="attribute">
+                <expr><![CDATA[return "false";]]></expr>
+              </Node>
+            </Node>
+            <Node name="NREPropertyCurrency" type="element">
+              <Node name="GSO_ELM_TYPE" type="attribute">
+                <expr><![CDATA[return "field";]]></expr>
+              </Node>
+              <Node name="req" type="attribute">
+                <expr><![CDATA[return "false";]]></expr>
+              </Node>
+            </Node>
+            <Node name="NREPropertyDeveloper" type="element">
+              <Node name="GSO_ELM_TYPE" type="attribute">
+                <expr><![CDATA[return "field";]]></expr>
+              </Node>
+              <Node name="req" type="attribute">
+                <expr><![CDATA[return "false";]]></expr>
+              </Node>
+            </Node>
+            <Node name="NREPropertyJVPartner" type="element">
+              <Node name="GSO_ELM_TYPE" type="attribute">
+                <expr><![CDATA[return "field";]]></expr>
+              </Node>
+              <Node name="req" type="attribute">
+                <expr><![CDATA[return "false";]]></expr>
+              </Node>
+            </Node>
+            <Node name="NREPropertyLandAcreage" type="element">
+              <Node name="GSO_ELM_TYPE" type="attribute">
+                <expr><![CDATA[return "field";]]></expr>
+              </Node>
+              <Node name="req" type="attribute">
+                <expr><![CDATA[return "false";]]></expr>
+              </Node>
+            </Node>
+            <Node name="NRENumberofBuildings" type="element">
+              <Node name="GSO_ELM_TYPE" type="attribute">
+                <expr><![CDATA[return "field";]]></expr>
+              </Node>
+              <Node name="req" type="attribute">
+                <expr><![CDATA[return "false";]]></expr>
+              </Node>
+            </Node>
+          </Node>
+          <Node name="AcquisitionDetails" type="element">
+            <Node name="GSO_ELM_TYPE" type="attribute">
+              <expr><![CDATA[return "group";]]></expr>
+            </Node>
+            <Node name="req" type="attribute">
+              <expr><![CDATA[return "false";]]></expr>
+            </Node>
+            <Node name="NREAcquisitionDate" type="element">
+              <Node name="GSO_ELM_TYPE" type="attribute">
+                <expr><![CDATA[return "field";]]></expr>
+              </Node>
+              <Node name="req" type="attribute">
+                <expr><![CDATA[return "false";]]></expr>
+              </Node>
+            </Node>
+            <Node name="NREPropertySeller" type="element">
+              <Node name="GSO_ELM_TYPE" type="attribute">
+                <expr><![CDATA[return "field";]]></expr>
+              </Node>
+              <Node name="req" type="attribute">
+                <expr><![CDATA[return "false";]]></expr>
+              </Node>
+            </Node>
+            <Node name="NREAuthorizationID" type="element">
+              <Node name="GSO_ELM_TYPE" type="attribute">
+                <expr><![CDATA[return "field";]]></expr>
+              </Node>
+              <Node name="req" type="attribute">
+                <expr><![CDATA[return "false";]]></expr>
+              </Node>
+            </Node>
+          </Node>
+          <Node name="DispositionDetails" type="element">
+            <Node name="GSO_ELM_TYPE" type="attribute">
+              <expr><![CDATA[return "group";]]></expr>
+            </Node>
+            <Node name="req" type="attribute">
+              <expr><![CDATA[return "false";]]></expr>
+            </Node>
+            <Node name="NREPropertyBuyer" type="element">
+              <Node name="GSO_ELM_TYPE" type="attribute">
+                <expr><![CDATA[return "field";]]></expr>
+              </Node>
+              <Node name="req" type="attribute">
+                <expr><![CDATA[return "false";]]></expr>
+              </Node>
+            </Node>
+            <Node name="NREDispositionDate" type="element">
+              <Node name="GSO_ELM_TYPE" type="attribute">
+                <expr><![CDATA[return "field";]]></expr>
+              </Node>
+              <Node name="req" type="attribute">
+                <expr><![CDATA[return "false";]]></expr>
+              </Node>
+            </Node>
+          </Node>
+          <Node displayName="Building" name="PropertyIdentifiers" type="element">
+            <Node name="GSO_ELM_TYPE" type="attribute">
+              <expr><![CDATA[return "group";]]></expr>
+            </Node>
+            <Node name="req" type="attribute">
+              <expr><![CDATA[return "false";]]></expr>
+            </Node>
+            <Node name="PropertyIdentifierContext" type="element">
+              <expr><![CDATA[return "BLDNG_ID";]]></expr>
+              <Node name="GSO_ELM_TYPE" type="attribute">
+                <expr><![CDATA[return "field";]]></expr>
+              </Node>
+              <Node name="req" type="attribute">
+                <expr><![CDATA[return "true";]]></expr>
+              </Node>
+            </Node>
+            <Node name="PropertyIdentifier" type="element">
+              <expr><![CDATA[return GetStringByKey("BLDNGID");]]></expr>
+              <Node name="ACTION" type="attribute">
+                <expr><![CDATA[return "REFERENCE";]]></expr>
+              </Node>
+              <Node name="ERROR" type="attribute">
+                <expr><![CDATA[return "N";]]></expr>
+              </Node>
+              <Node name="GSO_ELM_TYPE" type="attribute">
+                <expr><![CDATA[return "field";]]></expr>
+              </Node>
+              <Node name="MATCH" type="attribute">
+                <expr><![CDATA[return "PPID1_PROP_ID_CTXT";]]></expr>
+              </Node>
+              <Node name="req" type="attribute">
+                <expr><![CDATA[return "true";]]></expr>
+              </Node>
+            </Node>
+          </Node>
+          <Node displayName="Property" name="PropertyIdentifiers" type="element">
+            <Node name="GSO_ELM_TYPE" type="attribute">
+              <expr><![CDATA[return "group";]]></expr>
+            </Node>
+            <Node name="req" type="attribute">
+              <expr><![CDATA[return "false";]]></expr>
+            </Node>
+            <Node name="PropertyIdentifierContext" type="element">
+              <expr><![CDATA[return "PROP_ID";]]></expr>
+              <Node name="GSO_ELM_TYPE" type="attribute">
+                <expr><![CDATA[return "field";]]></expr>
+              </Node>
+              <Node name="req" type="attribute">
+                <expr><![CDATA[return "true";]]></expr>
+              </Node>
+            </Node>
+            <Node name="PropertyIdentifier" type="element">
+              <expr><![CDATA[return GetStringByKey("BLDNGID");]]></expr>
+              <Node name="ACTION" type="attribute">
+                <expr><![CDATA[return "REFERENCE";]]></expr>
+              </Node>
+              <Node name="ERROR" type="attribute">
+                <expr><![CDATA[return "N";]]></expr>
+              </Node>
+              <Node name="GSO_ELM_TYPE" type="attribute">
+                <expr><![CDATA[return "field";]]></expr>
+              </Node>
+              <Node name="MATCH" type="attribute">
+                <expr><![CDATA[return "PPID1_PROP_ID_CTXT";]]></expr>
+              </Node>
+              <Node name="req" type="attribute">
+                <expr><![CDATA[return "true";]]></expr>
+              </Node>
+            </Node>
+          </Node>
+          <Node name="PropertyGeographicalInformation" type="element">
+            <Node name="GSO_ELM_TYPE" type="attribute">
+              <expr><![CDATA[return "group";]]></expr>
+            </Node>
+            <Node name="req" type="attribute">
+              <expr><![CDATA[return "false";]]></expr>
+            </Node>
+            <Node name="PropertyGeographicUnit" type="element">
+              <Node name="GSO_ELM_TYPE" type="attribute">
+                <expr><![CDATA[return "rel";]]></expr>
+              </Node>
+              <Node name="req" type="attribute">
+                <expr><![CDATA[return "true";]]></expr>
+              </Node>
+              <Node name="xmlns" type="attribute">
+                <expr><![CDATA[return "http://www.thegoldensource.com/business-entities/GeographicalUnit";]]></expr>
+              </Node>
+            </Node>
+            <Node name="PropertyGeoUnitPurpose" type="element">
+              <Node name="GSO_ELM_TYPE" type="attribute">
+                <expr><![CDATA[return "field";]]></expr>
+              </Node>
+              <Node name="req" type="attribute">
+                <expr><![CDATA[return "false";]]></expr>
+              </Node>
+            </Node>
+            <Node name="PropertyGeoUnitDescription" type="element">
+              <Node name="GSO_ELM_TYPE" type="attribute">
+                <expr><![CDATA[return "field";]]></expr>
+              </Node>
+              <Node name="req" type="attribute">
+                <expr><![CDATA[return "false";]]></expr>
+              </Node>
+            </Node>
+            <Node name="PropertyGeoUnitLandAreaUnitOfMeasure" type="element">
+              <Node name="GSO_ELM_TYPE" type="attribute">
+                <expr><![CDATA[return "field";]]></expr>
+              </Node>
+              <Node name="req" type="attribute">
+                <expr><![CDATA[return "false";]]></expr>
+              </Node>
+            </Node>
+            <Node name="PropertyGeoUnitLandAreaAmount" type="element">
+              <Node name="GSO_ELM_TYPE" type="attribute">
+                <expr><![CDATA[return "field";]]></expr>
+              </Node>
+              <Node name="req" type="attribute">
+                <expr><![CDATA[return "false";]]></expr>
+              </Node>
+            </Node>
+          </Node>
+          <Node name="PropertyClassifications" type="element">
+            <Node name="GSO_ELM_TYPE" type="attribute">
+              <expr><![CDATA[return "group";]]></expr>
+            </Node>
+            <Node name="req" type="attribute">
+              <expr><![CDATA[return "false";]]></expr>
+            </Node>
+            <Node name="PropertyIndustryClassification" type="element">
+              <Node name="GSO_ELM_TYPE" type="attribute">
+                <expr><![CDATA[return "rel";]]></expr>
+              </Node>
+              <Node name="req" type="attribute">
+                <expr><![CDATA[return "true";]]></expr>
+              </Node>
+              <Node name="xmlns" type="attribute">
+                <expr><![CDATA[return "http://www.thegoldensource.com/business-entities/IndustryClassification";]]></expr>
+              </Node>
+            </Node>
+            <Node name="ClassificationPurpose" type="element">
+              <Node name="GSO_ELM_TYPE" type="attribute">
+                <expr><![CDATA[return "field";]]></expr>
+              </Node>
+              <Node name="req" type="attribute">
+                <expr><![CDATA[return "false";]]></expr>
+              </Node>
+            </Node>
+          </Node>
+          <Node name="PropertyCharacteristics" type="element">
+            <Node name="GSO_ELM_TYPE" type="attribute">
+              <expr><![CDATA[return "group";]]></expr>
+            </Node>
+            <Node name="req" type="attribute">
+              <expr><![CDATA[return "false";]]></expr>
+            </Node>
+            <Node name="StatisticsEffectiveDateTime" type="element">
+              <Node name="GSO_ELM_TYPE" type="attribute">
+                <expr><![CDATA[return "field";]]></expr>
+              </Node>
+              <Node name="req" type="attribute">
+                <expr><![CDATA[return "true";]]></expr>
+              </Node>
+            </Node>
+            <Node name="StatisticsCurrency" type="element">
+              <Node name="GSO_ELM_TYPE" type="attribute">
+                <expr><![CDATA[return "field";]]></expr>
+              </Node>
+              <Node name="req" type="attribute">
+                <expr><![CDATA[return "false";]]></expr>
+              </Node>
+            </Node>
+            <Node name="SharedOwnershipType" type="element">
+              <Node name="GSO_ELM_TYPE" type="attribute">
+                <expr><![CDATA[return "field";]]></expr>
+              </Node>
+              <Node name="req" type="attribute">
+                <expr><![CDATA[return "false";]]></expr>
+              </Node>
+            </Node>
+            <Node name="RightToBuyIndicator" type="element">
+              <Node name="GSO_ELM_TYPE" type="attribute">
+                <expr><![CDATA[return "field";]]></expr>
+              </Node>
+              <Node name="req" type="attribute">
+                <expr><![CDATA[return "false";]]></expr>
+              </Node>
+            </Node>
+            <Node name="TimeUntilDeclassification" type="element">
+              <Node name="GSO_ELM_TYPE" type="attribute">
+                <expr><![CDATA[return "field";]]></expr>
+              </Node>
+              <Node name="req" type="attribute">
+                <expr><![CDATA[return "false";]]></expr>
+              </Node>
+            </Node>
+            <Node name="SalePrice" type="element">
+              <Node name="GSO_ELM_TYPE" type="attribute">
+                <expr><![CDATA[return "field";]]></expr>
+              </Node>
+              <Node name="req" type="attribute">
+                <expr><![CDATA[return "false";]]></expr>
+              </Node>
+            </Node>
+            <Node name="RightToBuyPrice" type="element">
+              <Node name="GSO_ELM_TYPE" type="attribute">
+                <expr><![CDATA[return "field";]]></expr>
+              </Node>
+              <Node name="req" type="attribute">
+                <expr><![CDATA[return "false";]]></expr>
+              </Node>
+            </Node>
+            <Node name="LossOnSaleAmount" type="element">
+              <Node name="GSO_ELM_TYPE" type="attribute">
+                <expr><![CDATA[return "field";]]></expr>
+              </Node>
+              <Node name="req" type="attribute">
+                <expr><![CDATA[return "false";]]></expr>
+              </Node>
+            </Node>
+            <Node name="RentalIncomeAmount" type="element">
+              <Node name="GSO_ELM_TYPE" type="attribute">
+                <expr><![CDATA[return "field";]]></expr>
+              </Node>
+              <Node name="req" type="attribute">
+                <expr><![CDATA[return "false";]]></expr>
+              </Node>
+            </Node>
+            <Node name="SubsidyReceivedAmount" type="element">
+              <Node name="GSO_ELM_TYPE" type="attribute">
+                <expr><![CDATA[return "field";]]></expr>
+              </Node>
+              <Node name="req" type="attribute">
+                <expr><![CDATA[return "false";]]></expr>
+              </Node>
+            </Node>
+            <Node name="SubsidyPeriodLength" type="element">
+              <Node name="GSO_ELM_TYPE" type="attribute">
+                <expr><![CDATA[return "field";]]></expr>
+              </Node>
+              <Node name="req" type="attribute">
+                <expr><![CDATA[return "false";]]></expr>
+              </Node>
+            </Node>
+            <Node name="LastInspectionDateTime" type="element">
+              <Node name="GSO_ELM_TYPE" type="attribute">
+                <expr><![CDATA[return "field";]]></expr>
+              </Node>
+              <Node name="req" type="attribute">
+                <expr><![CDATA[return "false";]]></expr>
+              </Node>
+            </Node>
+          </Node>
+          <Node name="PropertyValuations" type="element">
+            <Node name="GSO_ELM_TYPE" type="attribute">
+              <expr><![CDATA[return "group";]]></expr>
+            </Node>
+            <Node name="req" type="attribute">
+              <expr><![CDATA[return "false";]]></expr>
+            </Node>
+            <Node name="PropertyValuationType" type="element">
+              <Node name="GSO_ELM_TYPE" type="attribute">
+                <expr><![CDATA[return "field";]]></expr>
+              </Node>
+              <Node name="req" type="attribute">
+                <expr><![CDATA[return "true";]]></expr>
+              </Node>
+            </Node>
+            <Node name="ValuationProviderName" type="element">
+              <Node name="GSO_ELM_TYPE" type="attribute">
+                <expr><![CDATA[return "field";]]></expr>
+              </Node>
+              <Node name="req" type="attribute">
+                <expr><![CDATA[return "false";]]></expr>
+              </Node>
+            </Node>
+            <Node name="PropertyValuationCurrency" type="element">
+              <Node name="GSO_ELM_TYPE" type="attribute">
+                <expr><![CDATA[return "field";]]></expr>
+              </Node>
+              <Node name="req" type="attribute">
+                <expr><![CDATA[return "false";]]></expr>
+              </Node>
+            </Node>
+            <Node name="PropertyValuationValue" type="element">
+              <Node name="GSO_ELM_TYPE" type="attribute">
+                <expr><![CDATA[return "field";]]></expr>
+              </Node>
+              <Node name="req" type="attribute">
+                <expr><![CDATA[return "true";]]></expr>
+              </Node>
+            </Node>
+            <Node name="PropertyValuationDate" type="element">
+              <Node name="GSO_ELM_TYPE" type="attribute">
+                <expr><![CDATA[return "field";]]></expr>
+              </Node>
+              <Node name="req" type="attribute">
+                <expr><![CDATA[return "true";]]></expr>
+              </Node>
+            </Node>
+            <Node name="OriginalValuationIndicator" type="element">
+              <Node name="GSO_ELM_TYPE" type="attribute">
+                <expr><![CDATA[return "field";]]></expr>
+              </Node>
+              <Node name="req" type="attribute">
+                <expr><![CDATA[return "false";]]></expr>
+              </Node>
+            </Node>
+            <Node name="ValuationProviderConfidenceLevel" type="element">
+              <Node name="GSO_ELM_TYPE" type="attribute">
+                <expr><![CDATA[return "field";]]></expr>
+              </Node>
+              <Node name="req" type="attribute">
+                <expr><![CDATA[return "false";]]></expr>
+              </Node>
+            </Node>
+            <Node name="PropertyCollateralValuationRate" type="element">
+              <Node name="GSO_ELM_TYPE" type="attribute">
+                <expr><![CDATA[return "field";]]></expr>
+              </Node>
+              <Node name="req" type="attribute">
+                <expr><![CDATA[return "false";]]></expr>
+              </Node>
+            </Node>
+          </Node>
+          <Node name="RelatedProperty" type="element">
+            <Node name="GSO_ELM_TYPE" type="attribute">
+              <expr><![CDATA[return "group";]]></expr>
+            </Node>
+            <Node name="req" type="attribute">
+              <expr><![CDATA[return "false";]]></expr>
+            </Node>
+            <Node name="PropertyToPropertyRelation" type="element">
+              <Node name="GSO_ELM_TYPE" type="attribute">
+                <expr><![CDATA[return "rel";]]></expr>
+              </Node>
+              <Node name="req" type="attribute">
+                <expr><![CDATA[return "true";]]></expr>
+              </Node>
+              <Node name="xmlns" type="attribute">
+                <expr><![CDATA[return "http://www.thegoldensource.com/business-entities/Property";]]></expr>
+              </Node>
+            </Node>
+            <Node name="PropertyPropertyRoleType" type="element">
+              <Node name="GSO_ELM_TYPE" type="attribute">
+                <expr><![CDATA[return "field";]]></expr>
+              </Node>
+              <Node name="req" type="attribute">
+                <expr><![CDATA[return "true";]]></expr>
+              </Node>
+            </Node>
+            <Node name="PropertyRoleDescription" type="element">
+              <Node name="GSO_ELM_TYPE" type="attribute">
+                <expr><![CDATA[return "field";]]></expr>
+              </Node>
+              <Node name="req" type="attribute">
+                <expr><![CDATA[return "false";]]></expr>
+              </Node>
+            </Node>
+            <Node name="PropertyParticipationPercent" type="element">
+              <Node name="GSO_ELM_TYPE" type="attribute">
+                <expr><![CDATA[return "field";]]></expr>
+              </Node>
+              <Node name="req" type="attribute">
+                <expr><![CDATA[return "false";]]></expr>
+              </Node>
+            </Node>
+          </Node>
+          <Node name="RelatedIssue" type="element">
+            <Node name="GSO_ELM_TYPE" type="attribute">
+              <expr><![CDATA[return "group";]]></expr>
+            </Node>
+            <Node name="req" type="attribute">
+              <expr><![CDATA[return "false";]]></expr>
+            </Node>
+            <Node name="PropertyToIssueRelation" type="element">
+              <Node name="GSO_ELM_TYPE" type="attribute">
+                <expr><![CDATA[return "rel";]]></expr>
+              </Node>
+              <Node name="req" type="attribute">
+                <expr><![CDATA[return "true";]]></expr>
+              </Node>
+              <Node name="xmlns" type="attribute">
+                <expr><![CDATA[return "http://www.thegoldensource.com/business-entities/Base";]]></expr>
+              </Node>
+            </Node>
+            <Node name="PropertyIssueRoleType" type="element">
+              <Node name="GSO_ELM_TYPE" type="attribute">
+                <expr><![CDATA[return "field";]]></expr>
+              </Node>
+              <Node name="req" type="attribute">
+                <expr><![CDATA[return "true";]]></expr>
+              </Node>
+            </Node>
+            <Node name="PropertyIssueRoleDescription" type="element">
+              <Node name="GSO_ELM_TYPE" type="attribute">
+                <expr><![CDATA[return "field";]]></expr>
+              </Node>
+              <Node name="req" type="attribute">
+                <expr><![CDATA[return "false";]]></expr>
+              </Node>
+            </Node>
+            <Node name="PropertyIssueParticipationPercent" type="element">
+              <Node name="GSO_ELM_TYPE" type="attribute">
+                <expr><![CDATA[return "field";]]></expr>
+              </Node>
+              <Node name="req" type="attribute">
+                <expr><![CDATA[return "false";]]></expr>
+              </Node>
+            </Node>
+          </Node>
+          <Node name="PropertyAddressDetails" type="element">
+            <Node name="GSO_ELM_TYPE" type="attribute">
+              <expr><![CDATA[return "group";]]></expr>
+            </Node>
+            <Node name="req" type="attribute">
+              <expr><![CDATA[return "false";]]></expr>
+            </Node>
+            <Node name="PropertyAddressPurpose" type="element">
+              <Node name="GSO_ELM_TYPE" type="attribute">
+                <expr><![CDATA[return "group";]]></expr>
+              </Node>
+              <Node name="req" type="attribute">
+                <expr><![CDATA[return "false";]]></expr>
+              </Node>
+              <Node name="PropADPUAddressPurpose" type="element">
+                <expr><![CDATA[return "VERIFY";]]></expr>
+                <Node name="GSO_ELM_TYPE" type="attribute">
+                  <expr><![CDATA[return "field";]]></expr>
+                </Node>
+                <Node name="req" type="attribute">
+                  <expr><![CDATA[return "true";]]></expr>
+                </Node>
+              </Node>
+              <Node name="PropADPUAddressPurposeDescription" type="element">
+                <Node name="GSO_ELM_TYPE" type="attribute">
+                  <expr><![CDATA[return "field";]]></expr>
+                </Node>
+                <Node name="req" type="attribute">
+                  <expr><![CDATA[return "false";]]></expr>
+                </Node>
+              </Node>
+            </Node>
+            <Node name="PropertyAddressElectronic" type="element">
+              <Node name="GSO_ELM_TYPE" type="attribute">
+                <expr><![CDATA[return "group";]]></expr>
+              </Node>
+              <Node name="req" type="attribute">
+                <expr><![CDATA[return "false";]]></expr>
+              </Node>
+              <Node name="PropEADRACHPreNoteDate" type="element">
+                <Node name="GSO_ELM_TYPE" type="attribute">
+                  <expr><![CDATA[return "field";]]></expr>
+                </Node>
+                <Node name="req" type="attribute">
+                  <expr><![CDATA[return "false";]]></expr>
+                </Node>
+              </Node>
+              <Node name="PropEADRAlternateEmailAddress" type="element">
+                <Node name="GSO_ELM_TYPE" type="attribute">
+                  <expr><![CDATA[return "field";]]></expr>
+                </Node>
+                <Node name="req" type="attribute">
+                  <expr><![CDATA[return "false";]]></expr>
+                </Node>
+              </Node>
+              <Node name="PropEADRBankAccountID" type="element">
+                <Node name="GSO_ELM_TYPE" type="attribute">
+                  <expr><![CDATA[return "field";]]></expr>
+                </Node>
+                <Node name="req" type="attribute">
+                  <expr><![CDATA[return "false";]]></expr>
+                </Node>
+              </Node>
+              <Node name="PropEADRBankAccountPrimaryName" type="element">
+                <Node name="GSO_ELM_TYPE" type="attribute">
+                  <expr><![CDATA[return "field";]]></expr>
+                </Node>
+                <Node name="req" type="attribute">
+                  <expr><![CDATA[return "false";]]></expr>
+                </Node>
+              </Node>
+              <Node name="PropEADRBankAccountSecondaryName" type="element">
+                <Node name="GSO_ELM_TYPE" type="attribute">
+                  <expr><![CDATA[return "field";]]></expr>
+                </Node>
+                <Node name="req" type="attribute">
+                  <expr><![CDATA[return "false";]]></expr>
+                </Node>
+              </Node>
+              <Node name="PropEADRBankAccountType" type="element">
+                <Node name="GSO_ELM_TYPE" type="attribute">
+                  <expr><![CDATA[return "field";]]></expr>
+                </Node>
+                <Node name="req" type="attribute">
+                  <expr><![CDATA[return "false";]]></expr>
+                </Node>
+              </Node>
+              <Node name="PropEADRAreaCityCode" type="element">
+                <Node name="GSO_ELM_TYPE" type="attribute">
+                  <expr><![CDATA[return "field";]]></expr>
+                </Node>
+                <Node name="req" type="attribute">
+                  <expr><![CDATA[return "false";]]></expr>
+                </Node>
+              </Node>
+              <Node name="PropEADRCountryPhoneCode" type="element">
+                <Node name="GSO_ELM_TYPE" type="attribute">
+                  <expr><![CDATA[return "field";]]></expr>
+                </Node>
+                <Node name="req" type="attribute">
+                  <expr><![CDATA[return "false";]]></expr>
+                </Node>
+              </Node>
+              <Node name="PropEADRElectronicAddress" type="element">
+                <Node name="GSO_ELM_TYPE" type="attribute">
+                  <expr><![CDATA[return "field";]]></expr>
+                </Node>
+                <Node name="req" type="attribute">
+                  <expr><![CDATA[return "false";]]></expr>
+                </Node>
+              </Node>
+              <Node name="PropEADREmailAddress" type="element">
+                <Node name="GSO_ELM_TYPE" type="attribute">
+                  <expr><![CDATA[return "field";]]></expr>
+                </Node>
+                <Node name="req" type="attribute">
+                  <expr><![CDATA[return "false";]]></expr>
+                </Node>
+              </Node>
+              <Node name="PropEADRFAXPhoneNumber" type="element">
+                <Node name="GSO_ELM_TYPE" type="attribute">
+                  <expr><![CDATA[return "field";]]></expr>
+                </Node>
+                <Node name="req" type="attribute">
+                  <expr><![CDATA[return "false";]]></expr>
+                </Node>
+              </Node>
+              <Node name="PropEADRIDContext" type="element">
+                <Node name="GSO_ELM_TYPE" type="attribute">
+                  <expr><![CDATA[return "field";]]></expr>
+                </Node>
+                <Node name="req" type="attribute">
+                  <expr><![CDATA[return "false";]]></expr>
+                </Node>
+              </Node>
+              <Node name="PropEADRLongElectronicAddress" type="element">
+                <Node name="GSO_ELM_TYPE" type="attribute">
+                  <expr><![CDATA[return "field";]]></expr>
+                </Node>
+                <Node name="req" type="attribute">
+                  <expr><![CDATA[return "false";]]></expr>
+                </Node>
+              </Node>
+              <Node name="PropEADRMobilePhoneNumber" type="element">
+                <Node name="GSO_ELM_TYPE" type="attribute">
+                  <expr><![CDATA[return "field";]]></expr>
+                </Node>
+                <Node name="req" type="attribute">
+                  <expr><![CDATA[return "false";]]></expr>
+                </Node>
+              </Node>
+              <Node name="PropEADRSocialMediaAddress" type="element">
+                <Node name="GSO_ELM_TYPE" type="attribute">
+                  <expr><![CDATA[return "field";]]></expr>
+                </Node>
+                <Node name="req" type="attribute">
+                  <expr><![CDATA[return "false";]]></expr>
+                </Node>
+              </Node>
+              <Node name="PropEADRSpecialDialingInstructions" type="element">
+                <Node name="GSO_ELM_TYPE" type="attribute">
+                  <expr><![CDATA[return "field";]]></expr>
+                </Node>
+                <Node name="req" type="attribute">
+                  <expr><![CDATA[return "false";]]></expr>
+                </Node>
+              </Node>
+              <Node name="PropEADRTelephoneExtension" type="element">
+                <Node name="GSO_ELM_TYPE" type="attribute">
+                  <expr><![CDATA[return "field";]]></expr>
+                </Node>
+                <Node name="req" type="attribute">
+                  <expr><![CDATA[return "false";]]></expr>
+                </Node>
+              </Node>
+              <Node name="PropEADRTelephoneNumber" type="element">
+                <Node name="GSO_ELM_TYPE" type="attribute">
+                  <expr><![CDATA[return "field";]]></expr>
+                </Node>
+                <Node name="req" type="attribute">
+                  <expr><![CDATA[return "false";]]></expr>
+                </Node>
+              </Node>
+              <Node name="PropEADRTransitRoutingNumber" type="element">
+                <Node name="GSO_ELM_TYPE" type="attribute">
+                  <expr><![CDATA[return "field";]]></expr>
+                </Node>
+                <Node name="req" type="attribute">
+                  <expr><![CDATA[return "false";]]></expr>
+                </Node>
+              </Node>
+              <Node name="PropEADRWebAddress" type="element">
+                <Node name="GSO_ELM_TYPE" type="attribute">
+                  <expr><![CDATA[return "field";]]></expr>
+                </Node>
+                <Node name="req" type="attribute">
+                  <expr><![CDATA[return "false";]]></expr>
+                </Node>
+              </Node>
+            </Node>
+            <Node name="AccountAddressMailing" type="element">
+              <Node name="GSO_ELM_TYPE" type="attribute">
+                <expr><![CDATA[return "group";]]></expr>
+              </Node>
+              <Node name="req" type="attribute">
+                <expr><![CDATA[return "false";]]></expr>
+              </Node>
+              <Node name="PropMADRAddressLine1" type="element">
+                <expr><![CDATA[return Strcat(GetStringByKey("street_number"), Strcat(" ", GetStringByKey("route")));]]></expr>
+                <condition><![CDATA[return OneHasValue(GetStringByKey("street_number")) || OneHasValue(GetStringByKey("route"));]]></condition>
+                <Node name="ACTION" type="attribute">
+                  <expr><![CDATA[return "UPDATE";]]></expr>
+                </Node>
+                <Node name="GSO_ELM_TYPE" type="attribute">
+                  <expr><![CDATA[return "field";]]></expr>
+                </Node>
+                <Node name="req" type="attribute">
+                  <expr><![CDATA[return "false";]]></expr>
+                </Node>
+              </Node>
+              <Node name="PropMADRAddressLine2" type="element">
+                <Node name="GSO_ELM_TYPE" type="attribute">
+                  <expr><![CDATA[return "field";]]></expr>
+                </Node>
+                <Node name="req" type="attribute">
+                  <expr><![CDATA[return "false";]]></expr>
+                </Node>
+              </Node>
+              <Node name="PropMADRAddressLine3" type="element">
+                <Node name="GSO_ELM_TYPE" type="attribute">
+                  <expr><![CDATA[return "field";]]></expr>
+                </Node>
+                <Node name="req" type="attribute">
+                  <expr><![CDATA[return "false";]]></expr>
+                </Node>
+              </Node>
+              <Node name="PropMADRAddressLine4" type="element">
+                <Node name="GSO_ELM_TYPE" type="attribute">
+                  <expr><![CDATA[return "field";]]></expr>
+                </Node>
+                <Node name="req" type="attribute">
+                  <expr><![CDATA[return "false";]]></expr>
+                </Node>
+              </Node>
+              <Node name="PropMADRAddressLine5" type="element">
+                <Node name="GSO_ELM_TYPE" type="attribute">
+                  <expr><![CDATA[return "field";]]></expr>
+                </Node>
+                <Node name="req" type="attribute">
+                  <expr><![CDATA[return "false";]]></expr>
+                </Node>
+              </Node>
+              <Node name="PropMADRAddressLocale" type="element">
+                <Node name="GSO_ELM_TYPE" type="attribute">
+                  <expr><![CDATA[return "field";]]></expr>
+                </Node>
+                <Node name="req" type="attribute">
+                  <expr><![CDATA[return "false";]]></expr>
+                </Node>
+              </Node>
+              <Node name="PropMADRAddressStatus" type="element">
+                <Node name="GSO_ELM_TYPE" type="attribute">
+                  <expr><![CDATA[return "field";]]></expr>
+                </Node>
+                <Node name="req" type="attribute">
+                  <expr><![CDATA[return "false";]]></expr>
+                </Node>
+              </Node>
+              <Node name="PropMADRAddressStatusDateTime" type="element">
+                <Node name="GSO_ELM_TYPE" type="attribute">
+                  <expr><![CDATA[return "field";]]></expr>
+                </Node>
+                <Node name="req" type="attribute">
+                  <expr><![CDATA[return "false";]]></expr>
+                </Node>
+              </Node>
+              <Node name="PropMADRCityCode" type="element">
+                <Node name="GSO_ELM_TYPE" type="attribute">
+                  <expr><![CDATA[return "field";]]></expr>
+                </Node>
+                <Node name="req" type="attribute">
+                  <expr><![CDATA[return "false";]]></expr>
+                </Node>
+              </Node>
+              <Node name="PropMADRCityCodeType" type="element">
+                <Node name="GSO_ELM_TYPE" type="attribute">
+                  <expr><![CDATA[return "field";]]></expr>
+                </Node>
+                <Node name="req" type="attribute">
+                  <expr><![CDATA[return "false";]]></expr>
+                </Node>
+              </Node>
+              <Node name="PropMADRCityTownName" type="element">
+                <expr><![CDATA[return GetStringByKey("city");]]></expr>
+                <condition><![CDATA[return OneHasValue(GetStringByKey("city"));]]></condition>
+                <Node name="GSO_ELM_TYPE" type="attribute">
+                  <expr><![CDATA[return "field";]]></expr>
+                </Node>
+                <Node name="req" type="attribute">
+                  <expr><![CDATA[return "false";]]></expr>
+                </Node>
+              </Node>
+              <Node name="PropMADRPostalCode" type="element">
+                <expr><![CDATA[return GetStringByKey("postal_code");]]></expr>
+                <condition><![CDATA[return OneHasValue(GetStringByKey("postal_code"));]]></condition>
+                <Node name="ACTION" type="attribute">
+                  <expr><![CDATA[return "UPDATE";]]></expr>
+                </Node>
+                <Node name="GSO_ELM_TYPE" type="attribute">
+                  <expr><![CDATA[return "field";]]></expr>
+                </Node>
+                <Node name="req" type="attribute">
+                  <expr><![CDATA[return "false";]]></expr>
+                </Node>
+              </Node>
+              <Node name="PropMADRStateProvinceCode" type="element">
+                <Node name="GSO_ELM_TYPE" type="attribute">
+                  <expr><![CDATA[return "field";]]></expr>
+                </Node>
+                <Node name="req" type="attribute">
+                  <expr><![CDATA[return "false";]]></expr>
+                </Node>
+              </Node>
+              <Node name="PropMADRStateProvinceName" type="element">
+                <expr><![CDATA[return GetStringByKey("state");]]></expr>
+                <condition><![CDATA[return OneHasValue(GetStringByKey("state"));]]></condition>
+                <Node name="GSO_ELM_TYPE" type="attribute">
+                  <expr><![CDATA[return "field";]]></expr>
+                </Node>
+                <Node name="req" type="attribute">
+                  <expr><![CDATA[return "false";]]></expr>
+                </Node>
+              </Node>
+              <Node name="PropMADRCountryCode" type="element">
+                <Node name="GSO_ELM_TYPE" type="attribute">
+                  <expr><![CDATA[return "field";]]></expr>
+                </Node>
+                <Node name="req" type="attribute">
+                  <expr><![CDATA[return "false";]]></expr>
+                </Node>
+              </Node>
+              <Node disabled="1" name="PropMADRCountryName" type="element">
+                <expr><![CDATA[return GetStringByKey("country");]]></expr>
+                <Node name="GSO_ELM_TYPE" type="attribute">
+                  <expr><![CDATA[return "field";]]></expr>
+                </Node>
+                <Node name="req" type="attribute">
+                  <expr><![CDATA[return "false";]]></expr>
+                </Node>
+              </Node>
+              <Node name="PropMADRCountyCode" type="element">
+                <Node name="GSO_ELM_TYPE" type="attribute">
+                  <expr><![CDATA[return "field";]]></expr>
+                </Node>
+                <Node name="req" type="attribute">
+                  <expr><![CDATA[return "false";]]></expr>
+                </Node>
+              </Node>
+              <Node name="PropMADRCountyCodeType" type="element">
+                <Node name="GSO_ELM_TYPE" type="attribute">
+                  <expr><![CDATA[return "field";]]></expr>
+                </Node>
+                <Node name="req" type="attribute">
+                  <expr><![CDATA[return "false";]]></expr>
+                </Node>
+              </Node>
+              <Node name="PropMADRCountyName" type="element">
+                <expr><![CDATA[return GetStringByKey("county");]]></expr>
+                <condition><![CDATA[return OneHasValue(GetStringByKey("county"));]]></condition>
+                <Node name="GSO_ELM_TYPE" type="attribute">
+                  <expr><![CDATA[return "field";]]></expr>
+                </Node>
+                <Node name="req" type="attribute">
+                  <expr><![CDATA[return "false";]]></expr>
+                </Node>
+              </Node>
+              <Node name="PropMADRContinentCode" type="element">
+                <Node name="GSO_ELM_TYPE" type="attribute">
+                  <expr><![CDATA[return "field";]]></expr>
+                </Node>
+                <Node name="req" type="attribute">
+                  <expr><![CDATA[return "false";]]></expr>
+                </Node>
+              </Node>
+              <Node name="PropMADRAttentionText" type="element">
+                <Node name="GSO_ELM_TYPE" type="attribute">
+                  <expr><![CDATA[return "field";]]></expr>
+                </Node>
+                <Node name="req" type="attribute">
+                  <expr><![CDATA[return "false";]]></expr>
+                </Node>
+              </Node>
+              <Node name="PropMADRChangeOfAddressEffectiveDate" type="element">
+                <Node name="GSO_ELM_TYPE" type="attribute">
+                  <expr><![CDATA[return "field";]]></expr>
+                </Node>
+                <Node name="req" type="attribute">
+                  <expr><![CDATA[return "false";]]></expr>
+                </Node>
+              </Node>
+              <Node name="PropMADRChangeOfAddressSource" type="element">
+                <Node name="GSO_ELM_TYPE" type="attribute">
+                  <expr><![CDATA[return "field";]]></expr>
+                </Node>
+                <Node name="req" type="attribute">
+                  <expr><![CDATA[return "false";]]></expr>
+                </Node>
+              </Node>
+              <Node name="PropMADRCourierName" type="element">
+                <Node name="GSO_ELM_TYPE" type="attribute">
+                  <expr><![CDATA[return "field";]]></expr>
+                </Node>
+                <Node name="req" type="attribute">
+                  <expr><![CDATA[return "false";]]></expr>
+                </Node>
+              </Node>
+              <Node name="PropMADRMailDeliveryType" type="element">
+                <Node name="GSO_ELM_TYPE" type="attribute">
+                  <expr><![CDATA[return "field";]]></expr>
+                </Node>
+                <Node name="req" type="attribute">
+                  <expr><![CDATA[return "false";]]></expr>
+                </Node>
+              </Node>
+              <Node name="PropMADRMetropolitanStatisticalAreaCode" type="element">
+                <Node name="GSO_ELM_TYPE" type="attribute">
+                  <expr><![CDATA[return "field";]]></expr>
+                </Node>
+                <Node name="req" type="attribute">
+                  <expr><![CDATA[return "false";]]></expr>
+                </Node>
+              </Node>
+              <Node name="PropMADRNeighborhoodName" type="element">
+                <expr><![CDATA[return GetStringByKey("neighborhood");]]></expr>
+                <Node name="GSO_ELM_TYPE" type="attribute">
+                  <expr><![CDATA[return "field";]]></expr>
+                </Node>
+                <Node name="req" type="attribute">
+                  <expr><![CDATA[return "false";]]></expr>
+                </Node>
+              </Node>
+              <Node name="PropMADRRegisteredAddressIndicator" type="element">
+                <Node name="GSO_ELM_TYPE" type="attribute">
+                  <expr><![CDATA[return "field";]]></expr>
+                </Node>
+                <Node name="req" type="attribute">
+                  <expr><![CDATA[return "false";]]></expr>
+                </Node>
+              </Node>
+              <Node name="PropMADRReturnPostOfficeCode" type="element">
+                <Node name="GSO_ELM_TYPE" type="attribute">
+                  <expr><![CDATA[return "field";]]></expr>
+                </Node>
+                <Node name="req" type="attribute">
+                  <expr><![CDATA[return "false";]]></expr>
+                </Node>
+              </Node>
+              <Node name="PropMADRReturnPostOfficeDate" type="element">
+                <Node name="GSO_ELM_TYPE" type="attribute">
+                  <expr><![CDATA[return "field";]]></expr>
+                </Node>
+                <Node name="req" type="attribute">
+                  <expr><![CDATA[return "false";]]></expr>
+                </Node>
+              </Node>
+              <Node name="PropMADRRuralIndicator" type="element">
+                <Node name="GSO_ELM_TYPE" type="attribute">
+                  <expr><![CDATA[return "field";]]></expr>
+                </Node>
+                <Node name="req" type="attribute">
+                  <expr><![CDATA[return "false";]]></expr>
+                </Node>
+              </Node>
+              <Node name="PropMADRThoroughfareName" type="element">
+                <Node name="GSO_ELM_TYPE" type="attribute">
+                  <expr><![CDATA[return "field";]]></expr>
+                </Node>
+                <Node name="req" type="attribute">
+                  <expr><![CDATA[return "false";]]></expr>
+                </Node>
+              </Node>
+              <Node name="PropMADRTownshipMunicipalityName" type="element">
+                <Node name="GSO_ELM_TYPE" type="attribute">
+                  <expr><![CDATA[return "field";]]></expr>
+                </Node>
+                <Node name="req" type="attribute">
+                  <expr><![CDATA[return "false";]]></expr>
+                </Node>
+              </Node>
+              <Node name="PropMADRVanityCityTownName" type="element">
+                <Node name="GSO_ELM_TYPE" type="attribute">
+                  <expr><![CDATA[return "field";]]></expr>
+                </Node>
+                <Node name="req" type="attribute">
+                  <expr><![CDATA[return "false";]]></expr>
+                </Node>
+              </Node>
+              <Node name="PropMADRLatitudeDegrees" type="element">
+                <Node name="GSO_ELM_TYPE" type="attribute">
+                  <expr><![CDATA[return "field";]]></expr>
+                </Node>
+                <Node name="req" type="attribute">
+                  <expr><![CDATA[return "false";]]></expr>
+                </Node>
+              </Node>
+              <Node name="PropMADRLongitudeDegrees" type="element">
+                <Node name="GSO_ELM_TYPE" type="attribute">
+                  <expr><![CDATA[return "field";]]></expr>
+                </Node>
+                <Node name="req" type="attribute">
+                  <expr><![CDATA[return "false";]]></expr>
+                </Node>
+              </Node>
+            </Node>
+            <Node name="PropADTPAddressType" type="element">
+              <expr><![CDATA[return "VERFMAPS";]]></expr>
+              <Node name="ACTION" type="attribute">
+                <expr><![CDATA[return "UPDATE";]]></expr>
+              </Node>
+              <Node name="GSO_ELM_TYPE" type="attribute">
+                <expr><![CDATA[return "field";]]></expr>
+              </Node>
+              <Node name="req" type="attribute">
+                <expr><![CDATA[return "true";]]></expr>
+              </Node>
+            </Node>
+            <Node name="PropADTPAddressStatus" type="element">
+              <Node name="GSO_ELM_TYPE" type="attribute">
+                <expr><![CDATA[return "field";]]></expr>
+              </Node>
+              <Node name="req" type="attribute">
+                <expr><![CDATA[return "false";]]></expr>
+              </Node>
+            </Node>
+            <Node name="PropADTPAddressStatusDateTime" type="element">
+              <Node name="GSO_ELM_TYPE" type="attribute">
+                <expr><![CDATA[return "field";]]></expr>
+              </Node>
+              <Node name="req" type="attribute">
+                <expr><![CDATA[return "false";]]></expr>
+              </Node>
+            </Node>
+            <Node name="PropADTPAuthenticateCommunicationIndicator" type="element">
+              <Node name="GSO_ELM_TYPE" type="attribute">
+                <expr><![CDATA[return "field";]]></expr>
+              </Node>
+              <Node name="req" type="attribute">
+                <expr><![CDATA[return "false";]]></expr>
+              </Node>
+            </Node>
+            <Node name="PropADTPBusinessArea" type="element">
+              <Node name="GSO_ELM_TYPE" type="attribute">
+                <expr><![CDATA[return "field";]]></expr>
+              </Node>
+              <Node name="req" type="attribute">
+                <expr><![CDATA[return "false";]]></expr>
+              </Node>
+            </Node>
+            <Node name="PropADTPDefaultAddress" type="element">
+              <Node name="GSO_ELM_TYPE" type="attribute">
+                <expr><![CDATA[return "field";]]></expr>
+              </Node>
+              <Node name="req" type="attribute">
+                <expr><![CDATA[return "false";]]></expr>
+              </Node>
+            </Node>
+            <Node name="PropADTPDirectionUsage" type="element">
+              <Node name="GSO_ELM_TYPE" type="attribute">
+                <expr><![CDATA[return "field";]]></expr>
+              </Node>
+              <Node name="req" type="attribute">
+                <expr><![CDATA[return "false";]]></expr>
+              </Node>
+            </Node>
+            <Node name="PropADTPEncryptCommunicationIndicator" type="element">
+              <Node name="GSO_ELM_TYPE" type="attribute">
+                <expr><![CDATA[return "field";]]></expr>
+              </Node>
+              <Node name="req" type="attribute">
+                <expr><![CDATA[return "false";]]></expr>
+              </Node>
+            </Node>
+          </Node>
+          <Node name="PropertyDocument" type="element">
+            <Node name="GSO_ELM_TYPE" type="attribute">
+              <expr><![CDATA[return "group";]]></expr>
+            </Node>
+            <Node name="req" type="attribute">
+              <expr><![CDATA[return "false";]]></expr>
+            </Node>
+            <Node name="PropertyDocument" type="element">
+              <Node name="GSO_ELM_TYPE" type="attribute">
+                <expr><![CDATA[return "rel";]]></expr>
+              </Node>
+              <Node name="req" type="attribute">
+                <expr><![CDATA[return "true";]]></expr>
+              </Node>
+              <Node name="xmlns" type="attribute">
+                <expr><![CDATA[return "http://www.thegoldensource.com/business-entities/DocumentDefinition";]]></expr>
+              </Node>
+            </Node>
+            <Node name="PropertyDocumentHistory" type="element">
+              <Node name="GSO_ELM_TYPE" type="attribute">
+                <expr><![CDATA[return "group";]]></expr>
+              </Node>
+              <Node name="req" type="attribute">
+                <expr><![CDATA[return "true";]]></expr>
+              </Node>
+              <Node name="DocumentHistImageID" type="element">
+                <Node name="GSO_ELM_TYPE" type="attribute">
+                  <expr><![CDATA[return "field";]]></expr>
+                </Node>
+                <Node name="req" type="attribute">
+                  <expr><![CDATA[return "false";]]></expr>
+                </Node>
+              </Node>
+              <Node name="DocumentHistInternalID" type="element">
+                <Node name="GSO_ELM_TYPE" type="attribute">
+                  <expr><![CDATA[return "field";]]></expr>
+                </Node>
+                <Node name="req" type="attribute">
+                  <expr><![CDATA[return "false";]]></expr>
+                </Node>
+              </Node>
+              <Node name="DocumentHistLanguage" type="element">
+                <Node name="GSO_ELM_TYPE" type="attribute">
+                  <expr><![CDATA[return "field";]]></expr>
+                </Node>
+                <Node name="req" type="attribute">
+                  <expr><![CDATA[return "false";]]></expr>
+                </Node>
+              </Node>
+              <Node name="DocumentHistComment" type="element">
+                <Node name="GSO_ELM_TYPE" type="attribute">
+                  <expr><![CDATA[return "field";]]></expr>
+                </Node>
+                <Node name="req" type="attribute">
+                  <expr><![CDATA[return "false";]]></expr>
+                </Node>
+              </Node>
+              <Node name="DocumentHistStatus" type="element">
+                <Node name="GSO_ELM_TYPE" type="attribute">
+                  <expr><![CDATA[return "field";]]></expr>
+                </Node>
+                <Node name="req" type="attribute">
+                  <expr><![CDATA[return "false";]]></expr>
+                </Node>
+              </Node>
+              <Node name="DocumentHistStatusDateTime" type="element">
+                <Node name="GSO_ELM_TYPE" type="attribute">
+                  <expr><![CDATA[return "field";]]></expr>
+                </Node>
+                <Node name="req" type="attribute">
+                  <expr><![CDATA[return "false";]]></expr>
+                </Node>
+              </Node>
+            </Node>
+            <Node name="DocumentRequired" type="element">
+              <Node name="GSO_ELM_TYPE" type="attribute">
+                <expr><![CDATA[return "field";]]></expr>
+              </Node>
+              <Node name="req" type="attribute">
+                <expr><![CDATA[return "false";]]></expr>
+              </Node>
+            </Node>
+            <Node name="DocumentRequiredbyBank" type="element">
+              <Node name="GSO_ELM_TYPE" type="attribute">
+                <expr><![CDATA[return "field";]]></expr>
+              </Node>
+              <Node name="req" type="attribute">
+                <expr><![CDATA[return "false";]]></expr>
+              </Node>
+            </Node>
+            <Node name="DocumentRequiredbyLaw" type="element">
+              <Node name="GSO_ELM_TYPE" type="attribute">
+                <expr><![CDATA[return "field";]]></expr>
+              </Node>
+              <Node name="req" type="attribute">
+                <expr><![CDATA[return "false";]]></expr>
+              </Node>
+            </Node>
+            <Node name="DocumentDescription" type="element">
+              <Node name="GSO_ELM_TYPE" type="attribute">
+                <expr><![CDATA[return "field";]]></expr>
+              </Node>
+              <Node name="req" type="attribute">
+                <expr><![CDATA[return "false";]]></expr>
+              </Node>
+            </Node>
+            <Node name="DocumentPurpose" type="element">
+              <Node name="GSO_ELM_TYPE" type="attribute">
+                <expr><![CDATA[return "field";]]></expr>
+              </Node>
+              <Node name="req" type="attribute">
+                <expr><![CDATA[return "false";]]></expr>
+              </Node>
+            </Node>
+            <Node name="DocumentStartDateTime" type="element">
+              <Node name="GSO_ELM_TYPE" type="attribute">
+                <expr><![CDATA[return "field";]]></expr>
+              </Node>
+              <Node name="req" type="attribute">
+                <expr><![CDATA[return "false";]]></expr>
+              </Node>
+            </Node>
+            <Node name="DocumentEndDateTime" type="element">
+              <Node name="GSO_ELM_TYPE" type="attribute">
+                <expr><![CDATA[return "field";]]></expr>
+              </Node>
+              <Node name="req" type="attribute">
+                <expr><![CDATA[return "false";]]></expr>
+              </Node>
+            </Node>
+          </Node>
+          <Node name="PropertyRatings" type="element">
+            <Node name="GSO_ELM_TYPE" type="attribute">
+              <expr><![CDATA[return "group";]]></expr>
+            </Node>
+            <Node name="req" type="attribute">
+              <expr><![CDATA[return "false";]]></expr>
+            </Node>
+            <Node name="RatingName" type="element">
+              <Node name="GSO_ELM_TYPE" type="attribute">
+                <expr><![CDATA[return "field";]]></expr>
+              </Node>
+              <Node name="req" type="attribute">
+                <expr><![CDATA[return "true";]]></expr>
+              </Node>
+            </Node>
+            <Node name="RatingValue" type="element">
+              <Node name="GSO_ELM_TYPE" type="attribute">
+                <expr><![CDATA[return "field";]]></expr>
+              </Node>
+              <Node name="req" type="attribute">
+                <expr><![CDATA[return "true";]]></expr>
+              </Node>
+            </Node>
+            <Node name="RatingPurpose" type="element">
+              <Node name="GSO_ELM_TYPE" type="attribute">
+                <expr><![CDATA[return "field";]]></expr>
+              </Node>
+              <Node name="req" type="attribute">
+                <expr><![CDATA[return "false";]]></expr>
+              </Node>
+            </Node>
+            <Node name="RatingStatus" type="element">
+              <Node name="GSO_ELM_TYPE" type="attribute">
+                <expr><![CDATA[return "field";]]></expr>
+              </Node>
+              <Node name="req" type="attribute">
+                <expr><![CDATA[return "false";]]></expr>
+              </Node>
+            </Node>
+            <Node name="RatingReason" type="element">
+              <Node name="GSO_ELM_TYPE" type="attribute">
+                <expr><![CDATA[return "field";]]></expr>
+              </Node>
+              <Node name="req" type="attribute">
+                <expr><![CDATA[return "false";]]></expr>
+              </Node>
+            </Node>
+            <Node name="RatingStatusDateTime" type="element">
+              <Node name="GSO_ELM_TYPE" type="attribute">
+                <expr><![CDATA[return "field";]]></expr>
+              </Node>
+              <Node name="req" type="attribute">
+                <expr><![CDATA[return "false";]]></expr>
+              </Node>
+            </Node>
+            <Node name="RatingNextReviewDate" type="element">
+              <Node name="GSO_ELM_TYPE" type="attribute">
+                <expr><![CDATA[return "field";]]></expr>
+              </Node>
+              <Node name="req" type="attribute">
+                <expr><![CDATA[return "false";]]></expr>
+              </Node>
+            </Node>
+            <Node name="RatingLastReviewDate" type="element">
+              <Node name="GSO_ELM_TYPE" type="attribute">
+                <expr><![CDATA[return "field";]]></expr>
+              </Node>
+              <Node name="req" type="attribute">
+                <expr><![CDATA[return "false";]]></expr>
+              </Node>
+            </Node>
+            <Node name="RatingLastReviewUser" type="element">
+              <Node name="GSO_ELM_TYPE" type="attribute">
+                <expr><![CDATA[return "field";]]></expr>
+              </Node>
+              <Node name="req" type="attribute">
+                <expr><![CDATA[return "false";]]></expr>
+              </Node>
+            </Node>
+          </Node>
+          <Node name="PropertyInstitutionRelation" type="element">
+            <Node name="GSO_ELM_TYPE" type="attribute">
+              <expr><![CDATA[return "group";]]></expr>
+            </Node>
+            <Node name="req" type="attribute">
+              <expr><![CDATA[return "false";]]></expr>
+            </Node>
+            <Node name="PropertyToInstitution" type="element">
+              <Node name="GSO_ELM_TYPE" type="attribute">
+                <expr><![CDATA[return "rel";]]></expr>
+              </Node>
+              <Node name="req" type="attribute">
+                <expr><![CDATA[return "false";]]></expr>
+              </Node>
+              <Node name="xmlns" type="attribute">
+                <expr><![CDATA[return "http://www.thegoldensource.com/business-entities/FinancialInstitution";]]></expr>
+              </Node>
+            </Node>
+            <Node name="FPPRRelationType" type="element">
+              <Node name="GSO_ELM_TYPE" type="attribute">
+                <expr><![CDATA[return "field";]]></expr>
+              </Node>
+              <Node name="req" type="attribute">
+                <expr><![CDATA[return "true";]]></expr>
+              </Node>
+            </Node>
+          </Node>
+        </Node>
+      </Node>
+    </OutputDef>
+  </Output>
+  <Translation/>
+  <Expressions>
+    <Expression enabled="false" ident="KeyStreaming">
+      <expr><![CDATA[return "";]]></expr>
+    </Expression>
+    <Expression enabled="false" ident="RecordIdentifier">
+      <expr><![CDATA[return "";]]></expr>
+    </Expression>
+    <Expression enabled="false" ident="GSDMFiltering">
+      <expr><![CDATA[return "";]]></expr>
+    </Expression>
+    <Expression enabled="false" ident="VDSFiltering">
+      <expr><![CDATA[return "";]]></expr>
+    </Expression>
+    <Expression enabled="false" ident="VDDBFiltering">
+      <expr><![CDATA[return "";]]></expr>
+    </Expression>
+  </Expressions>
+</MappingDef>

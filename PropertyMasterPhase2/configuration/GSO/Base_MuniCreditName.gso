@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entities cleanUnusedFields="false" nameSpace="NUVEEN">
+  <beFields>
+    <beField class="BETEXT" customDesc="" desc="" displayCaption="NuveenMuniCreditName" entityTypeId="++3qwBhS2etxm003" id="++9jA-yy2etbS00C" mandatory="0" multiplicity="SINGLE_OR_NULL" name="NuveenMuniCreditName" nameSpace="NUVEEN"/>
+    <beField class="BEDATE" customDesc="" desc="" displayCaption="Start Timestamp" entityTypeId="++3qwBhS2etxm003" id="++9jA-yy2etbS00R" mandatory="0" multiplicity="SINGLE_OR_NULL" name="NuveenMuniLinkedIssueStartTms" nameSpace="NUVEEN"/>
+    <beField class="BEDATE" customDesc="" desc="" displayCaption="NuveenMuniCreditLinkStartTms" entityTypeId="++3qwBhS2etxm003" id="++9jA-yy2etbS00V" mandatory="0" multiplicity="SINGLE_OR_NULL" name="NuveenMuniCreditLinkStartTms" nameSpace="NUVEEN"/>
+  </beFields>
+  <dataGroups>
+    <dataGroup category="" customInd="0" desc="" displayCaption="Linked Issue" entityTypeId="++3qwBhS2etxm003" frequencyInd="0" id="++9jA-yy2etbS00K" multiplicity="SINGLE_OR_NULL" name="LinkedIssue" nameSpace="NUVEEN">
+      <part beRelationId="++9jA-yy2etbS00F" defNameSpace="NUVEEN" id="++9jA-yy2etbS00M" label="NuveenMuniLinkedIssue" prntReqdInd="0" seq="0"/>
+      <part defNameSpace="NUVEEN" displayCaption="Credit Name" fieldId="++9jA-yy2etbS00C" id="++9jA-yy2etbS00L" prntReqdInd="0" seq="1"/>
+      <part defNameSpace="NUVEEN" fieldId="++9jA-yy2etbS00R" id="++9jA-yy2etbS00T" prntReqdInd="0" seq="2"/>
+      <part defNameSpace="NUVEEN" fieldId="++9jA-yy2etbS00V" id="++9jA-yy2etbS00X" prntReqdInd="0" seq="3"/>
+    </dataGroup>
+    <dataGroup customInd="0" entityTypeId="++3qwBhS2etxm003" frequencyInd="0" id="++5SQ0Ly2etse001" multiplicity="SINGLE" name="Base- Root DataGroup" nameSpace="GSC">
+      <part dataGroupId="++9jA-yy2etbS00K" defNameSpace="NUVEEN" id="++9jA-yy2etbS00J" prntReqdInd="0" seq="67"/>
+    </dataGroup>
+  </dataGroups>
+  <relations>
+    <relation id="++9jA-yy2etbS00H" name="FT_T_RIDF-To-FT_T_ISSU03" nameSpace="NUVEEN" srcTable="FT_T_RIDF" tgtTable="FT_T_ISSU">
+      <field fromColumn="INSTR_ID" id="++9jA-yy2etbS00I" nameSpace="NUVEEN" toColumn="INSTR_ID" type="RELATION_FIELD" valueType="COLUMN"/>
+    </relation>
+    <relation id="++9jA-yy2etbS006" name="FT_T_RIDF-To-FT_T_FRIP_NVN01" nameSpace="NUVEEN" srcTable="FT_T_RIDF" tgtTable="FT_T_FRIP">
+      <field fromColumn="INSTR_ID" id="++9jA-yy2etbS007" nameSpace="NUVEEN" toColumn="INSTR_ID" type="RELATION_FIELD" valueType="COLUMN"/>
+    </relation>
+  </relations>
+  <occurrences>
+    <occurrence desc="Occurrence for Related Issue" id="++9jA-yy2etbS000" ignoreDeleteChildren="false" multiplicity="SINGLE_OR_NULL" name="RISS_NVN_UNDLYING" nameSpace="NUVEEN" parentId="++4Gmmty2ettS01A" table="FT_T_RISS" timeSeries="LOGICAL_DELETE">
+      <field id="++9jA-yy2etbS00Q" name="START_TMS" nameSpace="NUVEEN"/>
+      <value id="++9jA-yy2etbS001" name="ISS_PART_RL_TYP" nameSpace="NUVEEN" type="FILTER_FIELD" value="UNDLYING" valueType="CONSTANT"/>
+      <value id="++9jA-yy2etbS002" name="PART_UNITS_TYP" nameSpace="NUVEEN" type="FILTER_FIELD" value="ALL" valueType="CONSTANT"/>
+    </occurrence>
+    <occurrence desc="Occurrence for Related Issue Definition" id="++9jA-yy2etbS003" ignoreDeleteChildren="false" multiplicity="SINGLE_OR_NULL" name="RIDF_NVN_UNDERLYG" nameSpace="NUVEEN" parentId="++9jA-yy2etbS000" table="FT_T_RIDF" timeSeries="LOGICAL_DELETE">
+      <field id="++9jA-yy2etbS00G" nameSpace="NUVEEN" relationId="++9jA-yy2etbS00H"/>
+      <value id="++9jA-yy2etbS004" name="REL_TYP" nameSpace="NUVEEN" type="FILTER_FIELD" value="UNDERLYG" valueType="CONSTANT"/>
+    </occurrence>
+    <occurrence desc="Occurrence for Fins Role/Issue Participant" id="++9jA-yy2etbS005" ignoreDeleteChildren="false" multiplicity="SINGLE_OR_NULL" name="FRIP_NVN_CREDIT" nameSpace="NUVEEN" parentId="++9jA-yy2etbS003" relationId="++9jA-yy2etbS006" table="FT_T_FRIP" timeSeries="LOGICAL_DELETE">
+      <field id="++9jA-yy2etbS00U" name="START_TMS" nameSpace="NUVEEN"/>
+      <value id="++9jA-yy2etbS008" name="PRT_PURP_TYP" nameSpace="NUVEEN" type="FILTER_FIELD" value="CREDIT" valueType="CONSTANT"/>
+    </occurrence>
+    <occurrence desc="Occurrence for Financial Institution" id="++9jA-yy2etbS009" ignoreDeleteChildren="false" multiplicity="SINGLE_OR_NULL" name="FINS_NVN_UNDERLYG_CREDIT" nameSpace="NUVEEN" parentId="++9jA-yy2etbS005" table="FT_T_FINS" timeSeries="LOGICAL_DELETE">
+      <field id="++9jA-yy2etbS00B" name="INST_NME" nameSpace="NUVEEN"/>
+      <option id="++9jA-yy2etbS00A" nameSpace="NUVEEN" type="DEFAULT_ACTION" value="UNKNOWN"/>
+    </occurrence>
+  </occurrences>
+  <mappings>
+    <mapping beRelationId="++9jA-yy2etbS00F" groupMapping="0" id="++9jA-yy2etbS00N" nameSpace="NUVEEN" occFieldId="++9jA-yy2etbS00G"/>
+    <mapping beFieldId="++9jA-yy2etbS00C" groupMapping="0" id="++9jA-yy2etbS00D" nameSpace="NUVEEN" occFieldId="++9jA-yy2etbS00B"/>
+    <mapping beFieldId="++9jA-yy2etbS00R" groupMapping="0" id="++9jA-yy2etbS00S" nameSpace="NUVEEN" occFieldId="++9jA-yy2etbS00Q"/>
+    <mapping beFieldId="++9jA-yy2etbS00V" groupMapping="0" id="++9jA-yy2etbS00W" nameSpace="NUVEEN" occFieldId="++9jA-yy2etbS00U"/>
+  </mappings>
+  <entityRelations>
+    <entityRelation entityId="++5SQ0Ly2etse000" id="++9jA-yy2etbS00F" lookupField="009V00nC2etbS03v" multiplicity="SINGLE_OR_NULL" name="NuveenMuniLinkedIssue" nameSpace="NUVEEN" rltdEntityId="009V00nC2etbS03m">
+      <part forPublishing="1" forUI="1" id="++9jA-yy2etbS00O" nameSpace="NUVEEN" partId="009V00nC2etbS03v"/>
+      <part forPublishing="1" forUI="1" id="++9jA-yy2etbS00P" nameSpace="NUVEEN" partId="005Q5i8i2etse002"/>
+    </entityRelation>
+  </entityRelations>
+</entities>

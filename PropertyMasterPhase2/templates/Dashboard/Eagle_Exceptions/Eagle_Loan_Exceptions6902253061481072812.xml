@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<root baseLookup="Exception" createdUser="user1" freezeColumns="" id="3NDj11lke1" isDefault="Y" isPublic="Y" lookupId="InstrumentException" pageSize="50" screenType="SYSTEMSRCH" title="Eagle:Loan_Exceptions">
+  <config>{}</config>
+  <buttons>
+    <button buttonName="Repair">
+      <params>
+        <param paramName="Event Type" paramValue="GenericEvent"/>
+        <param paramName="Current User" paramValue="Logged in User"/>
+        <param paramName="entityList" paramValue="ENT_OID"/>
+        <param paramName="Event Name" paramValue="RepairExceptions"/>
+      </params>
+    </button>
+    <button buttonName="Resubmit">
+      <params>
+        <param paramName="entityList" paramValue="ENT_OID"/>
+        <param paramName="Event Type" paramValue="GenericEvent"/>
+        <param paramName="Event Name" paramValue="ResubmitExceptions"/>
+        <param paramName="Current User" paramValue="LoggedinUser"/>
+      </params>
+    </button>
+    <button buttonName="Close">
+      <params>
+        <param paramName="Event Type" paramValue="GenericEvent"/>
+        <param paramName="Current User" paramValue="Logged in User"/>
+        <param paramName="Event Name" paramValue="CloseExceptions"/>
+        <param paramName="entityList" paramValue="ENT_OID"/>
+      </params>
+    </button>
+    <button buttonName="Re-Assign">
+      <params>
+        <param paramName="entityList" paramValue="ENT_OID"/>
+        <param paramName="Current User" paramValue="Logged in User"/>
+        <param paramName="Assign" paramValue="true"/>
+        <param paramName="Event Type" paramValue="GenericEvent"/>
+        <param paramName="Event Name" paramValue="ReassignExceptions"/>
+      </params>
+    </button>
+    <button buttonName="Ignore">
+      <params>
+        <param paramName="Event Type" paramValue="GenericEvent"/>
+        <param paramName="entityList" paramValue="ENT_OID"/>
+        <param paramName="Status" paramValue="IGNORE"/>
+        <param paramName="Current User" paramValue="Logged in User"/>
+        <param paramName="Type" paramValue="event"/>
+        <param paramName="Event Name" paramValue="CloseExceptions"/>
+      </params>
+    </button>
+  </buttons>
+  <columns>
+    <column caption="" columnName="Notification Creation DateTime" fieldName="InstrumentException.ExceptionDetail.NotificationCreationDate" filterFromNum="" filterFromTms="" filterToNum="" filterToTms="" filterValue="" filterable="Y" fromRange="" id=")d7G01hoe1" isRange="N" mobileTemplate="" operator="" orderNum="0" showRelLink="" sort="" toRange="" width="-1"/>
+    <column caption="" columnName="Latest Notification DateTime" fieldName="InstrumentException.ExceptionDetail.LatestNotificationDate" filterFromNum="" filterFromTms="" filterToNum="" filterToTms="" filterValue="" filterable="Y" fromRange="" id=")d7H01hoe1" isRange="N" mobileTemplate="" operator="" orderNum="1" showRelLink="" sort="" toRange="" width="-1"/>
+    <column caption="" columnName="Notification Occurrence Count" fieldName="InstrumentException.ExceptionDetail.NotificationOccurrenceCount" filterFromNum="" filterFromTms="" filterToNum="" filterToTms="" filterValue="" filterable="Y" fromRange="" id=")d7I01hoe1" isRange="N" mobileTemplate="" operator="" orderNum="2" showRelLink="" sort="" toRange="" width="-1"/>
+    <column caption="" columnName="Main Entity Id" fieldName="InstrumentException.ExceptionDetail.MainEntityId" filterFromNum="" filterFromTms="" filterToNum="" filterToTms="" filterValue="" filterable="Y" fromRange="" id=")d7J01hoe1" isRange="N" mobileTemplate="" operator="" orderNum="3" showRelLink="" sort="" toRange="" width=""/>
+    <column caption="" columnName="Main Entity Type" fieldName="InstrumentException.ExceptionDetail.MainEntityType" filterFromNum="" filterFromTms="" filterToNum="" filterToTms="" filterValue="" filterable="Y" fromRange="" id="WXn%o&amp;gt;J&amp;lt;e1" isRange="N" mobileTemplate="" operator="" orderNum="4" showRelLink="" sort="" toRange="" width=""/>
+    <column caption="" columnName="Instrument Name" fieldName="InstrumentException.InstrumentDetails.ExceptionOnInstrument.Base.InstrumentDetails.PreferredInstrumentName" filterFromNum="" filterFromTms="" filterToNum="" filterToTms="" filterValue="" filterable="Y" fromRange="" id=")d7K01hoe1" isRange="N" mobileTemplate="" operator="" orderNum="5" showRelLink="TRUE" sort="" toRange="" width="-1"/>
+    <column caption="" columnName="Details" fieldName="InstrumentException.ExceptionDetail.Details" filterFromNum="" filterFromTms="" filterToNum="" filterToTms="" filterValue="" filterable="Y" fromRange="" id=")d7M01hoe1" isRange="N" mobileTemplate="" operator="" orderNum="6" showRelLink="" sort="" toRange="" width="-1"/>
+    <column caption="" columnName="Message Severity" fieldName="InstrumentException.ExceptionDetail.MessageSeverity" filterFromNum="" filterFromTms="" filterToNum="" filterToTms="" filterValue="50,40" filterable="Y" fromRange="" id="WXnto&amp;gt;J&amp;lt;e1" isRange="N" mobileTemplate="" operator="" orderNum="7" showRelLink="" sort="" toRange="" width=""/>
+    <column caption="" columnName="Notification Id" fieldName="InstrumentException.ExceptionDetail.NotificationId" filterFromNum="" filterFromTms="" filterToNum="" filterToTms="" filterValue="" filterable="Y" fromRange="" id=")d7O01hoe1" isRange="N" mobileTemplate="" operator="" orderNum="8" showRelLink="" sort="" toRange="" width=""/>
+    <column caption="" columnName="Exception Sub-Type" fieldName="InstrumentException.ExceptionDetail.ExceptionSubType" filterFromNum="" filterFromTms="" filterToNum="" filterToTms="" filterValue="" filterable="Y" fromRange="" id=")d7P01hoe1" isRange="N" mobileTemplate="" operator="" orderNum="9" showRelLink="" sort="" toRange="" width=""/>
+    <column caption="" columnName="Notification Status" fieldName="InstrumentException.ExceptionDetail.NotificationStatus" filterFromNum="" filterFromTms="" filterToNum="" filterToTms="" filterValue="REASSIGN,REPAIRED,IGNORE,OPEN" filterable="Y" fromRange="" id=")d7Q01hoe1" isRange="N" mobileTemplate="" operator="" orderNum="10" showRelLink="" sort="" toRange="" width="-1"/>
+    <column caption="" columnName="Source Id" fieldName="InstrumentException.ExceptionDetail.SourceId" filterFromNum="" filterFromTms="" filterToNum="" filterToTms="" filterValue="ser_gs_gc" filterable="Y" fromRange="" id=")d7R01hoe1" isRange="N" mobileTemplate="" operator="" orderNum="11" showRelLink="" sort="" toRange="" width="-1"/>
+    <column caption="" columnName="Instrument Type" fieldName="InstrumentException.InstrumentDetails.ExceptionOnInstrument.Base.InstrumentDetails.InstrumentType" filterFromNum="" filterFromTms="" filterToNum="" filterToTms="" filterValue="LOAN" filterable="Y" fromRange="" id=")d7S01hoe1" isRange="N" mobileTemplate="" operator="" orderNum="12" showRelLink="" sort="" toRange="" width="-1"/>
+    <column caption="" columnName="Message Type" fieldName="InstrumentException.ExceptionDetail.MessageType" filterFromNum="" filterFromTms="" filterToNum="" filterToTms="" filterValue="Eagle_GSInstrument" filterable="Y" fromRange="" id=")d7T01hoe1" isRange="N" mobileTemplate="" operator="" orderNum="13" showRelLink="" sort="" toRange="" width="-1"/>
+  </columns>
+</root>

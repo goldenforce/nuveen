@@ -1,0 +1,625 @@
+{
+  "TYPE" : "Workflow",
+  "version" : "1.6.6",
+  "timeZone" : "America/New_York",
+  "title" : "Nuveen LevFin Ratings Full Load Process",
+  "orderPreparation" : {
+    "parameters" : {
+      "checkDependency" : {
+        "type" : "Boolean",
+        "default" : "false"
+      },
+      "bb_file_pattern" : {
+        "type" : "String",
+        "default" : "'GS.*\\.OUT'"
+      },
+      "bb_dayMinus" : {
+        "type" : "String",
+        "default" : "'0'"
+      },
+      "bb_jobConfigText" : {
+        "type" : "String",
+        "default" : "'LevFin - Bloomberg Per Security Job'"
+      },
+      "target_application" : {
+        "type" : "String",
+        "default" : "'fileloading'"
+      },
+      "scripts_home" : {
+        "type" : "String",
+        "default" : "'/ext/app/jobscheduler/scripts/'"
+      },
+      "dayMinus" : {
+        "type" : "String",
+        "default" : "0"
+      }
+    },
+    "allowUndeclared" : false
+  },
+  "jobResourceNames" : [ "curDteJob" ],
+  "instructions" : [ {
+    "TYPE" : "Execute.Named",
+    "jobName" : "Ratings_Full_Workflow_Start",
+    "label" : "Ratings_Full_Workflow_Start"
+  }, {
+    "TYPE" : "If",
+    "predicate" : "$checkDependency==true",
+    "then" : {
+      "instructions" : [ {
+        "TYPE" : "Execute.Named",
+        "jobName" : "Echo_Dependency_Check",
+        "label" : "Echo_Dependency_Check"
+      }, {
+        "TYPE" : "Execute.Named",
+        "jobName" : "BBG_Load_Check",
+        "label" : "BBG_Load_Check"
+      }, {
+        "TYPE" : "If",
+        "predicate" : "$bbloadcount.toNumber > 0",
+        "then" : {
+          "instructions" : [ {
+            "TYPE" : "Execute.Named",
+            "jobName" : "BBG_Load_Completed",
+            "label" : "BBG_Load_Completed"
+          }, {
+            "TYPE" : "Execute.Named",
+            "jobName" : "Ratings_Full_Load_Start",
+            "label" : "Ratings_Full_Load_Start"
+          }, {
+            "TYPE" : "Fork",
+            "branches" : [ {
+              "id" : "FitchDelta",
+              "workflow" : {
+                "instructions" : [ {
+                  "TYPE" : "Execute.Named",
+                  "jobName" : "Fitch_Instrument_Ratings_Full",
+                  "label" : "Fitch_Instrument_Ratings_Full"
+                }, {
+                  "TYPE" : "Execute.Named",
+                  "jobName" : "Fitch_Issuer_Ratings_Full",
+                  "label" : "Fitch_Issuer_Ratings_Full"
+                } ]
+              }
+            }, {
+              "id" : "MoodyDelta",
+              "workflow" : {
+                "instructions" : [ {
+                  "TYPE" : "Execute.Named",
+                  "jobName" : "Moodys_Instrument_Ratings_Full",
+                  "label" : "Moodys_Instrument_Ratings_Full"
+                }, {
+                  "TYPE" : "Execute.Named",
+                  "jobName" : "Moodys_Issuer_Ratings_Full",
+                  "label" : "Moodys_Issuer_Ratings_Full"
+                } ]
+              }
+            }, {
+              "id" : "SNPDelta",
+              "workflow" : {
+                "instructions" : [ {
+                  "TYPE" : "Execute.Named",
+                  "jobName" : "SNP_Instrument_Ratings_Full",
+                  "label" : "SNP_Instrument_Ratings_Full"
+                }, {
+                  "TYPE" : "Execute.Named",
+                  "jobName" : "SNP_Issuer_Ratings_Full",
+                  "label" : "SNP_Issuer_Ratings_Full"
+                } ]
+              }
+            } ],
+            "joinIfFailed" : false
+          }, {
+            "TYPE" : "Execute.Named",
+            "jobName" : "Ratings_Full_Load_End",
+            "label" : "Ratings_Full_Load_End"
+          } ]
+        },
+        "else" : {
+          "instructions" : [ {
+            "TYPE" : "Execute.Named",
+            "jobName" : "BBG_Load_Not_Completed",
+            "label" : "BBG_Load_Not_Completed"
+          } ]
+        }
+      } ]
+    },
+    "else" : {
+      "instructions" : [ {
+        "TYPE" : "Execute.Named",
+        "jobName" : "Echo_No_Dependency_Check",
+        "label" : "Echo_No_Dependency_Check"
+      }, {
+        "TYPE" : "Execute.Named",
+        "jobName" : "Ratings_Full_Load_Start_NDC",
+        "label" : "Ratings_Full_Load_Start_NDC"
+      }, {
+        "TYPE" : "Fork",
+        "branches" : [ {
+          "id" : "FitchDelta",
+          "workflow" : {
+            "instructions" : [ {
+              "TYPE" : "Execute.Named",
+              "jobName" : "Fitch_Instrument_Ratings_Full_NDC",
+              "label" : "Fitch_Instr_Ratings_Full_NDC"
+            }, {
+              "TYPE" : "Execute.Named",
+              "jobName" : "Fitch_Issuer_Ratings_Full_NDC",
+              "label" : "Fitch_Issuer_Ratings_Full_NDC"
+            } ]
+          }
+        }, {
+          "id" : "MoodyDelta",
+          "workflow" : {
+            "instructions" : [ {
+              "TYPE" : "Execute.Named",
+              "jobName" : "Moodys_Instrument_Ratings_Full_NDC",
+              "label" : "Moodys_Instr_Ratings_Full_NDC"
+            }, {
+              "TYPE" : "Execute.Named",
+              "jobName" : "Moodys_Issuer_Ratings_Full_NDC",
+              "label" : "Moodys_Issuer_Ratings_Full_NDC"
+            } ]
+          }
+        }, {
+          "id" : "SNPDelta",
+          "workflow" : {
+            "instructions" : [ {
+              "TYPE" : "Execute.Named",
+              "jobName" : "SNP_Instrument_Ratings_Full_NDC",
+              "label" : "SNP_Instr_Ratings_Full_NDC"
+            }, {
+              "TYPE" : "Execute.Named",
+              "jobName" : "SNP_Issuer_Ratings_Full_NDC",
+              "label" : "SNP_Issuer_Ratings_Full_NDC"
+            } ]
+          }
+        } ],
+        "joinIfFailed" : false
+      }, {
+        "TYPE" : "Execute.Named",
+        "jobName" : "Ratings_Delta_Load_End_NDC",
+        "label" : "Ratings_Delta_Load_End_NDC"
+      } ]
+    }
+  }, {
+    "TYPE" : "Execute.Named",
+    "jobName" : "Ratings_Full_Workflow_End",
+    "label" : "Ratings_Full_Workflow_End"
+  } ],
+  "jobs" : {
+    "Ratings_Full_Workflow_Start" : {
+      "agentName" : "JSAgent",
+      "withSubagentClusterIdExpr" : false,
+      "executable" : {
+        "TYPE" : "ShellScriptExecutable",
+        "script" : "echo \"Ratings Full Workflow Start\"",
+        "v1Compatible" : false
+      },
+      "skipIfNoAdmissionForOrderDay" : false,
+      "parallelism" : 1,
+      "graceTimeout" : 1,
+      "failOnErrWritten" : false,
+      "warnOnErrWritten" : false,
+      "title" : "Ratings Full Workflow Start"
+    },
+    "Echo_Dependency_Check" : {
+      "agentName" : "JSAgent",
+      "withSubagentClusterIdExpr" : false,
+      "executable" : {
+        "TYPE" : "ShellScriptExecutable",
+        "script" : "echo \"Dependency Check\"",
+        "v1Compatible" : false
+      },
+      "skipIfNoAdmissionForOrderDay" : false,
+      "parallelism" : 1,
+      "graceTimeout" : 1,
+      "failOnErrWritten" : false,
+      "warnOnErrWritten" : false,
+      "title" : "Echo Dependency Check"
+    },
+    "BBG_Load_Check" : {
+      "agentName" : "JSAgent",
+      "withSubagentClusterIdExpr" : false,
+      "executable" : {
+        "TYPE" : "InternalExecutable",
+        "className" : "com.sos.jitl.jobs.db.SQLExecutorJob",
+        "internalType" : "JITL",
+        "arguments" : {
+          "command" : "\"select count(*) as bbloadcount from ser_gs_gc.ft_t_jblg where job_id in ( \nSELECT prnt_job_id   FROM ser_gs_gc.ft_t_jblg WHERE (UPPER(job_input_txt) ~* (UPPER('$bb_file_pattern') ) OR UPPER(job_msg_typ) ~* (UPPER('$bb_file_pattern'))) \nAND date_trunc('day', ser_gs_gc.sysdate() - interval '$bb_dayMinus days') = date_trunc('day', job_start_tms) AND job_end_tms IS NOT null\n) and job_config_txt = '$bb_jobConfigText' and job_stat_typ = 'CLOSED'\"",
+          "resultset_as_variables" : "\"column_value\"",
+          "hibernate_configuration_file" : "\"/ext/app/jobscheduler/base/sos-berlin.com/joc/resources/joc/hibernate.cfg.xml\""
+        }
+      },
+      "skipIfNoAdmissionForOrderDay" : false,
+      "parallelism" : 1,
+      "graceTimeout" : 1,
+      "failOnErrWritten" : false,
+      "warnOnErrWritten" : false,
+      "title" : "BBG Load Check"
+    },
+    "BBG_Load_Completed" : {
+      "agentName" : "JSAgent",
+      "withSubagentClusterIdExpr" : false,
+      "executable" : {
+        "TYPE" : "ShellScriptExecutable",
+        "script" : "echo \"BB PerSec load has processed\"",
+        "v1Compatible" : false
+      },
+      "skipIfNoAdmissionForOrderDay" : false,
+      "parallelism" : 1,
+      "graceTimeout" : 1,
+      "failOnErrWritten" : false,
+      "warnOnErrWritten" : false,
+      "title" : "BBG Load Completed"
+    },
+    "Ratings_Full_Load_Start" : {
+      "agentName" : "JSAgent",
+      "withSubagentClusterIdExpr" : false,
+      "executable" : {
+        "TYPE" : "ShellScriptExecutable",
+        "script" : "echo \"Ratings Full Load Start\"",
+        "v1Compatible" : false
+      },
+      "skipIfNoAdmissionForOrderDay" : false,
+      "parallelism" : 1,
+      "graceTimeout" : 1,
+      "failOnErrWritten" : false,
+      "warnOnErrWritten" : false,
+      "title" : "Ratings Full Load Start"
+    },
+    "Fitch_Instrument_Ratings_Full" : {
+      "agentName" : "JSAgent",
+      "withSubagentClusterIdExpr" : false,
+      "executable" : {
+        "TYPE" : "ShellScriptExecutable",
+        "script" : "jq -r '.FilePatterns[]' $input_param_file | while read fileName; do\n\tfileDte=$(date --date=\"$BUS_DTE $dayMinus days ago\" +\"%Y%m%d\")\n\tfileNameBusDte=${fileName/$busDteRegex/$fileDte}\n    fileNameRegex=${fileName//'.'/'\\.'}\n    fileNameRegex=${fileNameRegex//'*'/'\\*'}\n    sed -i \"s|$fileNameRegex|$fileNameBusDte|\" $input_param_file\ndone\n\ncd $scripts_home\n./jobutilities execWkf $input_param_file $event_name $target_application",
+        "env" : {
+          "input_param_file" : "'/edmfs/app/InputParams/ratings/Nuveen_LevFin_Fitch_Instrument_Ratings_Full.json'",
+          "event_name" : "'Nuveen_LevFin_EVT_Fitch_Ratings'",
+          "target_application" : "$target_application",
+          "scripts_home" : "$scripts_home",
+          "dayMinus" : "$dayMinus"
+        },
+        "v1Compatible" : false
+      },
+      "skipIfNoAdmissionForOrderDay" : false,
+      "parallelism" : 1,
+      "graceTimeout" : 1,
+      "failOnErrWritten" : false,
+      "warnOnErrWritten" : false,
+      "title" : "Fitch Instrument Ratings Full"
+    },
+    "Fitch_Issuer_Ratings_Full" : {
+      "agentName" : "JSAgent",
+      "withSubagentClusterIdExpr" : false,
+      "executable" : {
+        "TYPE" : "ShellScriptExecutable",
+        "script" : "jq -r '.FilePatterns[]' $input_param_file | while read fileName; do\n\tfileDte=$(date --date=\"$BUS_DTE $dayMinus days ago\" +\"%Y%m%d\")\n\tfileNameBusDte=${fileName/$busDteRegex/$fileDte}\n    fileNameRegex=${fileName//'.'/'\\.'}\n    fileNameRegex=${fileNameRegex//'*'/'\\*'}\n    sed -i \"s|$fileNameRegex|$fileNameBusDte|\" $input_param_file\ndone\n\ncd $scripts_home\n./jobutilities execWkf $input_param_file $event_name $target_application",
+        "env" : {
+          "input_param_file" : "'/edmfs/app/InputParams/ratings/Nuveen_LevFin_Fitch_Issuer_Ratings_Full.json'",
+          "event_name" : "'Nuveen_LevFin_EVT_Fitch_Ratings'",
+          "target_application" : "$target_application",
+          "scripts_home" : "$scripts_home",
+          "dayMinus" : "$dayMinus"
+        },
+        "v1Compatible" : false
+      },
+      "skipIfNoAdmissionForOrderDay" : false,
+      "parallelism" : 1,
+      "graceTimeout" : 1,
+      "failOnErrWritten" : false,
+      "warnOnErrWritten" : false,
+      "title" : "Fitch Issuer Ratings Full"
+    },
+    "Moodys_Instrument_Ratings_Full" : {
+      "agentName" : "JSAgent",
+      "withSubagentClusterIdExpr" : false,
+      "executable" : {
+        "TYPE" : "ShellScriptExecutable",
+        "script" : "jq -r '.Pattern[]' $input_param_file | while read fileName; do\n\tfileDte=$(date --date=\"$BUS_DTE $dayMinus days ago\" +\"%Y%m%d\")\n\tfileNameBusDte=${fileName/$busDteRegex/$fileDte}\n    fileNameRegex=${fileName//'.'/'\\.'}\n    fileNameRegex=${fileNameRegex//'*'/'\\*'}\n    sed -i \"s|$fileNameRegex|$fileNameBusDte|\" $input_param_file\ndone\n\ncd $scripts_home\n./jobutilities execWkf $input_param_file $event_name $target_application",
+        "env" : {
+          "input_param_file" : "'/edmfs/app/InputParams/ratings/Nuveen_LevFin_Moodys_Instrument_Ratings_Full.json'",
+          "event_name" : "'Nuveen_LevFin_EVT_Moodys_Ratings'",
+          "target_application" : "$target_application",
+          "scripts_home" : "$scripts_home",
+          "dayMinus" : "$dayMinus"
+        },
+        "v1Compatible" : false
+      },
+      "skipIfNoAdmissionForOrderDay" : false,
+      "parallelism" : 1,
+      "graceTimeout" : 1,
+      "failOnErrWritten" : false,
+      "warnOnErrWritten" : false,
+      "title" : "Moodys Instrument Ratings Full"
+    },
+    "Moodys_Issuer_Ratings_Full" : {
+      "agentName" : "JSAgent",
+      "withSubagentClusterIdExpr" : false,
+      "executable" : {
+        "TYPE" : "ShellScriptExecutable",
+        "script" : "jq -r '.Pattern[]' $input_param_file | while read fileName; do\n\tfileDte=$(date --date=\"$BUS_DTE $dayMinus days ago\" +\"%Y%m%d\")\n\tfileNameBusDte=${fileName/$busDteRegex/$fileDte}\n    fileNameRegex=${fileName//'.'/'\\.'}\n    fileNameRegex=${fileNameRegex//'*'/'\\*'}\n    sed -i \"s|$fileNameRegex|$fileNameBusDte|\" $input_param_file\ndone\n\ncd $scripts_home\n./jobutilities execWkf $input_param_file $event_name $target_application",
+        "env" : {
+          "input_param_file" : "'/edmfs/app/InputParams/ratings/Nuveen_LevFin_Moodys_Issuer_Ratings_Full.json'",
+          "event_name" : "'Nuveen_LevFin_EVT_Moodys_Ratings'",
+          "target_application" : "$target_application",
+          "scripts_home" : "$scripts_home",
+          "dayMinus" : "$dayMinus"
+        },
+        "v1Compatible" : false
+      },
+      "skipIfNoAdmissionForOrderDay" : false,
+      "parallelism" : 1,
+      "graceTimeout" : 1,
+      "failOnErrWritten" : false,
+      "warnOnErrWritten" : false,
+      "title" : "Moodys Issuer Ratings Full"
+    },
+    "SNP_Instrument_Ratings_Full" : {
+      "agentName" : "JSAgent",
+      "withSubagentClusterIdExpr" : false,
+      "executable" : {
+        "TYPE" : "ShellScriptExecutable",
+        "script" : "jq -r '.FilePatterns[]' $input_param_file | while read fileName; do\n\tfileDte=$(date --date=\"$BUS_DTE $dayMinus days ago\" +\"%Y%m%d\")\n\tfileNameBusDte=${fileName/$busDteRegex/$fileDte}\n    fileNameRegex=${fileName//'.'/'\\.'}\n    fileNameRegex=${fileNameRegex//'*'/'\\*'}\n    sed -i \"s|$fileNameRegex|$fileNameBusDte|\" $input_param_file\ndone\n\ncd $scripts_home\n./jobutilities execWkf $input_param_file $event_name $target_application",
+        "env" : {
+          "input_param_file" : "'/edmfs/app/InputParams/ratings/Nuveen_LevFin_SNP_Instrument_Ratings_Full.json'",
+          "event_name" : "'Nuveen_LevFin_EVT_SNP_Ratings'",
+          "target_application" : "$target_application",
+          "scripts_home" : "$scripts_home",
+          "dayMinus" : "$dayMinus"
+        },
+        "v1Compatible" : false
+      },
+      "skipIfNoAdmissionForOrderDay" : false,
+      "parallelism" : 1,
+      "graceTimeout" : 1,
+      "failOnErrWritten" : false,
+      "warnOnErrWritten" : false,
+      "title" : "SNP Instrument Ratings Full"
+    },
+    "SNP_Issuer_Ratings_Full" : {
+      "agentName" : "JSAgent",
+      "withSubagentClusterIdExpr" : false,
+      "executable" : {
+        "TYPE" : "ShellScriptExecutable",
+        "script" : "jq -r '.FilePatterns[]' $input_param_file | while read fileName; do\n\tfileDte=$(date --date=\"$BUS_DTE $dayMinus days ago\" +\"%Y%m%d\")\n\tfileNameBusDte=${fileName/$busDteRegex/$fileDte}\n    fileNameRegex=${fileName//'.'/'\\.'}\n    fileNameRegex=${fileNameRegex//'*'/'\\*'}\n    sed -i \"s|$fileNameRegex|$fileNameBusDte|\" $input_param_file\ndone\n\ncd $scripts_home\n./jobutilities execWkf $input_param_file $event_name $target_application",
+        "env" : {
+          "input_param_file" : "'/edmfs/app/InputParams/ratings/Nuveen_LevFin_SNP_Issuer_Ratings_Full.json'",
+          "event_name" : "'Nuveen_LevFin_EVT_SNP_Ratings'",
+          "target_application" : "$target_application",
+          "scripts_home" : "$scripts_home",
+          "dayMinus" : "$dayMinus"
+        },
+        "v1Compatible" : false
+      },
+      "skipIfNoAdmissionForOrderDay" : false,
+      "parallelism" : 1,
+      "graceTimeout" : 1,
+      "failOnErrWritten" : false,
+      "warnOnErrWritten" : false,
+      "title" : "SNP Issuer Ratings Full"
+    },
+    "Ratings_Full_Load_End" : {
+      "agentName" : "JSAgent",
+      "withSubagentClusterIdExpr" : false,
+      "executable" : {
+        "TYPE" : "ShellScriptExecutable",
+        "script" : "echo \"Ratings Full Load End\"",
+        "v1Compatible" : false
+      },
+      "skipIfNoAdmissionForOrderDay" : false,
+      "parallelism" : 1,
+      "graceTimeout" : 1,
+      "failOnErrWritten" : false,
+      "warnOnErrWritten" : false,
+      "title" : "Ratings Full Load End"
+    },
+    "BBG_Load_Not_Completed" : {
+      "agentName" : "JSAgent",
+      "withSubagentClusterIdExpr" : false,
+      "executable" : {
+        "TYPE" : "ShellScriptExecutable",
+        "script" : "echo \"BB PerSec load has not processed\"",
+        "v1Compatible" : false
+      },
+      "skipIfNoAdmissionForOrderDay" : false,
+      "parallelism" : 1,
+      "graceTimeout" : 1,
+      "failOnErrWritten" : false,
+      "warnOnErrWritten" : false,
+      "title" : "BBG Load Not Completed"
+    },
+    "Echo_No_Dependency_Check" : {
+      "agentName" : "JSAgent",
+      "withSubagentClusterIdExpr" : false,
+      "executable" : {
+        "TYPE" : "ShellScriptExecutable",
+        "script" : "echo \"No Dependency Check\"",
+        "v1Compatible" : false
+      },
+      "skipIfNoAdmissionForOrderDay" : false,
+      "parallelism" : 1,
+      "graceTimeout" : 1,
+      "failOnErrWritten" : false,
+      "warnOnErrWritten" : false,
+      "title" : "Echo No Dependency Check"
+    },
+    "Ratings_Full_Load_Start_NDC" : {
+      "agentName" : "JSAgent",
+      "withSubagentClusterIdExpr" : false,
+      "executable" : {
+        "TYPE" : "ShellScriptExecutable",
+        "script" : "echo \"Ratings Full Load Start NDC\"",
+        "v1Compatible" : false
+      },
+      "skipIfNoAdmissionForOrderDay" : false,
+      "parallelism" : 1,
+      "graceTimeout" : 1,
+      "failOnErrWritten" : false,
+      "warnOnErrWritten" : false,
+      "title" : "Ratings Full Load Start NDC"
+    },
+    "Fitch_Instrument_Ratings_Full_NDC" : {
+      "agentName" : "JSAgent",
+      "withSubagentClusterIdExpr" : false,
+      "executable" : {
+        "TYPE" : "ShellScriptExecutable",
+        "script" : "jq -r '.FilePatterns[]' $input_param_file | while read fileName; do\n\tfileDte=$(date --date=\"$BUS_DTE $dayMinus days ago\" +\"%Y%m%d\")\n\tfileNameBusDte=${fileName/$busDteRegex/$fileDte}\n    fileNameRegex=${fileName//'.'/'\\.'}\n    fileNameRegex=${fileNameRegex//'*'/'\\*'}\n    sed -i \"s|$fileNameRegex|$fileNameBusDte|\" $input_param_file\ndone\n\ncd $scripts_home\n./jobutilities execWkf $input_param_file $event_name $target_application",
+        "env" : {
+          "input_param_file" : "'/edmfs/app/InputParams/ratings/Nuveen_LevFin_Fitch_Instrument_Ratings_Full.json'",
+          "event_name" : "'Nuveen_LevFin_EVT_Fitch_Ratings'",
+          "target_application" : "$target_application",
+          "scripts_home" : "$scripts_home",
+          "dayMinus" : "$dayMinus"
+        },
+        "v1Compatible" : false
+      },
+      "skipIfNoAdmissionForOrderDay" : false,
+      "parallelism" : 1,
+      "graceTimeout" : 1,
+      "failOnErrWritten" : false,
+      "warnOnErrWritten" : false,
+      "title" : "Fitch Instrument Ratings Full NDC"
+    },
+    "Fitch_Issuer_Ratings_Full_NDC" : {
+      "agentName" : "JSAgent",
+      "withSubagentClusterIdExpr" : false,
+      "executable" : {
+        "TYPE" : "ShellScriptExecutable",
+        "script" : "jq -r '.FilePatterns[]' $input_param_file | while read fileName; do\n\tfileDte=$(date --date=\"$BUS_DTE $dayMinus days ago\" +\"%Y%m%d\")\n    fileNameBusDte=${fileName/$busDteRegex/$fileDte}\n    fileNameRegex=${fileName//'.'/'\\.'}\n    fileNameRegex=${fileNameRegex//'*'/'\\*'}\n    sed -i \"s|$fileNameRegex|$fileNameBusDte|\" $input_param_file\ndone\n\ncd $scripts_home\n./jobutilities execWkf $input_param_file $event_name $target_application",
+        "env" : {
+          "input_param_file" : "'/edmfs/app/InputParams/ratings/Nuveen_LevFin_Fitch_Issuer_Ratings_Full.json'",
+          "event_name" : "'Nuveen_LevFin_EVT_Fitch_Ratings'",
+          "target_application" : "$target_application",
+          "scripts_home" : "$scripts_home",
+          "dayMinus" : "$dayMinus"
+        },
+        "v1Compatible" : false
+      },
+      "skipIfNoAdmissionForOrderDay" : false,
+      "parallelism" : 1,
+      "graceTimeout" : 1,
+      "failOnErrWritten" : false,
+      "warnOnErrWritten" : false,
+      "title" : "Fitch Issuer Ratings Full NDC"
+    },
+    "Moodys_Instrument_Ratings_Full_NDC" : {
+      "agentName" : "JSAgent",
+      "withSubagentClusterIdExpr" : false,
+      "executable" : {
+        "TYPE" : "ShellScriptExecutable",
+        "script" : "jq -r '.Pattern[]' $input_param_file | while read fileName; do\n\tfileDte=$(date --date=\"$BUS_DTE $dayMinus days ago\" +\"%Y%m%d\")\n    fileNameBusDte=${fileName/$busDteRegex/$fileDte}\n    fileNameRegex=${fileName//'.'/'\\.'}\n    fileNameRegex=${fileNameRegex//'*'/'\\*'}\n    sed -i \"s|$fileNameRegex|$fileNameBusDte|\" $input_param_file\ndone\n\ncd $scripts_home\n./jobutilities execWkf $input_param_file $event_name $target_application",
+        "env" : {
+          "input_param_file" : "'/edmfs/app/InputParams/ratings/Nuveen_LevFin_Moodys_Instrument_Ratings_Full.json'",
+          "event_name" : "'Nuveen_LevFin_EVT_Moodys_Ratings'",
+          "target_application" : "$target_application",
+          "scripts_home" : "$scripts_home",
+          "dayMinus" : "$dayMinus"
+        },
+        "v1Compatible" : false
+      },
+      "skipIfNoAdmissionForOrderDay" : false,
+      "parallelism" : 1,
+      "graceTimeout" : 1,
+      "failOnErrWritten" : false,
+      "warnOnErrWritten" : false,
+      "title" : "Moodys Instrument Ratings Full NDC"
+    },
+    "Moodys_Issuer_Ratings_Full_NDC" : {
+      "agentName" : "JSAgent",
+      "withSubagentClusterIdExpr" : false,
+      "executable" : {
+        "TYPE" : "ShellScriptExecutable",
+        "script" : "jq -r '.Pattern[]' $input_param_file | while read fileName; do\n\tfileDte=$(date --date=\"$BUS_DTE $dayMinus days ago\" +\"%Y%m%d\")\n    fileNameBusDte=${fileName/$busDteRegex/$fileDte}\n    fileNameRegex=${fileName//'.'/'\\.'}\n    fileNameRegex=${fileNameRegex//'*'/'\\*'}\n    sed -i \"s|$fileNameRegex|$fileNameBusDte|\" $input_param_file\ndone\n\ncd $scripts_home\n./jobutilities execWkf $input_param_file $event_name $target_application",
+        "env" : {
+          "input_param_file" : "'/edmfs/app/InputParams/ratings/Nuveen_LevFin_Moodys_Issuer_Ratings_Full.json'",
+          "event_name" : "'Nuveen_LevFin_EVT_Moodys_Ratings'",
+          "target_application" : "$target_application",
+          "scripts_home" : "$scripts_home",
+          "dayMinus" : "$dayMinus"
+        },
+        "v1Compatible" : false
+      },
+      "skipIfNoAdmissionForOrderDay" : false,
+      "parallelism" : 1,
+      "graceTimeout" : 1,
+      "failOnErrWritten" : false,
+      "warnOnErrWritten" : false,
+      "title" : "Moodys Issuer Ratings Full NDC"
+    },
+    "SNP_Instrument_Ratings_Full_NDC" : {
+      "agentName" : "JSAgent",
+      "withSubagentClusterIdExpr" : false,
+      "executable" : {
+        "TYPE" : "ShellScriptExecutable",
+        "script" : "jq -r '.FilePatterns[]' $input_param_file | while read fileName; do\n\tfileDte=$(date --date=\"$BUS_DTE $dayMinus days ago\" +\"%Y%m%d\")\n    fileNameBusDte=${fileName/$busDteRegex/$fileDte}\n    fileNameRegex=${fileName//'.'/'\\.'}\n    fileNameRegex=${fileNameRegex//'*'/'\\*'}\n    sed -i \"s|$fileNameRegex|$fileNameBusDte|\" $input_param_file\ndone\n\ncd $scripts_home\n./jobutilities execWkf $input_param_file $event_name $target_application",
+        "env" : {
+          "input_param_file" : "'/edmfs/app/InputParams/ratings/Nuveen_LevFin_SNP_Instrument_Ratings_Full.json'",
+          "event_name" : "'Nuveen_LevFin_EVT_SNP_Ratings'",
+          "target_application" : "$target_application",
+          "scripts_home" : "$scripts_home",
+          "dayMinus" : "$dayMinus"
+        },
+        "v1Compatible" : false
+      },
+      "skipIfNoAdmissionForOrderDay" : false,
+      "parallelism" : 1,
+      "graceTimeout" : 1,
+      "failOnErrWritten" : false,
+      "warnOnErrWritten" : false,
+      "title" : "SNP Instrument Ratings Full NDC"
+    },
+    "SNP_Issuer_Ratings_Full_NDC" : {
+      "agentName" : "JSAgent",
+      "withSubagentClusterIdExpr" : false,
+      "executable" : {
+        "TYPE" : "ShellScriptExecutable",
+        "script" : "jq -r '.FilePatterns[]' $input_param_file | while read fileName; do\n\tfileDte=$(date --date=\"$BUS_DTE $dayMinus days ago\" +\"%Y%m%d\")\n    fileNameBusDte=${fileName/$busDteRegex/$fileDte}\n    fileNameRegex=${fileName//'.'/'\\.'}\n    fileNameRegex=${fileNameRegex//'*'/'\\*'}\n    sed -i \"s|$fileNameRegex|$fileNameBusDte|\" $input_param_file\ndone\n\ncd $scripts_home\n./jobutilities execWkf $input_param_file $event_name $target_application",
+        "env" : {
+          "input_param_file" : "'/edmfs/app/InputParams/ratings/Nuveen_LevFin_SNP_Issuer_Ratings_Full.json'",
+          "event_name" : "'Nuveen_LevFin_EVT_SNP_Ratings'",
+          "target_application" : "$target_application",
+          "scripts_home" : "$scripts_home",
+          "dayMinus" : "$dayMinus"
+        },
+        "v1Compatible" : false
+      },
+      "skipIfNoAdmissionForOrderDay" : false,
+      "parallelism" : 1,
+      "graceTimeout" : 1,
+      "failOnErrWritten" : false,
+      "warnOnErrWritten" : false,
+      "title" : "SNP Issuer Ratings Full NDC"
+    },
+    "Ratings_Delta_Load_End_NDC" : {
+      "agentName" : "JSAgent",
+      "withSubagentClusterIdExpr" : false,
+      "executable" : {
+        "TYPE" : "ShellScriptExecutable",
+        "script" : "echo \"Ratings Delta Load End NDC\"",
+        "v1Compatible" : false
+      },
+      "skipIfNoAdmissionForOrderDay" : false,
+      "parallelism" : 1,
+      "graceTimeout" : 1,
+      "failOnErrWritten" : false,
+      "warnOnErrWritten" : false,
+      "title" : "Ratings Delta Load End NDC"
+    },
+    "Ratings_Full_Workflow_End" : {
+      "agentName" : "JSAgent",
+      "withSubagentClusterIdExpr" : false,
+      "executable" : {
+        "TYPE" : "ShellScriptExecutable",
+        "script" : "echo \"Ratings Full Workflow End\"",
+        "v1Compatible" : false
+      },
+      "skipIfNoAdmissionForOrderDay" : false,
+      "parallelism" : 1,
+      "graceTimeout" : 1,
+      "failOnErrWritten" : false,
+      "warnOnErrWritten" : false,
+      "title" : "Ratings Full Workflow End"
+    }
+  }
+}

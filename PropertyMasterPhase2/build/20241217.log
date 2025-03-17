@@ -1,0 +1,637 @@
+
+D:\yogesh\GoldenSource_Clients\Nuveen\SVN\branches\PropertyMaster\PropertyMasterPhase2\build>set BUILD_HOME=. 
+
+D:\yogesh\GoldenSource_Clients\Nuveen\SVN\branches\PropertyMaster\PropertyMasterPhase2\build>set REPO_URL=http://svn/psg/Nuveen/branches/PropertyMaster/PropertyMasterPhase2 
+
+D:\yogesh\GoldenSource_Clients\Nuveen\SVN\branches\PropertyMaster\PropertyMasterPhase2\build>set USERNAME=psgdevopsuser 
+
+D:\yogesh\GoldenSource_Clients\Nuveen\SVN\branches\PropertyMaster\PropertyMasterPhase2\build>set PASSWORD=Gsource@987 
+
+D:\yogesh\GoldenSource_Clients\Nuveen\SVN\branches\PropertyMaster\PropertyMasterPhase2\build>set REPO_TYP=SVN 
+
+D:\yogesh\GoldenSource_Clients\Nuveen\SVN\branches\PropertyMaster\PropertyMasterPhase2\build>set RELEASE_BRANCH=PropertyMasterPhase2 
+
+D:\yogesh\GoldenSource_Clients\Nuveen\SVN\branches\PropertyMaster\PropertyMasterPhase2\build>set RELEASE_TAG= 
+
+D:\yogesh\GoldenSource_Clients\Nuveen\SVN\branches\PropertyMaster\PropertyMasterPhase2\build>rem set JAVA_HOME=C:\Program Files\Java\jdk1.8.0_281 
+
+D:\yogesh\GoldenSource_Clients\Nuveen\SVN\branches\PropertyMaster\PropertyMasterPhase2\build>rem set ANT_HOME=C:\apache-ant-1.9.13 
+
+D:\yogesh\GoldenSource_Clients\Nuveen\SVN\branches\PropertyMaster\PropertyMasterPhase2\build>set JAVA_HOME=D:\Java\jdk1.8.0_271 
+
+D:\yogesh\GoldenSource_Clients\Nuveen\SVN\branches\PropertyMaster\PropertyMasterPhase2\build>set ANT_HOME=D:\yogesh\GoldenSource_Workbench\Workbench_8.8.1.12\eclipse\plugins\org.apache.ant_1.9.6.v201510161327 
+
+D:\yogesh\GoldenSource_Clients\Nuveen\SVN\branches\PropertyMaster\PropertyMasterPhase2\build>set PATH=D:\Java\jdk1.8.0_271\bin;D:\yogesh\GoldenSource_Workbench\Workbench_8.8.1.12\eclipse\plugins\org.apache.ant_1.9.6.v201510161327\bin;C:\Oracle\instantclient_21_13;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Users\yraut\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Python 3.7\scripts;C:\Users\yraut\AppData\Local\Programs\Python\Python37-32\Scripts;C:\Program Files\Microsoft VS Code\bin;C:\Program Files\Amazon\AWSCLIV2\;C:\Users\yraut\AppData\Local\Microsoft\WindowsApps;C:\Program Files\RedHat\java-17-openjdk-17.0.12.0.7-1\bin;C:\ProgramData\Scooter Software\Beyond Compare 5;C:\Program Files\PuTTY\;C:\Program Files\TortoiseSVN\bin;C:\Users\yraut\AppData\Local\Microsoft\WindowsApps; 
+
+D:\yogesh\GoldenSource_Clients\Nuveen\SVN\branches\PropertyMaster\PropertyMasterPhase2\build>echo "Copying build.properties to respective directories" 
+"Copying build.properties to respective directories"
+
+D:\yogesh\GoldenSource_Clients\Nuveen\SVN\branches\PropertyMaster\PropertyMasterPhase2\build>cd . 
+
+D:\yogesh\GoldenSource_Clients\Nuveen\SVN\branches\PropertyMaster\PropertyMasterPhase2\build>copy build.properties .\custom 
+        1 file(s) copied.
+
+D:\yogesh\GoldenSource_Clients\Nuveen\SVN\branches\PropertyMaster\PropertyMasterPhase2\build>copy build.properties .\templates 
+        1 file(s) copied.
+
+D:\yogesh\GoldenSource_Clients\Nuveen\SVN\branches\PropertyMaster\PropertyMasterPhase2\build>copy build.properties .\engine 
+        1 file(s) copied.
+
+D:\yogesh\GoldenSource_Clients\Nuveen\SVN\branches\PropertyMaster\PropertyMasterPhase2\build>echo "Check-out/clone code from Repository" 
+"Check-out/clone code from Repository"
+
+D:\yogesh\GoldenSource_Clients\Nuveen\SVN\branches\PropertyMaster\PropertyMasterPhase2\build>cd custom 
+
+D:\yogesh\GoldenSource_Clients\Nuveen\SVN\branches\PropertyMaster\PropertyMasterPhase2\build\custom>echo "java -jar BuildPackage.jar $REPO_URL $USERNAME $PASSWORD SVN $RELEASE_BRANCH" 
+"java -jar BuildPackage.jar $REPO_URL $USERNAME $PASSWORD SVN $RELEASE_BRANCH"
+
+D:\yogesh\GoldenSource_Clients\Nuveen\SVN\branches\PropertyMaster\PropertyMasterPhase2\build\custom>java -jar BuildPackage.jar http://svn/psg/Nuveen/branches/PropertyMaster/PropertyMasterPhase2 psgdevopsuser Gsource@987 SVN PropertyMasterPhase2  
+REPO Type: SVN
+REPO URL: http://svn/psg/Nuveen/branches/PropertyMaster/PropertyMasterPhase2
+REPO Branch: PropertyMasterPhase2
+REPO tag: null
+Repo Set
+START: Get Change File List
+current=.
+min.version=8.8.1.01
+packageVersion=8.8.1.01
+packageName=Nuveen_Custom_PM_Ph2
+base.dir=../../
+engine_root=../../javarules/ReferenceEngine/src
+templates_root=../../templates
+temp.dir=./bin/
+last.chg.usr.id=NUVEEN:CSTM
+build.package.list=GC,Template
+custom.rule.jar=NuveenCustomRules.jar
+custom.rule.path=/ReferenceEngine/BRE/java
+ignore.revision.list=
+full.package=false
+Cant find ignore revision list property
+----------Revision: 1986----------
+Property [svn:log]:Branch: PropertyMasterPhase2
+Revision Used: 1984
+CutOffDate: 20241216
+Property [svn:author]:vhule
+Property [svn:date]:2024-12-17T14:27:35.578511Z
+------------------------------
+END: Get Change File List
+START: Get Complete File List
+END: Get Complete File List
+######################Build Properties######################
+current=.
+min.version=8.8.1.01
+packageVersion=8.8.1.01
+packageName=Nuveen_Custom_PM_Ph2
+base.dir=../../
+engine_root=../../javarules/ReferenceEngine/src
+templates_root=../../templates
+temp.dir=./bin/
+last.chg.usr.id=NUVEEN:CSTM
+build.package.list=GC,Template
+custom.rule.jar=NuveenCustomRules.jar
+custom.rule.path=/ReferenceEngine/BRE/java
+ignore.revision.list=
+full.package=false
+false
+Updated package list:: GC,Template
+######################Execution Order Files######################
+ExecOrder: /configuration/SQL/DDL/
+Rank: 0: Eagle_overlays.plsql
+Rank: 1: Eagle_overlays_fields.plsql
+Rank: 2: FT_E_CNT1_GC.plsql
+Rank: 3: FT_E_MSC1_GC.plsql
+Rank: 4: FT_E_NDF1_GC.plsql
+Rank: 5: FT_E_NPF1_GC.plsql
+Rank: 6: FT_E_NPP1_GC.plsql
+Rank: 7: FT_E_UDF1_GC.plsql
+Rank: 8: FT_E_UDR1_GC.plsql
+Rank: 9: FT_E_REQ1_GC.plsql
+Rank: 10: FT_E_PRA1_GC.plsql
+Rank: 11: FT_E_PDS1_GC.plsql
+Rank: 12: FT_E_CNT1_VD.plsql
+Rank: 13: FT_E_MSC1_VD.plsql
+Rank: 14: FT_E_NDF1_VD.plsql
+Rank: 15: FT_E_NPF1_VD.plsql
+Rank: 16: FT_E_NPP1_VD.plsql
+Rank: 17: FT_E_UDF1_VD.plsql
+Rank: 18: FT_E_UDR1_VD.plsql
+Rank: 19: FT_E_REQ1_VD.plsql
+Rank: 20: FT_E_PRA1_VD.plsql
+Rank: 21: FT_E_PDS1_VD.plsql
+Rank: 22: ft_v_bb_persec_loans.plsql
+Rank: 23: FT_V_BB_PERSEC.plsql
+Rank: 24: FT_V_NUVEENMSCI_PUBLISH.plsql
+Rank: 25: nuveen_getreqXML_LevFin.plsql
+Rank: 26: JobScheduler_Grant.plsql
+ExecOrder: /configuration/SQL/DML/
+Rank: 0: CACHE_CLEANUP.sql
+Rank: 1: Ratings_Cleanup.sql
+Rank: 2: LRD-Eagle_Issuer_Alignment_Cleanup.sql
+Rank: 3: CLSF_GICS_CleanUp.sql
+Rank: 4: Delete_Ratings_Participants.sql
+Rank: 5: DELETE.sql
+Rank: 6: Ratings_Mnemonic.sql
+Rank: 7: ISGR.sql
+Rank: 8: ISTY.sql
+Rank: 9: ETDF.sql
+Rank: 10: TBDF.sql
+Rank: 11: FLDF.sql
+Rank: 12: CLDF.sql
+Rank: 13: TIDX.sql
+Rank: 14: TIDC.sql
+Rank: 15: TIDC_VD.sql
+Rank: 16: TBRL.sql
+Rank: 17: TBRN.sql
+Rank: 18: DSRC.sql
+Rank: 19: IDMV.sql
+Rank: 20: EDMV.sql
+Rank: 21: XSEG.sql
+Rank: 22: XSTO.sql
+Rank: 23: XELM.sql
+Rank: 24: CLMI.sql
+Rank: 25: MKEY.sql
+Rank: 26: STDF.sql
+Rank: 27: STDV.sql
+Rank: 28: BEGC.sql
+Rank: 29: IDCS.sql
+Rank: 30: EIST.sql
+Rank: 31: GUNT.sql
+Rank: 32: INCS.sql
+Rank: 33: INCL.sql
+Rank: 34: UIPR.sql
+Rank: 35: MRKT.sql
+Rank: 36: RTNG.sql
+Rank: 37: RTVL.sql
+Rank: 38: UIBL.sql
+Rank: 39: VRTY.sql
+Rank: 40: BDEF.sql
+Rank: 41: SRLE.sql
+Rank: 42: UIRE.sql
+Rank: 43: JBCF_Creditscope.sql
+Rank: 44: JBCF_GC.sql
+Rank: 45: ENTR.sql
+Rank: 46: EMPL.sql
+ExecOrder: /configuration/GSO/
+Rank: 0: Base_NuveenIssueLegalDesc.gso
+Rank: 1: Base_NuveenIssuePurpose.gso
+Rank: 2: Base_NuveenMerrittIssueID.gso
+Rank: 3: Base_NuveenSystemIssueID.gso
+Rank: 4: FinancialInstitution.gso
+Rank: 5: Issuer.gso
+Rank: 6: FinancialMarket.gso
+Rank: 7: JobDetailInformation.gso
+Rank: 8: Base.gso
+Rank: 9: Base_BondFeatures_Senior.gso
+Rank: 10: Base_Participants_NuveenInvestedIndicator.gso
+Rank: 11: Base_Participants_NuveenSecurityActive.gso
+Rank: 12: Base_Participants_NuveenSMAHeldIndicator.gso
+Rank: 13: FixedIncome_MortgageFeatures_MortgageLoanType.gso
+Rank: 14: FixedIncome_MortgageFeatures_CurrentPrinLimitAmount.gso
+Rank: 15: EquityBase.gso
+Rank: 16: FixedIncome.gso
+Rank: 17: Derivatives.gso
+Rank: 18: Futures.gso
+Rank: 19: Options.gso
+Rank: 20: Bonds.gso
+Rank: 21: ClientBonds.gso
+Rank: 22: ConvertibleBond.gso
+Rank: 23: MBS.gso
+Rank: 24: MunicipalBond.gso
+Rank: 25: Equity.gso
+Rank: 26: Preferred.gso
+Rank: 27: Warrants.gso
+Rank: 28: MutualFund.gso
+Rank: 29: FullInstrument.gso
+Rank: 30: MSCIBBCompany.gso
+Rank: 31: FinancialInstitution.goc
+Rank: 32: Base.goc
+Rank: 33: EquityBase.goc
+Rank: 34: FixedIncome.goc
+Rank: 35: Bonds.goc
+Rank: 36: ConvertibleBond.goc
+Rank: 37: MBS.goc
+Rank: 38: MunicipalBond.goc
+Rank: 39: Equity.goc
+Rank: 40: Preferred.goc
+Rank: 41: Warrants.goc
+Rank: 42: MutualFund.goc
+Rank: 43: Futures.goc
+Rank: 44: Options.goc
+Rank: 45: FullInstrument.goc
+Rank: 46: Property.gso
+Rank: 47: PropertyNRE.gso
+Rank: 48: PropertyException.gso
+Rank: 49: Property.goc
+Rank: 50: PropertyException.goc
+######################SVN Structure######################
+configuration=/configuration/
+resources=/configuration/Resources/
+workflows=/configuration/workflows/
+mapping=/configuration/Resources/mapping/
+vendordefinitions=/configuration/vendordefinitions/
+vendorrequests=/configuration/vendorrequests/
+xmlfeeds=/configuration/Resources/xml/feeds/
+xslt=/configuration/Resources/xslt/
+xsd=/configuration/Resources/xsd/
+businessfeeds=/configuration/businessfeeds/
+messagetypes=/configuration/messagetypes/
+events=/configuration/events/
+tasks=/configuration/tasks/
+publishingprofiles=/configuration/PublishingProfile/
+ddl=/configuration/sql/ddl/
+dml=/configuration/sql/dml/
+gso=/configuration/gso/
+rulexml=/configuration/Reference/rulexml/
+streetreffiles=/configuration/Reference/streetreffiles/
+engineconfig=/configuration/engines/
+template=/templates
+######################LOB Mnemonics######################
+IDUniquenessCheckMatchKeySet=ID_UNIQ
+VSH_GC=VSH
+SetMatchKey=MATCHKEY
+ConditionalTimeSeries=TSCONDNL
+######################Always Execute######################
+######################Building Package Description######################
+Complete file List 656
+Changed file List 0
+false
+Skipped: /javarules/ReferenceEngine/src/CJavaNSMMoodysLTRatingMaster.java
+Skipped: /javarules/ReferenceEngine/src/CJavaNREConstants.java
+Skipped: /javarules/ReferenceEngine/src/CJavaNREAPIMailAddCstmErr.java
+Skipped: /javarules/ReferenceEngine/src/CJavaNvnConstants.java
+Skipped: /javarules/ReferenceEngine/src/CJavaNvnConfig.java
+Skipped: /javarules/ReferenceEngine/src/CJavaNRECommons.java
+Skipped: /javarules/ReferenceEngine/src/CJavaNREAssetNoGenerator.java
+Skipped: /javarules/ReferenceEngine/src/CJavaNREBuildingIDGenerator.java
+Skipped: /javarules/ReferenceEngine/src/CJavaNREConfig.java
+Skipped: /javarules/ReferenceEngine/src/CJavaNSMISINCUSIPIgnore.java
+Skipped: /javarules/ReferenceEngine/src/CJavaNvnCommons.java
+Skipped: /javarules/ReferenceEngine/src/CJavaNREMrgeBldgAttr.java
+Skipping: /configuration/
+Skipped: /configuration/Reference/rulexml/msgtype.dtd
+Get DTD File for : ../../configuration/Reference/rulexml/StreetRefMsgSet_GC.xml
+DTD File for ../../configuration/Reference/rulexml/StreetRefMsgSet_GC.xml is msgtype.dtd
+Get DTD File for : ../../configuration/Reference/rulexml/StreetRefMsgSet_VD.xml
+DTD File for ../../configuration/Reference/rulexml/StreetRefMsgSet_VD.xml is msgtype.dtd
+Skipped: /configuration/Reference/streetreffiles/LOBMnemonics.txt
+Skipped: /configuration/Reference/streetreffiles/ConditionalTimeSeries.dtd
+Skipped: /configuration/Reference/streetreffiles/VSH.dtd
+Skipped: /configuration/Reference/streetreffiles/SetMatchKey.dtd
+Get DTD File for : ../..//configuration/Reference/streetreffiles/VSH_GC.xml
+DTD File for ../..//configuration/Reference/streetreffiles/VSH_GC.xml is VSH.dtd
+Skipped: /configuration/Reference/streetreffiles/IDUniquenessCheckMatchKeySet.dtd
+Get DTD File for : ../..//configuration/Reference/streetreffiles/ConditionalTimeSeries.xml
+DTD File for ../..//configuration/Reference/streetreffiles/ConditionalTimeSeries.xml is ConditionalTimeSeries.dtd
+Get DTD File for : ../..//configuration/Reference/streetreffiles/SetMatchKey.xml
+DTD File for ../..//configuration/Reference/streetreffiles/SetMatchKey.xml is SetMatchKey.dtd
+Get DTD File for : ../..//configuration/Reference/streetreffiles/IDUniquenessCheckMatchKeySet.xml
+DTD File for ../..//configuration/Reference/streetreffiles/IDUniquenessCheckMatchKeySet.xml is IDUniquenessCheckMatchKeySet.dtd
+Get DTD File for : ../..//configuration/Reference/streetreffiles/TimeSeries.xml
+DTD File for ../..//configuration/Reference/streetreffiles/TimeSeries.xml is ConditionalTimeSeries.dtd
+Skipped: /configuration/SQL/DDL/Function/Create_Nvn_Eagle_Overlays.plsql
+Skipped: /configuration/SQL/DDL/Function/Get_Calculated_Maturity_Date.plsql
+Skipped: /configuration/SQL/DDL/Function/Get_Last_Income_Date.plsql
+Skipped: /configuration/SQL/DDL/Function/Get_Prev_Coupon_Date.plsql
+Skipped: /configuration/SQL/DDL/Function/nuveen_getreqXML_LevFin.plsql
+Skipped: /configuration/SQL/DDL/Function/check_id_exist.plsql
+Skipped: /configuration/SQL/DDL/Function/nuveenmsci_bb_request.plsql
+Skipped: /configuration/SQL/DDL/Function/Get_Makewhole_Basispoint.plsql
+Skipped: /configuration/SQL/DDL/Function/NUVEEN_FNC_GET_UNIQUE_ISS_ID.plsql
+Skipped: /configuration/SQL/DDL/Function/nuveen_getBBPerSecRequestXML.plsql
+Skipped: /configuration/SQL/DDL/Function/Get_First_Income_Date.plsql
+Skipped: /configuration/SQL/DDL/Function/Get_Processing_Security_Type.plsql
+Skipped: /configuration/SQL/DDL/Function/nrebldgidseq.plsql
+Skipped: /configuration/SQL/DDL/Function/nreassetnoseq.plsql
+Skipped: /configuration/SQL/DDL/Function/Get_Security_Type.plsql
+Skipped: /configuration/SQL/DDL/Function/NUVEEN_FNC_GET_UNIQUE_FINS_ID.plsql
+Skipped: /configuration/SQL/DDL/Function/Get_Issue_Name.plsql
+Skipped: /configuration/SQL/DDL/Function/Get_Class_Name.plsql
+Skipped: /configuration/SQL/DDL/Table/FT_E_NDF1_VD.plsql
+Skipped: /configuration/SQL/DDL/Table/FT_E_UDR1_GC.plsql
+Skipped: /configuration/SQL/DDL/Table/Eagle_overlays_fields.plsql
+Skipped: /configuration/SQL/DDL/Table/FT_E_RTE1_GC.plsql
+Skipped: /configuration/SQL/DDL/Table/FT_E_NPF1_GC.plsql
+Skipped: /configuration/SQL/DDL/Table/FT_E_PRA1.plsql
+Skipped: /configuration/SQL/DDL/Table/FT_O_REQ1_GC.plsql
+Skipped: /configuration/SQL/DDL/Table/FT_E_CNT1_GC.plsql
+Skipped: /configuration/SQL/DDL/Table/FT_E_UDF1_VD.plsql
+Skipped: /configuration/SQL/DDL/Table/FT_T_NCR1_GC.plsql
+Skipped: /configuration/SQL/DDL/Table/FT_E_NPP1_GC.plsql
+Skipped: /configuration/SQL/DDL/Table/FT_E_MSC1_VD.plsql
+Skipped: /configuration/SQL/DDL/Table/FT_E_NDF1_GC.plsql
+Skipped: /configuration/SQL/DDL/Table/FT_E_UDR1_VD.plsql
+Skipped: /configuration/SQL/DDL/Table/FT_E_RTE1_VD.plsql
+Skipped: /configuration/SQL/DDL/Table/DDL_Create_met_investment_grade_report.plsql
+Skipped: /configuration/SQL/DDL/Table/FT_E_NPF1_VD.plsql
+Skipped: /configuration/SQL/DDL/Table/FT_E_UDF1_GC.plsql
+Skipped: /configuration/SQL/DDL/Table/FT_T_PDS1.plsql
+Skipped: /configuration/SQL/DDL/Table/FT_E_CNT1_VD.plsql
+Skipped: /configuration/SQL/DDL/Table/FT_E_MSC1_GC.plsql
+Skipped: /configuration/SQL/DDL/Table/FT_T_NCR1_VD.plsql
+Skipped: /configuration/SQL/DDL/Table/Eagle_overlays.plsql
+Skipped: /configuration/SQL/DDL/Table/FT_E_NPP1_VD.plsql
+Skipping: /configuration/SQL/DDL/
+Skipped: /configuration/SQL/DDL/Onetime/nvn_sm_guid.plsql
+Skipped: /configuration/SQL/DDL/Onetime/nvn_sm_gunt.plsql
+Skipped: /configuration/SQL/DDL/Sequence/NUVEEN_SEQ_ISS_ID.plsql
+Skipped: /configuration/SQL/DDL/Sequence/nresequence.plsql
+Skipped: /configuration/SQL/DDL/Sequence/NUVEEN_SEQ_FINS_ID.plsql
+Skipping: /configuration/SQL/DML/
+Skipped: /configuration/GSO/Export_F_CreditForm.xml
+Skipping: /configuration/GSO/
+Skipped: /JobScheduler/UAT/Schedules/LevFin_EOD_Publish_Schedule.schedule.json
+Skipped: /JobScheduler/UAT/Schedules/CS_Muni_Moodys_Ratings_Load_Schedule.schedule.json
+Skipped: /JobScheduler/UAT/Schedules/CS_Muni_EagleSOI_Schedule.schedule.json
+Skipped: /JobScheduler/UAT/Schedules/LevFin_LRD_Schedule_SameDay.schedule.json
+Skipped: /JobScheduler/UAT/Schedules/LevFin_Eagle_Schedule.schedule.json
+Skipped: /JobScheduler/UAT/Schedules/CS_Muni_Load_Schedule.schedule.json
+Skipped: /JobScheduler/UAT/Schedules/Nuveen_Monitoring_Alert.schedule.json
+Skipped: /JobScheduler/UAT/Schedules/MET_InvGrade_Report_Schedule.schedule.json
+Skipped: /JobScheduler/UAT/Schedules/LevFin_LRD_Schedule.schedule.json
+Skipped: /JobScheduler/UAT/Schedules/NRE_Rapid_Files_Process_Schedule.schedule.json
+Skipped: /JobScheduler/UAT/Schedules/CS_Muni_Publish_Schedule.schedule.json
+Skipped: /JobScheduler/UAT/Schedules/LevFin_ISGP_Refresh_Schedule.schedule.json
+Skipped: /JobScheduler/UAT/Schedules/CS_Muni_SNP_Ratings_Load_Schedule.schedule.json
+Skipped: /JobScheduler/UAT/Schedules/copy_Timechecking.schedule.json
+Skipped: /JobScheduler/UAT/Schedules/CS_Muni_Fitch_Ratings_Load_Schedule.schedule.json
+Skipped: /JobScheduler/UAT/Schedules/NRE_Alert_Schedule.schedule.json
+Skipped: /JobScheduler/UAT/Schedules/LevFin_WSO_Schedule.schedule.json
+Skipped: /JobScheduler/UAT/Schedules/CS_Muni_Status_Report.schedule.json
+Skipped: /JobScheduler/UAT/Schedules/Nuveen_LevFin_PM_Auto_Exception_Cleanup.schedule.json
+Skipped: /JobScheduler/UAT/Schedules/Nuveen_LevFin_SOI_Rating_Schedule.schedule.json
+Skipped: /JobScheduler/UAT/Schedules/LevFin_Ratings_Delta_Schedule.schedule.json
+Skipped: /JobScheduler/UAT/Schedules/CS_Muni_Ratings_Load_Schedule.schedule.json
+Skipped: /JobScheduler/UAT/ResourceLock/Nuveen_Muni_Ratings_Delta_Load_RL.lock.json
+Skipped: /JobScheduler/UAT/ResourceLock/Nuveen_CreditScope_Load_Process_RL.lock.json
+Skipped: /JobScheduler/UAT/ResourceLock/Nuveen_Muni_Moodys_Ratings_Delta_Load_RL.lock.json
+Skipped: /JobScheduler/UAT/ResourceLock/Nuveen_Muni_Eagle_Load_Process_RL.lock.json
+Skipped: /JobScheduler/UAT/ResourceLock/Nuveen_Muni_SNP_Ratings_Delta_Load_RL.lock.json
+Skipped: /JobScheduler/UAT/ResourceLock/Nuveen_CreditScope_Publish_Process_RL.lock.json
+Skipped: /JobScheduler/UAT/ResourceLock/Nuveen_Muni_Fitch_Ratings_Delta_Load_RL.lock.json
+Skipped: /JobScheduler/UAT/NoticeBoard/LevFinRatingPublishNoticeBoard.noticeboard.json
+Skipped: /JobScheduler/UAT/NoticeBoard/ISGP2WSO_NB.noticeboard.json
+Skipped: /JobScheduler/UAT/NoticeBoard/MoodysRatingsMuniNoticeBoard.noticeboard.json
+Skipped: /JobScheduler/UAT/NoticeBoard/FitchRatingsMuniNoticeBoard.noticeboard.json
+Skipped: /JobScheduler/UAT/NoticeBoard/RatingsMuniNoticeBoard.noticeboard.json
+Skipped: /JobScheduler/UAT/NoticeBoard/SNPRatingsMuniNoticeBoard.noticeboard.json
+Skipped: /JobScheduler/UAT/NoticeBoard/WSO2LRD_NB.noticeboard.json
+Skipped: /JobScheduler/UAT/NoticeBoard/LRD2EAGLE_NB.noticeboard.json
+Skipped: /JobScheduler/UAT/NoticeBoard/EagleMuniLoadNoticeBoard.noticeboard.json
+Skipped: /JobScheduler/UAT/NoticeBoard/Eagle2DeltaRating.noticeboard.json
+Skipped: /JobScheduler/UAT/NoticeBoard/LevFinSOIRatingsNoticeBoard.noticeboard.json
+Skipped: /JobScheduler/UAT/NoticeBoard/CS_Load_NoticeBoard.noticeboard.json
+Skipped: /JobScheduler/UAT/Job Resources/curDteJob.jobresource.json
+Skipped: /JobScheduler/UAT/Workflows/Nuveen_LevFin_Ratings_Full_Load_Process.workflow.json
+Skipped: /JobScheduler/UAT/Workflows/certificate_verification.workflow.json
+Skipped: /JobScheduler/UAT/Workflows/Nuveen_LevFin_LRD_Load_Process.workflow.json
+Skipped: /JobScheduler/UAT/Workflows/Nuveen_Credit_Issue_Publish_Process.workflow.json
+Skipped: /JobScheduler/UAT/Workflows/Nuveen_LevFin_SOI_Rating_Load_Process.workflow.json
+Skipped: /JobScheduler/UAT/Workflows/Nuveen_LevFin_PM_Auto_Exception_Cleanup.workflow.json
+Skipped: /JobScheduler/UAT/Workflows/Nuveen_Muni_Eagle_Load_Process.workflow.json
+Skipped: /JobScheduler/UAT/Workflows/Nuveen_CreditScope_Load_Process.workflow.json
+Skipped: /JobScheduler/UAT/Workflows/Nuveen_Muni_Delta_Publish_Process.workflow.json
+Skipped: /JobScheduler/UAT/Workflows/Nuveen_Muni_Issuer_Publish_Process.workflow.json
+Skipped: /JobScheduler/UAT/Workflows/NRE_Rapid_Files_Process_WorkFlow.workflow.json
+Skipped: /JobScheduler/UAT/Workflows/Nuveen_Muni_Fitch_Ratings_Delta_Load.workflow.json
+Skipped: /JobScheduler/UAT/Workflows/Nuveen_Muni_Status_Report.workflow.json
+Skipped: /JobScheduler/UAT/Workflows/Nuveen_LevFin_Ratings_Full_Load_Process-OnlyMoodyFullFileload.workflow.json
+Skipped: /JobScheduler/UAT/Workflows/TestWkfParams.workflow.json
+Skipped: /JobScheduler/UAT/Workflows/SNP_Ratings_Load_Restart_Wkf.workflow.json
+Skipped: /JobScheduler/UAT/Workflows/Adhoc_Instrument_Publish.workflow.json
+Skipped: /JobScheduler/UAT/Workflows/Nuveen_Muni_Moodys_Ratings_Delta_Load.workflow.json
+Skipped: /JobScheduler/UAT/Workflows/Nuveen_LevFin_EOD_Publish_Process.workflow.json
+Skipped: /JobScheduler/UAT/Workflows/Nuveen_LevFin_ISGP_Refresh.workflow.json
+Skipped: /JobScheduler/UAT/Workflows/restartEngines.workflow.json
+Skipped: /JobScheduler/UAT/Workflows/Nuveen_Muni_Ratings_Delta_Load_Process.workflow.json
+Skipped: /JobScheduler/UAT/Workflows/Nuveen_LevFin_Eagle_Load_Process.workflow.json
+Skipped: /JobScheduler/UAT/Workflows/Issuer_Adhoc_Publish.workflow.json
+Skipped: /JobScheduler/UAT/Workflows/Nuveen_LevFin_WSO_Load_Process.workflow.json
+Skipped: /JobScheduler/UAT/Workflows/ASUPR_EOD_Report.workflow.json
+Skipped: /JobScheduler/UAT/Workflows/Nuveen_FileLoad_Alerts.workflow.json
+Skipped: /JobScheduler/UAT/Workflows/NRE_Alert.workflow.json
+Skipped: /JobScheduler/UAT/Workflows/Nuveen_LevFin_Ratings_Delta_Load_Process.workflow.json
+Skipped: /JobScheduler/UAT/Workflows/Nuveen_Muni_Publish_Process.workflow.json
+Skipped: /JobScheduler/UAT/Workflows/MET_Investment_Grade_report.workflow.json
+Skipped: /JobScheduler/UAT/Workflows/Nuveen_CreditScope_Publish_Process.workflow.json
+Skipped: /JobScheduler/UAT/Workflows/Nuveen_Muni_SNP_Ratings_Delta_Load.workflow.json
+Skipped: /JobScheduler/UAT/Calendars/NRE_Rapid_Files_Process_Calendar.workingdayscalendar.json
+Skipped: /JobScheduler/UAT/Calendars/LevFin_Process_Calendar.workingdayscalendar.json
+Skipped: /JobScheduler/UAT/Calendars/LevFin_Process_Calendar.calendar.json
+Skipped: /JobScheduler/UAT/Calendars/NRE_Rapid_Files_Process_Calendar.calendar.json
+Skipped: /JobScheduler/UAT/Calendars/LevFin_SamedayJobHolidayCalandar.calendar.json
+Skipped: /JobScheduler/UAT/Calendars/LevFin_Process_Calender_Holiday.calendar.json
+Skipped: /JobScheduler/UAT/Calendars/LevFin_Process_Calender_Holiday.nonworkingdayscalendar.json
+Skipped: /JobScheduler/properties/InputParams/monitoringJobs.json
+Skipped: /JobScheduler/properties/InputParams/Nuveen_Muni_Eagle_Load_Process.json
+Skipped: /JobScheduler/properties/InputParams/NV_Exception_Cleanup.json
+Skipped: /JobScheduler/properties/InputParams/Nuveen_CreditScope_Load_Process.json
+Skipped: /JobScheduler/properties/InputParams/Nuveen_LevFin_LRD_Load_Process.json
+Skipped: /JobScheduler/properties/InputParams/Nuveen_LevFin_WSO_Load_Process.json
+Skipped: /JobScheduler/properties/InputParams/Nuveen_Muni_Publish_Process.json
+Skipped: /JobScheduler/properties/InputParams/Nuveen_LevFin_Eagle_Load_Process.json
+Skipped: /JobScheduler/properties/InputParams/ratings/Nuveen_LevFin_Fitch_Instrument_Ratings_Full.json
+Skipped: /JobScheduler/properties/InputParams/ratings/Nuveen_LevFin_SNP_Instrument_Ratings_Full.json
+Skipped: /JobScheduler/properties/InputParams/ratings/Nuveen_LevFin_Moodys_Instrument_Ratings_Full.json
+Skipped: /JobScheduler/properties/InputParams/ratings/Nuveen_LevFin_Moodys_Instrument_Ratings_Delta.json
+Skipped: /JobScheduler/properties/InputParams/ratings/Nuveen_LevFin_SNP_Instrument_Ratings_Delta.json
+Skipped: /JobScheduler/properties/InputParams/ratings/Nuveen_LevFin_Fitch_Instrument_Ratings_Delta.json
+Skipped: /JobScheduler/properties/InputParams/ratings/Nuveen_Muni_Fitch_Instrument_Ratings_Delta_Load.json
+Skipped: /JobScheduler/properties/InputParams/ratings/Nuveen_Muni_SNP_Instrument_Ratings_Delta_Load.json
+Skipped: /JobScheduler/properties/InputParams/ratings/Nuveen_LevFin_Moodys_Issuer_Ratings_Delta.json
+Skipped: /JobScheduler/properties/InputParams/ratings/Nuveen_LevFin_SNP_Issuer_Ratings_Delta.json
+Skipped: /JobScheduler/properties/InputParams/ratings/Nuveen_LevFin_Fitch_Issuer_Ratings_Delta.json
+Skipped: /JobScheduler/properties/InputParams/ratings/Nuveen_LevFin_Fitch_Issuer_Ratings_Full.json
+Skipped: /JobScheduler/properties/InputParams/ratings/Nuveen_LevFin_SNP_Issuer_Ratings_Full.json
+Skipped: /JobScheduler/properties/InputParams/ratings/Nuveen_LevFin_Moodys_Issuer_Ratings_Full.json
+Skipped: /JobScheduler/properties/InputParams/ratings/Nuveen_Muni_Moodys_Instrument_Ratings_Delta_Load.json
+Skipped: /JobScheduler/properties/InputParams/Nuveen_LevFin_ISGP_Refresh.json
+Skipped: /JobScheduler/Prod/Calendars/NRE_Rapid_Files_Process_Calendar.calendar.json
+Skipped: /JobScheduler/Prod/Calendars/LevFin_SamedayJobHolidayCalandar.calendar.json
+Skipped: /JobScheduler/Prod/Calendars/LevFin_Process_Calendar.calendar.json
+Skipped: /JobScheduler/Prod/Calendars/LevFin_Process_Calender_Holiday.calendar.json
+Skipped: /JobScheduler/Prod/Schedules/NRE_Alert_Schedule.schedule.json
+Skipped: /JobScheduler/Prod/Schedules/LevFin_LRD_Schedule.schedule.json
+Skipped: /JobScheduler/Prod/Schedules/CS_Muni_SNP_Ratings_Load_Schedule.schedule.json
+Skipped: /JobScheduler/Prod/Schedules/CS_Muni_Fitch_Ratings_Load_Schedule.schedule.json
+Skipped: /JobScheduler/Prod/Schedules/LevFin_WSO_Schedule.schedule.json
+Skipped: /JobScheduler/Prod/Schedules/CS_Muni_Status_Report.schedule.json
+Skipped: /JobScheduler/Prod/Schedules/Nuveen_LevFin_PM_Auto_Exception_Cleanup.schedule.json
+Skipped: /JobScheduler/Prod/Schedules/CS_Muni_Moodys_Ratings_Load_Schedule.schedule.json
+Skipped: /JobScheduler/Prod/Schedules/LevFin_Ratings_Delta_Schedule.schedule.json
+Skipped: /JobScheduler/Prod/Schedules/MET_InvGrade_Report_Schedule.schedule.json
+Skipped: /JobScheduler/Prod/Schedules/LevFin_EOD_Publish_Schedule.schedule.json
+Skipped: /JobScheduler/Prod/Schedules/NRE_Rapid_Files_Process_Schedule.schedule.json
+Skipped: /JobScheduler/Prod/Schedules/CS_Muni_EagleSOI_Schedule.schedule.json
+Skipped: /JobScheduler/Prod/Schedules/LevFin_LRD_Schedule_SameDay.schedule.json
+Skipped: /JobScheduler/Prod/Schedules/LevFin_Eagle_Schedule.schedule.json
+Skipped: /JobScheduler/Prod/Schedules/CS_Muni_Load_Schedule.schedule.json
+Skipped: /JobScheduler/Prod/Schedules/CS_Muni_Publish_Schedule.schedule.json
+Skipped: /JobScheduler/Prod/Schedules/Nuveen_Monitoring_Alert.schedule.json
+Skipped: /JobScheduler/Prod/Schedules/LevFin_ISGP_Refresh_Schedule.schedule.json
+Skipped: /JobScheduler/Prod/NoticeBoard/FitchRatingsMuniNoticeBoard.noticeboard.json
+Skipped: /JobScheduler/Prod/NoticeBoard/SNPRatingsMuniNoticeBoard.noticeboard.json
+Skipped: /JobScheduler/Prod/NoticeBoard/Eagle2DeltaRating.noticeboard.json
+Skipped: /JobScheduler/Prod/NoticeBoard/CS_Load_NoticeBoard.noticeboard.json
+Skipped: /JobScheduler/Prod/NoticeBoard/MoodysRatingsMuniNoticeBoard.noticeboard.json
+Skipped: /JobScheduler/Prod/NoticeBoard/RatingsMuniNoticeBoard.noticeboard.json
+Skipped: /JobScheduler/Prod/NoticeBoard/WSO2LRD_NB.noticeboard.json
+Skipped: /JobScheduler/Prod/NoticeBoard/ISGP2WSO_NB.noticeboard.json
+Skipped: /JobScheduler/Prod/NoticeBoard/LRD2EAGLE_NB.noticeboard.json
+Skipped: /JobScheduler/Prod/NoticeBoard/EagleMuniLoadNoticeBoard.noticeboard.json
+Skipped: /JobScheduler/Prod/Job Resources/curDteJob.jobresource.json
+Skipped: /JobScheduler/Prod/ResourceLock/Nuveen_Muni_Eagle_Load_Process_RL.lock.json
+Skipped: /JobScheduler/Prod/ResourceLock/Nuveen_Muni_SNP_Ratings_Delta_Load_RL.lock.json
+Skipped: /JobScheduler/Prod/ResourceLock/Nuveen_CreditScope_Publish_Process_RL.lock.json
+Skipped: /JobScheduler/Prod/ResourceLock/Nuveen_Muni_Fitch_Ratings_Delta_Load_RL.lock.json
+Skipped: /JobScheduler/Prod/ResourceLock/Nuveen_CreditScope_Load_Process_RL.lock.json
+Skipped: /JobScheduler/Prod/ResourceLock/Nuveen_Muni_Moodys_Ratings_Delta_Load_RL.lock.json
+Skipped: /JobScheduler/Prod/Workflows/Nuveen_LevFin_Ratings_Delta_Load_Process.workflow.json
+Skipped: /JobScheduler/Prod/Workflows/NRE_Rapid_Files_Process_WorkFlow.workflow.json
+Skipped: /JobScheduler/Prod/Workflows/Nuveen_CreditScope_Load_Process.workflow.json
+Skipped: /JobScheduler/Prod/Workflows/Nuveen_CreditScope_Publish_Process.workflow.json
+Skipped: /JobScheduler/Prod/Workflows/Nuveen_Muni_Fitch_Ratings_Delta_Load.workflow.json
+Skipped: /JobScheduler/Prod/Workflows/Nuveen_Muni_SNP_Ratings_Delta_Load.workflow.json
+Skipped: /JobScheduler/Prod/Workflows/Adhoc_Instrument_Publish.workflow.json
+Skipped: /JobScheduler/Prod/Workflows/NRE_Alert.workflow.json
+Skipped: /JobScheduler/Prod/Workflows/Nuveen_LevFin_ISGP_Refresh.workflow.json
+Skipped: /JobScheduler/Prod/Workflows/Nuveen_LevFin_Eagle_Load_Process.workflow.json
+Skipped: /JobScheduler/Prod/Workflows/restartEngines.workflow.json
+Skipped: /JobScheduler/Prod/Workflows/certificate_verification.workflow.json
+Skipped: /JobScheduler/Prod/Workflows/Issuer_Adhoc_Publish.workflow.json
+Skipped: /JobScheduler/Prod/Workflows/MET_Investment_Grade_report.workflow.json
+Skipped: /JobScheduler/Prod/Workflows/Nuveen_Muni_Status_Report.workflow.json
+Skipped: /JobScheduler/Prod/Workflows/Nuveen_LevFin_Ratings_Full_Load_Process-OnlyMoodyFullFileload.workflow.json
+Skipped: /JobScheduler/Prod/Workflows/testTimeJs.workflow.json
+Skipped: /JobScheduler/Prod/Workflows/Nuveen_LevFin_LRD_Load_Process.workflow.json
+Skipped: /JobScheduler/Prod/Workflows/Nuveen_Muni_Moodys_Ratings_Delta_Load.workflow.json
+Skipped: /JobScheduler/Prod/Workflows/Nuveen_LevFin_EOD_Publish_Process.workflow.json
+Skipped: /JobScheduler/Prod/Workflows/Nuveen_LevFin_Ratings_Full_Load_Process.workflow.json
+Skipped: /JobScheduler/Prod/Workflows/Nuveen_Muni_Eagle_Load_Process.workflow.json
+Skipped: /JobScheduler/Prod/Workflows/Nuveen_LevFin_WSO_Load_Process.workflow.json
+Skipped: /JobScheduler/Prod/Workflows/Nuveen_FileLoad_Alerts.workflow.json
+Skipped: /JobScheduler/Prod/Workflows/Nuveen_LevFin_PM_Auto_Exception_Cleanup.workflow.json
+Skipped: /JobScheduler/JS/LevFin_JobScheduler_Config.zip
+build task list 517
+D:\yogesh\GoldenSource_Clients\Nuveen\SVN\branches\PropertyMaster\PropertyMasterPhase2\build\custom/templates/PackageDescription_GC.xml
+######################Package Description and Build.xml Created Sucessfully######################
+
+D:\yogesh\GoldenSource_Clients\Nuveen\SVN\branches\PropertyMaster\PropertyMasterPhase2\build\custom>echo "**********************************************Creating DW Packages*******************************************" 
+"**********************************************Creating DW Packages*******************************************"
+
+D:\yogesh\GoldenSource_Clients\Nuveen\SVN\branches\PropertyMaster\PropertyMasterPhase2\build\custom>copy .\DW\build.xml .\ 
+The system cannot find the path specified.
+
+D:\yogesh\GoldenSource_Clients\Nuveen\SVN\branches\PropertyMaster\PropertyMasterPhase2\build\custom>copy .\DW\PackageDescription.xml .\ 
+The system cannot find the path specified.
+
+D:\yogesh\GoldenSource_Clients\Nuveen\SVN\branches\PropertyMaster\PropertyMasterPhase2\build\custom>call ant build 
+Buildfile: build.xml does not exist!
+"**********************************************Creating GC Packages*******************************************"
+        1 file(s) copied.
+        1 file(s) copied.
+Buildfile: D:\yogesh\GoldenSource_Clients\Nuveen\SVN\branches\PropertyMaster\PropertyMasterPhase2\build\custom\build.xml
+     [echo] Package Name=Nuveen Custom PM Ph2
+
+init:
+    [mkdir] Created dir: D:\yogesh\GoldenSource_Clients\Nuveen\SVN\branches\PropertyMaster\PropertyMasterPhase2\build\custom\bin
+    [mkdir] Created dir: D:\yogesh\GoldenSource_Clients\Nuveen\SVN\branches\PropertyMaster\PropertyMasterPhase2\build\custom\bin\tmp_out
+     [echo] Creating Temporary folder for build
+
+clean:
+   [delete] Deleting directory D:\yogesh\GoldenSource_Clients\Nuveen\SVN\branches\PropertyMaster\PropertyMasterPhase2\build\custom\bin
+     [echo] Cleaning up temporary files and folders before starting execution
+
+updatePackageDescription:
+     [echo] Updating Package Description with Package version 8.8.1.01
+
+package:
+     [echo] Copying files to bin directory
+     [echo] File names will be added here
+     [echo] Creating tar.gz file
+      [tar] Building tar: D:\yogesh\GoldenSource_Clients\Nuveen\SVN\branches\PropertyMaster\PropertyMasterPhase2\build\custom\bin\Custom_GC.tar.gz
+     [echo] Creating package
+      [zip] Building zip: D:\yogesh\GoldenSource_Clients\Nuveen\SVN\branches\PropertyMaster\PropertyMasterPhase2\packages\20241217\Nuveen_Custom_PM_Ph2_GC_8.8.1.01.zip
+
+del:
+   [delete] Deleting directory D:\yogesh\GoldenSource_Clients\Nuveen\SVN\branches\PropertyMaster\PropertyMasterPhase2\build\custom\bin
+     [echo] Cleaning up temporary files and folders as Execution is completed
+
+build:
+     [echo] Completed Build of GC Package
+
+BUILD SUCCESSFUL
+Total time: 0 seconds
+"**********************************************Creating VD Packages*******************************************"
+The system cannot find the path specified.
+The system cannot find the path specified.
+Buildfile: build.xml does not exist!
+"**********************************************Creating Template Packages*******************************************"
+        1 file(s) copied.
+Buildfile: D:\yogesh\GoldenSource_Clients\Nuveen\SVN\branches\PropertyMaster\PropertyMasterPhase2\build\templates\build.xml
+
+build:
+     [echo] build.package.condition is true
+
+init:
+    [mkdir] Created dir: D:\yogesh\GoldenSource_Clients\Nuveen\SVN\branches\PropertyMaster\PropertyMasterPhase2\build\templates\bin
+    [mkdir] Created dir: D:\yogesh\GoldenSource_Clients\Nuveen\SVN\branches\PropertyMaster\PropertyMasterPhase2\build\templates\bin\templates
+    [mkdir] Created dir: D:\yogesh\GoldenSource_Clients\Nuveen\SVN\branches\PropertyMaster\PropertyMasterPhase2\build\templates\bin\templates\custom
+    [mkdir] Created dir: D:\yogesh\GoldenSource_Clients\Nuveen\SVN\branches\PropertyMaster\PropertyMasterPhase2\build\templates\bin\templates\system
+     [echo] Creating Temporary folder for build
+
+clean:
+     [echo] Cleaning up temporary files and folders before starting execution
+
+updatePackageDescription:
+     [echo] Updating Package Description with Package version 8.8.1.01
+
+package:
+     [echo] Copying files to custom bin/custom folder
+     [echo] File names will be added here
+     [echo] Creating Jar file
+      [zip] Building zip: D:\yogesh\GoldenSource_Clients\Nuveen\SVN\branches\PropertyMaster\PropertyMasterPhase2\build\templates\bin\Custom_UI_Templates.zip
+     [echo] Creating package
+      [zip] Building zip: D:\yogesh\GoldenSource_Clients\Nuveen\SVN\branches\PropertyMaster\PropertyMasterPhase2\packages\20241217\Nuveen_Custom_PM_Ph2_Templates_8.8.1.01.zip
+
+del:
+     [echo] Cleaning up temporary files and folders after execution
+
+buildTemplatePkg:
+     [echo] Completed Build of Templates Package
+
+BUILD SUCCESSFUL
+Total time: 0 seconds
+"**********************************************Creating Engine Packages*******************************************"
+Buildfile: D:\yogesh\GoldenSource_Clients\Nuveen\SVN\branches\PropertyMaster\PropertyMasterPhase2\build\engine\build.xml
+     [echo] Package Name=Nuveen Custom PM Ph2
+
+init:
+    [mkdir] Created dir: D:\yogesh\GoldenSource_Clients\Nuveen\SVN\branches\PropertyMaster\PropertyMasterPhase2\build\engine\bin
+     [echo] Creating Temporary folder for build
+
+clean:
+     [echo] Cleaning up temporary files and folders before starting execution
+
+updatePackageDescription:
+     [echo] Updating Package Description with Package version 8.8.1.01
+
+package:
+     [echo] Compiling Java code and Creating .class file
+    [javac] Compiling 14 source files to D:\yogesh\GoldenSource_Clients\Nuveen\SVN\branches\PropertyMaster\PropertyMasterPhase2\build\engine\bin
+     [echo] Creating Jar file
+      [jar] Building jar: D:\yogesh\GoldenSource_Clients\Nuveen\SVN\branches\PropertyMaster\PropertyMasterPhase2\build\engine\bin\javarules\ReferenceEngine\BRE\java\NuveenCustomRules.jar
+     [echo] Creating tar.gz file
+      [tar] Building tar: D:\yogesh\GoldenSource_Clients\Nuveen\SVN\branches\PropertyMaster\PropertyMasterPhase2\build\engine\bin\EngineJavaRules.tar.gz
+     [echo] Creating package
+      [zip] Building zip: D:\yogesh\GoldenSource_Clients\Nuveen\SVN\branches\PropertyMaster\PropertyMasterPhase2\packages\20241217\Nuveen_Custom_PM_Ph2_Engines_8.8.1.01.zip
+
+del:
+     [echo] Cleaning up temporary files and folders after execution
+
+build:
+     [echo] Completed Build of Engine Package
+
+BUILD SUCCESSFUL
+Total time: 2 seconds
+"Deleting tmpRepo Directory if present"
+"Deleting Temporary files if present"

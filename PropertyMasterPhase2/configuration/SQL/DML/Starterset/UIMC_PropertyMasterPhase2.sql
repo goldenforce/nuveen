@@ -1,0 +1,3 @@
+INSERT INTO ft_o_uimc(uimc_oid, tabs_nme, tabs_titl_txt, page_nme, page_titl_txt, bus_entity_nme, link_nme, tabs_desc, tabs_properties_clob, last_chg_tms, last_chg_usr_id, prnt_uimc_oid, config_typ, order_attr_num) 
+Select '>K3.01~?W1', NULL, NULL, NULL, NULL, NULL, 'Property Subtype', NULL, '{"HAS_EDIT_LINK":false,"HAS_NEW_LINK":false,"DESCRIPTION":"","LOAD_RESULTS_ON_START":true,"BUSINESS_ENTITY":"PropertySubtype","PROMPT":"","SPLIT_SCREEN":"","SHOW_QUALITY":false}', SYSDATE(), 'CLIENT', '@9uqt>7%O1', 'MENU', 2
+from Dual where not exists (select 1 from ft_o_uimc where link_nme = 'Property Subtype');

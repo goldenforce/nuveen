@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entities cleanUnusedFields="false" nameSpace="NUVEEN">
+  <beFields>
+    <beField class="BETEXT" customDesc="" desc="" displayCaption="NuveenFinsEmployeeNumber" entityTypeId="++3qwBhS2etxm001" id="009k-RFi2etbS00H" mandatory="0" multiplicity="MULTIPLE_OR_NULL" name="NuveenFinsEmployeeNumber" nameSpace="NUVEEN"/>
+    <beField class="BETEXT" customDesc="" desc="" displayCaption="Employee Name" entityTypeId="++3qwBhS2etxm001" id="009k-RFi2etbS00F" mandatory="0" multiplicity="MULTIPLE_OR_NULL" name="NuveenFinsEmployeeName" nameSpace="NUVEEN"/>
+  </beFields>
+  <dataGroups>
+    <dataGroup category="" customInd="0" desc="" displayCaption="Related Employees" entityTypeId="++3qwBhS2etxm001" frequencyInd="0" id="009V00nC2etbS04L" multiplicity="MULTIPLE_OR_NULL" name="NuveenRelatedEmployees" nameSpace="NUVEEN">
+      <part defNameSpace="NUVEEN" displayCaption="Employee Number" fieldId="009k-RFi2etbS00H" id="009k-RFi2etbS00J" prntReqdInd="0" seq="2"/>
+      <part defNameSpace="NUVEEN" fieldId="009k-RFi2etbS00F" id="009k-RFi2etbS00K" prntReqdInd="0" seq="3"/>
+    </dataGroup>
+  </dataGroups>
+  <occurrences>
+    <occurrence desc="Occurrence for Employee" id="009k-RFi2etbS00A" ignoreDeleteChildren="false" multiplicity="SINGLE_OR_NULL" name="EMPL_EFIR_NVN_ALL" nameSpace="NUVEEN" parentId="009V00nC2etbS00N" table="FT_T_EMPL" timeSeries="LOGICAL_DELETE">
+      <field id="009k-RFi2etbS00B" name="EMP_NME" nameSpace="NUVEEN"/>
+    </occurrence>
+    <occurrence desc="Occurrence for Employee Identifier" id="009k-RFi2etbS00C" ignoreDeleteChildren="false" multiplicity="SINGLE_OR_NULL" name="EMID_EFIR_NVN_ALL" nameSpace="NUVEEN" parentId="009k-RFi2etbS00A" table="FT_T_EMID" timeSeries="LOGICAL_DELETE">
+      <field id="009k-RFi2etbS00E" name="EMPLOYEE_ID" nameSpace="NUVEEN"/>
+      <value id="009k-RFi2etbS00D" name="EMP_ID_CTXT_TYP" nameSpace="NUVEEN" type="FILTER_FIELD" value="EMPNUM" valueType="CONSTANT"/>
+    </occurrence>
+  </occurrences>
+  <mappings>
+    <mapping beFieldId="009k-RFi2etbS00H" groupMapping="0" id="009k-RFi2etbS00I" nameSpace="NUVEEN" occFieldId="009k-RFi2etbS00E"/>
+    <mapping beFieldId="009k-RFi2etbS00F" groupMapping="0" id="009k-RFi2etbS00G" nameSpace="NUVEEN" occFieldId="009k-RFi2etbS00B"/>
+  </mappings>
+</entities>

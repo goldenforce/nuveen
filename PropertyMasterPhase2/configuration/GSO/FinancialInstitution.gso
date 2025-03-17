@@ -1,0 +1,1206 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entities cleanUnusedFields="false" nameSpace="NUVEEN">
+  <beFields>
+    <beField class="BETEXT" customDesc="Name of the issuing entity of the security. Issuer Full Name (DS496, ISSUER_BULK) provides the full name of the issuing entity of the security.        For mortgage securities within the Single Security Initiative of Fannie Mae and Freddie Mac, various descriptive fields reflect changes that became effective upon the market implementation of the Single Security Initiative in June 2019. " desc="Financial Institution Name" displayCaption="Financial Institution Name" entityTypeId="++3qwBhS2etxm001" id="004Qb8CC2etri00G" mandatory="0" multiplicity="SINGLE" name="FinancialInstitutionName" nameSpace="GSC"/>
+    <beField class="BETEXT" customDesc="Provides the legal name of a company as determined by a registry, company filing, or company website formatted to meet internal Bloomberg standards. Standards include but are not limited to modifications to cover location, abbreviations to adhere to space constraints, and addition of legal form. May not be the same as the brand name or &quot;doing business as&quot; name. Related to information returned from Bloomberg Company Identifier (ID035, ID_BB_COMPANY). " desc="This field contains the name of the financial institution according to its official legal filings. This may not be the same as the brand name or &quot;doing business as&quot; name." displayCaption="Institution Legal Name" entityTypeId="++3qwBhS2etxm001" id="++5ckBRS2etse01f" mandatory="0" multiplicity="SINGLE_OR_NULL" name="InstitutionLegalName" nameSpace="GSC"/>
+    <beField class="BETEXT" customDesc="International Organization for Standardization (ISO) country code of the bond obligor.  For reference,Bloomberg Global Obligor Company Identifier (ID227, ID_BB_GLOBAL_OBLIGOR_COMPANY) identifies the bond obligor. " desc="This field indicates if the institution is a single location, a headquarters or a branch." displayCaption="Business Structure Type" entityTypeId="++3qwBhS2etxm001" id="++5ckBRS2etse01F" mandatory="0" multiplicity="SINGLE_OR_NULL" name="BusinessStructureType" nameSpace="GSC"/>
+    <beField class="BETEXT" customDesc="Bond issuer's Equity ticker and exchange code, for any entity that reports fundamental data for the current period (DT474, Has Current Fundamental Data).        If the bond issuer does not report current fundamental data, the field will ascend the corporate tree and return the Equity ticker of the first company that is providing current fundamental data.        If current fundamental data is not reported by any company on the corporate tree, the field will return 'N.A.'.        Field applies to Corp and Pfd securities." desc="Equity ticker for the issuer of the fixed income instrument. If an asset has more than one ticker NYSE is recognised by Reuters as the ticker for the asset. If there is no NYSE symbol Reuters will use another exchange symbol or assign another exchange" displayCaption="Ticker" entityTypeId="++3qwBhS2etxm001" id="005pp3Ei2etne01L" mandatory="0" multiplicity="SINGLE_OR_NULL" name="Ticker" nameSpace="GSC"/>
+    <beField class="BETEXT" customDesc="Ticker and exchange of the ultimate parent company controlling the issue of the current security. This corresponds to the Company Id returned in Ultimate Parent Company Id (ID110, ID_BB_ULTIMATE_PARENT_CO). " desc="The ticker and exchange of the ultimate parent company controlling the issue of the parent security." displayCaption="Ultimate Parent Ticker and Exchange" entityTypeId="++3qwBhS2etxm001" id="005k2kDC2etqS04-" mandatory="0" multiplicity="SINGLE_OR_NULL" name="UltimateParentTickerandExchange" nameSpace="GSC"/>
+    <beField class="BETEXT" customDesc="Specifies the ISO (International Organization for Standardization) code of the country or territory of incorporation of the ultimate parent company.        Warrants:    Returns the respective values of the underlying of the warrant. " customSQL="SELECT PRNT_GU_ID CODE, GU_NME DISPLAY_NAME FROM FT_T_GUNT WHERE PRNT_GU_TYP = 'COUNTRY' AND PRNT_GU_CNT = '1' AND END_TMS IS NULL" desc="Country Of Incorporation" displayCaption="Country Of Incorporation" entityTypeId="++3qwBhS2etxm001" id="++4g31ZS2etoK00N" mandatory="0" multiplicity="SINGLE_OR_NULL" name="CountryOfIncorporation" nameSpace="GSC"/>
+    <beField class="BETEXT" customDesc="Specifies the ISO (International Organization for Standardization) code of the country or territory of domicile of the ultimate parent company.        Warrants:    Returns the respective values of the underlying of the warrant. " customSQL="SELECT PRNT_GU_ID CODE, GU_NME DISPLAY_NAME FROM FT_T_GUNT WHERE PRNT_GU_TYP = 'COUNTRY' AND PRNT_GU_CNT = '1' AND END_TMS IS NULL" desc="This is where the Issue is domiciled, i.e., its location." displayCaption="Country Of Domicile" entityTypeId="++3qwBhS2etxm001" id="++5ckBRS2etse02q" mandatory="0" multiplicity="SINGLE_OR_NULL" name="CountryOfDomicile" nameSpace="GSC"/>
+    <beField class="BETEXT" customDesc="Specifies the ISO (International Organization for Standardization) country or territory code of the issuer's ultimate parent country or territory of risk. Methodology consists of four factors listed in order of importance: management location, country or territory of primary listing, country or territory of revenue and reporting currency of the issuer. Management location is defined by country or territory of domicile unless location of such key players as Chief Executive Officer (CEO), Chief Financial Officer (CFO), Chief Operating Officer (COO), and/or General Counsel is proven to be otherwise.         Exceptions: Country or territory of primary listing will not be a factor in determining issuer's country or territory of risk if company issues depository receipts, 'H' Shares, and/or is considered to be a Red Chip company listed on the Hong Kong Stock Exchange. 'H' Shares and Red Chips issuers will return China as the country or territory of risk.        Following methodology applies to listed/unlisted parent-subsidiary relationships:     * If a subsidiary is listed, it will be assigned its own issuer country or territory classification based on the aforementioned criteria unless the subsidiary is supported/guaranteed by the parent.    * If a subsidiary is unlisted, it will be assigned the issuer country or territory classification of its parent unless determined that there is no support/guarantee from that parent.        Note: Country or territory of risk does not identify political, geographic and/or economical risk. Methodology was originally established in 1999 and enhanced in 2008 in which the importance of reporting currency shifted from most important factor to least. The change was implemented on ongoing bases.        Warrants:    Returns the respective values of the underlying of the warrant. " customSQL="SELECT PRNT_GU_ID CODE, GU_NME DISPLAY_NAME FROM FT_T_GUNT WHERE PRNT_GU_TYP = 'COUNTRY' AND PRNT_GU_CNT = '1' AND END_TMS IS NULL" desc="Code representing the country where the sponsor is domiciled. " displayCaption="Country Of Risk" entityTypeId="++3qwBhS2etxm001" id="++5ckBRS2etse03J" mandatory="0" multiplicity="SINGLE_OR_NULL" name="CountryOfRisk" nameSpace="GSC"/>
+    <beField class="BETEXT" customDesc="This field returns the State Code of the company's state of domicile. Applies to Australian, U.S., Canadian, Chinese, and Japanese entities. " customSQL="select PRNT_GU_ID CODE, GU_NME DISPLAY_NAME FROM ft_t_gunt where PRNT_GU_TYP = 'STATE' and PRNT_GU_CNT = '1' AND END_TMS IS NULL order by GU_NME asc" desc="This is where the Issue is domiciled i.e., its location" displayCaption="State Of Domicile" entityTypeId="++3qwBhS2etxm001" id="++5ckBRS2etse03l" mandatory="0" multiplicity="SINGLE_OR_NULL" name="StateOfDomicile" nameSpace="GSC"/>
+    <beField class="BETEXT" customDesc="This field returns the State Code of the company's state of domicile. Applies to Australian, U.S., Canadian, Chinese, and Japanese entities. " customSQL="select PRNT_GU_ID CODE, GU_NME DISPLAY_NAME FROM ft_t_gunt where PRNT_GU_TYP = 'STATE' and PRNT_GU_CNT = '1' AND END_TMS IS NULL order by GU_NME asc" desc="State Of Incorporation" displayCaption="State Of Incorporation" entityTypeId="++3qwBhS2etxm001" id="++5ckBRS2etse03t" mandatory="0" multiplicity="SINGLE_OR_NULL" name="StateOfIncorporation" nameSpace="GSC"/>
+    <beField class="BETEXT" customDesc="Indicates if the company has a parent.  Returns true if the company is the ultimate parent, false if the company has a parent, or 'N.A.' if the parent information has not been verified. " desc="This field indicates whether the Financial Institution has no parent.  Note that a Financial Institution that has no parent is considered to be an ultimate parent." displayCaption="Ultimate Parent Indicator" entityTypeId="++3qwBhS2etxm001" id="++7skcay2euPC00D" mandatory="0" multiplicity="SINGLE_OR_NULL" name="UltimateParentIndicator" nameSpace="GSC"/>
+    <beField class="BETEXT" customDesc="Indicates if the company is presently a private entity, not publicly traded. " desc="This field indicates whether the Financial Institution is public or private.  This field applies to Financial Institutions regardless of whether they are corporations, so it is more general than Public Corporation Indicator.  Possible values are P, meaning Public, and R, meaning Private." displayCaption="Public Private Indicator" entityTypeId="++3qwBhS2etxm001" id="008x9CNi2es2C002" mandatory="0" multiplicity="SINGLE_OR_NULL" name="PublicPrivateIndicator" nameSpace="GSC"/>
+    <beField class="BETEXT" displayCaption="BB Issuer" entityTypeId="++3qwBhS2etxm001" id="008qNIli2es1800Z" mandatory="0" multiplicity="SINGLE_OR_NULL" name="NuveenBBIssuer" nameSpace="NUVEEN"/>
+    <beField class="BETEXT" displayCaption="Issuer Industry" entityTypeId="++3qwBhS2etxm001" id="008qNIli2es1800k" mandatory="0" multiplicity="SINGLE_OR_NULL" name="NuveenIssuerIndustry" nameSpace="NUVEEN"/>
+    <beField class="BETEXT" customDesc="" desc="" displayCaption="NuveenRelatedUltBrwrBBCompId" entityTypeId="++3qwBhS2etxm001" id="008wMoui2es1800g" mandatory="0" multiplicity="SINGLE_OR_NULL" name="NuveenRelatedUltBrwrBBCompId" nameSpace="NUVEEN"/>
+    <beField class="BETEXT" customDesc="" desc="" displayCaption="NuveenStateDomicileCode" entityTypeId="++3qwBhS2etxm001" id="008wacGi2es18003" mandatory="0" multiplicity="SINGLE_OR_NULL" name="NuveenStateDomicileCode" nameSpace="NUVEEN"/>
+    <beField class="BETEXT" customDesc="" desc="" displayCaption="NuveenBBCreditRiskProvinceStateOfIncorp" entityTypeId="++3qwBhS2etxm001" id="++8ze2My2es1800B" mandatory="0" multiplicity="SINGLE_OR_NULL" name="NuveenBBCreditRiskProvinceStateOfIncorp" nameSpace="NUVEEN"/>
+    <beField class="BETEXT" customDesc="" desc="" displayCaption="NuveenBBCreditRiskTerritryStateOfIncorp" entityTypeId="++3qwBhS2etxm001" id="++8ze2My2es1800S" mandatory="0" multiplicity="SINGLE_OR_NULL" name="NuveenBBCreditRiskTerritryStateOfIncorp" nameSpace="NUVEEN"/>
+    <beField class="BETEXT" customDesc="" desc="" displayCaption="NuveenBBCreditRiskUnknwnCntryOfIncorp" entityTypeId="++3qwBhS2etxm001" id="008zD6dC2es1800-" mandatory="0" multiplicity="SINGLE_OR_NULL" name="NuveenBBCreditRiskUnknwnCntryOfIncorp" nameSpace="NUVEEN"/>
+    <beField class="BETEXT" customDesc="" desc="" displayCaption="NuveenBBCreditRiskUnknwnCntryOfRisk" entityTypeId="++3qwBhS2etxm001" id="008zD6dC2es1801B" mandatory="0" multiplicity="SINGLE_OR_NULL" name="NuveenBBCreditRiskUnknwnCntryOfRisk" nameSpace="NUVEEN"/>
+    <beField class="BETEXT" customDesc="" desc="" displayCaption="Nuveen CreditScope CreditAnalyst" entityTypeId="++3qwBhS2etxm001" id="008ztWaC2es18003" mandatory="0" multiplicity="SINGLE_OR_NULL" name="NuveenCreditScopeCreditAnalyst" nameSpace="NUVEEN"/>
+    <beField class="BETEXT" customDesc="" customDomainSQL="SELECT PRNT_GU_ID CODE, GU_NME DISPLAY_NAME FROM FT_T_GUNT WHERE PRNT_GU_TYP = 'CITY' AND PRNT_GU_CNT = '1' AND END_TMS IS null AND CNTRY_CDE in ('US', 'CA') order by GU_NME" desc="" displayCaption="Credit City" entityTypeId="++3qwBhS2etxm001" id="009V00nC2etbS00v" mandatory="0" multiplicity="SINGLE_OR_NULL" name="NuveenCreditCity" nameSpace="NUVEEN"/>
+    <beField class="BETEXT" customDesc="" customDomainSQL="SELECT PRNT_GU_ID CODE, GU_NME DISPLAY_NAME FROM FT_T_GUNT WHERE PRNT_GU_TYP = 'STATE' AND PRNT_GU_CNT = '1' AND END_TMS IS null AND CNTRY_CDE in ('US', 'CA') order by GU_NME" desc="" displayCaption="Credit State" entityTypeId="++3qwBhS2etxm001" id="009V00nC2etbS00i" mandatory="0" multiplicity="SINGLE_OR_NULL" name="NuveenCreditState" nameSpace="NUVEEN"/>
+    <beField class="BETEXT" customDesc="" desc="" displayCaption="Merritt Credit Name" entityTypeId="++3qwBhS2etxm001" id="009V00nC2etbS00L" mandatory="0" multiplicity="SINGLE_OR_NULL" name="NuveenMerrittCreditName" nameSpace="NUVEEN"/>
+    <beField class="BETEXT" customDesc="" desc="" displayCaption="Country Of Risk Name" entityTypeId="++3qwBhS2etxm001" id="009Yxoci2etbS009" mandatory="0" multiplicity="SINGLE_OR_NULL" name="CountryOfRiskName" nameSpace="NUVEEN"/>
+    <beField class="BETEXT" customDesc="" desc="" displayCaption="Country Of Incorporation Name" entityTypeId="++3qwBhS2etxm001" id="009Yxoci2etbS00C" mandatory="0" multiplicity="SINGLE_OR_NULL" name="CountryOfIncorporationName" nameSpace="NUVEEN"/>
+    <beField class="BETEXT" customDesc="" desc="" displayCaption="Country Of Domicile Name" entityTypeId="++3qwBhS2etxm001" id="009Yxoci2etbS00G" mandatory="0" multiplicity="SINGLE_OR_NULL" name="CountryOfDomicileName" nameSpace="NUVEEN"/>
+    <beField class="BETEXT" customDesc="Provides the legal name of a company as determined by a registry, company filing, or company website formatted to meet internal Bloomberg standards. Standards include but are not limited to modifications to cover location, abbreviations to adhere to space constraints, and addition of legal form. May not be the same as the brand name or &quot;doing business as&quot; name. Related to information returned from Bloomberg Company Identifier (ID035, ID_BB_COMPANY). " desc="The official long name of the company, index, or other entity." displayCaption="Institution Name" entityTypeId="++3qwBhS2etxm001" id="005k2kDC2etqS04Y" mandatory="0" multiplicity="MULTIPLE" name="InstitutionName" nameSpace="GSC"/>
+    <beField class="BETEXT  " customDesc="Bloomberg Entity Identifier for the ultimate parent company-level entity. This field will have a 1-1 relationship with the Ultimate Parent Company Id (ID110, ID_BB_ULTIMATE_PARENT_CO) field for the included issuer types.        Ultimate parent is derived through companies linked together to form a corporate tree. Each linking is one step up to the next company level. When there is no further linking that last company will pull in as the ultimate parent. Companies can be linked for various reasons. It could be a subsidiary (the company is owned directly by greater than 50%), indirect subsidiary (owned by greater than 50% but the direct parent is not known), related entity (there is a known relationship but cannot be defined by any of our other relationships), integrated (the company was acquired and integrated into an existing business and no longer exists). The ultimate parent is the top company in this chain regardless of the relationship. " desc="Bloomberg Global Company Id" displayCaption="BB Global Company Id" entityTypeId="++3qwBhS2etxm001" id="005k2kDC2etqS027" mandatory="0" multiplicity="SINGLE_OR_NULL" name="BBGlobalCompanyId" nameSpace="GSC"/>
+    <beField class="BETEXT" customDesc="Bloomberg Company ID number for the ultimate parent company.        Ultimate parent is derived through companies linked together to form a corporate tree.  Each linking is one step up to the next company level.  When there is no further linking that last company will pull in as the ultimate parent.  Each time a company is linked to another company their relationship is defined in the Parent Relationship (DX296, COMPANY_TO_PARENT_RELATIONSHIP) return.  This field is very important to look at in conjunction with the parent field when building a corporate tree.  Companies can be linked for various reasons.  It could be a subsidiary (the company is owned directly by greater than 50%), indirect subsidiary (owned by greater than 50% but the direct parent is not known), related entity (there is a known relationship but cannot be defined by any of our other relationships) Integrated (the company was acquired and integrated into an existing business and no longer exists).  The Ultimate parent is the top company in this chain regardless of the relationship. " desc="Bloomberg Company ID" displayCaption="BB Company ID" entityTypeId="++3qwBhS2etxm001" id="++4MN34y2etri00Y" mandatory="0" multiplicity="SINGLE_OR_NULL" name="BBCompanyID" nameSpace="GSC"/>
+    <beField class="BETEXT  " customDesc="Legal entity identifier (LEI) displayed as a 20-character, alpha-numeric code that uniquely identifies legally distinct entities that engage in financial transactions.The LEI is mandated under multiple regulatory regimes such as Dodd-Frank Act and MiFID II.        Please see https://lei.bloomberg.com.        Note: Where the branch office does not have its own LEI the direct parent's LEI when available will be returned.        This field does not return for Non equity listed derivative instruments. " desc="Legal entity identifier (LEI) as mandated by the Dodd Frank Act; designed to create a standard entity identification system. " displayCaption="Legal Entity Identifier" entityTypeId="++3qwBhS2etxm001" id="++4cGUjy2etv400D" mandatory="0" multiplicity="SINGLE_OR_NULL" name="FinancialLegalEntityIdentifier" nameSpace="GSC"/>
+    <beField class="BETEXT  " customDesc="Specifies the Bloomberg company identifier of the ultimate CAST (Capital Structure) Parent. The name of the Parent is available using CAST Parent Name (DZ030, CAST_PARENT_NAME). " desc="Bank Identification Code" displayCaption="Bank Identification Code" entityTypeId="++3qwBhS2etxm001" id="005y3VbC2etvy009" mandatory="0" multiplicity="SINGLE_OR_NULL" name="BIC" nameSpace="GSC"/>
+    <beField class="BETEXT" displayCaption="External ObligorID" entityTypeId="++3qwBhS2etxm001" id="008mcntC2etbS03I" mandatory="0" multiplicity="SINGLE_OR_NULL" name="EXTObligorID" nameSpace="NUVEEN"/>
+    <beField class="BETEXT" displayCaption="Obligor ID" entityTypeId="++3qwBhS2etxm001" id="008mcntC2etbS03U" mandatory="0" multiplicity="SINGLE_OR_NULL" name="ObligorID" nameSpace="NUVEEN"/>
+    <beField class="BETEXT" displayCaption="CR Issuer Code" entityTypeId="++3qwBhS2etxm001" id="008mcntC2etbS03f" mandatory="0" multiplicity="SINGLE_OR_NULL" name="CRIssuerCode" nameSpace="NUVEEN"/>
+    <beField class="BETEXT" displayCaption="External Code" entityTypeId="++3qwBhS2etxm001" id="008mcntC2etbS06k" mandatory="0" multiplicity="SINGLE_OR_NULL" name="ExternalIssuerCode" nameSpace="NUVEEN"/>
+    <beField class="BETEXT" customDesc="" desc="" displayCaption="Nuveen Global Issuer ID" entityTypeId="++3qwBhS2etxm001" id="008pRKBC2etbS00H" mandatory="0" multiplicity="SINGLE_AND_READONLY" name="NuveenGlobalIssuerId" nameSpace="NUVEEN"/>
+    <beField class="BETEXT" displayCaption="NuveenIssuerAliasId" entityTypeId="++3qwBhS2etxm001" id="008pRKBC2etbS00M" mandatory="0" multiplicity="SINGLE_OR_NULL" name="NuveenIssuerAliasId" nameSpace="NUVEEN"/>
+    <beField class="BETEXT" displayCaption="NuveenUltimateParentBBCompanyID" entityTypeId="++3qwBhS2etxm001" id="++8rQuaS2es1800+" mandatory="0" multiplicity="SINGLE_OR_NULL" name="NuveenUltimateParentBBCompanyID" nameSpace="NUVEEN"/>
+    <beField class="BETEXT" customDesc="" desc="" displayCaption="CreditScope Credit ID" entityTypeId="++3qwBhS2etxm001" id="008tVu+C2es18006" mandatory="0" multiplicity="SINGLE_OR_NULL" name="SystemCreditID" nameSpace="NUVEEN"/>
+    <beField class="BEDATE" customDesc="" desc="" displayCaption="NuveenBBCMPYIDLastChgTms" entityTypeId="++3qwBhS2etxm001" id="++8uJAVS2es18001" mandatory="0" multiplicity="SINGLE_OR_NULL" name="NuveenBBCMPYIDLastChgTms" nameSpace="NUVEEN"/>
+    <beField class="BETEXT" customDesc="" desc="" displayCaption="Nuveen Issuer InternalID" entityTypeId="++3qwBhS2etxm001" id="008zD6dC2es18005" mandatory="0" multiplicity="SINGLE_OR_NULL" name="NuveenIssuerInternalID" nameSpace="NUVEEN"/>
+    <beField class="BETEXT" customDesc="" desc="" displayCaption="Nuveen MSCICOID" entityTypeId="++3qwBhS2etxm001" id="008zD6dC2es1800j" mandatory="0" multiplicity="SINGLE_OR_NULL" name="NuveenMSCICOID" nameSpace="NUVEEN"/>
+    <beField class="BETEXT" customDesc="Internal ID assigned to an Issuer" desc="" displayCaption="Nuveen LRD Issuer ID" entityTypeId="++3qwBhS2etxm001" id="++9GzIaS2etbS008" mandatory="0" multiplicity="SINGLE_OR_NULL" name="NuveenLRDIssuerID" nameSpace="NUVEEN"/>
+    <beField class="BETEXT" customDesc="" desc="" displayCaption="Credit Number" entityTypeId="++3qwBhS2etxm001" id="009V00nC2etbS00G" mandatory="0" multiplicity="SINGLE_OR_NULL" name="NuveenCreditNumber" nameSpace="NUVEEN"/>
+    <beField class="BETEXT" customDesc="" desc="" displayCaption="Hub Credit ID" entityTypeId="++3qwBhS2etxm001" id="009V00nC2etbS00B" mandatory="0" multiplicity="SINGLE_OR_NULL" name="NuveenHubCreditId" nameSpace="NUVEEN"/>
+    <beField class="BETEXT" customDesc="" desc="" displayCaption="Merritt Credit ID" entityTypeId="++3qwBhS2etxm001" id="009V00nC2etbS006" mandatory="0" multiplicity="SINGLE_OR_NULL" name="NuveenMerrittCreditId" nameSpace="NUVEEN"/>
+    <beField class="BETEXT" customDomainSQL="select CL_VALUE CODE, cl_value || ' - ' ||cl_nme DISPLAY_NAME FROM FT_T_INCL where INDUS_CL_SET_ID ='GICS' AND LEVEL_NUM = '1' AND END_TMS IS NULL" customSQL="select CL_VALUE CODE, CONCAT( CONCAT(CL_VALUE , ' - '  ) , CL_NME ) DISPLAY_NAME FROM FT_T_INCL where INDUS_CL_SET_ID ='GICS' AND LEVEL_NUM = '1' AND END_TMS IS NULL" desc="GICS Sector" displayCaption="GICS Sector" entityTypeId="++3qwBhS2etxm001" id="++5ckBRS2etse05O" mandatory="0" multiplicity="SINGLE_OR_NULL" name="GICSSector" nameSpace="GSC"/>
+    <beField class="BETEXT" customDomainSQL="select CL_VALUE CODE, cl_value || ' - ' ||cl_nme DISPLAY_NAME FROM FT_T_INCL where INDUS_CL_SET_ID ='GICS' AND LEVEL_NUM = '2' AND END_TMS IS NULL" customSQL="select CL_VALUE CODE, CONCAT( CONCAT(CL_VALUE , ' - '  ) , CL_NME ) DISPLAY_NAME FROM FT_T_INCL where INDUS_CL_SET_ID ='GICS' AND LEVEL_NUM = '2' AND END_TMS IS NULL" desc="GICS Industry Group" displayCaption="GICS Industry Group" entityTypeId="++3qwBhS2etxm001" id="++5ckBRS2etse04S" mandatory="0" multiplicity="SINGLE_OR_NULL" name="GICSIndustryGroup" nameSpace="GSC"/>
+    <beField class="BETEXT" customDomainSQL="select CL_VALUE CODE, cl_value || ' - ' ||cl_nme DISPLAY_NAME FROM FT_T_INCL where INDUS_CL_SET_ID ='GICS' AND LEVEL_NUM = '3' AND END_TMS IS NULL" customSQL="select CL_VALUE CODE, CONCAT( CONCAT(CL_VALUE , ' - '  ) , CL_NME ) DISPLAY_NAME FROM FT_T_INCL where INDUS_CL_SET_ID ='GICS' AND LEVEL_NUM = '3' AND END_TMS IS NULL" desc="Code representing the new S&amp;P/MSCI company classification scheme. Referred to as GICS." displayCaption="GICS Industry" entityTypeId="++3qwBhS2etxm001" id="++5ckBRS2etse04w" mandatory="0" multiplicity="SINGLE_OR_NULL" name="GICSIndustry" nameSpace="GSC"/>
+    <beField class="BETEXT" customDomainSQL="select CL_VALUE CODE, cl_value || ' - ' ||cl_nme DISPLAY_NAME FROM FT_T_INCL where INDUS_CL_SET_ID ='GICS' AND LEVEL_NUM = '4' AND END_TMS IS NULL" customSQL="select CL_VALUE CODE, CONCAT( CONCAT(CL_VALUE , ' - '  ) , CL_NME ) DISPLAY_NAME FROM FT_T_INCL where INDUS_CL_SET_ID ='GICS' AND LEVEL_NUM = '4' AND END_TMS IS NULL" desc="GICS Sub-industry" displayCaption="GICS Sub-industry" entityTypeId="++3qwBhS2etxm001" id="++5ckBRS2etse05y" mandatory="0" multiplicity="SINGLE_OR_NULL" name="GICSSubIndustry" nameSpace="GSC"/>
+    <beField class="BETEXT  " customDesc="Fix in GS and Eagle | Legacy BICS (Bloomberg Industry Classification System) level I classification of the security based on its business or economic function and characteristics. The sector is one level above the Industry Group (DS201, INDUSTRY_GROUP). The numeric version of this field is Industry Sector Number (DS289, INDUSTRY_SECTOR_NUM).         See Classification Level 1 Name (BI071, CLASSIFICATION_LEVEL_1_NAME) used in conjunction with Classification Scheme Name (DY841, CLASSIFICATION_SCHEME) set to 'BICS' to view the current BICS scheme.        Mortgages:      Industry Sector Number (DS289, INDUSTRY_SECTOR_NUM) is not available for mortgages.        US agencies:    Under the equity yellow key, this field returns the industry sector that the company is in. Under the Corp yellow key, this field will display a &quot;sovereign&quot; classification. " customSQL="select CL_VALUE CODE, CL_NME DISPLAY_NAME FROM FT_T_INCL where INDUS_CL_SET_ID ='BBINDSEC' AND LEVEL_NUM IS NULL AND END_TMS IS NULL" desc="BICS (Bloomberg Industry Classification System) level I classification of the institution based on its business or economic function and characteristics." displayCaption="BICS Level I" entityTypeId="++3qwBhS2etxm001" id="005kiLnC2etqS010" mandatory="0" multiplicity="SINGLE_OR_NULL" name="BICSLevelI" nameSpace="GSC"/>
+    <beField class="BETEXT  " customDesc="Fix in GS and Eagle | Legacy BICS (Bloomberg Industry Classification System) level II classification of the security based on its business or economic function and characteristics. The group is one level below the Industry Sector (DS199, INDUSTRY_SECTOR) and one level above the Industry Subgroup (DS202, INDUSTRY_SUBGROUP). The numeric version of this field is Industry Group Number (DS287, INDUSTRY_GROUP_NUM).         See Classification Level 2 Name (BI072, CLASSIFICATION_LEVEL_2_NAME) used in conjunction with Classification Scheme Name (DY841, CLASSIFICATION_SCHEME) set to 'BICS' to view the current BICS scheme.          Mortgages:      Industry Group Number (DS287, INDUSTRY_GROUP_NUM) is not available for mortgages.        US agencies:    Under the equity yellow key, this field returns the industry sector that the company is in. Under the Corp yellow key, this field will display a &quot;sovereign&quot; classification.        For mortgage securities within the Single Security Initiative of Fannie Mae and Freddie Mac, various descriptive fields reflect changes that became effective upon the market implementation of the Single Security Initiative in June 2019. " customSQL="select CL_VALUE CODE, CL_NME DISPLAY_NAME FROM FT_T_INCL where INDUS_CL_SET_ID ='BBINDGRP' AND LEVEL_NUM IS NULL AND END_TMS IS NULL" desc="BICS (Bloomberg Industry Classification System) level II classification of the institution based on its business or economic function and characteristics." displayCaption="BICS Level II" entityTypeId="++3qwBhS2etxm001" id="005kiLnC2etqS01K" mandatory="0" multiplicity="SINGLE_OR_NULL" name="BICSLevelII" nameSpace="GSC"/>
+    <beField class="BETEXT  " customDesc="Fix in GS and Eagle | Legacy BICS (Bloomberg Industry Classification System) level III classification of the security based on its business or economic function and characteristics. The subgroup is one level below the Industry Group (DS201, INDUSTRY_GROUP). The numeric version of this field is Industry Subgroup Number (DS288, INDUSTRY_SUBGROUP_NUM).         See Classification Level 3 Name (BI073, CLASSIFICATION_LEVEL_3_NAME) used in conjunction with Classification Scheme Name (DY841, CLASSIFICATION_SCHEME) set to 'BICS' to view the current BICS scheme.        US agencies:    Under the equity yellow key, this field returns the industry sector that the company is in. Under the Corp yellow key, this field will display a &quot;sovereign&quot; classification.        For mortgage securities within the Single Security Initiative of Fannie Mae and Freddie Mac, various descriptive fields reflect changes that became effective upon the market implementation of the Single Security Initiative in June 2019. " customSQL="select CL_VALUE CODE, CL_NME DISPLAY_NAME FROM FT_T_INCL where INDUS_CL_SET_ID ='BBINDSGR' AND LEVEL_NUM IS NULL AND END_TMS IS NULL" desc="BICS (Bloomberg Industry Classification System) level III classification of the issuer based on its business or economic function and characteristics." displayCaption="BICS Level III" entityTypeId="++3qwBhS2etxm001" id="005kiLnC2etqS01i" mandatory="0" multiplicity="SINGLE_OR_NULL" name="BICSLevelIII" nameSpace="GSC"/>
+    <beField class="BETEXT" customDomainSQL="select CL_VALUE CODE, cl_value || ' - ' ||cl_nme DISPLAY_NAME FROM FT_T_INCL where INDUS_CL_SET_ID ='RGCDINSC' AND LEVEL_NUM IS NULL AND END_TMS IS NULL" customSQL="select CL_VALUE CODE, CONCAT( CONCAT(CL_VALUE , ' - '  ) , CL_NME ) DISPLAY_NAME FROM FT_T_INCL where INDUS_CL_SET_ID ='RGCDINSC' AND LEVEL_NUM IS NULL AND END_TMS IS NULL" desc="Code assigned by Refinitiv identifying the industry of the institution." displayCaption="Industrial Sector" entityTypeId="++3qwBhS2etxm001" id="++5pqIIS2etne00g" mandatory="0" multiplicity="SINGLE_OR_NULL" name="IndustrialSector" nameSpace="GSC"/>
+    <beField class="BETEXT" customDomainSQL="select CL_VALUE CODE, cl_value || ' - ' ||cl_nme DISPLAY_NAME FROM FT_T_INCL where INDUS_CL_SET_ID ='RGCDINSU' AND LEVEL_NUM IS NULL AND END_TMS IS NULL" customSQL="select CL_VALUE CODE, CONCAT( CONCAT(CL_VALUE , ' - '  ) , CL_NME ) DISPLAY_NAME FROM FT_T_INCL where INDUS_CL_SET_ID ='RGCDINSU' AND LEVEL_NUM IS NULL AND END_TMS IS NULL" desc="Code assigned by Refinitiv representing a further breakdown of the industry of the institution." displayCaption="Industrial Sub-Sector" entityTypeId="++3qwBhS2etxm001" id="++5pqIIS2etne014" mandatory="0" multiplicity="SINGLE_OR_NULL" name="IndustrialSubSector" nameSpace="GSC"/>
+    <beField class="BETEXT" customDomainSQL="select CL_VALUE CODE, cl_value || ' - ' ||cl_nme DISPLAY_NAME FROM FT_T_INCL where INDUS_CL_SET_ID ='FTSE' AND LEVEL_NUM IS NULL AND END_TMS IS NULL" customSQL="select CL_VALUE CODE, CONCAT( CONCAT(CL_VALUE , ' - '  ) , CL_NME ) DISPLAY_NAME FROM FT_T_INCL where INDUS_CL_SET_ID ='FTSE' AND LEVEL_NUM IS NULL AND END_TMS IS NULL" desc="FTSE Industrial Classification Code" displayCaption="FTSE Industrial Classification Code" entityTypeId="++3qwBhS2etxm001" id="++5puVHS2etne019" mandatory="0" multiplicity="SINGLE_OR_NULL" name="FTSEIndustrialClassification" nameSpace="GSC"/>
+    <beField class="BETEXT" customDomainSQL="SELECT CL_VALUE CODE, cl_value || ' - ' ||cl_nme DISPLAY_NAME FROM FT_T_INCL WHERE INDUS_CL_SET_ID ='NACE' AND LEVEL_NUM = '4' AND END_TMS IS NULL" customSQL="SELECT CL_VALUE CODE, CONCAT( CONCAT(CL_VALUE , ' - '  ) , CL_NME ) DISPLAY_NAME FROM FT_T_INCL WHERE INDUS_CL_SET_ID ='NACE' AND LEVEL_NUM = '4' AND END_TMS IS NULL" displayCaption="NACE Class Code" entityTypeId="++3qwBhS2etxm001" id="++8VhdZy2es3801t" mandatory="0" multiplicity="SINGLE_OR_NULL" name="NACEClassCode" nameSpace="GSC"/>
+    <beField class="BETEXT" customDomainSQL="select CL_VALUE CODE, cl_value || ' - ' ||cl_nme DISPLAY_NAME FROM FT_T_INCL WHERE INDUS_CL_SET_ID ='NACE' AND LEVEL_NUM = '2' AND END_TMS IS NULL" customSQL="select CL_VALUE CODE, CONCAT( CONCAT(CL_VALUE , ' - '  ) , CL_NME ) DISPLAY_NAME FROM FT_T_INCL WHERE INDUS_CL_SET_ID ='NACE' AND LEVEL_NUM = '2' AND END_TMS IS NULL" displayCaption="NACE Division Code" entityTypeId="++3qwBhS2etxm001" id="++8VhdZy2es3801r" mandatory="0" multiplicity="SINGLE_OR_NULL" name="NACEDivisionCode" nameSpace="GSC"/>
+    <beField class="BETEXT" customDomainSQL="SELECT CL_VALUE CODE, cl_value || ' - ' ||cl_nme DISPLAY_NAME FROM FT_T_INCL WHERE INDUS_CL_SET_ID ='NACE' AND LEVEL_NUM = '3' AND END_TMS IS NULL" customSQL="SELECT CL_VALUE CODE, CONCAT( CONCAT(CL_VALUE , ' - '  ) , CL_NME ) DISPLAY_NAME FROM FT_T_INCL WHERE INDUS_CL_SET_ID ='NACE' AND LEVEL_NUM = '3' AND END_TMS IS NULL" displayCaption="NACE Group Code" entityTypeId="++3qwBhS2etxm001" id="++8VhdZy2es3801s" mandatory="0" multiplicity="SINGLE_OR_NULL" name="NACEGroupCode" nameSpace="GSC"/>
+    <beField class="BETEXT" customDomainSQL="SELECT CL_VALUE CODE, cl_value || ' - ' ||cl_nme DISPLAY_NAME FROM FT_T_INCL WHERE INDUS_CL_SET_ID ='NACE' AND LEVEL_NUM = '1' AND END_TMS IS NULL" customSQL="SELECT CL_VALUE CODE, CONCAT( CONCAT(CL_VALUE , ' - '  ) , CL_NME ) DISPLAY_NAME FROM FT_T_INCL WHERE INDUS_CL_SET_ID ='NACE' AND LEVEL_NUM = '1' AND END_TMS IS NULL" displayCaption="NACE Sector Code" entityTypeId="++3qwBhS2etxm001" id="++8VhdZy2es3801q" mandatory="0" multiplicity="SINGLE_OR_NULL" name="NACESectorCode" nameSpace="GSC"/>
+    <beField class="BETEXT" customDomainSQL="select CL_VALUE CODE, cl_value || ' - ' ||cl_nme DISPLAY_NAME FROM FT_T_INCL where INDUS_CL_SET_ID ='MDYBRDBL' AND END_TMS IS NULL" customSQL="select CL_VALUE CODE, CONCAT( CONCAT(CL_VALUE , ' - '  ) , CL_NME ) DISPLAY_NAME FROM FT_T_INCL where INDUS_CL_SET_ID ='MDYBRDBL' AND END_TMS IS NULL" desc="This field stores the Moody's Broad Business Line Code." displayCaption="Moody's Broad Business Line Code" entityTypeId="++3qwBhS2etxm001" id="++8cCHMy2es2C00d" mandatory="0" multiplicity="SINGLE_OR_NULL" name="MoodyBroadBusinessLineCode" nameSpace="GSC"/>
+    <beField class="BETEXT" customDomainSQL="select CL_VALUE CODE, cl_value || ' - ' ||cl_nme DISPLAY_NAME FROM FT_T_INCL where INDUS_CL_SET_ID ='MDYSPCBL' AND END_TMS IS NULL" customSQL="select CL_VALUE CODE, CONCAT( CONCAT(CL_VALUE , ' - '  ) , CL_NME ) DISPLAY_NAME FROM FT_T_INCL where INDUS_CL_SET_ID ='MDYSPCBL' AND END_TMS IS NULL" desc="This field stores the Moody's Specific Business Line Code" displayCaption="Moody's Specific Business Line Code" entityTypeId="++3qwBhS2etxm001" id="++8cCHMy2es2C00a" mandatory="0" multiplicity="SINGLE_OR_NULL" name="MoodySpecificBusinessLineCode" nameSpace="GSC"/>
+    <beField class="BETEXT" customDomainSQL="select CL_VALUE CODE, cl_value || ' - ' ||cl_nme DISPLAY_NAME FROM FT_T_INCL where INDUS_CL_SET_ID ='SIC' AND LEVEL_NUM = '1' AND END_TMS IS NULL" customSQL="select CL_VALUE CODE, CONCAT( CONCAT(CL_VALUE , ' - '  ) , CL_NME) DISPLAY_NAME FROM FT_T_INCL where INDUS_CL_SET_ID ='SIC' AND LEVEL_NUM = '1' AND END_TMS IS NULL" desc="Industry of the Financial institution based on the Bureau of the Budget SIC code." displayCaption="SIC Code - Level 1" entityTypeId="++3qwBhS2etxm001" id="++8cCHMy2es2C01A" mandatory="0" multiplicity="SINGLE_OR_NULL" name="SICCodeLevel1" nameSpace="GSC"/>
+    <beField class="BETEXT" customDomainSQL="select CL_VALUE CODE, cl_value || ' - ' ||cl_nme DISPLAY_NAME FROM FT_T_INCL where INDUS_CL_SET_ID ='SIC' AND LEVEL_NUM = '3' AND END_TMS IS NULL" customSQL="select CL_VALUE CODE, CONCAT( CONCAT(CL_VALUE , ' - '  ) , CL_NME) DISPLAY_NAME FROM FT_T_INCL where INDUS_CL_SET_ID ='SIC' AND LEVEL_NUM = '3' AND END_TMS IS NULL" desc="Industry of the Financial institution based on the Bureau of the Budget SIC code." displayCaption="SIC Code - Level 3" entityTypeId="++3qwBhS2etxm001" id="++8cCHMy2es2C017" mandatory="0" multiplicity="SINGLE_OR_NULL" name="SICCodeLevel3" nameSpace="GSC"/>
+    <beField class="BETEXT" customDesc="" desc="" displayCaption="Nuveen Rusell Sector Code" entityTypeId="++3qwBhS2etxm001" id="008zD6dC2es1800G" mandatory="0" multiplicity="SINGLE_OR_NULL" name="NuveenRusellSectorCode" nameSpace="NUVEEN"/>
+    <beField class="BETEXT" customDesc="" desc="" displayCaption="Nuveen Russell Industry Code" entityTypeId="++3qwBhS2etxm001" id="008zD6dC2es1800U" mandatory="0" multiplicity="SINGLE_OR_NULL" name="NuveenRussellIndustryCode" nameSpace="NUVEEN"/>
+    <beField class="BETEXT" customDesc="" customDomainSQL="select CL_VALUE CODE, CL_NME DISPLAY_NAME FROM FT_T_INCL where INDUS_CL_SET_ID ='NUVSECCDE' AND END_TMS IS NULL" desc="" displayCaption="Security Code" entityTypeId="++3qwBhS2etxm001" id="009V00nC2etbS013" mandatory="0" multiplicity="SINGLE_OR_NULL" name="NuveenSecurityCode" nameSpace="NUVEEN"/>
+    <beField class="BETEXT" customDesc="" customDomainSQL="select CL_VALUE CODE, CL_NME DISPLAY_NAME FROM FT_T_INCL where INDUS_CL_SET_ID ='MRTSECNUM' AND END_TMS IS NULL" desc="" displayCaption="Merritt Sector Name" entityTypeId="++3qwBhS2etxm001" id="009V00nC2etbS01Q" mandatory="0" multiplicity="SINGLE_OR_NULL" name="NuveenMerrittSectorName" nameSpace="NUVEEN"/>
+    <beField class="BETEXT" customDesc="" customDomainSQL="select CL_VALUE CODE, CL_NME || ' - ' || CL_VALUE DISPLAY_NAME FROM FT_T_INCL where INDUS_CL_SET_ID ='NUVSECNUM' AND END_TMS IS NULL" desc="" displayCaption="Muni Sector Code" entityTypeId="++3qwBhS2etxm001" id="009V00nC2etbS01D" mandatory="0" multiplicity="SINGLE_OR_NULL" name="NuveenMuniSectorCode" nameSpace="NUVEEN"/>
+    <beField class="BETEXT" customDesc="" desc="" displayCaption="Muni Sector Name" entityTypeId="++3qwBhS2etxm001" id="009V00nC2etbS01H" mandatory="0" multiplicity="SINGLE_AND_READONLY" name="NuveenMuniSectorName" nameSpace="NUVEEN"/>
+    <beField class="BEDATE" customDesc="This field displays the latest available period end date.  The latest period end date could be from the latest annual, quarterly or semi-annual period, depending on the company.  This field does not require a full financial update, it will take a date from a partial update (i.e., an earnings record only.) " desc="This field identifies the latest available period end date.  This could be from the latest annual, quarterly or semi-annual period, depending on the company." displayCaption="Most Recent Period End Date" entityTypeId="++3qwBhS2etxm001" id="++4JeV8S2ettS00S" mandatory="0" multiplicity="MULTIPLE_OR_NULL" name="MostRecentPeriodEndDate" nameSpace="GSC"/>
+    <beField class="BEDATE" customDesc="Latest available period end date from full financial records. The latest period end date could be from the latest annual, quarterly or semi-annual period, depending on the company. It can be overridden using Fundamental Period (DS323, FUND_PER) and Equity Fundamental Year (DS324, EQY_FUND_YEAR) to display the period end date for a specific period and year. " desc="Latest Period End Date From Full Records" displayCaption="Latest Period End Date From Full Records" entityTypeId="++3qwBhS2etxm001" id="++4JeV8S2ettS00T" mandatory="0" multiplicity="MULTIPLE_OR_NULL" name="LatestPeriodEndDateFromFullRecords" nameSpace="GSC"/>
+    <beField class="BEDEC   " customDesc="Total Amount outstanding for all bonds and loans of the Current Issuer and all its Subsidiaries denominated in the same currency as displayed in DDIS&lt;GO&gt; on the Bloomberg Professional Service. Due to constant fluctuations in the exchange rates, this amount may not exactly match the total amount outstanding for self and subs in DDIS&lt;GO&gt;. " desc="This field stores the current amount of the total outstanding company debt." displayCaption="Total Outstanding Debt Amount" entityTypeId="++3qwBhS2etxm001" id="++5x3xMy2etvy00n" mandatory="0" multiplicity="MULTIPLE_OR_NULL" name="TotalOutstandingDebtAmount" nameSpace="GSC"/>
+    <beField class="BETEXT" customDesc="Date on which the next earnings report should occur. The report date is the date the company makes its earnings public, not the date that the quarterly, semi-annual or annual report is issued. The type and time of the expected announcement, Expected Earnings Report Type (DS787, EXPECTED_REPORT_TYP) and Expected Earnings Report Time (DS788, EXPECTED_REPORT_TIME) further detail the data.  The reporting period this date applies to can be found in Expected Earnings Report Period (DX486, EXPECTED_REPORT_PERIOD).        The last earnings report date can be retrieved by setting the Equity Fundamental Relative Period (DX243, EQY_FUND_RELATIVE_PERIOD) override to a value of '-1F'.        This is a date field, the value for which is returned in the user's time zone if it is specified. Except for values 'Bef-mkt' and 'Aft-mkt' that are in the exchange time zone as reported. " desc="This field contains the period covered by the expected earnings announcement.  Sample values include first quarter, second quarter, third quarter, fourth quarter, first quarter through fourth quarter, cumulative first quarter through fourth quarter, first half, second half, first and second semi-annual, and annual." displayCaption="Expected Earnings Announce Period" entityTypeId="++3qwBhS2etxm001" id="++8rtOhy2es2C03p" mandatory="0" multiplicity="MULTIPLE_OR_NULL" name="ExpectedEarningsAnnouncePeriod" nameSpace="GSC"/>
+    <beField class="BETEXT" displayCaption="NuveenIssuerNumericalRating" entityTypeId="++3qwBhS2etxm001" id="008rkJdi2es18009" mandatory="0" multiplicity="MULTIPLE" name="NuveenIssuerNumericalRating" nameSpace="NUVEEN"/>
+    <beField class="BETEXT" displayCaption="NuveenIssuerProvider" entityTypeId="++3qwBhS2etxm001" id="008rkJdi2es1800F" mandatory="0" multiplicity="MULTIPLE" name="NuveenIssuerProvider" nameSpace="NUVEEN"/>
+    <beField class="BETEXT" displayCaption="NuveenIssuerRatingTypeInd" entityTypeId="++3qwBhS2etxm001" id="008rkJdi2es1800I" mandatory="0" multiplicity="MULTIPLE" name="NuveenIssuerRatingTypeInd" nameSpace="NUVEEN"/>
+    <beField class="BETEXT" displayCaption="NuveenIssuerSrcIntfcInst" entityTypeId="++3qwBhS2etxm001" id="008rkJdi2es1800C" mandatory="0" multiplicity="MULTIPLE_OR_NULL" name="NuveenIssuerSrcIntfcInst" nameSpace="NUVEEN"/>
+    <beField class="BEDATE" displayCaption="NuveenFinsRatingStartTms" entityTypeId="++3qwBhS2etxm001" id="008rpY3i2es18001" mandatory="0" multiplicity="MULTIPLE" name="NuveenFinsRatingStartTms" nameSpace="NUVEEN"/>
+    <beField class="BETEXT" customDesc="" desc="" displayCaption="WL Accuring Interest" entityTypeId="++3qwBhS2etxm001" id="009W0UpC2etbS003" mandatory="0" multiplicity="MULTIPLE_OR_NULL" name="NuveenCreditWLAccruingInterest" nameSpace="NUVEEN"/>
+    <beField class="BETEXT" customDesc="" desc="" displayCaption="WL Forbearance" entityTypeId="++3qwBhS2etxm001" id="009W0UpC2etbS008" mandatory="0" multiplicity="MULTIPLE_OR_NULL" name="NuveenCreditWLForbearance" nameSpace="NUVEEN">
+      <domainValue beFieldId="009W0UpC2etbS008" domainValueName="Yes" domainValueTxt="Yes" id="009W0UpC2etbS019" nameSpace="NUVEEN"/>
+      <domainValue beFieldId="009W0UpC2etbS008" domainValueName="No" domainValueTxt="No" id="009W0UpC2etbS01A" nameSpace="NUVEEN"/>
+    </beField>
+    <beField class="BETEXT" customDesc="" desc="" displayCaption="WL Tier" entityTypeId="++3qwBhS2etxm001" id="009W0UpC2etbS00I" mandatory="0" multiplicity="MULTIPLE_OR_NULL" name="NuveenCreditWLTier" nameSpace="NUVEEN">
+      <domainValue beFieldId="009W0UpC2etbS00I" domainValueName="1" domainValueTxt="1" id="009W0UpC2etbS013" nameSpace="NUVEEN"/>
+      <domainValue beFieldId="009W0UpC2etbS00I" domainValueName="2" domainValueTxt="2" id="009W0UpC2etbS014" nameSpace="NUVEEN"/>
+      <domainValue beFieldId="009W0UpC2etbS00I" domainValueName="3" domainValueTxt="3" id="009W0UpC2etbS015" nameSpace="NUVEEN"/>
+      <domainValue beFieldId="009W0UpC2etbS00I" domainValueName="4" domainValueTxt="4" id="009W0UpC2etbS016" nameSpace="NUVEEN"/>
+      <domainValue beFieldId="009W0UpC2etbS00I" domainValueName="5" domainValueTxt="5" id="009W0UpC2etbS017" nameSpace="NUVEEN"/>
+      <domainValue beFieldId="009W0UpC2etbS00I" domainValueName="6" domainValueTxt="6" id="009W0UpC2etbS018" nameSpace="NUVEEN"/>
+    </beField>
+    <beField class="BETEXT" customDesc="" desc="" displayCaption="WL Monetary Default" entityTypeId="++3qwBhS2etxm001" id="009W0UpC2etbS00D" mandatory="0" multiplicity="MULTIPLE_OR_NULL" name="NuveenWLCreditWLMonetaryDefault" nameSpace="NUVEEN">
+      <domainValue beFieldId="009W0UpC2etbS00D" domainValueName="Yes" domainValueTxt="Yes" id="009W0UpC2etbS011" nameSpace="NUVEEN"/>
+      <domainValue beFieldId="009W0UpC2etbS00D" domainValueName="No" domainValueTxt="No" id="009W0UpC2etbS012" nameSpace="NUVEEN"/>
+    </beField>
+    <beField class="BETEXT" customDesc="" desc="" displayCaption="WL Cusip" entityTypeId="++3qwBhS2etxm001" id="009ZiFQC2etbS00D" mandatory="0" multiplicity="MULTIPLE_OR_NULL" name="NuveenWLCusip" nameSpace="NUVEEN"/>
+    <beField class="BEDATE" displayCaption="NuveenOutlookLastChgTms" entityTypeId="++3qwBhS2etxm001" id="++8tcO2S2es1800F" mandatory="0" multiplicity="MULTIPLE_OR_NULL" name="NuveenOutlookLastChgTms" nameSpace="NUVEEN"/>
+    <beField class="BEDATE" displayCaption="NuveenOutlookStartTms" entityTypeId="++3qwBhS2etxm001" id="++8tcO2S2es1800H" mandatory="0" multiplicity="MULTIPLE_OR_NULL" name="NuveenOutlookStartTms" nameSpace="NUVEEN"/>
+    <beField class="BETEXT" displayCaption="NuveenOutlookProvider" entityTypeId="++3qwBhS2etxm001" id="++8tcO2S2es1800N" mandatory="0" multiplicity="MULTIPLE_OR_NULL" name="NuveenOutlookProvider" nameSpace="NUVEEN"/>
+    <beField class="BEDATE" displayCaption="NuveenInstRelLastChangeDateTime" entityTypeId="++3qwBhS2etxm001" id="008rkJdi2es1800P" mandatory="0" multiplicity="MULTIPLE" name="NuveenInstRelLastChangeDateTime" nameSpace="NUVEEN"/>
+    <beField class="BEDATE" displayCaption="FFRL Start date" entityTypeId="++3qwBhS2etxm001" id="++8th9Ky2es18001" mandatory="0" multiplicity="MULTIPLE_OR_NULL" name="NuveenFFRLStartTms" nameSpace="NUVEEN"/>
+    <beField class="BETEXT" customDesc="Name of analyst approving issuer for short term trading" displayCaption="Approved Issuer Analyst" entityTypeId="++3qwBhS2etxm001" id="++8mAsYy2etbS002" mandatory="0" multiplicity="SINGLE_OR_NULL" name="ApprovedIssuerAnalyst" nameSpace="NUVEEN"/>
+    <beField class="BEDATE" customDesc="Date approved for short term trading" displayCaption="Approved Issuer Date" entityTypeId="++3qwBhS2etxm001" id="++8mAsYy2etbS006" mandatory="0" multiplicity="SINGLE_OR_NULL" name="ApprovedIssuerDate" nameSpace="NUVEEN"/>
+    <beField class="BETEXT" customDomainSQL="SELECT INTRNL_DMN_VAL_TXT CODE, INTRNL_DMN_VAL_NME DISPLAY_NAME FROM FT_T_IDMV WHERE FLD_DATA_CL_ID='IND' AND INTRNL_DMN_VAL_TXT IN ('Y','N')" displayCaption="Socially Responsible Flag" entityTypeId="++3qwBhS2etxm001" id="++8mAsYy2etbS004" mandatory="0" multiplicity="SINGLE_OR_NULL" name="SociallyResponsibleFlag" nameSpace="NUVEEN"/>
+    <beField class="BETEXT" customDesc="Credit Analyst Defined Industry Sector" displayCaption="Credit Analyst Defined Industry Sector" entityTypeId="++3qwBhS2etxm001" id="++8mAsYy2etbS008" mandatory="0" multiplicity="SINGLE_OR_NULL" name="CreditAnalystDefinedIndustrySector" nameSpace="NUVEEN"/>
+    <beField class="BETEXT" customDesc="" desc="" displayCaption="WSO Issuer Private Indicator" entityTypeId="++3qwBhS2etxm001" id="++8yWQsy2es1800E" mandatory="0" multiplicity="SINGLE_OR_NULL" name="NuveenWSOIssuerPrivateIndicator" nameSpace="NUVEEN"/>
+    <beField class="BETEXT" customDesc="The ticker of the parent company controlling the issuer of the current security. Returns the ticker of the direct (immediate) parent company if applicable. If no immediate parent company exists, the field will return blank.        Index:       Returns the associated parent index ticker for derived or hedged indices. " desc="Parent Ticker" displayCaption="Parent Ticker" entityTypeId="++3qwBhS2etxm001" id="=000866350" mandatory="0" multiplicity="SINGLE_OR_NULL" name="NuveenParentTicker" nameSpace="NUVEEN"/>
+    <beField class="BEDATE" customDesc="The latest earnings or sales quarterly announcement date. " desc="Latest Quarterly Announcement Date" displayCaption="Latest Quarterly Announcement Date" entityTypeId="++3qwBhS2etxm001" id="=000866351" mandatory="0" multiplicity="SINGLE_OR_NULL" name="NuveenLatestQuarterlyAnnouncementDate" nameSpace="NUVEEN"/>
+    <beField class="BEDEC" displayCaption="NuveenTotalCommonEquity" entityTypeId="++3qwBhS2etxm001" id="008m2pmi2etbS00C" mandatory="0" multiplicity="SINGLE_OR_NULL" name="NuveenTotalCommonEquity" nameSpace="NUVEEN"/>
+    <beField class="BETEXT" customDesc="" desc="" displayCaption="NuveenFinsAddressLine1" entityTypeId="++3qwBhS2etxm001" id="008wMoui2es18006" mandatory="0" multiplicity="SINGLE_OR_NULL" name="NuveenFinsAddressLine1" nameSpace="NUVEEN"/>
+    <beField class="BETEXT" customDesc="" desc="" displayCaption="NuveenFinsAddressLine2" entityTypeId="++3qwBhS2etxm001" id="008wMoui2es18008" mandatory="0" multiplicity="SINGLE_OR_NULL" name="NuveenFinsAddressLine2" nameSpace="NUVEEN"/>
+    <beField class="BETEXT" customDesc="" desc="" displayCaption="NuveenFinsCityOrTownName" entityTypeId="++3qwBhS2etxm001" id="008wMoui2es1800B" mandatory="0" multiplicity="SINGLE_OR_NULL" name="NuveenFinsCityOrTownName" nameSpace="NUVEEN"/>
+    <beField class="BETEXT" customDesc="" desc="" displayCaption="NuveenFinsStateOrProvinceName" entityTypeId="++3qwBhS2etxm001" id="008wMoui2es1800E" mandatory="0" multiplicity="SINGLE_OR_NULL" name="NuveenFinsStateOrProvinceName" nameSpace="NUVEEN"/>
+    <beField class="BETEXT" customDesc="" desc="" displayCaption="NuveenFinsPostalCode" entityTypeId="++3qwBhS2etxm001" id="008wMoui2es1800O" mandatory="0" multiplicity="SINGLE_OR_NULL" name="NuveenFinsPostalCode" nameSpace="NUVEEN"/>
+    <beField class="BETEXT" customDesc="" desc="" displayCaption="NuveenFinsCountryName" entityTypeId="++3qwBhS2etxm001" id="008wMoui2es1800R" mandatory="0" multiplicity="SINGLE_OR_NULL" name="NuveenFinsCountryName" nameSpace="NUVEEN"/>
+    <beField class="BETEXT" customDesc="" desc="" displayCaption="NuveenMuniCreditAddress" entityTypeId="++3qwBhS2etxm001" id="++8yuMXy2es18001" mandatory="0" multiplicity="SINGLE_OR_NULL" name="NuveenMuniCreditAddress" nameSpace="NUVEEN"/>
+    <beField class="BETEXT" customDesc="" desc="" displayCaption="Role" entityTypeId="++3qwBhS2etxm001" id="009V00nC2etbS04Q" mandatory="0" multiplicity="MULTIPLE_OR_NULL" name="NuveenFinsEmployeeRoleType" nameSpace="NUVEEN"/>
+    <beField class="BETEXT" customDesc="" desc="" displayCaption="Indenture" entityTypeId="++3qwBhS2etxm001" id="009V00nC2etbS00R" mandatory="0" multiplicity="SINGLE_OR_NULL" name="NuveenIndenture" nameSpace="NUVEEN"/>
+    <beField class="BETEXT" customDesc="" desc="" displayCaption="Indenture Number" entityTypeId="++3qwBhS2etxm001" id="009V00nC2etbS00W" mandatory="0" multiplicity="SINGLE_OR_NULL" name="NuveenIndentureNumber" nameSpace="NUVEEN"/>
+    <beField class="BETEXT" customDesc="" customDomainSQL="SELECT DOMAIN_VAL_TXT CODE, DOMAIN_VAL_NME DISPLAY_NAME FROM FT_T_STDV WHERE STAT_DEF_ID = 'NVNESGEL'" desc="" displayCaption="ESG Ineligible" entityTypeId="++3qwBhS2etxm001" id="009V00nC2etbS01g" mandatory="0" multiplicity="SINGLE_OR_NULL" name="NuveenESGIneligible" nameSpace="NUVEEN"/>
+    <beField class="BEINT" customDesc="" desc="" displayCaption="Nuveen ESG Score" entityTypeId="++3qwBhS2etxm001" id="009V00nC2etbS01n" mandatory="0" multiplicity="SINGLE_OR_NULL" name="NuveenESGScore" nameSpace="NUVEEN"/>
+    <beField class="BEDATE" customDesc="" desc="" displayCaption="ESG Score Date" entityTypeId="++3qwBhS2etxm001" id="009V00nC2etbS01l" mandatory="0" multiplicity="SINGLE_OR_NULL" name="NuveenESGScoredate" nameSpace="NUVEEN"/>
+    <beField class="BETEXT" customDesc="" customDomainSQL="SELECT PRNT_GU_ID CODE, GU_NME || ' - ' || PRNT_GU_ID DISPLAY_NAME FROM FT_T_GUNT WHERE PRNT_GU_TYP = 'COUNTY' AND PRNT_GU_CNT = '1' AND END_TMS IS null and last_chg_usr_id like '%NUVEEN%' order by GU_NME" desc="" displayCaption="GNIS County Code" entityTypeId="++3qwBhS2etxm001" id="009V00nC2etbS01z" mandatory="0" multiplicity="SINGLE_OR_NULL" name="NuveenGNISCountyCode" nameSpace="NUVEEN"/>
+    <beField class="BETEXT" customDesc="" desc="" displayCaption="GNIS County Name" entityTypeId="++3qwBhS2etxm001" id="009V00nC2etbS021" mandatory="0" multiplicity="SINGLE_AND_READONLY" name="NuveenGNISCountyName" nameSpace="NUVEEN"/>
+    <beField class="BETEXT" customDesc="" customDomainSQL="SELECT PRNT_GU_ID CODE, GU_NME || ' - ' || PRNT_GU_ID DISPLAY_NAME FROM FT_T_GUNT WHERE PRNT_GU_TYP = 'FEATURE' AND PRNT_GU_CNT = '1' AND END_TMS IS null and last_chg_usr_id like '%NUVEEN%' order by GU_NME" desc="" displayCaption="GNIS Feature ID" entityTypeId="++3qwBhS2etxm001" id="009V00nC2etbS02E" mandatory="0" multiplicity="SINGLE_OR_NULL" name="NuveenGNISFeatureCode" nameSpace="NUVEEN"/>
+    <beField class="BETEXT" customDesc="" desc="" displayCaption="GNIS Feature Name" entityTypeId="++3qwBhS2etxm001" id="009V00nC2etbS02H" mandatory="0" multiplicity="SINGLE_AND_READONLY" name="NuveenGNISFeatureName" nameSpace="NUVEEN"/>
+    <beField class="BETEXT" customDesc="" customDomainSQL="SELECT GUNT.PRNT_GU_ID CODE, GUNT.GU_NME || ' - ' || GUID.GEO_UNIT_ID DISPLAY_NAME FROM FT_T_GUNT GUNT, FT_T_GUID GUID WHERE GUNT.PRNT_GU_TYP = 'STATE' AND GUNT.PRNT_GU_CNT = '1' AND GUNT.END_TMS IS null AND GUNT.CNTRY_CDE in ('US', 'CA') and GUNT.PRNT_GU_ID = GUID.GU_ID and GUID.GU_ID_CTXT_TYP = 'GNIS' and GUID.END_TMS is null order by GUNT.GU_NME" desc="" displayCaption="GNIS State Code" entityTypeId="++3qwBhS2etxm001" id="009V00nC2etbS02a" mandatory="0" multiplicity="SINGLE_OR_NULL" name="NuveenGNISStateCode" nameSpace="NUVEEN"/>
+    <beField class="BETEXT" customDesc="" desc="" displayCaption="GNIS State Name" entityTypeId="++3qwBhS2etxm001" id="009V00nC2etbS02d" mandatory="0" multiplicity="SINGLE_AND_READONLY" name="NuveenGNISStateName" nameSpace="NUVEEN"/>
+    <beField class="BETEXT" customDesc="" customDomainSQL="SELECT DOMAIN_VAL_TXT CODE, DOMAIN_VAL_NME DISPLAY_NAME FROM FT_T_STDV WHERE STAT_DEF_ID = 'NVNESGMD'" desc="" displayCaption="ESG Model" entityTypeId="++3qwBhS2etxm001" id="009ZiFQC2etbS001" mandatory="0" multiplicity="SINGLE_OR_NULL" name="NuveenESGModel" nameSpace="NUVEEN"/>
+    <beField class="BETEXT" customDesc="" desc="" displayCaption="Agency ID" entityTypeId="++3qwBhS2etxm001" id="009V00nC2etbS02i" mandatory="0" multiplicity="SINGLE_OR_NULL" name="NuveenAgencyID" nameSpace="NUVEEN"/>
+    <beField class="BEDEC" customDesc="" desc="" displayCaption="Par Issued" entityTypeId="++3qwBhS2etxm001" id="009V00nC2etbS02n" mandatory="0" multiplicity="SINGLE_OR_NULL" name="NuveenParIssued" nameSpace="NUVEEN"/>
+    <beField class="BETEXT" customDesc="" customDomainSQL="SELECT DOMAIN_VAL_TXT CODE, DOMAIN_VAL_NME DISPLAY_NAME FROM FT_T_STDV WHERE STAT_DEF_ID = 'NVNMNPCR'" desc="" displayCaption="MNPI Credit" entityTypeId="++3qwBhS2etxm001" id="009V00nC2etbS01b" mandatory="0" multiplicity="SINGLE_OR_NULL" name="NuveenMNPICredit" nameSpace="NUVEEN"/>
+    <beField class="BETEXT" customDesc="" customDomainSQL="SELECT DOMAIN_VAL_TXT CODE, DOMAIN_VAL_NME DISPLAY_NAME FROM FT_T_STDV WHERE STAT_DEF_ID = 'NVNDBTST'" desc="" displayCaption="Debt Structure Rating" entityTypeId="++3qwBhS2etxm001" id="009V00nC2etbS01W" mandatory="0" multiplicity="SINGLE_OR_NULL" name="NuveenDebtStructureRating" nameSpace="NUVEEN"/>
+    <beField class="BETEXT" customDesc="" customDomainSQL="SELECT DOMAIN_VAL_TXT CODE, DOMAIN_VAL_NME DISPLAY_NAME FROM FT_T_STDV WHERE STAT_DEF_ID = 'NVNWHOWN'" desc="" displayCaption="Wholly Owned" entityTypeId="++3qwBhS2etxm001" id="009W0UpC2etbS00N" mandatory="0" multiplicity="SINGLE_OR_NULL" name="NuveenCreditWhollyOwned" nameSpace="NUVEEN"/>
+    <beField class="BETEXT" customDesc="" desc="" displayCaption="Credit Report Comments" entityTypeId="++3qwBhS2etxm001" id="009VgZli2etbS00R" mandatory="0" multiplicity="MULTIPLE_OR_NULL" name="NuveenCreditReportComment" nameSpace="NUVEEN"/>
+    <beField class="BEDATE" customDesc="" desc="" displayCaption="Credit Report Date" entityTypeId="++3qwBhS2etxm001" id="009VgZli2etbS00P" mandatory="0" multiplicity="MULTIPLE_OR_NULL" name="NuveenCreditReportDate" nameSpace="NUVEEN"/>
+    <beField class="BEDATE" customDesc="" desc="" displayCaption="Credit Report Info Date" entityTypeId="++3qwBhS2etxm001" id="009VgZli2etbS00C" mandatory="0" multiplicity="MULTIPLE_OR_NULL" name="NuveenCreditReportInfoDate" nameSpace="NUVEEN"/>
+    <beField class="BETEXT" customDesc="" desc="" displayCaption="Credit Report Jnuveen Long Rating" entityTypeId="++3qwBhS2etxm001" id="009VgZli2etbS00A" mandatory="0" multiplicity="MULTIPLE_OR_NULL" name="NuveenCreditReportLongRating" nameSpace="NUVEEN"/>
+    <beField class="BETEXT" customDesc="" desc="" displayCaption="Credit Report Number" entityTypeId="++3qwBhS2etxm001" id="009VgZli2etbS00N" mandatory="0" multiplicity="MULTIPLE_OR_NULL" name="NuveenCreditReportNumber" nameSpace="NUVEEN"/>
+    <beField class="BETEXT" customDesc="" desc="" displayCaption="Credit Report Jnuveen Outlook" entityTypeId="++3qwBhS2etxm001" id="009VgZli2etbS00L" mandatory="0" multiplicity="MULTIPLE_OR_NULL" name="NuveenCreditReportOutlook" nameSpace="NUVEEN"/>
+    <beField class="BETEXT" customDesc="" desc="" displayCaption="Credit Report Rationale" entityTypeId="++3qwBhS2etxm001" id="009VgZli2etbS00I" mandatory="0" multiplicity="MULTIPLE_OR_NULL" name="NuveenCreditReportRationale" nameSpace="NUVEEN">
+      <fieldConfig id="009VgZli2etbS00J" nameSpace="NUVEEN" type="TEXT_DISPLAY" value="TEXTAREA"/>
+    </beField>
+    <beField class="BETEXT" customDesc="" desc="" displayCaption="Credit Report Status" entityTypeId="++3qwBhS2etxm001" id="009VgZli2etbS00G" mandatory="0" multiplicity="MULTIPLE_OR_NULL" name="NuveenCreditReportStatus" nameSpace="NUVEEN"/>
+    <beField class="BETEXT" customDesc="" desc="" displayCaption="Credit Report Type" entityTypeId="++3qwBhS2etxm001" id="009VgZli2etbS00E" mandatory="0" multiplicity="MULTIPLE_OR_NULL" name="NuveenCreditreportType" nameSpace="NUVEEN"/>
+    <beField class="BETEXT" customDesc="" desc="" displayCaption="Credit Report Sources" entityTypeId="++3qwBhS2etxm001" id="++9Zo7Qy2etbS001" mandatory="0" multiplicity="MULTIPLE_OR_NULL" name="NuveenCreditReportSource" nameSpace="NUVEEN"/>
+  </beFields>
+  <dataGroups>
+    <dataGroup customInd="0" desc="Institution Details" displayCaption="Institution Details" entityTypeId="++3qwBhS2etxm001" frequencyInd="0" id="++4eFFHy2etv4014" ignoreDeleteChildren="false" multiplicity="SINGLE_OR_NULL" name="FinancialInstitutionDetails" nameSpace="GSC">
+      <part beRelationId="008s8K1C2es18004" defNameSpace="NUVEEN" id="008s8K1C2es18005" label="Issuer" prntReqdInd="0" seq="7"/>
+      <part beRelationId="009ZtXqi2etbS000" defNameSpace="NUVEEN" id="009ZtXqi2etbS004" label="NuveenCreditCityRel" prntReqdInd="0" seq="8"/>
+      <part beRelationId="009ZtXqi2etbS008" defNameSpace="NUVEEN" id="009ZtXqi2etbS00C" label="NuveenSecurityCodeRel" prntReqdInd="0" seq="9"/>
+      <part defNameSpace="NUVEEN" fieldId="008qNIli2es1800Z" id="008qNIli2es1800q" prntReqdInd="0" seq="63"/>
+      <part defNameSpace="NUVEEN" fieldId="008qNIli2es1800k" id="008qNIli2es1800r" prntReqdInd="0" seq="65"/>
+      <part defNameSpace="NUVEEN" fieldId="008wMoui2es1800g" id="008wMoui2es1800r" prntReqdInd="0" seq="66"/>
+      <part defNameSpace="NUVEEN" fieldId="008wacGi2es18003" id="008wacGi2es18005" prntReqdInd="0" seq="67"/>
+      <part defNameSpace="NUVEEN" fieldId="++8ze2My2es1800B" id="++8ze2My2es1800V" prntReqdInd="0" seq="69"/>
+      <part defNameSpace="NUVEEN" fieldId="++8ze2My2es1800S" id="++8ze2My2es1800W" prntReqdInd="0" seq="70"/>
+      <part defNameSpace="NUVEEN" fieldId="008zD6dC2es1800-" id="++8ze2My2es1800X" prntReqdInd="0" seq="71"/>
+      <part defNameSpace="NUVEEN" fieldId="008zD6dC2es1801B" id="++8ze2My2es1800Y" prntReqdInd="0" seq="72"/>
+      <part defNameSpace="NUVEEN" fieldId="008ztWaC2es18003" id="008ztWaC2es18005" prntReqdInd="0" seq="73"/>
+      <part defNameSpace="NUVEEN" fieldId="009V00nC2etbS00v" id="009V00nC2etbS04V" prntReqdInd="0" seq="74"/>
+      <part defNameSpace="NUVEEN" fieldId="009V00nC2etbS00i" id="009V00nC2etbS04W" prntReqdInd="0" seq="75"/>
+      <part defNameSpace="NUVEEN" fieldId="009V00nC2etbS00L" id="009Wttki2etbS001" prntReqdInd="0" seq="76"/>
+      <part defNameSpace="NUVEEN" fieldId="009Yxoci2etbS009" id="++9ZBHIS2etbS000" prntReqdInd="0" seq="77"/>
+      <part defNameSpace="NUVEEN" fieldId="009Yxoci2etbS00C" id="++9ZBHIS2etbS001" prntReqdInd="0" seq="78"/>
+      <part defNameSpace="NUVEEN" fieldId="009Yxoci2etbS00G" id="++9ZBHIS2etbS002" prntReqdInd="0" seq="79"/>
+    </dataGroup>
+    <dataGroup customInd="0" desc="Identifiers" displayCaption="Identifiers" entityTypeId="++3qwBhS2etxm001" frequencyInd="0" id="005kiLnC2etqS024" ignoreDeleteChildren="false" multiplicity="SINGLE_OR_NULL" name="FinancialInstitutionIdentifiers" nameSpace="GSC">
+      <part defNameSpace="NUVEEN" fieldId="008mcntC2etbS03I" id="008mcntC2etbS03Z" prntReqdInd="0" seq="37"/>
+      <part defNameSpace="NUVEEN" fieldId="008mcntC2etbS03U" id="008mcntC2etbS03a" prntReqdInd="0" seq="38"/>
+      <part defNameSpace="NUVEEN" fieldId="008mcntC2etbS03f" id="008mcntC2etbS03h" prntReqdInd="0" seq="39"/>
+      <part defNameSpace="NUVEEN" fieldId="008mcntC2etbS06k" id="008mcntC2etbS06m" prntReqdInd="0" seq="40"/>
+      <part defNameSpace="NUVEEN" fieldId="008pRKBC2etbS00H" id="008pRKBC2etbS00O" prntReqdInd="0" seq="41"/>
+      <part defNameSpace="NUVEEN" fieldId="008pRKBC2etbS00M" id="008pRKBC2etbS00P" prntReqdInd="0" seq="42"/>
+      <part defNameSpace="NUVEEN" fieldId="++8rQuaS2es1800+" id="++8rQuaS2es18011" prntReqdInd="0" seq="43"/>
+      <part defNameSpace="NUVEEN" fieldId="008tVu+C2es18006" id="008tVu+C2es1800B" prntReqdInd="0" seq="44"/>
+      <part defNameSpace="NUVEEN" fieldId="++8uJAVS2es18001" id="++8uJAVS2es18003" prntReqdInd="0" seq="45"/>
+      <part defNameSpace="NUVEEN" fieldId="008zD6dC2es18005" id="008zD6dC2es1800Z" prntReqdInd="0" seq="46"/>
+      <part defNameSpace="NUVEEN" fieldId="008zD6dC2es1800j" id="008zD6dC2es1800l" prntReqdInd="0" seq="47"/>
+      <part defNameSpace="NUVEEN" fieldId="++9GzIaS2etbS008" id="++9GzIaS2etbS007" prntReqdInd="0" seq="48"/>
+      <part defNameSpace="NUVEEN" fieldId="009V00nC2etbS00G" id="009V00nC2etbS04D" prntReqdInd="0" seq="49"/>
+      <part defNameSpace="NUVEEN" fieldId="009V00nC2etbS00B" id="009V00nC2etbS04E" prntReqdInd="0" seq="50"/>
+      <part defNameSpace="NUVEEN" fieldId="009V00nC2etbS006" id="009V00nC2etbS04F" prntReqdInd="0" seq="51"/>
+    </dataGroup>
+    <dataGroup customInd="0" desc="Classification" displayCaption="Classification" entityTypeId="++3qwBhS2etxm001" frequencyInd="0" id="++5ckBRS2etse00o" ignoreDeleteChildren="false" multiplicity="SINGLE_OR_NULL" name="FinancialInstitutionClassification" nameSpace="GSC">
+      <part defNameSpace="NUVEEN" fieldId="008zD6dC2es1800G" id="008zD6dC2es1800X" prntReqdInd="0" seq="38"/>
+      <part defNameSpace="NUVEEN" fieldId="008zD6dC2es1800U" id="008zD6dC2es1800Y" prntReqdInd="0" seq="39"/>
+      <part defNameSpace="NUVEEN" fieldId="009V00nC2etbS013" id="009V00nC2etbS04b" prntReqdInd="0" seq="40"/>
+      <part defNameSpace="NUVEEN" fieldId="009V00nC2etbS01Q" id="009V00nC2etbS04c" prntReqdInd="0" seq="41"/>
+      <part defNameSpace="NUVEEN" fieldId="009V00nC2etbS01D" id="009V00nC2etbS04d" prntReqdInd="0" seq="42"/>
+      <part defNameSpace="NUVEEN" fieldId="009V00nC2etbS01H" id="009V00nC2etbS04e" prntReqdInd="0" seq="43"/>
+    </dataGroup>
+    <dataGroup customInd="0" desc="Ratings" displayCaption="Ratings" entityTypeId="++3qwBhS2etxm001" frequencyInd="0" id="005lCprC2etqS00c" ignoreDeleteChildren="false" multiplicity="MULTIPLE_OR_NULL" name="Ratings" nameSpace="GSC">
+      <part defNameSpace="NUVEEN" fieldId="008rkJdi2es18009" id="008rkJdi2es1800K" prntReqdInd="1" seq="35"/>
+      <part defNameSpace="NUVEEN" fieldId="008rkJdi2es1800F" id="008rkJdi2es1800L" prntReqdInd="1" seq="36"/>
+      <part defNameSpace="NUVEEN" fieldId="008rkJdi2es1800I" id="008rkJdi2es1800M" prntReqdInd="1" seq="39"/>
+      <part defNameSpace="NUVEEN" fieldId="008rkJdi2es1800C" id="008rkJdi2es1800N" prntReqdInd="0" seq="40"/>
+      <part defNameSpace="NUVEEN" fieldId="008rpY3i2es18001" id="008rpY3i2es18003" prntReqdInd="1" seq="41"/>
+    </dataGroup>
+    <dataGroup customInd="0" desc="Watch Opinion" displayCaption="Watch Opinion" entityTypeId="++3qwBhS2etxm001" frequencyInd="0" id="005lCprC2etqS01F" ignoreDeleteChildren="false" multiplicity="MULTIPLE_OR_NULL" name="WatchOpinion" nameSpace="GSC">
+      <part defNameSpace="NUVEEN" fieldId="009W0UpC2etbS003" id="009W0UpC2etbS00z" prntReqdInd="0" seq="9"/>
+      <part defNameSpace="NUVEEN" fieldId="009W0UpC2etbS008" id="009W0UpC2etbS00-" prntReqdInd="0" seq="10"/>
+      <part defNameSpace="NUVEEN" fieldId="009W0UpC2etbS00I" id="009W0UpC2etbS00+" prntReqdInd="0" seq="11"/>
+      <part defNameSpace="NUVEEN" fieldId="009W0UpC2etbS00D" id="009W0UpC2etbS010" prntReqdInd="0" seq="12"/>
+      <part defNameSpace="NUVEEN" fieldId="009ZiFQC2etbS00D" id="009ZiFQC2etbS00F" prntReqdInd="0" seq="13"/>
+    </dataGroup>
+    <dataGroup customInd="0" desc="Outlook Opinion" displayCaption="Outlook Opinion" entityTypeId="++3qwBhS2etxm001" frequencyInd="0" id="005lCprC2etqS01H" ignoreDeleteChildren="false" multiplicity="MULTIPLE_OR_NULL" name="OutlookOpinion" nameSpace="GSC">
+      <part defNameSpace="NUVEEN" fieldId="++8tcO2S2es1800F" id="++8tcO2S2es1800K" prntReqdInd="0" seq="9"/>
+      <part defNameSpace="NUVEEN" fieldId="++8tcO2S2es1800H" id="++8tcO2S2es1800L" prntReqdInd="0" seq="10"/>
+      <part defNameSpace="NUVEEN" fieldId="++8tcO2S2es1800N" id="++8tcO2S2es1800R" prntReqdInd="0" seq="11"/>
+    </dataGroup>
+    <dataGroup customInd="0" desc="All Financial Institution Relations" displayCaption="All Institution Relations" entityTypeId="++3qwBhS2etxm001" frequencyInd="0" id="++6SWIZS2etrC01w" ignoreDeleteChildren="false" multiplicity="MULTIPLE_OR_NULL" name="AllInstitutionRelations" nameSpace="GSC">
+      <part defNameSpace="NUVEEN" fieldId="008rkJdi2es1800P" id="008rkJdi2es1800R" prntReqdInd="1" seq="12"/>
+      <part defNameSpace="NUVEEN" fieldId="++8th9Ky2es18001" id="++8th9Ky2es18003" prntReqdInd="0" seq="14"/>
+    </dataGroup>
+    <dataGroup customInd="0" desc="Nuveen User maintained fields for Issuer/Fins" displayCaption="NuveenIssuerFields" entityTypeId="++3qwBhS2etxm001" frequencyInd="0" id="++8mAsYy2etbS00D" ignoreDeleteChildren="false" multiplicity="SINGLE_OR_NULL" name="NuveenIssuerFields" nameSpace="NUVEEN">
+      <part defNameSpace="NUVEEN" fieldId="++8mAsYy2etbS002" id="++8mAsYy2etbS00E" prntReqdInd="0" seq="0"/>
+      <part defNameSpace="NUVEEN" fieldId="++8mAsYy2etbS006" id="++8mAsYy2etbS00F" prntReqdInd="0" seq="1"/>
+      <part defNameSpace="NUVEEN" fieldId="++8mAsYy2etbS004" id="++8mAsYy2etbS00G" prntReqdInd="0" seq="2"/>
+      <part defNameSpace="NUVEEN" fieldId="++8mAsYy2etbS008" id="++8mAsYy2etbS00H" prntReqdInd="0" seq="3"/>
+      <part defNameSpace="NUVEEN" fieldId="++8yWQsy2es1800E" id="++8yWQsy2es1800G" prntReqdInd="0" seq="4"/>
+      <part defNameSpace="NUVEEN" fieldId="=000866350" id="009IDD4i2etbS01A" prntReqdInd="0" seq="5"/>
+      <part defNameSpace="NUVEEN" fieldId="=000866351" id="009IDD4i2etbS01B" prntReqdInd="0" seq="6"/>
+    </dataGroup>
+    <dataGroup customInd="0" displayCaption="Nuveen Fundamentals And Pricing" entityTypeId="++3qwBhS2etxm001" frequencyInd="0" id="008m2pmi2etbS00A" ignoreDeleteChildren="false" multiplicity="SINGLE_OR_NULL" name="NuveenFundamentalsAndPricing" nameSpace="NUVEEN">
+      <part defNameSpace="NUVEEN" fieldId="008m2pmi2etbS00C" id="008m2pmi2etbS00F" prntReqdInd="0" seq="0"/>
+    </dataGroup>
+    <dataGroup category="" customInd="0" desc="" displayCaption="NuveenAddressDetails" entityTypeId="++3qwBhS2etxm001" frequencyInd="0" id="008wMoui2es1800I" ignoreDeleteChildren="false" multiplicity="SINGLE_OR_NULL" name="NuveenAddressDetails" nameSpace="NUVEEN">
+      <part defNameSpace="NUVEEN" fieldId="008wMoui2es18006" id="008wMoui2es1800J" prntReqdInd="0" seq="0"/>
+      <part defNameSpace="NUVEEN" fieldId="008wMoui2es18008" id="008wMoui2es1800K" prntReqdInd="0" seq="1"/>
+      <part defNameSpace="NUVEEN" fieldId="008wMoui2es1800B" id="008wMoui2es1800L" prntReqdInd="0" seq="2"/>
+      <part defNameSpace="NUVEEN" fieldId="008wMoui2es1800E" id="008wMoui2es1800M" prntReqdInd="0" seq="3"/>
+      <part defNameSpace="NUVEEN" fieldId="008wMoui2es1800O" id="008wMoui2es1800U" prntReqdInd="0" seq="4"/>
+      <part defNameSpace="NUVEEN" fieldId="008wMoui2es1800R" id="008wMoui2es1800V" prntReqdInd="0" seq="5"/>
+      <part defNameSpace="NUVEEN" fieldId="++8yuMXy2es18001" id="++8yuMXy2es18004" prntReqdInd="0" seq="6"/>
+    </dataGroup>
+    <dataGroup category="" customInd="0" desc="" displayCaption="Related Employees" entityTypeId="++3qwBhS2etxm001" frequencyInd="0" id="009V00nC2etbS04L" ignoreDeleteChildren="false" multiplicity="MULTIPLE_OR_NULL" name="NuveenRelatedEmployees" nameSpace="NUVEEN">
+      <part beRelationId="009V00nC2etbS04G" defNameSpace="NUVEEN" id="009V00nC2etbS04M" label="Employee" prntReqdInd="0" seq="0"/>
+      <part defNameSpace="NUVEEN" fieldId="009V00nC2etbS04Q" id="009V00nC2etbS04S" prntReqdInd="0" seq="1"/>
+    </dataGroup>
+    <dataGroup category="" customInd="0" desc="" displayCaption="Indenture" entityTypeId="++3qwBhS2etxm001" frequencyInd="0" id="009V00nC2etbS04Y" ignoreDeleteChildren="false" multiplicity="SINGLE_OR_NULL" name="NuveenIndentureDetails" nameSpace="NUVEEN">
+      <part defNameSpace="NUVEEN" fieldId="009V00nC2etbS00R" id="009V00nC2etbS04Z" prntReqdInd="0" seq="0"/>
+      <part defNameSpace="NUVEEN" fieldId="009V00nC2etbS00W" id="009V00nC2etbS04a" prntReqdInd="0" seq="1"/>
+    </dataGroup>
+    <dataGroup category="" customInd="0" desc="" displayCaption="ESG Details" entityTypeId="++3qwBhS2etxm001" frequencyInd="0" id="009V00nC2etbS04g" ignoreDeleteChildren="false" multiplicity="SINGLE_OR_NULL" name="NuveenESGDetails" nameSpace="NUVEEN">
+      <part defNameSpace="NUVEEN" fieldId="009V00nC2etbS01g" id="009V00nC2etbS04h" prntReqdInd="0" seq="0"/>
+      <part defNameSpace="NUVEEN" fieldId="009V00nC2etbS01n" id="009V00nC2etbS04i" prntReqdInd="0" seq="1"/>
+      <part defNameSpace="NUVEEN" fieldId="009V00nC2etbS01l" id="009V00nC2etbS04j" prntReqdInd="0" seq="2"/>
+      <part defNameSpace="NUVEEN" fieldId="009V00nC2etbS01z" id="009V00nC2etbS04k" prntReqdInd="0" seq="3"/>
+      <part defNameSpace="NUVEEN" fieldId="009V00nC2etbS021" id="009V00nC2etbS04l" prntReqdInd="0" seq="4"/>
+      <part defNameSpace="NUVEEN" fieldId="009V00nC2etbS02E" id="009V00nC2etbS04m" prntReqdInd="0" seq="5"/>
+      <part defNameSpace="NUVEEN" fieldId="009V00nC2etbS02H" id="009V00nC2etbS04n" prntReqdInd="0" seq="6"/>
+      <part defNameSpace="NUVEEN" fieldId="009V00nC2etbS02a" id="009V00nC2etbS04o" prntReqdInd="0" seq="7"/>
+      <part defNameSpace="NUVEEN" fieldId="009V00nC2etbS02d" id="009V00nC2etbS04p" prntReqdInd="0" seq="8"/>
+      <part defNameSpace="NUVEEN" fieldId="009ZiFQC2etbS001" id="009ZiFQC2etbS005" prntReqdInd="0" seq="9"/>
+    </dataGroup>
+    <dataGroup category="" customInd="0" desc="" displayCaption="Other Credit Details" entityTypeId="++3qwBhS2etxm001" frequencyInd="0" id="009V00nC2etbS04r" ignoreDeleteChildren="false" multiplicity="SINGLE_OR_NULL" name="NuveenOtherCreditDetails" nameSpace="NUVEEN">
+      <part defNameSpace="NUVEEN" fieldId="009V00nC2etbS02i" id="009V00nC2etbS04s" prntReqdInd="0" seq="0"/>
+      <part defNameSpace="NUVEEN" fieldId="009V00nC2etbS02n" id="009V00nC2etbS04t" prntReqdInd="0" seq="1"/>
+      <part defNameSpace="NUVEEN" fieldId="009V00nC2etbS01b" id="009V00nC2etbS04u" prntReqdInd="0" seq="2"/>
+      <part defNameSpace="NUVEEN" fieldId="009V00nC2etbS01W" id="009V00nC2etbS04v" prntReqdInd="0" seq="3"/>
+      <part defNameSpace="NUVEEN" fieldId="009W0UpC2etbS00N" id="009W0UpC2etbS00y" prntReqdInd="0" seq="4"/>
+    </dataGroup>
+    <dataGroup category="" customInd="0" desc="" displayCaption="Credit Reports" entityTypeId="++3qwBhS2etxm001" frequencyInd="0" id="009VgZli2etbS00h" ignoreDeleteChildren="false" multiplicity="MULTIPLE_OR_NULL" name="NuveenCreditReports" nameSpace="NUVEEN">
+      <part beRelationId="009VgZli2etbS00U" defNameSpace="NUVEEN" id="009VgZli2etbS00r" label="NuveenCRReviewAnalyst" prntReqdInd="0" seq="0"/>
+      <part beRelationId="009VgZli2etbS00V" defNameSpace="NUVEEN" id="009VgZli2etbS00s" label="NuveenCRResponsibleAnalyst" prntReqdInd="0" seq="1"/>
+      <part beRelationId="009VgZli2etbS00W" defNameSpace="NUVEEN" id="009VgZli2etbS00t" label="NuveenCRAuthor" prntReqdInd="0" seq="2"/>
+      <part defNameSpace="NUVEEN" fieldId="009VgZli2etbS00R" id="009VgZli2etbS00i" prntReqdInd="0" seq="3"/>
+      <part defNameSpace="NUVEEN" fieldId="009VgZli2etbS00P" id="009VgZli2etbS00j" prntReqdInd="0" seq="4"/>
+      <part defNameSpace="NUVEEN" fieldId="009VgZli2etbS00C" id="009VgZli2etbS00k" prntReqdInd="0" seq="5"/>
+      <part defNameSpace="NUVEEN" fieldId="009VgZli2etbS00A" id="009VgZli2etbS00l" prntReqdInd="0" seq="6"/>
+      <part defNameSpace="NUVEEN" fieldId="009VgZli2etbS00N" id="009VgZli2etbS00m" prntReqdInd="0" seq="7"/>
+      <part defNameSpace="NUVEEN" fieldId="009VgZli2etbS00L" id="009VgZli2etbS00n" prntReqdInd="0" seq="8"/>
+      <part defNameSpace="NUVEEN" fieldId="009VgZli2etbS00I" id="009VgZli2etbS00o" prntReqdInd="0" seq="9"/>
+      <part defNameSpace="NUVEEN" fieldId="009VgZli2etbS00G" id="009VgZli2etbS00p" prntReqdInd="0" seq="10"/>
+      <part defNameSpace="NUVEEN" fieldId="009VgZli2etbS00E" id="009VgZli2etbS00q" prntReqdInd="0" seq="11"/>
+      <part defNameSpace="NUVEEN" fieldId="++9Zo7Qy2etbS001" id="++9Zo7Qy2etbS003" prntReqdInd="0" seq="12"/>
+    </dataGroup>
+    <dataGroup category="" customInd="0" desc="" displayCaption="Underlying Issues" entityTypeId="++3qwBhS2etxm001" frequencyInd="0" id="009VgZli2etbS01B" ignoreDeleteChildren="false" multiplicity="MULTIPLE_OR_NULL" name="NuveenLUnderlyingIssues" nameSpace="NUVEEN">
+      <part beRelationId="009VgZli2etbS016" defNameSpace="NUVEEN" id="009VgZli2etbS01C" label="NuveenLinkedIssue" prntReqdInd="0" seq="0"/>
+    </dataGroup>
+    <dataGroup customInd="0" entityTypeId="++3qwBhS2etxm001" frequencyInd="0" id="++4HwLjy2etpy008" ignoreDeleteChildren="false" multiplicity="SINGLE_OR_NULL" name="FinancialInstitution- Root DataGroup" nameSpace="GSC">
+      <part dataGroupId="++8mAsYy2etbS00D" defNameSpace="NUVEEN" id="++8mAsYy2etbS00R" prntReqdInd="0" seq="33"/>
+      <part dataGroupId="008m2pmi2etbS00A" defNameSpace="NUVEEN" id="008m2pmi2etbS009" prntReqdInd="0" seq="36"/>
+      <part dataGroupId="008wMoui2es1800I" defNameSpace="NUVEEN" id="008wMoui2es1800H" prntReqdInd="0" seq="37"/>
+      <part dataGroupId="009V00nC2etbS04L" defNameSpace="NUVEEN" id="009V00nC2etbS04K" prntReqdInd="0" seq="39"/>
+      <part dataGroupId="009V00nC2etbS04Y" defNameSpace="NUVEEN" id="009V00nC2etbS04X" prntReqdInd="0" seq="40"/>
+      <part dataGroupId="009V00nC2etbS04g" defNameSpace="NUVEEN" id="009V00nC2etbS04f" prntReqdInd="0" seq="41"/>
+      <part dataGroupId="009V00nC2etbS04r" defNameSpace="NUVEEN" id="009V00nC2etbS04q" prntReqdInd="0" seq="42"/>
+      <part dataGroupId="009VgZli2etbS00h" defNameSpace="NUVEEN" id="009VgZli2etbS00g" prntReqdInd="0" seq="43"/>
+      <part dataGroupId="009VgZli2etbS01B" defNameSpace="NUVEEN" id="009VgZli2etbS01A" prntReqdInd="0" seq="44"/>
+    </dataGroup>
+    <dataGroup customInd="0" entityTypeId="++3qwBhS2etxm001" frequencyInd="0" id="009V00nC2etbS001" ignoreDeleteChildren="false" multiplicity="SINGLE" name="NuveenCredit- Root DataGroup" nameSpace="NUVEEN"/>
+  </dataGroups>
+  <relations>
+    <relation id="008s8K1C2es18007" name="FT_T_FINS-To-FT_T_ISSR00" nameSpace="NUVEEN" srcTable="FT_T_FINS" tgtTable="FT_T_ISSR">
+      <field fromColumn="INST_MNEM" id="008s8K1C2es18008" nameSpace="NUVEEN" toColumn="FINS_INST_MNEM" type="RELATION_FIELD" valueType="COLUMN"/>
+    </relation>
+    <relation id="009ZtXqi2etbS002" name="FT_T_FIGU-To-FT_T_GUNT02_NVN" nameSpace="NUVEEN" srcTable="FT_T_FIGU" tgtTable="FT_T_GUNT">
+      <field fromColumn="GUNT_OID" id="009ZtXqi2etbS003" nameSpace="NUVEEN" toColumn="GUNT_OID" type="RELATION_FIELD" valueType="COLUMN"/>
+    </relation>
+    <relation id="009ZtXqi2etbS00A" name="FT_T_FICL-To-FT_T_INCL02_NVN" nameSpace="NUVEEN" srcTable="FT_T_FICL" tgtTable="FT_T_INCL">
+      <field fromColumn="CLSF_OID" id="009ZtXqi2etbS00B" nameSpace="NUVEEN" toColumn="CLSF_OID" type="RELATION_FIELD" valueType="COLUMN"/>
+    </relation>
+    <relation id="009W0UpC2etbS00Q" name="FT_T_RTOP-To-FT_T_GNCM_NVN01" nameSpace="NUVEEN" srcTable="FT_T_RTOP" tgtTable="FT_T_GNCM">
+      <field fromColumn="RTOP_OID" id="009W0UpC2etbS00R" nameSpace="NUVEEN" toColumn="CROSS_REF_ID" type="RELATION_FIELD" valueType="COLUMN"/>
+    </relation>
+    <relation id="009V00nC2etbS04I" name="FT_T_EFIR-To-FT_T_EMPL00" nameSpace="NUVEEN" srcTable="FT_T_EFIR" tgtTable="FT_T_EMPL">
+      <field fromColumn="EMPL_OID" id="009V00nC2etbS04J" nameSpace="NUVEEN" toColumn="EMPL_OID" type="RELATION_FIELD" valueType="COLUMN"/>
+    </relation>
+    <relation id="009VgZli2etbS00Y" name="FT_T_NCR1-To-FT_T_EMPL00" nameSpace="NUVEEN" srcTable="FT_T_NCR1" tgtTable="FT_T_EMPL">
+      <field fromColumn="NCR1_REVIEW_EMPL_OID" id="009VgZli2etbS00Z" nameSpace="NUVEEN" toColumn="EMPL_OID" type="RELATION_FIELD" valueType="COLUMN"/>
+    </relation>
+    <relation id="009VgZli2etbS00b" name="FT_T_NCR1-To-FT_T_EMPL01" nameSpace="NUVEEN" srcTable="FT_T_NCR1" tgtTable="FT_T_EMPL">
+      <field fromColumn="NCR1_RESP_EMPL_OID" id="009VgZli2etbS00c" nameSpace="NUVEEN" toColumn="EMPL_OID" type="RELATION_FIELD" valueType="COLUMN"/>
+    </relation>
+    <relation id="009VgZli2etbS00e" name="FT_T_NCR1-To-FT_T_EMPL02" nameSpace="NUVEEN" srcTable="FT_T_NCR1" tgtTable="FT_T_EMPL">
+      <field fromColumn="NCR1_AUTH_EMPL_OID" id="009VgZli2etbS00f" nameSpace="NUVEEN" toColumn="EMPL_OID" type="RELATION_FIELD" valueType="COLUMN"/>
+    </relation>
+    <relation id="009VgZli2etbS018" name="FT_T_FRIP-To-FT_T_ISSU00" nameSpace="NUVEEN" srcTable="FT_T_FRIP" tgtTable="FT_T_ISSU">
+      <field fromColumn="INSTR_ID" id="009VgZli2etbS019" nameSpace="NUVEEN" toColumn="INSTR_ID" type="RELATION_FIELD" valueType="COLUMN"/>
+    </relation>
+  </relations>
+  <occurrences>
+    <occurrence desc="Occurrence for Financial Institution" id="++4HwLjy2etpy00a" ignoreDeleteChildren="false" multiplicity="SINGLE_OR_NULL" name="FINS_01" nameSpace="GSC" table="FT_T_FINS" timeSeries="NONE">
+      <field id="008s8K1C2es18006" nameSpace="NUVEEN" relationId="008s8K1C2es18007"/>
+    </occurrence>
+    <occurrence desc="Occurrence for Geographic Unit" id="++4g31ZS2etoK00B" ignoreDeleteChildren="false" multiplicity="SINGLE_OR_NULL" name="FIGU_CINCRPRTE_GUNT" nameSpace="GSC" parentId="++4g31ZS2etoK001" table="FT_T_GUNT" timeSeries="LOGICAL_DELETE">
+      <field id="009Yxoci2etbS00B" name="GU_NME" nameSpace="NUVEEN"/>
+      <value id="++4g31ZS2etoK00P" name="PRNT_GU_CNT" nameSpace="GSC" type="FILTER_FIELD" value="1" valueType="CONSTANT"/>
+      <value id="++5ZqLUy2etse0Dp" name="PRNT_GU_TYP" nameSpace="GSC" type="FILTER_FIELD" value="COUNTRY" valueType="CONSTANT"/>
+      <option id="++4g31ZS2etoK00K" nameSpace="GSC" type="LOOKUP_ERR_TXT"/>
+      <option id="++4g31ZS2etoK00L" nameSpace="GSC" type="LOOKUP_ERR_LEVEL" value="ERROR"/>
+      <option id="++4g31ZS2etoK00M" nameSpace="GSC" type="LOOKUP_ONLY" value="true"/>
+      <option id="004kbAgC2etzO001" nameSpace="GSC" type="DEFAULT_ACTION" value="REFERENCE"/>
+      <option id="004khXiC2etp0001" nameSpace="GSC" type="LOOKUP_USE_TYPE" value="ATLEAST_ONE_INPUT_FIELD_HAS_VALUE"/>
+      <option id="004kw+7i2etzO00w" nameSpace="GSC" type="DEFAULT_MATCH_KEY" value="GUNT_MATCH_1"/>
+    </occurrence>
+    <occurrence desc="Occurrence for Geographic Unit" id="++5ckBRS2etse02Y" ignoreDeleteChildren="false" multiplicity="SINGLE_OR_NULL" name="FIGU_CDOMICILE_GUNT" nameSpace="GSC" parentId="++5ckBRS2etse02O" table="FT_T_GUNT" timeSeries="LOGICAL_DELETE">
+      <field id="009Yxoci2etbS00F" name="GU_NME" nameSpace="NUVEEN"/>
+      <value id="++5ckBRS2etse02o" name="PRNT_GU_CNT" nameSpace="GSC" type="FILTER_FIELD" value="1" valueType="CONSTANT"/>
+      <value id="++5ckBRS2etse02p" name="PRNT_GU_TYP" nameSpace="GSC" type="FILTER_FIELD" value="COUNTRY" valueType="CONSTANT"/>
+      <option id="++5ckBRS2etse02h" nameSpace="GSC" type="LOOKUP_ERR_TXT"/>
+      <option id="++5ckBRS2etse02i" nameSpace="GSC" type="DEFAULT_MATCH_KEY" value="GUNT_MATCH_1"/>
+      <option id="++5ckBRS2etse02j" nameSpace="GSC" type="LOOKUP_ERR_LEVEL" value="ERROR"/>
+      <option id="++5ckBRS2etse02k" nameSpace="GSC" type="LOOKUP_ONLY" value="true"/>
+    </occurrence>
+    <occurrence desc="Occurrence for Geographic Unit" id="++5ckBRS2etse031" ignoreDeleteChildren="false" multiplicity="SINGLE_OR_NULL" name="FIGU_RISK_GUNT" nameSpace="GSC" parentId="++5ckBRS2etse02t" table="FT_T_GUNT" timeSeries="LOGICAL_DELETE">
+      <field id="009Yxoci2etbS008" name="GU_NME" nameSpace="NUVEEN"/>
+      <value id="++5ckBRS2etse03H" name="PRNT_GU_CNT" nameSpace="GSC" type="FILTER_FIELD" value="1" valueType="CONSTANT"/>
+      <value id="++5ckBRS2etse03I" name="PRNT_GU_TYP" nameSpace="GSC" type="FILTER_FIELD" value="COUNTRY" valueType="CONSTANT"/>
+      <option id="++5ckBRS2etse03A" nameSpace="GSC" type="LOOKUP_ERR_TXT"/>
+      <option id="++5ckBRS2etse03B" nameSpace="GSC" type="DEFAULT_MATCH_KEY" value="GUNT_MATCH_1"/>
+      <option id="++5ckBRS2etse03C" nameSpace="GSC" type="LOOKUP_ERR_LEVEL" value="ERROR"/>
+      <option id="++5ckBRS2etse03D" nameSpace="GSC" type="LOOKUP_ONLY" value="true"/>
+    </occurrence>
+    <occurrence desc="Occurrence for Financial Institution/Geo Unit Prt" id="++8ze2My2es18000" ignoreDeleteChildren="false" multiplicity="SINGLE_OR_NULL" name="NUVEEN_FIGU_PROVINCE_INCRPRTE" nameSpace="NUVEEN" parentId="++4HwLjy2etpy00a" table="FT_T_FIGU" timeSeries="LOGICAL_DELETE">
+      <field id="++8ze2My2es18005" name="GU_ID" nameSpace="NUVEEN"/>
+      <value id="++8ze2My2es18002" name="FINS_GU_PURP_TYP" nameSpace="NUVEEN" type="FILTER_FIELD" value="INCRPRTE" valueType="CONSTANT"/>
+      <value id="++8ze2My2es18003" name="GU_CNT" nameSpace="NUVEEN" type="FILTER_FIELD" value="1" valueType="CONSTANT"/>
+      <value id="++8ze2My2es18004" name="GU_TYP" nameSpace="NUVEEN" type="FILTER_FIELD" value="PROVINCE" valueType="CONSTANT"/>
+      <option id="++8ze2My2es18001" nameSpace="NUVEEN" type="DEFAULT_MATCH_KEY" value="FIGU_GUTP_PURP"/>
+    </occurrence>
+    <occurrence desc="Occurrence for Geographic Unit" id="++8ze2My2es18006" ignoreDeleteChildren="false" multiplicity="SINGLE_OR_NULL" name="NUVEEN_GUNT_PROVINCE_INCRPRTE" nameSpace="NUVEEN" parentId="++8ze2My2es18000" table="FT_T_GUNT" timeSeries="LOGICAL_DELETE">
+      <field id="++8ze2My2es1800A" name="PRNT_GU_ID" nameSpace="NUVEEN"/>
+      <value id="++8ze2My2es18008" name="PRNT_GU_CNT" nameSpace="NUVEEN" type="FILTER_FIELD" value="1" valueType="CONSTANT"/>
+      <value id="++8ze2My2es18009" name="PRNT_GU_TYP" nameSpace="NUVEEN" type="FILTER_FIELD" value="PROVINCE" valueType="CONSTANT"/>
+      <option id="++8ze2My2es18007" nameSpace="NUVEEN" type="DEFAULT_MATCH_KEY" value="GUNT_MATCH_1"/>
+      <option id="++8ze2My2es1800a" nameSpace="NUVEEN" type="DEFAULT_ACTION" value="REFERENCE"/>
+      <option id="++8ze2My2es1800d" nameSpace="NUVEEN" type="LOOKUP_ONLY" value="true"/>
+    </occurrence>
+    <occurrence desc="Occurrence for Financial Institution/Geo Unit Prt" id="++8ze2My2es1800D" ignoreDeleteChildren="false" multiplicity="SINGLE_OR_NULL" name="NUVEEN_FIGU_TERRITRY_INCRPRTE" nameSpace="NUVEEN" parentId="++4HwLjy2etpy00a" table="FT_T_FIGU" timeSeries="LOGICAL_DELETE">
+      <field id="++8ze2My2es1800I" name="GU_ID" nameSpace="NUVEEN"/>
+      <value id="++8ze2My2es1800H" name="FINS_GU_PURP_TYP" nameSpace="NUVEEN" type="FILTER_FIELD" value="INCRPRTE" valueType="CONSTANT"/>
+      <value id="++8ze2My2es1800F" name="GU_CNT" nameSpace="NUVEEN" type="FILTER_FIELD" value="1" valueType="CONSTANT"/>
+      <value id="++8ze2My2es1800G" name="GU_TYP" nameSpace="NUVEEN" type="FILTER_FIELD" value="TERRITRY" valueType="CONSTANT"/>
+      <option id="++8ze2My2es1800E" nameSpace="NUVEEN" type="DEFAULT_MATCH_KEY" value="FIGU_GUTP_PURP"/>
+    </occurrence>
+    <occurrence desc="Occurrence for Geographic Unit" id="++8ze2My2es1800J" ignoreDeleteChildren="false" multiplicity="SINGLE_OR_NULL" name="NUVEEN_GUNT_TERRITRY_INCRPRTE" nameSpace="NUVEEN" parentId="++8ze2My2es1800D" table="FT_T_GUNT" timeSeries="LOGICAL_DELETE">
+      <field id="++8ze2My2es1800N" name="PRNT_GU_ID" nameSpace="NUVEEN"/>
+      <value id="++8ze2My2es1800L" name="PRNT_GU_CNT" nameSpace="NUVEEN" type="FILTER_FIELD" value="1" valueType="CONSTANT"/>
+      <value id="++8ze2My2es1800M" name="PRNT_GU_TYP" nameSpace="NUVEEN" type="FILTER_FIELD" value="TERRITRY" valueType="CONSTANT"/>
+      <option id="++8ze2My2es1800K" nameSpace="NUVEEN" type="DEFAULT_MATCH_KEY" value="GUNT_MATCH_1"/>
+      <option id="++8ze2My2es1800b" nameSpace="NUVEEN" type="DEFAULT_ACTION" value="REFERENCE"/>
+      <option id="++8ze2My2es1800e" nameSpace="NUVEEN" type="LOOKUP_ONLY" value="true"/>
+    </occurrence>
+    <occurrence desc="Occurrence for Financial Institution Statistic" id="008qNIli2es1800W" ignoreDeleteChildren="false" multiplicity="SINGLE_OR_NULL" name="FIST_NVN_ISSRNME" nameSpace="NUVEEN" parentId="++4HwLjy2etpy00a" table="FT_T_FIST" timeSeries="LOGICAL_DELETE">
+      <field id="008qNIli2es1800Y" name="STAT_CHAR_VAL_TXT" nameSpace="NUVEEN"/>
+      <value id="008qNIli2es1800X" name="STAT_DEF_ID" nameSpace="NUVEEN" type="FILTER_FIELD" value="ISSRNME" valueType="CONSTANT"/>
+      <option id="008wvuYi2es1800D" nameSpace="NUVEEN" type="DEFAULT_ACTION" value="UNKNOWN"/>
+    </occurrence>
+    <occurrence desc="Occurrence for Financial Institution Classification" id="008qNIli2es1800b" ignoreDeleteChildren="false" multiplicity="SINGLE_OR_NULL" name="FICL_NVN_ISSRIND" nameSpace="NUVEEN" parentId="++4HwLjy2etpy00a" table="FT_T_FICL" timeSeries="LOGICAL_DELETE">
+      <field id="008qNIli2es1800e" name="CL_VALUE" nameSpace="NUVEEN"/>
+      <value id="008qNIli2es1800d" name="CLSF_PURP_TYP" nameSpace="NUVEEN" type="FILTER_FIELD" value="INDCLASS" valueType="CONSTANT"/>
+      <value id="008qNIli2es1800c" name="INDUS_CL_SET_ID" nameSpace="NUVEEN" type="FILTER_FIELD" value="BBINDCLS" valueType="CONSTANT"/>
+      <option id="008qNIli2es1800o" nameSpace="NUVEEN" type="DEFAULT_MATCH_KEY" value="FICL_MATCH_SET_2"/>
+      <option id="008qNIli2es1800p" nameSpace="NUVEEN" type="DEFAULT_ACTION" value="UNKNOWN"/>
+    </occurrence>
+    <occurrence desc="Occurrence for Industry Classification" id="008qNIli2es1800f" ignoreDeleteChildren="false" multiplicity="SINGLE_OR_NULL" name="FICL_NVN_ISSRIND_INCL" nameSpace="NUVEEN" parentId="008qNIli2es1800b" table="FT_T_INCL" timeSeries="LOGICAL_DELETE">
+      <field id="008qNIli2es1800m" name="CL_VALUE" nameSpace="NUVEEN"/>
+      <value id="008qNIli2es1800h" name="INDUS_CL_SET_ID" nameSpace="NUVEEN" type="FILTER_FIELD" value="BBINDCLS" valueType="CONSTANT"/>
+      <option id="008qNIli2es1800g" nameSpace="NUVEEN" type="LOOKUP_ONLY" value="true"/>
+      <option id="008qNIli2es1800i" nameSpace="NUVEEN" type="DEFAULT_MATCH_KEY" value="INCL_VALUE"/>
+      <option id="008qNIli2es1800j" nameSpace="NUVEEN" type="DEFAULT_ACTION" value="REFERENCE"/>
+    </occurrence>
+    <occurrence desc="Occurrence for Fins/Fins Relationship" id="008wMoui2es1800k" ignoreDeleteChildren="false" multiplicity="SINGLE_OR_NULL" name="FFRL_NVN_ULTBRWR" nameSpace="NUVEEN" parentId="++4HwLjy2etpy00a" relationId="005kiLnC2etqS02A" table="FT_T_FFRL" timeSeries="LOGICAL_DELETE">
+      <value id="008wMoui2es1800l" name="REL_TYP" nameSpace="NUVEEN" type="FILTER_FIELD" value="ULTBRWR" valueType="CONSTANT"/>
+      <option id="008wvuYi2es18003" nameSpace="NUVEEN" type="DEFAULT_ACTION" value="UNKNOWN"/>
+    </occurrence>
+    <occurrence desc="Occurrence for Financial Institution" id="008wMoui2es1800m" ignoreDeleteChildren="false" multiplicity="SINGLE_OR_NULL" name="FINS_NVN_ULTBRWR" nameSpace="NUVEEN" parentId="008wMoui2es1800k" relationId="++6SWIZS2etrC02R" table="FT_T_FINS" timeSeries="LOGICAL_DELETE">
+      <option id="008wvuYi2es18004" nameSpace="NUVEEN" type="DEFAULT_ACTION" value="UNKNOWN"/>
+    </occurrence>
+    <occurrence desc="Occurrence for Financial Institution Identifier" id="008wMoui2es1800n" ignoreDeleteChildren="false" multiplicity="SINGLE_OR_NULL" name="FIID_NVN_ULTBRWR_BBCMPYID" nameSpace="NUVEEN" parentId="008wMoui2es1800m" relationId="005k2kDC2etqS01z" table="FT_T_FIID" timeSeries="LOGICAL_DELETE">
+      <field id="008wMoui2es1800p" name="FINS_ID" nameSpace="NUVEEN"/>
+      <value id="008wMoui2es1800o" name="FINS_ID_CTXT_TYP" nameSpace="NUVEEN" type="FILTER_FIELD" value="BBCMPYID" valueType="CONSTANT"/>
+      <option id="008wvuYi2es18005" nameSpace="NUVEEN" type="DEFAULT_ACTION" value="UNKNOWN"/>
+    </occurrence>
+    <occurrence desc="Occurrence for Financial Institution Statistic" id="008wacGi2es18000" ignoreDeleteChildren="false" multiplicity="SINGLE_OR_NULL" name="FIST_NVN_BBSTDOM" nameSpace="NUVEEN" parentId="++4HwLjy2etpy00a" table="FT_T_FIST" timeSeries="LOGICAL_DELETE">
+      <field id="008wacGi2es18002" name="STAT_CHAR_VAL_TXT" nameSpace="NUVEEN"/>
+      <value id="008wacGi2es18001" name="STAT_DEF_ID" nameSpace="NUVEEN" type="FILTER_FIELD" value="BBSTDOM" valueType="CONSTANT"/>
+      <option id="008wvuYi2es1800E" nameSpace="NUVEEN" type="DEFAULT_ACTION" value="UNKNOWN"/>
+    </occurrence>
+    <occurrence desc="Occurrence for Financial Institution/Geo Unit Prt" id="008zD6dC2es1800n" ignoreDeleteChildren="false" multiplicity="SINGLE_OR_NULL" name="NUVEEN_FIGU_UNKNWN_INCRPRTE" nameSpace="NUVEEN" parentId="++4HwLjy2etpy00a" table="FT_T_FIGU" timeSeries="LOGICAL_DELETE">
+      <field id="008zD6dC2es1800t" name="GU_ID" nameSpace="NUVEEN"/>
+      <value id="++8ze2My2es1800Z" name="FINS_GU_PURP_TYP" nameSpace="NUVEEN" type="FILTER_FIELD" value="INCRPRTE" valueType="CONSTANT"/>
+      <value id="008zD6dC2es1800p" name="GU_CNT" nameSpace="NUVEEN" type="FILTER_FIELD" value="1" valueType="CONSTANT"/>
+      <value id="008zD6dC2es1800s" name="GU_TYP" nameSpace="NUVEEN" type="FILTER_FIELD" value="UNKNOWN" valueType="CONSTANT"/>
+      <option id="008zD6dC2es1800o" nameSpace="NUVEEN" type="DEFAULT_MATCH_KEY" value="FIGU_GUTP_PURP"/>
+      <option id="008zD6dC2es1800q" nameSpace="NUVEEN" type="DEFAULT_ACTION" value="UNKNOWN"/>
+    </occurrence>
+    <occurrence desc="Occurrence for Geographic Unit" id="008zD6dC2es1800u" ignoreDeleteChildren="false" multiplicity="SINGLE_OR_NULL" name="NUVEEN_GUNT_UNKNWN_INCRRRTE" nameSpace="NUVEEN" parentId="008zD6dC2es1800n" table="FT_T_GUNT" timeSeries="LOGICAL_DELETE">
+      <field id="008zD6dC2es1800z" name="PRNT_GU_ID" nameSpace="NUVEEN"/>
+      <value id="008zD6dC2es1800x" name="PRNT_GU_CNT" nameSpace="NUVEEN" type="FILTER_FIELD" value="1" valueType="CONSTANT"/>
+      <value id="008zD6dC2es1800y" name="PRNT_GU_TYP" nameSpace="NUVEEN" type="FILTER_FIELD" value="UNKNOWN" valueType="CONSTANT"/>
+      <option id="++8ze2My2es1800g" nameSpace="NUVEEN" type="LOOKUP_ONLY" value="true"/>
+      <option id="008zD6dC2es1800v" nameSpace="NUVEEN" type="DEFAULT_MATCH_KEY" value="GUNT_MATCH_1"/>
+      <option id="008zD6dC2es1800w" nameSpace="NUVEEN" type="DEFAULT_ACTION" value="REFERENCE"/>
+    </occurrence>
+    <occurrence desc="Occurrence for Financial Institution/Geo Unit Prt" id="008zD6dC2es18010" ignoreDeleteChildren="false" multiplicity="SINGLE_OR_NULL" name="NUVEEN_FIGU_UNKWN_RISK" nameSpace="NUVEEN" parentId="++4HwLjy2etpy00a" table="FT_T_FIGU" timeSeries="LOGICAL_DELETE">
+      <field id="008zD6dC2es18015" name="GU_ID" nameSpace="NUVEEN"/>
+      <value id="008zD6dC2es18012" name="FINS_GU_PURP_TYP" nameSpace="NUVEEN" type="FILTER_FIELD" value="RISK" valueType="CONSTANT"/>
+      <value id="008zD6dC2es18013" name="GU_CNT" nameSpace="NUVEEN" type="FILTER_FIELD" value="1" valueType="CONSTANT"/>
+      <value id="008zD6dC2es18014" name="GU_TYP" nameSpace="NUVEEN" type="FILTER_FIELD" value="UNKNOWN" valueType="CONSTANT"/>
+      <option id="008zD6dC2es18011" nameSpace="NUVEEN" type="DEFAULT_MATCH_KEY" value="FIGU_GUTP_PURP"/>
+    </occurrence>
+    <occurrence desc="Occurrence for Geographic Unit" id="008zD6dC2es18016" ignoreDeleteChildren="false" multiplicity="SINGLE_OR_NULL" name="NUVEEN_GUNT_UNKWN_RISK" nameSpace="NUVEEN" parentId="008zD6dC2es18010" table="FT_T_GUNT" timeSeries="LOGICAL_DELETE">
+      <field id="008zD6dC2es1801A" name="PRNT_GU_ID" nameSpace="NUVEEN"/>
+      <value id="008zD6dC2es18019" name="PRNT_GU_CNT" nameSpace="NUVEEN" type="FILTER_FIELD" value="1" valueType="CONSTANT"/>
+      <value id="008zD6dC2es18018" name="PRNT_GU_TYP" nameSpace="NUVEEN" type="FILTER_FIELD" value="UNKNOWN" valueType="CONSTANT"/>
+      <option id="++8ze2My2es1800c" nameSpace="NUVEEN" type="DEFAULT_ACTION" value="REFERENCE"/>
+      <option id="++8ze2My2es1800f" nameSpace="NUVEEN" type="LOOKUP_ONLY" value="true"/>
+      <option id="008zD6dC2es18017" nameSpace="NUVEEN" type="DEFAULT_MATCH_KEY" value="GUNT_MATCH_1"/>
+    </occurrence>
+    <occurrence desc="Occurrence for Financial Institution Statistic" id="008ztWaC2es18000" ignoreDeleteChildren="false" multiplicity="SINGLE_OR_NULL" name="FIST_CRDNLYST" nameSpace="NUVEEN" parentId="++4HwLjy2etpy00a" table="FT_T_FIST" timeSeries="LOGICAL_DELETE">
+      <field id="008ztWaC2es18002" name="STAT_CHAR_VAL_TXT" nameSpace="NUVEEN"/>
+      <value id="008ztWaC2es18001" name="STAT_DEF_ID" nameSpace="NUVEEN" type="FILTER_FIELD" value="CRDNLYST" valueType="CONSTANT"/>
+    </occurrence>
+    <occurrence desc="Occurrence for Financial Institution Description" id="009V00nC2etbS00I" ignoreDeleteChildren="false" multiplicity="SINGLE_OR_NULL" name="FIDE_NVN_MRTCRDTNME" nameSpace="NUVEEN" parentId="++4HwLjy2etpy00a" table="FT_T_FIDE" timeSeries="LOGICAL_DELETE">
+      <field id="009V00nC2etbS00K" name="INST_NME" nameSpace="NUVEEN"/>
+      <value id="009V00nC2etbS00J" name="DESC_USAGE_TYP" nameSpace="NUVEEN" type="FILTER_FIELD" value="MRTCRNME" valueType="CONSTANT"/>
+    </occurrence>
+    <occurrence desc="Occurrence for Financial Institution/Geo Unit Prt" id="009V00nC2etbS00Y" ignoreDeleteChildren="false" multiplicity="SINGLE_OR_NULL" name="FIGU_NVN_CRDSTATE" nameSpace="NUVEEN" parentId="++4HwLjy2etpy00a" table="FT_T_FIGU" timeSeries="LOGICAL_DELETE">
+      <field id="009V00nC2etbS00e" name="GU_ID" nameSpace="NUVEEN"/>
+      <value id="009V00nC2etbS00b" name="FINS_GU_PURP_TYP" nameSpace="NUVEEN" type="FILTER_FIELD" value="CRDSTATE" valueType="CONSTANT"/>
+      <value id="009V00nC2etbS00c" name="GU_CNT" nameSpace="NUVEEN" type="FILTER_FIELD" value="1" valueType="CONSTANT"/>
+      <value id="009V00nC2etbS00d" name="GU_TYP" nameSpace="NUVEEN" type="FILTER_FIELD" value="STATE" valueType="CONSTANT"/>
+    </occurrence>
+    <occurrence desc="Occurrence for Geographic Unit" id="009V00nC2etbS00Z" ignoreDeleteChildren="false" multiplicity="SINGLE_OR_NULL" name="FIGU_NVN_CRDSTATE_GUNT_Lookup" nameSpace="NUVEEN" parentId="009V00nC2etbS00Y" table="FT_T_GUNT" timeSeries="LOGICAL_DELETE">
+      <field id="009V00nC2etbS00f" name="PRNT_GU_ID" nameSpace="NUVEEN"/>
+      <value id="009V00nC2etbS00h" name="PRNT_GU_CNT" nameSpace="NUVEEN" type="FILTER_FIELD" value="1" valueType="CONSTANT"/>
+      <value id="009V00nC2etbS00g" name="PRNT_GU_TYP" nameSpace="NUVEEN" type="FILTER_FIELD" value="STATE" valueType="CONSTANT"/>
+      <option id="009V00nC2etbS00a" nameSpace="NUVEEN" type="LOOKUP_ONLY" value="true"/>
+    </occurrence>
+    <occurrence desc="Occurrence for Financial Institution/Geo Unit Prt" id="009V00nC2etbS00l" ignoreDeleteChildren="false" multiplicity="SINGLE_OR_NULL" name="FIGU_NVN_CRDCITY" nameSpace="NUVEEN" parentId="++4HwLjy2etpy00a" table="FT_T_FIGU" timeSeries="LOGICAL_DELETE">
+      <field id="009ZtXqi2etbS001" nameSpace="NUVEEN" relationId="009ZtXqi2etbS002"/>
+      <field id="009V00nC2etbS00u" name="GU_ID" nameSpace="NUVEEN"/>
+      <value id="009V00nC2etbS00r" name="FINS_GU_PURP_TYP" nameSpace="NUVEEN" type="FILTER_FIELD" value="CRDCITY" valueType="CONSTANT"/>
+      <value id="009V00nC2etbS00s" name="GU_CNT" nameSpace="NUVEEN" type="FILTER_FIELD" value="1" valueType="CONSTANT"/>
+      <value id="009V00nC2etbS00t" name="GU_TYP" nameSpace="NUVEEN" type="FILTER_FIELD" value="CITY" valueType="CONSTANT"/>
+    </occurrence>
+    <occurrence desc="Occurrence for Geographic Unit" id="009V00nC2etbS00m" ignoreDeleteChildren="false" multiplicity="SINGLE_OR_NULL" name="FIGU_NVN_CRDCITY_GUNT_Lookup_" nameSpace="NUVEEN" parentId="009V00nC2etbS00l" table="FT_T_GUNT" timeSeries="LOGICAL_DELETE">
+      <field id="009V00nC2etbS00q" name="PRNT_GU_ID" nameSpace="NUVEEN"/>
+      <value id="009V00nC2etbS00o" name="PRNT_GU_CNT" nameSpace="NUVEEN" type="FILTER_FIELD" value="1" valueType="CONSTANT"/>
+      <value id="009V00nC2etbS00p" name="PRNT_GU_TYP" nameSpace="NUVEEN" type="FILTER_FIELD" value="CITY" valueType="CONSTANT"/>
+      <option id="009V00nC2etbS00n" nameSpace="NUVEEN" type="LOOKUP_ONLY" value="true"/>
+    </occurrence>
+    <occurrence desc="Occurrence for Financial Institution Classification" id="009V00nC2etbS00y" ignoreDeleteChildren="false" multiplicity="SINGLE_OR_NULL" name="FICL_NVN_NUVSECCDE" nameSpace="NUVEEN" parentId="++4HwLjy2etpy00a" table="FT_T_FICL" timeSeries="LOGICAL_DELETE">
+      <field id="009ZtXqi2etbS009" nameSpace="NUVEEN" relationId="009ZtXqi2etbS00A"/>
+      <field id="009V00nC2etbS011" name="CL_VALUE" nameSpace="NUVEEN"/>
+      <value id="009V00nC2etbS00z" name="INDUS_CL_SET_ID" nameSpace="NUVEEN" type="FILTER_FIELD" value="NUVSECCDE" valueType="CONSTANT"/>
+    </occurrence>
+    <occurrence desc="Occurrence for Industry Classification" id="009V00nC2etbS00-" ignoreDeleteChildren="false" multiplicity="SINGLE_OR_NULL" name="FICL_NVN_NUVSECCDE_INCL_Looku" nameSpace="NUVEEN" parentId="009V00nC2etbS00y" table="FT_T_INCL" timeSeries="LOGICAL_DELETE">
+      <field id="009V00nC2etbS012" name="CL_VALUE" nameSpace="NUVEEN"/>
+      <value id="009V00nC2etbS010" name="INDUS_CL_SET_ID" nameSpace="NUVEEN" type="FILTER_FIELD" value="NUVSECCDE" valueType="CONSTANT"/>
+      <option id="++9WYlFy2etbS002" nameSpace="NUVEEN" type="DEFAULT_ACTION" value="REFERENCE"/>
+      <option id="++9WYlFy2etbS003" nameSpace="NUVEEN" type="DEFAULT_MATCH_KEY" value="INCL_VALUE"/>
+      <option id="009V00nC2etbS00+" nameSpace="NUVEEN" type="LOOKUP_ONLY" value="true"/>
+    </occurrence>
+    <occurrence desc="Occurrence for Financial Institution Identifier" id="++9GzIaS2etbS003" ignoreDeleteChildren="false" multiplicity="SINGLE_OR_NULL" name="FIID_NVN_NVNLRDISSR" nameSpace="NUVEEN" parentId="++4HwLjy2etpy00a" table="FT_T_FIID" timeSeries="LOGICAL_DELETE">
+      <field id="++9GzIaS2etbS006" name="FINS_ID" nameSpace="NUVEEN"/>
+      <value id="++9GzIaS2etbS004" name="FINS_ID_CTXT_TYP" nameSpace="NUVEEN" type="FILTER_FIELD" value="NVNLRDISSR" valueType="CONSTANT"/>
+    </occurrence>
+    <occurrence desc="Occurrence for Financial Institution Identifier" id="004odqzi2etpm000" ignoreDeleteChildren="false" multiplicity="SINGLE_OR_NULL" name="FIID_BBCMPYID" nameSpace="GSC" parentId="++4HwLjy2etpy00a" table="FT_T_FIID" timeSeries="LOGICAL_DELETE">
+      <field id="++8uJAVS2es18000" name="LAST_CHG_TMS" nameSpace="NUVEEN"/>
+      <value id="004odqzi2etpm008" name="FINS_ID_CTXT_TYP" nameSpace="GSC" type="FILTER_FIELD" value="BBCMPYID" valueType="CONSTANT"/>
+    </occurrence>
+    <occurrence desc="Occurrence for Financial Institution Identifier" id="008mcntC2etbS03G" ignoreDeleteChildren="false" multiplicity="SINGLE_OR_NULL" name="FIID_NVN_CS_JNCCOID" nameSpace="NUVEEN" parentId="++4HwLjy2etpy00a" relationId="005k2kDC2etqS01z" table="FT_T_FIID" timeSeries="LOGICAL_DELETE">
+      <field id="008mcntC2etbS03W" name="FINS_ID" nameSpace="NUVEEN"/>
+      <value id="008mcntC2etbS03K" name="FINS_ID_CTXT_TYP" nameSpace="NUVEEN" type="FILTER_FIELD" value="JNCCOID" valueType="CONSTANT"/>
+      <option id="008wvuYi2es1800A" nameSpace="NUVEEN" type="DEFAULT_ACTION" value="UNKNOWN"/>
+    </occurrence>
+    <occurrence desc="Occurrence for Financial Institution Identifier" id="008mcntC2etbS03R" ignoreDeleteChildren="false" multiplicity="SINGLE_OR_NULL" name="FIID_NVN_CS_CRSCOID" nameSpace="NUVEEN" parentId="++4HwLjy2etpy00a" relationId="005k2kDC2etqS01z" table="FT_T_FIID" timeSeries="LOGICAL_DELETE">
+      <field id="008mcntC2etbS03S" name="FINS_ID" nameSpace="NUVEEN"/>
+      <value id="008mcntC2etbS03T" name="FINS_ID_CTXT_TYP" nameSpace="NUVEEN" type="FILTER_FIELD" value="CRSCOID" valueType="CONSTANT"/>
+      <option id="008wvuYi2es18006" nameSpace="NUVEEN" type="DEFAULT_ACTION" value="UNKNOWN"/>
+    </occurrence>
+    <occurrence desc="Occurrence for Financial Institution Identifier" id="008mcntC2etbS03c" ignoreDeleteChildren="false" multiplicity="SINGLE_OR_NULL" name="FIID_NVN_CS_ISSUERCDE" nameSpace="NUVEEN" parentId="++4HwLjy2etpy00a" relationId="005k2kDC2etqS01z" table="FT_T_FIID" timeSeries="LOGICAL_DELETE">
+      <field id="008mcntC2etbS03e" name="FINS_ID" nameSpace="NUVEEN"/>
+      <value id="008mcntC2etbS03d" name="FINS_ID_CTXT_TYP" nameSpace="NUVEEN" type="FILTER_FIELD" value="CRSCOID" valueType="CONSTANT"/>
+      <option id="008wvuYi2es1800B" nameSpace="NUVEEN" type="DEFAULT_ACTION" value="UNKNOWN"/>
+    </occurrence>
+    <occurrence desc="Occurrence for Financial Institution Identifier" id="008mcntC2etbS06h" ignoreDeleteChildren="false" multiplicity="SINGLE_OR_NULL" name="FIID_NVN_CS_EXTRNLISSRCDE" nameSpace="NUVEEN" parentId="++4HwLjy2etpy00a" relationId="005k2kDC2etqS01z" table="FT_T_FIID" timeSeries="LOGICAL_DELETE">
+      <field id="008mcntC2etbS06j" name="FINS_ID" nameSpace="NUVEEN"/>
+      <value id="008mcntC2etbS06i" name="FINS_ID_CTXT_TYP" nameSpace="NUVEEN" type="FILTER_FIELD" value="EXTRNLCODE" valueType="CONSTANT"/>
+      <option id="008wvuYi2es18007" nameSpace="NUVEEN" type="DEFAULT_ACTION" value="UNKNOWN"/>
+    </occurrence>
+    <occurrence desc="Occurrence for Financial Institution Identifier" id="008pRKBC2etbS00E" ignoreDeleteChildren="false" multiplicity="SINGLE_OR_NULL" name="FIID_NVN_GBLISSRID" nameSpace="NUVEEN" parentId="++4HwLjy2etpy00a" relationId="005k2kDC2etqS01z" table="FT_T_FIID" timeSeries="LOGICAL_DELETE">
+      <field id="008pRKBC2etbS00G" name="FINS_ID" nameSpace="NUVEEN"/>
+      <value id="008pRKBC2etbS00F" name="FINS_ID_CTXT_TYP" nameSpace="NUVEEN" type="FILTER_FIELD" value="NVEENGBLISSRID" valueType="CONSTANT"/>
+      <option id="008wvuYi2es18009" nameSpace="NUVEEN" type="DEFAULT_ACTION" value="UNKNOWN"/>
+    </occurrence>
+    <occurrence desc="Occurrence for Financial Institution Identifier" id="008pRKBC2etbS00J" ignoreDeleteChildren="false" multiplicity="SINGLE_OR_NULL" name="FIID_NVN_CS_ISSRID" nameSpace="NUVEEN" parentId="++4HwLjy2etpy00a" relationId="005k2kDC2etqS01z" table="FT_T_FIID" timeSeries="LOGICAL_DELETE">
+      <field id="008pRKBC2etbS00L" name="FINS_ID" nameSpace="NUVEEN"/>
+      <value id="008pRKBC2etbS00K" name="FINS_ID_CTXT_TYP" nameSpace="NUVEEN" type="FILTER_FIELD" value="NVEENISSRID" valueType="CONSTANT"/>
+      <option id="008wvuYi2es18008" nameSpace="NUVEEN" type="DEFAULT_ACTION" value="UNKNOWN"/>
+    </occurrence>
+    <occurrence desc="Occurrence for Financial Institution Identifier" id="008tVu+C2es18007" ignoreDeleteChildren="false" multiplicity="SINGLE_OR_NULL" name="FIID_NVN_SYSCRID" nameSpace="NUVEEN" parentId="++4HwLjy2etpy00a" relationId="005k2kDC2etqS01z" table="FT_T_FIID" timeSeries="LOGICAL_DELETE">
+      <field id="008tVu+C2es18009" name="FINS_ID" nameSpace="NUVEEN"/>
+      <value id="008tVu+C2es18008" name="FINS_ID_CTXT_TYP" nameSpace="NUVEEN" type="FILTER_FIELD" value="SYSCRID" valueType="CONSTANT"/>
+      <option id="008wvuYi2es1800C" nameSpace="NUVEEN" type="DEFAULT_ACTION" value="UNKNOWN"/>
+    </occurrence>
+    <occurrence desc="Occurrence for Financial Institution Identifier" id="008zD6dC2es18000" ignoreDeleteChildren="false" multiplicity="SINGLE_OR_NULL" name="FIID_NVN_CS_INTERNALID" nameSpace="NUVEEN" parentId="++4HwLjy2etpy00a" relationId="005k2kDC2etqS01z" table="FT_T_FIID" timeSeries="LOGICAL_DELETE">
+      <field id="008zD6dC2es18003" name="FINS_ID" nameSpace="NUVEEN"/>
+      <value id="008zD6dC2es18004" name="FINS_ID_CTXT_TYP" nameSpace="NUVEEN" type="FILTER_FIELD" value="INTERNALID" valueType="CONSTANT"/>
+      <option id="008zD6dC2es18001" nameSpace="NUVEEN" type="DEFAULT_ACTION" value="UNKNOWN"/>
+    </occurrence>
+    <occurrence desc="Occurrence for Financial Institution Identifier" id="008zD6dC2es1800f" ignoreDeleteChildren="false" multiplicity="SINGLE_OR_NULL" name="FIID_MSCICOID" nameSpace="NUVEEN" parentId="++4HwLjy2etpy00a" relationId="005k2kDC2etqS01z" table="FT_T_FIID" timeSeries="LOGICAL_DELETE">
+      <field id="008zD6dC2es1800i" name="FINS_ID" nameSpace="NUVEEN"/>
+      <value id="008zD6dC2es1800h" name="FINS_ID_CTXT_TYP" nameSpace="NUVEEN" type="FILTER_FIELD" value="MSCICOID" valueType="CONSTANT"/>
+    </occurrence>
+    <occurrence desc="Occurrence for Financial Institution Identifier" id="009V00nC2etbS003" ignoreDeleteChildren="false" multiplicity="SINGLE_OR_NULL" name="FIID_NVN_MRTCRID" nameSpace="NUVEEN" parentId="++4HwLjy2etpy00a" relationId="005k2kDC2etqS01z" table="FT_T_FIID" timeSeries="LOGICAL_DELETE">
+      <field id="009V00nC2etbS005" name="FINS_ID" nameSpace="NUVEEN"/>
+      <value id="009V00nC2etbS004" name="FINS_ID_CTXT_TYP" nameSpace="NUVEEN" type="FILTER_FIELD" value="MRTCRID" valueType="CONSTANT"/>
+    </occurrence>
+    <occurrence desc="Occurrence for Financial Institution Identifier" id="009V00nC2etbS008" ignoreDeleteChildren="false" multiplicity="SINGLE_OR_NULL" name="FIID_NVN_HUBCRID" nameSpace="NUVEEN" parentId="++4HwLjy2etpy00a" relationId="005k2kDC2etqS01z" table="FT_T_FIID" timeSeries="LOGICAL_DELETE">
+      <field id="009V00nC2etbS00A" name="FINS_ID" nameSpace="NUVEEN"/>
+      <value id="009V00nC2etbS009" name="FINS_ID_CTXT_TYP" nameSpace="NUVEEN" type="FILTER_FIELD" value="HUBCRID" valueType="CONSTANT"/>
+    </occurrence>
+    <occurrence desc="Occurrence for Financial Institution Identifier" id="009V00nC2etbS00D" ignoreDeleteChildren="false" multiplicity="SINGLE_OR_NULL" name="FIID_NVN_CRDTNUMBR" nameSpace="NUVEEN" parentId="++4HwLjy2etpy00a" relationId="005k2kDC2etqS01z" table="FT_T_FIID" timeSeries="LOGICAL_DELETE">
+      <field id="009V00nC2etbS00F" name="FINS_ID" nameSpace="NUVEEN"/>
+      <value id="009V00nC2etbS00E" name="FINS_ID_CTXT_TYP" nameSpace="NUVEEN" type="FILTER_FIELD" value="CRDTNUMBR" valueType="CONSTANT"/>
+    </occurrence>
+    <occurrence desc="Occurrence for Financial Institution Classification" id="008zD6dC2es18007" ignoreDeleteChildren="false" multiplicity="SINGLE_OR_NULL" name="FICL_RUSSLSEC" nameSpace="NUVEEN" parentId="++4HwLjy2etpy00a" table="FT_T_FICL" timeSeries="LOGICAL_DELETE">
+      <field id="008zD6dC2es1800A" name="CL_VALUE" nameSpace="NUVEEN"/>
+      <value id="008zD6dC2es18009" name="CLSF_PURP_TYP" nameSpace="NUVEEN" type="FILTER_FIELD" value="BBRUSSLSEC" valueType="CONSTANT"/>
+      <value id="008zD6dC2es18008" name="INDUS_CL_SET_ID" nameSpace="NUVEEN" type="FILTER_FIELD" value="RUSSLSEC" valueType="CONSTANT"/>
+      <option id="++8ze2My2es1800Q" nameSpace="NUVEEN" type="DEFAULT_MATCH_KEY" value="FICL_MATCH_SET"/>
+      <option id="++8ze2My2es1800R" nameSpace="NUVEEN" type="DEFAULT_ACTION" value="UNKNOWN"/>
+    </occurrence>
+    <occurrence desc="Occurrence for Industry Classification" id="008zD6dC2es1800B" ignoreDeleteChildren="false" multiplicity="SINGLE_OR_NULL" name="FICL_RUSSLSEC_INCL" nameSpace="NUVEEN" parentId="008zD6dC2es18007" table="FT_T_INCL" timeSeries="LOGICAL_DELETE">
+      <field id="008zD6dC2es1800F" name="CL_VALUE" nameSpace="NUVEEN"/>
+      <value id="008zD6dC2es1800E" name="INDUS_CL_SET_ID" nameSpace="NUVEEN" type="FILTER_FIELD" value="RUSSLSEC" valueType="CONSTANT"/>
+      <value id="008zD6dC2es1800D" name="LEVEL_NUM" nameSpace="NUVEEN" type="FILTER_FIELD" value="2" valueType="CONSTANT"/>
+      <option id="008zD6dC2es1800C" nameSpace="NUVEEN" type="LOOKUP_ONLY" value="true"/>
+      <option id="008zD6dC2es1800H" nameSpace="NUVEEN" type="DEFAULT_ACTION" value="REFERENCE"/>
+    </occurrence>
+    <occurrence desc="Occurrence for Financial Institution Classification" id="008zD6dC2es1800L" ignoreDeleteChildren="false" multiplicity="SINGLE_OR_NULL" name="FICL_RUSSLIND" nameSpace="NUVEEN" parentId="++4HwLjy2etpy00a" table="FT_T_FICL" timeSeries="LOGICAL_DELETE">
+      <field id="008zD6dC2es1800O" name="CL_VALUE" nameSpace="NUVEEN"/>
+      <value id="008zD6dC2es1800M" name="CLSF_PURP_TYP" nameSpace="NUVEEN" type="FILTER_FIELD" value="BBRUSSLIND" valueType="CONSTANT"/>
+      <value id="008zD6dC2es1800N" name="INDUS_CL_SET_ID" nameSpace="NUVEEN" type="FILTER_FIELD" value="RUSSLIND" valueType="CONSTANT"/>
+      <option id="++8ze2My2es1800O" nameSpace="NUVEEN" type="DEFAULT_MATCH_KEY" value="FICL_MATCH_SET"/>
+      <option id="++8ze2My2es1800P" nameSpace="NUVEEN" type="DEFAULT_ACTION" value="UNKNOWN"/>
+    </occurrence>
+    <occurrence desc="Occurrence for Industry Classification" id="008zD6dC2es1800P" ignoreDeleteChildren="false" multiplicity="SINGLE_OR_NULL" name="FICL_RUSSLIND_INCL" nameSpace="NUVEEN" parentId="008zD6dC2es1800L" table="FT_T_INCL" timeSeries="LOGICAL_DELETE">
+      <field id="008zD6dC2es1800T" name="CL_VALUE" nameSpace="NUVEEN"/>
+      <value id="008zD6dC2es1800R" name="INDUS_CL_SET_ID" nameSpace="NUVEEN" type="FILTER_FIELD" value="RUSSLIND" valueType="CONSTANT"/>
+      <value id="008zD6dC2es1800S" name="LEVEL_NUM" nameSpace="NUVEEN" type="FILTER_FIELD" value="1" valueType="CONSTANT"/>
+      <option id="008zD6dC2es1800Q" nameSpace="NUVEEN" type="LOOKUP_ONLY" value="true"/>
+    </occurrence>
+    <occurrence desc="Occurrence for Financial Institution Classification" id="009V00nC2etbS016" ignoreDeleteChildren="false" multiplicity="SINGLE_OR_NULL" name="FICL_NVN_NUVSECNUM" nameSpace="NUVEEN" parentId="++4HwLjy2etpy00a" table="FT_T_FICL" timeSeries="LOGICAL_DELETE">
+      <field id="009V00nC2etbS01C" name="CL_VALUE" nameSpace="NUVEEN"/>
+      <value id="009V00nC2etbS01B" name="INDUS_CL_SET_ID" nameSpace="NUVEEN" type="FILTER_FIELD" value="NUVSECNUM" valueType="CONSTANT"/>
+    </occurrence>
+    <occurrence desc="Occurrence for Industry Classification" id="009V00nC2etbS017" ignoreDeleteChildren="false" multiplicity="SINGLE_OR_NULL" name="FICL_NVN_NUVSECNUM_INCL_Looku" nameSpace="NUVEEN" parentId="009V00nC2etbS016" table="FT_T_INCL" timeSeries="LOGICAL_DELETE">
+      <field id="009V00nC2etbS01G" name="CL_NME" nameSpace="NUVEEN"/>
+      <field id="009V00nC2etbS01A" name="CL_VALUE" nameSpace="NUVEEN"/>
+      <value id="009V00nC2etbS019" name="INDUS_CL_SET_ID" nameSpace="NUVEEN" type="FILTER_FIELD" value="NUVSECNUM" valueType="CONSTANT"/>
+      <option id="++9WYlFy2etbS004" nameSpace="NUVEEN" type="DEFAULT_ACTION" value="REFERENCE"/>
+      <option id="++9WYlFy2etbS005" nameSpace="NUVEEN" type="DEFAULT_MATCH_KEY" value="INCL_VALUE"/>
+      <option id="009V00nC2etbS018" nameSpace="NUVEEN" type="LOOKUP_ONLY" value="true"/>
+    </occurrence>
+    <occurrence desc="Occurrence for Financial Institution Classification" id="009V00nC2etbS01J" ignoreDeleteChildren="false" multiplicity="SINGLE_OR_NULL" name="FICL_NVN_MRTSECNUM" nameSpace="NUVEEN" parentId="++4HwLjy2etpy00a" table="FT_T_FICL" timeSeries="LOGICAL_DELETE">
+      <field id="009V00nC2etbS01P" name="CL_VALUE" nameSpace="NUVEEN"/>
+      <value id="009V00nC2etbS01K" name="INDUS_CL_SET_ID" nameSpace="NUVEEN" type="FILTER_FIELD" value="MRTSECNUM" valueType="CONSTANT"/>
+    </occurrence>
+    <occurrence desc="Occurrence for Industry Classification" id="009V00nC2etbS01L" ignoreDeleteChildren="false" multiplicity="SINGLE_OR_NULL" name="FICL_NVN_MRTSECNUM_INCL_Looku" nameSpace="NUVEEN" parentId="009V00nC2etbS01J" table="FT_T_INCL" timeSeries="LOGICAL_DELETE">
+      <field id="009V00nC2etbS01O" name="CL_VALUE" nameSpace="NUVEEN"/>
+      <value id="009V00nC2etbS01N" name="INDUS_CL_SET_ID" nameSpace="NUVEEN" type="FILTER_FIELD" value="MRTSECNUM" valueType="CONSTANT"/>
+      <option id="++9WYlFy2etbS000" nameSpace="NUVEEN" type="DEFAULT_ACTION" value="REFERENCE"/>
+      <option id="++9WYlFy2etbS001" nameSpace="NUVEEN" type="DEFAULT_MATCH_KEY" value="INCL_VALUE"/>
+      <option id="009V00nC2etbS01M" nameSpace="NUVEEN" type="LOOKUP_ONLY" value="true"/>
+    </occurrence>
+    <occurrence desc="Occurrence for Financial Institution Rating" id="005lCprC2etqS000" ignoreDeleteChildren="false" multiplicity="MULTIPLE_OR_NULL" name="FIRT_CA" nameSpace="GSC" parentId="++4HwLjy2etpy00a" table="FT_T_FIRT" timeSeries="LOGICAL_DELETE">
+      <field id="008rpY3i2es18000" name="START_TMS" nameSpace="NUVEEN"/>
+      <option id="++6xvMcS2euPC000" nameSpace="GSC" type="DEFAULT_MATCH_KEY" value="FIRT_MATCH_5"/>
+      <option id="005lCprC2etqS00i" nameSpace="GSC" type="DEFAULT_ACTION" value="UNKNOWN"/>
+    </occurrence>
+    <occurrence desc="Occurrence for Rating Value" id="005lCprC2etqS009" ignoreDeleteChildren="false" multiplicity="SINGLE_OR_NULL" name="FIRT_RTVL_01" nameSpace="GSC" parentId="005lCprC2etqS000" relationId="005lCprC2etqS00M" table="FT_T_RTVL" timeSeries="LOGICAL_DELETE">
+      <field id="008rkJdi2es18008" name="RTNG_ID" nameSpace="NUVEEN"/>
+      <option id="005lCprC2etqS00H" nameSpace="GSC" type="DEFAULT_MATCH_KEY" value="RTVL_MATCH_1"/>
+      <option id="005lCprC2etqS00I" nameSpace="GSC" type="LOOKUP_ONLY" value="true"/>
+      <option id="005lCprC2etqS00Q" nameSpace="GSC" type="DEFAULT_ACTION" value="REFERENCE"/>
+    </occurrence>
+    <occurrence desc="Occurrence for Rating Set Definition" id="005lCprC2etqS00R" ignoreDeleteChildren="false" multiplicity="SINGLE_OR_NULL" name="FIRT_RTNG_01" nameSpace="GSC" parentId="005lCprC2etqS009" table="FT_T_RTNG" timeSeries="LOGICAL_DELETE">
+      <field id="008rkJdi2es1800E" name="INST_MNEM" nameSpace="NUVEEN"/>
+      <field id="008rkJdi2es1800B" name="RTNG_SET_NME" nameSpace="NUVEEN"/>
+      <field id="008rkJdi2es1800H" name="RTNG_TENOR_MNEM" nameSpace="NUVEEN"/>
+      <option id="++5rjV2y2etpe03k" nameSpace="GSC" type="DEFAULT_MATCH_KEY" value="RTNG_MATCH_1"/>
+      <option id="++5rjV2y2etpe03l" nameSpace="GSC" type="DEFAULT_ACTION" value="REFERENCE"/>
+      <option id="005lCprC2etqS00Y" nameSpace="GSC" type="LOOKUP_ONLY" value="true"/>
+      <option id="005lCprC2etqS00Z" nameSpace="GSC" type="LOOKUP_USE_TYPE" value="ATLEAST_ONE_INPUT_FIELD_HAS_VALUE"/>
+      <option id="005lCprC2etqS00a" nameSpace="GSC" type="UI_PUB_ONLY" value="true"/>
+    </occurrence>
+    <occurrence desc="Occurrence for General Table Comment" id="009W0UpC2etbS00P" ignoreDeleteChildren="false" multiplicity="SINGLE_OR_NULL" name="GNCM_NVN_NVNWLAIN" nameSpace="NUVEEN" parentId="005lCprC2etqS01Q" relationId="009W0UpC2etbS00Q" table="FT_T_GNCM" timeSeries="LOGICAL_DELETE">
+      <field id="009W0UpC2etbS00W" name="CMNT_TXT" nameSpace="NUVEEN"/>
+      <value id="009W0UpC2etbS00S" name="COMM_REAS_MNEM" nameSpace="NUVEEN" type="FILTER_FIELD" value="NVNWLAIN" valueType="CONSTANT"/>
+      <value id="009W0UpC2etbS00T" name="CREATED_TMS" nameSpace="NUVEEN" type="DEFAULT_FIELD" value="CURRENT_DATE" valueType="CONTEXT_VALUE"/>
+      <value id="009W0UpC2etbS00U" name="GNCM_TBL_TYP" nameSpace="NUVEEN" type="FILTER_FIELD" value="RTOP" valueType="CONSTANT"/>
+      <value id="009W0UpC2etbS00V" name="LN_NUM" nameSpace="NUVEEN" type="FILTER_FIELD" value="1" valueType="CONSTANT"/>
+    </occurrence>
+    <occurrence desc="Occurrence for General Table Comment" id="009W0UpC2etbS00Z" ignoreDeleteChildren="false" multiplicity="SINGLE_OR_NULL" name="GNCM_NVN_NVNWLFOR" nameSpace="NUVEEN" parentId="005lCprC2etqS01Q" relationId="009W0UpC2etbS00Q" table="FT_T_GNCM" timeSeries="LOGICAL_DELETE">
+      <field id="009W0UpC2etbS00e" name="CMNT_TXT" nameSpace="NUVEEN"/>
+      <value id="009W0UpC2etbS00a" name="COMM_REAS_MNEM" nameSpace="NUVEEN" type="FILTER_FIELD" value="NVNWLFOR" valueType="CONSTANT"/>
+      <value id="009W0UpC2etbS00d" name="CREATED_TMS" nameSpace="NUVEEN" type="DEFAULT_FIELD" value="CURRENT_DATE" valueType="CONTEXT_VALUE"/>
+      <value id="009W0UpC2etbS00c" name="GNCM_TBL_TYP" nameSpace="NUVEEN" type="FILTER_FIELD" value="RTOP" valueType="CONSTANT"/>
+      <value id="009W0UpC2etbS00b" name="LN_NUM" nameSpace="NUVEEN" type="FILTER_FIELD" value="1" valueType="CONSTANT"/>
+    </occurrence>
+    <occurrence desc="Occurrence for General Table Comment" id="009W0UpC2etbS00f" ignoreDeleteChildren="false" multiplicity="SINGLE_OR_NULL" name="GNCM_NVN_NVNWLMDF" nameSpace="NUVEEN" parentId="005lCprC2etqS01Q" relationId="009W0UpC2etbS00Q" table="FT_T_GNCM" timeSeries="LOGICAL_DELETE">
+      <field id="009W0UpC2etbS00k" name="CMNT_TXT" nameSpace="NUVEEN"/>
+      <value id="009W0UpC2etbS00g" name="COMM_REAS_MNEM" nameSpace="NUVEEN" type="FILTER_FIELD" value="NVNWLMDF" valueType="CONSTANT"/>
+      <value id="009W0UpC2etbS00j" name="CREATED_TMS" nameSpace="NUVEEN" type="DEFAULT_FIELD" value="CURRENT_DATE" valueType="CONTEXT_VALUE"/>
+      <value id="009W0UpC2etbS00i" name="GNCM_TBL_TYP" nameSpace="NUVEEN" type="FILTER_FIELD" value="RTOP" valueType="CONSTANT"/>
+      <value id="009W0UpC2etbS00h" name="LN_NUM" nameSpace="NUVEEN" type="FILTER_FIELD" value="1" valueType="CONSTANT"/>
+    </occurrence>
+    <occurrence desc="Occurrence for General Table Comment" id="009W0UpC2etbS00l" ignoreDeleteChildren="false" multiplicity="SINGLE_OR_NULL" name="GNCM_NVN_NVNWLTR" nameSpace="NUVEEN" parentId="005lCprC2etqS01Q" relationId="009W0UpC2etbS00Q" table="FT_T_GNCM" timeSeries="LOGICAL_DELETE">
+      <field id="009W0UpC2etbS00q" name="CMNT_TXT" nameSpace="NUVEEN"/>
+      <value id="009W0UpC2etbS00m" name="COMM_REAS_MNEM" nameSpace="NUVEEN" type="FILTER_FIELD" value="NVNWLTR" valueType="CONSTANT"/>
+      <value id="009W0UpC2etbS00p" name="CREATED_TMS" nameSpace="NUVEEN" type="DEFAULT_FIELD" value="CURRENT_DATE" valueType="CONTEXT_VALUE"/>
+      <value id="009W0UpC2etbS00o" name="GNCM_TBL_TYP" nameSpace="NUVEEN" type="FILTER_FIELD" value="RTOP" valueType="CONSTANT"/>
+      <value id="009W0UpC2etbS00n" name="LN_NUM" nameSpace="NUVEEN" type="FILTER_FIELD" value="1" valueType="CONSTANT"/>
+    </occurrence>
+    <occurrence desc="Occurrence for General Table Comment" id="009ZiFQC2etbS007" ignoreDeleteChildren="false" multiplicity="SINGLE_OR_NULL" name="GNCM_NVN_WLCUSIP" nameSpace="NUVEEN" parentId="005lCprC2etqS01Q" relationId="009W0UpC2etbS00Q" table="FT_T_GNCM" timeSeries="LOGICAL_DELETE">
+      <field id="009ZiFQC2etbS00C" name="CMNT_TXT" nameSpace="NUVEEN"/>
+      <value id="009ZiFQC2etbS008" name="COMM_REAS_MNEM" nameSpace="NUVEEN" type="FILTER_FIELD" value="WLCUSIP" valueType="CONSTANT"/>
+      <value id="009ZiFQC2etbS009" name="CREATED_TMS" nameSpace="NUVEEN" type="DEFAULT_FIELD" value="CURRENT_DATE" valueType="CONTEXT_VALUE"/>
+      <value id="009ZiFQC2etbS00B" name="GNCM_TBL_TYP" nameSpace="NUVEEN" type="FILTER_FIELD" value="RTOP" valueType="CONSTANT"/>
+      <value id="009ZiFQC2etbS00A" name="LN_NUM" nameSpace="NUVEEN" type="FILTER_FIELD" value="1" valueType="CONSTANT"/>
+    </occurrence>
+    <occurrence desc="Occurrence for Rating Opinions" id="005lCprC2etqS01I" ignoreDeleteChildren="false" multiplicity="MULTIPLE_OR_NULL" name="RTOP_OUTLOOK_CA" nameSpace="GSC" parentId="++4HwLjy2etpy00a" table="FT_T_RTOP" timeSeries="LOGICAL_DELETE">
+      <field id="++8tcO2S2es1800D" name="LAST_CHG_TMS" nameSpace="NUVEEN"/>
+      <field id="++8tcO2S2es1800E" name="START_TMS" nameSpace="NUVEEN"/>
+      <value id="005lCprC2etqS01P" name="RTNG_OPINION_TYP" nameSpace="GSC" type="FILTER_FIELD" value="OUTLOOK" valueType="CONSTANT"/>
+      <option id="005lCprC2etqS01s" nameSpace="GSC" type="DEFAULT_ACTION" value="UNKNOWN"/>
+    </occurrence>
+    <occurrence desc="Occurrence for Rating Set Definition" id="005lCprC2etqS01Y" ignoreDeleteChildren="false" multiplicity="SINGLE_OR_NULL" name="RTOP_OUTLOOK_RTNG" nameSpace="GSC" parentId="005lCprC2etqS01I" table="FT_T_RTNG" timeSeries="LOGICAL_DELETE">
+      <field id="++8tcO2S2es1800M" name="INST_MNEM" nameSpace="NUVEEN"/>
+      <option id="005lCprC2etqS01f" nameSpace="GSC" type="LOOKUP_ONLY" value="true"/>
+      <option id="005lCprC2etqS01g" nameSpace="GSC" type="LOOKUP_USE_TYPE" value="ATLEAST_ONE_INPUT_FIELD_HAS_VALUE"/>
+      <option id="005lCprC2etqS01h" nameSpace="GSC" type="DEFAULT_MATCH_KEY" value="RTNG_MATCH_1"/>
+    </occurrence>
+    <occurrence desc="Occurrence for Fins/Fins Relationship" id="++6SWIZS2etrC00A" ignoreDeleteChildren="false" multiplicity="MULTIPLE_OR_NULL" name="FFRL_ALL" nameSpace="GSC" parentId="++4HwLjy2etpy00a" relationId="++6SWIZS2etrC00B" table="FT_T_FFRL" timeSeries="LOGICAL_DELETE">
+      <field id="008rkJdi2es1800O" name="LAST_CHG_TMS" nameSpace="NUVEEN"/>
+      <field id="++8th9Ky2es18000" name="START_TMS" nameSpace="NUVEEN"/>
+      <option id="++6SWIZS2etrC00K" nameSpace="GSC" type="DEFAULT_ACTION" value="UNKNOWN"/>
+    </occurrence>
+    <occurrence desc="Occurrence for User defined Issuer Fields" id="++8mAsYy2etbS00I" ignoreDeleteChildren="false" multiplicity="SINGLE_OR_NULL" name="UDR1_01" nameSpace="NUVEEN" parentId="++4HwLjy2etpy00a" table="FT_E_UDR1" timeSeries="LOGICAL_DELETE">
+      <field id="++8mAsYy2etbS00M" name="APPRVD_ISSR_ANALYST" nameSpace="NUVEEN"/>
+      <field id="++8mAsYy2etbS00L" name="APRVD_ISSR_DATE" nameSpace="NUVEEN"/>
+      <field id="++8mAsYy2etbS00K" name="CRD_ANALYST_DEF_INDUS_SEC" nameSpace="NUVEEN"/>
+      <field id="++8mAsYy2etbS00J" name="SOC_RESP_FLAG" nameSpace="NUVEEN"/>
+    </occurrence>
+    <occurrence desc="Occurrence for Financial Institution Statistic" id="++8yWQsy2es1800B" ignoreDeleteChildren="false" multiplicity="SINGLE_OR_NULL" name="FIST_WSOISRPV" nameSpace="NUVEEN" parentId="++4HwLjy2etpy00a" table="FT_T_FIST" timeSeries="LOGICAL_DELETE">
+      <field id="++8yWQsy2es1800D" name="STAT_CHAR_VAL_TXT" nameSpace="NUVEEN"/>
+      <value id="++8yWQsy2es1800C" name="STAT_DEF_ID" nameSpace="NUVEEN" type="FILTER_FIELD" value="WSOISRPV" valueType="CONSTANT"/>
+    </occurrence>
+    <occurrence desc="Occurrence for Financial Institution Statistic" id="=000000000866576" ignoreDeleteChildren="false" multiplicity="SINGLE_OR_NULL" name="FIST_NVN_QTYANNDT" nameSpace="NUVEEN" parentId="++4HwLjy2etpy00a" table="FT_T_FIST" timeSeries="LOGICAL_DELETE">
+      <field id="009IDD4i2etbS018" name="STAT_VAL_DTE" nameSpace="NUVEEN"/>
+      <value id="=000000000866579" name="STAT_DEF_ID" nameSpace="NUVEEN" type="FILTER_FIELD" value="TEST" valueType="CONSTANT"/>
+    </occurrence>
+    <occurrence desc="Occurrence for Financial Institution Statistic" id="=000000000866577" ignoreDeleteChildren="false" multiplicity="SINGLE_OR_NULL" name="FIST_NVN_NVPRNTCK" nameSpace="NUVEEN" parentId="++4HwLjy2etpy00a" table="FT_T_FIST" timeSeries="LOGICAL_DELETE">
+      <field id="009IDD4i2etbS011" name="STAT_CHAR_VAL_TXT" nameSpace="NUVEEN"/>
+      <value id="=000000000866578" name="STAT_DEF_ID" nameSpace="NUVEEN" type="FILTER_FIELD" value="TEST" valueType="CONSTANT"/>
+    </occurrence>
+    <occurrence desc="Occurrence for Financial Institution Statistic" id="008m2pmi2etbS003" ignoreDeleteChildren="false" multiplicity="SINGLE_OR_NULL" name="FIST_NV_FSTOCOEQ" nameSpace="NUVEEN" parentId="++4HwLjy2etpy00a" table="FT_T_FIST" timeSeries="LOGICAL_DELETE">
+      <field id="008m2pmi2etbS00D" name="STAT_VAL_CAMT" nameSpace="NUVEEN"/>
+      <value id="008m2pmi2etbS006" name="STAT_DEF_ID" nameSpace="NUVEEN" type="FILTER_FIELD" value="FSTOCOEQ" valueType="CONSTANT"/>
+      <option id="008wvuYi2es1801s" nameSpace="NUVEEN" type="DEFAULT_ACTION" value="UNKNOWN"/>
+    </occurrence>
+    <occurrence desc="Occurrence for Address Type Usage" id="008wMoui2es18000" ignoreDeleteChildren="false" multiplicity="SINGLE_OR_NULL" name="FINS_ADTP_NVN_ADDRTYP_CORPHQ" nameSpace="NUVEEN" parentId="004jSl2i2etty01h" table="FT_T_ADTP" timeSeries="LOGICAL_DELETE">
+      <value id="008wMoui2es18001" name="ADDR_TYP" nameSpace="NUVEEN" type="FILTER_FIELD" value="CORPHQ" valueType="CONSTANT"/>
+      <option id="008wvuYi2es18001" nameSpace="NUVEEN" type="DEFAULT_ACTION" value="UNKNOWN"/>
+    </occurrence>
+    <occurrence desc="Occurrence for Mailing Address" id="008wMoui2es18002" ignoreDeleteChildren="false" multiplicity="SINGLE_OR_NULL" name="FINS_MADR_NVN_CORPHQ" nameSpace="NUVEEN" parentId="008wMoui2es18000" table="FT_T_MADR" timeSeries="LOGICAL_DELETE">
+      <field id="008wMoui2es18003" name="ADDR_LN1_TXT" nameSpace="NUVEEN"/>
+      <field id="008wMoui2es18004" name="ADDR_LN2_TXT" nameSpace="NUVEEN"/>
+      <field id="++8yuMXy2es18000" name="ADDR_LN5_TXT" nameSpace="NUVEEN"/>
+      <field id="008wMoui2es1800A" name="CITY_NME" nameSpace="NUVEEN"/>
+      <field id="008wMoui2es1800Q" name="CNTRY_NME" nameSpace="NUVEEN"/>
+      <field id="008wMoui2es1800N" name="POSTAL_CDE" nameSpace="NUVEEN"/>
+      <field id="008wMoui2es1800D" name="STE_PRV_NME" nameSpace="NUVEEN"/>
+      <option id="008wvuYi2es18002" nameSpace="NUVEEN" type="DEFAULT_ACTION" value="UNKNOWN"/>
+    </occurrence>
+    <occurrence desc="Occurrence for Employee/Financial Institution Role" id="009V00nC2etbS00N" ignoreDeleteChildren="false" multiplicity="MULTIPLE_OR_NULL" name="EFIR_NVN_ALL" nameSpace="NUVEEN" parentId="++4HwLjy2etpy00a" table="FT_T_EFIR" timeSeries="LOGICAL_DELETE">
+      <field id="009V00nC2etbS04H" nameSpace="NUVEEN" relationId="009V00nC2etbS04I"/>
+      <field id="009V00nC2etbS04P" name="RL_TYP" nameSpace="NUVEEN"/>
+    </occurrence>
+    <occurrence desc="Occurrence for Financial Institution Statistic" id="009V00nC2etbS00O" ignoreDeleteChildren="false" multiplicity="SINGLE_OR_NULL" name="FIST_NVN_NVINDNME" nameSpace="NUVEEN" parentId="++4HwLjy2etpy00a" table="FT_T_FIST" timeSeries="LOGICAL_DELETE">
+      <field id="009V00nC2etbS00Q" name="STAT_CHAR_VAL_TXT" nameSpace="NUVEEN"/>
+      <value id="009V00nC2etbS00P" name="STAT_DEF_ID" nameSpace="NUVEEN" type="FILTER_FIELD" value="NVINDNME" valueType="CONSTANT"/>
+    </occurrence>
+    <occurrence desc="Occurrence for Financial Institution Statistic" id="009V00nC2etbS00T" ignoreDeleteChildren="false" multiplicity="SINGLE_OR_NULL" name="FIST_NVN_NVINDNUM" nameSpace="NUVEEN" parentId="++4HwLjy2etpy00a" table="FT_T_FIST" timeSeries="LOGICAL_DELETE">
+      <field id="009V00nC2etbS00V" name="STAT_CHAR_VAL_TXT" nameSpace="NUVEEN"/>
+      <value id="009V00nC2etbS00U" name="STAT_DEF_ID" nameSpace="NUVEEN" type="FILTER_FIELD" value="NVINDNUM" valueType="CONSTANT"/>
+    </occurrence>
+    <occurrence desc="Occurrence for Financial Institution Statistic" id="++9c-xDy2etbS000" ignoreDeleteChildren="false" multiplicity="SINGLE_OR_NULL" name="FIST_NVN_NVNESGMD" nameSpace="NUVEEN" parentId="++4HwLjy2etpy00a" table="FT_T_FIST" timeSeries="LOGICAL_DELETE">
+      <field id="++9c-xDy2etbS002" name="STAT_CHAR_VAL_TXT" nameSpace="NUVEEN"/>
+      <value id="++9c-xDy2etbS001" name="STAT_DEF_ID" nameSpace="NUVEEN" type="FILTER_FIELD" value="NVNESGMD" valueType="CONSTANT"/>
+      <option id="++9c-xDy2etbS003" nameSpace="NUVEEN" type="DEFAULT_ACTION" value="UNKNOWN"/>
+    </occurrence>
+    <occurrence desc="Occurrence for Financial Institution Statistic" id="009V00nC2etbS01d" ignoreDeleteChildren="false" multiplicity="SINGLE_OR_NULL" name="FIST_NVN_NVNESGEL" nameSpace="NUVEEN" parentId="++4HwLjy2etpy00a" table="FT_T_FIST" timeSeries="LOGICAL_DELETE">
+      <field id="009V00nC2etbS01f" name="STAT_CHAR_VAL_TXT" nameSpace="NUVEEN"/>
+      <value id="009V00nC2etbS01e" name="STAT_DEF_ID" nameSpace="NUVEEN" type="FILTER_FIELD" value="NVNESGEL" valueType="CONSTANT"/>
+    </occurrence>
+    <occurrence desc="Occurrence for Financial Institution Score" id="009V00nC2etbS01i" ignoreDeleteChildren="false" multiplicity="SINGLE_OR_NULL" name="FISO_NVN_CREDIT" nameSpace="NUVEEN" parentId="++4HwLjy2etpy00a" table="FT_T_FISO" timeSeries="LOGICAL_DELETE">
+      <field id="009V00nC2etbS01k" name="SCORE_EFF_TMS" nameSpace="NUVEEN"/>
+      <field id="009V00nC2etbS01j" name="SCORE_INT_VAL_NUM" nameSpace="NUVEEN"/>
+      <value id="009Wttki2etbS002" name="SCRD_OID" nameSpace="NUVEEN" type="FILTER_FIELD" value="=NUVEENESG" valueType="CONSTANT"/>
+      <option id="009WfnVC2etbS000" nameSpace="NUVEEN" type="DEFAULT_ACTION" value="UNKNOWN"/>
+    </occurrence>
+    <occurrence desc="Occurrence for Financial Institution/Geo Unit Prt" id="009V00nC2etbS01p" ignoreDeleteChildren="false" multiplicity="SINGLE_OR_NULL" name="FIGU_NVN_GNISCONT" nameSpace="NUVEEN" parentId="++4HwLjy2etpy00a" table="FT_T_FIGU" timeSeries="LOGICAL_DELETE">
+      <field id="009V00nC2etbS01y" name="GU_ID" nameSpace="NUVEEN"/>
+      <value id="009V00nC2etbS01x" name="FINS_GU_PURP_TYP" nameSpace="NUVEEN" type="FILTER_FIELD" value="GNISCONT" valueType="CONSTANT"/>
+      <value id="009V00nC2etbS01w" name="GU_CNT" nameSpace="NUVEEN" type="FILTER_FIELD" value="1" valueType="CONSTANT"/>
+      <value id="009V00nC2etbS01v" name="GU_TYP" nameSpace="NUVEEN" type="FILTER_FIELD" value="COUNTY" valueType="CONSTANT"/>
+    </occurrence>
+    <occurrence desc="Occurrence for Geographic Unit" id="009V00nC2etbS01q" ignoreDeleteChildren="false" multiplicity="SINGLE_OR_NULL" name="FIGU_NVN_GNISCONT_GUNT_Lookup" nameSpace="NUVEEN" parentId="009V00nC2etbS01p" table="FT_T_GUNT" timeSeries="LOGICAL_DELETE">
+      <field id="009V00nC2etbS020" name="GU_NME" nameSpace="NUVEEN"/>
+      <field id="009V00nC2etbS01u" name="PRNT_GU_ID" nameSpace="NUVEEN"/>
+      <value id="009V00nC2etbS01s" name="PRNT_GU_CNT" nameSpace="NUVEEN" type="FILTER_FIELD" value="1" valueType="CONSTANT"/>
+      <value id="009V00nC2etbS01t" name="PRNT_GU_TYP" nameSpace="NUVEEN" type="FILTER_FIELD" value="COUNTY" valueType="CONSTANT"/>
+      <option id="009V00nC2etbS01r" nameSpace="NUVEEN" type="LOOKUP_ONLY" value="true"/>
+    </occurrence>
+    <occurrence desc="Occurrence for Financial Institution/Geo Unit Prt" id="009V00nC2etbS023" ignoreDeleteChildren="false" multiplicity="SINGLE_OR_NULL" name="FIGU_NVN_GNISFEAT" nameSpace="NUVEEN" parentId="++4HwLjy2etpy00a" table="FT_T_FIGU" timeSeries="LOGICAL_DELETE">
+      <field id="009V00nC2etbS02W" name="GU_ID" nameSpace="NUVEEN"/>
+      <value id="009V00nC2etbS02C" name="FINS_GU_PURP_TYP" nameSpace="NUVEEN" type="FILTER_FIELD" value="GNISFEAT" valueType="CONSTANT"/>
+      <value id="009V00nC2etbS02A" name="GU_CNT" nameSpace="NUVEEN" type="FILTER_FIELD" value="1" valueType="CONSTANT"/>
+      <value id="009V00nC2etbS02B" name="GU_TYP" nameSpace="NUVEEN" type="FILTER_FIELD" value="FEATURE" valueType="CONSTANT"/>
+    </occurrence>
+    <occurrence desc="Occurrence for Geographic Unit" id="009V00nC2etbS024" ignoreDeleteChildren="false" multiplicity="SINGLE_OR_NULL" name="FIGU_NVN_GNISFEAT_GUNT_Lookup" nameSpace="NUVEEN" parentId="009V00nC2etbS023" table="FT_T_GUNT" timeSeries="LOGICAL_DELETE">
+      <field id="009V00nC2etbS028" name="GU_NME" nameSpace="NUVEEN"/>
+      <field id="009V00nC2etbS02X" name="PRNT_GU_ID" nameSpace="NUVEEN"/>
+      <value id="009V00nC2etbS026" name="PRNT_GU_CNT" nameSpace="NUVEEN" type="FILTER_FIELD" value="1" valueType="CONSTANT"/>
+      <value id="009V00nC2etbS027" name="PRNT_GU_TYP" nameSpace="NUVEEN" type="FILTER_FIELD" value="FEATURE" valueType="CONSTANT"/>
+      <option id="009V00nC2etbS025" nameSpace="NUVEEN" type="LOOKUP_ONLY" value="true"/>
+    </occurrence>
+    <occurrence desc="Occurrence for Financial Institution/Geo Unit Prt" id="009V00nC2etbS02J" ignoreDeleteChildren="false" multiplicity="SINGLE_OR_NULL" name="FIGU_NVN_GNISSTAT" nameSpace="NUVEEN" parentId="++4HwLjy2etpy00a" table="FT_T_FIGU" timeSeries="LOGICAL_DELETE">
+      <field id="009V00nC2etbS02T" name="GU_ID" nameSpace="NUVEEN"/>
+      <value id="009V00nC2etbS02Q" name="FINS_GU_PURP_TYP" nameSpace="NUVEEN" type="FILTER_FIELD" value="GNISSTAT" valueType="CONSTANT"/>
+      <value id="009V00nC2etbS02R" name="GU_CNT" nameSpace="NUVEEN" type="FILTER_FIELD" value="1" valueType="CONSTANT"/>
+      <value id="009V00nC2etbS02S" name="GU_TYP" nameSpace="NUVEEN" type="FILTER_FIELD" value="STATE" valueType="CONSTANT"/>
+    </occurrence>
+    <occurrence desc="Occurrence for Geographic Unit" id="009V00nC2etbS02K" ignoreDeleteChildren="false" multiplicity="SINGLE_OR_NULL" name="FIGU_NVN_GNISSTAT_GUNT_Lookup" nameSpace="NUVEEN" parentId="009V00nC2etbS02J" table="FT_T_GUNT" timeSeries="LOGICAL_DELETE">
+      <field id="009V00nC2etbS02P" name="GU_NME" nameSpace="NUVEEN"/>
+      <field id="009V00nC2etbS02O" name="PRNT_GU_ID" nameSpace="NUVEEN"/>
+      <value id="009V00nC2etbS02M" name="PRNT_GU_CNT" nameSpace="NUVEEN" type="FILTER_FIELD" value="1" valueType="CONSTANT"/>
+      <value id="009V00nC2etbS02N" name="PRNT_GU_TYP" nameSpace="NUVEEN" type="FILTER_FIELD" value="STATE" valueType="CONSTANT"/>
+      <option id="009V00nC2etbS02L" nameSpace="NUVEEN" type="LOOKUP_ONLY" value="true"/>
+    </occurrence>
+    <occurrence desc="Occurrence for Financial Institution Statistic" id="009V00nC2etbS01T" ignoreDeleteChildren="false" multiplicity="SINGLE_OR_NULL" name="FIST_NVN_NVNDBTST" nameSpace="NUVEEN" parentId="++4HwLjy2etpy00a" table="FT_T_FIST" timeSeries="LOGICAL_DELETE">
+      <field id="009V00nC2etbS01V" name="STAT_CHAR_VAL_TXT" nameSpace="NUVEEN"/>
+      <value id="009V00nC2etbS01U" name="STAT_DEF_ID" nameSpace="NUVEEN" type="FILTER_FIELD" value="NVNDBTST" valueType="CONSTANT"/>
+    </occurrence>
+    <occurrence desc="Occurrence for Financial Institution Statistic" id="009V00nC2etbS01Y" ignoreDeleteChildren="false" multiplicity="SINGLE_OR_NULL" name="FIST_NVN_NVNMNPCR" nameSpace="NUVEEN" parentId="++4HwLjy2etpy00a" table="FT_T_FIST" timeSeries="LOGICAL_DELETE">
+      <field id="009V00nC2etbS01a" name="STAT_CHAR_VAL_TXT" nameSpace="NUVEEN"/>
+      <value id="009V00nC2etbS01Z" name="STAT_DEF_ID" nameSpace="NUVEEN" type="FILTER_FIELD" value="NVNMNPCR" valueType="CONSTANT"/>
+    </occurrence>
+    <occurrence desc="Occurrence for Financial Institution Statistic" id="009V00nC2etbS02f" ignoreDeleteChildren="false" multiplicity="SINGLE_OR_NULL" name="FIST_NVN_NVNAGNID" nameSpace="NUVEEN" parentId="++4HwLjy2etpy00a" table="FT_T_FIST" timeSeries="LOGICAL_DELETE">
+      <field id="009V00nC2etbS02h" name="STAT_CHAR_VAL_TXT" nameSpace="NUVEEN"/>
+      <value id="009V00nC2etbS02g" name="STAT_DEF_ID" nameSpace="NUVEEN" type="FILTER_FIELD" value="NVNAGNID" valueType="CONSTANT"/>
+    </occurrence>
+    <occurrence desc="Occurrence for Financial Institution Statistic" id="009V00nC2etbS02k" ignoreDeleteChildren="false" multiplicity="SINGLE_OR_NULL" name="FIST_NVN_NVNPARVL" nameSpace="NUVEEN" parentId="++4HwLjy2etpy00a" table="FT_T_FIST" timeSeries="LOGICAL_DELETE">
+      <field id="009V00nC2etbS02m" name="STAT_VAL_CAMT" nameSpace="NUVEEN"/>
+      <value id="009V00nC2etbS02l" name="STAT_DEF_ID" nameSpace="NUVEEN" type="FILTER_FIELD" value="NVNPARVL" valueType="CONSTANT"/>
+    </occurrence>
+    <occurrence desc="Occurrence for Financial Institution Statistic" id="009W0UpC2etbS00K" ignoreDeleteChildren="false" multiplicity="SINGLE_OR_NULL" name="FIST_NVN_NVNWHOWN" nameSpace="NUVEEN" parentId="++4HwLjy2etpy00a" table="FT_T_FIST" timeSeries="LOGICAL_DELETE">
+      <field id="009W0UpC2etbS00v" name="STAT_CHAR_VAL_TXT" nameSpace="NUVEEN"/>
+      <value id="009W0UpC2etbS00L" name="STAT_DEF_ID" nameSpace="NUVEEN" type="FILTER_FIELD" value="NVNWHOWN" valueType="CONSTANT"/>
+    </occurrence>
+    <occurrence desc="Occurrence for Nuveen Credit Report" id="009VgZli2etbS000" ignoreDeleteChildren="false" multiplicity="MULTIPLE_OR_NULL" name="NCR1_NVN_ALL" nameSpace="NUVEEN" parentId="++4HwLjy2etpy00a" table="FT_T_NCR1" timeSeries="LOGICAL_DELETE">
+      <field id="009VgZli2etbS00X" nameSpace="NUVEEN" relationId="009VgZli2etbS00Y"/>
+      <field id="009VgZli2etbS00a" nameSpace="NUVEEN" relationId="009VgZli2etbS00b"/>
+      <field id="009VgZli2etbS00d" nameSpace="NUVEEN" relationId="009VgZli2etbS00e"/>
+      <field id="009VgZli2etbS00T" name="NCR1_CREDIT_REPORT_COMMENT" nameSpace="NUVEEN"/>
+      <field id="009VgZli2etbS008" name="NCR1_CREDIT_REPORT_DTE" nameSpace="NUVEEN"/>
+      <field id="009VgZli2etbS007" name="NCR1_CREDIT_REPORT_NUM" nameSpace="NUVEEN"/>
+      <field id="009VgZli2etbS006" name="NCR1_CREDIT_REPORT_OUTLOOK" nameSpace="NUVEEN"/>
+      <field id="009VgZli2etbS005" name="NCR1_CREDIT_REPORT_RATIONALE" nameSpace="NUVEEN"/>
+      <field id="++9Zo7Qy2etbS000" name="NCR1_CREDIT_REPORT_SOURCES" nameSpace="NUVEEN"/>
+      <field id="009VgZli2etbS004" name="NCR1_CREDIT_REPORT_STAT_TYP" nameSpace="NUVEEN"/>
+      <field id="009VgZli2etbS003" name="NCR1_CREDIT_REPORT_TYP" nameSpace="NUVEEN"/>
+      <field id="009VgZli2etbS002" name="NCR1_INFO_DATE" nameSpace="NUVEEN"/>
+      <field id="009VgZli2etbS001" name="NCR1_NVN_LNG_RATING" nameSpace="NUVEEN"/>
+    </occurrence>
+    <occurrence desc="Occurrence for Fins Role/Issue Participant" id="009VgZli2etbS014" ignoreDeleteChildren="false" multiplicity="MULTIPLE_OR_NULL" name="FRIP_NVN_ISSUE" nameSpace="NUVEEN" parentId="++4HwLjy2etpy00a" table="FT_T_FRIP" timeSeries="LOGICAL_DELETE">
+      <field id="009VgZli2etbS017" nameSpace="NUVEEN" relationId="009VgZli2etbS018"/>
+      <value id="009VgZli2etbS015" name="PRT_PURP_TYP" nameSpace="NUVEEN" type="FILTER_FIELD" value="CREDIT" valueType="CONSTANT"/>
+    </occurrence>
+  </occurrences>
+  <mappings>
+    <mapping beFieldId="004Qb8CC2etri00G" groupMapping="0" id="++4eFFHy2etv400g" nameSpace="GSC" occFieldId="++4HwLjy2etpy00g"/>
+    <mapping beFieldId="++4g31ZS2etoK00N" groupMapping="0" id="++5ZqLUy2etse0Dm" nameSpace="GSC" occFieldId="++4g31ZS2etoK00G"/>
+    <mapping beFieldId="++4g31ZS2etoK00N" groupMapping="0" id="++5ZqLUy2etse0Do" nameSpace="GSC" occFieldId="++5ZqLUy2etse0Dn"/>
+    <mapping beFieldId="++5ckBRS2etse01F" groupMapping="0" id="++5ckBRS2etse01G" nameSpace="GSC" occFieldId="++5ckBRS2etse01E"/>
+    <mapping beFieldId="++5ckBRS2etse01f" groupMapping="0" id="++5ckBRS2etse01i" nameSpace="GSC" occFieldId="++5ckBRS2etse01g"/>
+    <mapping beFieldId="++5ckBRS2etse02q" groupMapping="0" id="++5ckBRS2etse02r" nameSpace="GSC" occFieldId="++5ckBRS2etse02S"/>
+    <mapping beFieldId="++5ckBRS2etse02q" groupMapping="0" id="++5ckBRS2etse02s" nameSpace="GSC" occFieldId="++5ckBRS2etse02d"/>
+    <mapping beFieldId="++5ckBRS2etse03J" groupMapping="0" id="++5ckBRS2etse03K" nameSpace="GSC" occFieldId="++5ckBRS2etse036"/>
+    <mapping beFieldId="++5ckBRS2etse03J" groupMapping="0" id="++5ckBRS2etse03L" nameSpace="GSC" occFieldId="++5ckBRS2etse02x"/>
+    <mapping beFieldId="++5ckBRS2etse03l" groupMapping="0" id="++5ckBRS2etse03m" nameSpace="GSC" occFieldId="++5ckBRS2etse03S"/>
+    <mapping beFieldId="++5ckBRS2etse03l" groupMapping="0" id="++5ckBRS2etse03n" nameSpace="GSC" occFieldId="++5ckBRS2etse03d"/>
+    <mapping beFieldId="++5ckBRS2etse03t" groupMapping="0" id="++5ckBRS2etse04L" nameSpace="GSC" occFieldId="++5ckBRS2etse03y"/>
+    <mapping beFieldId="++5ckBRS2etse03t" groupMapping="0" id="++5ckBRS2etse04M" nameSpace="GSC" occFieldId="++5ckBRS2etse048"/>
+    <mapping beFieldId="++7skcay2euPC00D" groupMapping="0" id="++7skcay2euPC00F" nameSpace="GSC" occFieldId="++7skcay2euPC00C"/>
+    <mapping beFieldId="++8ze2My2es1800B" groupMapping="0" id="++8ze2My2es1800C" nameSpace="NUVEEN" occFieldId="++8ze2My2es1800A"/>
+    <mapping beFieldId="++8ze2My2es1800S" groupMapping="0" id="++8ze2My2es1800T" nameSpace="NUVEEN" occFieldId="++8ze2My2es1800N"/>
+    <mapping beFieldId="++8ze2My2es1800B" groupMapping="0" id="++8ze2My2es1800h" nameSpace="NUVEEN" occFieldId="++8ze2My2es18005"/>
+    <mapping beFieldId="++8ze2My2es1800S" groupMapping="0" id="++8ze2My2es1800i" nameSpace="NUVEEN" occFieldId="++8ze2My2es1800I"/>
+    <mapping beFieldId="008zD6dC2es1800-" groupMapping="0" id="++8ze2My2es1800j" nameSpace="NUVEEN" occFieldId="008zD6dC2es1800t"/>
+    <mapping beFieldId="008zD6dC2es1801B" groupMapping="0" id="++8ze2My2es1800k" nameSpace="NUVEEN" occFieldId="008zD6dC2es18015"/>
+    <mapping beFieldId="005k2kDC2etqS04-" groupMapping="0" id="005kiLnC2etqS00+" nameSpace="GSC" occFieldId="005k2kDC2etqS04y"/>
+    <mapping beFieldId="005pp3Ei2etne01L" groupMapping="0" id="005pp3Ei2etne01N" nameSpace="GSC" occFieldId="005pp3Ei2etne01M"/>
+    <mapping beFieldId="008qNIli2es1800Z" groupMapping="0" id="008qNIli2es1800a" nameSpace="NUVEEN" occFieldId="008qNIli2es1800Y"/>
+    <mapping beFieldId="008qNIli2es1800k" groupMapping="0" id="008qNIli2es1800l" nameSpace="NUVEEN" occFieldId="008qNIli2es1800e"/>
+    <mapping beFieldId="008qNIli2es1800k" groupMapping="0" id="008qNIli2es1800n" nameSpace="NUVEEN" occFieldId="008qNIli2es1800m"/>
+    <mapping beFieldId="008wMoui2es1800g" groupMapping="0" id="008wMoui2es1800q" nameSpace="NUVEEN" occFieldId="008wMoui2es1800p"/>
+    <mapping beFieldId="008wacGi2es18003" groupMapping="0" id="008wacGi2es18004" nameSpace="NUVEEN" occFieldId="008wacGi2es18002"/>
+    <mapping beFieldId="008x9CNi2es2C002" groupMapping="0" id="008x9CNi2es2C006" nameSpace="GSC" occFieldId="008x9CNi2es2C001"/>
+    <mapping beFieldId="008zD6dC2es1800-" groupMapping="0" id="008zD6dC2es1800+" nameSpace="NUVEEN" occFieldId="008zD6dC2es1800z"/>
+    <mapping beFieldId="008zD6dC2es1801B" groupMapping="0" id="008zD6dC2es1801C" nameSpace="NUVEEN" occFieldId="008zD6dC2es1801A"/>
+    <mapping beFieldId="008ztWaC2es18003" groupMapping="0" id="008ztWaC2es18004" nameSpace="NUVEEN" occFieldId="008ztWaC2es18002"/>
+    <mapping beFieldId="009V00nC2etbS00L" groupMapping="0" id="009V00nC2etbS00M" nameSpace="NUVEEN" occFieldId="009V00nC2etbS00K"/>
+    <mapping beFieldId="009V00nC2etbS00i" groupMapping="0" id="009V00nC2etbS00j" nameSpace="NUVEEN" occFieldId="009V00nC2etbS00e"/>
+    <mapping beFieldId="009V00nC2etbS00i" groupMapping="0" id="009V00nC2etbS00k" nameSpace="NUVEEN" occFieldId="009V00nC2etbS00f"/>
+    <mapping beFieldId="009V00nC2etbS00v" groupMapping="0" id="009V00nC2etbS00w" nameSpace="NUVEEN" occFieldId="009V00nC2etbS00u"/>
+    <mapping beFieldId="009V00nC2etbS00v" groupMapping="0" id="009V00nC2etbS00x" nameSpace="NUVEEN" occFieldId="009V00nC2etbS00q"/>
+    <mapping beFieldId="009Yxoci2etbS009" groupMapping="0" id="009Yxoci2etbS00A" nameSpace="NUVEEN" occFieldId="009Yxoci2etbS008"/>
+    <mapping beFieldId="009Yxoci2etbS00C" groupMapping="0" id="009Yxoci2etbS00D" nameSpace="NUVEEN" occFieldId="009Yxoci2etbS00B"/>
+    <mapping beFieldId="009Yxoci2etbS00G" groupMapping="0" id="009Yxoci2etbS00H" nameSpace="NUVEEN" occFieldId="009Yxoci2etbS00F"/>
+    <mapping beRelationId="008s8K1C2es18004" groupMapping="0" id="008s8K1C2es18009" nameSpace="NUVEEN" occFieldId="008s8K1C2es18006"/>
+    <mapping beRelationId="009ZtXqi2etbS000" groupMapping="0" id="009ZtXqi2etbS005" nameSpace="NUVEEN" occFieldId="009ZtXqi2etbS001"/>
+    <mapping beRelationId="009ZtXqi2etbS008" groupMapping="0" id="009ZtXqi2etbS00D" nameSpace="NUVEEN" occFieldId="009ZtXqi2etbS009"/>
+    <mapping beFieldId="005k2kDC2etqS04Y" groupMapping="0" id="005k2kDC2etqS04a" nameSpace="GSC" occFieldId="005k2kDC2etqS04F"/>
+    <mapping beFieldId="++4cGUjy2etv400D" groupMapping="0" id="++4cGUjy2etv400N" nameSpace="GSC" occFieldId="++4cGUjy2etv400G"/>
+    <mapping beFieldId="++8uJAVS2es18001" groupMapping="0" id="++8uJAVS2es18002" nameSpace="NUVEEN" occFieldId="++8uJAVS2es18000"/>
+    <mapping beFieldId="++9GzIaS2etbS008" groupMapping="0" id="++9GzIaS2etbS009" nameSpace="NUVEEN" occFieldId="++9GzIaS2etbS006"/>
+    <mapping beFieldId="++4MN34y2etri00Y" groupMapping="0" id="004odqzi2etpm009" nameSpace="GSC" occFieldId="004odqzi2etpm002"/>
+    <mapping beFieldId="005k2kDC2etqS027" groupMapping="0" id="005k2kDC2etqS028" nameSpace="GSC" occFieldId="005k2kDC2etqS020"/>
+    <mapping beFieldId="005y3VbC2etvy009" groupMapping="0" id="005y3VbC2etvy00L" nameSpace="GSC" occFieldId="005y3VbC2etvy002"/>
+    <mapping beFieldId="008mcntC2etbS03U" groupMapping="0" id="008mcntC2etbS03V" nameSpace="NUVEEN" occFieldId="008mcntC2etbS03S"/>
+    <mapping beFieldId="008mcntC2etbS03I" groupMapping="0" id="008mcntC2etbS03X" nameSpace="NUVEEN" occFieldId="008mcntC2etbS03W"/>
+    <mapping beFieldId="008mcntC2etbS03f" groupMapping="0" id="008mcntC2etbS03g" nameSpace="NUVEEN" occFieldId="008mcntC2etbS03e"/>
+    <mapping beFieldId="008mcntC2etbS06k" groupMapping="0" id="008mcntC2etbS06l" nameSpace="NUVEEN" occFieldId="008mcntC2etbS06j"/>
+    <mapping beFieldId="008pRKBC2etbS00H" groupMapping="0" id="008pRKBC2etbS00I" nameSpace="NUVEEN" occFieldId="008pRKBC2etbS00G"/>
+    <mapping beFieldId="008pRKBC2etbS00M" groupMapping="0" id="008pRKBC2etbS00N" nameSpace="NUVEEN" occFieldId="008pRKBC2etbS00L"/>
+    <mapping beFieldId="008tVu+C2es18006" groupMapping="0" id="008tVu+C2es1800A" nameSpace="NUVEEN" occFieldId="008tVu+C2es18009"/>
+    <mapping beFieldId="008zD6dC2es18005" groupMapping="0" id="008zD6dC2es18006" nameSpace="NUVEEN" occFieldId="008zD6dC2es18003"/>
+    <mapping beFieldId="008zD6dC2es1800j" groupMapping="0" id="008zD6dC2es1800k" nameSpace="NUVEEN" occFieldId="008zD6dC2es1800i"/>
+    <mapping beFieldId="009V00nC2etbS006" groupMapping="0" id="009V00nC2etbS007" nameSpace="NUVEEN" occFieldId="009V00nC2etbS005"/>
+    <mapping beFieldId="009V00nC2etbS00B" groupMapping="0" id="009V00nC2etbS00C" nameSpace="NUVEEN" occFieldId="009V00nC2etbS00A"/>
+    <mapping beFieldId="009V00nC2etbS00G" groupMapping="0" id="009V00nC2etbS00H" nameSpace="NUVEEN" occFieldId="009V00nC2etbS00F"/>
+    <mapping beFieldId="++5ckBRS2etse04S" groupMapping="0" id="++5ckBRS2etse04c" nameSpace="GSC" occFieldId="++5ckBRS2etse04V"/>
+    <mapping beFieldId="++5ckBRS2etse04S" groupMapping="0" id="++5ckBRS2etse04p" nameSpace="GSC" occFieldId="++5ckBRS2etse04g"/>
+    <mapping beFieldId="++5ckBRS2etse04w" groupMapping="0" id="++5ckBRS2etse05G" nameSpace="GSC" occFieldId="++5ckBRS2etse04z"/>
+    <mapping beFieldId="++5ckBRS2etse04w" groupMapping="0" id="++5ckBRS2etse05H" nameSpace="GSC" occFieldId="++5ckBRS2etse057"/>
+    <mapping beFieldId="++5ckBRS2etse05O" groupMapping="0" id="++5ckBRS2etse05n" nameSpace="GSC" occFieldId="++5ckBRS2etse05b"/>
+    <mapping beFieldId="++5ckBRS2etse05O" groupMapping="0" id="++5ckBRS2etse05o" nameSpace="GSC" occFieldId="++5ckBRS2etse05R"/>
+    <mapping beFieldId="++5ckBRS2etse05y" groupMapping="0" id="++5ckBRS2etse06M" nameSpace="GSC" occFieldId="++5ckBRS2etse05+"/>
+    <mapping beFieldId="++5ckBRS2etse05y" groupMapping="0" id="++5ckBRS2etse06N" nameSpace="GSC" occFieldId="++5ckBRS2etse06D"/>
+    <mapping beFieldId="++5pqIIS2etne00g" groupMapping="0" id="++5pqIIS2etne00h" nameSpace="GSC" occFieldId="++5pqIIS2etne00Y"/>
+    <mapping beFieldId="++5pqIIS2etne014" groupMapping="0" id="++5pqIIS2etne015" nameSpace="GSC" occFieldId="++5pqIIS2etne012"/>
+    <mapping beFieldId="++5puVHS2etne019" groupMapping="0" id="++5puVHS2etne01A" nameSpace="GSC" occFieldId="++5puVHS2etne011"/>
+    <mapping beFieldId="++8VhdZy2es3801t" groupMapping="0" id="++8VhdZy2es3801+" nameSpace="GSC" occFieldId="++8VhdZy2es3801L"/>
+    <mapping beFieldId="++8VhdZy2es3801t" groupMapping="0" id="++8VhdZy2es3801-" nameSpace="GSC" occFieldId="++8VhdZy2es3801U"/>
+    <mapping beFieldId="++8VhdZy2es3801q" groupMapping="0" id="++8VhdZy2es3801u" nameSpace="GSC" occFieldId="++8VhdZy2es3800l"/>
+    <mapping beFieldId="++8VhdZy2es3801q" groupMapping="0" id="++8VhdZy2es3801v" nameSpace="GSC" occFieldId="++8VhdZy2es3800c"/>
+    <mapping beFieldId="++8VhdZy2es3801r" groupMapping="0" id="++8VhdZy2es3801w" nameSpace="GSC" occFieldId="++8VhdZy2es38012"/>
+    <mapping beFieldId="++8VhdZy2es3801r" groupMapping="0" id="++8VhdZy2es3801x" nameSpace="GSC" occFieldId="++8VhdZy2es3800v"/>
+    <mapping beFieldId="++8VhdZy2es3801s" groupMapping="0" id="++8VhdZy2es3801y" nameSpace="GSC" occFieldId="++8VhdZy2es3801G"/>
+    <mapping beFieldId="++8VhdZy2es3801s" groupMapping="0" id="++8VhdZy2es3801z" nameSpace="GSC" occFieldId="++8VhdZy2es38017"/>
+    <mapping beFieldId="++8cCHMy2es2C00a" groupMapping="0" id="++8cCHMy2es2C00b" nameSpace="GSC" occFieldId="++8cCHMy2es2C00X"/>
+    <mapping beFieldId="++8cCHMy2es2C00a" groupMapping="0" id="++8cCHMy2es2C00c" nameSpace="GSC" occFieldId="++8cCHMy2es2C00P"/>
+    <mapping beFieldId="++8cCHMy2es2C00d" groupMapping="0" id="++8cCHMy2es2C00e" nameSpace="GSC" occFieldId="++8cCHMy2es2C00J"/>
+    <mapping beFieldId="++8cCHMy2es2C00d" groupMapping="0" id="++8cCHMy2es2C00f" nameSpace="GSC" occFieldId="++8cCHMy2es2C00B"/>
+    <mapping beFieldId="++8cCHMy2es2C017" groupMapping="0" id="++8cCHMy2es2C018" nameSpace="GSC" occFieldId="++8cCHMy2es2C013"/>
+    <mapping beFieldId="++8cCHMy2es2C017" groupMapping="0" id="++8cCHMy2es2C019" nameSpace="GSC" occFieldId="++8cCHMy2es2C00x"/>
+    <mapping beFieldId="++8cCHMy2es2C01A" groupMapping="0" id="++8cCHMy2es2C01B" nameSpace="GSC" occFieldId="++8cCHMy2es2C00s"/>
+    <mapping beFieldId="++8cCHMy2es2C01A" groupMapping="0" id="++8cCHMy2es2C01C" nameSpace="GSC" occFieldId="++8cCHMy2es2C00h"/>
+    <mapping beFieldId="005kiLnC2etqS010" groupMapping="0" id="005kiLnC2etqS011" nameSpace="GSC" occFieldId="005kiLnC2etqS00-"/>
+    <mapping beFieldId="005kiLnC2etqS01K" groupMapping="0" id="005kiLnC2etqS01L" nameSpace="GSC" occFieldId="005kiLnC2etqS01E"/>
+    <mapping beFieldId="005kiLnC2etqS01i" groupMapping="0" id="005kiLnC2etqS01j" nameSpace="GSC" occFieldId="005kiLnC2etqS01c"/>
+    <mapping beFieldId="005kiLnC2etqS01K" groupMapping="0" id="006AzXZC2etvy01M" nameSpace="GSC" occFieldId="005kiLnC2etqS01P"/>
+    <mapping beFieldId="005kiLnC2etqS010" groupMapping="0" id="006AzXZC2etvy01N" nameSpace="GSC" occFieldId="005k2kDC2etqS052"/>
+    <mapping beFieldId="005kiLnC2etqS01i" groupMapping="0" id="006AzXZC2etvy01O" nameSpace="GSC" occFieldId="005kiLnC2etqS01S"/>
+    <mapping beFieldId="++5puVHS2etne019" groupMapping="0" id="006AzXZC2etvy01Q" nameSpace="GSC" occFieldId="006AzXZC2etvy01P"/>
+    <mapping beFieldId="++5pqIIS2etne00g" groupMapping="0" id="006AzXZC2etvy01U" nameSpace="GSC" occFieldId="006AzXZC2etvy01T"/>
+    <mapping beFieldId="++5pqIIS2etne014" groupMapping="0" id="006AzXZC2etvy01W" nameSpace="GSC" occFieldId="006AzXZC2etvy01V"/>
+    <mapping beFieldId="008zD6dC2es1800G" groupMapping="0" id="008zD6dC2es1800I" nameSpace="NUVEEN" occFieldId="008zD6dC2es1800A"/>
+    <mapping beFieldId="008zD6dC2es1800G" groupMapping="0" id="008zD6dC2es1800J" nameSpace="NUVEEN" occFieldId="008zD6dC2es1800F"/>
+    <mapping beFieldId="008zD6dC2es1800U" groupMapping="0" id="008zD6dC2es1800V" nameSpace="NUVEEN" occFieldId="008zD6dC2es1800O"/>
+    <mapping beFieldId="008zD6dC2es1800U" groupMapping="0" id="008zD6dC2es1800W" nameSpace="NUVEEN" occFieldId="008zD6dC2es1800T"/>
+    <mapping beFieldId="009V00nC2etbS013" groupMapping="0" id="009V00nC2etbS014" nameSpace="NUVEEN" occFieldId="009V00nC2etbS011"/>
+    <mapping beFieldId="009V00nC2etbS013" groupMapping="0" id="009V00nC2etbS015" nameSpace="NUVEEN" occFieldId="009V00nC2etbS012"/>
+    <mapping beFieldId="009V00nC2etbS01D" groupMapping="0" id="009V00nC2etbS01E" nameSpace="NUVEEN" occFieldId="009V00nC2etbS01C"/>
+    <mapping beFieldId="009V00nC2etbS01D" groupMapping="0" id="009V00nC2etbS01F" nameSpace="NUVEEN" occFieldId="009V00nC2etbS01A"/>
+    <mapping beFieldId="009V00nC2etbS01H" groupMapping="0" id="009V00nC2etbS01I" nameSpace="NUVEEN" occFieldId="009V00nC2etbS01G"/>
+    <mapping beFieldId="009V00nC2etbS01Q" groupMapping="0" id="009V00nC2etbS01R" nameSpace="NUVEEN" occFieldId="009V00nC2etbS01P"/>
+    <mapping beFieldId="009V00nC2etbS01Q" groupMapping="0" id="009V00nC2etbS01S" nameSpace="NUVEEN" occFieldId="009V00nC2etbS01O"/>
+    <mapping beFieldId="++5x3xMy2etvy00n" groupMapping="0" id="++5x3xMy2etvy00o" nameSpace="GSC" occFieldId="++5x3xMy2etvy00m"/>
+    <mapping beFieldId="++8rtOhy2es2C03p" groupMapping="0" id="++8rtOhy2es2C03q" nameSpace="GSC" occFieldId="++8rtOhy2es2C03o"/>
+    <mapping beFieldId="++4JeV8S2ettS00S" groupMapping="0" id="004PLS7i2etzy00c" nameSpace="GSC" occFieldId="++4JeV8S2ettS00k"/>
+    <mapping beFieldId="++4JeV8S2ettS00T" groupMapping="0" id="004PLS7i2etzy00d" nameSpace="GSC" occFieldId="++4JeV8S2ettS00m"/>
+    <mapping beFieldId="008rkJdi2es18009" groupMapping="0" id="008rkJdi2es1800A" nameSpace="NUVEEN" occFieldId="008rkJdi2es18008"/>
+    <mapping beFieldId="008rkJdi2es1800C" groupMapping="0" id="008rkJdi2es1800D" nameSpace="NUVEEN" occFieldId="008rkJdi2es1800B"/>
+    <mapping beFieldId="008rkJdi2es1800F" groupMapping="0" id="008rkJdi2es1800G" nameSpace="NUVEEN" occFieldId="008rkJdi2es1800E"/>
+    <mapping beFieldId="008rkJdi2es1800I" groupMapping="0" id="008rkJdi2es1800J" nameSpace="NUVEEN" occFieldId="008rkJdi2es1800H"/>
+    <mapping beFieldId="008rpY3i2es18001" groupMapping="0" id="008rpY3i2es18002" nameSpace="NUVEEN" occFieldId="008rpY3i2es18000"/>
+    <mapping beFieldId="009W0UpC2etbS00I" groupMapping="0" id="009W0UpC2etbS00r" nameSpace="NUVEEN" occFieldId="009W0UpC2etbS00q"/>
+    <mapping beFieldId="009W0UpC2etbS00D" groupMapping="0" id="009W0UpC2etbS00s" nameSpace="NUVEEN" occFieldId="009W0UpC2etbS00k"/>
+    <mapping beFieldId="009W0UpC2etbS008" groupMapping="0" id="009W0UpC2etbS00t" nameSpace="NUVEEN" occFieldId="009W0UpC2etbS00e"/>
+    <mapping beFieldId="009W0UpC2etbS003" groupMapping="0" id="009W0UpC2etbS00u" nameSpace="NUVEEN" occFieldId="009W0UpC2etbS00W"/>
+    <mapping beFieldId="009ZiFQC2etbS00D" groupMapping="0" id="009ZiFQC2etbS00E" nameSpace="NUVEEN" occFieldId="009ZiFQC2etbS00C"/>
+    <mapping beFieldId="++8tcO2S2es1800F" groupMapping="0" id="++8tcO2S2es1800G" nameSpace="NUVEEN" occFieldId="++8tcO2S2es1800D"/>
+    <mapping beFieldId="++8tcO2S2es1800H" groupMapping="0" id="++8tcO2S2es1800I" nameSpace="NUVEEN" occFieldId="++8tcO2S2es1800E"/>
+    <mapping beFieldId="++8tcO2S2es1800N" groupMapping="0" id="++8tcO2S2es1800O" nameSpace="NUVEEN" occFieldId="++8tcO2S2es1800M"/>
+    <mapping beFieldId="++8th9Ky2es18001" groupMapping="0" id="++8th9Ky2es18002" nameSpace="NUVEEN" occFieldId="++8th9Ky2es18000"/>
+    <mapping beFieldId="008rkJdi2es1800P" groupMapping="0" id="008rkJdi2es1800Q" nameSpace="NUVEEN" occFieldId="008rkJdi2es1800O"/>
+    <mapping beFieldId="++8mAsYy2etbS004" groupMapping="0" id="++8mAsYy2etbS00N" nameSpace="NUVEEN" occFieldId="++8mAsYy2etbS00J"/>
+    <mapping beFieldId="++8mAsYy2etbS008" groupMapping="0" id="++8mAsYy2etbS00O" nameSpace="NUVEEN" occFieldId="++8mAsYy2etbS00K"/>
+    <mapping beFieldId="++8mAsYy2etbS002" groupMapping="0" id="++8mAsYy2etbS00P" nameSpace="NUVEEN" occFieldId="++8mAsYy2etbS00M"/>
+    <mapping beFieldId="++8mAsYy2etbS006" groupMapping="0" id="++8mAsYy2etbS00Q" nameSpace="NUVEEN" occFieldId="++8mAsYy2etbS00L"/>
+    <mapping beFieldId="++8yWQsy2es1800E" groupMapping="0" id="++8yWQsy2es1800F" nameSpace="NUVEEN" occFieldId="++8yWQsy2es1800D"/>
+    <mapping beFieldId="=000866350" groupMapping="0" id="009IDD4i2etbS012" nameSpace="NUVEEN" occFieldId="009IDD4i2etbS011"/>
+    <mapping beFieldId="=000866351" groupMapping="0" id="009IDD4i2etbS019" nameSpace="NUVEEN" occFieldId="009IDD4i2etbS018"/>
+    <mapping beFieldId="008m2pmi2etbS00C" groupMapping="0" id="008m2pmi2etbS00E" nameSpace="NUVEEN" occFieldId="008m2pmi2etbS00D"/>
+    <mapping beFieldId="++8yuMXy2es18001" groupMapping="0" id="++8yuMXy2es18002" nameSpace="NUVEEN" occFieldId="++8yuMXy2es18000"/>
+    <mapping beFieldId="008wMoui2es18006" groupMapping="0" id="008wMoui2es18007" nameSpace="NUVEEN" occFieldId="008wMoui2es18003"/>
+    <mapping beFieldId="008wMoui2es18008" groupMapping="0" id="008wMoui2es18009" nameSpace="NUVEEN" occFieldId="008wMoui2es18004"/>
+    <mapping beFieldId="008wMoui2es1800B" groupMapping="0" id="008wMoui2es1800C" nameSpace="NUVEEN" occFieldId="008wMoui2es1800A"/>
+    <mapping beFieldId="008wMoui2es1800E" groupMapping="0" id="008wMoui2es1800F" nameSpace="NUVEEN" occFieldId="008wMoui2es1800D"/>
+    <mapping beFieldId="008wMoui2es1800O" groupMapping="0" id="008wMoui2es1800P" nameSpace="NUVEEN" occFieldId="008wMoui2es1800N"/>
+    <mapping beFieldId="008wMoui2es1800R" groupMapping="0" id="008wMoui2es1800S" nameSpace="NUVEEN" occFieldId="008wMoui2es1800Q"/>
+    <mapping beFieldId="009V00nC2etbS04Q" groupMapping="0" id="009V00nC2etbS04R" nameSpace="NUVEEN" occFieldId="009V00nC2etbS04P"/>
+    <mapping beRelationId="009V00nC2etbS04G" groupMapping="0" id="009V00nC2etbS04N" nameSpace="NUVEEN" occFieldId="009V00nC2etbS04H"/>
+    <mapping beFieldId="009V00nC2etbS00R" groupMapping="0" id="009V00nC2etbS00S" nameSpace="NUVEEN" occFieldId="009V00nC2etbS00Q"/>
+    <mapping beFieldId="009V00nC2etbS00W" groupMapping="0" id="009V00nC2etbS00X" nameSpace="NUVEEN" occFieldId="009V00nC2etbS00V"/>
+    <mapping beFieldId="009ZiFQC2etbS001" groupMapping="0" id="++9c-xDy2etbS006" nameSpace="NUVEEN" occFieldId="++9c-xDy2etbS002"/>
+    <mapping beFieldId="009V00nC2etbS01z" groupMapping="0" id="009V00nC2etbS01+" nameSpace="NUVEEN" occFieldId="009V00nC2etbS01u"/>
+    <mapping beFieldId="009V00nC2etbS01z" groupMapping="0" id="009V00nC2etbS01-" nameSpace="NUVEEN" occFieldId="009V00nC2etbS01y"/>
+    <mapping beFieldId="009V00nC2etbS01g" groupMapping="0" id="009V00nC2etbS01h" nameSpace="NUVEEN" occFieldId="009V00nC2etbS01f"/>
+    <mapping beFieldId="009V00nC2etbS01l" groupMapping="0" id="009V00nC2etbS01m" nameSpace="NUVEEN" occFieldId="009V00nC2etbS01k"/>
+    <mapping beFieldId="009V00nC2etbS01n" groupMapping="0" id="009V00nC2etbS01o" nameSpace="NUVEEN" occFieldId="009V00nC2etbS01j"/>
+    <mapping beFieldId="009V00nC2etbS021" groupMapping="0" id="009V00nC2etbS022" nameSpace="NUVEEN" occFieldId="009V00nC2etbS020"/>
+    <mapping beFieldId="009V00nC2etbS02H" groupMapping="0" id="009V00nC2etbS02I" nameSpace="NUVEEN" occFieldId="009V00nC2etbS028"/>
+    <mapping beFieldId="009V00nC2etbS02E" groupMapping="0" id="009V00nC2etbS02Y" nameSpace="NUVEEN" occFieldId="009V00nC2etbS02W"/>
+    <mapping beFieldId="009V00nC2etbS02E" groupMapping="0" id="009V00nC2etbS02Z" nameSpace="NUVEEN" occFieldId="009V00nC2etbS02X"/>
+    <mapping beFieldId="009V00nC2etbS02a" groupMapping="0" id="009V00nC2etbS02b" nameSpace="NUVEEN" occFieldId="009V00nC2etbS02T"/>
+    <mapping beFieldId="009V00nC2etbS02a" groupMapping="0" id="009V00nC2etbS02c" nameSpace="NUVEEN" occFieldId="009V00nC2etbS02O"/>
+    <mapping beFieldId="009V00nC2etbS02d" groupMapping="0" id="009V00nC2etbS02e" nameSpace="NUVEEN" occFieldId="009V00nC2etbS02P"/>
+    <mapping beFieldId="009V00nC2etbS01W" groupMapping="0" id="009V00nC2etbS01X" nameSpace="NUVEEN" occFieldId="009V00nC2etbS01V"/>
+    <mapping beFieldId="009V00nC2etbS01b" groupMapping="0" id="009V00nC2etbS01c" nameSpace="NUVEEN" occFieldId="009V00nC2etbS01a"/>
+    <mapping beFieldId="009V00nC2etbS02i" groupMapping="0" id="009V00nC2etbS02j" nameSpace="NUVEEN" occFieldId="009V00nC2etbS02h"/>
+    <mapping beFieldId="009V00nC2etbS02n" groupMapping="0" id="009V00nC2etbS02o" nameSpace="NUVEEN" occFieldId="009V00nC2etbS02m"/>
+    <mapping beFieldId="009W0UpC2etbS00N" groupMapping="0" id="009W0UpC2etbS00w" nameSpace="NUVEEN" occFieldId="009W0UpC2etbS00v"/>
+    <mapping beFieldId="++9Zo7Qy2etbS001" groupMapping="0" id="++9Zo7Qy2etbS002" nameSpace="NUVEEN" occFieldId="++9Zo7Qy2etbS000"/>
+    <mapping beFieldId="009VgZli2etbS00A" groupMapping="0" id="009VgZli2etbS00B" nameSpace="NUVEEN" occFieldId="009VgZli2etbS001"/>
+    <mapping beFieldId="009VgZli2etbS00C" groupMapping="0" id="009VgZli2etbS00D" nameSpace="NUVEEN" occFieldId="009VgZli2etbS002"/>
+    <mapping beFieldId="009VgZli2etbS00E" groupMapping="0" id="009VgZli2etbS00F" nameSpace="NUVEEN" occFieldId="009VgZli2etbS003"/>
+    <mapping beFieldId="009VgZli2etbS00G" groupMapping="0" id="009VgZli2etbS00H" nameSpace="NUVEEN" occFieldId="009VgZli2etbS004"/>
+    <mapping beFieldId="009VgZli2etbS00I" groupMapping="0" id="009VgZli2etbS00K" nameSpace="NUVEEN" occFieldId="009VgZli2etbS005"/>
+    <mapping beFieldId="009VgZli2etbS00L" groupMapping="0" id="009VgZli2etbS00M" nameSpace="NUVEEN" occFieldId="009VgZli2etbS006"/>
+    <mapping beFieldId="009VgZli2etbS00N" groupMapping="0" id="009VgZli2etbS00O" nameSpace="NUVEEN" occFieldId="009VgZli2etbS007"/>
+    <mapping beFieldId="009VgZli2etbS00P" groupMapping="0" id="009VgZli2etbS00Q" nameSpace="NUVEEN" occFieldId="009VgZli2etbS008"/>
+    <mapping beRelationId="009VgZli2etbS00V" groupMapping="0" id="009VgZli2etbS00-" nameSpace="NUVEEN" occFieldId="009VgZli2etbS00a"/>
+    <mapping beRelationId="009VgZli2etbS00U" groupMapping="0" id="009VgZli2etbS00x" nameSpace="NUVEEN" occFieldId="009VgZli2etbS00X"/>
+    <mapping beRelationId="009VgZli2etbS00W" groupMapping="0" id="009VgZli2etbS011" nameSpace="NUVEEN" occFieldId="009VgZli2etbS00d"/>
+    <mapping beRelationId="009VgZli2etbS016" groupMapping="0" id="009VgZli2etbS01F" nameSpace="NUVEEN" occFieldId="009VgZli2etbS017"/>
+  </mappings>
+  <businessEntities>
+    <businessEntity cachedisableInd="N" completenessType="" dataGroupId="++4HwLjy2etpy008" defaultInd="1" desc="Financial Institution" displayCaption="Financial Institution" entityTypeId="++3qwBhS2etxm001" id="++4HwLjy2etpy007" mavenVersion="118.0" name="FinancialInstitution" nameSpace="GSC" ruleVersion="2.0" version="130.0">
+      <messagetypes>
+        <messagetype entityid="++4HwLjy2etpy007" id="++9JnNnS2etBK06F" msgtypname="Eagle_GSIssuerRelation" nameSpace="NUVEEN">
+          <vendorMapping externalFieldId="ROLE_TYPE" id="++9JnNnS2etBK06G" msgTypId="++9JnNnS2etBK06F" nameSpace="NUVEEN" paricipantId="++6SWIZS2etrC027" source="NuveenLevFin"/>
+          <vendorMapping externalFieldId="UPDATE_DATE" id="++9JnNnS2etBK06H" msgTypId="++9JnNnS2etBK06F" nameSpace="NUVEEN" paricipantId="008rkJdi2es1800R" source="NuveenLevFin"/>
+          <vendorMapping externalFieldId="EFFECTIVE_DATE" id="++9JnNnS2etBK06I" msgTypId="++9JnNnS2etBK06F" nameSpace="NUVEEN" paricipantId="++8th9Ky2es18003" source="NuveenLevFin"/>
+          <vendorMapping externalFieldId="FROM_ISSUER_ALIAS" id="++9JnNnS2etBK06J" msgTypId="++9JnNnS2etBK06F" nameSpace="NUVEEN" paricipantId="++4eFFHy2etv4017" source="NuveenLevFin"/>
+          <vendorMapping externalFieldId="FROM_ISSUER_ALIAS" id="++9JnNnS2etBK06K" msgTypId="++9JnNnS2etBK06F" nameSpace="NUVEEN" paricipantId="008pRKBC2etbS00P" source="NuveenLevFin"/>
+          <vendorMapping externalFieldId="TO_ISSUER_ALIAS" id="++9JnNnS2etBK06L" msgTypId="++9JnNnS2etBK06F" nameSpace="NUVEEN" paricipantId="008pRKBC2etbS00P" source="NuveenLevFin"/>
+        </messagetype>
+        <messagetype entityid="++4HwLjy2etpy007" id="++9JnNnS2etBK02q" msgtypname="Eagle_GSInstrument" nameSpace="NUVEEN">
+          <vendorMapping externalFieldId="ISSUER_CHAR2" id="++9JnNnS2etBK02r" msgTypId="++9JnNnS2etBK02q" nameSpace="NUVEEN" paricipantId="++5ckBRS2etse04O" source="NuveenLevFin"/>
+          <vendorMapping externalFieldId="ISSUER_CHAR1" id="++9JnNnS2etBK02s" msgTypId="++9JnNnS2etBK02q" nameSpace="NUVEEN" paricipantId="++5ckBRS2etse04N" source="NuveenLevFin"/>
+          <vendorMapping externalFieldId="COUNTRY_DOMICILE" id="++9JnNnS2etBK02t" msgTypId="++9JnNnS2etBK02q" nameSpace="NUVEEN" paricipantId="++5ckBRS2etse03M" source="NuveenLevFin"/>
+          <vendorMapping externalFieldId="ISSUER_DATE1" id="++9JnNnS2etBK02u" msgTypId="++9JnNnS2etBK02q" nameSpace="NUVEEN" paricipantId="++8mAsYy2etbS00F" source="NuveenLevFin"/>
+          <vendorMapping externalFieldId="ISSUER_CHAR7" id="++9JnNnS2etBK02v" msgTypId="++9JnNnS2etBK02q" nameSpace="NUVEEN" paricipantId="++7skcay2euPC00G" source="NuveenLevFin"/>
+          <vendorMapping externalFieldId="ISSUER_CHAR15" id="++9JnNnS2etBK02w" msgTypId="++9JnNnS2etBK02q" nameSpace="NUVEEN" paricipantId="++8mAsYy2etbS00E" source="NuveenLevFin"/>
+          <vendorMapping externalFieldId="INDUSTRY_SECTOR1" id="++9JnNnS2etBK02x" msgTypId="++9JnNnS2etBK02q" nameSpace="NUVEEN" paricipantId="++8mAsYy2etbS00H" source="NuveenLevFin"/>
+          <vendorMapping externalFieldId="ISSUER_CHAR14" id="++9JnNnS2etBK02y" msgTypId="++9JnNnS2etBK02q" nameSpace="NUVEEN" paricipantId="++8mAsYy2etbS00G" source="NuveenLevFin"/>
+          <vendorMapping externalFieldId="ISSUER_NAME" id="++9JnNnS2etBK02z" msgTypId="++9JnNnS2etBK02q" nameSpace="NUVEEN" paricipantId="++4eFFHy2etv4017" source="NuveenLevFin"/>
+          <vendorMapping externalFieldId="CLASS_20_SOURCE" id="++9JnNnS2etBK02-" msgTypId="++9JnNnS2etBK02q" nameSpace="NUVEEN" paricipantId="005k2kDC2etqS04+" source="NuveenLevFin"/>
+          <vendorMapping externalFieldId="ISSUER_CHAR10" id="++9JnNnS2etBK02+" msgTypId="++9JnNnS2etBK02q" nameSpace="NUVEEN" paricipantId="++5ckBRS2etse01H" source="NuveenLevFin"/>
+          <vendorMapping externalFieldId="COUNTRY_INCORPORATION" id="++9JnNnS2etBK030" msgTypId="++9JnNnS2etBK02q" nameSpace="NUVEEN" paricipantId="++5ZqLUy2etse0Dl" source="NuveenLevFin"/>
+          <vendorMapping externalFieldId="ISSUER_ALIAS" id="++9JnNnS2etBK031" msgTypId="++9JnNnS2etBK02q" nameSpace="NUVEEN" paricipantId="008pRKBC2etbS00P" source="NuveenLevFin"/>
+          <vendorMapping externalFieldId="COUNTRY_EXPOSURE" id="++9JnNnS2etBK032" msgTypId="++9JnNnS2etBK02q" nameSpace="NUVEEN" paricipantId="++5ckBRS2etse03N" source="NuveenLevFin"/>
+        </messagetype>
+        <messagetype entityid="++4HwLjy2etpy007" id="++9JnNnS2etBK05E" msgtypname="Eagle_GSIssuer" nameSpace="NUVEEN">
+          <vendorMapping externalFieldId="ISSUER_DATE1" id="++9JnNnS2etBK05F" msgTypId="++9JnNnS2etBK05E" nameSpace="NUVEEN" paricipantId="++8mAsYy2etbS00F" source="NuveenLevFin"/>
+          <vendorMapping externalFieldId="STATE" id="++9JnNnS2etBK05G" msgTypId="++9JnNnS2etBK05E" nameSpace="NUVEEN" paricipantId="008wMoui2es1800M" source="NuveenLevFin"/>
+          <vendorMapping externalFieldId="CITY" id="++9JnNnS2etBK05H" msgTypId="++9JnNnS2etBK05E" nameSpace="NUVEEN" paricipantId="008wMoui2es1800L" source="NuveenLevFin"/>
+          <vendorMapping externalFieldId="INDUSTRY_SECTOR1" id="++9JnNnS2etBK05I" msgTypId="++9JnNnS2etBK05E" nameSpace="NUVEEN" paricipantId="++8mAsYy2etbS00H" source="NuveenLevFin"/>
+          <vendorMapping externalFieldId="ISSUER_NAME" id="++9JnNnS2etBK05J" msgTypId="++9JnNnS2etBK05E" nameSpace="NUVEEN" paricipantId="++4eFFHy2etv4017" source="NuveenLevFin"/>
+          <vendorMapping externalFieldId="ISSUER_ALIAS" id="++9JnNnS2etBK05K" msgTypId="++9JnNnS2etBK05E" nameSpace="NUVEEN" paricipantId="008pRKBC2etbS00P" source="NuveenLevFin"/>
+          <vendorMapping externalFieldId="CLASSIFICATION_4" id="++9JnNnS2etBK05L" msgTypId="++9JnNnS2etBK05E" nameSpace="NUVEEN" paricipantId="++8yWQsy2es1800G" source="NuveenLevFin"/>
+          <vendorMapping externalFieldId="ISSUER_FLOAT2" id="++9JnNnS2etBK05M" msgTypId="++9JnNnS2etBK05E" nameSpace="NUVEEN" paricipantId="008m2pmi2etbS00F" source="NuveenLevFin"/>
+          <vendorMapping externalFieldId="LEI" id="++9JnNnS2etBK05N" msgTypId="++9JnNnS2etBK05E" nameSpace="NUVEEN" paricipantId="005kiLnC2etqS027" source="NuveenLevFin"/>
+          <vendorMapping externalFieldId="COUNTRY_EXPOSURE" id="++9JnNnS2etBK05O" msgTypId="++9JnNnS2etBK05E" nameSpace="NUVEEN" paricipantId="++5ckBRS2etse03N" source="NuveenLevFin"/>
+          <vendorMapping externalFieldId="CREDIT_ANALYST" id="++9JnNnS2etBK05P" msgTypId="++9JnNnS2etBK05E" nameSpace="NUVEEN" paricipantId="008ztWaC2es18005" source="NuveenLevFin"/>
+          <vendorMapping externalFieldId="ADDRESS" id="++9JnNnS2etBK05Q" msgTypId="++9JnNnS2etBK05E" nameSpace="NUVEEN" paricipantId="008wMoui2es1800J" source="NuveenLevFin"/>
+          <vendorMapping externalFieldId="ISSUER_CHAR2" id="++9JnNnS2etBK05R" msgTypId="++9JnNnS2etBK05E" nameSpace="NUVEEN" paricipantId="++5ckBRS2etse04O" source="NuveenLevFin"/>
+          <vendorMapping externalFieldId="ISSUER_CHAR1" id="++9JnNnS2etBK05S" msgTypId="++9JnNnS2etBK05E" nameSpace="NUVEEN" paricipantId="++5ckBRS2etse04N" source="NuveenLevFin"/>
+          <vendorMapping externalFieldId="COUNTRY_DOMICILE" id="++9JnNnS2etBK05T" msgTypId="++9JnNnS2etBK05E" nameSpace="NUVEEN" paricipantId="++5ckBRS2etse03M" source="NuveenLevFin"/>
+          <vendorMapping externalFieldId="ISSUER_CHAR5" id="++9JnNnS2etBK05U" msgTypId="++9JnNnS2etBK05E" nameSpace="NUVEEN" paricipantId="++5ckBRS2etse03N" source="NuveenLevFin"/>
+          <vendorMapping externalFieldId="ISSUER_CHAR8" id="++9JnNnS2etBK05V" msgTypId="++9JnNnS2etBK05E" nameSpace="NUVEEN" paricipantId="++5ckBRS2etse01W" source="NuveenLevFin"/>
+          <vendorMapping externalFieldId="ISSUER_CHAR7" id="++9JnNnS2etBK05W" msgTypId="++9JnNnS2etBK05E" nameSpace="NUVEEN" paricipantId="++7skcay2euPC00G" source="NuveenLevFin"/>
+          <vendorMapping externalFieldId="ISSUER_CHAR15" id="++9JnNnS2etBK05X" msgTypId="++9JnNnS2etBK05E" nameSpace="NUVEEN" paricipantId="++8mAsYy2etbS00E" source="NuveenLevFin"/>
+          <vendorMapping externalFieldId="ISSUER_CHAR14" id="++9JnNnS2etBK05Y" msgTypId="++9JnNnS2etBK05E" nameSpace="NUVEEN" paricipantId="++8mAsYy2etbS00G" source="NuveenLevFin"/>
+          <vendorMapping externalFieldId="ISSUER_CHAR13" id="++9JnNnS2etBK05Z" msgTypId="++9JnNnS2etBK05E" nameSpace="NUVEEN" paricipantId="008wMoui2es1800V" source="NuveenLevFin"/>
+          <vendorMapping externalFieldId="CLASS_20_SOURCE" id="++9JnNnS2etBK05a" msgTypId="++9JnNnS2etBK05E" nameSpace="NUVEEN" paricipantId="005k2kDC2etqS04+" source="NuveenLevFin"/>
+          <vendorMapping externalFieldId="CLASSIFICATION_10" id="++9JnNnS2etBK05b" msgTypId="++9JnNnS2etBK05E" nameSpace="NUVEEN" paricipantId="++8qjEGy2es2C005" source="NuveenLevFin"/>
+          <vendorMapping externalFieldId="ISSUER_CHAR12" id="++9JnNnS2etBK05c" msgTypId="++9JnNnS2etBK05E" nameSpace="NUVEEN" paricipantId="008wMoui2es1800U" source="NuveenLevFin"/>
+          <vendorMapping externalFieldId="ADDRESS_LINE_2" id="++9JnNnS2etBK05d" msgTypId="++9JnNnS2etBK05E" nameSpace="NUVEEN" paricipantId="++8yuMXy2es18004" source="NuveenLevFin"/>
+          <vendorMapping externalFieldId="ISSUER_CHAR11" id="++9JnNnS2etBK05e" msgTypId="++9JnNnS2etBK05E" nameSpace="NUVEEN" paricipantId="008wMoui2es1800K" source="NuveenLevFin"/>
+          <vendorMapping externalFieldId="ISSUER_CHAR10" id="++9JnNnS2etBK05f" msgTypId="++9JnNnS2etBK05E" nameSpace="NUVEEN" paricipantId="++5ckBRS2etse01H" source="NuveenLevFin"/>
+          <vendorMapping externalFieldId="COUNTRY_INCORPORATION" id="++9JnNnS2etBK05g" msgTypId="++9JnNnS2etBK05E" nameSpace="NUVEEN" paricipantId="++5ZqLUy2etse0Dl" source="NuveenLevFin"/>
+          <vendorMapping externalFieldId="ACQUIRED_BY_PARENT" id="++9JnNnS2etBK05h" msgTypId="++9JnNnS2etBK05E" nameSpace="NUVEEN" paricipantId="++5ckBRS2etse028" source="NuveenLevFin"/>
+          <vendorMapping externalFieldId="INDUSTRY_CODE" id="++9JnNnS2etBK05i" msgTypId="++9JnNnS2etBK05E" nameSpace="NUVEEN" paricipantId="++8cCHMy2es2C01E" source="NuveenLevFin"/>
+        </messagetype>
+        <messagetype entityid="++4HwLjy2etpy007" id="++9JnNnS2etBK05p" msgtypname="Eagle_GSIssuerXREF" nameSpace="NUVEEN">
+          <vendorMapping externalFieldId="ISSUER_ALIAS" id="++9JnNnS2etBK05q" msgTypId="++9JnNnS2etBK05p" nameSpace="NUVEEN" paricipantId="008pRKBC2etbS00P" source="NuveenLevFin"/>
+          <vendorMapping externalFieldId="INTERNAL" id="++9JnNnS2etBK05r" msgTypId="++9JnNnS2etBK05p" nameSpace="NUVEEN" paricipantId="008zD6dC2es1800Z" source="NuveenLevFin"/>
+          <vendorMapping externalFieldId="BBCOID" id="++9JnNnS2etBK05s" msgTypId="++9JnNnS2etBK05p" nameSpace="NUVEEN" paricipantId="005kiLnC2etqS026" source="NuveenLevFin"/>
+          <vendorMapping externalFieldId="ISSUER_NAME" id="++9JnNnS2etBK05t" msgTypId="++9JnNnS2etBK05p" nameSpace="NUVEEN" paricipantId="++4eFFHy2etv4017" source="NuveenLevFin"/>
+          <vendorMapping externalFieldId="ISSUER_NAME" id="++9JnNnS2etBK05u" msgTypId="++9JnNnS2etBK05p" nameSpace="NUVEEN" paricipantId="++5ckBRS2etse01a" source="NuveenLevFin"/>
+          <vendorMapping externalFieldId="ISSUER_NAME" id="++9JnNnS2etBK05v" msgTypId="++9JnNnS2etBK05p" nameSpace="NUVEEN" paricipantId="005k2kDC2etqS04h" source="NuveenLevFin"/>
+        </messagetype>
+        <messagetype entityid="++4HwLjy2etpy007" id="++9JnNnS2etBK000" msgtypname="LRD_Facility" nameSpace="NUVEEN">
+          <vendorMapping externalFieldId="WSODataFacilities\equityId" id="++9JnNnS2etBK001" msgTypId="++9JnNnS2etBK000" nameSpace="NUVEEN" paricipantId="005pp3Ei2etne01O" source="NuveenLevFin"/>
+          <vendorMapping externalFieldId="WSODataFacilities\wsoDataIssuerId" id="++9JnNnS2etBK002" msgTypId="++9JnNnS2etBK000" nameSpace="NUVEEN" paricipantId="++5ZqLUy2etse0Dk" source="NuveenLevFin"/>
+          <vendorMapping externalFieldId="WSODataFacilities\wsoDataIssuerId" id="++9JnNnS2etBK003" msgTypId="++9JnNnS2etBK000" nameSpace="NUVEEN" paricipantId="++9GzIaS2etbS007" source="NuveenLevFin"/>
+          <vendorMapping externalFieldId="WSODataFacilities\abbrevName" id="++9JnNnS2etBK004" msgTypId="++9JnNnS2etBK000" nameSpace="NUVEEN" paricipantId="++4eFFHy2etv4017" source="NuveenLevFin"/>
+          <vendorMapping externalFieldId="WSODataFacilities\name" id="++9JnNnS2etBK005" msgTypId="++9JnNnS2etBK000" nameSpace="NUVEEN" paricipantId="++5ckBRS2etse01l" source="NuveenLevFin"/>
+        </messagetype>
+        <messagetype entityid="++4HwLjy2etpy007" id="++9JnNnS2etBK064" msgtypname="Eagle_GSInstrumentIssuerRelation" nameSpace="NUVEEN">
+          <vendorMapping externalFieldId="ISSUER_ALIAS" id="++9JnNnS2etBK065" msgTypId="++9JnNnS2etBK064" nameSpace="NUVEEN" paricipantId="008pRKBC2etbS00P" source="NuveenLevFin"/>
+        </messagetype>
+      </messagetypes>
+      <configurations>
+        <configuration data="false" id="++5WWzmy2etse00a" ignoreDeleteChildren="false" nameSpace="GSC" option="DOMAIN">
+          <part data="true" disParentConfig="0" groupPartId="++5ckBRS2etse01H" id="008wGrEi2es18007" nameSpace="NUVEEN"/>
+        </configuration>
+      </configurations>
+    </businessEntity>
+    <businessEntity cachedisableInd="N" category="" completenessType="" dataGroupId="009V00nC2etbS001" defaultInd="0" desc="" displayCaption="Credit" entityTypeId="++3qwBhS2etxm001" id="009V00nC2etbS000" mavenVersion="0.0" name="NuveenCredit" nameSpace="NUVEEN" prntEntityId="++4HwLjy2etpy007" ruleVersion="0.0" version="10.0">
+      <configurations>
+        <configuration data="false" id="++9X8dsy2etbS002" ignoreDeleteChildren="false" nameSpace="NUVEEN" option="DOMAIN">
+          <part data="true" disParentConfig="0" groupPartId="++5ckBRS2etse01H" id="++9X8dsy2etbS003" nameSpace="NUVEEN"/>
+        </configuration>
+        <configuration data="INCOMPLETE" id="009V00nC2etbS002" ignoreDeleteChildren="false" nameSpace="NUVEEN" option="BEDEINITIONFSTATUS"/>
+        <configuration id="009ZiFQC2etbS00M" ignoreDeleteChildren="false" nameSpace="NUVEEN" option="MULTIPLICITY_REQUIRE">
+          <part disParentConfig="0" groupPartId="009V00nC2etbS04b" id="009ZiFQC2etbS00N" nameSpace="NUVEEN"/>
+          <part disParentConfig="0" groupPartId="009VgZli2etbS00j" id="009ZiFQC2etbS00O" nameSpace="NUVEEN"/>
+          <part disParentConfig="0" groupPartId="009VgZli2etbS00m" id="009ZiFQC2etbS00P" nameSpace="NUVEEN"/>
+        </configuration>
+      </configurations>
+    </businessEntity>
+  </businessEntities>
+  <entityRelations>
+    <entityRelation desc="CUSTOM:Relation Participant" entityId="++4HwLjy2etpy007" id="=00000012D" lookupField="++4eFFHy2etv4017" multiplicity="SINGLE_OR_NULL" name="CurrentUltimateParent" nameSpace="GSC" rltdEntityId="++4HwLjy2etpy007">
+      <part forPublishing="1" forUI="1" id="=00000012F" nameSpace="GSC" partId="++4eFFHy2etv4017"/>
+      <part forPublishing="1" forUI="1" id="005t1Sqi2etsm00F" nameSpace="GSC" partId="++5ZqLUy2etse0Dj"/>
+      <part forPublishing="1" forUI="1" id="005t1Sqi2etsm00G" nameSpace="GSC" partId="++5ZqLUy2etse0Dk"/>
+      <part forPublishing="1" forUI="1" id="005t1Sqi2etsm00D" nameSpace="GSC" partId="++5ckBRS2etse01a"/>
+      <part forPublishing="1" forUI="1" id="008m0JFi2etbC009" nameSpace="GSC" partId="++5ckBRS2etse03N"/>
+      <part forPublishing="1" forUI="1" id="++8uJAVS2es18004" nameSpace="NUVEEN" partId="++8uJAVS2es18003"/>
+      <part forPublishing="1" forUI="1" id="008x0FXC2es18007" nameSpace="NUVEEN" partId="005k2kDC2etqS04+"/>
+      <part forPublishing="1" forUI="1" id="008rkJdi2es18000" nameSpace="NUVEEN" partId="005kiLnC2etqS025"/>
+      <part forPublishing="1" forUI="1" id="008m0JFi2etbC008" nameSpace="GSC" partId="005kiLnC2etqS026"/>
+    </entityRelation>
+    <entityRelation desc="CUSTOM:Relation Participant" entityId="++4HwLjy2etpy007" id="=00000012C" lookupField="++4eFFHy2etv4017" multiplicity="SINGLE_OR_NULL" name="ParentCompany" nameSpace="GSC" rltdEntityId="++4HwLjy2etpy007">
+      <part forPublishing="1" forUI="1" id="=00000012E" nameSpace="GSC" partId="++4eFFHy2etv4017"/>
+      <part forPublishing="1" forUI="1" id="005t1Sqi2etsm008" nameSpace="GSC" partId="++5ZqLUy2etse0Dj"/>
+      <part forPublishing="1" forUI="1" id="005t1Sqi2etsm009" nameSpace="GSC" partId="++5ZqLUy2etse0Dk"/>
+      <part forPublishing="1" forUI="1" id="005t1Sqi2etsm00A" nameSpace="GSC" partId="++5ckBRS2etse01a"/>
+      <part forPublishing="1" forUI="1" id="005t1Sqi2etsm007" nameSpace="GSC" partId="004gu4GC2etry00H"/>
+      <part forPublishing="1" forUI="1" id="008x0FXC2es18008" nameSpace="NUVEEN" partId="005k2kDC2etqS04+"/>
+      <part forPublishing="1" forUI="1" id="++8m0Lay2etbC00C" nameSpace="GSC" partId="005kiLnC2etqS01r"/>
+      <part forPublishing="1" forUI="1" id="++8m0Lay2etbC00D" nameSpace="GSC" partId="005kiLnC2etqS01s"/>
+      <part forPublishing="1" forUI="1" id="++8m0Lay2etbC00E" nameSpace="GSC" partId="005kiLnC2etqS01t"/>
+      <part forPublishing="1" forUI="1" id="++8m0Lay2etbC00B" nameSpace="GSC" partId="005kiLnC2etqS026"/>
+    </entityRelation>
+    <entityRelation entityId="++4HwLjy2etpy007" id="008s8K1C2es18004" lookupField="++5aPQJS2etse039" multiplicity="SINGLE_OR_NULL" name="Issuer" nameSpace="NUVEEN" rltdEntityId="++4Hqs3S2etry00L">
+      <part forPublishing="1" forUI="1" id="008s8K1C2es1800D" nameSpace="NUVEEN" partId="++5aPQJS2etse02s"/>
+      <part forPublishing="1" forUI="1" id="008s8K1C2es1800C" nameSpace="NUVEEN" partId="++5aPQJS2etse038"/>
+      <part forPublishing="1" forUI="1" id="008s8K1C2es1800A" nameSpace="NUVEEN" partId="++5aPQJS2etse039"/>
+      <part forPublishing="1" forUI="1" id="008s8K1C2es1800B" nameSpace="NUVEEN" partId="++5aPQJS2etse03A"/>
+      <part forPublishing="1" forUI="1" id="008s8K1C2es1800E" nameSpace="NUVEEN" partId="++64i8uS2etvy000"/>
+    </entityRelation>
+    <entityRelation entityId="++4HwLjy2etpy007" id="009ZtXqi2etbS000" lookupField="++4hOgWS2etqm00g" multiplicity="SINGLE_OR_NULL" name="NuveenCreditCityRel" nameSpace="NUVEEN" rltdEntityId="++4hOgWS2etqm000">
+      <part forPublishing="1" forUI="1" id="009ZtXqi2etbS006" nameSpace="NUVEEN" partId="++4hOgWS2etqm00g"/>
+      <part forPublishing="1" forUI="1" id="009ZtXqi2etbS007" nameSpace="NUVEEN" partId="++4hOgWS2etqm00j"/>
+    </entityRelation>
+    <entityRelation entityId="++4HwLjy2etpy007" id="009ZtXqi2etbS008" lookupField="++6cveRy2etZa00e" multiplicity="SINGLE_OR_NULL" name="NuveenSecurityCodeRel" nameSpace="NUVEEN" rltdEntityId="++6cveRy2etZa00F">
+      <part forPublishing="1" forUI="1" id="009ZtXqi2etbS00E" nameSpace="NUVEEN" partId="++6cveRy2etZa00e"/>
+      <part forPublishing="1" forUI="1" id="009ZtXqi2etbS00G" nameSpace="NUVEEN" partId="++6cveRy2etZa00f"/>
+    </entityRelation>
+    <entityRelation desc="CUSTOM:Relation Participant" entityId="++4HwLjy2etpy007" id="++6SWIZS2etrC02W" lookupField="++4eFFHy2etv4017" multiplicity="MULTIPLE" name="AllInstRelations" nameSpace="GSC" rltdEntityId="++4HwLjy2etpy007">
+      <part forPublishing="1" forUI="1" id="++6SWIZS2etrC02a" nameSpace="GSC" partId="++4eFFHy2etv4017"/>
+      <part forPublishing="1" forUI="0" id="++9IYFYy2etbS00P" nameSpace="NUVEEN" partId="++5ZqLUy2etse0Dl"/>
+      <part forPublishing="1" forUI="0" id="++9IYFYy2etbS00Q" nameSpace="NUVEEN" partId="++5ckBRS2etse01H"/>
+      <part forPublishing="1" forUI="0" id="++9IYFYy2etbS00T" nameSpace="NUVEEN" partId="++5ckBRS2etse03M"/>
+      <part forPublishing="1" forUI="0" id="++9IYFYy2etbS00R" nameSpace="NUVEEN" partId="++5ckBRS2etse03N"/>
+      <part forPublishing="1" forUI="0" id="++9IYFYy2etbS00U" nameSpace="NUVEEN" partId="++5ckBRS2etse04N"/>
+      <part forPublishing="1" forUI="0" id="++9IYFYy2etbS00S" nameSpace="NUVEEN" partId="++5ckBRS2etse04O"/>
+      <part forPublishing="1" forUI="0" id="++9IYFYy2etbS00O" nameSpace="NUVEEN" partId="++7skcay2euPC00G"/>
+      <part forPublishing="1" forUI="1" id="008wMoui2es1800t" nameSpace="NUVEEN" partId="++8uJAVS2es18003"/>
+      <part forPublishing="1" forUI="1" id="++8rQuaS2es1800s" nameSpace="NUVEEN" partId="005kiLnC2etqS025"/>
+      <part forPublishing="1" forUI="1" id="++8rQuaS2es1800n" nameSpace="NUVEEN" partId="005kiLnC2etqS026"/>
+      <part forPublishing="1" forUI="1" id="++6SWIZS2etrC02b" nameSpace="GSC" partId="005kiLnC2etqS027"/>
+      <part forPublishing="1" forUI="1" id="009b5pDi2etbS001" nameSpace="NUVEEN" partId="005y3VbC2etvy00N"/>
+      <part forPublishing="1" forUI="1" id="++8rQuaS2es18012" nameSpace="NUVEEN" partId="008mcntC2etbS03Z"/>
+      <part forPublishing="1" forUI="1" id="++8rQuaS2es1800o" nameSpace="NUVEEN" partId="008mcntC2etbS03h"/>
+      <part forPublishing="1" forUI="1" id="++8rQuaS2es1800q" nameSpace="NUVEEN" partId="008pRKBC2etbS00O"/>
+      <part forPublishing="1" forUI="1" id="++8rQuaS2es1800r" nameSpace="NUVEEN" partId="008pRKBC2etbS00P"/>
+      <part forPublishing="1" forUI="1" id="008wMoui2es1800s" nameSpace="NUVEEN" partId="008wMoui2es1800r"/>
+    </entityRelation>
+    <entityRelation entityId="++4HwLjy2etpy007" id="009V00nC2etbS04G" lookupField="++6SNtsy2etZa01M" multiplicity="MULTIPLE_OR_NULL" name="Employee" nameSpace="NUVEEN" rltdEntityId="++6SNtsy2etZa01j">
+      <part forPublishing="1" forUI="1" id="009V00nC2etbS04O" nameSpace="NUVEEN" partId="++6SNtsy2etZa01M"/>
+    </entityRelation>
+    <entityRelation entityId="++4HwLjy2etpy007" id="009VgZli2etbS00U" lookupField="++6SNtsy2etZa01M" multiplicity="MULTIPLE_OR_NULL" name="NuveenCRReviewAnalyst" nameSpace="NUVEEN" rltdEntityId="++6SNtsy2etZa01j">
+      <part forPublishing="1" forUI="1" id="009VgZli2etbS00y" nameSpace="NUVEEN" partId="++6SNtsy2etZa01M"/>
+      <part forPublishing="1" forUI="1" id="009VgZli2etbS00z" nameSpace="NUVEEN" partId="++7kqRty2eso000A"/>
+    </entityRelation>
+    <entityRelation entityId="++4HwLjy2etpy007" id="009VgZli2etbS00V" lookupField="++6SNtsy2etZa01M" multiplicity="MULTIPLE_OR_NULL" name="NuveenCRResponsibleAnalyst" nameSpace="NUVEEN" rltdEntityId="++6SNtsy2etZa01j">
+      <part forPublishing="1" forUI="1" id="009VgZli2etbS010" nameSpace="NUVEEN" partId="++6SNtsy2etZa01M"/>
+      <part forPublishing="1" forUI="1" id="009VgZli2etbS00+" nameSpace="NUVEEN" partId="++7kqRty2eso000A"/>
+    </entityRelation>
+    <entityRelation entityId="++4HwLjy2etpy007" id="009VgZli2etbS00W" lookupField="++6SNtsy2etZa01M" multiplicity="MULTIPLE_OR_NULL" name="NuveenCRAuthor" nameSpace="NUVEEN" rltdEntityId="++6SNtsy2etZa01j">
+      <part forPublishing="1" forUI="1" id="009VgZli2etbS012" nameSpace="NUVEEN" partId="++6SNtsy2etZa01M"/>
+      <part forPublishing="1" forUI="1" id="009VgZli2etbS013" nameSpace="NUVEEN" partId="++7kqRty2eso000A"/>
+    </entityRelation>
+    <entityRelation entityId="++4HwLjy2etpy007" id="009VgZli2etbS016" lookupField="009V00nC2etbS03v" multiplicity="MULTIPLE_OR_NULL" name="NuveenLinkedIssue" nameSpace="NUVEEN" rltdEntityId="++5TZs2y2etse000">
+      <part forPublishing="1" forUI="1" id="009VgZli2etbS01I" nameSpace="NUVEEN" partId="005Q5i8i2etse002"/>
+      <part forPublishing="1" forUI="1" id="009VgZli2etbS01K" nameSpace="NUVEEN" partId="009V00nC2etbS03r"/>
+      <part forPublishing="1" forUI="1" id="009VgZli2etbS01J" nameSpace="NUVEEN" partId="009V00nC2etbS03s"/>
+      <part forPublishing="1" forUI="1" id="009VgZli2etbS01G" nameSpace="NUVEEN" partId="009V00nC2etbS03u"/>
+      <part forPublishing="1" forUI="1" id="009VgZli2etbS01H" nameSpace="NUVEEN" partId="009V00nC2etbS03v"/>
+    </entityRelation>
+  </entityRelations>
+  <naturalKeys>
+    <naturalKey dataGroupId="009V00nC2etbS04L" id="009V00nC2etbS04T" name="NuveenRelatedEmployeesNaturalKey" nameSpace="NUVEEN">
+      <part beFieldId="009V00nC2etbS04S" id="009V00nC2etbS04U" nameSpace="NUVEEN"/>
+    </naturalKey>
+    <naturalKey dataGroupId="009VgZli2etbS00h" id="009VgZli2etbS00u" name="NuveenCreditReportsNaturalKey" nameSpace="NUVEEN">
+      <part beFieldId="009VgZli2etbS00j" id="009VgZli2etbS00v" nameSpace="NUVEEN"/>
+      <part beFieldId="009VgZli2etbS00q" id="009VgZli2etbS00w" nameSpace="NUVEEN"/>
+    </naturalKey>
+    <naturalKey dataGroupId="009VgZli2etbS01B" id="009VgZli2etbS01D" name="NuveenLUnderlyingIssuesNaturalKey" nameSpace="NUVEEN">
+      <part beFieldId="009VgZli2etbS01C" id="009VgZli2etbS01E" nameSpace="NUVEEN"/>
+    </naturalKey>
+  </naturalKeys>
+</entities>

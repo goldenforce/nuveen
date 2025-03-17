@@ -1,0 +1,321 @@
+{
+  "TYPE" : "Workflow",
+  "version" : "1.6.6",
+  "timeZone" : "America/New_York",
+  "orderPreparation" : {
+    "parameters" : {
+      "ratingReconToggle" : {
+        "type" : "String",
+        "default" : "\"Y\""
+      },
+      "target_application" : {
+        "type" : "String",
+        "default" : "'fileloading'"
+      },
+      "scripts_home" : {
+        "type" : "String",
+        "default" : "'/ext/app/jobscheduler/scripts/'"
+      },
+      "dayMinus" : {
+        "type" : "String",
+        "default" : "0"
+      },
+      "day" : {
+        "type" : "String",
+        "default" : "30"
+      }
+    },
+    "allowUndeclared" : false
+  },
+  "jobResourceNames" : [ "curDteJob" ],
+  "instructions" : [ {
+    "TYPE" : "Execute.Named",
+    "jobName" : "Nuveen_Rating_Recon_Moody_Start",
+    "label" : "Nuveen_Rating_Recon_Moody_Star"
+  }, {
+    "TYPE" : "Try",
+    "try" : {
+      "instructions" : [ {
+        "TYPE" : "Fork",
+        "branches" : [ {
+          "id" : "Config",
+          "workflow" : {
+            "instructions" : [ {
+              "TYPE" : "Execute.Named",
+              "jobName" : "Rating_Recon_Config_Cleanup",
+              "label" : "Rating_Recon_Config_Cleanup"
+            } ]
+          }
+        }, {
+          "id" : "Report",
+          "workflow" : {
+            "instructions" : [ {
+              "TYPE" : "Execute.Named",
+              "jobName" : "Rating_Recon_Report_Cleanup",
+              "label" : "Rating_Recon_Report_Cleanup"
+            } ]
+          }
+        } ],
+        "joinIfFailed" : false,
+        "label" : "Rating_Recon_Cleanup"
+      }, {
+        "TYPE" : "Execute.Named",
+        "jobName" : "Rating_Recon_Toggle",
+        "label" : "Rating_Recon_Toggle"
+      }, {
+        "TYPE" : "Execute.Named",
+        "jobName" : "Moody_SOI_Instrument_Ratings_Full",
+        "label" : "jobMoody_SOI_Instrument_Rating"
+      }, {
+        "TYPE" : "Execute.Named",
+        "jobName" : "Muni_Moody_Instrument_Ratings_Full",
+        "label" : "Muni_Moody_Instr_Ratings_Full"
+      }, {
+        "TYPE" : "Execute.Named",
+        "jobName" : "Rating_Recon_Moody",
+        "label" : "Rating_Recon_Moody"
+      }, {
+        "TYPE" : "Execute.Named",
+        "jobName" : "Rating_Recon_Config_Cleanup_1",
+        "label" : "Rating_Recon_Config_Cleanup_1"
+      }, {
+        "TYPE" : "Execute.Named",
+        "jobName" : "RRC1_Backup_Table",
+        "label" : "RRC1_Backup_Table"
+      }, {
+        "TYPE" : "Execute.Named",
+        "jobName" : "Drop_RRC1_Backup_tables",
+        "label" : "Drop_RRC1_Backup_tables"
+      } ]
+    },
+    "catch" : {
+      "instructions" : [ {
+        "TYPE" : "Retry"
+      } ]
+    },
+    "maxTries" : 10,
+    "retryDelays" : [ 600 ]
+  }, {
+    "TYPE" : "Execute.Named",
+    "jobName" : "Nuveen_Rating_Recon_Moody_End",
+    "label" : "Nuveen_Rating_Recon_Moody_End"
+  } ],
+  "jobs" : {
+    "Nuveen_Rating_Recon_Moody_Start" : {
+      "agentName" : "JSAgent",
+      "withSubagentClusterIdExpr" : false,
+      "executable" : {
+        "TYPE" : "ShellScriptExecutable",
+        "script" : "echo \"Nuveen Rating Recon Moody Job Start\"",
+        "v1Compatible" : false
+      },
+      "skipIfNoAdmissionForOrderDay" : false,
+      "parallelism" : 1,
+      "graceTimeout" : 1,
+      "failOnErrWritten" : false,
+      "warnOnErrWritten" : false,
+      "title" : "Nuveen_Rating_Recon_Moody_Start"
+    },
+    "Rating_Recon_Config_Cleanup" : {
+      "agentName" : "JSAgent",
+      "withSubagentClusterIdExpr" : false,
+      "executable" : {
+        "TYPE" : "ShellScriptExecutable",
+        "script" : "cd $scripts_home\n./jobutilities execWkf_inputParam '{}' $event_name $target_application",
+        "env" : {
+          "scripts_home" : "$scripts_home",
+          "event_name" : "'NSM_EVT_Rating_Recon_Config_Cleanup'",
+          "target_application" : "$target_application"
+        },
+        "v1Compatible" : false
+      },
+      "skipIfNoAdmissionForOrderDay" : false,
+      "parallelism" : 1,
+      "graceTimeout" : 1,
+      "failOnErrWritten" : false,
+      "warnOnErrWritten" : false,
+      "title" : "Rating_Recon_Config_Cleanup"
+    },
+    "Rating_Recon_Report_Cleanup" : {
+      "agentName" : "JSAgent",
+      "withSubagentClusterIdExpr" : false,
+      "executable" : {
+        "TYPE" : "ShellScriptExecutable",
+        "script" : "cd $scripts_home\n./jobutilities execWkf_inputParam '{}' $event_name $target_application",
+        "env" : {
+          "scripts_home" : "$scripts_home",
+          "event_name" : "'NSM_EVT_Rating_Recon_Report_Cleanup'",
+          "target_application" : "$target_application"
+        },
+        "v1Compatible" : false
+      },
+      "skipIfNoAdmissionForOrderDay" : false,
+      "parallelism" : 1,
+      "graceTimeout" : 1,
+      "failOnErrWritten" : false,
+      "warnOnErrWritten" : false,
+      "title" : "Rating_Recon_Report_Cleanup"
+    },
+    "Rating_Recon_Toggle" : {
+      "agentName" : "JSAgent",
+      "withSubagentClusterIdExpr" : false,
+      "executable" : {
+        "TYPE" : "ShellScriptExecutable",
+        "script" : "cd $scripts_home\n./jobutilities execWkf_inputParam '{\"RatingRecon\" : \"'\"$rating_recon_toggle\"'\"}' $event_name $target_application",
+        "env" : {
+          "scripts_home" : "$scripts_home",
+          "event_name" : "'NSM_EVT_Rating_Recon_Toggle'",
+          "target_application" : "$target_application",
+          "rating_recon_toggle" : "$ratingReconToggle"
+        },
+        "v1Compatible" : false
+      },
+      "skipIfNoAdmissionForOrderDay" : false,
+      "parallelism" : 1,
+      "graceTimeout" : 1,
+      "failOnErrWritten" : false,
+      "warnOnErrWritten" : false,
+      "title" : "Rating_Recon_Toggle"
+    },
+    "Moody_SOI_Instrument_Ratings_Full" : {
+      "agentName" : "JSAgent",
+      "withSubagentClusterIdExpr" : false,
+      "executable" : {
+        "TYPE" : "ShellScriptExecutable",
+        "script" : "jq -r '.Pattern[]' $input_param_file | while read fileName; do\n\tfileDte=$(date --date=\"$BUS_DTE $dayMinus days ago\" +\"%Y%m%d\")\n    fileNameBusDte=${fileName/$busDteRegex/$fileDte}\n    fileNameRegex=${fileName//'.'/'\\.'}\n    fileNameRegex=${fileNameRegex//'*'/'\\*'}\n    sed -i \"s|$fileNameRegex|$fileNameBusDte|\" $input_param_file\ndone\n\ncd $scripts_home\n./jobutilities execWkf $input_param_file $event_name $target_application",
+        "env" : {
+          "scripts_home" : "$scripts_home",
+          "event_name" : "'Nuveen_Moodys_SOI_Ratings'",
+          "target_application" : "$target_application",
+          "input_param_file" : "'/edmfs/app/InputParams/ratings/Nuveen_Moodys_SOI_Instrument_Ratings_Full.json'",
+          "dayMinus" : "$dayMinus"
+        },
+        "v1Compatible" : false
+      },
+      "skipIfNoAdmissionForOrderDay" : false,
+      "parallelism" : 1,
+      "graceTimeout" : 1,
+      "failOnErrWritten" : false,
+      "warnOnErrWritten" : false,
+      "jobResourceNames" : [ "curDteJob" ],
+      "title" : "Moody_SOI_Instrument_Ratings_Full"
+    },
+    "Muni_Moody_Instrument_Ratings_Full" : {
+      "agentName" : "JSAgent",
+      "withSubagentClusterIdExpr" : false,
+      "executable" : {
+        "TYPE" : "ShellScriptExecutable",
+        "script" : "cd $scripts_home\n./jobutilities execWkf $input_param_file $event_name $target_application",
+        "env" : {
+          "scripts_home" : "$scripts_home",
+          "event_name" : "'Nuveen_EVT_Muni_Moodys_Ratings'",
+          "target_application" : "$target_application",
+          "input_param_file" : "'/edmfs/app/InputParams/ratings/Nuveen_Muni_Moodys_Instrument_Ratings_Full_Load.json'"
+        },
+        "v1Compatible" : false
+      },
+      "skipIfNoAdmissionForOrderDay" : false,
+      "parallelism" : 1,
+      "graceTimeout" : 1,
+      "failOnErrWritten" : false,
+      "warnOnErrWritten" : false,
+      "title" : "Muni_Moody_Instrument_Ratings_Full"
+    },
+    "Rating_Recon_Moody" : {
+      "agentName" : "JSAgent",
+      "withSubagentClusterIdExpr" : false,
+      "executable" : {
+        "TYPE" : "ShellScriptExecutable",
+        "script" : "cd $scripts_home\n./jobutilities execWkf_inputParam '{}' $event_name $target_application",
+        "env" : {
+          "scripts_home" : "$scripts_home",
+          "event_name" : "'NSM_EVT_Rating_Recon_Moody'",
+          "target_application" : "$target_application"
+        },
+        "v1Compatible" : false
+      },
+      "skipIfNoAdmissionForOrderDay" : false,
+      "parallelism" : 1,
+      "graceTimeout" : 1,
+      "failOnErrWritten" : false,
+      "warnOnErrWritten" : false,
+      "title" : "Rating_Recon_Moody"
+    },
+    "Rating_Recon_Config_Cleanup_1" : {
+      "agentName" : "JSAgent",
+      "withSubagentClusterIdExpr" : false,
+      "executable" : {
+        "TYPE" : "ShellScriptExecutable",
+        "script" : "cd $scripts_home\n./jobutilities execWkf_inputParam '{}' $event_name $target_application",
+        "env" : {
+          "scripts_home" : "$scripts_home",
+          "event_name" : "'NSM_EVT_Rating_Recon_Config_Cleanup'",
+          "target_application" : "$target_application"
+        },
+        "v1Compatible" : false
+      },
+      "skipIfNoAdmissionForOrderDay" : false,
+      "parallelism" : 1,
+      "graceTimeout" : 1,
+      "failOnErrWritten" : false,
+      "warnOnErrWritten" : false,
+      "title" : "Rating_Recon_Config_Cleanup_1"
+    },
+    "RRC1_Backup_Table" : {
+      "agentName" : "JSAgent",
+      "withSubagentClusterIdExpr" : false,
+      "executable" : {
+        "TYPE" : "ShellScriptExecutable",
+        "script" : "cd $scripts_home\n./jobutilities execWkf_inputParam '{}' $event_name $target_application",
+        "env" : {
+          "scripts_home" : "$scripts_home",
+          "event_name" : "'NSM_EVT_Rating_Recon_Create_Backup_Table'",
+          "target_application" : "$target_application"
+        },
+        "v1Compatible" : false
+      },
+      "skipIfNoAdmissionForOrderDay" : false,
+      "parallelism" : 1,
+      "graceTimeout" : 1,
+      "failOnErrWritten" : false,
+      "warnOnErrWritten" : false,
+      "title" : "RRC1_Backup_Table"
+    },
+    "Drop_RRC1_Backup_tables" : {
+      "agentName" : "JSAgent",
+      "withSubagentClusterIdExpr" : false,
+      "executable" : {
+        "TYPE" : "ShellScriptExecutable",
+        "script" : "cd $scripts_home\n./jobutilities execWkf_inputParam '{}' $event_name $target_application",
+        "env" : {
+          "scripts_home" : "$scripts_home",
+          "event_name" : "'NSM_EVT_Rating_Recon_Drop_Backup_Table'",
+          "target_application" : "$target_application",
+          "day" : "$day"
+        },
+        "v1Compatible" : false
+      },
+      "skipIfNoAdmissionForOrderDay" : false,
+      "parallelism" : 1,
+      "graceTimeout" : 1,
+      "failOnErrWritten" : false,
+      "warnOnErrWritten" : false,
+      "title" : "Drop_RRC1_Backup_tables"
+    },
+    "Nuveen_Rating_Recon_Moody_End" : {
+      "agentName" : "JSAgent",
+      "withSubagentClusterIdExpr" : false,
+      "executable" : {
+        "TYPE" : "ShellScriptExecutable",
+        "script" : "echo \"Nuveen_Rating_Recon_Moody_End\"",
+        "v1Compatible" : false
+      },
+      "skipIfNoAdmissionForOrderDay" : false,
+      "parallelism" : 1,
+      "graceTimeout" : 1,
+      "failOnErrWritten" : false,
+      "warnOnErrWritten" : false,
+      "title" : "Nuveen_Rating_Recon_Moody_End"
+    }
+  }
+}

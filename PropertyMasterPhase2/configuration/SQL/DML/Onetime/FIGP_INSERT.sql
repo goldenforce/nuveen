@@ -1,0 +1,3 @@
+INSERT INTO ft_t_figp
+(prnt_fins_grp_oid, start_tms, inst_mnem, fins_grp_oid, prt_purp_typ, end_tms, last_chg_tms, last_chg_usr_id, prt_desc, data_stat_typ, data_src_id, figp_oid, part_camt, part_curr_cde, part_cpct)
+select 'LEVFIN0001', '2024-08-19 11:35:15.000', 'CUSTFINS01', 'LEVFIN0001', 'SOI', NULL, '2024-08-19 21:35:15.000', 'user1', NULL, NULL, NULL, 'FIGP000011', NULL, NULL, NULL from dual where not exists (select 1 from ft_t_figp where  prnt_fins_grp_oid='LEVFIN0001' and inst_mnem ='CUSTFINS01' and fins_grp_oid ='LEVFIN0001');

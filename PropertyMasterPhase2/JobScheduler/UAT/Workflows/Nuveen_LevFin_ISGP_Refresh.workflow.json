@@ -1,0 +1,71 @@
+{
+  "TYPE" : "Workflow",
+  "version" : "1.6.6",
+  "timeZone" : "America/New_York",
+  "instructions" : [ {
+    "TYPE" : "Execute.Named",
+    "jobName" : "Nuveen_LevFin_ISGP_Refresh",
+    "label" : "Nuveen_LevFin_ISGP_Refresh"
+  }, {
+    "TYPE" : "Execute.Named",
+    "jobName" : "ISGPJobCheck",
+    "label" : "ISGPJobCheck"
+  }, {
+    "TYPE" : "If",
+    "predicate" : "$isgpcnt.toNumber > 0",
+    "then" : {
+      "instructions" : [ {
+        "TYPE" : "PostNotices",
+        "noticeBoardNames" : [ "ISGP2WSO_NB" ],
+        "label" : "ISGP2WSO_Post"
+      } ]
+    },
+    "else" : {
+      "instructions" : [ {
+        "TYPE" : "Finish"
+      } ]
+    }
+  } ],
+  "jobs" : {
+    "Nuveen_LevFin_ISGP_Refresh" : {
+      "agentName" : "JSAgent",
+      "withSubagentClusterIdExpr" : false,
+      "executable" : {
+        "TYPE" : "ShellScriptExecutable",
+        "script" : "cd $scripts_home\nsh jobutilities execWkf $input_param_file $event_name $target_application",
+        "env" : {
+          "scripts_home" : "'/ext/app/jobscheduler/scripts/'",
+          "input_param_file" : "'/edmfs/app/InputParams/Nuveen_LevFin_ISGP_Refresh.json'",
+          "event_name" : "'Nuveen_LevFin_ISGP_Refresh'",
+          "target_application" : "'fileloading'"
+        },
+        "v1Compatible" : false
+      },
+      "skipIfNoAdmissionForOrderDay" : false,
+      "parallelism" : 1,
+      "graceTimeout" : 1,
+      "failOnErrWritten" : false,
+      "warnOnErrWritten" : false
+    },
+    "ISGPJobCheck" : {
+      "agentName" : "JSAgent",
+      "withSubagentClusterIdExpr" : false,
+      "executable" : {
+        "TYPE" : "InternalExecutable",
+        "className" : "com.sos.jitl.jobs.db.SQLExecutorJob",
+        "internalType" : "JITL",
+        "arguments" : {
+          "command" : "\"select count(1)  as ISGPcnt from ser_gs_gc.ft_t_jblg where job_config_txt = 'LevFin ISGP Refresh Job'  and job_start_tms::date >= ser_gs_gc.sysdate()::date\"",
+          "resultset_as_variables" : "\"column_value\"",
+          "hibernate_configuration_file" : "\"/ext/app/jobscheduler/base/sos-berlin.com/joc/resources/joc/hibernate.cfg.xml\""
+        }
+      },
+      "skipIfNoAdmissionForOrderDay" : false,
+      "parallelism" : 1,
+      "graceTimeout" : 1,
+      "failOnErrWritten" : false,
+      "warnOnErrWritten" : false,
+      "title" : "ISGPJobCheck"
+    }
+  }
+}

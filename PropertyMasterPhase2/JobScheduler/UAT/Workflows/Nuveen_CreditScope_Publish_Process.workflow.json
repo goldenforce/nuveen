@@ -1,0 +1,206 @@
+{
+  "TYPE" : "Workflow",
+  "version" : "1.6.6",
+  "timeZone" : "America/New_York",
+  "title" : "Nuveen_CreditScope_Publish_Process",
+  "orderPreparation" : {
+    "parameters" : {
+      "checkDependency" : {
+        "type" : "Boolean",
+        "default" : "true"
+      },
+      "fitch_file_pattern" : {
+        "type" : "String",
+        "default" : "'RDSIssueReport.*dis'"
+      },
+      "dayMinus" : {
+        "type" : "String",
+        "default" : "'0'"
+      },
+      "jobConfigText" : {
+        "type" : "String",
+        "default" : "'Muni.*Publish'"
+      },
+      "fitch_msg_type" : {
+        "type" : "String",
+        "default" : "'FitchRDS_IssueRatings_NuveenMuni'"
+      },
+      "fitch_dayMinus" : {
+        "type" : "String",
+        "default" : "'0'"
+      }
+    },
+    "allowUndeclared" : false
+  },
+  "instructions" : [ {
+    "TYPE" : "If",
+    "predicate" : "$checkDependency==true",
+    "then" : {
+      "instructions" : [ {
+        "TYPE" : "ConsumeNotices",
+        "noticeBoardNames" : "'FitchRatingsMuniNoticeBoard'",
+        "subworkflow" : {
+          "instructions" : [ ]
+        },
+        "label" : "FitchRatingsMuniNoticeBoard"
+      }, {
+        "TYPE" : "Execute.Named",
+        "jobName" : "Echo_Dependency_Check",
+        "label" : "Echo_Dependency_Check"
+      }, {
+        "TYPE" : "Execute.Named",
+        "jobName" : "JBLG_Check_copy_1",
+        "label" : "JBLG_Check_copy_1"
+      }, {
+        "TYPE" : "If",
+        "predicate" : "$count.toNumber == 0",
+        "then" : {
+          "instructions" : [ {
+            "TYPE" : "Execute.Named",
+            "jobName" : "Nuveen_CreditScope_Publish_Process",
+            "label" : "Nuveen_CreditScope_Publish_Pro"
+          }, {
+            "TYPE" : "Execute.Named",
+            "jobName" : "Echo_Publish_Completed",
+            "label" : "Echo_Publish_Completed"
+          } ]
+        },
+        "else" : {
+          "instructions" : [ {
+            "TYPE" : "Execute.Named",
+            "jobName" : "Echo_Publish_Not_Completed",
+            "label" : "Echo_Publish_Not_Completed"
+          } ]
+        }
+      } ]
+    },
+    "else" : {
+      "instructions" : [ {
+        "TYPE" : "Execute.Named",
+        "jobName" : "Echo_No_Dependency",
+        "label" : "Echo_No_Dependency"
+      }, {
+        "TYPE" : "Execute.Named",
+        "jobName" : "Nuveen_CreditScope_Publish_Process_NDC",
+        "label" : "Nuveen_CreditScope_Publish_NDC"
+      } ]
+    }
+  } ],
+  "jobs" : {
+    "Echo_Dependency_Check" : {
+      "agentName" : "JSAgent",
+      "withSubagentClusterIdExpr" : false,
+      "executable" : {
+        "TYPE" : "ShellScriptExecutable",
+        "script" : "echo \"Dependency check\"",
+        "v1Compatible" : false
+      },
+      "skipIfNoAdmissionForOrderDay" : false,
+      "parallelism" : 1,
+      "graceTimeout" : 1,
+      "failOnErrWritten" : false,
+      "warnOnErrWritten" : false
+    },
+    "JBLG_Check_copy_1" : {
+      "agentName" : "JSAgent",
+      "withSubagentClusterIdExpr" : false,
+      "executable" : {
+        "TYPE" : "InternalExecutable",
+        "className" : "com.sos.jitl.jobs.db.SQLExecutorJob",
+        "internalType" : "JITL",
+        "arguments" : {
+          "command" : "\"select count(*) as count from ser_gs_gc.ft_t_jblg where UPPER(job_config_txt) ~* UPPER('$jobConfigText') and date_trunc('day', ser_gs_gc.sysdate() - interval '$dayMinus days') = date_trunc('day', job_start_tms) and job_end_tms is not null and job_stat_typ = 'CLOSED'\"",
+          "resultset_as_variables" : "\"column_value\"",
+          "hibernate_configuration_file" : "\"/ext/app/jobscheduler/base/sos-berlin.com/joc/resources/joc/hibernate.cfg.xml\""
+        }
+      },
+      "skipIfNoAdmissionForOrderDay" : false,
+      "parallelism" : 1,
+      "graceTimeout" : 1,
+      "failOnErrWritten" : false,
+      "warnOnErrWritten" : false
+    },
+    "Nuveen_CreditScope_Publish_Process" : {
+      "agentName" : "JSAgent",
+      "withSubagentClusterIdExpr" : false,
+      "executable" : {
+        "TYPE" : "ShellScriptExecutable",
+        "script" : "cd $scripts_home\n./jobutilities execWkf_inputParam '{}' $event_name $target_application",
+        "env" : {
+          "scripts_home" : "'/ext/app/jobscheduler/scripts/'",
+          "event_name" : "\"'Nuveen_CreditScope_Publish_Wrapper'\n\"",
+          "target_application" : "'publishing'"
+        },
+        "v1Compatible" : false
+      },
+      "skipIfNoAdmissionForOrderDay" : false,
+      "parallelism" : 1,
+      "graceTimeout" : 1,
+      "failOnErrWritten" : false,
+      "warnOnErrWritten" : false,
+      "title" : "Nuveen CreditScope Publish Process"
+    },
+    "Echo_Publish_Completed" : {
+      "agentName" : "JSAgent",
+      "withSubagentClusterIdExpr" : false,
+      "executable" : {
+        "TYPE" : "ShellScriptExecutable",
+        "script" : "echo \"Publishing Completed\"",
+        "v1Compatible" : false
+      },
+      "skipIfNoAdmissionForOrderDay" : false,
+      "parallelism" : 1,
+      "graceTimeout" : 1,
+      "failOnErrWritten" : false,
+      "warnOnErrWritten" : false
+    },
+    "Echo_Publish_Not_Completed" : {
+      "agentName" : "JSAgent",
+      "withSubagentClusterIdExpr" : false,
+      "executable" : {
+        "TYPE" : "ShellScriptExecutable",
+        "script" : "echo \"Publishing Not Completed\"",
+        "v1Compatible" : false
+      },
+      "skipIfNoAdmissionForOrderDay" : false,
+      "parallelism" : 1,
+      "graceTimeout" : 1,
+      "failOnErrWritten" : false,
+      "warnOnErrWritten" : false
+    },
+    "Echo_No_Dependency" : {
+      "agentName" : "JSAgent",
+      "withSubagentClusterIdExpr" : false,
+      "executable" : {
+        "TYPE" : "ShellScriptExecutable",
+        "script" : "echo \"no dependency check\"",
+        "v1Compatible" : false
+      },
+      "skipIfNoAdmissionForOrderDay" : false,
+      "parallelism" : 1,
+      "graceTimeout" : 1,
+      "failOnErrWritten" : false,
+      "warnOnErrWritten" : false
+    },
+    "Nuveen_CreditScope_Publish_Process_NDC" : {
+      "agentName" : "JSAgent",
+      "withSubagentClusterIdExpr" : false,
+      "executable" : {
+        "TYPE" : "ShellScriptExecutable",
+        "script" : "cd $scripts_home\n./jobutilities execWkf_inputParam '{}' $event_name $target_application",
+        "env" : {
+          "scripts_home" : "'/ext/app/jobscheduler/scripts/'",
+          "event_name" : "'Nuveen_Muni_Delta_Publish_Wrapper'",
+          "target_application" : "'publishing'"
+        },
+        "v1Compatible" : false
+      },
+      "skipIfNoAdmissionForOrderDay" : false,
+      "parallelism" : 1,
+      "graceTimeout" : 1,
+      "failOnErrWritten" : false,
+      "warnOnErrWritten" : false,
+      "title" : "Nuveen CreditScope Publish NDC"
+    }
+  }
+}

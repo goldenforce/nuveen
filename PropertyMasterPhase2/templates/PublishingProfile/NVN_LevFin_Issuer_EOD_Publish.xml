@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<root>
+  <Subscriptions>
+    <Subscription description="NVN_LevFin_Issuer_EOD_Publish" id="009LN2mcHI5m41Dj" name="NVN_LevFin_Issuer_EOD_Publish" ruleText="0 0 0 1 1 ? *" sourceId="" type="BATCH" workflow="PublishingWorkflow">
+      <destinations>
+        <destination id="009LN2mcHI5m41Ec" outputType="JSON" participantRules="">
+          <subscriptionProperties>
+            <subscriptionProperty id="009LN2mcHI5m41Ef" propertyDesc="" propertyName="FILE_NAME" propertyValue="LevFin_EOD_Issuers"/>
+            <subscriptionProperty id="009LN2mcHI5m41Eg" propertyDesc="" propertyName="FILE_EXTENSION" propertyValue=".json"/>
+          </subscriptionProperties>
+          <downstream connectionFactory="" deadline="" deadlineTime="" description="Nuveen_LevFin_Issuer_EOD" downstreamDestinationType="File" downstreamValue="/edmfs/app/outbound/output/levfin/issuer/eod2/done" dwdfOid="009LN2mcHI5m41Ea" id="009LN2mcHI5m41Eb" name="Nuveen_LevFin_Issuer_EOD" preferredLanguageCode="" preferredVendorId="" subscriberType="" typeFlag="" validityPriority="null"/>
+        </destination>
+      </destinations>
+      <messageTypes/>
+      <filters>
+        <filter dataSourceId="" deltaMode="NONE" entity="++4HwLjy2etpy007" entityCaption="Financial Institution" entityName="FinancialInstitution" entityType="BUSINESS_ENTITY" filterEQLJsonText="&lt;sql&gt;inst_mnem in (select fins_inst_mnem from ft_t_issr where instr_issr_id in&#10;(select issu.instr_issr_id from ft_t_isgp isgp, ft_t_issu issu &#10;where isgp.instr_id = issu.instr_id and issu.end_tms is null and isgp.end_tms is null &#10;and prnt_iss_grp_oid  in (select iss_grp_oid  from ft_t_isgr where iss_grp_id like 'LEVFIN%' and end_tms is null))) &lt;/sql&gt;" filterRuleText="&lt;sql&gt;inst_mnem in (select fins_inst_mnem from ft_t_issr where instr_issr_id in&#10;(select issu.instr_issr_id from ft_t_isgp isgp, ft_t_issu issu &#10;where isgp.instr_id = issu.instr_id and issu.end_tms is null and isgp.end_tms is null &#10;and prnt_iss_grp_oid  in (select iss_grp_oid  from ft_t_isgr where iss_grp_id like 'LEVFIN%' and end_tms is null))) &lt;/sql&gt;" id="009LN2mcHI5m41Dh" publishingModelName="FinancialInstitution" ruleText="" screen="ZCBT81-Qe1" tableType="FINS"/>
+      </filters>
+    </Subscription>
+  </Subscriptions>
+</root>

@@ -1,0 +1,17 @@
+{
+  "version" : "1.6.6",
+  "workflowNames" : [ "NRE_Rapid_Files_Process_WorkFlow" ],
+  "submitOrderToControllerWhenPlanned" : true,
+  "planOrderAutomatically" : true,
+  "calendars" : [ {
+    "calendarName" : "NRE_Rapid_Files_Process_Calendar",
+    "timeZone" : "America/New_York",
+    "periods" : [ {
+      "begin" : "00:30:00",
+      "end" : "06:01:00",
+      "repeat" : "00:15:00",
+      "whenHoliday" : "SUPPRESS"
+    } ]
+  } ],
+  "orderParameterisations" : [ ]
+}

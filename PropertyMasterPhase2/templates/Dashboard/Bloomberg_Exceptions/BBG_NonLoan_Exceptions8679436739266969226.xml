@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<root baseLookup="Exception" createdUser="user1" freezeColumns="" id="l5CaB1)le1" isDefault="N" isPublic="Y" lookupId="InstrumentException" pageSize="50" screenType="SYSTEMSRCH" title="BBG:NonLoan_Exceptions">
+  <config>{}</config>
+  <buttons>
+    <button buttonName="Repair">
+      <params>
+        <param paramName="Event Name" paramValue="RepairExceptions"/>
+        <param paramName="Current User" paramValue="Logged in User"/>
+        <param paramName="Event Type" paramValue="GenericEvent"/>
+        <param paramName="entityList" paramValue="ENT_OID"/>
+      </params>
+    </button>
+    <button buttonName="Resubmit">
+      <params>
+        <param paramName="Event Type" paramValue="GenericEvent"/>
+        <param paramName="Event Name" paramValue="ResubmitExceptions"/>
+        <param paramName="Current User" paramValue="LoggedinUser"/>
+        <param paramName="entityList" paramValue="ENT_OID"/>
+      </params>
+    </button>
+    <button buttonName="Close">
+      <params>
+        <param paramName="Event Name" paramValue="CloseExceptions"/>
+        <param paramName="entityList" paramValue="ENT_OID"/>
+        <param paramName="Current User" paramValue="Logged in User"/>
+        <param paramName="Event Type" paramValue="GenericEvent"/>
+      </params>
+    </button>
+    <button buttonName="Re-Assign">
+      <params>
+        <param paramName="Current User" paramValue="Logged in User"/>
+        <param paramName="Event Name" paramValue="ReassignExceptions"/>
+        <param paramName="Event Type" paramValue="GenericEvent"/>
+        <param paramName="entityList" paramValue="ENT_OID"/>
+        <param paramName="Assign" paramValue="true"/>
+      </params>
+    </button>
+    <button buttonName="Ignore">
+      <params>
+        <param paramName="entityList" paramValue="ENT_OID"/>
+        <param paramName="Type" paramValue="event"/>
+        <param paramName="Event Name" paramValue="CloseExceptions"/>
+        <param paramName="Event Type" paramValue="GenericEvent"/>
+        <param paramName="Status" paramValue="IGNORE"/>
+        <param paramName="Current User" paramValue="Logged in User"/>
+      </params>
+    </button>
+  </buttons>
+  <columns>
+    <column caption="" columnName="Notification Creation DateTime" fieldName="InstrumentException.ExceptionDetail.NotificationCreationDate" filterFromNum="" filterFromTms="" filterToNum="" filterToTms="" filterValue="" filterable="Y" fromRange="" id="WXnco&amp;gt;J&amp;lt;e1" isRange="N" mobileTemplate="" operator="" orderNum="0" showRelLink="" sort="" toRange="" width="-1"/>
+    <column caption="" columnName="Latest Notification DateTime" fieldName="InstrumentException.ExceptionDetail.LatestNotificationDate" filterFromNum="" filterFromTms="" filterToNum="" filterToTms="" filterValue="" filterable="Y" fromRange="" id="WXndo&amp;gt;J&amp;lt;e1" isRange="N" mobileTemplate="" operator="" orderNum="1" showRelLink="" sort="" toRange="" width="-1"/>
+    <column caption="" columnName="Notification Occurrence Count" fieldName="InstrumentException.ExceptionDetail.NotificationOccurrenceCount" filterFromNum="" filterFromTms="" filterToNum="" filterToTms="" filterValue="" filterable="Y" fromRange="" id="WXneo&amp;gt;J&amp;lt;e1" isRange="N" mobileTemplate="" operator="" orderNum="2" showRelLink="" sort="" toRange="" width="-1"/>
+    <column caption="" columnName="Main Entity Id" fieldName="InstrumentException.ExceptionDetail.MainEntityId" filterFromNum="" filterFromTms="" filterToNum="" filterToTms="" filterValue="" filterable="Y" fromRange="" id="WXnfo&amp;gt;J&amp;lt;e1" isRange="N" mobileTemplate="" operator="" orderNum="3" showRelLink="" sort="" toRange="" width=""/>
+    <column caption="" columnName="Main Entity Type" fieldName="InstrumentException.ExceptionDetail.MainEntityType" filterFromNum="" filterFromTms="" filterToNum="" filterToTms="" filterValue="" filterable="Y" fromRange="" id="WXngo&amp;gt;J&amp;lt;e1" isRange="N" mobileTemplate="" operator="" orderNum="4" showRelLink="" sort="" toRange="" width=""/>
+    <column caption="" columnName="Instrument Name" fieldName="InstrumentException.InstrumentDetails.ExceptionOnInstrument.Base.InstrumentDetails.PreferredInstrumentName" filterFromNum="" filterFromTms="" filterToNum="" filterToTms="" filterValue="" filterable="Y" fromRange="" id="WXnho&amp;gt;J&amp;lt;e1" isRange="N" mobileTemplate="" operator="" orderNum="5" showRelLink="TRUE" sort="" toRange="" width="-1"/>
+    <column caption="" columnName="Details" fieldName="InstrumentException.ExceptionDetail.Details" filterFromNum="" filterFromTms="" filterToNum="" filterToTms="" filterValue="" filterable="Y" fromRange="" id="WXnjo&amp;gt;J&amp;lt;e1" isRange="N" mobileTemplate="" operator="" orderNum="6" showRelLink="" sort="" toRange="" width="-1"/>
+    <column caption="" columnName="Message Severity" fieldName="InstrumentException.ExceptionDetail.MessageSeverity" filterFromNum="" filterFromTms="" filterToNum="" filterToTms="" filterValue="50,40" filterable="Y" fromRange="" id="WXnuo&amp;gt;J&amp;lt;e1" isRange="N" mobileTemplate="" operator="" orderNum="7" showRelLink="" sort="" toRange="" width=""/>
+    <column caption="" columnName="Notification Id" fieldName="InstrumentException.ExceptionDetail.NotificationId" filterFromNum="" filterFromTms="" filterToNum="" filterToTms="" filterValue="" filterable="Y" fromRange="" id="WXnlo&amp;gt;J&amp;lt;e1" isRange="N" mobileTemplate="" operator="" orderNum="8" showRelLink="" sort="" toRange="" width=""/>
+    <column caption="" columnName="Exception Sub-Type" fieldName="InstrumentException.ExceptionDetail.ExceptionSubType" filterFromNum="" filterFromTms="" filterToNum="" filterToTms="" filterValue="INVALID RELATIONSHIP,CASCHFAI,IDENTIFIER MISMATCH,CADISFAI,CAINFO,USER INFORMATION,ZERO NOT_AMT,APPROVAL,INVALID ACTION,VENDOR COMPARE,REQUEST REPLY,TRANSLATE &amp;amp; VALIDATE,CACHAEXP,OVERRIDE-TECH,ILOG,NO ACTIVE PRVI,DUPLICATE-RECORD,IDENTIFIER FAILED,TOLERANCE BREACHED,FILE NOT FOUND,CONFIGURATION,FUNCTIONAL,VALIDATION,CACHALVL,NOT_AMT MISMATCH,VSH,PUBLISHING,ALL REF PRC MISSING,BENCHMARK,CASCHVAL,PRIMARY MARKET,QUALITY,INVALIDCAENTITY,DROOLS,INVALID INPUT,MISSING DATA,CADELVAL,NO BASE FOR DIVISION,NOT MATCHED,PARENTLOCK-WARN,FIELD CHANGE,MARKETCREATION,INVALID_DATA,PREF ISSUE ID,MISSING RECORD-FINS,CACANVAL,CACAMOVL,ENTITY FAILURE,Instrument ID,SUBSCRIPTION,DEDUP FAILURE,MISSING IN MESSAGE,THRESHOLD FAILURE,MARKET LISTING,MODEL,NO PRVI FOUND,MULTIPLE CODE FOUND,VALIDATION- ISS ACT,DELETED IDENTIFIER,INFORMATIONAL,TIMESERIES,NESTEDSEGMENT,VDDB,MESSAGE DEFINITION,OVERRIDE/LOCK,CARELVAL,NO ACTIVE INSTR,CASCHMSS,TECHNICAL,MASS UPDATE,MISSING RECORD-ISSU,DIVISION BY ZERO,MISSING ATTRIBUTE,DUPLICATE RECORD,INVALID DATA,NO FXRT FOUND,PRICING,MULTIPLE MATCH,INFORMATION,NO PRC PRVI FOUND,CADEAVAL,COMPLETENESS,MULTIPLELISTINGS,DUPLICATE ENTITY,MULTIPLE ROWS,INVALID COUPON DATA,DATA MISSING,POSTINGS,NOT_AMT MISSING,ALL ACCT HLDRS MSSNG,CORP ACTIONS,JOBID LOOKUP FAILURE,NEW ISSUE ALERT,LOOKUP FAILURE,INBOUND,CODE LOOKUP FAILURE,MISMATCH IDENTIFIERS,NEGATIVE NOT_AMT,REF PRC MISSING,MISSING REC-ISSR,OCC FEED,DUPLICATE FINS,MISSING INPUTS,MISSING IN MSG-ID,MISSING PRVI,TIME-TECH,CHILD FAILURE,ID VALIDATION,MISSING RECORD-GUNT,DIVISION SKIPPED,TRILLIUM,OVERRIDE,CATICK,ENTITYALREADYEXIST,IDENTIFIER MISSING,Missing Rel Type,ALL NOT_AMT INVALID,DOMAIN VALUE" filterable="Y" fromRange="" id="WXnmo&amp;gt;J&amp;lt;e1" isRange="N" mobileTemplate="" operator="" orderNum="9" showRelLink="" sort="" toRange="" width=""/>
+    <column caption="" columnName="Notification Status" fieldName="InstrumentException.ExceptionDetail.NotificationStatus" filterFromNum="" filterFromTms="" filterToNum="" filterToTms="" filterValue="REASSIGN,REPAIRED,IGNORE,OPEN" filterable="Y" fromRange="" id="WXnno&amp;gt;J&amp;lt;e1" isRange="N" mobileTemplate="" operator="" orderNum="10" showRelLink="" sort="" toRange="" width="-1"/>
+    <column caption="" columnName="Source Id" fieldName="InstrumentException.ExceptionDetail.SourceId" filterFromNum="" filterFromTms="" filterToNum="" filterToTms="" filterValue="ser_gs_gc" filterable="Y" fromRange="" id="WXnoo&amp;gt;J&amp;lt;e1" isRange="N" mobileTemplate="" operator="" orderNum="11" showRelLink="" sort="" toRange="" width="-1"/>
+    <column caption="" columnName="Instrument Type" fieldName="InstrumentException.InstrumentDetails.ExceptionOnInstrument.Base.InstrumentDetails.InstrumentType" filterFromNum="" filterFromTms="" filterToNum="" filterToTms="" filterValue="IRFOPT,IRINNDEX,IRFIX,FIMMFWRT,CDO,BNDFWD,COCNVYLD,FLOOR,FXSWRTE,INFSWAP,SCRIP,IMEANRTE,CVTPFD,FXNDSWRT,INOPTVOL,HYBRID,CDXEMDIV,CMBS,IRSWONVL,ESWP,FXNG,OPTIONS,FUTURES,PREM BD,REV REPO,CERT SHS,LTDPART,ARM,IRF,IRBMCOIX,IRG,STRIP,PRCMTL,COVDBOND,STRATRAD,TRANCHE,ININDEX,LFEINS,MONEYMAR,FONSFWRT,IRS,FXIRCORR,CRCDSIX,DMCFSEQ,PUT OPT,ABS,GLBDEPNT,VARIANCE,DEPO,IRBMGVIX,CDOPTION,PASSTHRU,CRTSECDV,SFCDO,CO,FBBCASH,JGBS,CR,MRKTINDX,CAPSFLRS,IRRPORT,IRBMSPIX,WARRANTS,FNMA,ITRAXXSD,STRUCTRD,CORRELTN,EXCHTCFD,TNOTE,CRCDSSPD,DEBT,IRYLDRT,FBLOAN,GOVTBOND,SECLEND,INDEX,ZCPNYLD,SWAPTION,FNDFFWRT,ENERGY,FXVOL,ITRAXXAU,FXSPOT,DMCF1TO1,ITRAXXAS,CIO,FIXED,CDXNAHYB,REFRATE,CASHRATE,POWERSWP,COMFUT,YLDCRV,CERTDEPT,CDSTRNC,FI,FXRATE,MISC,FORWARD,XTF,SECBORR,FX,GNMAPLAT,FXFWFIX,IRCMSWRT,COCORR,TIME DEP,DTH T BD,CDSTRANC,SURFACE,DMMYSEQ,GNMA2,GNMA1,BOND,CDOSq,CURRENCY,FUND,MUNIRB,TBILL,MORTGAGE,CRYPTOCR,PRIVEQTY,FOSSFUEL,FRA,IRBMISIX,CASHFLOW,BANKRATE,COMSWAP,CDSINDEX,COMODITY,CDSBASKE,CLO,IRCPFRVL,CDOTRNC,CDXNAIGH,EQOPTVOL,TERMRATE,PFD,FXCORR,SLM,COMOPTVL,CURVE,FXSWAP,LOANCASH,COSPOTRT,FNCOMDTY,FHLMC,TIPS,ITRAXXEU,INDEXTYP,COML PPR,CMO,SPOT,IN,IO,IR,IRZERRT,CDXEM,VOLSURF,COFUTOPT,COMMON,IRFWSWRT,QUTGENER,FBBORR,FHLMCGLD,CVTBOND,MUNI,INSWRT,RECEIPTS,IRBMSCIX,SWAPRATE,IRINSWRT,CRCSOPVL,REALESTA,ITRAXXEC,REPO,INDEX OP,CSWP,ITRAXXEH,SPREAD,FXFWRTE,IRCORR,SELLBUY,COIDX,INOPT,CVTSEC,FXNDFWRT,DUMMY,FIXDBOND,BOOPTION,ETF,CRCPRRT,ETN,CMOTRNC,ETP,SWAPCRV,FXFWD,CALL OPT,EQSHR,ZERO CPN,ETV,IRCMSSPD,ITRAXXJP,IRXCSWRT,SPECIAL,COFXCORR,TBA,MMPROGRM,CDXNAHBB,TRS,IBORRATE,EUROLIB,IRDEPRT,MFWDSB,CRCSRVRT,MFWDBS,GIC,FBLCASH,UNITTRST,GILTS,UNIT,DEMND NT,TBOND,BORRCASH,IRBSSWRT,REMIC,CDXNAX,CAP,SWAP,COVARINC,CRE,CORPBD,CDSWP,IRBMINIX,MUNIGO,FBLBORR,DEPORATE,SHARES,RIGHTS,EQOPTION,IRSWFIX,DMMY1TO1,CONTRACT,BUYSELL,EQDVFDRT,CBO,IBIDRATE,VAR BOND,IRSWRAT,RATELOCK,SBI,CDXNAHY,COFIX,CSHSWEEP,FXFIX,CDSGEN,EQINDEX,RMBS,COIRCORR,CDXNAIG,COMSWRT,NIM,LIBORATE,OATS,UNDRLYNG,CDO3,IRFRART,WILL,CRINDEX,BORRPLDG,CASHSEC,SPREADLK,PO" filterable="Y" fromRange="" id="WXnpo&amp;gt;J&amp;lt;e1" isRange="N" mobileTemplate="" operator="" orderNum="12" showRelLink="" sort="" toRange="" width="-1"/>
+    <column caption="" columnName="Message Type" fieldName="InstrumentException.ExceptionDetail.MessageType" filterFromNum="" filterFromTms="" filterToNum="" filterToTms="" filterValue="NVNBBPerSecNonLoans,NVNBBPerSecLoans" filterable="Y" fromRange="" id="WXnqo&amp;gt;J&amp;lt;e1" isRange="N" mobileTemplate="" operator="" orderNum="13" showRelLink="" sort="" toRange="" width="-1"/>
+  </columns>
+</root>

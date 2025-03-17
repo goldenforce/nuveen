@@ -1,0 +1,21 @@
+{
+  "version" : "1.6.6",
+  "workflowNames" : [ "Nuveen_Muni_Status_Report" ],
+  "title" : "CS_Muni_Status_Report",
+  "submitOrderToControllerWhenPlanned" : true,
+  "planOrderAutomatically" : true,
+  "calendars" : [ {
+    "calendarName" : "LevFin_Process_Calendar",
+    "timeZone" : "America/New_York",
+    "includes" : {
+      "weekdays" : [ {
+        "days" : [ 1, 2, 3, 4, 5 ]
+      } ]
+    },
+    "periods" : [ {
+      "singleStart" : "23:50:00",
+      "whenHoliday" : "SUPPRESS"
+    } ]
+  } ],
+  "orderParameterisations" : [ ]
+}

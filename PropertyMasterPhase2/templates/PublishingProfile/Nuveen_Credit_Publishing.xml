@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<root>
+  <Subscriptions>
+    <Subscription description="" id="++9bBCbsHIiky005" name="Nuveen_Credit_Publishing" ruleText="0 0 0 1 1 ? *" sourceId="" type="BATCH" workflow="PublishingWorkflow">
+      <destinations>
+        <destination id="++9bBCbsHIiky002" outputType="JSON" participantRules="">
+          <subscriptionProperties>
+            <subscriptionProperty id="009j1ZScHITD4009" propertyDesc="" propertyName="FILE_EXTENSION" propertyValue=".json"/>
+            <subscriptionProperty id="009j1ZScHITD4008" propertyDesc="" propertyName="FILE_NAME" propertyValue="Muni_Credit_EOD"/>
+          </subscriptionProperties>
+          <downstream connectionFactory="" deadline="" deadlineTime="" description="Nuveen_CS_Credit" downstreamDestinationType="File" downstreamValue="/edmfs/app/outbound/output/CreditScope/Credit/done" dwdfOid="++9bBCbsHIiky000" id="++9bBCbsHIiky001" name="Nuveen_CS_Credit" preferredLanguageCode="" preferredVendorId="" subscriberType="" typeFlag="" validityPriority="null"/>
+        </destination>
+      </destinations>
+      <messageTypes/>
+      <filters>
+        <filter dataSourceId="" deltaMode="CHANGED" entity="009V00nC2etbS000" entityCaption="Credit" entityName="NuveenCredit" entityType="BUSINESS_ENTITY" filterEQLJsonText="&lt;sql&gt; inst_mnem in (select inst_mnem from ft_t_fins where inst_typ = 'CREDIT') &lt;/sql&gt;)" filterRuleText="&lt;sql&gt; inst_mnem in (select inst_mnem where inst_typ = 'CREDIT') &lt;/sql&gt;)" id="++9bBCbsHIiky003" publishingModelName="NuveenCredit" ruleText="" screen="1G3C91WFG1" tableType="FINS"/>
+      </filters>
+    </Subscription>
+  </Subscriptions>
+</root>

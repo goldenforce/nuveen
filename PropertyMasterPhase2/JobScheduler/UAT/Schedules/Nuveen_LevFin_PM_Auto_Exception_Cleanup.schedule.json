@@ -1,0 +1,25 @@
+{
+  "version" : "1.6.6",
+  "workflowNames" : [ "Nuveen_LevFin_PM_Auto_Exception_Cleanup" ],
+  "title" : "Nuveen_LevFin_PM_Auto_Exception_Cleanup",
+  "submitOrderToControllerWhenPlanned" : true,
+  "planOrderAutomatically" : true,
+  "calendars" : [ {
+    "calendarName" : "LevFin_Process_Calendar",
+    "timeZone" : "America/New_York",
+    "includes" : {
+      "weekdays" : [ {
+        "from" : "2024-09-21",
+        "days" : [ 1, 2, 3, 4, 5, 6 ]
+      } ]
+    },
+    "periods" : [ {
+      "singleStart" : "06:00:00",
+      "whenHoliday" : "SUPPRESS"
+    } ]
+  } ],
+  "nonWorkingDayCalendars" : [ {
+    "calendarName" : "LevFin_Process_Calender_Holiday"
+  } ],
+  "orderParameterisations" : [ ]
+}

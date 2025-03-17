@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE TimeSeriesConfiguration SYSTEM "ConditionalTimeSeries.dtd">
+<TimeSeriesConfiguration>
+	<!-- ************This is Table level Time Series ************ -->
+	<occurrence table="ft_t_fiid">
+		<option id="FIID_1" messageTypes="WMVF1">
+			<attribute>FINS_ID</attribute>
+			<where>
+				<field name="ft_t_fiid.fins_id_ctxt_typ" value="WMISSRNO,IBEI" multiValue="true" optr="NOT_EQUAL"/>
+			</where>
+		</option>
+	</occurrence>
+	<occurrence table="ft_t_irid">
+		<option id="IRID_1" messageTypes="WMVF1">
+			<attribute>ISSR_ID</attribute>
+			<where>
+				<field name="FT_T_IRID.ISSR_ID_CTXT_TYP" value="WMISSRNO,IBEI" multiValue="true" optr="NOT_EQUAL"/>
+			</where>
+		</option>
+	</occurrence>
+	<occurrence table="ft_t_isid">
+		<option id="ISID_1" messageTypes="WMVF1">
+			<attribute>ISS_ID</attribute>
+		</option>
+	</occurrence>
+	<occurrence table="ft_t_ppdf">
+		<option id="PPDF_1" messageTypes="WMVF1" TS_OVERLAP_OVERRIDE="Y">
+                                </option>
+		<option id="PPDF_2" messageTypes="LRD_Facility" TS_OVERLAP_OVERRIDE="Y">
+			<attribute>EV_CAMT</attribute>
+			<attribute>EV_CRTE</attribute>
+		</option>
+		<option id="PPDF_3" messageTypes="ICEApexDescriptive" TS_OVERLAP_OVERRIDE="Y">
+			<attribute>EV_CAMT</attribute>
+			<attribute>EV_CRTE</attribute>
+		</option>
+	</occurrence>
+	<occurrence table="ft_t_ipdf">
+		<option id="IPDF_1" messageTypes="WMVF1" TS_OVERLAP_OVERRIDE="Y">
+			<where>
+				<field name="fT_T_bdch.cpn_typ" value="FIXED" lookup="BDCH"/>
+				<field name="fT_T_bdch.specific_cpn_typ" value="VARIABLE THEN FIXED,VARIABLE THEN FIXED N THEN VARIABLE AGN,FIXED THEN VARIABLE N THEN FIXED AGN" multiValue="true" lookup="BDCH"/>
+			</where>
+		</option>
+		<option id="IPDF_2" messageTypes="WMVF1" TS_OVERLAP_OVERRIDE="Y">
+			<where>
+				<field name="fT_T_bdch.cpn_typ" value="FIXED" optr="NOT_EQUAL" lookup="BDCH"/>
+			</where>
+		</option>
+		<option id="IPDF_3">
+			<where>
+				<field name="ft_t_bdch.cpn_typ" value="FLOATING" lookup="BDCH"/>
+			</where>
+		</option>
+		<!-- ************This is Attribute level Time Series ************ -->
+		<option id="IPDF_4">
+			<attribute>EV_CRTE</attribute>
+			<where>
+				<field name="fT_T_bdch.cpn_typ" value="VARIABLE" lookup="BDCH"/>
+			</where>
+		</option>
+	</occurrence>
+</TimeSeriesConfiguration>

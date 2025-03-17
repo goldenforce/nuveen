@@ -1,0 +1,292 @@
+{
+  "TYPE" : "Workflow",
+  "version" : "1.6.6",
+  "timeZone" : "America/New_York",
+  "orderPreparation" : {
+    "parameters" : {
+      "checkDependency" : {
+        "type" : "Boolean",
+        "default" : "true"
+      },
+      "file_pattern" : {
+        "type" : "String",
+        "default" : "'creditscope_goldensource.*\\.csv'"
+      },
+      "dayMinus" : {
+        "type" : "String",
+        "default" : "'0'"
+      },
+      "jobConfigText" : {
+        "type" : "String",
+        "default" : "'CreditScope Dataload Job'"
+      },
+      "muni_file_pattern" : {
+        "type" : "String",
+        "default" : "'EAGLE_GS_SMF_SOI_EOD_*'"
+      },
+      "muni_jobConfigText" : {
+        "type" : "String",
+        "default" : "'Eagle Muni Dataload Job'"
+      },
+      "muni_dayMinus" : {
+        "type" : "String",
+        "default" : "'0'"
+      },
+      "muni_msg_typ" : {
+        "type" : "String",
+        "default" : "'NuveenEagleMuniSOI'"
+      }
+    },
+    "allowUndeclared" : false
+  },
+  "instructions" : [ {
+    "TYPE" : "If",
+    "predicate" : "$checkDependency==true",
+    "then" : {
+      "instructions" : [ {
+        "TYPE" : "ConsumeNotices",
+        "noticeBoardNames" : "'CS_Load_NoticeBoard'",
+        "subworkflow" : {
+          "instructions" : [ ]
+        },
+        "label" : "CS_Load_NoticeBoard"
+      }, {
+        "TYPE" : "Execute.Named",
+        "jobName" : "Echo_Dependency_Check",
+        "label" : "Echo_Dependency_Check"
+      }, {
+        "TYPE" : "Try",
+        "try" : {
+          "instructions" : [ {
+            "TYPE" : "Execute.Named",
+            "jobName" : "JBLG_Pre_Check_Eagle",
+            "label" : "JBLG_Pre_Check_Eagle"
+          }, {
+            "TYPE" : "If",
+            "predicate" : "$egcount1.toNumber == 0",
+            "then" : {
+              "instructions" : [ {
+                "TYPE" : "Execute.Named",
+                "jobName" : "Echo_Fileload_Completed",
+                "label" : "Echo_Fileload_Completed"
+              }, {
+                "TYPE" : "Execute.Named",
+                "jobName" : "Nuveen_Muni_Eagle_Load_Process",
+                "label" : "Nuveen_Muni_Eagle_Load_Process"
+              } ]
+            },
+            "else" : {
+              "instructions" : [ {
+                "TYPE" : "Execute.Named",
+                "jobName" : "Echo_Fileload_Not_Completed",
+                "label" : "Echo_Fileload_Not_Completed"
+              } ]
+            }
+          }, {
+            "TYPE" : "Execute.Named",
+            "jobName" : "JBLG_Check_Eagle",
+            "label" : "JBLG_Check_Eagle"
+          }, {
+            "TYPE" : "Execute.Named",
+            "jobName" : "JBLG_All_Records_Fail_Check",
+            "label" : "JBLG_All_Records_Fail_Check"
+          }, {
+            "TYPE" : "If",
+            "predicate" : "$egcount.toNumber == 1 && $rcount.toNumber == 0",
+            "then" : {
+              "instructions" : [ {
+                "TYPE" : "PostNotices",
+                "noticeBoardNames" : [ "EagleMuniLoadNoticeBoard" ],
+                "label" : "EagleMuniLoadNoticeBoard"
+              } ]
+            },
+            "else" : {
+              "instructions" : [ {
+                "TYPE" : "Fail",
+                "outcome" : {
+                  "returnCode" : 1
+                },
+                "uncatchable" : false
+              } ]
+            }
+          } ]
+        },
+        "catch" : {
+          "instructions" : [ {
+            "TYPE" : "Retry"
+          } ]
+        },
+        "maxTries" : 10,
+        "retryDelays" : [ 600 ]
+      } ]
+    },
+    "else" : {
+      "instructions" : [ {
+        "TYPE" : "Execute.Named",
+        "jobName" : "Echo_No_Dependency",
+        "label" : "Echo_No_Dependency"
+      }, {
+        "TYPE" : "Execute.Named",
+        "jobName" : "Nuveen_Muni_Eagle_Load_Process_NDC",
+        "label" : "Nuveen_Muni_Eagle_Load_Pro_NDC"
+      } ]
+    }
+  } ],
+  "jobs" : {
+    "Echo_Dependency_Check" : {
+      "agentName" : "JSAgent",
+      "withSubagentClusterIdExpr" : false,
+      "executable" : {
+        "TYPE" : "ShellScriptExecutable",
+        "script" : "echo \"dependency check\"",
+        "v1Compatible" : false
+      },
+      "skipIfNoAdmissionForOrderDay" : false,
+      "parallelism" : 1,
+      "graceTimeout" : 1,
+      "failOnErrWritten" : false,
+      "warnOnErrWritten" : false
+    },
+    "JBLG_Pre_Check_Eagle" : {
+      "agentName" : "JSAgent",
+      "withSubagentClusterIdExpr" : false,
+      "executable" : {
+        "TYPE" : "InternalExecutable",
+        "className" : "com.sos.jitl.jobs.db.SQLExecutorJob",
+        "internalType" : "JITL",
+        "arguments" : {
+          "command" : "\"select count(*) as egcount1 from ser_gs_gc.ft_t_jblg where (UPPER(job_input_txt) ~* (UPPER('$muni_file_pattern')) or UPPER(job_msg_typ) ~* (UPPER('$muni_msg_typ'))) and date_trunc('day', ser_gs_gc.sysdate() - interval '$muni_dayMinus days') = date_trunc('day', job_start_tms) AND substring(job_input_txt from '(([2][0][0-9][0-9])([1][0-2]|[0][1-9])([3][0-1]|[2][0-9]|[1][0-9]|[0][1-9]))')::timestamp = ser_gs_gc.sysdate()::date - INTERVAL '$muni_dayMinus day' and job_end_tms is not null and job_stat_typ = 'CLOSED'\"",
+          "resultset_as_variables" : "\"column_value\"",
+          "hibernate_configuration_file" : "\"/ext/app/jobscheduler/base/sos-berlin.com/joc/resources/joc/hibernate.cfg.xml\""
+        }
+      },
+      "skipIfNoAdmissionForOrderDay" : false,
+      "parallelism" : 1,
+      "graceTimeout" : 1,
+      "failOnErrWritten" : false,
+      "warnOnErrWritten" : false
+    },
+    "Echo_Fileload_Completed" : {
+      "agentName" : "JSAgent",
+      "withSubagentClusterIdExpr" : false,
+      "executable" : {
+        "TYPE" : "ShellScriptExecutable",
+        "script" : "echo \"File has been loaded. Proceeding!\"",
+        "v1Compatible" : false
+      },
+      "skipIfNoAdmissionForOrderDay" : false,
+      "parallelism" : 1,
+      "graceTimeout" : 1,
+      "failOnErrWritten" : false,
+      "warnOnErrWritten" : false
+    },
+    "Nuveen_Muni_Eagle_Load_Process" : {
+      "agentName" : "JSAgent",
+      "withSubagentClusterIdExpr" : false,
+      "executable" : {
+        "TYPE" : "ShellScriptExecutable",
+        "script" : "cd $scripts_home\n./jobutilities execWkf $input_param_file $event_name $target_application",
+        "env" : {
+          "scripts_home" : "'/ext/app/jobscheduler/scripts/'",
+          "input_param_file" : "'/edmfs/app/InputParams/Nuveen_Muni_Eagle_Load_Process.json'",
+          "event_name" : "'Nuveen_Muni_PFD_Wrapper'",
+          "target_application" : "'fileloading'"
+        },
+        "v1Compatible" : false
+      },
+      "skipIfNoAdmissionForOrderDay" : false,
+      "parallelism" : 1,
+      "graceTimeout" : 1,
+      "failOnErrWritten" : false,
+      "warnOnErrWritten" : false,
+      "title" : "Nuveen_Muni_Eagle_Load_Process"
+    },
+    "Echo_Fileload_Not_Completed" : {
+      "agentName" : "JSAgent",
+      "withSubagentClusterIdExpr" : false,
+      "executable" : {
+        "TYPE" : "ShellScriptExecutable",
+        "script" : "echo \"File has not been loaded\"",
+        "v1Compatible" : false
+      },
+      "skipIfNoAdmissionForOrderDay" : false,
+      "parallelism" : 1,
+      "graceTimeout" : 1,
+      "failOnErrWritten" : false,
+      "warnOnErrWritten" : false
+    },
+    "JBLG_Check_Eagle" : {
+      "agentName" : "JSAgent",
+      "withSubagentClusterIdExpr" : false,
+      "executable" : {
+        "TYPE" : "InternalExecutable",
+        "className" : "com.sos.jitl.jobs.db.SQLExecutorJob",
+        "internalType" : "JITL",
+        "arguments" : {
+          "command" : "\"select count(*) as egcount from ser_gs_gc.ft_t_jblg where (UPPER(job_input_txt) ~* (UPPER('$muni_file_pattern')) or UPPER(job_msg_typ) ~* (UPPER('$muni_msg_typ'))) and date_trunc('day', ser_gs_gc.sysdate() - interval '$muni_dayMinus days') = date_trunc('day', job_start_tms) AND substring(job_input_txt from '(([2][0][0-9][0-9])([1][0-2]|[0][1-9])([3][0-1]|[2][0-9]|[1][0-9]|[0][1-9]))')::timestamp = ser_gs_gc.sysdate()::date - INTERVAL '$muni_dayMinus day' and job_end_tms is not null and job_stat_typ = 'CLOSED'\"",
+          "resultset_as_variables" : "\"column_value\"",
+          "hibernate_configuration_file" : "\"/ext/app/jobscheduler/base/sos-berlin.com/joc/resources/joc/hibernate.cfg.xml\""
+        }
+      },
+      "skipIfNoAdmissionForOrderDay" : false,
+      "parallelism" : 1,
+      "graceTimeout" : 1,
+      "failOnErrWritten" : false,
+      "warnOnErrWritten" : false
+    },
+    "JBLG_All_Records_Fail_Check" : {
+      "agentName" : "JSAgent",
+      "withSubagentClusterIdExpr" : false,
+      "executable" : {
+        "TYPE" : "InternalExecutable",
+        "className" : "com.sos.jitl.jobs.db.SQLExecutorJob",
+        "internalType" : "JITL",
+        "arguments" : {
+          "command" : "\"SELECT count(*) as rcount FROM ser_gs_gc.ft_t_jblg WHERE (UPPER(job_input_txt) ~* (UPPER('$muni_file_pattern') ) OR UPPER(job_msg_typ) ~* (UPPER('$muni_msg_typ'))) AND date_trunc('day', ser_gs_gc.sysdate() - interval '$muni_dayMinus days') = date_trunc('day', job_start_tms) AND substring(job_input_txt from '(([2][0][0-9][0-9])([1][0-2]|[0][1-9])([3][0-1]|[2][0-9]|[1][0-9]|[0][1-9]))')::timestamp = ser_gs_gc.sysdate()::date - INTERVAL '$muni_dayMinus day' AND job_end_tms IS NOT null and job_stat_typ ='CLOSED' and task_tot_cnt = task_failed_cnt and task_tot_cnt <> 0\"",
+          "resultset_as_variables" : "\"column_value\"",
+          "hibernate_configuration_file" : "\"/ext/app/jobscheduler/base/sos-berlin.com/joc/resources/joc/hibernate.cfg.xml\""
+        }
+      },
+      "skipIfNoAdmissionForOrderDay" : false,
+      "parallelism" : 1,
+      "graceTimeout" : 1,
+      "failOnErrWritten" : false,
+      "warnOnErrWritten" : false
+    },
+    "Echo_No_Dependency" : {
+      "agentName" : "JSAgent",
+      "withSubagentClusterIdExpr" : false,
+      "executable" : {
+        "TYPE" : "ShellScriptExecutable",
+        "script" : "echo \"no dependency check\"",
+        "v1Compatible" : false
+      },
+      "skipIfNoAdmissionForOrderDay" : false,
+      "parallelism" : 1,
+      "graceTimeout" : 1,
+      "failOnErrWritten" : false,
+      "warnOnErrWritten" : false
+    },
+    "Nuveen_Muni_Eagle_Load_Process_NDC" : {
+      "agentName" : "JSAgent",
+      "withSubagentClusterIdExpr" : false,
+      "executable" : {
+        "TYPE" : "ShellScriptExecutable",
+        "script" : "cd $scripts_home\n./jobutilities execWkf $input_param_file $event_name $target_application",
+        "env" : {
+          "scripts_home" : "'/ext/app/jobscheduler/scripts/'",
+          "input_param_file" : "'/edmfs/app/InputParams/Nuveen_Muni_Eagle_Load_Process.json'",
+          "event_name" : "'Nuveen_Muni_PFD_Wrapper'",
+          "target_application" : "'fileloading'"
+        },
+        "v1Compatible" : false
+      },
+      "skipIfNoAdmissionForOrderDay" : false,
+      "parallelism" : 1,
+      "graceTimeout" : 1,
+      "failOnErrWritten" : false,
+      "warnOnErrWritten" : false,
+      "title" : "Nuveen_Muni_Eagle_Load_Process_NDC"
+    }
+  }
+}

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<configurations cleanUnusedFields="false" nameSpace="NUVEEN">
+  <ruleConfigurations>
+    <rule category="SPEL" disConfig="N" disParentConfig="N" entityId="++4HwLjy2etpy007" id="009M5lYC2etbS00I" name="FinancialInstitution.NuveenChangeLabelInsTyp" nameSpace="NUVEEN" partId="004gu4GC2etry00H" severity="20" subType="ALL" type="POLICY"><![CDATA[var gs_entity= root;  
+ if( (#gs_entity.getSingleValue('FinancialInstitutionDetails.InstitutionType')!=null and (#gs_entity.getSingleValue('FinancialInstitutionDetails.InstitutionType') == 'MN'))) 
+ { 
+ #gs_entity.setFieldError('FinancialInstitutionDetails.InstitutionType','Institution Type cannot be null','FinancialInstitution.NuveenChangeLabelInsTyp') 
+ } 
+  else 
+ {} 
+]]>
+      <ruleConfig><![CDATA[{"ruleName":"FinancialInstitution.NuveenChangeLabelInsTyp","nodes":[{"nodeType":"IF_LOOP","type":"IF_LOOP","ifCondition":{"children":[{"leftCondition":{"className":"RECORD","returnClassName":"STRING","constructorCall":false,"methodIdentifier":"getSingleValue:java.lang.String","methodName":"getSingleValue","arguments":[{"value":"FinancialInstitutionDetails.InstitutionType","type":"VALUE","className":"STRING","businessField":"FinancialInstitutionDetails.InstitutionType","LOOKUP":false}],"context":{"name":"gs_entity","elementType":"ENTITY_OBJECT","type":"VARIABLE"},"type":"FUNCTION_ELEMENT"},"rightCondition":{"type":"ARGUMENT_LIST","arguments":[{"value":"MN","type":"VALUE","className":"STRING","businessField":null,"LOOKUP":false}]},"operator":"EQUALS","includeImplicitNull":true,"type":"SIMPLE_CONDITION"}],"operator":"AND","type":"COMPLEX_CONDITION"},"trueBody":[{"nodeType":"METHOD_CALL","type":"ASSIGN","condition":{"className":"RECORD","returnClassName":"OBJECT","constructorCall":false,"methodIdentifier":"setFieldError:java.lang.String:java.lang.String:java.lang.String","methodName":"setFieldError","arguments":[{"value":"FinancialInstitutionDetails.InstitutionType","type":"VALUE","className":"STRING","businessField":"FinancialInstitutionDetails.InstitutionType","LOOKUP":false},{"value":"Institution Type cannot be null","type":"VALUE","className":"STRING","businessField":null,"LOOKUP":false},{"value":"FinancialInstitution.NuveenChangeLabelInsTyp","type":"VALUE","className":"STRING","businessField":null,"LOOKUP":false}],"context":{"name":"gs_entity","elementType":"ENTITY_OBJECT","type":"VARIABLE"},"type":"FUNCTION_ELEMENT"},"operator":"EQUAL","isReAssign":false}],"falseBody":[]}]}]]></ruleConfig>
+    </rule>
+  </ruleConfigurations>
+  <policies>
+    <policy config="N" dgdpid="++4eFFHy2etv4017" entityId="++4HwLjy2etpy007" id="009M5lYC2etbS00L" name="NuveenChangeLabelInstTyp" nameSpace="NUVEEN" type="ALL">
+      <part id="009M5lYC2etbS00M" index="0" nameSpace="NUVEEN" type="POLICY_RULE">
+        <part dgdpid="++4eFFHy2etv4017" id="009M5lYC2etbS00N" index="0" nameSpace="NUVEEN" prntID="009M5lYC2etbS00M" type="RELOAD_LABEL" value="Obligor"/>
+      </part>
+    </policy>
+    <policy config="N" dgdpid="004gu4GC2etry00H" entityId="++4HwLjy2etpy007" id="009M5lYC2etbS00H" name="NuveenChangeLabelInstTyp" nameSpace="NUVEEN" type="ALL">
+      <part id="009M5lYC2etbS00J" index="0" nameSpace="NUVEEN" ruleid="009M5lYC2etbS00I" type="POLICY_RULE">
+        <part dgdpid="++7skcay2euPC00G" id="009M5lYC2etbS00K" index="0" nameSpace="NUVEEN" prntID="009M5lYC2etbS00J" type="RELOAD_LABEL" value="Obligor"/>
+        <part dgdpid="++4eFFHy2etv4017" id="009M5lYC2etbS00O" index="1" nameSpace="NUVEEN" prntID="009M5lYC2etbS00J" type="RELOAD_LABEL" value="CRS Issuer Name"/>
+      </part>
+    </policy>
+  </policies>
+</configurations>

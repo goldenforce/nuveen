@@ -1,0 +1,371 @@
+{
+  "TYPE" : "Workflow",
+  "version" : "1.6.6",
+  "timeZone" : "America/New_York",
+  "title" : "Nuveen LevFin Ratings Delta Load Process",
+  "orderPreparation" : {
+    "parameters" : {
+      "checkDependency" : {
+        "type" : "Boolean",
+        "default" : "true"
+      },
+      "muni_file_pattern" : {
+        "type" : "String",
+        "default" : "'EAGLE_GS_SMF_SOI_EOD_*'"
+      },
+      "muni_dayMinus" : {
+        "type" : "String",
+        "default" : "'0'"
+      },
+      "muni_jobConfigText" : {
+        "type" : "String",
+        "default" : "'Eagle Muni Dataload Job'"
+      },
+      "muni_msg_typ" : {
+        "type" : "String",
+        "default" : "'NuveenEagleMuniSOI'"
+      },
+      "target_application" : {
+        "type" : "String",
+        "default" : "'fileloading'"
+      },
+      "scripts_home" : {
+        "type" : "String",
+        "default" : "'/ext/app/jobscheduler/scripts/'"
+      },
+      "dayMinus" : {
+        "type" : "String",
+        "default" : "0"
+      },
+      "snp_file_pattern" : {
+        "type" : "String",
+        "default" : "'\\.security'"
+      },
+      "snp_bf_nme" : {
+        "type" : "String",
+        "default" : "'S&P_XF_GR_Security_Ratings_NuveenMuni'"
+      },
+      "snp_dayMinus" : {
+        "type" : "String",
+        "default" : "'0'"
+      }
+    },
+    "allowUndeclared" : false
+  },
+  "jobResourceNames" : [ "curDteJob" ],
+  "instructions" : [ {
+    "TYPE" : "Execute.Named",
+    "jobName" : "Muni_SNP_Ratings_Delta_Workflow_Start",
+    "label" : "Muni_SNP_Ratings_Delta_Wkf_Str"
+  }, {
+    "TYPE" : "If",
+    "predicate" : "$checkDependency==true",
+    "then" : {
+      "instructions" : [ {
+        "TYPE" : "ConsumeNotices",
+        "noticeBoardNames" : "'EagleMuniLoadNoticeBoard'",
+        "subworkflow" : {
+          "instructions" : [ ]
+        },
+        "label" : "EagleMuniLoadNoticeBoard"
+      }, {
+        "TYPE" : "Execute.Named",
+        "jobName" : "Echo_Dependency_Check",
+        "label" : "Echo_Dependency_Check"
+      }, {
+        "TYPE" : "Try",
+        "try" : {
+          "instructions" : [ {
+            "TYPE" : "Execute.Named",
+            "jobName" : "Muni_SNP_Load_Check",
+            "label" : "Muni_SNP_Load_Check"
+          }, {
+            "TYPE" : "If",
+            "predicate" : "$munisnpscount.toNumber == 0",
+            "then" : {
+              "instructions" : [ {
+                "TYPE" : "Execute.Named",
+                "jobName" : "Muni_SNP_Instrument_Ratings_Delta",
+                "label" : "Muni_SNP_Instrument_Ratings_Delta"
+              }, {
+                "TYPE" : "Execute.Named",
+                "jobName" : "Muni_SNP_Load_Completed",
+                "label" : "Muni_SNP_Load_Completed"
+              }, {
+                "TYPE" : "Execute.Named",
+                "jobName" : "Muni_Ratings_Delta_Workflow_End",
+                "label" : "Muni_Ratings_Delta_Workflow_En"
+              } ]
+            },
+            "else" : {
+              "instructions" : [ {
+                "TYPE" : "Execute.Named",
+                "jobName" : "Muni_SNP_Load_Not_Completed",
+                "label" : "Muni_SNP_Load_Not_Completed"
+              } ]
+            }
+          }, {
+            "TYPE" : "Execute.Named",
+            "jobName" : "Muni_SNP_Load_Check1",
+            "label" : "Muni_SNP_Load_Check1"
+          }, {
+            "TYPE" : "Execute.Named",
+            "jobName" : "JBLG_SnP_All_Records_Fail_Check",
+            "label" : "JBLG_SnP_All_Records_Fail_Chec"
+          }, {
+            "TYPE" : "If",
+            "predicate" : "$munisnpscount.toNumber == 1 && $rsnpcount.toNumber == 0",
+            "then" : {
+              "instructions" : [ {
+                "TYPE" : "PostNotices",
+                "noticeBoardNames" : [ "SNPRatingsMuniNoticeBoard" ],
+                "label" : "SNPRatingsMuniNoticeBoard"
+              } ]
+            },
+            "else" : {
+              "instructions" : [ {
+                "TYPE" : "Fail",
+                "outcome" : {
+                  "returnCode" : 1
+                },
+                "uncatchable" : false
+              } ]
+            }
+          } ]
+        },
+        "catch" : {
+          "instructions" : [ {
+            "TYPE" : "Retry"
+          } ]
+        },
+        "maxTries" : 10,
+        "retryDelays" : [ 600 ]
+      } ]
+    },
+    "else" : {
+      "instructions" : [ {
+        "TYPE" : "Execute.Named",
+        "jobName" : "Echo_No_Dependency_Check",
+        "label" : "Echo_No_Dependency_Check"
+      }, {
+        "TYPE" : "Execute.Named",
+        "jobName" : "Muni_SNP_Instrument_Ratings_Delta_NDC",
+        "label" : "Muni_SNP_Instrument_Rtng_Dl_ND"
+      }, {
+        "TYPE" : "Execute.Named",
+        "jobName" : "Muni_Ratings_Delta_Workflow_End_NDC",
+        "label" : "Muni_Ratings_Delta_Wkf_End_NDC"
+      } ]
+    }
+  } ],
+  "jobs" : {
+    "Muni_SNP_Ratings_Delta_Workflow_Start" : {
+      "agentName" : "JSAgent",
+      "withSubagentClusterIdExpr" : false,
+      "executable" : {
+        "TYPE" : "ShellScriptExecutable",
+        "script" : "echo \"Muni SNP Ratings Delta Workflow Start\"",
+        "v1Compatible" : false
+      },
+      "skipIfNoAdmissionForOrderDay" : false,
+      "parallelism" : 1,
+      "graceTimeout" : 1,
+      "failOnErrWritten" : false,
+      "warnOnErrWritten" : false,
+      "title" : "Muni SNP Ratings Delta Workflow Start"
+    },
+    "Echo_Dependency_Check" : {
+      "agentName" : "JSAgent",
+      "withSubagentClusterIdExpr" : false,
+      "executable" : {
+        "TYPE" : "ShellScriptExecutable",
+        "script" : "echo \"Dependency Check\"",
+        "v1Compatible" : false
+      },
+      "skipIfNoAdmissionForOrderDay" : false,
+      "parallelism" : 1,
+      "graceTimeout" : 1,
+      "failOnErrWritten" : false,
+      "warnOnErrWritten" : false,
+      "title" : "Echo Dependency Check"
+    },
+    "Muni_SNP_Load_Check" : {
+      "agentName" : "JSAgent",
+      "withSubagentClusterIdExpr" : false,
+      "executable" : {
+        "TYPE" : "InternalExecutable",
+        "className" : "com.sos.jitl.jobs.db.SQLExecutorJob",
+        "internalType" : "JITL",
+        "arguments" : {
+          "command" : "\"select count(*) as munisnpscount from ser_gs_gc.ft_t_jblg where job_id in (SELECT prnt_job_id from ser_gs_gc.ft_t_jblg \nwhere (UPPER(job_input_txt) ~* (UPPER('$snp_file_pattern')) or UPPER(bf_nme) ~* (UPPER('$snp_bf_nme'))) and date_trunc('day', ser_gs_gc.sysdate() - interval '$snp_dayMinus days') = date_trunc('day', job_start_tms) \nAND substring(job_input_txt from '(([2][0][0-9][0-9])([1][0-2]|[0][1-9])([3][0-1]|[2][0-9]|[1][0-9]|[0][1-9]))')::timestamp = ser_gs_gc.sysdate()::date - INTERVAL '$snp_dayMinus day' and job_end_tms is not null) and job_config_txt = 'RATINGS_DELTA' and job_stat_typ ='CLOSED'\"",
+          "resultset_as_variables" : "\"column_value\"",
+          "hibernate_configuration_file" : "\"/ext/app/jobscheduler/base/sos-berlin.com/joc/resources/joc/hibernate.cfg.xml\""
+        }
+      },
+      "skipIfNoAdmissionForOrderDay" : false,
+      "parallelism" : 1,
+      "graceTimeout" : 1,
+      "failOnErrWritten" : false,
+      "warnOnErrWritten" : false,
+      "title" : "Muni SNP Load Check"
+    },
+    "Muni_SNP_Instrument_Ratings_Delta" : {
+      "agentName" : "JSAgent",
+      "withSubagentClusterIdExpr" : false,
+      "executable" : {
+        "TYPE" : "ShellScriptExecutable",
+        "script" : "jq -r '.FilePatterns[]' $input_param_file | while read fileName; do\n\tfileDte=$(date --date=\"$BUS_DTE $dayMinus days ago\" +\"%Y%m%d\")\n\tfileNameBusDte=${fileName/$busDteRegex/$fileDte}\n    fileNameRegex=${fileName//'.'/'\\.'}\n    fileNameRegex=${fileNameRegex//'*'/'\\*'}\n    sed -i \"s|$fileNameRegex|$fileNameBusDte|\" $input_param_file\ndone\n\ncd $scripts_home\n./jobutilities execWkf $input_param_file $event_name $target_application",
+        "env" : {
+          "input_param_file" : "'/edmfs/app/InputParams/ratings/Nuveen_Muni_SNP_Instrument_Ratings_Delta_Load.json'",
+          "event_name" : "'Nuveen_EVT_Muni_SNP_Ratings'",
+          "target_application" : "$target_application",
+          "scripts_home" : "$scripts_home",
+          "dayMinus" : "$dayMinus"
+        },
+        "v1Compatible" : false
+      },
+      "skipIfNoAdmissionForOrderDay" : false,
+      "parallelism" : 1,
+      "graceTimeout" : 1,
+      "failOnErrWritten" : false,
+      "warnOnErrWritten" : false,
+      "title" : "Muni SNP Instrument Ratings Delta"
+    },
+    "Muni_SNP_Load_Completed" : {
+      "agentName" : "JSAgent",
+      "withSubagentClusterIdExpr" : false,
+      "executable" : {
+        "TYPE" : "ShellScriptExecutable",
+        "script" : "echo \"Muni SNP load has processed\"",
+        "v1Compatible" : false
+      },
+      "skipIfNoAdmissionForOrderDay" : false,
+      "parallelism" : 1,
+      "graceTimeout" : 1,
+      "failOnErrWritten" : false,
+      "warnOnErrWritten" : false,
+      "title" : "Muni SNP Load Completed"
+    },
+    "Muni_Ratings_Delta_Workflow_End" : {
+      "agentName" : "JSAgent",
+      "withSubagentClusterIdExpr" : false,
+      "executable" : {
+        "TYPE" : "ShellScriptExecutable",
+        "script" : "echo \"Muni SNP Ratings Delta Workflow End\"",
+        "v1Compatible" : false
+      },
+      "skipIfNoAdmissionForOrderDay" : false,
+      "parallelism" : 1,
+      "graceTimeout" : 1,
+      "failOnErrWritten" : false,
+      "warnOnErrWritten" : false,
+      "title" : "Muni Ratings Delta Workflow End"
+    },
+    "Muni_SNP_Load_Not_Completed" : {
+      "agentName" : "JSAgent",
+      "withSubagentClusterIdExpr" : false,
+      "executable" : {
+        "TYPE" : "ShellScriptExecutable",
+        "script" : "echo \"Muni SNP load has not processed\"",
+        "v1Compatible" : false
+      },
+      "skipIfNoAdmissionForOrderDay" : false,
+      "parallelism" : 1,
+      "graceTimeout" : 1,
+      "failOnErrWritten" : false,
+      "warnOnErrWritten" : false,
+      "title" : "Muni SNP Load Not Completed"
+    },
+    "Muni_SNP_Load_Check1" : {
+      "agentName" : "JSAgent",
+      "withSubagentClusterIdExpr" : false,
+      "executable" : {
+        "TYPE" : "InternalExecutable",
+        "className" : "com.sos.jitl.jobs.db.SQLExecutorJob",
+        "internalType" : "JITL",
+        "arguments" : {
+          "command" : "\"select count(*) as munisnpscount from ser_gs_gc.ft_t_jblg where job_id in (SELECT prnt_job_id from ser_gs_gc.ft_t_jblg \nwhere (UPPER(job_input_txt) ~* (UPPER('$snp_file_pattern')) or UPPER(bf_nme) ~* (UPPER('$snp_bf_nme'))) and date_trunc('day', ser_gs_gc.sysdate() - interval '$snp_dayMinus days') = date_trunc('day', job_start_tms) \nAND substring(job_input_txt from '(([2][0][0-9][0-9])([1][0-2]|[0][1-9])([3][0-1]|[2][0-9]|[1][0-9]|[0][1-9]))')::timestamp = ser_gs_gc.sysdate()::date - INTERVAL '$snp_dayMinus day' and job_end_tms is not null) and job_config_txt = 'RATINGS_DELTA' and job_stat_typ ='CLOSED'\"",
+          "resultset_as_variables" : "\"column_value\"",
+          "hibernate_configuration_file" : "\"/ext/app/jobscheduler/base/sos-berlin.com/joc/resources/joc/hibernate.cfg.xml\""
+        }
+      },
+      "skipIfNoAdmissionForOrderDay" : false,
+      "parallelism" : 1,
+      "graceTimeout" : 1,
+      "failOnErrWritten" : false,
+      "warnOnErrWritten" : false,
+      "title" : "Muni SNP Load Check1"
+    },
+    "JBLG_SnP_All_Records_Fail_Check" : {
+      "agentName" : "JSAgent",
+      "withSubagentClusterIdExpr" : false,
+      "executable" : {
+        "TYPE" : "InternalExecutable",
+        "className" : "com.sos.jitl.jobs.db.SQLExecutorJob",
+        "internalType" : "JITL",
+        "arguments" : {
+          "command" : "\"SELECT count(*) as rsnpcount from ser_gs_gc.ft_t_jblg where (UPPER(job_input_txt) ~* (UPPER('$snp_file_pattern')) or UPPER(bf_nme) ~* (UPPER('$snp_bf_nme'))) and date_trunc('day', ser_gs_gc.sysdate() - interval '$snp_dayMinus days') = date_trunc('day', job_start_tms) AND substring(job_input_txt from '(([2][0][0-9][0-9])([1][0-2]|[0][1-9])([3][0-1]|[2][0-9]|[1][0-9]|[0][1-9]))')::timestamp = ser_gs_gc.sysdate()::date - INTERVAL '$snp_dayMinus day' and job_end_tms is not null and job_stat_typ ='CLOSED' and task_tot_cnt = task_failed_cnt and task_tot_cnt <> 0\"",
+          "resultset_as_variables" : "\"column_value\"",
+          "hibernate_configuration_file" : "\"/ext/app/jobscheduler/base/sos-berlin.com/joc/resources/joc/hibernate.cfg.xml\""
+        }
+      },
+      "skipIfNoAdmissionForOrderDay" : false,
+      "parallelism" : 1,
+      "graceTimeout" : 1,
+      "failOnErrWritten" : false,
+      "warnOnErrWritten" : false
+    },
+    "Echo_No_Dependency_Check" : {
+      "agentName" : "JSAgent",
+      "withSubagentClusterIdExpr" : false,
+      "executable" : {
+        "TYPE" : "ShellScriptExecutable",
+        "script" : "echo \"No Dependency Check\"",
+        "v1Compatible" : false
+      },
+      "skipIfNoAdmissionForOrderDay" : false,
+      "parallelism" : 1,
+      "graceTimeout" : 1,
+      "failOnErrWritten" : false,
+      "warnOnErrWritten" : false,
+      "title" : "Echo No Dependency Check"
+    },
+    "Muni_SNP_Instrument_Ratings_Delta_NDC" : {
+      "agentName" : "JSAgent",
+      "withSubagentClusterIdExpr" : false,
+      "executable" : {
+        "TYPE" : "ShellScriptExecutable",
+        "script" : "jq -r '.FilePatterns[]' $input_param_file | while read fileName; do\n\tfileDte=$(date --date=\"$BUS_DTE $dayMinus days ago\" +\"%Y%m%d\")\n\tfileNameBusDte=${fileName/$busDteRegex/$fileDte}\n    fileNameRegex=${fileName//'.'/'\\.'}\n    fileNameRegex=${fileNameRegex//'*'/'\\*'}\n    sed -i \"s|$fileNameRegex|$fileNameBusDte|\" $input_param_file\ndone\n\ncd $scripts_home\n./jobutilities execWkf $input_param_file $event_name $target_application",
+        "env" : {
+          "input_param_file" : "'/edmfs/app/InputParams/ratings/Nuveen_Muni_SNP_Instrument_Ratings_Delta_Load.json'",
+          "event_name" : "'Nuveen_EVT_Muni_SNP_Ratings'",
+          "target_application" : "$target_application",
+          "scripts_home" : "$scripts_home",
+          "dayMinus" : "$dayMinus"
+        },
+        "v1Compatible" : false
+      },
+      "skipIfNoAdmissionForOrderDay" : false,
+      "parallelism" : 1,
+      "graceTimeout" : 1,
+      "failOnErrWritten" : false,
+      "warnOnErrWritten" : false,
+      "title" : "Muni SNP Instrument Ratings Delta NDC"
+    },
+    "Muni_Ratings_Delta_Workflow_End_NDC" : {
+      "agentName" : "JSAgent",
+      "withSubagentClusterIdExpr" : false,
+      "executable" : {
+        "TYPE" : "ShellScriptExecutable",
+        "script" : "echo \"Muni SNP Ratings Delta Workflow End\"",
+        "v1Compatible" : false
+      },
+      "skipIfNoAdmissionForOrderDay" : false,
+      "parallelism" : 1,
+      "graceTimeout" : 1,
+      "failOnErrWritten" : false,
+      "warnOnErrWritten" : false,
+      "title" : "Muni Ratings Delta Workflow End NDC"
+    }
+  }
+}

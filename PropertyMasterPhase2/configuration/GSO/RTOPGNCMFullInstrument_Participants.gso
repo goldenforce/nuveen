@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entities cleanUnusedFields="false" nameSpace="NUVEEN">
+  <beFields>
+    <beField class="BETEXT" customDesc="" customDomainSQL="" customSQL="" desc="" displayCaption="Soft Delete Indicatior" entityTypeId="++3qwBhS2etxm003" id="009voJdcHIi8400K" mandatory="0" multiplicity="MULTIPLE_OR_NULL" name="RTOPSoftDeleteIndicator" nameSpace="NUVEEN"/>
+  </beFields>
+  <dataGroups>
+    <dataGroup customInd="0" desc="All Instrument Rating Opinion" displayCaption="All Instrument Rating Opinion" entityTypeId="++3qwBhS2etxm003" frequencyInd="0" id="++6vC+Jy2euPC02x" ignoreDeleteChildren="false" multiplicity="MULTIPLE_OR_NULL" name="AllInstrRatingOpinion" nameSpace="GSC">
+      <part defNameSpace="NUVEEN" fieldId="009voJdcHIi8400K" id="009voJdcHIi8400M" prntReqdInd="0" seq="21"/>
+    </dataGroup>
+  </dataGroups>
+  <relations>
+    <relation customSQL="" id="++9vstysHIi840xM" name="RTOP-SOFTDELT-CUSTOM-GNCM" nameSpace="NUVEEN" srcTable="FT_T_RTOP" tgtTable="FT_T_GNCM">
+      <field fromColumn="RTOP_OID" id="++9vstysHIi840xN" nameSpace="NUVEEN" toColumn="CROSS_REF_ID" type="RELATION_FIELD" valueType="COLUMN"/>
+    </relation>
+  </relations>
+  <occurrences>
+    <occurrence desc="Occurrence for General Table Comment" id="009voJdcHIi8400A" ignoreDeleteChildren="false" multiplicity="SINGLE_OR_NULL" name="GNCM_RTOP_SOFT_DELETE" nameSpace="NUVEEN" parentId="NXGIUYSJHFMDBEDV" relationId="++9vstysHIi840xM" table="FT_T_GNCM" timeSeries="LOGICAL_DELETE">
+      <field desc="Comment Text" id="009voJdcHIi8400C" name="CMNT_TXT" nameSpace="NUVEEN"/>
+      <value id="009voJdcHIi8400D" name="COMM_REAS_MNEM" nameSpace="NUVEEN" type="FILTER_FIELD" value="SOFTDELT" valueType="CONSTANT"/>
+      <value id="009voJdcHIi8400F" name="GNCM_TBL_TYP" nameSpace="NUVEEN" type="FILTER_FIELD" value="RTOP" valueType="CONSTANT"/>
+      <value id="009voJdcHIi8400G" name="LN_NUM" nameSpace="NUVEEN" type="FILTER_FIELD" value="1" valueType="CONSTANT"/>
+      <value id="009voJdcHIi8400J" name="NLS_CDE" nameSpace="NUVEEN" type="FILTER_FIELD" value="ENGLISH" valueType="CONSTANT"/>
+      <option id="009voJdcHIi8400B" nameSpace="NUVEEN" type="DEFAULT_ACTION" value="UNKNOWN"/>
+    </occurrence>
+  </occurrences>
+  <mappings>
+    <mapping beFieldId="009voJdcHIi8400K" groupMapping="0" id="009voJdcHIi8400L" nameSpace="NUVEEN" occFieldId="009voJdcHIi8400C"/>
+  </mappings>
+</entities>

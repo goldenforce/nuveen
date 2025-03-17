@@ -1,0 +1,3 @@
+Insert into FT_T_ETDF(LAST_CHG_TMS,LAST_CHG_USR_ID,TBL_SYNM_ID,TBL_SYNM_DDL_NME,TBL_SYNM_NME,TBL_SYNM_DESC,SEGMENT_NME,SEGMENT_DESC,PRNT_TBL_ID)
+select TO_DATE('2024-10-09 16:21:07','YYYY-MM-DD HH24:MI:SS'),'AUTO','PPS1','FT_T_PPS1','FT_T_PPS1','Property Subtype','PropertySubtype','Property Subtype','ETDF'
+from dual where not exists (select 'x' from ft_t_etdf where TBL_SYNM_DDL_NME = 'FT_T_PPS1' );

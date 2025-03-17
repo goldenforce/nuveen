@@ -1,0 +1,8 @@
+{
+  "TYPE" : "Board",
+  "postOrderToNoticeId" : "replaceAll($js7OrderId, '.*', 'LRD2EAGLE_NB')",
+  "endOfLife" : "$js7EpochMilli + 2.5 * 60 * 60 * 1000",
+  "expectOrderToNoticeId" : "replaceAll($js7OrderId, '.*', 'LRD2EAGLE_NB')",
+  "version" : "1.6.6",
+  "title" : "LRD2EAGLE_NB"
+}

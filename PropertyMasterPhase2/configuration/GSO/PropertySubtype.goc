@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<configurations cleanUnusedFields="false" nameSpace="NUVEEN">
+  <ruleConfigurations>
+    <rule category="SPEL" desc="Validation rule to check if start tms is less than end tms." disConfig="N" disParentConfig="N" entityId="009nb5wi2etbS005" id="++9y5ANy2etbS00g" name="Nuveen.PropertySubType.CheckStartTmsLessThanEndTms" nameSpace="NUVEEN" partId="++9oIacy2etbS028" severity="20" subType="VALIDATION" type="ALL" weightage="1"><![CDATA[var gs_entity= root;  
+ if( (#gs_entity.getSingleValue('PropertySubtypeDG.PropertyStartTms')!=null and #gs_entity.getSingleValue('PropertySubtypeDG.PropertyEndTms')!=null and (#gs_entity.getSingleValue('PropertySubtypeDG.PropertyStartTms') > #gs_entity.getSingleValue('PropertySubtypeDG.PropertyEndTms')))) 
+ { 
+ #gs_entity.setFieldError('PropertySubtypeDG.PropertyStartTms','Start Tms must be less than End Tms.','Nuveen.PropertySubType.CheckStartTmsLessThanEndTms') 
+ } 
+  else 
+ {} 
+]]>
+      <ruleConfig><![CDATA[{"ruleName":"Nuveen.PropertySubType.CheckStartTmsLessThanEndTms","nodes":[{"nodeType":"IF_LOOP","type":"IF_LOOP","ifCondition":{"children":[{"leftCondition":{"className":"RECORD","returnClassName":"DATE","constructorCall":false,"methodIdentifier":"getSingleValue:java.lang.String","methodName":"getSingleValue","arguments":[{"value":"PropertySubtypeDG.PropertyStartTms","type":"VALUE","className":"STRING","businessField":"PropertySubtypeDG.PropertyStartTms","LOOKUP":false}],"context":{"name":"gs_entity","elementType":"ENTITY_OBJECT","type":"VARIABLE"},"type":"FUNCTION_ELEMENT"},"rightCondition":{"className":"RECORD","returnClassName":"DATE","constructorCall":false,"methodIdentifier":"getSingleValue:java.lang.String","methodName":"getSingleValue","arguments":[{"value":"PropertySubtypeDG.PropertyEndTms","type":"VALUE","className":"STRING","businessField":"PropertySubtypeDG.PropertyEndTms","LOOKUP":false}],"context":{"name":"gs_entity","elementType":"ENTITY_OBJECT","type":"VARIABLE"},"type":"FUNCTION_ELEMENT"},"operator":"GREATER_THAN","includeImplicitNull":true,"type":"SIMPLE_CONDITION"}],"operator":"AND","type":"COMPLEX_CONDITION"},"trueBody":[{"nodeType":"METHOD_CALL","type":"ASSIGN","condition":{"className":"RECORD","returnClassName":"OBJECT","constructorCall":false,"methodIdentifier":"setFieldError:java.lang.String:java.lang.String:java.lang.String","methodName":"setFieldError","arguments":[{"value":"PropertySubtypeDG.PropertyStartTms","type":"VALUE","className":"STRING","businessField":"PropertySubtypeDG.PropertyStartTms","LOOKUP":false},{"value":"Start Tms must be less than End Tms.","type":"VALUE","className":"STRING","businessField":null,"LOOKUP":false},{"value":"Nuveen.PropertySubType.CheckStartTmsLessThanEndTms","type":"VALUE","className":"STRING","businessField":null,"LOOKUP":false}],"context":{"name":"gs_entity","elementType":"ENTITY_OBJECT","type":"VARIABLE"},"type":"FUNCTION_ELEMENT"},"operator":"EQUAL","isReAssign":false}],"falseBody":[]}]}]]></ruleConfig>
+      <rulemeta attrpathnme="PROPERTYSUBTYPEDG" id="++9y5ANy2etbS00h" nameSpace="NUVEEN" ruleid="++9y5ANy2etbS00g"/>
+      <rulemeta attrpathnme="PROPERTYSTARTTMS" id="++9y5ANy2etbS00i" nameSpace="NUVEEN" ruleid="++9y5ANy2etbS00g"/>
+      <rulemeta attrpathnme="PROPERTYENDTMS" id="++9y5ANy2etbS00j" nameSpace="NUVEEN" ruleid="++9y5ANy2etbS00g"/>
+      <rulemeta attrpathnme="PropertySubtype.PropertySubtypeDG.PropertyStartTms" bdefid="009nb5wi2etbS005" id="++9y5ANy2etbS00k" nameSpace="NUVEEN" ruleid="++9y5ANy2etbS00g"/>
+      <rulemeta attrpathnme="PropertySubtype.PropertySubtypeDG.PropertyEndTms" bdefid="009nb5wi2etbS005" id="++9y5ANy2etbS00l" nameSpace="NUVEEN" ruleid="++9y5ANy2etbS00g"/>
+    </rule>
+  </ruleConfigurations>
+</configurations>

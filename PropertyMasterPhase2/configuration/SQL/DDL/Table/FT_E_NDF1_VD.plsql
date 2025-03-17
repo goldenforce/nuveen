@@ -1,0 +1,118 @@
+--{$$-STATEMENT-$$}
+do $$
+declare
+l_tbl_name varchar(1000) := 'ft_e_ndf1';
+l_tbl_exists_flag varchar(1000) := null ;
+l_view_name varchar(1000) := 'ft_t_ndf1';
+l_view_exists_flag varchar(1000) := null ;
+begin
+ 	--l_tbl_exists_flag := to_regclass(l_tbl_name);
+	select 1 into l_tbl_exists_flag from information_schema.tables where table_name  = l_tbl_name ;
+	if(l_tbl_exists_flag is null) then
+		execute format('
+					CREATE TABLE IF NOT EXISTS ft_e_ndf1
+						(
+						NDF1_OID VARCHAR(10) NOT NULL,
+						INSTR_ID VARCHAR(10) NOT NULL,
+						NUVEEN_TICKER VARCHAR(255),
+						CPN_CRTE NUMERIC(20,10),
+						NUVEEN_AMT_ISSUED NUMERIC(28,11),
+						ISS_NME VARCHAR(255),
+						NUVEEN_NAME VARCHAR(255),
+						MATURITY_DTE TIMESTAMP(0),
+						DOC_ISS_CNTRY_CDE VARCHAR(255),
+						NUVEEN_PRVT_PLACE VARCHAR(255),
+						NUVEEN_OPT_CONT_SIZE NUMERIC(20,10),
+						NUVEEN_ID_NAICS_CODE VARCHAR(255),
+						NUVEEN_WRT_EXPIRE_DT TIMESTAMP(0),
+						NUVEEN_FS_ISSUER_TTL_DBT NUMERIC(20,10),
+						NUVEEN_INDSTRY_SECTR_NUM VARCHAR(255),
+						NUVEEN_INDSTRY_GROUP_NUM VARCHAR(255),
+						NUVEEN_INDSTRY_SUBGRP_NUM VARCHAR(255),
+						NUVEEN_TICKR_EXCH_CODE VARCHAR(255),
+						NUVEEN_INDSTRY_GROUP VARCHAR(255),
+						NUVEEN_INDUSTRY_SECTOR VARCHAR(255),
+						NUVEEN_INDUSTRY_SUBGROUP VARCHAR(255),
+						NUVEEN_SECURITY_DES VARCHAR(255),
+						NUVEEN_INDSTRY_GRP_INDEX VARCHAR(255),
+						NUVEEN_WRT_PAR_AMT NUMERIC(20,10),
+						NUVEEN_HB_ASSET_CLASS VARCHAR(255),
+						ISS_CPRC NUMERIC(20,10),
+						NUVEEN_COUPON_RESET_CODE VARCHAR(255),
+						NUVEEN_COUPON_TYPE VARCHAR(255),
+						NUVEEN_CURRENCY_CODE VARCHAR(255),
+						NUVEEN_INCOME_CURRENCY VARCHAR(255),
+						NUVEEN_ISSUE_NAME VARCHAR(255),
+						NUVEEN_DEFAULT_FLAG VARCHAR(255),
+						VALIDATION_PROCESS_FLAG VARCHAR(255),
+						NUVEEN_DATED_DATE TIMESTAMP(0),
+						NUVEEN_ISSUE_DATE TIMESTAMP(0),
+						NUVEEN_DEFAULT_DATE TIMESTAMP(0),
+						NUVEEN_INCOME_DATE TIMESTAMP(0),
+						NUVEEN_LAST_INCOME_DATE TIMESTAMP(0),
+						ASSEMBLY_CONVERTIBLE_IND VARCHAR(255),
+						BB_ISSUER_CLASSIFICATION VARCHAR(255),
+						NUVEEN_INDUSTRY_CODE VARCHAR(255),
+						NUVEEN_SERIES VARCHAR(255),
+						NUVEEN_ZERO_COUPON VARCHAR(255),
+						NUVEEN_COUPON_FREQUENCY VARCHAR(255),
+						NUVEEN_INVESTMENT_TYPE VARCHAR(255),
+						DDIS_AMT_OUTSTANDING_ISSR NUMERIC(20,10),
+						NUVEEN_DESCRIPTION_NOTES VARCHAR(255),
+						NUVEEN_CONTIGENT_SECURITY VARCHAR(255),
+						NUVEEN_PAR_VALUE NUMERIC(20,10),
+						NUVEEN_BLOOMBERG_TICKER VARCHAR(255),
+						INTEREST_METHOD_CODE VARCHAR(255),
+						LIQUID_FLAG VARCHAR(255),
+						NUVEEN_PREV_CPN_DT TIMESTAMP(0),
+						NUVEEN_ACCRUAL_METHOD VARCHAR(255),
+						NUVEEN_MNTH_CPN_DAY INTEGER,
+						NUVEEN_ACTL_PAY_DELAY INTEGER,
+						NUVEEN_MTGE_DEAL_NAME VARCHAR(255),
+						NUVEEN_FLT_RATE_SPREAD NUMERIC(20,10),
+						NUVEEN_CNTRY_OF_ISSUE VARCHAR(255),
+						NUVEEN_BUSINESS_DAY VARCHAR(255),
+						NUVEEN_TRADES_FLAT_IND VARCHAR(255),
+						SEC_RULE_2A7_DAY_DTE TIMESTAMP(0),
+						NUVEEN_DEAL_YEAR VARCHAR(255),
+						NUVEEN_NOTIONAL_PAR_IND VARCHAR(255),
+						NUVEEN_LAST_PRIN_DATE TIMESTAMP(0),
+						NUVEEN_FIRST_PRIN_DATE TIMESTAMP(0),
+						NUVEEN_LIFETIME_FLOOR NUMERIC(20,10),
+						NUVEEN_LIFETIME_CAP NUMERIC(20,10),
+						NUVEEN_RESET_IDX VARCHAR(255),
+						NUVEEN_RESET_IDX_FROM_DT TIMESTAMP(0),
+						NUVEEN_MAKEWHOLE_BP NUMERIC(10,5), 
+						NUVEEN_CNTRY_FROM_EXCH VARCHAR(5),
+						NUVEEN_PRICE_SYMBOL VARCHAR(255),
+						LAST_CHG_USR_ID VARCHAR(256),
+						LAST_CHG_TMS TIMESTAMP(0),
+						DATA_SRC_ID VARCHAR(40),
+						START_TMS TIMESTAMP(0),
+						END_TMS TIMESTAMP(0)
+						) 
+		', l_tbl_name);
+		execute format('CREATE UNIQUE INDEX ft_e_ndf1_u001 ON ft_e_ndf1 (INSTR_ID,START_TMS,DATA_SRC_ID)',l_tbl_name);
+		
+		raise notice 'created table %', l_tbl_name;
+	else
+		raise notice 'table % already exists', l_tbl_name;
+	end if;
+	
+	
+	
+	-- view start
+		select 1 into l_tbl_exists_flag from information_schema.tables where table_name  = l_tbl_name ;
+	
+	select 1 into l_view_exists_flag from information_schema.tables where table_name  = l_view_name ;
+
+	if(l_tbl_exists_flag is not null and l_view_exists_flag is null) then
+		execute format('CREATE OR REPLACE VIEW %I AS SELECT * FROM %I',l_view_name,l_tbl_name);
+		raise notice 'Created View %', l_view_name;
+	else
+		raise notice 'View % already exists', l_view_name;
+	end if;
+	
+		
+end $$;
+/

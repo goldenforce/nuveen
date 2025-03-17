@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<root baseLookup="Exception" createdUser="user1" freezeColumns="" id="&gt;c6311tDe1" isDefault="Y" isPublic="N" lookupId="PropertyException" pageSize="50" screenType="SYSTEMSRCH" title="PropertyException">
+  <users>
+    <user id="NREUISH010" user="" userGroup="" userRole="pm_finance_operations_property"/>
+    <user id="NREUISH014" user="" userGroup="" userRole="pm_sustainability"/>
+    <user id="NREUISH012" user="" userGroup="" userRole="pm_real_assets_technology"/>
+    <user id="NREUISH016" user="" userGroup="" userRole="pm_users"/>
+    <user id="NREUISH013" user="" userGroup="" userRole="pm_asset_management"/>
+    <user id="NREUISH015" user="" userGroup="" userRole="pm_finance_operations_fund"/>
+    <user id="NREUISH017" user="" userGroup="" userRole="pm_readonly"/>
+    <user id="NREUISH018" user="" userGroup="" userRole="pm_data_governance"/>
+    <user id="NREUISH011" user="" userGroup="" userRole="pm_governance_&amp;_operations"/>
+  </users>
+  <config>{"FILTERS":[{"CRITERIA":"{\"joinOperator\":\"AND\",\"allSubCriterions\":[{\"criterianField\":\"PropertyException.PropertyDetails.PropertyException.Property.PropertyDetails.PropertyName\",\"operator\":\"NOT_EQUALS\",\"caseSensitive\":false,\"value\":\"NULL\"}]}","NAME":"PropertySearch"}],"ADVANCE_FILTER":[{"Query":"{\"joinOperator\":\"OR\",\"allSubCriterions\":[{\"criterianField\":\"PropertyException.ExceptionDetail.ProcessedMessage.CrossReferenceTableType\",\"operator\":\"EQUALS\",\"caseSensitive\":false,\"value\":\"PPRY\"},{\"criterianField\":\"PropertyException.ExceptionDetail.ReferenceTableType\",\"operator\":\"EQUALS\",\"caseSensitive\":true,\"value\":\"PPRY\"}]}"}]}</config>
+  <buttons/>
+  <columns>
+    <column caption="" columnName="Latest Notification DateTime" fieldName="PropertyException.ExceptionDetail.LatestNotificationDate" filterFromNum="" filterFromTms="" filterToNum="" filterToTms="" filterValue="" filterable="Y" fromRange="" id="&amp;amp;Z8311@x81" isRange="N" mobileTemplate="" operator="" orderNum="0" showRelLink="" sort="" toRange="" width="144"/>
+    <column caption="" columnName="Property Name" fieldName="PropertyException.PropertyDetails.PropertyException.Property.PropertyDetails.PropertyName" filterFromNum="" filterFromTms="" filterToNum="" filterToTms="" filterValue="" filterable="Y" fromRange="" id="&amp;amp;Z8411@x81" isRange="N" mobileTemplate="" operator="" orderNum="1" showRelLink="" sort="" toRange="" width="144"/>
+    <column caption="" columnName="Details" fieldName="PropertyException.ExceptionDetail.Details" filterFromNum="" filterFromTms="" filterToNum="" filterToTms="" filterValue="" filterable="Y" fromRange="" id="&amp;amp;Z8511@x81" isRange="N" mobileTemplate="" operator="" orderNum="2" showRelLink="" sort="" toRange="" width="144"/>
+    <column caption="" columnName="Default Severity" fieldName="PropertyException.ExceptionDetail.DefaultSeverity" filterFromNum="" filterFromTms="" filterToNum="" filterToTms="" filterValue="" filterable="Y" fromRange="" id="&amp;amp;Z8611@x81" isRange="N" mobileTemplate="" operator="" orderNum="3" showRelLink="" sort="" toRange="" width="144"/>
+    <column caption="" columnName="Transaction Id" fieldName="PropertyException.ExceptionDetail.TransactionId" filterFromNum="" filterFromTms="" filterToNum="" filterToTms="" filterValue="" filterable="Y" fromRange="" id="&amp;amp;Z8711@x81" isRange="N" mobileTemplate="" operator="" orderNum="4" showRelLink="" sort="" toRange="" width="143"/>
+    <column caption="" columnName="Notification Id" fieldName="PropertyException.ExceptionDetail.NotificationId" filterFromNum="" filterFromTms="" filterToNum="" filterToTms="" filterValue="" filterable="Y" fromRange="" id="&amp;amp;Z8811@x81" isRange="N" mobileTemplate="" operator="" orderNum="5" showRelLink="" sort="" toRange="" width="144"/>
+    <column caption="" columnName="Notification Count" fieldName="PropertyException.ExceptionDetail.NotificationCount" filterFromNum="" filterFromTms="" filterToNum="" filterToTms="" filterValue="" filterable="Y" fromRange="" id="&amp;amp;Z8911@x81" isRange="N" mobileTemplate="" operator="" orderNum="6" showRelLink="" sort="" toRange="" width="143"/>
+    <column caption="" columnName="Message Type" fieldName="PropertyException.ExceptionDetail.MessageType" filterFromNum="" filterFromTms="" filterToNum="" filterToTms="" filterValue="GSPlatform,NRE_BF_INTL_Address,NRE_BuildingMaster" filterable="N" fromRange="" id="&amp;amp;Z8A11@x81" isRange="N" mobileTemplate="" operator="" orderNum="7" showRelLink="" sort="" toRange="" width="418"/>
+    <column caption="" columnName="Notification Status" fieldName="PropertyException.ExceptionDetail.NotificationStatus" filterFromNum="" filterFromTms="" filterToNum="" filterToTms="" filterValue="" filterable="Y" fromRange="" id="&amp;amp;Z8B11@x81" isRange="N" mobileTemplate="" operator="" orderNum="8" showRelLink="" sort="" toRange="" width="100"/>
+    <column caption="" columnName="Source Id" fieldName="PropertyException.ExceptionDetail.SourceId" filterFromNum="" filterFromTms="" filterToNum="" filterToTms="" filterValue="" filterable="Y" fromRange="" id="&amp;amp;Z8C11@x81" isRange="N" mobileTemplate="" operator="" orderNum="9" showRelLink="" sort="" toRange="" width="100"/>
+    <column caption="" columnName="Main Entity Id" fieldName="PropertyException.ExceptionDetail.MainEntityId" filterFromNum="" filterFromTms="" filterToNum="" filterToTms="" filterValue="" filterable="Y" fromRange="" id="&amp;amp;Z8D11@x81" isRange="N" mobileTemplate="" operator="" orderNum="10" showRelLink="" sort="" toRange="" width="100"/>
+    <column caption="" columnName="Main Entity Type" fieldName="PropertyException.ExceptionDetail.MainEntityType" filterFromNum="" filterFromTms="" filterToNum="" filterToTms="" filterValue="" filterable="Y" fromRange="" id="&amp;amp;Z8E11@x81" isRange="N" mobileTemplate="" operator="" orderNum="11" showRelLink="" sort="" toRange="" width="100"/>
+  </columns>
+</root>

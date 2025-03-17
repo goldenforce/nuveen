@@ -1,0 +1,40 @@
+{
+  "TYPE" : "Workflow",
+  "version" : "1.6.6",
+  "timeZone" : "America/New_York",
+  "orderPreparation" : {
+    "parameters" : {
+      "dayMinus" : {
+        "type" : "String",
+        "default" : "'1'"
+      }
+    },
+    "allowUndeclared" : false
+  },
+  "jobResourceNames" : [ "curDteJob" ],
+  "instructions" : [ {
+    "TYPE" : "Execute.Named",
+    "jobName" : "job",
+    "label" : "job"
+  } ],
+  "jobs" : {
+    "job" : {
+      "agentName" : "JSAgent",
+      "withSubagentClusterIdExpr" : false,
+      "executable" : {
+        "TYPE" : "ShellScriptExecutable",
+        "script" : "#cd /ext/app/jobscheduler/scripts\n#sh -x jobutilities execWkf_inputParam '{}' RestartEngines fileloading\n#./jobutilities getEvent $event_name $target_application\n#sh jobutilities getEvent Nuveen_EVT_Muni_Fitch_Ratings fileloading\n#sh jobutilities getEventSchema Nuveen_SnP_SOI_Ratings fileloading\n\njq -r '.FilePatterns[]' $input_param_file | while read fileName; do\n\techo $BUS_DTE\n    echo $dayMinus\n    fileDte=$(date --date=\"$BUS_DTE $dayMinus days ago\" +\"%Y%m%d\")\n\techo $fileDte\n    fileNameBusDte=${fileName/$busDteRegex/$fileDte}\n    fileNameRegex=${fileName//'.'/'\\.'}\n    fileNameRegex=${fileNameRegex//'*'/'\\*'}\n    sed -i \"s|$fileNameRegex|$fileNameBusDte|\" $input_param_file\ndone\n\n#cd $scripts_home\n#./jobutilities execWkf $input_param_file $event_name $target_application",
+        "env" : {
+          "input_param_file" : "'/edmfs/app/InputParams/ratings/Nuveen_Muni_Fitch_Instrument_Ratings_Delta_Load.json'",
+          "dayMinus" : "$dayMinus"
+        },
+        "v1Compatible" : false
+      },
+      "skipIfNoAdmissionForOrderDay" : false,
+      "parallelism" : 1,
+      "graceTimeout" : 1,
+      "failOnErrWritten" : false,
+      "warnOnErrWritten" : false
+    }
+  }
+}

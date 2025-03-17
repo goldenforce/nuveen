@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entities cleanUnusedFields="false" nameSpace="NUVEEN">
+  <beFields>
+    <beField class="BEDEC" customDesc="Price at which the option holder may buy or sell the underlying security, as defined in the terms of the option contract.         Corp Yellow Key:      This field only applies to over the counter (OTC) options that reside under     the Corp yellow key." desc="Price at which the option holder may buy or sell the underlying security, as defined in the terms of the option contract." displayCaption="Option Strike Price" entityTypeId="++3qwBhS2etxm003" id="005QX23C2etse0CW" mandatory="0" multiplicity="SINGLE_OR_NULL" name="OptionStrikePrice" nameSpace="GSC"/>
+    <beField class="BETEXT" customDesc="Indicates whether the security is a put or call.         Index and Equity:    This field will return either 'Call' for a call option or 'Put' for a put option.        Currency and  Commodity:    This field will return either 'C' for a call option, 'P' for a put option, 'T' for a touch option, 'F' for a forward or 'M' for a multi-leg option.    For Currency options, the call/put indicator is relative to the notional currency." desc="Indicates the type of contract." displayCaption="Call/Put Indicator" entityTypeId="++3qwBhS2etxm003" id="004Q9UTC2ettS04s" mandatory="0" multiplicity="SINGLE" name="ContractType" nameSpace="GSC"/>
+  </beFields>
+  <occurrences>
+    <occurrence desc="Occurrence for Options Characteristics" id="004Q9UTC2ettS059" ignoreDeleteChildren="false" multiplicity="SINGLE_OR_NULL" name="OPCH_01" nameSpace="GSC" parentId="++4Gmmty2ettS01A" relationId="004Q9UTC2ettS05A" table="FT_T_OPCH" timeSeries="LOGICAL_DELETE">
+      <field id="008nBB5C2es18000" name="OPCH_OID" nameSpace="NUVEEN"/>
+    </occurrence>
+  </occurrences>
+  <mappings>
+    <mapping beFieldId="004Q9UTC2ettS04s" groupMapping="0" id="004Q9UTC2ettS05U" nameSpace="GSC" occFieldId="004Q9UTC2ettS05J"/>
+    <mapping beFieldId="005QX23C2etse0CW" groupMapping="0" id="005QX23C2etse0CX" nameSpace="GSC" occFieldId="005QX23C2etse0CV"/>
+  </mappings>
+</entities>

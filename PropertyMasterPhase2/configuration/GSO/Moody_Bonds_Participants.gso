@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entities cleanUnusedFields="false" nameSpace="NUVEEN">
+  <beFields>
+    <beField class="BETEXT" customDesc="" customDomainSQL="" customSQL="" desc="" displayCaption="Soft Delete Indicator" entityTypeId="++3qwBhS2etxm003" id="009vqUu6HIi8400N" mandatory="0" multiplicity="MULTIPLE_OR_NULL" name="MoodySoftDeleteIndicator" nameSpace="NUVEEN"/>
+  </beFields>
+  <dataGroups>
+    <dataGroup customInd="0" desc="Moody's Ratings" displayCaption="Moody's Ratings" entityTypeId="++3qwBhS2etxm003" frequencyInd="0" id="005iuo0C2etqS024" ignoreDeleteChildren="false" multiplicity="MULTIPLE_OR_NULL" name="MoodyRatings" nameSpace="GSC">
+      <part defNameSpace="NUVEEN" fieldId="009vqUu6HIi8400N" id="++9vrpCsHIKSK0X7" prntReqdInd="0" seq="32"/>
+    </dataGroup>
+  </dataGroups>
+  <relations>
+    <relation customSQL="" id="++9vstysHIi840xQ" name="ISRT-SOFTDELT-MOODY-CUSTOM-GNCM" nameSpace="NUVEEN" srcTable="FT_T_ISRT" tgtTable="FT_T_GNCM">
+      <field fromColumn="ISS_RTNG_OID" id="++9vstysHIi840xR" nameSpace="NUVEEN" toColumn="CROSS_REF_ID" type="RELATION_FIELD" valueType="COLUMN"/>
+    </relation>
+  </relations>
+  <occurrences>
+    <occurrence desc="Occurrence for General Table Comment" id="009vqUu6HIi8400G" ignoreDeleteChildren="false" multiplicity="SINGLE_OR_NULL" name="GNCM_ISRT_MOODY_SOFTDELT" nameSpace="NUVEEN" parentId="++5jTbey2etqS07g" relationId="++9vstysHIi840xQ" table="FT_T_GNCM" timeSeries="LOGICAL_DELETE">
+      <field desc="Comment Text" id="009vqUu6HIi8400M" name="CMNT_TXT" nameSpace="NUVEEN"/>
+      <value id="009vqUu6HIi8400I" name="COMM_REAS_MNEM" nameSpace="NUVEEN" type="FILTER_FIELD" value="SOFTDELT" valueType="CONSTANT"/>
+      <value id="009vqUu6HIi8400J" name="GNCM_TBL_TYP" nameSpace="NUVEEN" type="FILTER_FIELD" value="ISRT" valueType="CONSTANT"/>
+      <value id="009vqUu6HIi8400K" name="LN_NUM" nameSpace="NUVEEN" type="FILTER_FIELD" value="1" valueType="CONSTANT"/>
+      <value id="009vqUu6HIi8400L" name="NLS_CDE" nameSpace="NUVEEN" type="FILTER_FIELD" value="ENGLISH" valueType="CONSTANT"/>
+      <option id="009vqUu6HIi8400H" nameSpace="NUVEEN" type="DEFAULT_ACTION" value="UNKNOWN"/>
+    </occurrence>
+  </occurrences>
+  <mappings>
+    <mapping beFieldId="009vqUu6HIi8400N" groupMapping="0" id="009vqUu6HIi8400O" nameSpace="NUVEEN" occFieldId="009vqUu6HIi8400M"/>
+  </mappings>
+</entities>

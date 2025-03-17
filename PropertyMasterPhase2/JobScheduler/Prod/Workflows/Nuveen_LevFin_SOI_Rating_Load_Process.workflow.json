@@ -1,0 +1,841 @@
+{
+  "TYPE" : "Workflow",
+  "version" : "1.6.6",
+  "timeZone" : "America/New_York",
+  "title" : "Nuveen_LevFin_SOI_Rating_Load_Process",
+  "orderPreparation" : {
+    "parameters" : {
+      "checkDependency" : {
+        "type" : "Boolean",
+        "default" : "true"
+      },
+      "bb_file_pattern" : {
+        "type" : "String",
+        "default" : "'GS.*\\.OUT'"
+      },
+      "bb_dayMinus" : {
+        "type" : "String",
+        "default" : "'0'"
+      },
+      "bb_jobConfigText" : {
+        "type" : "String",
+        "default" : "'LevFin - Bloomberg Per Security Job'"
+      },
+      "target_application" : {
+        "type" : "String",
+        "default" : "'fileloading'"
+      },
+      "scripts_home" : {
+        "type" : "String",
+        "default" : "'/ext/app/jobscheduler/scripts/'"
+      },
+      "dayMinus" : {
+        "type" : "String",
+        "default" : "1"
+      },
+      "bbfileload" : {
+        "type" : "Boolean",
+        "default" : "false"
+      },
+      "eod_publish" : {
+        "type" : "Boolean",
+        "default" : "true"
+      }
+    },
+    "allowUndeclared" : false
+  },
+  "jobResourceNames" : [ "curDteJob" ],
+  "instructions" : [ {
+    "TYPE" : "ConsumeNotices",
+    "noticeBoardNames" : "'Eagle2DeltaRating'",
+    "subworkflow" : {
+      "instructions" : [ ]
+    },
+    "label" : "Eagle2DeltaRating"
+  }, {
+    "TYPE" : "Execute.Named",
+    "jobName" : "SOI_Ratings_Full_Workflow_Start",
+    "label" : "SOI_Ratings_Full_Workflow_Start"
+  }, {
+    "TYPE" : "If",
+    "predicate" : "$checkDependency==true",
+    "then" : {
+      "instructions" : [ {
+        "TYPE" : "Execute.Named",
+        "jobName" : "Echo_Dependency_Check",
+        "label" : "Echo_Dependency_Check"
+      }, {
+        "TYPE" : "If",
+        "predicate" : "$bbfileload ==false",
+        "then" : {
+          "instructions" : [ {
+            "TYPE" : "Execute.Named",
+            "jobName" : "eagle_file_load_check",
+            "label" : "eagle_file_load_check"
+          }, {
+            "TYPE" : "Execute.Named",
+            "jobName" : "Eagle_File_Load_Check",
+            "label" : "Eagle_File_Load_Check"
+          }, {
+            "TYPE" : "Execute.Named",
+            "jobName" : "EagleFileloadVariable",
+            "label" : "EagleFileloadVariable"
+          } ]
+        },
+        "else" : {
+          "instructions" : [ {
+            "TYPE" : "Execute.Named",
+            "jobName" : "BB_file_load_check",
+            "label" : "BB_file_load_check"
+          }, {
+            "TYPE" : "Execute.Named",
+            "jobName" : "BbFileloadcheck",
+            "label" : "BbFileloadcheck"
+          }, {
+            "TYPE" : "Execute.Named",
+            "jobName" : "BBFileloadvaribale",
+            "label" : "BBFileloadvaribale"
+          } ]
+        }
+      }, {
+        "TYPE" : "If",
+        "predicate" : "$fileloadcount.toNumber > 0",
+        "then" : {
+          "instructions" : [ {
+            "TYPE" : "Execute.Named",
+            "jobName" : "Eagle_BB_Load_Completed",
+            "label" : "Eagle_BB_Load_Completed"
+          }, {
+            "TYPE" : "Execute.Named",
+            "jobName" : "SOI_Ratings_Full_Load_Start",
+            "label" : "SOI_Ratings_Full_Load_Start"
+          }, {
+            "TYPE" : "Fork",
+            "branches" : [ {
+              "id" : "branch1",
+              "workflow" : {
+                "instructions" : [ {
+                  "TYPE" : "Execute.Named",
+                  "jobName" : "Fitch_SOI_Instrument_Ratings_Full",
+                  "label" : "Fitch_SOI_Instrument_Ratings_F"
+                } ]
+              }
+            }, {
+              "id" : "branch2",
+              "workflow" : {
+                "instructions" : [ {
+                  "TYPE" : "Execute.Named",
+                  "jobName" : "Moodys_SOI_Instrument_Ratings_Full",
+                  "label" : "Moodys_SOI_Instrument_Ratings_"
+                }, {
+                  "TYPE" : "Execute.Named",
+                  "jobName" : "Moodys_SOI_Issuer_Ratings_Full",
+                  "label" : "Moodys_SOI_Issuer_Ratings_Full"
+                } ]
+              }
+            } ],
+            "joinIfFailed" : false
+          }, {
+            "TYPE" : "Execute.Named",
+            "jobName" : "SOI_Ratings_Full_Load_End",
+            "label" : "SOI_Ratings_Full_Load_End"
+          }, {
+            "TYPE" : "Execute.Named",
+            "jobName" : "SOI_Ratings_Delta_Load_Start",
+            "label" : "SOI_Ratings_Delta_Load_Start"
+          }, {
+            "TYPE" : "Fork",
+            "branches" : [ {
+              "id" : "branch1",
+              "workflow" : {
+                "instructions" : [ {
+                  "TYPE" : "Execute.Named",
+                  "jobName" : "SnP_SOI_Instrument_Ratings_Delta",
+                  "label" : "SnP_SOI_Instrument_Ratings_Delta"
+                }, {
+                  "TYPE" : "Execute.Named",
+                  "jobName" : "SnP_SOI_Issuer_Ratings_Delta",
+                  "label" : "SnP_SOI_Issuer_Ratings_Delta"
+                } ]
+              }
+            }, {
+              "id" : "branch2",
+              "workflow" : {
+                "instructions" : [ {
+                  "TYPE" : "Execute.Named",
+                  "jobName" : "Fitch_SOI_Instrument_Ratings_Delta",
+                  "label" : "Fitch_SOI_Instrument_Ratings_Delta"
+                } ]
+              }
+            } ],
+            "joinIfFailed" : false
+          } ]
+        },
+        "else" : {
+          "instructions" : [ {
+            "TYPE" : "Execute.Named",
+            "jobName" : "Eagle_BB_Load_Not_Completed",
+            "label" : "Eagle_BB_Load_Not_Completed"
+          } ]
+        },
+        "label" : "Fileloadcheck"
+      } ]
+    },
+    "else" : {
+      "instructions" : [ {
+        "TYPE" : "Execute.Named",
+        "jobName" : "Echo_No_Dependency_Check",
+        "label" : "Echo_No_Dependency_Check"
+      }, {
+        "TYPE" : "Execute.Named",
+        "jobName" : "SOI_Ratings_Full_Load_Start_NDC",
+        "label" : "SOI_Ratings_Full_Load_Start_NDC"
+      }, {
+        "TYPE" : "Fork",
+        "branches" : [ {
+          "id" : "branch1",
+          "workflow" : {
+            "instructions" : [ {
+              "TYPE" : "Execute.Named",
+              "jobName" : "Moodys_SOI_Instrument_Ratings_Full_NDC",
+              "label" : "Moodys_SOI_Instrument_Ratings_Full_NDC"
+            }, {
+              "TYPE" : "Execute.Named",
+              "jobName" : "Moodys_SOI_Issuer_Ratings_Full_NDC",
+              "label" : "Moodys_SOI_Issuer_Ratings_Full_NDC"
+            } ]
+          }
+        }, {
+          "id" : "branch2",
+          "workflow" : {
+            "instructions" : [ {
+              "TYPE" : "Execute.Named",
+              "jobName" : "Fitch_SOI_Instrument_Ratings_Full_NDC",
+              "label" : "Fitch_SOI_Instrument_Ratings_Full_NDC"
+            } ]
+          }
+        } ],
+        "joinIfFailed" : false
+      }, {
+        "TYPE" : "Execute.Named",
+        "jobName" : "SOI_Ratings_Full_Load_End_NDC",
+        "label" : "SOI_Ratings_Full_Load_End_NDC"
+      }, {
+        "TYPE" : "Execute.Named",
+        "jobName" : "SOI_Ratings_Delta_Load_Start_NDC",
+        "label" : "SOI_Rating_Delta_Load_Start_ND"
+      }, {
+        "TYPE" : "Fork",
+        "branches" : [ {
+          "id" : "branch1",
+          "workflow" : {
+            "instructions" : [ {
+              "TYPE" : "Execute.Named",
+              "jobName" : "SnP_SOI_Instrument_Ratings_Delta_NDC",
+              "label" : "SnP_SOI_Instr_Rtng_Delta_NDC"
+            }, {
+              "TYPE" : "Execute.Named",
+              "jobName" : "SnP_SOI_Issuer_Ratings_Delta_NDC",
+              "label" : "SnP_SOI_Issr_Ratings_Delta_NDC"
+            } ]
+          }
+        }, {
+          "id" : "branch2",
+          "workflow" : {
+            "instructions" : [ {
+              "TYPE" : "Execute.Named",
+              "jobName" : "Fitch_SOI_Instrument_Ratings_Delta_NDC",
+              "label" : "Fitch_SOI_Instrument_Delta_NDC"
+            } ]
+          }
+        } ],
+        "joinIfFailed" : false
+      } ]
+    }
+  }, {
+    "TYPE" : "Execute.Named",
+    "jobName" : "SOI_Ratings_Full_Workflow_End",
+    "label" : "SOI_Ratings_Full_Workflow_End"
+  }, {
+    "TYPE" : "If",
+    "predicate" : "$eod_publish==true",
+    "then" : {
+      "instructions" : [ {
+        "TYPE" : "AddOrder",
+        "workflowName" : "Nuveen_LevFin_EOD_Publish_Process",
+        "arguments" : {
+          "checkDependency" : true,
+          "fitch_deltafilePattern" : "\"RDSIssue\"",
+          "fitch_dayMinus" : "0",
+          "fitch_jobMsgTyp" : "\"FitchRDS_IssueRatings\"",
+          "moody_filePattern" : "\"Daily\"",
+          "moody_dayMinus" : "0",
+          "moody_jobMsgTyp" : "\"MoodysRDS_Organization','MoodysRDS_Instrument\"",
+          "snp_filePattern" : "\"snp\"",
+          "snp_dayMinus" : "0",
+          "snp_jobConfigText" : "\"RATINGS_DELTA\"",
+          "fitch_fullfilePattern" : "\"mis.zip\"",
+          "fitch_onedayMinus" : "1"
+        },
+        "remainWhenTerminated" : false,
+        "forceJobAdmission" : false,
+        "label" : "EODPublishingStarts"
+      } ]
+    },
+    "else" : {
+      "instructions" : [ {
+        "TYPE" : "Finish"
+      } ]
+    }
+  } ],
+  "jobs" : {
+    "SOI_Ratings_Full_Workflow_Start" : {
+      "agentName" : "JSAgent",
+      "withSubagentClusterIdExpr" : false,
+      "executable" : {
+        "TYPE" : "ShellScriptExecutable",
+        "script" : "echo \"SOI Ratings Full Workflow Start\"",
+        "v1Compatible" : false
+      },
+      "skipIfNoAdmissionForOrderDay" : false,
+      "parallelism" : 1,
+      "graceTimeout" : 1,
+      "failOnErrWritten" : false,
+      "warnOnErrWritten" : false,
+      "title" : "SOI_Ratings_Full_Workflow_Start"
+    },
+    "Echo_Dependency_Check" : {
+      "agentName" : "JSAgent",
+      "withSubagentClusterIdExpr" : false,
+      "executable" : {
+        "TYPE" : "ShellScriptExecutable",
+        "script" : "echo \"Dependency Check\"",
+        "v1Compatible" : false
+      },
+      "skipIfNoAdmissionForOrderDay" : false,
+      "parallelism" : 1,
+      "graceTimeout" : 1,
+      "failOnErrWritten" : false,
+      "warnOnErrWritten" : false,
+      "title" : "Echo_Dependency_Check"
+    },
+    "eagle_file_load_check" : {
+      "agentName" : "JSAgent",
+      "withSubagentClusterIdExpr" : false,
+      "executable" : {
+        "TYPE" : "ShellScriptExecutable",
+        "script" : "echo \"Eagle File load dependency check\"",
+        "v1Compatible" : false
+      },
+      "skipIfNoAdmissionForOrderDay" : false,
+      "parallelism" : 1,
+      "graceTimeout" : 1,
+      "failOnErrWritten" : false,
+      "warnOnErrWritten" : false,
+      "title" : "eagle_file_load_check "
+    },
+    "Eagle_File_Load_Check" : {
+      "agentName" : "JSAgent",
+      "withSubagentClusterIdExpr" : false,
+      "executable" : {
+        "TYPE" : "InternalExecutable",
+        "className" : "com.sos.jitl.jobs.db.SQLExecutorJob",
+        "internalType" : "JITL",
+        "arguments" : {
+          "command" : "\"select count(*) as fileloadcount from ser_gs_gc.ft_t_jblg where job_id in ( SELECT prnt_job_id   FROM ser_gs_gc.ft_t_jblg WHERE (UPPER(job_input_txt) ~* (UPPER('EDI_GS_.*\\\\.txt') ) OR UPPER(job_msg_typ) ~* (UPPER('EDI_GS_.*\\\\.txt'))) AND date_trunc('day', ser_gs_gc.sysdate() - interval '0 days') = date_trunc('day', job_start_tms) AND job_end_tms IS NOT null) and job_config_txt = 'Eagle EDI Dataload Parent Job' and job_stat_typ ='CLOSED'\"",
+          "resultset_as_variables" : "\"column_value\"",
+          "hibernate_configuration_file" : "\"/ext/app/jobscheduler/base/sos-berlin.com/joc/resources/joc/hibernate.cfg.xml\""
+        }
+      },
+      "skipIfNoAdmissionForOrderDay" : false,
+      "parallelism" : 1,
+      "graceTimeout" : 1,
+      "failOnErrWritten" : false,
+      "warnOnErrWritten" : false
+    },
+    "EagleFileloadVariable" : {
+      "agentName" : "JSAgent",
+      "withSubagentClusterIdExpr" : false,
+      "executable" : {
+        "TYPE" : "ShellScriptExecutable",
+        "script" : "echo \"fileloadcount=$fileloadcount\" >> $JS7_RETURN_VALUES",
+        "env" : {
+          "fileloadcount" : "$fileloadcount"
+        },
+        "v1Compatible" : false
+      },
+      "skipIfNoAdmissionForOrderDay" : false,
+      "parallelism" : 1,
+      "graceTimeout" : 1,
+      "failOnErrWritten" : false,
+      "warnOnErrWritten" : false,
+      "title" : "EagleFileloadVariable"
+    },
+    "BB_file_load_check" : {
+      "agentName" : "JSAgent",
+      "withSubagentClusterIdExpr" : false,
+      "executable" : {
+        "TYPE" : "ShellScriptExecutable",
+        "script" : "echo \"BB File load check Dependency\"    ",
+        "v1Compatible" : false
+      },
+      "skipIfNoAdmissionForOrderDay" : false,
+      "parallelism" : 1,
+      "graceTimeout" : 1,
+      "failOnErrWritten" : false,
+      "warnOnErrWritten" : false,
+      "title" : "BB_file_load_check"
+    },
+    "BbFileloadcheck" : {
+      "agentName" : "JSAgent",
+      "withSubagentClusterIdExpr" : false,
+      "executable" : {
+        "TYPE" : "InternalExecutable",
+        "className" : "com.sos.jitl.jobs.db.SQLExecutorJob",
+        "internalType" : "JITL",
+        "arguments" : {
+          "command" : "\"select count(*) as fileloadcount from ser_gs_gc.ft_t_jblg where job_id in ( SELECT prnt_job_id   FROM ser_gs_gc.ft_t_jblg WHERE (UPPER(job_input_txt) ~* (UPPER('$bb_file_pattern') ) OR UPPER(job_msg_typ) ~* (UPPER('$bb_file_pattern'))) AND date_trunc('day', ser_gs_gc.sysdate() - interval '$bb_dayMinus days') = date_trunc('day', job_start_tms) AND job_end_tms IS NOT null) and job_config_txt = '$bb_jobConfigText' and job_stat_typ = 'CLOSED'\"",
+          "resultset_as_variables" : "\"column_value\"",
+          "hibernate_configuration_file" : "\"/ext/app/jobscheduler/base/sos-berlin.com/joc/resources/joc/hibernate.cfg.xml\""
+        }
+      },
+      "skipIfNoAdmissionForOrderDay" : false,
+      "parallelism" : 1,
+      "graceTimeout" : 1,
+      "failOnErrWritten" : false,
+      "warnOnErrWritten" : false
+    },
+    "BBFileloadvaribale" : {
+      "agentName" : "JSAgent",
+      "withSubagentClusterIdExpr" : false,
+      "executable" : {
+        "TYPE" : "ShellScriptExecutable",
+        "script" : "echo \"fileloadcount=$fileloadcount\" >> $JS7_RETURN_VALUES",
+        "env" : {
+          "fileloadcount" : "$fileloadcount"
+        },
+        "v1Compatible" : false
+      },
+      "skipIfNoAdmissionForOrderDay" : false,
+      "parallelism" : 1,
+      "graceTimeout" : 1,
+      "failOnErrWritten" : false,
+      "warnOnErrWritten" : false,
+      "title" : "BBFileloadvaribale"
+    },
+    "Eagle_BB_Load_Completed" : {
+      "agentName" : "JSAgent",
+      "withSubagentClusterIdExpr" : false,
+      "executable" : {
+        "TYPE" : "ShellScriptExecutable",
+        "script" : "echo \"Eagle or BB load has processed\"",
+        "v1Compatible" : false
+      },
+      "skipIfNoAdmissionForOrderDay" : false,
+      "parallelism" : 1,
+      "graceTimeout" : 1,
+      "failOnErrWritten" : false,
+      "warnOnErrWritten" : false,
+      "title" : "Eagle_BB_Load_Completed"
+    },
+    "SOI_Ratings_Full_Load_Start" : {
+      "agentName" : "JSAgent",
+      "withSubagentClusterIdExpr" : false,
+      "executable" : {
+        "TYPE" : "ShellScriptExecutable",
+        "script" : "echo \"SOI_Ratings_Full_Load_Start\"",
+        "v1Compatible" : false
+      },
+      "skipIfNoAdmissionForOrderDay" : false,
+      "parallelism" : 1,
+      "graceTimeout" : 1,
+      "failOnErrWritten" : false,
+      "warnOnErrWritten" : false,
+      "title" : "SOI_Ratings_Full_Load_Start"
+    },
+    "Fitch_SOI_Instrument_Ratings_Full" : {
+      "agentName" : "JSAgent",
+      "withSubagentClusterIdExpr" : false,
+      "executable" : {
+        "TYPE" : "ShellScriptExecutable",
+        "script" : "cd $scripts_home\n./jobutilities execWkf $input_param_file $event_name $target_application",
+        "env" : {
+          "input_param_file" : "'/edmfs/app/InputParams/ratings/Nuveen_Fitch_SOI_Instrument_Ratings_Full.json'",
+          "event_name" : "'Nuveen_Fitch_SOI_Ratings'",
+          "target_application" : "$target_application",
+          "scripts_home" : "$scripts_home",
+          "dayMinus" : "$dayMinus"
+        },
+        "v1Compatible" : false
+      },
+      "skipIfNoAdmissionForOrderDay" : false,
+      "parallelism" : 1,
+      "graceTimeout" : 1,
+      "failOnErrWritten" : false,
+      "warnOnErrWritten" : false,
+      "title" : "Fitch_SOI_Instrument_Ratings_Full"
+    },
+    "Moodys_SOI_Instrument_Ratings_Full" : {
+      "agentName" : "JSAgent",
+      "withSubagentClusterIdExpr" : false,
+      "executable" : {
+        "TYPE" : "ShellScriptExecutable",
+        "script" : "jq -r '.Pattern[]' $input_param_file | while read fileName; do\n\tfileDte=$(date --date=\"$BUS_DTE $dayMinus days ago\" +\"%Y%m%d\")\n    fileNameBusDte=${fileName/$busDteRegex/$fileDte}\n    fileNameRegex=${fileName//'.'/'\\.'}\n    fileNameRegex=${fileNameRegex//'*'/'\\*'}\n    sed -i \"s|$fileNameRegex|$fileNameBusDte|\" $input_param_file\ndone\n\ncd $scripts_home\n./jobutilities execWkf $input_param_file $event_name $target_application",
+        "env" : {
+          "input_param_file" : "'/edmfs/app/InputParams/ratings/Nuveen_Moodys_SOI_Instrument_Ratings_Full.json'",
+          "event_name" : "'Nuveen_Moodys_SOI_Ratings'",
+          "target_application" : "$target_application",
+          "scripts_home" : "$scripts_home",
+          "dayMinus" : "$dayMinus"
+        },
+        "v1Compatible" : false
+      },
+      "skipIfNoAdmissionForOrderDay" : false,
+      "parallelism" : 1,
+      "graceTimeout" : 1,
+      "failOnErrWritten" : false,
+      "warnOnErrWritten" : false,
+      "title" : "Moodys_SOI_Instrument_Ratings_Full"
+    },
+    "Moodys_SOI_Issuer_Ratings_Full" : {
+      "agentName" : "JSAgent",
+      "withSubagentClusterIdExpr" : false,
+      "executable" : {
+        "TYPE" : "ShellScriptExecutable",
+        "script" : "jq -r '.Pattern[]' $input_param_file | while read fileName; do\n\tfileDte=$(date --date=\"$BUS_DTE $dayMinus days ago\" +\"%Y%m%d\")\n    fileNameBusDte=${fileName/$busDteRegex/$fileDte}\n    fileNameRegex=${fileName//'.'/'\\.'}\n    fileNameRegex=${fileNameRegex//'*'/'\\*'}\n    sed -i \"s|$fileNameRegex|$fileNameBusDte|\" $input_param_file\ndone\n\ncd $scripts_home\n./jobutilities execWkf $input_param_file $event_name $target_application",
+        "env" : {
+          "input_param_file" : "'/edmfs/app/InputParams/ratings/Nuveen_Moodys_SOI_Issuer_Ratings_Full.json'",
+          "event_name" : "'Nuveen_Moodys_SOI_Ratings'",
+          "target_application" : "$target_application",
+          "scripts_home" : "$scripts_home",
+          "dayMinus" : "$dayMinus"
+        },
+        "v1Compatible" : false
+      },
+      "skipIfNoAdmissionForOrderDay" : false,
+      "parallelism" : 1,
+      "graceTimeout" : 1,
+      "failOnErrWritten" : false,
+      "warnOnErrWritten" : false,
+      "title" : "Moodys_SOI_Issuer_Ratings_Full"
+    },
+    "SOI_Ratings_Full_Load_End" : {
+      "agentName" : "JSAgent",
+      "withSubagentClusterIdExpr" : false,
+      "executable" : {
+        "TYPE" : "ShellScriptExecutable",
+        "script" : "echo \"SOI_Ratings_Full_Load_End\"",
+        "v1Compatible" : false
+      },
+      "skipIfNoAdmissionForOrderDay" : false,
+      "parallelism" : 1,
+      "graceTimeout" : 1,
+      "failOnErrWritten" : false,
+      "warnOnErrWritten" : false,
+      "title" : "SOI_Ratings_Full_Load_End"
+    },
+    "SOI_Ratings_Delta_Load_Start" : {
+      "agentName" : "JSAgent",
+      "withSubagentClusterIdExpr" : false,
+      "executable" : {
+        "TYPE" : "ShellScriptExecutable",
+        "script" : "echo \"SOI_Ratings_Delta_Load_Start\"",
+        "v1Compatible" : false
+      },
+      "skipIfNoAdmissionForOrderDay" : false,
+      "parallelism" : 1,
+      "graceTimeout" : 1,
+      "failOnErrWritten" : false,
+      "warnOnErrWritten" : false,
+      "title" : "SOI_Ratings_Delta_Load_Start"
+    },
+    "SnP_SOI_Instrument_Ratings_Delta" : {
+      "agentName" : "JSAgent",
+      "withSubagentClusterIdExpr" : false,
+      "executable" : {
+        "TYPE" : "ShellScriptExecutable",
+        "script" : "jq -r '.FilePatterns[]' $input_param_file | while read fileName; do\n\tfileDte=$(date --date=\"$BUS_DTE $dayMinus days ago\" +\"%Y%m%d\")\n\tfileNameBusDte=${fileName/$busDteRegex/$fileDte}\n    fileNameRegex=${fileName//'.'/'\\.'}\n    fileNameRegex=${fileNameRegex//'*'/'\\*'}\n    sed -i \"s|$fileNameRegex|$fileNameBusDte|\" $input_param_file\ndone\n\ncd $scripts_home\n./jobutilities execWkf $input_param_file $event_name $target_application",
+        "env" : {
+          "input_param_file" : "'/edmfs/app/InputParams/ratings/Nuveen_SnP_SOI_Instrument_Ratings_Delta.json'",
+          "event_name" : "'Nuveen_SnP_SOI_Ratings'",
+          "target_application" : "$target_application",
+          "scripts_home" : "$scripts_home",
+          "dayMinus" : "$dayMinus"
+        },
+        "v1Compatible" : false
+      },
+      "skipIfNoAdmissionForOrderDay" : false,
+      "parallelism" : 1,
+      "graceTimeout" : 1,
+      "failOnErrWritten" : false,
+      "warnOnErrWritten" : false,
+      "title" : "SnP_SOI_Instrument_Ratings_Delta"
+    },
+    "SnP_SOI_Issuer_Ratings_Delta" : {
+      "agentName" : "JSAgent",
+      "withSubagentClusterIdExpr" : false,
+      "executable" : {
+        "TYPE" : "ShellScriptExecutable",
+        "script" : "jq -r '.FilePatterns[]' $input_param_file | while read fileName; do\n\tfileDte=$(date --date=\"$BUS_DTE $dayMinus days ago\" +\"%Y%m%d\")\n\tfileNameBusDte=${fileName/$busDteRegex/$fileDte}\n    fileNameRegex=${fileName//'.'/'\\.'}\n    fileNameRegex=${fileNameRegex//'*'/'\\*'}\n    sed -i \"s|$fileNameRegex|$fileNameBusDte|\" $input_param_file\ndone\n\ncd $scripts_home\n./jobutilities execWkf $input_param_file $event_name $target_application",
+        "env" : {
+          "input_param_file" : "'/edmfs/app/InputParams/ratings/Nuveen_SnP_SOI_Issuer_Ratings_Delta.json'",
+          "event_name" : "'Nuveen_SnP_SOI_Ratings'",
+          "target_application" : "$target_application",
+          "scripts_home" : "$scripts_home",
+          "dayMinus" : "$dayMinus"
+        },
+        "v1Compatible" : false
+      },
+      "skipIfNoAdmissionForOrderDay" : false,
+      "parallelism" : 1,
+      "graceTimeout" : 1,
+      "failOnErrWritten" : false,
+      "warnOnErrWritten" : false,
+      "title" : "SnP_SOI_Issuer_Ratings_Delta"
+    },
+    "Fitch_SOI_Instrument_Ratings_Delta" : {
+      "agentName" : "JSAgent",
+      "withSubagentClusterIdExpr" : false,
+      "executable" : {
+        "TYPE" : "ShellScriptExecutable",
+        "script" : "cd $scripts_home\n./jobutilities execWkf $input_param_file $event_name $target_application",
+        "env" : {
+          "input_param_file" : "'/edmfs/app/InputParams/ratings/Nuveen_Fitch_SOI_Instrument_Ratings_Delta.json'",
+          "event_name" : "'Nuveen_Fitch_SOI_Ratings'",
+          "target_application" : "$target_application",
+          "scripts_home" : "$scripts_home",
+          "dayMinus" : "$dayMinus"
+        },
+        "v1Compatible" : false
+      },
+      "skipIfNoAdmissionForOrderDay" : false,
+      "parallelism" : 1,
+      "graceTimeout" : 1,
+      "failOnErrWritten" : false,
+      "warnOnErrWritten" : false,
+      "title" : "Fitch_SOI_Instrument_Ratings_Delta"
+    },
+    "Eagle_BB_Load_Not_Completed" : {
+      "agentName" : "JSAgent",
+      "withSubagentClusterIdExpr" : false,
+      "executable" : {
+        "TYPE" : "ShellScriptExecutable",
+        "script" : "echo \"Eagle or BB file load has not processed\"",
+        "v1Compatible" : false
+      },
+      "skipIfNoAdmissionForOrderDay" : false,
+      "parallelism" : 1,
+      "graceTimeout" : 1,
+      "failOnErrWritten" : false,
+      "warnOnErrWritten" : false,
+      "title" : "Eagle_BB_Load_Not_Completed"
+    },
+    "Echo_No_Dependency_Check" : {
+      "agentName" : "JSAgent",
+      "withSubagentClusterIdExpr" : false,
+      "executable" : {
+        "TYPE" : "ShellScriptExecutable",
+        "script" : "echo \"No Dependency Check\"",
+        "v1Compatible" : false
+      },
+      "skipIfNoAdmissionForOrderDay" : false,
+      "parallelism" : 1,
+      "graceTimeout" : 1,
+      "failOnErrWritten" : false,
+      "warnOnErrWritten" : false,
+      "title" : "Echo_No_Dependency_Check"
+    },
+    "SOI_Ratings_Full_Load_Start_NDC" : {
+      "agentName" : "JSAgent",
+      "withSubagentClusterIdExpr" : false,
+      "executable" : {
+        "TYPE" : "ShellScriptExecutable",
+        "script" : "echo \"SOI_Ratings_Full_Load_Start_NDC\"",
+        "v1Compatible" : false
+      },
+      "skipIfNoAdmissionForOrderDay" : false,
+      "parallelism" : 1,
+      "graceTimeout" : 1,
+      "failOnErrWritten" : false,
+      "warnOnErrWritten" : false,
+      "title" : "SOI_Ratings_Full_Load_Start_NDC"
+    },
+    "Moodys_SOI_Instrument_Ratings_Full_NDC" : {
+      "agentName" : "JSAgent",
+      "withSubagentClusterIdExpr" : false,
+      "executable" : {
+        "TYPE" : "ShellScriptExecutable",
+        "script" : "jq -r '.Pattern[]' $input_param_file | while read fileName; do\n\tfileDte=$(date --date=\"$BUS_DTE $dayMinus days ago\" +\"%Y%m%d\")\n    fileNameBusDte=${fileName/$busDteRegex/$fileDte}\n    fileNameRegex=${fileName//'.'/'\\.'}\n    fileNameRegex=${fileNameRegex//'*'/'\\*'}\n    sed -i \"s|$fileNameRegex|$fileNameBusDte|\" $input_param_file\ndone\n\ncd $scripts_home\n./jobutilities execWkf $input_param_file $event_name $target_application",
+        "env" : {
+          "input_param_file" : "'/edmfs/app/InputParams/ratings/Nuveen_Moodys_SOI_Instrument_Ratings_Full.json'",
+          "event_name" : "'Nuveen_Moodys_SOI_Ratings'",
+          "target_application" : "$target_application",
+          "scripts_home" : "$scripts_home",
+          "dayMinus" : "$dayMinus"
+        },
+        "v1Compatible" : false
+      },
+      "skipIfNoAdmissionForOrderDay" : false,
+      "parallelism" : 1,
+      "graceTimeout" : 1,
+      "failOnErrWritten" : false,
+      "warnOnErrWritten" : false,
+      "title" : "Moodys_SOI_Instrument_Ratings_Full_NDC"
+    },
+    "Moodys_SOI_Issuer_Ratings_Full_NDC" : {
+      "agentName" : "JSAgent",
+      "withSubagentClusterIdExpr" : false,
+      "executable" : {
+        "TYPE" : "ShellScriptExecutable",
+        "script" : "jq -r '.Pattern[]' $input_param_file | while read fileName; do\n\tfileDte=$(date --date=\"$BUS_DTE $dayMinus days ago\" +\"%Y%m%d\")\n    fileNameBusDte=${fileName/$busDteRegex/$fileDte}\n    fileNameRegex=${fileName//'.'/'\\.'}\n    fileNameRegex=${fileNameRegex//'*'/'\\*'}\n    sed -i \"s|$fileNameRegex|$fileNameBusDte|\" $input_param_file\ndone\n\ncd $scripts_home\n./jobutilities execWkf $input_param_file $event_name $target_application",
+        "env" : {
+          "input_param_file" : "'/edmfs/app/InputParams/ratings/Nuveen_Moodys_SOI_Issuer_Ratings_Full.json'",
+          "event_name" : "'Nuveen_Moodys_SOI_Ratings'",
+          "target_application" : "$target_application",
+          "scripts_home" : "$scripts_home",
+          "dayMinus" : "$dayMinus"
+        },
+        "v1Compatible" : false
+      },
+      "skipIfNoAdmissionForOrderDay" : false,
+      "parallelism" : 1,
+      "graceTimeout" : 1,
+      "failOnErrWritten" : false,
+      "warnOnErrWritten" : false,
+      "title" : "Moodys_SOI_Issuer_Ratings_Full_NDC"
+    },
+    "Fitch_SOI_Instrument_Ratings_Full_NDC" : {
+      "agentName" : "JSAgent",
+      "withSubagentClusterIdExpr" : false,
+      "executable" : {
+        "TYPE" : "ShellScriptExecutable",
+        "script" : "cd $scripts_home\n./jobutilities execWkf $input_param_file $event_name $target_application",
+        "env" : {
+          "input_param_file" : "'/edmfs/app/InputParams/ratings/Nuveen_Fitch_SOI_Instrument_Ratings_Full.json'",
+          "event_name" : "'Nuveen_Fitch_SOI_Ratings'",
+          "target_application" : "$target_application",
+          "scripts_home" : "$scripts_home",
+          "dayMinus" : "$dayMinus"
+        },
+        "v1Compatible" : false
+      },
+      "skipIfNoAdmissionForOrderDay" : false,
+      "parallelism" : 1,
+      "graceTimeout" : 1,
+      "failOnErrWritten" : false,
+      "warnOnErrWritten" : false,
+      "title" : "Fitch_SOI_Instrument_Ratings_Full_NDC"
+    },
+    "SOI_Ratings_Full_Load_End_NDC" : {
+      "agentName" : "JSAgent",
+      "withSubagentClusterIdExpr" : false,
+      "executable" : {
+        "TYPE" : "ShellScriptExecutable",
+        "script" : "echo \"SOI_Ratings_Full_Load_End_NDC\"",
+        "v1Compatible" : false
+      },
+      "skipIfNoAdmissionForOrderDay" : false,
+      "parallelism" : 1,
+      "graceTimeout" : 1,
+      "failOnErrWritten" : false,
+      "warnOnErrWritten" : false,
+      "title" : "SOI_Ratings_Full_Load_End_NDC"
+    },
+    "SOI_Ratings_Delta_Load_Start_NDC" : {
+      "agentName" : "JSAgent",
+      "withSubagentClusterIdExpr" : false,
+      "executable" : {
+        "TYPE" : "ShellScriptExecutable",
+        "script" : "echo \"SOI_Ratings_Delta_Load_Start_NDC\"",
+        "v1Compatible" : false
+      },
+      "skipIfNoAdmissionForOrderDay" : false,
+      "parallelism" : 1,
+      "graceTimeout" : 1,
+      "failOnErrWritten" : false,
+      "warnOnErrWritten" : false,
+      "title" : "SOI_Ratings_Delta_Load_Start_NDC"
+    },
+    "SnP_SOI_Instrument_Ratings_Delta_NDC" : {
+      "agentName" : "JSAgent",
+      "withSubagentClusterIdExpr" : false,
+      "executable" : {
+        "TYPE" : "ShellScriptExecutable",
+        "script" : "jq -r '.FilePatterns[]' $input_param_file | while read fileName; do\n\tfileDte=$(date --date=\"$BUS_DTE $dayMinus days ago\" +\"%Y%m%d\")\n\tfileNameBusDte=${fileName/$busDteRegex/$fileDte}\n    fileNameRegex=${fileName//'.'/'\\.'}\n    fileNameRegex=${fileNameRegex//'*'/'\\*'}\n    sed -i \"s|$fileNameRegex|$fileNameBusDte|\" $input_param_file\ndone\n\ncd $scripts_home\n./jobutilities execWkf $input_param_file $event_name $target_application",
+        "env" : {
+          "input_param_file" : "'/edmfs/app/InputParams/ratings/Nuveen_SnP_SOI_Instrument_Ratings_Delta.json'",
+          "event_name" : "'Nuveen_SnP_SOI_Ratings'",
+          "target_application" : "$target_application",
+          "scripts_home" : "$scripts_home",
+          "dayMinus" : "$dayMinus"
+        },
+        "v1Compatible" : false
+      },
+      "skipIfNoAdmissionForOrderDay" : false,
+      "parallelism" : 1,
+      "graceTimeout" : 1,
+      "failOnErrWritten" : false,
+      "warnOnErrWritten" : false,
+      "title" : "SnP_SOI_Instr_Ratings_Delta_NDC"
+    },
+    "SnP_SOI_Issuer_Ratings_Delta_NDC" : {
+      "agentName" : "JSAgent",
+      "withSubagentClusterIdExpr" : false,
+      "executable" : {
+        "TYPE" : "ShellScriptExecutable",
+        "script" : "jq -r '.FilePatterns[]' $input_param_file | while read fileName; do\n\tfileDte=$(date --date=\"$BUS_DTE $dayMinus days ago\" +\"%Y%m%d\")\n\tfileNameBusDte=${fileName/$busDteRegex/$fileDte}\n    fileNameRegex=${fileName//'.'/'\\.'}\n    fileNameRegex=${fileNameRegex//'*'/'\\*'}\n    sed -i \"s|$fileNameRegex|$fileNameBusDte|\" $input_param_file\ndone\n\ncd $scripts_home\n./jobutilities execWkf $input_param_file $event_name $target_application",
+        "env" : {
+          "input_param_file" : "'/edmfs/app/InputParams/ratings/Nuveen_SnP_SOI_Issuer_Ratings_Delta.json'",
+          "event_name" : "'Nuveen_SnP_SOI_Ratings'",
+          "target_application" : "$target_application",
+          "scripts_home" : "$scripts_home",
+          "dayMinus" : "$dayMinus"
+        },
+        "v1Compatible" : false
+      },
+      "skipIfNoAdmissionForOrderDay" : false,
+      "parallelism" : 1,
+      "graceTimeout" : 1,
+      "failOnErrWritten" : false,
+      "warnOnErrWritten" : false,
+      "title" : "SnP_SOI_Issuer_Ratings_Delta_NDC"
+    },
+    "Fitch_SOI_Instrument_Ratings_Delta_NDC" : {
+      "agentName" : "JSAgent",
+      "withSubagentClusterIdExpr" : false,
+      "executable" : {
+        "TYPE" : "ShellScriptExecutable",
+        "script" : "cd $scripts_home\n./jobutilities execWkf $input_param_file $event_name $target_application",
+        "env" : {
+          "input_param_file" : "'/edmfs/app/InputParams/ratings/Nuveen_Fitch_SOI_Instrument_Ratings_Delta.json'",
+          "event_name" : "'Nuveen_Fitch_SOI_Ratings'",
+          "target_application" : "$target_application",
+          "scripts_home" : "$scripts_home",
+          "dayMinus" : "$dayMinus"
+        },
+        "v1Compatible" : false
+      },
+      "skipIfNoAdmissionForOrderDay" : false,
+      "parallelism" : 1,
+      "graceTimeout" : 1,
+      "failOnErrWritten" : false,
+      "warnOnErrWritten" : false,
+      "title" : "Fitch_SOI_Instrument_Ratings_Delta_NDC"
+    },
+    "SOI_Ratings_Full_Workflow_End" : {
+      "agentName" : "JSAgent",
+      "withSubagentClusterIdExpr" : false,
+      "executable" : {
+        "TYPE" : "ShellScriptExecutable",
+        "script" : "echo \"SOI Ratings Full Workflow Start\"",
+        "v1Compatible" : false
+      },
+      "skipIfNoAdmissionForOrderDay" : false,
+      "parallelism" : 1,
+      "graceTimeout" : 1,
+      "failOnErrWritten" : false,
+      "warnOnErrWritten" : false,
+      "title" : "SOI_Ratings_Full_Workflow_End"
+    }
+  }
+}

@@ -1,0 +1,2 @@
+
+INSERT INTO ser_gs_vd.ft_t_stdf  Select 'NVCLOIND',sysdate(),NULL,sysdate(),'NUVEEN:CSTM','CHAR','Nuveen CLO Indicator','Nuveen CLO Indicator',NULL,NULL,NULL,'ACTIVE','NUVEEN',NULL from dual where not exists (Select 1 from ft_T_stdf where stat_def_id = 'NVCLOIND' and end_tms is null );

@@ -1,0 +1,2 @@
+insert into FT_O_MKEY (tbl_id, col_nme, match_key_nme, last_chg_tms, last_chg_usr_id) select 'RTE1', 'INSTR_ID', 'RTE1_MATCH_1', SYSDATE(), 'NUVEEN:CSTM' from dual where not exists (	select '1' from FT_O_MKEY where match_key_nme = 'RTE1_MATCH_1' and col_nme = 'INSTR_ID'); 	
+insert into FT_O_MKEY (tbl_id, col_nme, match_key_nme, last_chg_tms, last_chg_usr_id) select 'RTE1', 'RTE_OPTN', 'RTE1_MATCH_1', SYSDATE(), 'NUVEEN:CSTM' from dual where not exists ( 	select '1' from FT_O_MKEY where match_key_nme = 'RTE1_MATCH_1' and col_nme = 'RTE_OPTN');

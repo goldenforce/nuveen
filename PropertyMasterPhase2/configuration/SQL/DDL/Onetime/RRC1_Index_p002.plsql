@@ -1,0 +1,1 @@
+create index if not exists ft_x_rrc1_p002 ON ft_t_rrc1 USING btree (ISS_RTNG_OID);

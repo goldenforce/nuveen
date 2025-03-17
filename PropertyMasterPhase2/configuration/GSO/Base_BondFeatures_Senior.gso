@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entities cleanUnusedFields="false" nameSpace="GSC">
+  <beFields>
+    <beField class="BETEXT" displayCaption="Senior Indicator" entityTypeId="++3qwBhS2etxm003" id="++8rQuaS2es18003" mandatory="0" multiplicity="SINGLE_OR_NULL" name="Senior" nameSpace="GSC"/>
+  </beFields>
+  <dataGroups>
+    <dataGroup customInd="0" desc="Bond Features" displayCaption="Bond Features" entityTypeId="++3qwBhS2etxm003" frequencyInd="0" id="004JftOi2etwa023" ignoreDeleteChildren="false" multiplicity="SINGLE_OR_NULL" name="BondFeatures" nameSpace="GSC">
+      <part defNameSpace="GSC" fieldId="++8rQuaS2es18003" id="++8rQuaS2es18005" prntReqdInd="0" seq="280"/>
+    </dataGroup>
+  </dataGroups>
+  <occurrences>
+    <occurrence desc="Occurrence for Debt Instrument Characteristics" id="004GsTdi2etzy011" ignoreDeleteChildren="false" multiplicity="SINGLE_OR_NULL" name="BDCH_01" nameSpace="GSC" parentId="++4Gmmty2ettS01A" table="FT_T_BDCH" timeSeries="LOGICAL_DELETE">
+      <field id="++8rQuaS2es18002" name="SENIOR_IND" nameSpace="GSC"/>
+    </occurrence>
+  </occurrences>
+  <mappings>
+    <mapping beFieldId="++8rQuaS2es18003" groupMapping="0" id="++8rQuaS2es18004" nameSpace="GSC" occFieldId="++8rQuaS2es18002"/>
+  </mappings>
+</entities>

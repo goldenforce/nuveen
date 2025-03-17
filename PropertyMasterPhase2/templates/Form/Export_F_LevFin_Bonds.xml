@@ -1,0 +1,425 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<root createdUser="user1" entityName="Bonds" entitySubType="[]" id="xK5U017ae1" isDefault="N" isPublic="Y" screenType="SYSTEMFORM" title="F: LevFin:Bonds">
+  <control caption="Bonds" columns="2" fullQualPath="" hideDetail="N" id="dOE491Vbe1" labelName="" lazyInd="N" orderNum="0" pageSize="0" parentId="" relatedPath="" screenId="xK5U017ae1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="TABSHEET">
+    <config>{"DETAIL_CHART_CONFIG":[]}</config>
+    <control caption="Issuance" columns="2" fullQualPath="" hideDetail="N" id="dOE*B1Vbe1" labelName="" lazyInd="N" orderNum="0" pageSize="0" parentId="dOE491Vbe1" relatedPath="" screenId="xK5U017ae1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="LAYOUT">
+      <control caption="Issuance Information" columns="3" fullQualPath="" hideDetail="N" id="dOEmC1Vbe1" labelName="" lazyInd="N" orderNum="0" pageSize="0" parentId="dOE*B1Vbe1" relatedPath="" screenId="xK5U017ae1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="SECTION">
+        <buttons>
+          <button caption="Publish Security" id="dOEzC1Vbe1">
+            <property name="s3BucketName" value="s3bucketappgsname"/>
+            <property name="EntityOid" value="ENT_OID"/>
+            <property name="Event Name" value="Nuveen_LevFin_Publish_Security_UI"/>
+            <property name="EntityName" value="smf"/>
+            <property name="Type" value="event"/>
+            <property name="Event Type" value="GenericEvent"/>
+            <property name="s3Prefix" value="s3bucketappgspubprefix"/>
+            <property name="JobConfigText" value="Loan Security UI Publish"/>
+            <property name="s3Region" value="s3bucketappgsregion"/>
+            <property name="SubscriptionName" value="NVN_LevFin_AdhocUI_Publish"/>
+            <property name="DeleteLocalCopy" value="true"/>
+            <property name="IsEODPublishing" value="false"/>
+            <property name="subscriptionId" value="NVN_LevFin_AdhocUI_Publish"/>
+            <property name="Current User" value="Logged in User"/>
+          </button>
+        </buttons>
+        <control caption="Nuveen Issue Name" columns="2" fullQualPath="Bonds.NuveenDerivedFields.NuveenIssueName" hideDetail="N" id="dOE1D1Vbe1" isColumnInTable="N" labelName="" lazyInd="N" orderNum="0" pageSize="0" parentId="dOEmC1Vbe1" relatedPath="" screenId="xK5U017ae1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD"/>
+        <control caption="Instrument Type" columns="2" fullQualPath="Bonds.InstrumentDetails.InstrumentType" hideDetail="N" id="dOE3D1Vbe1" isColumnInTable="N" labelName="" lazyInd="N" orderNum="1" pageSize="0" parentId="dOEmC1Vbe1" relatedPath="" screenId="xK5U017ae1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Instrument System Status" columns="2" fullQualPath="Bonds.InstrumentDetails.InstrumentSystemStatus" hideDetail="N" id="dOE5D1Vbe1" isColumnInTable="N" labelName="" lazyInd="N" orderNum="2" pageSize="0" parentId="dOEmC1Vbe1" relatedPath="" screenId="xK5U017ae1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Preferred Instrument Identifier" columns="2" fullQualPath="Bonds.InstrumentDetails.PreferredIdentifierValue" hideDetail="N" id="dOE7D1Vbe1" isColumnInTable="N" labelName="" lazyInd="N" orderNum="3" pageSize="0" parentId="dOEmC1Vbe1" relatedPath="" screenId="xK5U017ae1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Preferred Instrument Identifier Type" columns="2" fullQualPath="Bonds.InstrumentDetails.PreferredIdentifierType" hideDetail="N" id="dOE9D1Vbe1" isColumnInTable="N" labelName="" lazyInd="N" orderNum="4" pageSize="0" parentId="dOEmC1Vbe1" relatedPath="" screenId="xK5U017ae1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Settlement Currency" columns="2" fullQualPath="Bonds.InstrumentDetails.PrincipalCurrency" hideDetail="N" id="dOEBD1Vbe1" isColumnInTable="N" labelName="" lazyInd="N" orderNum="5" pageSize="0" parentId="dOEmC1Vbe1" relatedPath="" screenId="xK5U017ae1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD"/>
+        <control caption="Nuveen Issue Date" columns="2" fullQualPath="Bonds.NuveenDerivedFields.NuveenIssueDate" hideDetail="N" id="dOEDD1Vbe1" isColumnInTable="N" labelName="" lazyInd="N" orderNum="6" pageSize="0" parentId="dOEmC1Vbe1" relatedPath="" screenId="xK5U017ae1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD"/>
+        <control caption="Nuveen Maturity Date" columns="2" fullQualPath="Bonds.NuveenDerivedFields.NuveenMaturityDate" hideDetail="N" id="dOEFD1Vbe1" isColumnInTable="N" labelName="" lazyInd="N" orderNum="7" pageSize="0" parentId="dOEmC1Vbe1" relatedPath="" screenId="xK5U017ae1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD"/>
+        <control caption="Nuveen Default Date" columns="2" fullQualPath="Bonds.NuveenDerivedFields.NuveenDefaultDate" hideDetail="N" id="dOEHD1Vbe1" isColumnInTable="N" labelName="" lazyInd="N" orderNum="8" pageSize="0" parentId="dOEmC1Vbe1" relatedPath="" screenId="xK5U017ae1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD"/>
+        <control caption="Instrument Description" columns="2" fullQualPath="Bonds.InstrumentDetails.PreferredInstrumentDescription" hideDetail="N" id="dOEJD1Vbe1" isColumnInTable="N" labelName="" lazyInd="N" orderNum="9" pageSize="0" parentId="dOEmC1Vbe1" relatedPath="" screenId="xK5U017ae1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Nuveen Description Notes" columns="2" fullQualPath="Bonds.NuveenDerivedFields.NuveenDescriptionNotes" hideDetail="N" id="dOELD1Vbe1" isColumnInTable="N" labelName="" lazyInd="N" orderNum="10" pageSize="0" parentId="dOEmC1Vbe1" relatedPath="" screenId="xK5U017ae1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD"/>
+        <control caption="When Issued Indicator" columns="2" fullQualPath="Bonds.InstrumentDetails.WhenIssuedIndicator" hideDetail="N" id="dOEND1Vbe1" isColumnInTable="N" labelName="" lazyInd="N" orderNum="11" pageSize="0" parentId="dOEmC1Vbe1" relatedPath="" screenId="xK5U017ae1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD"/>
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Identifiers" columns="3" fullQualPath="" hideDetail="N" id="dOEPD1Vbe1" labelName="" lazyInd="N" orderNum="1" pageSize="0" parentId="dOE*B1Vbe1" relatedPath="" screenId="xK5U017ae1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="SECTION">
+        <control caption="Nuveen Global Security Alias ID" columns="2" fullQualPath="Bonds.Identifiers.InstrumentLevelIdentifiers.NuveenGlobalSecurityId" hideDetail="N" id="dOEiD1Vbe1" isColumnInTable="N" labelName="" lazyInd="N" orderNum="0" pageSize="0" parentId="dOEPD1Vbe1" relatedPath="" screenId="xK5U017ae1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Nuveen Security Alias ID" columns="2" fullQualPath="Bonds.Identifiers.InstrumentLevelIdentifiers.NuveenSecurityAlias" hideDetail="N" id="dOEkD1Vbe1" isColumnInTable="N" labelName="" lazyInd="N" orderNum="1" pageSize="0" parentId="dOEPD1Vbe1" relatedPath="" screenId="xK5U017ae1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Nuveen Ticker" columns="2" fullQualPath="Bonds.NuveenDerivedFields.NuveenTicker" hideDetail="N" id="dOEmD1Vbe1" isColumnInTable="N" labelName="" lazyInd="N" orderNum="2" pageSize="0" parentId="dOEPD1Vbe1" relatedPath="" screenId="xK5U017ae1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD"/>
+        <control caption="ISIN" columns="2" fullQualPath="Bonds.Identifiers.InstrumentLevelIdentifiers.ISIN" hideDetail="N" id="dOEoD1Vbe1" isColumnInTable="N" labelName="" lazyInd="N" orderNum="3" pageSize="0" parentId="dOEPD1Vbe1" relatedPath="" screenId="xK5U017ae1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="CUSIP" columns="2" fullQualPath="Bonds.Identifiers.InstrumentLevelIdentifiers.CUSIP" hideDetail="N" id="dOEqD1Vbe1" isColumnInTable="N" labelName="" lazyInd="N" orderNum="4" pageSize="0" parentId="dOEPD1Vbe1" relatedPath="" screenId="xK5U017ae1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="CINS Code" columns="2" fullQualPath="Bonds.Identifiers.InstrumentLevelIdentifiers.CINSCode" hideDetail="N" id="dOEsD1Vbe1" isColumnInTable="N" labelName="" lazyInd="N" orderNum="5" pageSize="0" parentId="dOEPD1Vbe1" relatedPath="" screenId="xK5U017ae1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Real CUSIP" columns="2" fullQualPath="Bonds.Identifiers.InstrumentLevelIdentifiers.RealCUSIP" hideDetail="N" id="dOEuD1Vbe1" isColumnInTable="N" labelName="" lazyInd="N" orderNum="6" pageSize="0" parentId="dOEPD1Vbe1" relatedPath="" screenId="xK5U017ae1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Sedol" columns="2" fullQualPath="Bonds.Identifiers.InstrumentLevelIdentifiers.SedolInstrumentLevel" hideDetail="N" id="dOEwD1Vbe1" isColumnInTable="N" labelName="" lazyInd="N" orderNum="7" pageSize="0" parentId="dOEPD1Vbe1" relatedPath="" screenId="xK5U017ae1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="BB Global" columns="2" fullQualPath="Bonds.Identifiers.InstrumentLevelIdentifiers.BBGlobalInstrumentLevel" hideDetail="N" id="dOEyD1Vbe1" isColumnInTable="N" labelName="" lazyInd="N" orderNum="8" pageSize="0" parentId="dOEPD1Vbe1" relatedPath="" screenId="xK5U017ae1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="BB Unique" columns="2" fullQualPath="Bonds.Identifiers.InstrumentLevelIdentifiers.BBUniqueIDInstrumentLevel" hideDetail="N" id="dOE$D1Vbe1" isColumnInTable="N" labelName="" lazyInd="N" orderNum="9" pageSize="0" parentId="dOEPD1Vbe1" relatedPath="" screenId="xK5U017ae1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="BB Identifier" columns="2" fullQualPath="Bonds.Identifiers.InstrumentLevelIdentifiers.BBIdentifier" hideDetail="N" id="dOE@D1Vbe1" isColumnInTable="N" labelName="" lazyInd="N" orderNum="10" pageSize="0" parentId="dOEPD1Vbe1" relatedPath="" screenId="xK5U017ae1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="BB Security" columns="2" fullQualPath="Bonds.Identifiers.InstrumentLevelIdentifiers.BBSecurity" hideDetail="N" id="dOE*D1Vbe1" isColumnInTable="N" labelName="" lazyInd="N" orderNum="11" pageSize="0" parentId="dOEPD1Vbe1" relatedPath="" screenId="xK5U017ae1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Bond To Equity Ticker" columns="2" fullQualPath="Bonds.InstrumentStatistic.BondToEquityTicker" hideDetail="N" id="dOE.D1Vbe1" isColumnInTable="N" labelName="" lazyInd="N" orderNum="12" pageSize="0" parentId="dOEPD1Vbe1" relatedPath="" screenId="xK5U017ae1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD"/>
+        <control caption="WSO Admin Asset ID" columns="2" fullQualPath="Bonds.Identifiers.InstrumentLevelIdentifiers.NuveenWSOAdminAssetID" hideDetail="N" id="dOE(D1Vbe1" isColumnInTable="N" labelName="" lazyInd="N" orderNum="13" pageSize="0" parentId="dOEPD1Vbe1" relatedPath="" screenId="xK5U017ae1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="WSO Admin Facility ID" columns="2" fullQualPath="Bonds.Identifiers.InstrumentLevelIdentifiers.NuveenWSOAdminFacilityID" hideDetail="N" id="dOE~D1Vbe1" isColumnInTable="N" labelName="" lazyInd="N" orderNum="14" pageSize="0" parentId="dOEPD1Vbe1" relatedPath="" screenId="xK5U017ae1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="WSO Web Asset ID" columns="2" fullQualPath="Bonds.Identifiers.InstrumentLevelIdentifiers.NuveenWSOWebAssetID" hideDetail="N" id="dOE&amp;lt;D1Vbe1" isColumnInTable="N" labelName="" lazyInd="N" orderNum="15" pageSize="0" parentId="dOEPD1Vbe1" relatedPath="" screenId="xK5U017ae1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="WSO Web Facility ID" columns="2" fullQualPath="Bonds.Identifiers.InstrumentLevelIdentifiers.NuveenWSOWebFacilityID" hideDetail="N" id="dOE0E1Vbe1" isColumnInTable="N" labelName="" lazyInd="N" orderNum="16" pageSize="0" parentId="dOEPD1Vbe1" relatedPath="" screenId="xK5U017ae1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <config>{"CAPTION_OVERRIDE":[{"LABEL":"Identifiers"}],"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Issuer Details" columns="3" fullQualPath="" hideDetail="N" id="dOE2E1Vbe1" labelName="" lazyInd="N" orderNum="2" pageSize="0" parentId="dOE*B1Vbe1" relatedPath="" screenId="xK5U017ae1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="SECTION">
+        <control caption="Issuer Long Name" columns="2" fullQualPath="Bonds.InstrumentDetails.Issuer.Issuer.IssuerInformation.IssuerName" hideDetail="N" id="dOEDE1Vbe1" isColumnInTable="N" labelName="" lazyInd="N" orderNum="0" pageSize="0" parentId="dOE2E1Vbe1" relatedPath="" screenId="xK5U017ae1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="BB Issuer Classification" columns="2" fullQualPath="Bonds.InstrumentDetails.Issuer.Issuer.IssuerClassification.BBIssuerClassification" hideDetail="N" id="dOEFE1Vbe1" isColumnInTable="N" labelName="" lazyInd="N" orderNum="1" pageSize="0" parentId="dOE2E1Vbe1" relatedPath="" screenId="xK5U017ae1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Parent Company Name" columns="2" fullQualPath="Bonds.NuveenIssuerFields.NuveenIssuFinsParentInstitutionName" hideDetail="N" id="dOEHE1Vbe1" isColumnInTable="N" labelName="" lazyInd="N" orderNum="2" pageSize="0" parentId="dOE2E1Vbe1" relatedPath="" screenId="xK5U017ae1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Country Of Domicile" columns="2" fullQualPath="Bonds.NuveenIssuerFields.NuveenIssuFinsCountryOfDomicile" hideDetail="N" id="dOEJE1Vbe1" isColumnInTable="N" labelName="" lazyInd="N" orderNum="3" pageSize="0" parentId="dOE2E1Vbe1" relatedPath="" screenId="xK5U017ae1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Country Of Incorporation" columns="2" fullQualPath="Bonds.NuveenIssuerFields.NuveenIssuFinsCountryOfIncorporation" hideDetail="N" id="dOELE1Vbe1" isColumnInTable="N" labelName="" lazyInd="N" orderNum="4" pageSize="0" parentId="dOE2E1Vbe1" relatedPath="" screenId="xK5U017ae1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Parent BB Company ID" columns="2" fullQualPath="Bonds.NuveenIssuerFields.NuveenIssuFinsParentPreferredInstitutionID" hideDetail="N" id="dOENE1Vbe1" isColumnInTable="N" labelName="" lazyInd="N" orderNum="5" pageSize="0" parentId="dOE2E1Vbe1" relatedPath="" screenId="xK5U017ae1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Primary NAICS" columns="2" fullQualPath="Bonds.NuveenIssuerFields.NuveenIssuFinsPrimaryNAICS" hideDetail="N" id="dOEPE1Vbe1" isColumnInTable="N" labelName="" lazyInd="N" orderNum="6" pageSize="0" parentId="dOE2E1Vbe1" relatedPath="" screenId="xK5U017ae1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="State Of Domicile" columns="2" fullQualPath="Bonds.NuveenIssuerFields.NuveenIssuFinsStateOfDomicile" hideDetail="N" id="dOERE1Vbe1" isColumnInTable="N" labelName="" lazyInd="N" orderNum="7" pageSize="0" parentId="dOE2E1Vbe1" relatedPath="" screenId="xK5U017ae1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Ultimate Parent Country Of Risk" columns="2" fullQualPath="Bonds.NuveenIssuerFields.NuveenIssuFinsUltParentCountryOfRisk" hideDetail="N" id="dOETE1Vbe1" isColumnInTable="N" labelName="" lazyInd="N" orderNum="8" pageSize="0" parentId="dOE2E1Vbe1" relatedPath="" screenId="xK5U017ae1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <config>{"CAPTION_OVERRIDE":[{"LABEL":"Issuance"}],"DETAIL_CHART_CONFIG":[]}</config>
+    </control>
+    <control caption="T&amp;amp;Cs" columns="3" fullQualPath="" hideDetail="N" id="dOEVE1Vbe1" labelName="" lazyInd="N" orderNum="1" pageSize="0" parentId="dOE491Vbe1" relatedPath="" screenId="xK5U017ae1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="LAYOUT">
+      <control caption="Terms" columns="3" fullQualPath="" hideDetail="N" id="dOE?E1Vbe1" labelName="" lazyInd="N" orderNum="0" pageSize="0" parentId="dOEVE1Vbe1" relatedPath="" screenId="xK5U017ae1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="SECTION">
+        <control caption="Nuveen Income Currency" columns="2" fullQualPath="Bonds.NuveenDerivedFields.NuveenDistributionCurrency" hideDetail="N" id="dOE6F1Vbe1" isColumnInTable="N" labelName="" lazyInd="N" orderNum="0" pageSize="0" parentId="dOE?E1Vbe1" relatedPath="" screenId="xK5U017ae1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Coupon Type" columns="2" fullQualPath="Bonds.BondFeatures.CouponType" hideDetail="N" id="dOE8F1Vbe1" isColumnInTable="N" labelName="" lazyInd="N" orderNum="1" pageSize="0" parentId="dOE?E1Vbe1" relatedPath="" screenId="xK5U017ae1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD"/>
+        <control caption="Day Count Description" columns="2" fullQualPath="Bonds.NuveenInstrumentFields.NuveenBBDayCountDescription" hideDetail="N" id="dOEAF1Vbe1" isColumnInTable="N" labelName="" lazyInd="N" orderNum="2" pageSize="0" parentId="dOE?E1Vbe1" relatedPath="" screenId="xK5U017ae1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Nuveen Short Name" columns="2" fullQualPath="Bonds.NuveenDerivedFields.NuveenShortName" hideDetail="N" id="dOECF1Vbe1" isColumnInTable="N" labelName="" lazyInd="N" orderNum="3" pageSize="0" parentId="dOE?E1Vbe1" relatedPath="" screenId="xK5U017ae1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Risk Reporting Investment Type" columns="2" fullQualPath="Bonds.NuveenStatistics.NuveenRiskReportingInvestmentType" hideDetail="N" id="dOEEF1Vbe1" isColumnInTable="N" labelName="" lazyInd="N" orderNum="4" pageSize="0" parentId="dOE?E1Vbe1" relatedPath="" screenId="xK5U017ae1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD"/>
+        <control caption="Risk Reporting Asset Class" columns="2" fullQualPath="Bonds.NuveenStatistics.NuveenRiskReportingAssetClass" hideDetail="N" id="dOEGF1Vbe1" isColumnInTable="N" labelName="" lazyInd="N" orderNum="5" pageSize="0" parentId="dOE?E1Vbe1" relatedPath="" screenId="xK5U017ae1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD"/>
+        <control caption="Tranche ID" columns="2" fullQualPath="Bonds.NuveenStatistics.NuveenBBTrancheID" hideDetail="N" id="dOEIF1Vbe1" isColumnInTable="N" labelName="" lazyInd="N" orderNum="6" pageSize="0" parentId="dOE?E1Vbe1" relatedPath="" screenId="xK5U017ae1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD"/>
+        <config>{"CAPTION_OVERRIDE":[{"LABEL":"Terms"}],"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Dates" columns="3" fullQualPath="" hideDetail="N" id="dOEKF1Vbe1" labelName="" lazyInd="N" orderNum="1" pageSize="0" parentId="dOEVE1Vbe1" relatedPath="" screenId="xK5U017ae1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="SECTION">
+        <control caption="Nuveen Dated Date" columns="2" fullQualPath="Bonds.NuveenDerivedFields.NuveenDatedDate" hideDetail="N" id="dOERF1Vbe1" isColumnInTable="N" labelName="" lazyInd="N" orderNum="0" pageSize="0" parentId="dOEKF1Vbe1" relatedPath="" screenId="xK5U017ae1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Nuveen Last Income Date" columns="2" fullQualPath="Bonds.NuveenDerivedFields.NuveenLastIncomeDate" hideDetail="N" id="dOETF1Vbe1" isColumnInTable="N" labelName="" lazyInd="N" orderNum="1" pageSize="0" parentId="dOEKF1Vbe1" relatedPath="" screenId="xK5U017ae1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Last Reset Date" columns="2" fullQualPath="Bonds.BondStatistics.LastResetDate" hideDetail="N" id="dOEVF1Vbe1" isColumnInTable="N" labelName="" lazyInd="N" orderNum="2" pageSize="0" parentId="dOEKF1Vbe1" relatedPath="" screenId="xK5U017ae1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Previous Coupon Date" columns="2" fullQualPath="Bonds.NuveenDerivedFields.NuveenPreviousCouponDate" hideDetail="N" id="dOEXF1Vbe1" isColumnInTable="N" labelName="" lazyInd="N" orderNum="3" pageSize="0" parentId="dOEKF1Vbe1" relatedPath="" screenId="xK5U017ae1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD"/>
+        <control caption="Nuveen Income Date" columns="2" fullQualPath="Bonds.NuveenDerivedFields.NuveenIncomeDate" hideDetail="N" id="dOEZF1Vbe1" isColumnInTable="N" labelName="" lazyInd="N" orderNum="4" pageSize="0" parentId="dOEKF1Vbe1" relatedPath="" screenId="xK5U017ae1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD"/>
+        <config>{"CAPTION_OVERRIDE":[{"LABEL":"Dates"}],"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Rates&amp;amp;Amounts" columns="3" fullQualPath="" hideDetail="N" id="dOEbF1Vbe1" labelName="" lazyInd="N" orderNum="2" pageSize="0" parentId="dOEVE1Vbe1" relatedPath="" screenId="xK5U017ae1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="SECTION">
+        <control caption="Nuveen Issued Quantity" columns="2" fullQualPath="Bonds.NuveenDerivedFields.NuveenIssuedQuantity" hideDetail="N" id="dOElF1Vbe1" isColumnInTable="N" labelName="" lazyInd="N" orderNum="0" pageSize="0" parentId="dOEbF1Vbe1" relatedPath="" screenId="xK5U017ae1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Original Principal Limit Amount" columns="2" fullQualPath="Bonds.MortgageFeatures.OriginalPrincipalLimitAmount" hideDetail="N" id="dOEnF1Vbe1" isColumnInTable="N" labelName="" lazyInd="N" orderNum="1" pageSize="0" parentId="dOEbF1Vbe1" relatedPath="" screenId="xK5U017ae1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Current Commitment Amount" columns="2" fullQualPath="Bonds.MortgageStatistic.NuveenCurrentCommitmentAmount" hideDetail="N" id="dOEpF1Vbe1" isColumnInTable="N" labelName="" lazyInd="N" orderNum="2" pageSize="0" parentId="dOEbF1Vbe1" relatedPath="" screenId="xK5U017ae1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Eagle Price Multiplier" columns="2" fullQualPath="Bonds.InstrumentStatistic.NuveenEaglePriceMultiplier" hideDetail="N" id="dOErF1Vbe1" isColumnInTable="N" labelName="" lazyInd="N" orderNum="3" pageSize="0" parentId="dOEbF1Vbe1" relatedPath="" screenId="xK5U017ae1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Nuveen Coupon Rate" columns="2" fullQualPath="Bonds.NuveenDerivedFields.NuveenCouponRate" hideDetail="N" id="dOEtF1Vbe1" isColumnInTable="N" labelName="" lazyInd="N" orderNum="4" pageSize="0" parentId="dOEbF1Vbe1" relatedPath="" screenId="xK5U017ae1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD"/>
+        <control caption="Nuveen Makewhole Basis Points" columns="2" fullQualPath="Bonds.NuveenDerivedFields.NuveenMakewholeBasisPoints" hideDetail="N" id="dOEvF1Vbe1" isColumnInTable="N" labelName="" lazyInd="N" orderNum="5" pageSize="0" parentId="dOEbF1Vbe1" relatedPath="" screenId="xK5U017ae1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD"/>
+        <control caption="Nuveen Par Value" columns="2" fullQualPath="Bonds.NuveenDerivedFields.NuveenParValue" hideDetail="N" id="dOExF1Vbe1" isColumnInTable="N" labelName="" lazyInd="N" orderNum="6" pageSize="0" parentId="dOEbF1Vbe1" relatedPath="" screenId="xK5U017ae1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD"/>
+        <control caption="Convertible Conversion Ratio" columns="2" fullQualPath="Bonds.NuveenStatistics.NuveenConvertibleConversionRatio" hideDetail="N" id="dOEzF1Vbe1" isColumnInTable="N" labelName="" lazyInd="N" orderNum="7" pageSize="0" parentId="dOEbF1Vbe1" relatedPath="" screenId="xK5U017ae1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD"/>
+        <config>{"CAPTION_OVERRIDE":[{"LABEL":"Rates\u0026Amounts"}],"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Underwriting Characteristics" columns="3" fullQualPath="Bonds.UnderwritingCharacteristics" hideDetail="N" id="dOE%F1Vbe1" isColumnInTable="N" labelName="" lazyInd="N" orderNum="3" pageSize="0" parentId="dOEVE1Vbe1" relatedPath="" screenId="xK5U017ae1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="LIST">
+        <control caption="First Settlement Date" columns="2" fullQualPath="Bonds.UnderwritingCharacteristics.FirstSettlementDate" hideDetail="N" id="dOE.F1Vbe1" isColumnInTable="N" labelName="" lazyInd="N" orderNum="0" pageSize="0" parentId="dOE%F1Vbe1" relatedPath="" screenId="xK5U017ae1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD"/>
+        <control caption="Offer Type" columns="2" fullQualPath="Bonds.UnderwritingCharacteristics.OfferType" hideDetail="N" id="dOE(F1Vbe1" isColumnInTable="N" labelName="" lazyInd="N" orderNum="1" pageSize="0" parentId="dOE%F1Vbe1" relatedPath="" screenId="xK5U017ae1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Offer Number" columns="2" fullQualPath="Bonds.UnderwritingCharacteristics.OfferNumber" hideDetail="N" id="dOE~F1Vbe1" isColumnInTable="N" labelName="" lazyInd="N" orderNum="2" pageSize="0" parentId="dOE%F1Vbe1" relatedPath="" screenId="xK5U017ae1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Collateral Details" columns="3" fullQualPath="Bonds.ExtendedInstrCollateralDetails" hideDetail="N" id="dOE&amp;lt;F1Vbe1" isColumnInTable="N" labelName="" lazyInd="N" orderNum="4" pageSize="0" parentId="dOEVE1Vbe1" relatedPath="" screenId="xK5U017ae1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="LIST">
+        <control caption="Collateral Type" columns="2" fullQualPath="Bonds.ExtendedInstrCollateralDetails.ExtInstrCollateralType" hideDetail="N" id="ki$2m&amp;gt;Vbe1" isColumnInTable="N" labelName="" lazyInd="N" orderNum="0" pageSize="0" parentId="dOE&amp;lt;F1Vbe1" relatedPath="" screenId="xK5U017ae1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD"/>
+        <control caption="Collateral Name" columns="2" fullQualPath="Bonds.ExtendedInstrCollateralDetails.ExtInstrCollateralName" hideDetail="N" id="ki$4m&amp;gt;Vbe1" isColumnInTable="N" labelName="" lazyInd="N" orderNum="1" pageSize="0" parentId="dOE&amp;lt;F1Vbe1" relatedPath="" screenId="xK5U017ae1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD"/>
+      </control>
+      <control caption="Related Security" columns="2" fullQualPath="Bonds.RelatedInstrument" hideDetail="N" id="ki$6m&amp;gt;Vbe1" isColumnInTable="N" labelName="" lazyInd="N" orderNum="5" pageSize="0" parentId="dOEVE1Vbe1" relatedPath="" screenId="xK5U017ae1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="LIST">
+        <control caption="Related Instrument Details" columns="2" fullQualPath="Bonds.RelatedInstrument.RelatedInstrumentDetails" hideDetail="N" id="ki$Hm&amp;gt;Vbe1" isColumnInTable="N" labelName="" lazyInd="N" orderNum="0" pageSize="0" parentId="ki$6m&amp;gt;Vbe1" relatedPath="" screenId="xK5U017ae1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="LIST">
+          <control caption="Instrument Type" columns="2" fullQualPath="Bonds.RelatedInstrument.RelatedInstrumentDetails.UnderlyingFI.Base.InstrumentDetails.InstrumentType" hideDetail="N" id="ki$Pm&amp;gt;Vbe1" isColumnInTable="N" labelName="" lazyInd="N" orderNum="0" pageSize="0" parentId="ki$Hm&amp;gt;Vbe1" relatedPath="" screenId="xK5U017ae1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD"/>
+          <control caption="Instrument Name" columns="2" fullQualPath="Bonds.RelatedInstrument.RelatedInstrumentDetails.UnderlyingFI.Base.InstrumentDetails.PreferredInstrumentName" hideDetail="N" id="ki$Rm&amp;gt;Vbe1" isColumnInTable="N" labelName="" lazyInd="N" orderNum="1" pageSize="0" parentId="ki$Hm&amp;gt;Vbe1" relatedPath="" screenId="xK5U017ae1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD"/>
+          <control caption="Preferred Instrument Identifier Type" columns="2" fullQualPath="Bonds.RelatedInstrument.RelatedInstrumentDetails.UnderlyingFI.Base.InstrumentDetails.PreferredIdentifierType" hideDetail="N" id="ki$Tm&amp;gt;Vbe1" isColumnInTable="N" labelName="" lazyInd="N" orderNum="2" pageSize="0" parentId="ki$Hm&amp;gt;Vbe1" relatedPath="" screenId="xK5U017ae1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD"/>
+          <control caption="Preferred Instrument Identifier" columns="2" fullQualPath="Bonds.RelatedInstrument.RelatedInstrumentDetails.UnderlyingFI.Base.InstrumentDetails.PreferredIdentifierValue" hideDetail="N" id="ki$Vm&amp;gt;Vbe1" isColumnInTable="N" labelName="" lazyInd="N" orderNum="3" pageSize="0" parentId="ki$Hm&amp;gt;Vbe1" relatedPath="" screenId="xK5U017ae1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD"/>
+          <control caption="Relationship Type" columns="2" fullQualPath="Bonds.RelatedInstrument.RelatedInstrumentDetails.RelationshipRoleType" hideDetail="N" id="ki$Xm&amp;gt;Vbe1" isColumnInTable="N" labelName="" lazyInd="N" orderNum="4" pageSize="0" parentId="ki$Hm&amp;gt;Vbe1" relatedPath="" screenId="xK5U017ae1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD"/>
+          <control caption="Unit Type" columns="2" fullQualPath="Bonds.RelatedInstrument.RelatedInstrumentDetails.RelatedInstrumentUnitType" hideDetail="N" id="ki$Zm&amp;gt;Vbe1" isColumnInTable="N" labelName="" lazyInd="N" orderNum="5" pageSize="0" parentId="ki$Hm&amp;gt;Vbe1" relatedPath="" screenId="xK5U017ae1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD"/>
+        </control>
+        <control caption="Relationship Type" columns="2" fullQualPath="Bonds.RelatedInstrument.RelationshipType" hideDetail="N" id="ki$bm&amp;gt;Vbe1" isColumnInTable="N" labelName="" lazyInd="N" orderNum="1" pageSize="0" parentId="ki$6m&amp;gt;Vbe1" relatedPath="" screenId="xK5U017ae1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD"/>
+        <control caption="Relationship Description" columns="2" fullQualPath="Bonds.RelatedInstrument.RelatedRelationshipDescription" hideDetail="N" id="ki$dm&amp;gt;Vbe1" isColumnInTable="N" labelName="" lazyInd="N" orderNum="2" pageSize="0" parentId="ki$6m&amp;gt;Vbe1" relatedPath="" screenId="xK5U017ae1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD"/>
+      </control>
+      <config>{"CAPTION_OVERRIDE":[{"LABEL":"T\u0026Cs"}],"DETAIL_CHART_CONFIG":[]}</config>
+    </control>
+    <control caption="Indicators" columns="2" fullQualPath="" hideDetail="N" id="ki$fm&amp;gt;Vbe1" labelName="" lazyInd="N" orderNum="2" pageSize="0" parentId="dOE491Vbe1" relatedPath="" screenId="xK5U017ae1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="LAYOUT">
+      <control caption="Indicators" columns="3" fullQualPath="" hideDetail="N" id="ki$@m&amp;gt;Vbe1" labelName="" lazyInd="N" orderNum="0" pageSize="0" parentId="ki$fm&amp;gt;Vbe1" relatedPath="" screenId="xK5U017ae1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="SECTION">
+        <control caption="Bond Indicator" columns="2" fullQualPath="Bonds.NuveenStatistics.NuveenBondIndicator" hideDetail="N" id="ki$An&amp;gt;Vbe1" isColumnInTable="N" labelName="" lazyInd="N" orderNum="0" pageSize="0" parentId="ki$@m&amp;gt;Vbe1" relatedPath="" screenId="xK5U017ae1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD"/>
+        <control caption="Equity Indicator" columns="2" fullQualPath="Bonds.NuveenStatistics.NuveenEquityIndicator" hideDetail="N" id="ki$Cn&amp;gt;Vbe1" isColumnInTable="N" labelName="" lazyInd="N" orderNum="1" pageSize="0" parentId="ki$@m&amp;gt;Vbe1" relatedPath="" screenId="xK5U017ae1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD"/>
+        <control caption="Convertible Indicator" columns="2" fullQualPath="Bonds.InstrumentAssessments.AssessmentConvertibleIndicator" hideDetail="N" id="ki$En&amp;gt;Vbe1" isColumnInTable="N" labelName="" lazyInd="N" orderNum="2" pageSize="0" parentId="ki$@m&amp;gt;Vbe1" relatedPath="" screenId="xK5U017ae1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD"/>
+        <control caption="NuveenWSOPrincipalOnlyInd" columns="2" fullQualPath="Bonds.NuveenStatistics.NuveenWSOPrincipalOnlyInd" hideDetail="N" id="ki$Gn&amp;gt;Vbe1" isColumnInTable="N" labelName="" lazyInd="N" orderNum="3" pageSize="0" parentId="ki$@m&amp;gt;Vbe1" relatedPath="" screenId="xK5U017ae1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD"/>
+        <control caption="WSO Interest Only Indicator" columns="2" fullQualPath="Bonds.NuveenStatistics.NuveenWSOInterestOnlyInd" hideDetail="N" id="ki$In&amp;gt;Vbe1" isColumnInTable="N" labelName="" lazyInd="N" orderNum="4" pageSize="0" parentId="ki$@m&amp;gt;Vbe1" relatedPath="" screenId="xK5U017ae1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD"/>
+        <control caption="Bullet Maturity Type Indicator" columns="2" fullQualPath="Bonds.NuveenStatistics.BulletMaturityTypeIndicator" hideDetail="N" id="ki$Kn&amp;gt;Vbe1" isColumnInTable="N" labelName="" lazyInd="N" orderNum="5" pageSize="0" parentId="ki$@m&amp;gt;Vbe1" relatedPath="" screenId="xK5U017ae1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD"/>
+        <control caption="Float Coupon Indicator" columns="2" fullQualPath="Bonds.InstrumentStatistic.FloatCouponIndicator" hideDetail="N" id="ki$Mn&amp;gt;Vbe1" isColumnInTable="N" labelName="" lazyInd="N" orderNum="6" pageSize="0" parentId="ki$@m&amp;gt;Vbe1" relatedPath="" screenId="xK5U017ae1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="First Lien Indicator" columns="2" fullQualPath="Bonds.MortgageFeatures.FirstLienIndicator" hideDetail="N" id="ki$On&amp;gt;Vbe1" isColumnInTable="N" labelName="" lazyInd="N" orderNum="7" pageSize="0" parentId="ki$@m&amp;gt;Vbe1" relatedPath="" screenId="xK5U017ae1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Nuveen Private Placement" columns="2" fullQualPath="Bonds.NuveenDerivedFields.NuveenPrivatePlacement" hideDetail="N" id="ki$Qn&amp;gt;Vbe1" isColumnInTable="N" labelName="" lazyInd="N" orderNum="8" pageSize="0" parentId="ki$@m&amp;gt;Vbe1" relatedPath="" screenId="xK5U017ae1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Callable Indicator" columns="2" fullQualPath="Bonds.BondFeatures.CallFeatures.CallableIndicator" hideDetail="N" id="ki$Sn&amp;gt;Vbe1" isColumnInTable="N" labelName="" lazyInd="N" orderNum="9" pageSize="0" parentId="ki$@m&amp;gt;Vbe1" relatedPath="" screenId="xK5U017ae1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Soft Call Indicator" columns="2" fullQualPath="Bonds.BondFeatures.CallFeatures.SoftCallIndicator" hideDetail="N" id="ki$Un&amp;gt;Vbe1" isColumnInTable="N" labelName="" lazyInd="N" orderNum="10" pageSize="0" parentId="ki$@m&amp;gt;Vbe1" relatedPath="" screenId="xK5U017ae1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD"/>
+        <control caption="Putable Indicator" columns="2" fullQualPath="Bonds.BondFeatures.PutFeatures.PutableIndicator" hideDetail="N" id="ki$Wn&amp;gt;Vbe1" isColumnInTable="N" labelName="" lazyInd="N" orderNum="11" pageSize="0" parentId="ki$@m&amp;gt;Vbe1" relatedPath="" screenId="xK5U017ae1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Default Indicator" columns="2" fullQualPath="Bonds.BondFeatures.DefaultedIndicator" hideDetail="N" id="ki$Yn&amp;gt;Vbe1" isColumnInTable="N" labelName="" lazyInd="N" orderNum="12" pageSize="0" parentId="ki$@m&amp;gt;Vbe1" relatedPath="" screenId="xK5U017ae1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Sink Indicator" columns="2" fullQualPath="Bonds.BondFeatures.SinkFeatures.SinkIndicator" hideDetail="N" id="ki$an&amp;gt;Vbe1" isColumnInTable="N" labelName="" lazyInd="N" orderNum="13" pageSize="0" parentId="ki$@m&amp;gt;Vbe1" relatedPath="" screenId="xK5U017ae1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Senior" columns="2" fullQualPath="Bonds.BondFeatures.Senior" hideDetail="N" id="ki$cn&amp;gt;Vbe1" isColumnInTable="N" labelName="" lazyInd="N" orderNum="14" pageSize="0" parentId="ki$@m&amp;gt;Vbe1" relatedPath="" screenId="xK5U017ae1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD"/>
+        <control caption="Junior Indicator" columns="2" fullQualPath="Bonds.BondFeatures.JuniorIndicator" hideDetail="N" id="ki$en&amp;gt;Vbe1" isColumnInTable="N" labelName="" lazyInd="N" orderNum="15" pageSize="0" parentId="ki$@m&amp;gt;Vbe1" relatedPath="" screenId="xK5U017ae1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Structured Note Indicator" columns="2" fullQualPath="Bonds.BondFeatures.StructuredNoteIndicator" hideDetail="N" id="ki$gn&amp;gt;Vbe1" isColumnInTable="N" labelName="" lazyInd="N" orderNum="16" pageSize="0" parentId="ki$@m&amp;gt;Vbe1" relatedPath="" screenId="xK5U017ae1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD"/>
+        <control caption="Is Perpetual Flag" columns="2" fullQualPath="Bonds.NuveenStatistics.NuveenBBIsPerpetualFlag" hideDetail="N" id="ki$in&amp;gt;Vbe1" isColumnInTable="N" labelName="" lazyInd="N" orderNum="17" pageSize="0" parentId="ki$@m&amp;gt;Vbe1" relatedPath="" screenId="xK5U017ae1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD"/>
+        <control caption="Reg 144A Indicator (US)" columns="2" fullQualPath="Bonds.Regulations.Reg144AIndicator" hideDetail="N" id="ki$kn&amp;gt;Vbe1" isColumnInTable="N" labelName="" lazyInd="N" orderNum="18" pageSize="0" parentId="ki$@m&amp;gt;Vbe1" relatedPath="" screenId="xK5U017ae1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD"/>
+        <control caption="Rule 144A Registration Indicator (US)" columns="2" fullQualPath="Bonds.Regulations.Rule144ARegistrationIndicator" hideDetail="N" id="ki$mn&amp;gt;Vbe1" isColumnInTable="N" labelName="" lazyInd="N" orderNum="19" pageSize="0" parentId="ki$@m&amp;gt;Vbe1" relatedPath="" screenId="xK5U017ae1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD"/>
+        <config>{"CAPTION_OVERRIDE":[{"LABEL":"Indicators"}],"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <config>{"CAPTION_OVERRIDE":[{"LABEL":"Indicators"}],"DETAIL_CHART_CONFIG":[]}</config>
+    </control>
+    <control caption="Coupon-Schedules" columns="2" fullQualPath="" hideDetail="N" id="ki$on&amp;gt;Vbe1" labelName="" lazyInd="N" orderNum="3" pageSize="0" parentId="dOE491Vbe1" relatedPath="" screenId="xK5U017ae1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="LAYOUT">
+      <control caption="Coupon Details" columns="3" fullQualPath="" hideDetail="N" id="ki$xn&amp;gt;Vbe1" labelName="" lazyInd="N" orderNum="0" pageSize="0" parentId="ki$on&amp;gt;Vbe1" relatedPath="" screenId="xK5U017ae1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="SECTION">
+        <control caption="Coupon Frequency Time Unit" columns="2" fullQualPath="Bonds.IncomeDetails.CouponForSchedules.CouponDetails.CouponFreqTimeUnit" hideDetail="N" id="ki$-n&amp;gt;Vbe1" isColumnInTable="N" labelName="" lazyInd="N" orderNum="0" pageSize="0" parentId="ki$xn&amp;gt;Vbe1" relatedPath="" screenId="xK5U017ae1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Rate Fixing Frequency Span" columns="2" fullQualPath="Bonds.IncomeDetails.CouponForSchedules.CouponDetails.RateFixingFreq" hideDetail="N" id="ki$/n&amp;gt;Vbe1" isColumnInTable="N" labelName="" lazyInd="N" orderNum="1" pageSize="0" parentId="ki$xn&amp;gt;Vbe1" relatedPath="" screenId="xK5U017ae1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Next Call Date" columns="2" fullQualPath="Bonds.BondStatistics.NextCallDate" hideDetail="N" id="ki$)n&amp;gt;Vbe1" isColumnInTable="N" labelName="" lazyInd="N" orderNum="2" pageSize="0" parentId="ki$xn&amp;gt;Vbe1" relatedPath="" screenId="xK5U017ae1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD"/>
+        <control caption="Next Call Price" columns="2" fullQualPath="Bonds.BondStatistics.NextCallPrice" hideDetail="N" id="ki$?n&amp;gt;Vbe1" isColumnInTable="N" labelName="" lazyInd="N" orderNum="3" pageSize="0" parentId="ki$xn&amp;gt;Vbe1" relatedPath="" screenId="xK5U017ae1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD"/>
+        <control caption="Next Put Date" columns="2" fullQualPath="Bonds.BondStatistics.NextPutDate" hideDetail="N" id="ki$&amp;gt;n&amp;gt;Vbe1" isColumnInTable="N" labelName="" lazyInd="N" orderNum="4" pageSize="0" parentId="ki$xn&amp;gt;Vbe1" relatedPath="" screenId="xK5U017ae1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD"/>
+        <control caption="Next Put Price" columns="2" fullQualPath="Bonds.BondStatistics.NextPutPrice" hideDetail="N" id="ki$1o&amp;gt;Vbe1" isColumnInTable="N" labelName="" lazyInd="N" orderNum="5" pageSize="0" parentId="ki$xn&amp;gt;Vbe1" relatedPath="" screenId="xK5U017ae1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD"/>
+        <config>{"CAPTION_OVERRIDE":[{"LABEL":"Coupon Details"}],"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <config>{"CAPTION_OVERRIDE":[{"LABEL":"Coupon"}],"DETAIL_CHART_CONFIG":[]}</config>
+    </control>
+    <control caption="Instrument As A Participant" columns="3" fullQualPath="Bonds.InstrumentAsAParticipant" hideDetail="N" id="ki$3o&amp;gt;Vbe1" isColumnInTable="N" labelName="" lazyInd="N" orderNum="4" pageSize="10" parentId="dOE491Vbe1" relatedPath="" screenId="xK5U017ae1" show="Y" showAsTable="Y" showDetailOnTop="Y" showOneBelowAnother="N" type="LIST">
+      <config>{"DETAIL_CHART_CONFIG":[]}</config>
+    </control>
+    <control caption="Industry-Geo" columns="3" fullQualPath="" hideDetail="N" id="ki$5o&amp;gt;Vbe1" labelName="" lazyInd="N" orderNum="5" pageSize="0" parentId="dOE491Vbe1" relatedPath="" screenId="xK5U017ae1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="LAYOUT">
+      <control caption="Classification" columns="3" fullQualPath="Bonds.InstrumentClassification" hideDetail="N" id="ki$Uo&amp;gt;Vbe1" labelName="" lazyInd="N" orderNum="0" pageSize="0" parentId="ki$5o&amp;gt;Vbe1" relatedPath="" screenId="xK5U017ae1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="RECORD">
+        <control caption="Eagle Security Type" columns="2" fullQualPath="Bonds.InstrumentClassification.EagleSecurityType" hideDetail="N" id="ki$mo&amp;gt;Vbe1" isColumnInTable="N" labelName="" lazyInd="N" orderNum="0" pageSize="0" parentId="ki$Uo&amp;gt;Vbe1" relatedPath="" screenId="xK5U017ae1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Eagle Investment Type" columns="2" fullQualPath="Bonds.InstrumentClassification.EagleInvestmentType" hideDetail="N" id="ki$oo&amp;gt;Vbe1" isColumnInTable="N" labelName="" lazyInd="N" orderNum="1" pageSize="0" parentId="ki$Uo&amp;gt;Vbe1" relatedPath="" screenId="xK5U017ae1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="BB Market Sector" columns="3" fullQualPath="Bonds.InstrumentClassification.BBMarketSector" hideDetail="N" id="ki$qo&amp;gt;Vbe1" isColumnInTable="N" labelName="" lazyInd="N" orderNum="2" pageSize="0" parentId="ki$Uo&amp;gt;Vbe1" relatedPath="" screenId="xK5U017ae1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="BB Security Type" columns="3" fullQualPath="Bonds.InstrumentClassification.BBSectorType" hideDetail="N" id="ki$so&amp;gt;Vbe1" isColumnInTable="N" labelName="" lazyInd="N" orderNum="3" pageSize="0" parentId="ki$Uo&amp;gt;Vbe1" relatedPath="" screenId="xK5U017ae1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Legacy BICS Level I" columns="3" fullQualPath="Bonds.InstrumentClassification.BICSLevelI" hideDetail="N" id="ki$uo&amp;gt;Vbe1" isColumnInTable="N" labelName="" lazyInd="N" orderNum="4" pageSize="0" parentId="ki$Uo&amp;gt;Vbe1" relatedPath="" screenId="xK5U017ae1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Legacy BICS Level II" columns="3" fullQualPath="Bonds.InstrumentClassification.BICSLevelII" hideDetail="N" id="ki$wo&amp;gt;Vbe1" isColumnInTable="N" labelName="" lazyInd="N" orderNum="5" pageSize="0" parentId="ki$Uo&amp;gt;Vbe1" relatedPath="" screenId="xK5U017ae1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Legacy BICS Level III" columns="3" fullQualPath="Bonds.InstrumentClassification.BICSLevelIII" hideDetail="N" id="ki$yo&amp;gt;Vbe1" isColumnInTable="N" labelName="" lazyInd="N" orderNum="6" pageSize="0" parentId="ki$Uo&amp;gt;Vbe1" relatedPath="" screenId="xK5U017ae1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="BICS Level 1 Sector Code" columns="2" fullQualPath="Bonds.InstrumentClassification.NuveenBICSLevel1SectorCode" hideDetail="N" id="ki$$o&amp;gt;Vbe1" isColumnInTable="N" labelName="" lazyInd="N" orderNum="7" pageSize="0" parentId="ki$Uo&amp;gt;Vbe1" relatedPath="" screenId="xK5U017ae1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="BICS Level 2 Industry Group Code" columns="2" fullQualPath="Bonds.InstrumentClassification.NuveenBICSLevel2IndustryGroupC" hideDetail="N" id="ki$@o&amp;gt;Vbe1" isColumnInTable="N" labelName="" lazyInd="N" orderNum="8" pageSize="0" parentId="ki$Uo&amp;gt;Vbe1" relatedPath="" screenId="xK5U017ae1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="BICS Level 3 Industry Code" columns="2" fullQualPath="Bonds.InstrumentClassification.NuveenBICSLevel3IndustryCode" hideDetail="N" id="ki$*o&amp;gt;Vbe1" isColumnInTable="N" labelName="" lazyInd="N" orderNum="9" pageSize="0" parentId="ki$Uo&amp;gt;Vbe1" relatedPath="" screenId="xK5U017ae1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="BICS Level 4 Sub Industry Code" columns="2" fullQualPath="Bonds.InstrumentClassification.NuveenBICSLevel4SubIndCode" hideDetail="N" id="ki$.o&amp;gt;Vbe1" isColumnInTable="N" labelName="" lazyInd="N" orderNum="10" pageSize="0" parentId="ki$Uo&amp;gt;Vbe1" relatedPath="" screenId="xK5U017ae1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="BICS Level 5 Segment Code" columns="2" fullQualPath="Bonds.InstrumentClassification.NuveenBICSLevel5SegmentCode" hideDetail="N" id="ki$(o&amp;gt;Vbe1" isColumnInTable="N" labelName="" lazyInd="N" orderNum="11" pageSize="0" parentId="ki$Uo&amp;gt;Vbe1" relatedPath="" screenId="xK5U017ae1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="BB Sub-Security Type" columns="2" fullQualPath="Bonds.InstrumentClassification.BBSubSectorType" hideDetail="N" id="ki$~o&amp;gt;Vbe1" isColumnInTable="N" labelName="" lazyInd="N" orderNum="12" pageSize="0" parentId="ki$Uo&amp;gt;Vbe1" relatedPath="" screenId="xK5U017ae1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Legacy BICS Level I Description" columns="2" fullQualPath="Bonds.InstrumentClassification.BICSLevelIDescription" hideDetail="N" id="ki$&amp;lt;o&amp;gt;Vbe1" isColumnInTable="N" labelName="" lazyInd="N" orderNum="13" pageSize="0" parentId="ki$Uo&amp;gt;Vbe1" relatedPath="" screenId="xK5U017ae1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD"/>
+        <control caption="Legacy BICS Level II Description" columns="2" fullQualPath="Bonds.InstrumentClassification.BICSLevelIIDescription" hideDetail="N" id="ki$0p&amp;gt;Vbe1" isColumnInTable="N" labelName="" lazyInd="N" orderNum="14" pageSize="0" parentId="ki$Uo&amp;gt;Vbe1" relatedPath="" screenId="xK5U017ae1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD"/>
+        <control caption="Legacy BICS Level III Description" columns="2" fullQualPath="Bonds.InstrumentClassification.BICSLevelIIIDescription" hideDetail="N" id="ki$2p&amp;gt;Vbe1" isColumnInTable="N" labelName="" lazyInd="N" orderNum="15" pageSize="0" parentId="ki$Uo&amp;gt;Vbe1" relatedPath="" screenId="xK5U017ae1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD"/>
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Geographical Information" columns="3" fullQualPath="Bonds.InstrumentGeographicalInformation" hideDetail="N" id="ki$4p&amp;gt;Vbe1" labelName="" lazyInd="N" orderNum="1" pageSize="0" parentId="ki$5o&amp;gt;Vbe1" relatedPath="" screenId="xK5U017ae1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="RECORD">
+        <control caption="ISO Country" columns="2" fullQualPath="Bonds.InstrumentGeographicalInformation.ISOCountry" hideDetail="N" id="ki$Bp&amp;gt;Vbe1" isColumnInTable="N" labelName="" lazyInd="N" orderNum="0" pageSize="0" parentId="ki$4p&amp;gt;Vbe1" relatedPath="" screenId="xK5U017ae1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Country Of Risk" columns="2" fullQualPath="Bonds.InstrumentGeographicalInformation.CountryOfRisk" hideDetail="N" id="ki$Dp&amp;gt;Vbe1" isColumnInTable="N" labelName="" lazyInd="N" orderNum="1" pageSize="0" parentId="ki$4p&amp;gt;Vbe1" relatedPath="" screenId="xK5U017ae1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Taxation Jurisdiction" columns="2" fullQualPath="Bonds.InstrumentGeographicalInformation.TaxationJurisdiction" hideDetail="N" id="ki$Fp&amp;gt;Vbe1" isColumnInTable="N" labelName="" lazyInd="N" orderNum="2" pageSize="0" parentId="ki$4p&amp;gt;Vbe1" relatedPath="" screenId="xK5U017ae1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Country Of Trading" columns="2" fullQualPath="Bonds.InstrumentGeographicalInformation.CountryOfTrading" hideDetail="N" id="ki$Hp&amp;gt;Vbe1" isColumnInTable="N" labelName="" lazyInd="N" orderNum="3" pageSize="0" parentId="ki$4p&amp;gt;Vbe1" relatedPath="" screenId="xK5U017ae1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Country Of Issuance" columns="2" fullQualPath="Bonds.InstrumentGeographicalInformation.CountryOfIssuance" hideDetail="N" id="ki$Jp&amp;gt;Vbe1" isColumnInTable="N" labelName="" lazyInd="N" orderNum="4" pageSize="0" parentId="ki$4p&amp;gt;Vbe1" relatedPath="" screenId="xK5U017ae1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <config>{"DETAIL_CHART_CONFIG":[]}</config>
+    </control>
+    <control caption="Bloomberg" columns="3" fullQualPath="" hideDetail="N" id="ki$Lp&amp;gt;Vbe1" labelName="" lazyInd="N" orderNum="6" pageSize="0" parentId="dOE491Vbe1" relatedPath="" screenId="xK5U017ae1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="LAYOUT">
+      <control caption="Main" columns="3" fullQualPath="" hideDetail="N" id="ki$up&amp;gt;Vbe1" labelName="" lazyInd="N" orderNum="0" pageSize="0" parentId="ki$Lp&amp;gt;Vbe1" relatedPath="" screenId="xK5U017ae1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="SECTION">
+        <control caption="Issue / Asset Currency" columns="2" fullQualPath="Bonds.NuveenDerivedFields.NuveenPrincipalCurrency" hideDetail="N" id="ki$$p&amp;gt;Vbe1" isColumnInTable="N" labelName="" lazyInd="N" orderNum="0" pageSize="0" parentId="ki$up&amp;gt;Vbe1" relatedPath="" screenId="xK5U017ae1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD"/>
+        <control caption="Debt to Equity Fundamentals Ticker" columns="2" fullQualPath="Bonds.NuveenStatistics.NuveenDebtToEquityFundamentalsTicker" hideDetail="N" id="ki$@p&amp;gt;Vbe1" isColumnInTable="N" labelName="" lazyInd="N" orderNum="1" pageSize="0" parentId="ki$up&amp;gt;Vbe1" relatedPath="" screenId="xK5U017ae1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD"/>
+        <control caption="Called Status Code" columns="2" fullQualPath="Bonds.BondFeatures.CallFeatures.CalledStatusCode" hideDetail="N" id="ki$*p&amp;gt;Vbe1" isColumnInTable="N" labelName="" lazyInd="N" orderNum="2" pageSize="0" parentId="ki$up&amp;gt;Vbe1" relatedPath="" screenId="xK5U017ae1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD"/>
+        <control caption="SP LT Local Currency Issuer Credit Rating Watch" columns="2" fullQualPath="Bonds.NuveenStatistics.NuveenSPLTLocalCurrencyIssuerCreditRatingWatch" hideDetail="N" id="ki$.p&amp;gt;Vbe1" isColumnInTable="N" labelName="" lazyInd="N" orderNum="3" pageSize="0" parentId="ki$up&amp;gt;Vbe1" relatedPath="" screenId="xK5U017ae1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD"/>
+      </control>
+      <control caption="Dates" columns="3" fullQualPath="" hideDetail="N" id="ki$(p&amp;gt;Vbe1" labelName="" lazyInd="N" orderNum="1" pageSize="0" parentId="ki$Lp&amp;gt;Vbe1" relatedPath="" screenId="xK5U017ae1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="SECTION">
+        <control caption="Call Date" columns="2" fullQualPath="Bonds.BondStatistics.CallDateBondStatistics" hideDetail="N" id="ki$3q&amp;gt;Vbe1" isColumnInTable="N" labelName="" lazyInd="N" orderNum="0" pageSize="0" parentId="ki$(p&amp;gt;Vbe1" relatedPath="" screenId="xK5U017ae1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD"/>
+        <control caption="Most Recent Quarter End Date" columns="2" fullQualPath="Bonds.InstrumentStatistic.MostRecentQuarterEndDate" hideDetail="N" id="ki$5q&amp;gt;Vbe1" isColumnInTable="N" labelName="" lazyInd="N" orderNum="1" pageSize="0" parentId="ki$(p&amp;gt;Vbe1" relatedPath="" screenId="xK5U017ae1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD"/>
+        <control caption="Loan Funding Date" columns="2" fullQualPath="Bonds.NuveenStatistics.NuveenFundingDate" hideDetail="N" id="ki$7q&amp;gt;Vbe1" isColumnInTable="N" labelName="" lazyInd="N" orderNum="2" pageSize="0" parentId="ki$(p&amp;gt;Vbe1" relatedPath="" screenId="xK5U017ae1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD"/>
+        <control caption="Latest Announcement Date" columns="2" fullQualPath="Bonds.NuveenStatistics.NuveenLatestAnnouncementDate" hideDetail="N" id="ki$9q&amp;gt;Vbe1" isColumnInTable="N" labelName="" lazyInd="N" orderNum="3" pageSize="0" parentId="ki$(p&amp;gt;Vbe1" relatedPath="" screenId="xK5U017ae1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD"/>
+        <control caption="Period of Latest Announcement Date" columns="2" fullQualPath="Bonds.NuveenStatistics.NuveenPeriodofLatestAnnouncementDate" hideDetail="N" id="ki$Bq&amp;gt;Vbe1" isColumnInTable="N" labelName="" lazyInd="N" orderNum="4" pageSize="0" parentId="ki$(p&amp;gt;Vbe1" relatedPath="" screenId="xK5U017ae1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD"/>
+        <control caption="MakeWhole Termination Date" columns="2" fullQualPath="Bonds.NuveenStatistics.NuveenMakeWholeTerminationDate" hideDetail="N" id="ki$Dq&amp;gt;Vbe1" isColumnInTable="N" labelName="" lazyInd="N" orderNum="5" pageSize="0" parentId="ki$(p&amp;gt;Vbe1" relatedPath="" screenId="xK5U017ae1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD"/>
+        <control caption="Security Pricing Date" columns="2" fullQualPath="Bonds.NuveenStatistics.NuveenSecurityPricingDate" hideDetail="N" id="ki$Fq&amp;gt;Vbe1" isColumnInTable="N" labelName="" lazyInd="N" orderNum="6" pageSize="0" parentId="ki$(p&amp;gt;Vbe1" relatedPath="" screenId="xK5U017ae1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD"/>
+      </control>
+      <control caption="Indicators" columns="3" fullQualPath="" hideDetail="N" id="ki$Hq&amp;gt;Vbe1" labelName="" lazyInd="N" orderNum="2" pageSize="0" parentId="ki$Lp&amp;gt;Vbe1" relatedPath="" screenId="xK5U017ae1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="SECTION">
+        <control caption="Hard Call Indicator" columns="2" fullQualPath="Bonds.NuveenStatistics.NuveenHardCall" hideDetail="N" id="ki$Mq&amp;gt;Vbe1" isColumnInTable="N" labelName="" lazyInd="N" orderNum="0" pageSize="0" parentId="ki$Hq&amp;gt;Vbe1" relatedPath="" screenId="xK5U017ae1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD"/>
+        <control caption="Unsecured Obligation Indicator" columns="2" fullQualPath="Bonds.BondFeatures.UnsecuredObligationIndicator" hideDetail="N" id="ki$Oq&amp;gt;Vbe1" isColumnInTable="N" labelName="" lazyInd="N" orderNum="1" pageSize="0" parentId="ki$Hq&amp;gt;Vbe1" relatedPath="" screenId="xK5U017ae1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD"/>
+        <control caption="Junior Debt Indicator" columns="2" fullQualPath="Bonds.BondFeatures.JuniorIndicator" hideDetail="N" id="ki$Qq&amp;gt;Vbe1" isColumnInTable="N" labelName="" lazyInd="N" orderNum="2" pageSize="0" parentId="ki$Hq&amp;gt;Vbe1" relatedPath="" screenId="xK5U017ae1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD"/>
+      </control>
+      <control caption="Amounts &amp;amp; Rates" columns="3" fullQualPath="" hideDetail="N" id="ki$Sq&amp;gt;Vbe1" labelName="" lazyInd="N" orderNum="3" pageSize="0" parentId="ki$Lp&amp;gt;Vbe1" relatedPath="" screenId="xK5U017ae1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="SECTION">
+        <control caption="Amount Outstanding ($M)" columns="2" fullQualPath="Bonds.NuveenStatistics.NuveenAmountOutstandingMMM" hideDetail="N" id="ki$aq&amp;gt;Vbe1" isColumnInTable="N" labelName="" lazyInd="N" orderNum="0" pageSize="0" parentId="ki$Sq&amp;gt;Vbe1" relatedPath="" screenId="xK5U017ae1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD"/>
+        <control caption="Mid Yield To Maturity" columns="2" fullQualPath="Bonds.NuveenStatistics.NuveenMidYieldToMaturity" hideDetail="N" id="ki$cq&amp;gt;Vbe1" isColumnInTable="N" labelName="" lazyInd="N" orderNum="1" pageSize="0" parentId="ki$Sq&amp;gt;Vbe1" relatedPath="" screenId="xK5U017ae1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD"/>
+        <control caption="Days to Next Coupon" columns="2" fullQualPath="Bonds.NuveenStatistics.NuveenDaystoNextCoupon" hideDetail="N" id="ki$eq&amp;gt;Vbe1" isColumnInTable="N" labelName="" lazyInd="N" orderNum="2" pageSize="0" parentId="ki$Sq&amp;gt;Vbe1" relatedPath="" screenId="xK5U017ae1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD"/>
+        <control caption="Issuer Amount Outstanding - Issuer (Bonds &amp;amp; Loans)" columns="2" fullQualPath="Bonds.NuveenStatistics.NuveenAmtOutIssuerBondsLoans" hideDetail="N" id="ki$gq&amp;gt;Vbe1" isColumnInTable="N" labelName="" lazyInd="N" orderNum="3" pageSize="0" parentId="ki$Sq&amp;gt;Vbe1" relatedPath="" screenId="xK5U017ae1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD"/>
+        <control caption="Issuer Loan Distribution Amount Outstanding" columns="2" fullQualPath="Bonds.NuveenStatistics.NuveenLoanDistributionAmtOutIssuer" hideDetail="N" id="ki$iq&amp;gt;Vbe1" isColumnInTable="N" labelName="" lazyInd="N" orderNum="4" pageSize="0" parentId="ki$Sq&amp;gt;Vbe1" relatedPath="" screenId="xK5U017ae1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD"/>
+        <control caption="Loan Distribution Amount Outtanding - Issuer &amp;amp; Subs" columns="2" fullQualPath="Bonds.NuveenStatistics.NuveenLoanDistributionAmountOutIssuerSubs" hideDetail="N" id="ki$kq&amp;gt;Vbe1" isColumnInTable="N" labelName="" lazyInd="N" orderNum="5" pageSize="0" parentId="ki$Sq&amp;gt;Vbe1" relatedPath="" screenId="xK5U017ae1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD"/>
+      </control>
+      <control caption="Instrument Level Reporting Values" columns="3" fullQualPath="Bonds.InstrumentLevelReportingValues" hideDetail="N" id="ki$mq&amp;gt;Vbe1" isColumnInTable="N" labelName="" lazyInd="N" orderNum="4" pageSize="0" parentId="ki$Lp&amp;gt;Vbe1" relatedPath="" screenId="xK5U017ae1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="LIST">
+        <control caption="Report Bond Seniority Type" columns="2" fullQualPath="Bonds.InstrumentLevelReportingValues.RpValInstrLevelReportBondSeniorityType" hideDetail="N" id="ki$tq&amp;gt;Vbe1" isColumnInTable="N" labelName="" lazyInd="N" orderNum="0" pageSize="0" parentId="ki$mq&amp;gt;Vbe1" relatedPath="" screenId="xK5U017ae1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD"/>
+        <control caption="Regulation Type" columns="2" fullQualPath="Bonds.InstrumentLevelReportingValues.RpValInstrLevelRegType" hideDetail="N" id="ki$vq&amp;gt;Vbe1" isColumnInTable="N" labelName="" lazyInd="N" orderNum="1" pageSize="0" parentId="ki$mq&amp;gt;Vbe1" relatedPath="" screenId="xK5U017ae1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD"/>
+        <control caption="Reg Rule Name" columns="2" fullQualPath="Bonds.InstrumentLevelReportingValues.RpValInstrLevelRegRuleName" hideDetail="N" id="ki$xq&amp;gt;Vbe1" isColumnInTable="N" labelName="" lazyInd="N" orderNum="2" pageSize="0" parentId="ki$mq&amp;gt;Vbe1" relatedPath="" screenId="xK5U017ae1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD"/>
+        <control caption="Regulatory Authority Name" columns="2" fullQualPath="Bonds.InstrumentLevelReportingValues.RpValInstrLevelRegulatoryAuthorityName" hideDetail="N" id="ki$zq&amp;gt;Vbe1" isColumnInTable="N" labelName="" lazyInd="N" orderNum="3" pageSize="0" parentId="ki$mq&amp;gt;Vbe1" relatedPath="" screenId="xK5U017ae1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD"/>
+        <control caption="Reg Authority" columns="2" fullQualPath="Bonds.InstrumentLevelReportingValues.RpValInstrLevelRegAuthority" hideDetail="N" id="ki$%q&amp;gt;Vbe1" isColumnInTable="N" labelName="" lazyInd="N" orderNum="4" pageSize="0" parentId="ki$mq&amp;gt;Vbe1" relatedPath="" screenId="xK5U017ae1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD"/>
+      </control>
+      <control caption="Loan / Mortgage Statistics" columns="3" fullQualPath="Bonds.MortgageStatistics" hideDetail="N" id="ki$&amp;amp;q&amp;gt;Vbe1" isColumnInTable="N" labelName="" lazyInd="N" orderNum="5" pageSize="0" parentId="ki$Lp&amp;gt;Vbe1" relatedPath="" screenId="xK5U017ae1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="LIST">
+        <control caption="Payment Date Per Settle Date" columns="2" fullQualPath="Bonds.MortgageStatistics.PaymentDatePerSettleDate" hideDetail="N" id="ki$/q&amp;gt;Vbe1" isColumnInTable="N" labelName="" lazyInd="N" orderNum="0" pageSize="0" parentId="ki$&amp;amp;q&amp;gt;Vbe1" relatedPath="" screenId="xK5U017ae1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD"/>
+        <control caption="Loan Status" columns="2" fullQualPath="Bonds.MortgageStatistics.LoanStatusText" hideDetail="N" id="ki$)q&amp;gt;Vbe1" isColumnInTable="N" labelName="" lazyInd="N" orderNum="1" pageSize="0" parentId="ki$&amp;amp;q&amp;gt;Vbe1" relatedPath="" screenId="xK5U017ae1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD"/>
+      </control>
+    </control>
+    <control caption="Exceptions" columns="3" fullQualPath="Bonds.Exceptions" hideDetail="N" id="ki$?q&amp;gt;Vbe1" isColumnInTable="N" labelName="" lazyInd="N" orderNum="7" pageSize="10" parentId="dOE491Vbe1" relatedPath="" screenId="xK5U017ae1" show="Y" showAsTable="Y" showDetailOnTop="N" showOneBelowAnother="N" type="LIST">
+      <buttons>
+        <button caption="Resubmit" id="ki$Er&gt;Vbe1">
+          <property name="Type" value="event"/>
+          <property name="Shared Role" value=""/>
+          <property name="Event Type" value="GenericEvent"/>
+          <property name="Current User" value="Logged in User"/>
+          <property name="Shared Group" value=""/>
+          <property name="Shared User" value=""/>
+          <property name="Event Name" value="My Event"/>
+        </button>
+        <button caption="Close" id="ki$6r&gt;Vbe1">
+          <property name="Shared User" value=""/>
+          <property name="Type" value="event"/>
+          <property name="Shared Role" value=""/>
+          <property name="Event Type" value="GenericEvent"/>
+          <property name="Event Name" value="My Event"/>
+          <property name="Shared Group" value=""/>
+          <property name="Current User" value="Logged in User"/>
+        </button>
+      </buttons>
+      <control caption="Details" columns="2" fullQualPath="Bonds.Exceptions.ExceptionOnInstr.Exception.ExceptionDetail.Details" hideDetail="N" id="ki$Nr&amp;gt;Vbe1" isColumnInTable="N" labelName="" lazyInd="N" orderNum="0" pageSize="0" parentId="ki$?q&amp;gt;Vbe1" relatedPath="Bonds.Exceptions.ExceptionOnInstr" screenId="xK5U017ae1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Latest Notification DateTime" columns="2" fullQualPath="Bonds.Exceptions.ExceptionOnInstr.Exception.ExceptionDetail.LatestNotificationDate" hideDetail="N" id="ki$Pr&amp;gt;Vbe1" isColumnInTable="N" labelName="" lazyInd="N" orderNum="1" pageSize="0" parentId="ki$?q&amp;gt;Vbe1" relatedPath="Bonds.Exceptions.ExceptionOnInstr" screenId="xK5U017ae1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Message Type" columns="2" fullQualPath="Bonds.Exceptions.ExceptionOnInstr.Exception.ExceptionDetail.MessageType" hideDetail="N" id="ki$Rr&amp;gt;Vbe1" isColumnInTable="N" labelName="" lazyInd="N" orderNum="2" pageSize="0" parentId="ki$?q&amp;gt;Vbe1" relatedPath="Bonds.Exceptions.ExceptionOnInstr" screenId="xK5U017ae1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Notification Creation DateTime" columns="2" fullQualPath="Bonds.Exceptions.ExceptionOnInstr.Exception.ExceptionDetail.NotificationCreationDate" hideDetail="N" id="ki$Tr&amp;gt;Vbe1" isColumnInTable="N" labelName="" lazyInd="N" orderNum="3" pageSize="0" parentId="ki$?q&amp;gt;Vbe1" relatedPath="Bonds.Exceptions.ExceptionOnInstr" screenId="xK5U017ae1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Notification Occurrence Count" columns="2" fullQualPath="Bonds.Exceptions.ExceptionOnInstr.Exception.ExceptionDetail.NotificationOccurrenceCount" hideDetail="N" id="ki$Vr&amp;gt;Vbe1" isColumnInTable="N" labelName="" lazyInd="N" orderNum="4" pageSize="0" parentId="ki$?q&amp;gt;Vbe1" relatedPath="Bonds.Exceptions.ExceptionOnInstr" screenId="xK5U017ae1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Source Id" columns="2" fullQualPath="Bonds.Exceptions.ExceptionOnInstr.Exception.ExceptionDetail.SourceId" hideDetail="N" id="ki$Xr&amp;gt;Vbe1" isColumnInTable="N" labelName="" lazyInd="N" orderNum="5" pageSize="0" parentId="ki$?q&amp;gt;Vbe1" relatedPath="Bonds.Exceptions.ExceptionOnInstr" screenId="xK5U017ae1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Notification Status" columns="2" fullQualPath="Bonds.Exceptions.ExceptionOnInstr.Exception.ExceptionDetail.NotificationStatus" hideDetail="N" id="ki$Zr&amp;gt;Vbe1" isColumnInTable="N" labelName="" lazyInd="N" orderNum="6" pageSize="0" parentId="ki$?q&amp;gt;Vbe1" relatedPath="Bonds.Exceptions.ExceptionOnInstr" screenId="xK5U017ae1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Exception Sub-Type" columns="2" fullQualPath="Bonds.Exceptions.ExceptionOnInstr.Exception.ExceptionDetail.ExceptionSubType" hideDetail="N" id="ki$br&amp;gt;Vbe1" isColumnInTable="N" labelName="" lazyInd="N" orderNum="7" pageSize="0" parentId="ki$?q&amp;gt;Vbe1" relatedPath="Bonds.Exceptions.ExceptionOnInstr" screenId="xK5U017ae1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <config>{"CAPTION_OVERRIDE":[{"LABEL":"Exceptions"}],"DETAIL_CHART_CONFIG":[]}</config>
+    </control>
+  </control>
+</root>

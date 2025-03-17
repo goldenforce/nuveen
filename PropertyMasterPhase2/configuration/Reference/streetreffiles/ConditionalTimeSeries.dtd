@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!ELEMENT TimeSeriesConfiguration (occurrence)+>
+<!ATTLIST TimeSeriesConfiguration
+ignoreMappingTSsetting CDATA #IMPLIED>
+<!ELEMENT occurrence (option)+>
+<!ATTLIST occurrence
+table (ft_t_isrt | ft_t_bdst | ft_t_ipdf | ft_t_ppdf | ft_t_isid | ft_t_eqst |
+ft_t_ispc | ft_t_bnrt | ft_t_bnmw) #REQUIRED>
+<!ELEMENT option (attribute*,where?)>
+<!ATTLIST option
+MatchingTolerance CDATA "0"
+TS_OVERLAP_OVERRIDE (y | Y | n | N) "N"
+messageTypes CDATA #IMPLIED
+id CDATA #REQUIRED>
+<!ELEMENT attribute (#PCDATA)>
+<!ELEMENT where (field)+>
+<!ELEMENT field EMPTY>
+<!ATTLIST field
+name CDATA #REQUIRED
+value CDATA #REQUIRED
+lookup CDATA #IMPLIED
+valueOf CDATA #IMPLIED
+dataType (STRING | DATE | DATETIME | NUMBER | DECIMAL | TIME) "STRING"
+optr CDATA #IMPLIED
+multiValue CDATA #IMPLIED
+table CDATA #IMPLIED>

@@ -1,0 +1,257 @@
+{
+  "TYPE" : "Workflow",
+  "version" : "1.6.6",
+  "timeZone" : "America/New_York",
+  "orderPreparation" : {
+    "parameters" : {
+      "checkDependency" : {
+        "type" : "Boolean",
+        "default" : "true"
+      },
+      "file_pattern" : {
+        "type" : "String",
+        "default" : "'WSO_SMF_Asset.*\\.txt'"
+      },
+      "dayMinus" : {
+        "type" : "String",
+        "default" : "'1'"
+      },
+      "jobConfigText" : {
+        "type" : "String",
+        "default" : "'WSO Dataload Parent Job'"
+      }
+    },
+    "allowUndeclared" : false
+  },
+  "instructions" : [ {
+    "TYPE" : "ConsumeNotices",
+    "noticeBoardNames" : "'WSO2LRD_NB'",
+    "subworkflow" : {
+      "instructions" : [ ]
+    },
+    "label" : "LRD Expect Notice"
+  }, {
+    "TYPE" : "If",
+    "predicate" : "$checkDependency==true",
+    "then" : {
+      "instructions" : [ {
+        "TYPE" : "Execute.Named",
+        "jobName" : "Echo_Dependency_Check",
+        "label" : "Echo_Dependency_Check"
+      }, {
+        "TYPE" : "Try",
+        "try" : {
+          "instructions" : [ {
+            "TYPE" : "Execute.Named",
+            "jobName" : "JBLG_Check",
+            "label" : "JBLG_Check"
+          }, {
+            "TYPE" : "Execute.Named",
+            "jobName" : "CurrentLRDJobCheck",
+            "label" : "CurrentLRDJobCheck"
+          }, {
+            "TYPE" : "If",
+            "predicate" : "$count.toNumber > 0 && $crrntlrdcount.toNumber ==0",
+            "then" : {
+              "instructions" : [ {
+                "TYPE" : "Execute.Named",
+                "jobName" : "Echo_Fileload_Completed",
+                "label" : "Echo_Fileload_Completed"
+              }, {
+                "TYPE" : "Execute.Named",
+                "jobName" : "Nuveen_LevFin_LRD_Load_Process",
+                "label" : "LRD_Load_With_Dependency"
+              }, {
+                "TYPE" : "Execute.Named",
+                "jobName" : "LRDFileLoadcheckJBLG",
+                "label" : "LRDFileLoadcheckJBLG"
+              }, {
+                "TYPE" : "If",
+                "predicate" : "$lrdcount.toNumber > 0",
+                "then" : {
+                  "instructions" : [ {
+                    "TYPE" : "PostNotices",
+                    "noticeBoardNames" : [ "LRD2EAGLE_NB" ],
+                    "label" : "LRDTOEAGLE_NB"
+                  } ]
+                },
+                "else" : {
+                  "instructions" : [ {
+                    "TYPE" : "Fail",
+                    "outcome" : {
+                      "returnCode" : 1
+                    },
+                    "uncatchable" : false
+                  } ]
+                }
+              } ]
+            },
+            "else" : {
+              "instructions" : [ {
+                "TYPE" : "Execute.Named",
+                "jobName" : "Echo_Fileload_Not_Completed",
+                "label" : "Echo_Fileload_Not_Completed"
+              } ]
+            }
+          } ]
+        },
+        "catch" : {
+          "instructions" : [ {
+            "TYPE" : "Retry"
+          } ]
+        },
+        "maxTries" : 13,
+        "retryDelays" : [ 600 ]
+      } ]
+    },
+    "else" : {
+      "instructions" : [ {
+        "TYPE" : "Execute.Named",
+        "jobName" : "Echo_No_Dependency",
+        "label" : "Echo_No_Dependency"
+      }, {
+        "TYPE" : "Execute.Named",
+        "jobName" : "Nuveen_LevFin_LRD_Load_Process",
+        "label" : "LRD_Load_Without_Dependency"
+      } ]
+    }
+  } ],
+  "jobs" : {
+    "Echo_Dependency_Check" : {
+      "agentName" : "JSAgent",
+      "withSubagentClusterIdExpr" : false,
+      "executable" : {
+        "TYPE" : "ShellScriptExecutable",
+        "script" : "echo \"no dependency check\"",
+        "v1Compatible" : false
+      },
+      "skipIfNoAdmissionForOrderDay" : false,
+      "parallelism" : 1,
+      "graceTimeout" : 1,
+      "failOnErrWritten" : false,
+      "warnOnErrWritten" : false
+    },
+    "JBLG_Check" : {
+      "agentName" : "JSAgent",
+      "withSubagentClusterIdExpr" : false,
+      "executable" : {
+        "TYPE" : "InternalExecutable",
+        "className" : "com.sos.jitl.jobs.db.SQLExecutorJob",
+        "internalType" : "JITL",
+        "arguments" : {
+          "command" : "\"select count(*) as count from ser_gs_gc.ft_t_jblg where job_id in ( SELECT prnt_job_id   FROM ser_gs_gc.ft_t_jblg WHERE (UPPER(job_input_txt) ~* (UPPER('$file_pattern') ) OR UPPER(job_msg_typ) ~* (UPPER('$file_pattern'))) and job_start_tms >= to_timestamp(to_char(ser_gs_gc.sysdate()::date - 1 ,'dd/mm/yyyy')||' 23:30','dd/mm/yyyy hh24:mi') AND job_end_tms IS NOT null) and job_config_txt = '$jobConfigText' and job_stat_typ ='CLOSED'\"",
+          "resultset_as_variables" : "\"column_value\"",
+          "hibernate_configuration_file" : "\"/ext/app/jobscheduler/base/sos-berlin.com/joc/resources/joc/hibernate.cfg.xml\""
+        }
+      },
+      "skipIfNoAdmissionForOrderDay" : false,
+      "parallelism" : 1,
+      "graceTimeout" : 1,
+      "failOnErrWritten" : false,
+      "warnOnErrWritten" : false
+    },
+    "CurrentLRDJobCheck" : {
+      "agentName" : "JSAgent",
+      "withSubagentClusterIdExpr" : false,
+      "executable" : {
+        "TYPE" : "InternalExecutable",
+        "className" : "com.sos.jitl.jobs.db.SQLExecutorJob",
+        "internalType" : "JITL",
+        "arguments" : {
+          "command" : "\"select count(*) as crrntlrdcount from ser_gs_gc.ft_t_jblg where job_id in ( SELECT prnt_job_id   FROM ser_gs_gc.ft_t_jblg WHERE (UPPER(job_input_txt) ~* (UPPER('LRD-*-.*\\\\.json') ) OR UPPER(job_msg_typ) ~* (UPPER('LRD-*-.*\\\\.json'))) and job_start_tms >= case when (SELECT CAST(ser_gs_gc.sysdate() AS TIME)) > '23:30'::time then  to_timestamp(to_char(ser_gs_gc.sysdate()::date,'dd/mm/yyyy')||' 23:30','dd/mm/yyyy hh24:mi')   else to_timestamp(to_char(ser_gs_gc.sysdate()::date - 1 ,'dd/mm/yyyy')||' 23:30','dd/mm/yyyy hh24:mi')  end    and task_tot_cnt != task_failed_cnt AND job_end_tms IS NOT null) and job_config_txt = 'Markit LRD Dataload Parent Job' and job_stat_typ ='CLOSED'\"",
+          "resultset_as_variables" : "\"column_value\"",
+          "hibernate_configuration_file" : "\"/ext/app/jobscheduler/base/sos-berlin.com/joc/resources/joc/hibernate.cfg.xml\""
+        }
+      },
+      "skipIfNoAdmissionForOrderDay" : false,
+      "parallelism" : 1,
+      "graceTimeout" : 1,
+      "failOnErrWritten" : false,
+      "warnOnErrWritten" : false,
+      "title" : "CurrentLRDJobCheck"
+    },
+    "Echo_Fileload_Completed" : {
+      "agentName" : "JSAgent",
+      "withSubagentClusterIdExpr" : false,
+      "executable" : {
+        "TYPE" : "ShellScriptExecutable",
+        "script" : "echo \"File has been loaded. Proceeding!\"",
+        "v1Compatible" : false
+      },
+      "skipIfNoAdmissionForOrderDay" : false,
+      "parallelism" : 1,
+      "graceTimeout" : 1,
+      "failOnErrWritten" : false,
+      "warnOnErrWritten" : false
+    },
+    "Nuveen_LevFin_LRD_Load_Process" : {
+      "agentName" : "JSAgent",
+      "withSubagentClusterIdExpr" : false,
+      "executable" : {
+        "TYPE" : "ShellScriptExecutable",
+        "script" : "cd $scripts_home\n./jobutilities execWkf $input_param_file $event_name $target_application",
+        "env" : {
+          "scripts_home" : "'/ext/app/jobscheduler/scripts/'",
+          "input_param_file" : "'/edmfs/app/InputParams/Nuveen_LevFin_LRD_Load_Process.json'",
+          "event_name" : "'Nuveen_LevFin_PFD_Wrapper'",
+          "target_application" : "'fileloading'"
+        },
+        "v1Compatible" : false
+      },
+      "skipIfNoAdmissionForOrderDay" : false,
+      "parallelism" : 1,
+      "graceTimeout" : 1,
+      "failOnErrWritten" : false,
+      "warnOnErrWritten" : false,
+      "title" : "Nuveen_LevFin_LRD_Load_Process"
+    },
+    "LRDFileLoadcheckJBLG" : {
+      "agentName" : "JSAgent",
+      "withSubagentClusterIdExpr" : false,
+      "executable" : {
+        "TYPE" : "InternalExecutable",
+        "className" : "com.sos.jitl.jobs.db.SQLExecutorJob",
+        "internalType" : "JITL",
+        "arguments" : {
+          "command" : "\"select count(*) as lrdcount from ser_gs_gc.ft_t_jblg where job_id in ( SELECT prnt_job_id   FROM ser_gs_gc.ft_t_jblg WHERE (UPPER(job_input_txt) ~* (UPPER('LRD-*-.*\\\\.json') ) OR UPPER(job_msg_typ) ~* (UPPER('LRD-*-.*\\\\.json'))) and job_start_tms >= case when  (SELECT CAST(ser_gs_gc.sysdate() AS TIME)) > '23:30'::time then  to_timestamp(to_char(ser_gs_gc.sysdate()::date,'dd/mm/yyyy')||' 23:30','dd/mm/yyyy hh24:mi')   else to_timestamp(to_char(ser_gs_gc.sysdate()::date - 1 ,'dd/mm/yyyy')||' 23:30','dd/mm/yyyy hh24:mi')  end    and task_tot_cnt != task_failed_cnt AND job_end_tms IS NOT null) and job_config_txt = 'Markit LRD Dataload Parent Job' and job_stat_typ ='CLOSED'\"",
+          "resultset_as_variables" : "\"column_value\"",
+          "hibernate_configuration_file" : "\"/ext/app/jobscheduler/base/sos-berlin.com/joc/resources/joc/hibernate.cfg.xml\""
+        }
+      },
+      "skipIfNoAdmissionForOrderDay" : false,
+      "parallelism" : 1,
+      "graceTimeout" : 1,
+      "failOnErrWritten" : false,
+      "warnOnErrWritten" : false,
+      "title" : "LRDFileLoadcheckJBLG"
+    },
+    "Echo_Fileload_Not_Completed" : {
+      "agentName" : "JSAgent",
+      "withSubagentClusterIdExpr" : false,
+      "executable" : {
+        "TYPE" : "ShellScriptExecutable",
+        "script" : "echo \"File has not been loaded\"",
+        "v1Compatible" : false
+      },
+      "skipIfNoAdmissionForOrderDay" : false,
+      "parallelism" : 1,
+      "graceTimeout" : 1,
+      "failOnErrWritten" : false,
+      "warnOnErrWritten" : false
+    },
+    "Echo_No_Dependency" : {
+      "agentName" : "JSAgent",
+      "withSubagentClusterIdExpr" : false,
+      "executable" : {
+        "TYPE" : "ShellScriptExecutable",
+        "script" : "echo \"no dependency check\"",
+        "v1Compatible" : false
+      },
+      "skipIfNoAdmissionForOrderDay" : false,
+      "parallelism" : 1,
+      "graceTimeout" : 1,
+      "failOnErrWritten" : false,
+      "warnOnErrWritten" : false
+    }
+  }
+}

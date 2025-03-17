@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<root createdUser="user1" id="3NDP41lke1" screenType="DASHBOARD" title="WSO Exceptions">
+  <users>
+    <user id="icz&amp;x&gt;&gt;.e1" user="" userGroup="" userRole="sm_users"/>
+    <user id="icz*x&gt;&gt;.e1" user="" userGroup="" userRole="sm_readonly"/>
+    <user id="3NDU41lke1" user="" userGroup="" userRole="administrators"/>
+    <user id="3NDV41lke1" user="" userGroup="" userRole="readonly"/>
+    <user id="3NDW41lke1" user="" userGroup="" userRole="users"/>
+  </users>
+  <tabs>
+    <tab columns="12" id="3NDQ41lke1" orderNum="0" tabSearch="3NDq31lke1" title="WSO Loans Exceptions">
+      <participants>
+        <participant createdUser="user1" height="28" id="3NDR41lke1" orderNum="0" tabSearch="3NDq31lke1" width="12" x="0" y="12"/>
+        <participant createdUser="user1" height="12" id="3NDS41lke1" orderNum="1" tabChart="3NDJ41lke1" width="6" x="6" y="0"/>
+        <participant createdUser="user1" height="12" id="3NDT41lke1" orderNum="2" tabChart="3NDN41lke1" width="6" x="0" y="0"/>
+      </participants>
+    </tab>
+    <tab columns="12" id="l5C5C1)le1" orderNum="1" tabSearch="l5CtA1)le1" title="WSO non-Loan Exceptions">
+      <participants>
+        <participant createdUser="user1" height="27" id="l5C6C1)le1" orderNum="0" tabSearch="l5CtA1)le1" width="12" x="0" y="12"/>
+        <participant createdUser="user1" height="12" id="l5C7C1)le1" orderNum="1" tabChart="l5C4C1)le1" width="6" x="0" y="0"/>
+        <participant createdUser="user1" height="12" id="l5C8C1)le1" orderNum="2" tabChart="l5C3C1)le1" width="6" x="6" y="0"/>
+      </participants>
+    </tab>
+  </tabs>
+</root>

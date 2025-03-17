@@ -1,0 +1,1 @@
+delete from ft_T_iedf where instr_id ='*e15237ze1' and  start_tms  in ( select min(start_tms)from ft_T_iedf where instr_id ='*e15237ze1' and ev_typ = 'WSOUNFND');

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<root createdUser="user1" id="3NDc31lke1" screenType="DASHBOARD" title="Eagle Exceptions">
+  <users>
+    <user id="icz.x&gt;&gt;.e1" user="" userGroup="" userRole="sm_readonly"/>
+    <user id="3NDd31lke1" user="" userGroup="" userRole="readonly"/>
+    <user id="3NDf31lke1" user="" userGroup="" userRole="users"/>
+    <user id="icz-x&gt;&gt;.e1" user="" userGroup="" userRole="sm_users"/>
+    <user id="3NDe31lke1" user="" userGroup="" userRole="administrators"/>
+  </users>
+  <tabs>
+    <tab columns="12" id="3NDg31lke1" orderNum="0" tabSearch="3NDj11lke1" title="Eagle Loans Exceptions">
+      <participants>
+        <participant createdUser="user1" height="28" id="3NDh31lke1" orderNum="0" tabSearch="3NDj11lke1" width="12" x="0" y="12"/>
+        <participant createdUser="user1" height="12" id="3NDi31lke1" orderNum="1" tabChart="3NDO31lke1" width="6" x="6" y="0"/>
+        <participant createdUser="user1" height="12" id="3NDj31lke1" orderNum="2" tabChart="3NDa31lke1" width="6" x="0" y="0"/>
+      </participants>
+    </tab>
+    <tab columns="12" id="3NDk31lke1" orderNum="1" tabSearch="3NDu21lke1" title="Eagle All Exceptions">
+      <participants>
+        <participant createdUser="user1" height="22" id="3NDl31lke1" orderNum="0" tabSearch="3NDu21lke1" width="12" x="0" y="12"/>
+        <participant createdUser="user1" height="12" id="3NDm31lke1" orderNum="1" tabChart="3NDP31lke1" width="4" x="0" y="0"/>
+        <participant createdUser="user1" height="12" id="3NDn31lke1" orderNum="2" tabChart="3NDR31lke1" width="4" x="4" y="0"/>
+        <participant createdUser="user1" height="12" id="3NDo31lke1" orderNum="3" tabChart="3NDQ31lke1" width="4" x="8" y="0"/>
+      </participants>
+    </tab>
+  </tabs>
+</root>

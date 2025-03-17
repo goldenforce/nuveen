@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entities cleanUnusedFields="false" nameSpace="NUVEEN">
+  <beFields>
+    <beField class="BEINT" customDesc="Number of times a year that the company pays a regular cash dividend." desc="This is the number of times during the specified time span that the issuer pays a dividend.  This field is used in conjunction with the Dividend Frequency Span and the Dividend Frequency Day fields." displayCaption="Dividend Frequency Unit Qty" entityTypeId="++3qwBhS2etxm003" id="++4ILCyy2etqi015" mandatory="0" multiplicity="SINGLE_OR_NULL" name="DividendFreqUnitQty" nameSpace="GSC"/>
+    <beField class="BETEXT  " customDesc="Fix in GS | This field will return a 'Y' if the latest financials are from full fundamental information. It will return a 'N' if the latest financials are from earnings press releases. " desc="This field will return a Y if the financials are from full fundamental information. It will return a N if the financials  are from earnings press releases." displayCaption="Full Fundamentals Available" entityTypeId="++3qwBhS2etxm003" id="004JFG3i2ettS00F" mandatory="0" multiplicity="SINGLE_OR_NULL" name="FullFundamentalsAvailable" nameSpace="GSC"/>
+    <beField class="BEDEC" displayCaption="Current Outstanding Shares Actual" entityTypeId="++3qwBhS2etxm003" id="++8qWzRS2es18009" mandatory="0" multiplicity="SINGLE_OR_NULL" name="CurrentOutstandingSharesActual" nameSpace="NUVEEN"/>
+    <beField class="BEDATE" displayCaption="Current Outstanding Shares Date" entityTypeId="++3qwBhS2etxm003" id="++8qWzRS2es18007" mandatory="0" multiplicity="SINGLE_OR_NULL" name="CurrentOutstandingSharesDt" nameSpace="NUVEEN"/>
+    <beField class="BEDEC" displayCaption="Current Outstanding Shares - Multiple Share Classes" entityTypeId="++3qwBhS2etxm003" id="++8qWzRS2es1800K" mandatory="0" multiplicity="SINGLE_OR_NULL" name="CurrentOutstandingShMultSh" nameSpace="NUVEEN"/>
+    <beField class="BEDEC" customDesc="Total current number of shares outstanding. This data may have been obtained from annual, semi-annual, and quarterly reports, Edgar filings, press releases, or stock exchanges. The value is the unrounded real value. See Shares Outstanding (BS081, BS_SH_OUT) for historical shares outstanding as of period end date and Current Shares Outstanding (DS124 EQY_SH_OUT) for daily shares out. In most countries, the number of shares outstanding may include treasury shares, if any. Where disclosure allows, Bloomberg makes best efforts to remove both cancelled and treasury shares on a timely basis.        Shares out from all stock exchanges of the following countries exclude treasury shares from the number of shares outstanding.  Please reference DS555, EQY_PRIM_SECURITY_COMP_EXCH for the composite exchange code of the primary security:        Argentina (AR) , Bahamas (BM), Bangladesh (BD), Barbados (BA), Bermuda (BH), Canada (CN), China (CH) Georgia (GG), Guernsey-Channel Islands (GU), India (IN), Israel (IT), Ireland (ID), Jamaica (JA), Malaysia (MK), Malta (MV), New Zealand (NZ), Pakistan (PA), Panama (PP), Philippines (PM), Singapore (SP), Sri Lanka (SL), Trinidad and Tobago (TP), United Kingdom (LN), United States (US), Vietnam (VN), Thailand(TB)        Shares out is updated on a primary ticker (ID043,ID_BB_PRIM_SECURITY_FLAG as &quot;Y&quot;). Secondary tickers' shares out is not maintained but returns from its primary ticker's shares out.        American Depository Receipts (ADR)/Global Depository Receipts (GDR):         Number of underlying equivalent shares. For true ADR/GDR shares outstanding, please refer to Current ADRs Outstanding (AD031, ADR_SH_OUT).         For units, it is the sum of shares outstanding for all underlying securities divided by the number of securities one unit is made of.        The related fields referenced herein may not be available in all enterprise products." desc="" displayCaption="Current Outstanding Shares Real" entityTypeId="++3qwBhS2etxm003" id="++8qWzRS2es1800F" mandatory="0" multiplicity="SINGLE_OR_NULL" name="CurrentOutstandingSharesReal" nameSpace="NUVEEN"/>
+    <beField class="BETEXT" customDesc="Fix in GS | Indicates whether trading of this security is restricted by the United States Securities Exchange Commission (SEC).  Returns signify if the designated restriction applied at initial public offering.         For Asia-Pacific (APAC) securities, this field will return values for offerings issued after January 1st, 2014.  Current countries covered in APAC are Japan and Hong Kong.         Possible returns are:     0 - UNRESTRICTED - Security may be traded in the United States.     1 - RULE 144A - Available in the United States only as a private placement.     2 - REGULATION S - Not available in the United States or to United States persons, unless exempted by the SEC.     3 - BOTH - The security has both 144A and REGULATION S restrictions.     4 - 144A 3c7 - Available only to certain institutional buyers and qualified purchasers that conform to both the 144A rule of the Securities Act and the 3c7 section of the Investment Company Act of 1940.        Does not indicate the current status of the restrictions. " desc="This field indicates whether there is an SEC restriction on this issue." displayCaption="Trading Restriction Indicator (US)" entityTypeId="++3qwBhS2etxm003" id="004HMALi2etpS00m" mandatory="0" multiplicity="SINGLE_OR_NULL" name="TradingRestrictionIndicator" nameSpace="GSC"/>
+    <beField class="BETEXT" customDesc="Corp / Pfd / Mtge:        Field will return true when the issuer's offering documentation (e.g., prospectus or offering memorandum) includes a statement to the effect that the security will be offered and sold in reliance upon Rule 144A of the U.S. Securities Act of 1933 or when other information from the issuer or another involved party indicates that the security will be offered and sold in such manner.  The statement in the offering documentation or the other information from the issuer or another involved party must explicitly refer to Rule 144A&quot; for the field to return true.  Otherwise the field returns false.        The Linked Bonds Indicator (DY374, LINKED_BONDS_IND) indicates when separate security identifiers (e.g., CUSIPs) have been issued for a Regulation S tranche and a Rule 144A tranche of a security.  Type and identifier information for the alternate tranche is available under Linked Bonds Information (DY373, LINKED_BONDS_INFO).        Equity:        Returns true or false. A false also represents unknown or undisclosed.  For Asia-Pacific (APAC) securities, this field will return values for offerings issued after January 1st, 2014. Current countries covered in APAC are Japan and Hong Kong.  Returns signify if the designated restriction applied at initial public offering.        Muni:        Return of true does not signify the bonds are issued under Rule 144A. The securities are not registered under the Securities Act of 1933, and are to be traded solely to Qualified Institutional Buyers, as defined by Rule 144A; and/or accredited investors. A return of Municipal Derivative Indicator (DX012, MUNI_IS_DERIVATIVE) =Y will always have a return of 144A Eligible Indicator = Y. 144A=Y is not synonymous with Municipal Offering Type (DS074, MUNI_OFFERING_TYP)= LIMITED, PRIVATE PLACEMENT." desc="This field indicates whether the security was issued under SEC Rule 144A regulations." displayCaption="Reg 144A Indicator (US)" entityTypeId="++3qwBhS2etxm003" id="++4IvUyS2etzy00X" mandatory="0" multiplicity="SINGLE_OR_NULL" name="Reg144AIndicator" nameSpace="GSC"/>
+    <beField class="BETEXT" customDesc="Indicates if this is a 144A security with registration rights." desc="Rule 144A Registration Indicator" displayCaption="Rule 144A Registration Indicator (US)" entityTypeId="++3qwBhS2etxm003" id="004NWoQC2etzy000" mandatory="0" multiplicity="SINGLE_OR_NULL" name="Rule144ARegistrationIndicator" nameSpace="GSC"/>
+    <beField class="BETEXT" displayCaption="Delivery Type" entityTypeId="++3qwBhS2etxm003" id="008qA8Fi2es18001" mandatory="0" multiplicity="SINGLE_OR_NULL" name="NuveenDeliveryType" nameSpace="NUVEEN"/>
+    <beField class="BEINT" displayCaption="Minimum Trade Qty" entityTypeId="++3qwBhS2etxm003" id="008qAM3i2es18002" mandatory="0" multiplicity="SINGLE_OR_NULL" name="NuveenMinimumTradeQty" nameSpace="NUVEEN"/>
+    <beField class="BETEXT" displayCaption="DTC Regulatory Indicator" entityTypeId="++3qwBhS2etxm003" id="008qAM3i2es18006" mandatory="0" multiplicity="SINGLE_OR_NULL" name="NuveenDTCRegulatoryIndicator" nameSpace="NUVEEN"/>
+    <beField class="BETEXT" displayCaption="NuveenUnitTradedIndicator" entityTypeId="++3qwBhS2etxm003" id="++8qo5Yy2es18000" mandatory="0" multiplicity="SINGLE_OR_NULL" name="NuveenUnitTradedIndicator" nameSpace="NUVEEN"/>
+    <beField class="BEDEC" displayCaption="Original Yield At Issuance" entityTypeId="++3qwBhS2etxm003" id="008r0vgC2es18001" mandatory="0" multiplicity="SINGLE_OR_NULL" name="NuveenOriginalYieldAtIssuance" nameSpace="NUVEEN"/>
+    <beField class="BETEXT" displayCaption="Remarketing Agent Name" entityTypeId="++3qwBhS2etxm003" id="008r0vgC2es18005" mandatory="0" multiplicity="SINGLE_OR_NULL" name="NuveenRemarketingAgentName" nameSpace="NUVEEN"/>
+    <beField class="BETEXT" displayCaption="Offer Type" entityTypeId="++3qwBhS2etxm003" id="008r0vgC2es18009" mandatory="0" multiplicity="SINGLE_OR_NULL" name="NuveenOfferType" nameSpace="NUVEEN"/>
+    <beField class="BEDATE" displayCaption="Offering Accrued Interest From Date/Time" entityTypeId="++3qwBhS2etxm003" id="008r0vgC2es1800D" mandatory="0" multiplicity="SINGLE_OR_NULL" name="NuveenOfferingAccruedInterestFromDateTime" nameSpace="NUVEEN"/>
+    <beField class="BEDEC" displayCaption="Orig Weighted Avg Life" entityTypeId="++3qwBhS2etxm003" id="008r18eC2es18006" mandatory="0" multiplicity="SINGLE_OR_NULL" name="NuveenOrigWeightedAvgLife" nameSpace="NUVEEN"/>
+    <beField class="BETEXT" displayCaption="Original PAC Collar" entityTypeId="++3qwBhS2etxm003" id="++8r6Jjy2es1800N" mandatory="0" multiplicity="SINGLE_OR_NULL" name="NuveenOriginalPACCollar" nameSpace="NUVEEN"/>
+  </beFields>
+  <dataGroups>
+    <dataGroup customInd="0" desc="Equity Features" displayCaption="Equity Features" entityTypeId="++3qwBhS2etxm003" frequencyInd="0" id="005Rqlai2etse00c" ignoreDeleteChildren="false" multiplicity="SINGLE_OR_NULL" name="EquityFeatures" nameSpace="GSC">
+      <part defNameSpace="NUVEEN" fieldId="++8qWzRS2es18009" id="++8qWzRS2es1800M" prntReqdInd="0" seq="60"/>
+      <part defNameSpace="NUVEEN" fieldId="++8qWzRS2es18007" id="++8qWzRS2es1800N" prntReqdInd="0" seq="61"/>
+      <part defNameSpace="NUVEEN" fieldId="++8qWzRS2es1800K" id="++8qWzRS2es1800O" prntReqdInd="0" seq="62"/>
+      <part defNameSpace="NUVEEN" fieldId="++8qWzRS2es1800F" id="++8qWzRS2es1800P" prntReqdInd="0" seq="63"/>
+    </dataGroup>
+    <dataGroup customInd="0" desc="Primary Offer Details" displayCaption="Primary Offer Details" entityTypeId="++3qwBhS2etxm003" frequencyInd="0" id="007pt48i2etbC00O" ignoreDeleteChildren="false" multiplicity="SINGLE_OR_NULL" name="PrimaryOfferDetails" nameSpace="GSC">
+      <part defNameSpace="NUVEEN" fieldId="008qA8Fi2es18001" id="008qA8Fi2es18003" prntReqdInd="0" seq="16"/>
+      <part defNameSpace="NUVEEN" fieldId="008qAM3i2es18002" id="008qAM3i2es18004" prntReqdInd="0" seq="17"/>
+      <part defNameSpace="NUVEEN" fieldId="008qAM3i2es18006" id="008qAM3i2es18008" prntReqdInd="0" seq="18"/>
+      <part defNameSpace="NUVEEN" fieldId="++8qo5Yy2es18000" id="++8qo5Yy2es18002" prntReqdInd="0" seq="19"/>
+      <part defNameSpace="NUVEEN" fieldId="008r0vgC2es18001" id="008r0vgC2es18003" prntReqdInd="0" seq="20"/>
+      <part defNameSpace="NUVEEN" fieldId="008r0vgC2es18005" id="008r0vgC2es18006" prntReqdInd="0" seq="21"/>
+      <part defNameSpace="NUVEEN" fieldId="008r0vgC2es18009" id="008r0vgC2es1800B" prntReqdInd="0" seq="22"/>
+      <part defNameSpace="NUVEEN" fieldId="008r0vgC2es1800D" id="008r18eC2es18000" prntReqdInd="0" seq="23"/>
+      <part defNameSpace="NUVEEN" fieldId="008r18eC2es18006" id="008r18eC2es18008" prntReqdInd="0" seq="24"/>
+      <part defNameSpace="NUVEEN" fieldId="++8r6Jjy2es1800N" id="++8r6Jjy2es1800R" prntReqdInd="0" seq="25"/>
+    </dataGroup>
+    <dataGroup customInd="0" entityTypeId="++3qwBhS2etxm003" frequencyInd="0" id="++5YmLQS2etse03d" ignoreDeleteChildren="false" multiplicity="SINGLE" name="Equity- Root DataGroup" nameSpace="GSC">
+      <part dataGroupId="004fULaC2etuK00i" defNameSpace="NUVEEN" id="008qcnVC2es18000" prntReqdInd="0" seq="10"/>
+      <part dataGroupId="007pt48i2etbC00O" defNameSpace="NUVEEN" id="008qcnVC2es18001" prntReqdInd="0" seq="11"/>
+    </dataGroup>
+  </dataGroups>
+  <occurrences>
+    <occurrence desc="Occurrence for Issue Statistic" id="++5VdRIy2etsO00-" ignoreDeleteChildren="false" multiplicity="SINGLE_OR_NULL" name="ISST_EQSHROST" nameSpace="GSC" parentId="++4Gmmty2ettS01A" table="FT_T_ISST" timeSeries="LOGICAL_DELETE">
+      <field id="++8qWzRS2es18006" name="STAT_VAL_DTE" nameSpace="NUVEEN"/>
+      <value id="++5VdRIy2etsO015" name="STAT_DEF_ID" nameSpace="GSC" type="FILTER_FIELD" value="EQSHROST" valueType="CONSTANT"/>
+    </occurrence>
+    <occurrence desc="Occurrence for Issue Statistic" id="++8qWzRS2es18000" ignoreDeleteChildren="false" multiplicity="SINGLE_OR_NULL" name="ISST_NVN_EQSHOACT" nameSpace="NUVEEN" parentId="++4Gmmty2ettS01A" table="FT_T_ISST" timeSeries="LOGICAL_DELETE">
+      <field id="++8qWzRS2es1800A" name="STAT_VAL_CAMT" nameSpace="NUVEEN"/>
+      <value id="++8qWzRS2es18003" name="STAT_DEF_ID" nameSpace="NUVEEN" type="FILTER_FIELD" value="EQSHOACT" valueType="CONSTANT"/>
+      <option id="++8qWzRS2es18001" nameSpace="NUVEEN" type="DEFAULT_ACTION" value="UNKNOWN"/>
+    </occurrence>
+    <occurrence desc="Occurrence for Issue Statistic" id="++8qWzRS2es1800C" ignoreDeleteChildren="false" multiplicity="SINGLE_OR_NULL" name="ISST_NVN_EQSHORL" nameSpace="NUVEEN" parentId="++4Gmmty2ettS01A" table="FT_T_ISST" timeSeries="LOGICAL_DELETE">
+      <field id="++8qWzRS2es1800E" name="STAT_VAL_CAMT" nameSpace="NUVEEN"/>
+      <value id="++8qWzRS2es1800D" name="STAT_DEF_ID" nameSpace="NUVEEN" type="FILTER_FIELD" value="EQSHORL" valueType="CONSTANT"/>
+    </occurrence>
+    <occurrence desc="Occurrence for Issue Statistic" id="++8qWzRS2es1800H" ignoreDeleteChildren="false" multiplicity="SINGLE_OR_NULL" name="ISST_NVN_EQSHOTMS" nameSpace="NUVEEN" parentId="++4Gmmty2ettS01A" table="FT_T_ISST" timeSeries="LOGICAL_DELETE">
+      <field id="++8qWzRS2es1800J" name="STAT_VAL_CAMT" nameSpace="NUVEEN"/>
+      <value id="++8qWzRS2es1800I" name="STAT_DEF_ID" nameSpace="NUVEEN" type="FILTER_FIELD" value="EQSHOTMS" valueType="CONSTANT"/>
+    </occurrence>
+    <occurrence desc="Occurrence for Underwriting Characteristics" id="007pt48i2etbC00D" ignoreDeleteChildren="false" multiplicity="SINGLE_OR_NULL" name="UWCH_OFFERNUM_1" nameSpace="GSC" parentId="++4Gmmty2ettS01A" table="FT_T_UWCH" timeSeries="LOGICAL_DELETE">
+      <field id="008qA8Fi2es18000" name="DLV_TYP" nameSpace="NUVEEN"/>
+      <field id="008qAM3i2es18005" name="DTC_REG_IND" nameSpace="NUVEEN"/>
+      <field id="008qAM3i2es18001" name="MIN_OFFER_CAMT" nameSpace="NUVEEN"/>
+      <field id="008qAM3i2es18000" name="MIN_OFFER_UNIT_TYP" nameSpace="NUVEEN"/>
+      <field id="008r0vgC2es1800C" name="OFFER_ACRD_INT_FROM_TMS" nameSpace="NUVEEN"/>
+      <field id="008r0vgC2es18008" name="OFFER_TYP" nameSpace="NUVEEN"/>
+      <field id="008r0vgC2es18004" name="REMKTNG_AGENT_NME" nameSpace="NUVEEN"/>
+      <value id="007pt48i2etbC00E" name="OFFER_NUM" nameSpace="GSC" type="FILTER_FIELD" value="1" valueType="CONSTANT"/>
+      <option id="++7p-Q8y2etbC01g" nameSpace="GSC" type="DEFAULT_ACTION" value="UNKNOWN"/>
+      <option id="++7p-Q8y2etbC01h" nameSpace="GSC" type="DEFAULT_MATCH_KEY" value="UWCH_MATCH_1"/>
+    </occurrence>
+    <occurrence desc="Occurrence for Underwriting Statistics" id="007qMKuC2etbC00E" ignoreDeleteChildren="false" multiplicity="SINGLE_OR_NULL" name="UWST_OFFERNUM_1" nameSpace="GSC" parentId="007pt48i2etbC00D" table="FT_T_UWST" timeSeries="LOGICAL_DELETE">
+      <field id="++8r6Jjy2es1800M" name="ORIG_PAC_COLLAR_ID" nameSpace="NUVEEN"/>
+      <field id="008r18eC2es18005" name="ORIG_WAL_CQTY" nameSpace="NUVEEN"/>
+      <field id="008r0vgC2es18000" name="ORIG_YLD_CPCT" nameSpace="NUVEEN"/>
+      <value id="007-zr6i2euPC008" name="STATS_EFF_TMS" nameSpace="GSC" type="DEFAULT_FIELD" value="01-01-1900 12:00:00 AM" valueType="CONSTANT"/>
+    </occurrence>
+  </occurrences>
+  <mappings>
+    <mapping beFieldId="++4ILCyy2etqi015" groupMapping="0" id="++5bPzNy2etse007" nameSpace="GSC" occFieldId="004b1nxi2etv403a"/>
+    <mapping beFieldId="++8qWzRS2es18007" groupMapping="0" id="++8qWzRS2es18008" nameSpace="NUVEEN" occFieldId="++8qWzRS2es18006"/>
+    <mapping beFieldId="++8qWzRS2es18009" groupMapping="0" id="++8qWzRS2es1800B" nameSpace="NUVEEN" occFieldId="++8qWzRS2es1800A"/>
+    <mapping beFieldId="++8qWzRS2es1800F" groupMapping="0" id="++8qWzRS2es1800G" nameSpace="NUVEEN" occFieldId="++8qWzRS2es1800E"/>
+    <mapping beFieldId="++8qWzRS2es1800K" groupMapping="0" id="++8qWzRS2es1800L" nameSpace="NUVEEN" occFieldId="++8qWzRS2es1800J"/>
+    <mapping beFieldId="004JFG3i2ettS00F" groupMapping="0" id="004JFG3i2ettS00P" nameSpace="GSC" occFieldId="004JFG3i2ettS00N"/>
+    <mapping beFieldId="++4IvUyS2etzy00X" groupMapping="0" id="++4IvgEy2etzy000" nameSpace="GSC" occFieldId="004HGjaC2etzy00t"/>
+    <mapping beFieldId="004HMALi2etpS00m" groupMapping="0" id="004YpGTi2etv4001" nameSpace="GSC" occFieldId="004YpGTi2etv4000"/>
+    <mapping beFieldId="004NWoQC2etzy000" groupMapping="0" id="006CNvWi2etvy00a" nameSpace="GSC" occFieldId="006CNvWi2etvy00H"/>
+    <mapping beFieldId="++8qo5Yy2es18000" groupMapping="0" id="++8qo5Yy2es18001" nameSpace="NUVEEN" occFieldId="008qAM3i2es18000"/>
+    <mapping beFieldId="++8r6Jjy2es1800N" groupMapping="0" id="++8r6Jjy2es1800O" nameSpace="NUVEEN" occFieldId="++8r6Jjy2es1800M"/>
+    <mapping beFieldId="008qA8Fi2es18001" groupMapping="0" id="008qA8Fi2es18002" nameSpace="NUVEEN" occFieldId="008qA8Fi2es18000"/>
+    <mapping beFieldId="008qAM3i2es18002" groupMapping="0" id="008qAM3i2es18003" nameSpace="NUVEEN" occFieldId="008qAM3i2es18001"/>
+    <mapping beFieldId="008qAM3i2es18006" groupMapping="0" id="008qAM3i2es18007" nameSpace="NUVEEN" occFieldId="008qAM3i2es18005"/>
+    <mapping beFieldId="008r0vgC2es18001" groupMapping="0" id="008r0vgC2es18002" nameSpace="NUVEEN" occFieldId="008r0vgC2es18000"/>
+    <mapping beFieldId="008r0vgC2es18005" groupMapping="0" id="008r0vgC2es18007" nameSpace="NUVEEN" occFieldId="008r0vgC2es18004"/>
+    <mapping beFieldId="008r0vgC2es18009" groupMapping="0" id="008r0vgC2es1800A" nameSpace="NUVEEN" occFieldId="008r0vgC2es18008"/>
+    <mapping beFieldId="008r0vgC2es1800D" groupMapping="0" id="008r0vgC2es1800E" nameSpace="NUVEEN" occFieldId="008r0vgC2es1800C"/>
+    <mapping beFieldId="008r18eC2es18006" groupMapping="0" id="008r18eC2es18007" nameSpace="NUVEEN" occFieldId="008r18eC2es18005"/>
+  </mappings>
+  <entityRelations>
+    <entityRelation desc="CUSTOM:Relation Participant" entityId="++5YmLQS2etse03c" id="++5dnClS2etxK003" lookupField="005Q5i8i2etse002" multiplicity="MULTIPLE_OR_NULL" name="UnderlyingEquity" nameSpace="NUVEEN" rltdEntityId="++5SQ0Ly2etse000">
+      <part forPublishing="1" forUI="0" id="++5jTbey2etqS0Lw" nameSpace="GSC" partId="++4u-kJy2etzO00d"/>
+      <part forPublishing="1" forUI="1" id="++8nm5mS2es1800F" nameSpace="NUVEEN" partId="++5PNZ5y2etz400o"/>
+      <part forPublishing="1" forUI="1" id="008qcr5i2es18000" nameSpace="NUVEEN" partId="++5aK3ky2etse01t"/>
+      <part forPublishing="1" forUI="1" id="007ooc-C2etbC03L" nameSpace="GSC" partId="++5aK3ky2etse02H"/>
+      <part forPublishing="1" forUI="1" id="007ooc-C2etbC03M" nameSpace="GSC" partId="++5aK3ky2etse03C"/>
+      <part forPublishing="1" forUI="1" id="++5dnClS2etxK00A" nameSpace="GSC" partId="005Q5i8i2etse002"/>
+      <part forPublishing="1" forUI="0" id="++5jTbey2etqS0Lu" nameSpace="GSC" partId="005Q5i8i2etse003"/>
+      <part forPublishing="1" forUI="0" id="005eN9Mi2etpC001" nameSpace="GSC" partId="005Q5i8i2etse004"/>
+      <part forPublishing="1" forUI="0" id="++5eMxCS2etpC001" nameSpace="GSC" partId="005Q5i8i2etse005"/>
+      <part forPublishing="1" forUI="1" id="++8nZ+jS2es18002" nameSpace="NUVEEN" partId="008k3Zsi2etbS00I"/>
+      <part forPublishing="1" forUI="1" id="++8nm5mS2es1800D" nameSpace="NUVEEN" partId="008mcntC2etbS08M"/>
+    </entityRelation>
+  </entityRelations>
+</entities>

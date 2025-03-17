@@ -1,0 +1,407 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entities cleanUnusedFields="false" nameSpace="NUVEEN">
+  <beFields>
+    <beField class="BETEXT" customDesc="" desc="" displayCaption="Accounting Company" entityTypeId="BGPPRY0000000001" id="++9GWDuy2etbS00S" mandatory="0" multiplicity="SINGLE_OR_NULL" name="NREAccountingCompany" nameSpace="NUVEEN"/>
+    <beField class="BEDATE" displayCaption="Cert of Occ Completed Date" entityTypeId="BGPPRY0000000001" id="++9GWDuy2etbS00X" mandatory="0" multiplicity="SINGLE_OR_NULL" name="NRECertofOccCompletedDate" nameSpace="NUVEEN"/>
+    <beField class="BETEXT" displayCaption="Management Company" entityTypeId="BGPPRY0000000001" id="++9GWDuy2etbS00c" mandatory="0" multiplicity="SINGLE_OR_NULL" name="NREManagementCompany" nameSpace="NUVEEN"/>
+    <beField class="BEDEC" displayCaption="Net Rentable Area" entityTypeId="BGPPRY0000000001" id="++9GWDuy2etbS00I" mandatory="0" multiplicity="SINGLE_OR_NULL" name="NRENetRentableArea" nameSpace="NUVEEN"/>
+    <beField class="BEINT" displayCaption="Number of Floors" entityTypeId="BGPPRY0000000001" id="++9GWDuy2etbS00N" mandatory="0" multiplicity="SINGLE_OR_NULL" name="NRENumberofFloors" nameSpace="NUVEEN"/>
+    <beField class="BETEXT" displayCaption="Currency" entityTypeId="BGPPRY0000000001" id="009GWAzi2etbS003" mandatory="0" multiplicity="SINGLE_OR_NULL" name="NREPropertyCurrency" nameSpace="NUVEEN"/>
+    <beField class="BETEXT" displayCaption="Developer" entityTypeId="BGPPRY0000000001" id="++9GWDuy2etbS003" mandatory="0" multiplicity="SINGLE_OR_NULL" name="NREPropertyDeveloper" nameSpace="NUVEEN"/>
+    <beField class="BETEXT" displayCaption="Joint Venture Partner" entityTypeId="BGPPRY0000000001" id="++9GWDuy2etbS008" mandatory="0" multiplicity="SINGLE_OR_NULL" name="NREPropertyJVPartner" nameSpace="NUVEEN"/>
+    <beField class="BEDEC" displayCaption="Land Acreage" entityTypeId="BGPPRY0000000001" id="++9GWDuy2etbS00D" mandatory="0" multiplicity="SINGLE_OR_NULL" name="NREPropertyLandAcreage" nameSpace="NUVEEN"/>
+    <beField class="BEINT" customDesc="" desc="" displayCaption="Number of Buildings" entityTypeId="BGPPRY0000000001" id="009JHcpi2etbS003" mandatory="0" multiplicity="SINGLE_OR_NULL" name="NRENumberofBuildings" nameSpace="NUVEEN"/>
+    <beField class="BEDEC" customDesc="" customDomainSQL="" customSQL="" desc="" displayCaption="Gross Floor Area" entityTypeId="BGPPRY0000000001" id="009tcVSi2etbS004" mandatory="0" multiplicity="SINGLE_OR_NULL" name="NREGrossFloorArea" nameSpace="NUVEEN">
+      <fieldConfig id="009tcVSi2etbS005" nameSpace="NUVEEN" type="ALLOW_NEGATIVE" value="N"/>
+    </beField>
+    <beField class="BETEXT" customDesc="" customDomainSQL="SELECT PROP_SUBTYP CODE, PROP_SUBTYP DISPLAY_NAME FROM FT_T_PPS1 WHERE  1=1 AND ( END_TMS IS null or END_TMS &gt;= SYSDATE())" customSQL="" desc="" displayCaption="Property Sub Type (Global)" entityTypeId="BGPPRY0000000001" id="009vg9JC2etbS2Z8" mandatory="0" multiplicity="SINGLE_OR_NULL" name="PropertySubType" nameSpace="NUVEEN"/>
+    <beField class="BEDATE" displayCaption="Acquisition Date" entityTypeId="BGPPRY0000000001" id="++9GW6vS2etbS008" mandatory="0" multiplicity="SINGLE_OR_NULL" name="NREAcquisitionDate" nameSpace="NUVEEN"/>
+    <beField class="BETEXT" displayCaption="Seller" entityTypeId="BGPPRY0000000001" id="++9GW6vS2etbS00D" mandatory="0" multiplicity="SINGLE_OR_NULL" name="NREPropertySeller" nameSpace="NUVEEN"/>
+    <beField class="BETEXT" displayCaption="Authorization ID" entityTypeId="BGPPRY0000000001" id="++9GW6vS2etbS00N" mandatory="0" multiplicity="SINGLE_OR_NULL" name="NREAuthorizationID" nameSpace="NUVEEN"/>
+    <beField class="BETEXT" displayCaption="Buyer" entityTypeId="BGPPRY0000000001" id="++9GW6vS2etbS003" mandatory="0" multiplicity="SINGLE_OR_NULL" name="NREPropertyBuyer" nameSpace="NUVEEN"/>
+    <beField class="BEDATE" displayCaption="Disposition Date" entityTypeId="BGPPRY0000000001" id="++9GV+wy2etbS003" mandatory="0" multiplicity="SINGLE_OR_NULL" name="NREDispositionDate" nameSpace="NUVEEN"/>
+    <beField class="BETEXT" customDesc="" desc="" displayCaption="PropertyIdentifierGlobalIndicator" entityTypeId="BGPPRY0000000001" id="009Ns9DC2etbS001" mandatory="0" multiplicity="MULTIPLE_OR_NULL" name="PropertyIdentifierGlobalIndicator" nameSpace="NUVEEN"/>
+    <beField class="BETEXT" customDesc="" desc="" displayCaption="Ext Latitude Decimal Degrees" entityTypeId="BGPPRY0000000001" id="++9HzJNy2etbS002" mandatory="0" multiplicity="MULTIPLE_OR_NULL" name="PropMADRLatitudeDegrees" nameSpace="NUVEEN"/>
+    <beField class="BETEXT" customDesc="" desc="" displayCaption="Longitude Decimal Degrees" entityTypeId="BGPPRY0000000001" id="++9HzJNy2etbS004" mandatory="0" multiplicity="MULTIPLE_OR_NULL" name="PropMADRLongitudeDegrees" nameSpace="NUVEEN"/>
+    <beField class="BETEXT" customDesc="" desc="" displayCaption="ExceptionText" entityTypeId="BGPPRY0000000001" id="009UMKdi2etbS008" mandatory="0" multiplicity="MULTIPLE_OR_NULL" name="NREExceptionText" nameSpace="NUVEEN"/>
+    <beField class="BETEXT" customDesc="" customDomainSQL="" customSQL="" desc="" displayCaption="Asset No" entityTypeId="BGPPRY0000000001" id="++9z4B4S2etbS03N" mandatory="0" multiplicity="SINGLE_OR_NULL" name="AssetNoPropertyId" nameSpace="NUVEEN"/>
+    <beField class="BETEXT" customDesc="" customDomainSQL="" customSQL="" desc="" displayCaption="Building ID" entityTypeId="BGPPRY0000000001" id="++9z4B4S2etbS032" mandatory="0" multiplicity="SINGLE_OR_NULL" name="BuildingIDPropertyId" nameSpace="NUVEEN"/>
+    <beField class="BETEXT" customDesc="" customDomainSQL="" customSQL="" desc="" displayCaption="DealPath Deal ID" entityTypeId="BGPPRY0000000001" id="++9z4B4S2etbS02V" mandatory="0" multiplicity="SINGLE_OR_NULL" name="DealPathDealIDPropertyId" nameSpace="NUVEEN"/>
+    <beField class="BETEXT" customDesc="" customDomainSQL="" customSQL="" desc="" displayCaption="DealPath Prop ID" entityTypeId="BGPPRY0000000001" id="++9z4B4S2etbS02h" mandatory="0" multiplicity="SINGLE_OR_NULL" name="DealPathPropIDPropertyId" nameSpace="NUVEEN"/>
+    <beField class="BETEXT" customDesc="" customDomainSQL="" customSQL="" desc="" displayCaption="Investment ID" entityTypeId="BGPPRY0000000001" id="++9z4B4S2etbS038" mandatory="0" multiplicity="SINGLE_OR_NULL" name="InvestmentIDPropertyId" nameSpace="NUVEEN"/>
+    <beField class="BETEXT" customDesc="" customDomainSQL="" customSQL="" desc="" displayCaption="Property ID" entityTypeId="BGPPRY0000000001" id="++9z4B4S2etbS03H" mandatory="0" multiplicity="SINGLE_OR_NULL" name="PropIDPropertyId" nameSpace="NUVEEN"/>
+    <beField class="BETEXT" customDesc="" customDomainSQL="" customSQL="" desc="" displayCaption="Asset ID" entityTypeId="BGPPRY0000000001" id="009zCcii2etbS01Z" mandatory="0" multiplicity="SINGLE_OR_NULL" name="AsstIDPropertyId" nameSpace="NUVEEN"/>
+    <beField class="BETEXT" customDesc="" customDomainSQL="" customSQL="" desc="" displayCaption="ESG Asset ID" entityTypeId="BGPPRY0000000001" id="009zCcii2etbS01N" mandatory="0" multiplicity="SINGLE_OR_NULL" name="EsgAssetIDPropertyId" nameSpace="NUVEEN"/>
+    <beField class="BETEXT" customDesc="" customDomainSQL="" customSQL="" desc="" displayCaption="Yardi Investment ID" entityTypeId="BGPPRY0000000001" id="009zCcii2etbS01T" mandatory="0" multiplicity="SINGLE_OR_NULL" name="YardiInvestmentIDPropertyId" nameSpace="NUVEEN"/>
+    <beField class="BETEXT" customDesc="" desc="" displayCaption="Preferred Property ID" entityTypeId="BGPPRY0000000001" id="++9IDWmy2etbS00L" mandatory="0" multiplicity="SINGLE_OR_NULL" name="NREPreferredPropertyID" nameSpace="NUVEEN"/>
+    <beField class="BETEXT" customDesc="" desc="" displayCaption="Property Type" entityTypeId="BGPPRY0000000001" id="009JHcpi2etbS00I" mandatory="0" multiplicity="SINGLE_OR_NULL" name="NREPropertyType" nameSpace="NUVEEN"/>
+    <beField class="BETSTAMP" customDesc="" desc="" displayCaption="Last Change Time" entityTypeId="BGPPRY0000000001" id="009I4dai2etbS004" mandatory="0" multiplicity="SINGLE_OR_NULL" name="PPRYLastChangeDateTime" nameSpace="NUVEEN"/>
+    <beField class="BETEXT" customDesc="" desc="" displayCaption="Last Change UserID" entityTypeId="BGPPRY0000000001" id="009I4dai2etbS002" mandatory="0" multiplicity="SINGLE_OR_NULL" name="PPRYLastChangeUserID" nameSpace="NUVEEN"/>
+    <beField class="BEDATE" customDesc="" desc="" displayCaption="Endated Time" entityTypeId="BGPPRY0000000001" id="++9Jdl3y2etbS001" mandatory="0" multiplicity="SINGLE_OR_NULL" name="NREEndatedTime" nameSpace="NUVEEN"/>
+  </beFields>
+  <dataGroups>
+    <dataGroup customInd="0" displayCaption="Property Details" entityTypeId="BGPPRY0000000001" frequencyInd="0" id="0082S8PAmG00O013" ignoreDeleteChildren="false" multiplicity="SINGLE" name="PropertyDetails" nameSpace="GSC">
+      <part defNameSpace="NUVEEN" fieldId="++9GWDuy2etbS00S" id="++9HTWNy2etbS00R" prntReqdInd="0" seq="16"/>
+      <part defNameSpace="NUVEEN" fieldId="++9GWDuy2etbS00X" id="++9HTWNy2etbS00S" prntReqdInd="0" seq="17"/>
+      <part defNameSpace="NUVEEN" fieldId="++9GWDuy2etbS00c" id="++9HTWNy2etbS00T" prntReqdInd="0" seq="18"/>
+      <part defNameSpace="NUVEEN" fieldId="++9GWDuy2etbS00I" id="++9HTWNy2etbS00U" prntReqdInd="0" seq="19"/>
+      <part defNameSpace="NUVEEN" fieldId="++9GWDuy2etbS00N" id="++9HTWNy2etbS00V" prntReqdInd="0" seq="20"/>
+      <part defNameSpace="NUVEEN" fieldId="009GWAzi2etbS003" id="++9HTWNy2etbS00W" prntReqdInd="0" seq="21"/>
+      <part defNameSpace="NUVEEN" fieldId="++9GWDuy2etbS003" id="++9HTWNy2etbS00X" prntReqdInd="0" seq="22"/>
+      <part defNameSpace="NUVEEN" fieldId="++9GWDuy2etbS008" id="++9HTWNy2etbS00Y" prntReqdInd="0" seq="23"/>
+      <part defNameSpace="NUVEEN" fieldId="++9GWDuy2etbS00D" id="++9HTWNy2etbS00Z" prntReqdInd="0" seq="24"/>
+      <part defNameSpace="NUVEEN" fieldId="009JHcpi2etbS003" id="009JHcpi2etbS006" prntReqdInd="0" seq="25"/>
+      <part defNameSpace="NUVEEN" fieldId="009tcVSi2etbS004" id="009tcVSi2etbS008" prntReqdInd="0" seq="26"/>
+      <part defNameSpace="NUVEEN" fieldId="009vg9JC2etbS2Z8" id="009vg9JC2etbS2Z9" prntReqdInd="0" seq="27"/>
+    </dataGroup>
+    <dataGroup category="" customInd="0" desc="" displayCaption="Acquisition Details" entityTypeId="BGPPRY0000000001" frequencyInd="0" id="++9HTWNy2etbS00I" ignoreDeleteChildren="false" multiplicity="SINGLE_OR_NULL" name="AcquisitionDetails" nameSpace="NUVEEN">
+      <part defNameSpace="NUVEEN" fieldId="++9GW6vS2etbS008" id="++9HTWNy2etbS00J" prntReqdInd="0" seq="0"/>
+      <part defNameSpace="NUVEEN" fieldId="++9GW6vS2etbS00D" id="++9HTWNy2etbS00K" prntReqdInd="0" seq="1"/>
+      <part defNameSpace="NUVEEN" fieldId="++9GW6vS2etbS00N" id="++9HTWNy2etbS00L" prntReqdInd="0" seq="2"/>
+    </dataGroup>
+    <dataGroup category="" customInd="0" desc="" displayCaption="Disposition Details" entityTypeId="BGPPRY0000000001" frequencyInd="0" id="++9HTWNy2etbS00M" ignoreDeleteChildren="false" multiplicity="SINGLE_OR_NULL" name="DispositionDetails" nameSpace="NUVEEN">
+      <part defNameSpace="NUVEEN" fieldId="++9GW6vS2etbS003" id="++9HTWNy2etbS00N" prntReqdInd="0" seq="0"/>
+      <part defNameSpace="NUVEEN" fieldId="++9GV+wy2etbS003" id="++9HTWNy2etbS00O" prntReqdInd="0" seq="1"/>
+    </dataGroup>
+    <dataGroup customInd="0" displayCaption="Identifiers" entityTypeId="BGPPRY0000000001" frequencyInd="0" id="0082SQ4AmG00O00P" ignoreDeleteChildren="false" multiplicity="MULTIPLE_OR_NULL" name="PropertyIdentifiers" nameSpace="GSC">
+      <part defNameSpace="NUVEEN" fieldId="009Ns9DC2etbS001" id="009Ns9DC2etbS003" prntReqdInd="0" seq="2"/>
+    </dataGroup>
+    <dataGroup customInd="0" displayCaption="Mailing Address" entityTypeId="BGPPRY0000000001" frequencyInd="0" id="008eM6nC2es3803W" ignoreDeleteChildren="false" multiplicity="MULTIPLE_OR_NULL" name="AccountAddressMailing" nameSpace="GSC">
+      <part defNameSpace="NUVEEN" fieldId="++9HzJNy2etbS002" id="++9HzJNy2etbS006" prntReqdInd="0" seq="34"/>
+      <part defNameSpace="NUVEEN" fieldId="++9HzJNy2etbS004" id="++9HzJNy2etbS007" prntReqdInd="0" seq="35"/>
+    </dataGroup>
+    <dataGroup category="" customInd="0" desc="" displayCaption="Exceptions" entityTypeId="BGPPRY0000000001" frequencyInd="0" id="009UMKdi2etbS00A" ignoreDeleteChildren="false" multiplicity="MULTIPLE_OR_NULL" name="NREExceptions" nameSpace="NUVEEN">
+      <part defNameSpace="NUVEEN" fieldId="009UMKdi2etbS008" id="009UMKdi2etbS00B" prntReqdInd="0" seq="0"/>
+    </dataGroup>
+    <dataGroup customInd="0" desc="All Property Identifier" displayCaption="All Property Identifier" entityTypeId="BGPPRY0000000001" frequencyInd="0" id="++9zCUbS2etbS00A" ignoreDeleteChildren="false" multiplicity="SINGLE_OR_NULL" name="AllPropertyIdentifier" nameSpace="NUVEEN">
+      <part defNameSpace="NUVEEN" fieldId="++9z4B4S2etbS03N" id="++9zCUbS2etbS00B" prntReqdInd="0" seq="0"/>
+      <part defNameSpace="NUVEEN" fieldId="++9z4B4S2etbS032" id="++9zCUbS2etbS00C" prntReqdInd="0" seq="1"/>
+      <part defNameSpace="NUVEEN" fieldId="++9z4B4S2etbS02V" id="++9zCUbS2etbS00D" prntReqdInd="0" seq="2"/>
+      <part defNameSpace="NUVEEN" fieldId="++9z4B4S2etbS02h" id="++9zCUbS2etbS00E" prntReqdInd="0" seq="3"/>
+      <part defNameSpace="NUVEEN" fieldId="++9z4B4S2etbS038" id="++9zCUbS2etbS00F" prntReqdInd="0" seq="4"/>
+      <part defNameSpace="NUVEEN" fieldId="++9z4B4S2etbS03H" id="++9zCUbS2etbS00G" prntReqdInd="0" seq="5"/>
+      <part defNameSpace="NUVEEN" fieldId="009zCcii2etbS01Z" id="009zCcii2etbS01b" prntReqdInd="0" seq="6"/>
+      <part defNameSpace="NUVEEN" fieldId="009zCcii2etbS01N" id="009zCcii2etbS01c" prntReqdInd="0" seq="7"/>
+      <part defNameSpace="NUVEEN" fieldId="009zCcii2etbS01T" id="009zCcii2etbS01d" prntReqdInd="0" seq="8"/>
+    </dataGroup>
+    <dataGroup customInd="0" entityTypeId="BGPPRY0000000001" frequencyInd="0" id="0082S8PAmG00O001" ignoreDeleteChildren="false" multiplicity="SINGLE" name="Property- Root DataGroup" nameSpace="GSC">
+      <part dataGroupId="++9HTWNy2etbS00I" defNameSpace="NUVEEN" id="++9HTWNy2etbS00a" prntReqdInd="0" seq="1"/>
+      <part dataGroupId="++9HTWNy2etbS00M" defNameSpace="NUVEEN" id="++9HTWNy2etbS00b" prntReqdInd="0" seq="2"/>
+      <part dataGroupId="009UMKdi2etbS00A" defNameSpace="NUVEEN" id="009UMKdi2etbS00C" prntReqdInd="0" seq="14"/>
+      <part dataGroupId="++9zCUbS2etbS00A" defNameSpace="NUVEEN" id="009zCcii2etbS003" multiplicity="SINGLE_OR_NULL" prntReqdInd="0" seq="15"/>
+    </dataGroup>
+    <dataGroup category="" customInd="0" desc="" displayCaption="NREDetails" entityTypeId="BGPPRY0000000001" frequencyInd="0" id="009HemDC2etbS000" ignoreDeleteChildren="false" multiplicity="SINGLE_OR_NULL" name="NREDetails" nameSpace="NUVEEN">
+      <part beRelationId="009JHcpi2etbS008" defNameSpace="NUVEEN" id="009JHcpi2etbS009" label="NRERelatedProperty" prntReqdInd="0" seq="0"/>
+      <part defNameSpace="NUVEEN" fieldId="0082S8PAmG00O00u" id="009HemDC2etbS00F" prntReqdInd="1" seq="1"/>
+      <part defNameSpace="NUVEEN" fieldId="++9IDWmy2etbS00L" id="++9IDWmy2etbS00N" label="PropertyID" prntReqdInd="0" seq="2"/>
+      <part defNameSpace="NUVEEN" fieldId="009JHcpi2etbS00I" id="009JHcpi2etbS00K" label="PropertyType" prntReqdInd="0" seq="3"/>
+      <part defNameSpace="NUVEEN" fieldId="009JHcpi2etbS003" id="009JHcpi2etbS007" label="NumberofBuildings" prntReqdInd="0" seq="5"/>
+      <part defNameSpace="NUVEEN" fieldId="0082S8PAmG00O00k" id="009JHcpi2etbS00L" prntReqdInd="0" seq="6"/>
+      <part defNameSpace="NUVEEN" fieldId="++9GWDuy2etbS00N" id="009HemDC2etbS008" label="NumberofFloors" prntReqdInd="0" seq="7"/>
+      <part defNameSpace="NUVEEN" fieldId="0082S8PAmG00O00i" id="009JHcpi2etbS00M" label="NumberofBeds" prntReqdInd="0" seq="8"/>
+      <part defNameSpace="NUVEEN" fieldId="++9GWDuy2etbS00I" id="009HemDC2etbS007" label="NetRentableArea" prntReqdInd="0" seq="9"/>
+      <part defNameSpace="NUVEEN" fieldId="009GWAzi2etbS003" id="009HemDC2etbS00A" label="Currency" prntReqdInd="0" seq="10"/>
+      <part defNameSpace="NUVEEN" fieldId="++9GWDuy2etbS003" id="009HemDC2etbS00B" label="Developer" prntReqdInd="0" seq="11"/>
+      <part defNameSpace="NUVEEN" fieldId="++9GWDuy2etbS008" id="009HemDC2etbS00C" label="JVPartner" prntReqdInd="0" seq="12"/>
+      <part defNameSpace="NUVEEN" fieldId="++9GWDuy2etbS00D" id="009HemDC2etbS00D" label="LandAcreage" prntReqdInd="0" seq="13"/>
+      <part defNameSpace="NUVEEN" fieldId="++9GWDuy2etbS00S" id="009HemDC2etbS001" label="AccountingCompany" prntReqdInd="0" seq="14"/>
+      <part defNameSpace="NUVEEN" fieldId="++9GWDuy2etbS00c" id="009HemDC2etbS006" label="ManagementCompany" prntReqdInd="0" seq="15"/>
+      <part defNameSpace="NUVEEN" fieldId="++9GWDuy2etbS00X" id="009HemDC2etbS004" label="CertofOccCompletedDate" prntReqdInd="0" seq="16"/>
+      <part defNameSpace="NUVEEN" fieldId="0082S8PAmG00O00-" id="++9Jo+Oy2etbS000" label="IsNREInstanceOfYardi" prntReqdInd="0" seq="17"/>
+      <part defNameSpace="NUVEEN" fieldId="++9GW6vS2etbS008" id="009HemDC2etbS002" label="AcquisitionDate" prntReqdInd="0" seq="18"/>
+      <part defNameSpace="NUVEEN" fieldId="++9GW6vS2etbS00D" id="009HemDC2etbS00E" label="Seller" prntReqdInd="0" seq="19"/>
+      <part defNameSpace="NUVEEN" fieldId="++9GW6vS2etbS00N" id="009HemDC2etbS003" label="AuthorizationID" prntReqdInd="0" seq="20"/>
+      <part defNameSpace="NUVEEN" fieldId="++9GV+wy2etbS003" id="009HemDC2etbS005" label="DispositionDate" prntReqdInd="0" seq="21"/>
+      <part defNameSpace="NUVEEN" fieldId="++9GW6vS2etbS003" id="009HemDC2etbS009" label="Buyer" prntReqdInd="0" seq="22"/>
+      <part defNameSpace="NUVEEN" fieldId="008Y0gsC2etXK000" id="009HemDC2etbS00H" prntReqdInd="0" seq="23"/>
+      <part defNameSpace="NUVEEN" fieldId="008Y0gsC2etXK001" id="009HemDC2etbS00I" prntReqdInd="0" seq="24"/>
+      <part defNameSpace="NUVEEN" fieldId="009I4dai2etbS004" id="++9IDWmy2etbS00O" label="LastChangeDateTime" prntReqdInd="0" seq="25"/>
+      <part defNameSpace="NUVEEN" fieldId="009I4dai2etbS002" id="++9IDWmy2etbS00P" label="LastChangeUserID" prntReqdInd="0" seq="26"/>
+      <part defNameSpace="NUVEEN" fieldId="++9Jdl3y2etbS001" id="++9Jdl3y2etbS003" label="EndDatedTime" prntReqdInd="0" seq="27"/>
+      <part defNameSpace="NUVEEN" fieldId="009tcVSi2etbS004" id="++9vI4Ny2etbS2UK" prntReqdInd="0" seq="28"/>
+      <part defNameSpace="NUVEEN" fieldId="009vg9JC2etbS2Z8" id="009vg9JC2etbS2ZA" prntReqdInd="0" seq="29"/>
+    </dataGroup>
+    <dataGroup category="" customInd="0" desc="" displayCaption="Related PropertyNRE" entityTypeId="BGPPRY0000000001" frequencyInd="0" id="009JBdAi2etbS004" ignoreDeleteChildren="false" multiplicity="MULTIPLE" name="RelatedPropertyNRE" nameSpace="NUVEEN">
+      <part beRelationId="009JBdAi2etbS00B" defNameSpace="NUVEEN" id="009JBdAi2etbS00C" label="PropertyNREtoPropertyNRERelation" prntReqdInd="0" seq="0"/>
+      <part defNameSpace="NUVEEN" fieldId="0082SQ4AmG00O05v" id="009JBdAi2etbS00K" prntReqdInd="1" seq="1"/>
+      <part defNameSpace="NUVEEN" fieldId="0082SQ4AmG00O05u" id="009JBdAi2etbS00L" prntReqdInd="0" seq="2"/>
+    </dataGroup>
+    <dataGroup customInd="0" entityTypeId="BGPPRY0000000001" frequencyInd="0" id="++9HTWNy2etbS001" ignoreDeleteChildren="false" multiplicity="SINGLE" name="PropertyNRE- Root DataGroup" nameSpace="NUVEEN">
+      <part dataGroupId="009HemDC2etbS000" defNameSpace="NUVEEN" id="009HemDC2etbS00N" prntReqdInd="0" seq="0"/>
+      <part dataGroupId="009JBdAi2etbS004" defNameSpace="NUVEEN" id="009JBdAi2etbS00G" label="NRERelatedProperty" prntReqdInd="1" seq="1"/>
+    </dataGroup>
+  </dataGroups>
+  <relations>
+    <relation id="009JHcpi2etbS00B" name="FT_T_PPRY-To-FT_T_PPTY01" nameSpace="NUVEEN" srcTable="FT_T_PPRY" tgtTable="FT_T_PPTY">
+      <field fromColumn="PPTY_OID" id="009JHcpi2etbS00C" nameSpace="NUVEEN" toColumn="PPTY_OID" type="RELATION_FIELD" valueType="COLUMN"/>
+    </relation>
+    <relation id="009JBdAi2etbS00E" name="FT_T_PPRL-To-FT_T_PPRY03" nameSpace="NUVEEN" srcTable="FT_T_PPRL" tgtTable="FT_T_PPRY">
+      <field fromColumn="PRNT_PPRY_OID" id="009JBdAi2etbS00F" nameSpace="NUVEEN" toColumn="PPRY_OID" type="RELATION_FIELD" valueType="COLUMN"/>
+    </relation>
+    <relation customSQL="#TO_TABLE#.NOTFCN_STAT_TYP = 'OPEN'" id="009UMKdi2etbS001" name="FT_T_PPRY-To-FT_T_NTEL" nameSpace="NUVEEN" srcTable="FT_T_PPRY" tgtTable="FT_T_NTEL">
+      <field fromColumn="PPRY_OID" id="009UMKdi2etbS002" nameSpace="NUVEEN" toColumn="XREF_TBL_OID" type="RELATION_FIELD" valueType="COLUMN"/>
+    </relation>
+  </relations>
+  <occurrences>
+    <occurrence desc="Occurrence for Property" id="0082S8PAmG00O006" ignoreDeleteChildren="false" multiplicity="SINGLE_OR_NULL" name="PPRY_01" nameSpace="GSC" table="FT_T_PPRY" timeSeries="NONE">
+      <field id="009JHcpi2etbS00A" nameSpace="NUVEEN" relationId="009JHcpi2etbS00B"/>
+      <field id="++9Jdl3y2etbS000" name="END_TMS" nameSpace="NUVEEN"/>
+      <field id="009I4dai2etbS001" name="LAST_CHG_TMS" nameSpace="NUVEEN"/>
+      <field id="009I4dai2etbS000" name="LAST_CHG_USR_ID" nameSpace="NUVEEN"/>
+    </occurrence>
+    <occurrence desc="Occurrence for Property Statistic" id="++9GWDuy2etbS000" ignoreDeleteChildren="false" multiplicity="SINGLE_OR_NULL" name="PPST_PPRY_NREDVLPR" nameSpace="NUVEEN" parentId="0082S8PAmG00O006" table="FT_T_PPST" timeSeries="LOGICAL_DELETE">
+      <field id="++9GWDuy2etbS002" name="STAT_CHAR_VAL_TXT" nameSpace="NUVEEN"/>
+      <value id="++9GWDuy2etbS001" name="STAT_DEF_ID" nameSpace="NUVEEN" type="FILTER_FIELD" value="NREDVLPR" valueType="CONSTANT"/>
+    </occurrence>
+    <occurrence desc="Occurrence for Property Statistic" id="++9GWDuy2etbS005" ignoreDeleteChildren="false" multiplicity="SINGLE_OR_NULL" name="PPST_PPRY_NREJVPRT" nameSpace="NUVEEN" parentId="0082S8PAmG00O006" table="FT_T_PPST" timeSeries="LOGICAL_DELETE">
+      <field id="++9GWDuy2etbS007" name="STAT_CHAR_VAL_TXT" nameSpace="NUVEEN"/>
+      <value id="++9GWDuy2etbS006" name="STAT_DEF_ID" nameSpace="NUVEEN" type="FILTER_FIELD" value="NREJVPRT" valueType="CONSTANT"/>
+    </occurrence>
+    <occurrence desc="Occurrence for Property Statistic" id="++9GWDuy2etbS00A" ignoreDeleteChildren="false" multiplicity="SINGLE_OR_NULL" name="PPST_PPRY_NRELNDA" nameSpace="NUVEEN" parentId="0082S8PAmG00O006" table="FT_T_PPST" timeSeries="LOGICAL_DELETE">
+      <field id="++9GWDuy2etbS00C" name="STAT_VAL_CAMT" nameSpace="NUVEEN"/>
+      <value id="++9GWDuy2etbS00B" name="STAT_DEF_ID" nameSpace="NUVEEN" type="FILTER_FIELD" value="NRELNDA" valueType="CONSTANT"/>
+    </occurrence>
+    <occurrence desc="Occurrence for Property Statistic" id="++9GWDuy2etbS00F" ignoreDeleteChildren="false" multiplicity="SINGLE_OR_NULL" name="PPST_PPRY_NRERNTAR" nameSpace="NUVEEN" parentId="0082S8PAmG00O006" table="FT_T_PPST" timeSeries="LOGICAL_DELETE">
+      <field id="++9GWDuy2etbS00H" name="STAT_VAL_CAMT" nameSpace="NUVEEN"/>
+      <value id="++9GWDuy2etbS00G" name="STAT_DEF_ID" nameSpace="NUVEEN" type="FILTER_FIELD" value="NRERNTAR" valueType="CONSTANT"/>
+    </occurrence>
+    <occurrence desc="Occurrence for Property Statistic" id="++9GWDuy2etbS00K" ignoreDeleteChildren="false" multiplicity="SINGLE_OR_NULL" name="PPST_PPRY_NREFLRS" nameSpace="NUVEEN" parentId="0082S8PAmG00O006" table="FT_T_PPST" timeSeries="LOGICAL_DELETE">
+      <field id="++9GWDuy2etbS00M" name="STAT_INT_VAL_NUM" nameSpace="NUVEEN"/>
+      <value id="++9GWDuy2etbS00L" name="STAT_DEF_ID" nameSpace="NUVEEN" type="FILTER_FIELD" value="NREFLRS" valueType="CONSTANT"/>
+    </occurrence>
+    <occurrence desc="Occurrence for Property Statistic" id="++9GWDuy2etbS00P" ignoreDeleteChildren="false" multiplicity="SINGLE_OR_NULL" name="PPST_PPRY_NREACMPY" nameSpace="NUVEEN" parentId="0082S8PAmG00O006" table="FT_T_PPST" timeSeries="LOGICAL_DELETE">
+      <field id="++9GWDuy2etbS00R" name="STAT_CHAR_VAL_TXT" nameSpace="NUVEEN"/>
+      <value id="++9GWDuy2etbS00Q" name="STAT_DEF_ID" nameSpace="NUVEEN" type="FILTER_FIELD" value="NREACMPY" valueType="CONSTANT"/>
+    </occurrence>
+    <occurrence desc="Occurrence for Property Statistic" id="++9GWDuy2etbS00U" ignoreDeleteChildren="false" multiplicity="SINGLE_OR_NULL" name="PPST_PPRY_NREOCDTE" nameSpace="NUVEEN" parentId="0082S8PAmG00O006" table="FT_T_PPST" timeSeries="LOGICAL_DELETE">
+      <field id="++9GWDuy2etbS00W" name="STAT_VAL_DTE" nameSpace="NUVEEN"/>
+      <value id="++9GWDuy2etbS00V" name="STAT_DEF_ID" nameSpace="NUVEEN" type="FILTER_FIELD" value="NREOCDTE" valueType="CONSTANT"/>
+    </occurrence>
+    <occurrence desc="Occurrence for Property Statistic" id="++9GWDuy2etbS00Z" ignoreDeleteChildren="false" multiplicity="SINGLE_OR_NULL" name="PPST_PPRY_NREMGCMP" nameSpace="NUVEEN" parentId="0082S8PAmG00O006" table="FT_T_PPST" timeSeries="LOGICAL_DELETE">
+      <field id="++9GWDuy2etbS00b" name="STAT_CHAR_VAL_TXT" nameSpace="NUVEEN"/>
+      <value id="++9GWDuy2etbS00a" name="STAT_DEF_ID" nameSpace="NUVEEN" type="FILTER_FIELD" value="NREMGCMP" valueType="CONSTANT"/>
+    </occurrence>
+    <occurrence desc="Occurrence for Property Statistic" id="009GWAzi2etbS000" ignoreDeleteChildren="false" multiplicity="SINGLE_OR_NULL" name="PPST_PPRY_NRECURR" nameSpace="NUVEEN" parentId="0082S8PAmG00O006" table="FT_T_PPST" timeSeries="LOGICAL_DELETE">
+      <field id="009GWAzi2etbS002" name="DENOM_CURR_CDE" nameSpace="NUVEEN"/>
+      <value id="009GWAzi2etbS001" name="STAT_DEF_ID" nameSpace="NUVEEN" type="FILTER_FIELD" value="NRECURR" valueType="CONSTANT"/>
+    </occurrence>
+    <occurrence desc="Occurrence for Property Statistic" id="009JHcpi2etbS000" ignoreDeleteChildren="false" multiplicity="SINGLE_OR_NULL" name="PPST_PPRY_NREBLDG" nameSpace="NUVEEN" parentId="0082S8PAmG00O006" table="FT_T_PPST" timeSeries="LOGICAL_DELETE">
+      <field id="++9JIpDy2etbS000" name="STAT_INT_VAL_NUM" nameSpace="NUVEEN"/>
+      <value id="009JHcpi2etbS001" name="STAT_DEF_ID" nameSpace="NUVEEN" type="FILTER_FIELD" value="NREBLDG" valueType="CONSTANT"/>
+    </occurrence>
+    <occurrence desc="Occurrence for Property Statistic" id="009tcVSi2etbS000" ignoreDeleteChildren="false" multiplicity="SINGLE_OR_NULL" name="PPST_PPRY_NREGFLRA" nameSpace="NUVEEN" parentId="0082S8PAmG00O006" table="FT_T_PPST" timeSeries="LOGICAL_DELETE">
+      <field desc="Statistic Amount Value" id="++9w0U4y2etbS004" name="STAT_VAL_CAMT" nameSpace="NUVEEN"/>
+      <value id="009vx85i2etbS001" name="STAT_DEF_ID" nameSpace="NUVEEN" type="FILTER_FIELD" value="NREGFLRA" valueType="CONSTANT"/>
+      <option id="009tcVSi2etbS001" nameSpace="NUVEEN" type="DEFAULT_ACTION" value="UNKNOWN"/>
+    </occurrence>
+    <occurrence desc="Occurrence for Property Statistic" id="009vx85i2etbS005" ignoreDeleteChildren="false" multiplicity="SINGLE_OR_NULL" name="PPST_PPRY_NREGLSBT" nameSpace="NUVEEN" parentId="0082S8PAmG00O006" table="FT_T_PPST" timeSeries="LOGICAL_DELETE">
+      <field desc="Statistic Character Value" id="009vx85i2etbS008" name="STAT_CHAR_VAL_TXT" nameSpace="NUVEEN"/>
+      <value id="009vx85i2etbS009" name="DATA_STAT_TYP" nameSpace="NUVEEN" type="DEFAULT_FIELD" value="ACTIVE" valueType="CONSTANT"/>
+      <value id="009vx85i2etbS007" name="STAT_DEF_ID" nameSpace="NUVEEN" type="FILTER_FIELD" value="NREGLSBT" valueType="CONSTANT"/>
+      <option id="009vx85i2etbS006" nameSpace="NUVEEN" type="DEFAULT_ACTION" value="UNKNOWN"/>
+    </occurrence>
+    <occurrence desc="Occurrence for Property Statistic" id="++9GW6vS2etbS005" ignoreDeleteChildren="false" multiplicity="SINGLE_OR_NULL" name="PPST_PPRY_NREAQDTE" nameSpace="NUVEEN" parentId="0082S8PAmG00O006" table="FT_T_PPST" timeSeries="LOGICAL_DELETE">
+      <field id="++9GW6vS2etbS007" name="STAT_VAL_DTE" nameSpace="NUVEEN"/>
+      <value id="++9GW6vS2etbS006" name="STAT_DEF_ID" nameSpace="NUVEEN" type="FILTER_FIELD" value="NREAQDTE" valueType="CONSTANT"/>
+    </occurrence>
+    <occurrence desc="Occurrence for Property Statistic" id="++9GW6vS2etbS00A" ignoreDeleteChildren="false" multiplicity="SINGLE_OR_NULL" name="PPST_PPRY_NRESLLR" nameSpace="NUVEEN" parentId="0082S8PAmG00O006" table="FT_T_PPST" timeSeries="LOGICAL_DELETE">
+      <field id="++9GW6vS2etbS00C" name="STAT_CHAR_VAL_TXT" nameSpace="NUVEEN"/>
+      <value id="++9GW6vS2etbS00B" name="STAT_DEF_ID" nameSpace="NUVEEN" type="FILTER_FIELD" value="NRESLLR" valueType="CONSTANT"/>
+    </occurrence>
+    <occurrence desc="Occurrence for Property Statistic" id="++9GW6vS2etbS00K" ignoreDeleteChildren="false" multiplicity="SINGLE_OR_NULL" name="PPST_PPRY_NREAUTH" nameSpace="NUVEEN" parentId="0082S8PAmG00O006" table="FT_T_PPST" timeSeries="LOGICAL_DELETE">
+      <field id="++9GW6vS2etbS00M" name="STAT_CHAR_VAL_TXT" nameSpace="NUVEEN"/>
+      <value id="++9GW6vS2etbS00L" name="STAT_DEF_ID" nameSpace="NUVEEN" type="FILTER_FIELD" value="NREAUTH" valueType="CONSTANT"/>
+    </occurrence>
+    <occurrence desc="Occurrence for Property Statistic" id="++9GV+wy2etbS000" ignoreDeleteChildren="false" multiplicity="SINGLE_OR_NULL" name="PPST_PPRY_NREDSPDT" nameSpace="NUVEEN" parentId="0082S8PAmG00O006" table="FT_T_PPST" timeSeries="LOGICAL_DELETE">
+      <field id="++9GV+wy2etbS006" name="STAT_VAL_DTE" nameSpace="NUVEEN"/>
+      <value id="++9GV+wy2etbS001" name="STAT_DEF_ID" nameSpace="NUVEEN" type="FILTER_FIELD" value="NREDSPDT" valueType="CONSTANT"/>
+    </occurrence>
+    <occurrence desc="Occurrence for Property Statistic" id="++9GW6vS2etbS000" ignoreDeleteChildren="false" multiplicity="SINGLE_OR_NULL" name="PPST_PPRY_NREBYR" nameSpace="NUVEEN" parentId="0082S8PAmG00O006" table="FT_T_PPST" timeSeries="LOGICAL_DELETE">
+      <field id="++9GW6vS2etbS002" name="STAT_CHAR_VAL_TXT" nameSpace="NUVEEN"/>
+      <value id="++9GW6vS2etbS001" name="STAT_DEF_ID" nameSpace="NUVEEN" type="FILTER_FIELD" value="NREBYR" valueType="CONSTANT"/>
+    </occurrence>
+    <occurrence desc="Occurrence for Property Identifier" id="0082S8PAmG00O01N" ignoreDeleteChildren="false" multiplicity="MULTIPLE_OR_NULL" name="PPID_ALL" nameSpace="GSC" parentId="0082S8PAmG00O006" table="FT_T_PPID" timeSeries="LOGICAL_DELETE">
+      <field id="009Ns9DC2etbS000" name="GLOBAL_UNIQ_IND" nameSpace="NUVEEN"/>
+    </occurrence>
+    <occurrence desc="Occurrence for Property/Property Role" id="0082SQ4AmG00O05e" ignoreDeleteChildren="false" multiplicity="MULTIPLE_OR_NULL" name="PPRL_ALL" nameSpace="GSC" parentId="0082S8PAmG00O006" relationId="0082SQ4AmG00O05f" table="FT_T_PPRL" timeSeries="LOGICAL_DELETE">
+      <field id="009JBdAi2etbS00D" nameSpace="NUVEEN" relationId="009JBdAi2etbS00E"/>
+    </occurrence>
+    <occurrence desc="Occurrence for Mailing Address" id="0082SQ4AmG00O06Y" ignoreDeleteChildren="false" multiplicity="SINGLE_OR_NULL" name="MADR_CCRF_PPRY" nameSpace="GSC" parentId="0082SQ4AmG00O06U" table="FT_T_MADR" timeSeries="LOGICAL_DELETE">
+      <field id="++9HzJNy2etbS001" name="DEPT_NME" nameSpace="NUVEEN"/>
+      <field id="++9HzJNy2etbS000" name="SUB_DEPT_NME" nameSpace="NUVEEN"/>
+      <option id="008eM6nC2es3801k" nameSpace="GSC" type="DEFAULT_ACTION" value="D_UNKNOWN"/>
+    </occurrence>
+    <occurrence desc="Occurrence for Notification Entity Log Details" id="009UMKdi2etbS000" ignoreDeleteChildren="false" multiplicity="MULTIPLE_OR_NULL" name="NTEL_PPRY" nameSpace="NUVEEN" parentId="0082S8PAmG00O006" relationId="009UMKdi2etbS001" table="FT_T_NTEL" timeSeries="LOGICAL_DELETE">
+      <field id="009UMKdi2etbS005" name="CHAR_VAL_TXT" nameSpace="NUVEEN"/>
+      <field id="009UMKdi2etbS007" name="LAST_CHG_USR_ID" nameSpace="NUVEEN"/>
+      <field id="009UMKdi2etbS006" name="LST_NOTFCN_TMS" nameSpace="NUVEEN"/>
+      <field id="009UMKdi2etbS004" name="MAIN_ENTITY_ID" nameSpace="NUVEEN"/>
+      <option id="009UMKdi2etbS003" nameSpace="NUVEEN" type="DEFAULT_ACTION" value="UNKNOWN"/>
+    </occurrence>
+    <occurrence desc="Occurrence for Property Identifier" id="++9z4B4S2etbS02R" ignoreDeleteChildren="false" multiplicity="SINGLE_OR_NULL" name="PPID_DEALPATH_DEAL_ID" nameSpace="NUVEEN" parentId="0082S8PAmG00O006" table="FT_T_PPID" timeSeries="LOGICAL_DELETE">
+      <field desc="Property Identifier" id="++9z4B4S2etbS02T" name="PROP_ID" nameSpace="NUVEEN"/>
+      <value id="++9z4B4S2etbS02U" name="PROP_ID_CTXT_TYP" nameSpace="NUVEEN" type="FILTER_FIELD" value="DEALPATH_DEAL_ID" valueType="CONSTANT"/>
+      <option id="++9z4B4S2etbS02S" nameSpace="NUVEEN" type="DEFAULT_ACTION" value="UNKNOWN"/>
+    </occurrence>
+    <occurrence desc="Occurrence for Property Identifier" id="++9z4B4S2etbS02d" ignoreDeleteChildren="false" multiplicity="SINGLE_OR_NULL" name="PPID_DEALPATH_PROP_ID" nameSpace="NUVEEN" parentId="0082S8PAmG00O006" table="FT_T_PPID" timeSeries="LOGICAL_DELETE">
+      <field desc="Property Identifier" id="++9z4B4S2etbS02f" name="PROP_ID" nameSpace="NUVEEN"/>
+      <value id="++9z4B4S2etbS02g" name="PROP_ID_CTXT_TYP" nameSpace="NUVEEN" type="FILTER_FIELD" value="DEALPATH_PROP_ID" valueType="CONSTANT"/>
+      <option id="++9z4B4S2etbS02e" nameSpace="NUVEEN" type="DEFAULT_ACTION" value="UNKNOWN"/>
+    </occurrence>
+    <occurrence desc="Occurrence for Property Identifier" id="++9z4B4S2etbS02y" ignoreDeleteChildren="false" multiplicity="SINGLE_OR_NULL" name="PPID_BLDNG_ID" nameSpace="NUVEEN" parentId="0082S8PAmG00O006" table="FT_T_PPID" timeSeries="LOGICAL_DELETE">
+      <field desc="Property Identifier" id="++9z4B4S2etbS030" name="PROP_ID" nameSpace="NUVEEN"/>
+      <value id="++9z4B4S2etbS031" name="PROP_ID_CTXT_TYP" nameSpace="NUVEEN" type="FILTER_FIELD" value="BLDNG_ID" valueType="CONSTANT"/>
+      <option id="++9z4B4S2etbS02z" nameSpace="NUVEEN" type="DEFAULT_ACTION" value="UNKNOWN"/>
+    </occurrence>
+    <occurrence desc="Occurrence for Property Identifier" id="++9z4B4S2etbS034" ignoreDeleteChildren="false" multiplicity="SINGLE_OR_NULL" name="PPID_INVSTMT_ID" nameSpace="NUVEEN" parentId="0082S8PAmG00O006" table="FT_T_PPID" timeSeries="LOGICAL_DELETE">
+      <field desc="Property Identifier" id="++9z4B4S2etbS036" name="PROP_ID" nameSpace="NUVEEN"/>
+      <value id="++9z4B4S2etbS037" name="PROP_ID_CTXT_TYP" nameSpace="NUVEEN" type="FILTER_FIELD" value="INVSTMT_ID" valueType="CONSTANT"/>
+      <option id="++9z4B4S2etbS035" nameSpace="NUVEEN" type="DEFAULT_ACTION" value="UNKNOWN"/>
+    </occurrence>
+    <occurrence desc="Occurrence for Property Identifier" id="++9z4B4S2etbS03D" ignoreDeleteChildren="false" multiplicity="SINGLE_OR_NULL" name="PPID_PROP_ID" nameSpace="NUVEEN" parentId="0082S8PAmG00O006" table="FT_T_PPID" timeSeries="LOGICAL_DELETE">
+      <field desc="Property Identifier" id="++9z4B4S2etbS03F" name="PROP_ID" nameSpace="NUVEEN"/>
+      <value id="++9z4B4S2etbS03G" name="PROP_ID_CTXT_TYP" nameSpace="NUVEEN" type="FILTER_FIELD" value="PROP_ID" valueType="CONSTANT"/>
+      <option id="++9z4B4S2etbS03E" nameSpace="NUVEEN" type="DEFAULT_ACTION" value="UNKNOWN"/>
+    </occurrence>
+    <occurrence desc="Occurrence for Property Identifier" id="++9z4B4S2etbS03J" ignoreDeleteChildren="false" multiplicity="SINGLE_OR_NULL" name="PPID_ASSETNO" nameSpace="NUVEEN" parentId="0082S8PAmG00O006" table="FT_T_PPID" timeSeries="LOGICAL_DELETE">
+      <field desc="Property Identifier" id="009zCcii2etbS00B" name="PROP_ID" nameSpace="NUVEEN"/>
+      <value id="009zCcii2etbS00C" name="PROP_ID_CTXT_TYP" nameSpace="NUVEEN" type="FILTER_FIELD" value="ASSETNO" valueType="CONSTANT"/>
+      <option id="++9z4B4S2etbS03K" nameSpace="NUVEEN" type="DEFAULT_ACTION" value="UNKNOWN"/>
+    </occurrence>
+    <occurrence desc="Occurrence for Property Identifier" id="009zCcii2etbS01J" ignoreDeleteChildren="false" multiplicity="SINGLE_OR_NULL" name="PPID_ESG_ASSET_ID" nameSpace="NUVEEN" parentId="0082S8PAmG00O006" table="FT_T_PPID" timeSeries="LOGICAL_DELETE">
+      <field desc="Property Identifier" id="009zCcii2etbS01L" name="PROP_ID" nameSpace="NUVEEN"/>
+      <value id="009zCcii2etbS01M" name="PROP_ID_CTXT_TYP" nameSpace="NUVEEN" type="FILTER_FIELD" value="ESG_ASSET_ID" valueType="CONSTANT"/>
+      <option id="009zCcii2etbS01K" nameSpace="NUVEEN" type="DEFAULT_ACTION" value="UNKNOWN"/>
+    </occurrence>
+    <occurrence desc="Occurrence for Property Identifier" id="009zCcii2etbS01P" ignoreDeleteChildren="false" multiplicity="SINGLE_OR_NULL" name="PPID_YRD_INVST_ID" nameSpace="NUVEEN" parentId="0082S8PAmG00O006" table="FT_T_PPID" timeSeries="LOGICAL_DELETE">
+      <field desc="Property Identifier" id="009zCcii2etbS01R" name="PROP_ID" nameSpace="NUVEEN"/>
+      <value id="009zCcii2etbS01S" name="PROP_ID_CTXT_TYP" nameSpace="NUVEEN" type="FILTER_FIELD" value="YRD_INVST_ID" valueType="CONSTANT"/>
+      <option id="009zCcii2etbS01Q" nameSpace="NUVEEN" type="DEFAULT_ACTION" value="UNKNOWN"/>
+    </occurrence>
+    <occurrence desc="Occurrence for Property Identifier" id="009zCcii2etbS01V" ignoreDeleteChildren="false" multiplicity="SINGLE_OR_NULL" name="PPID_ASST_ID" nameSpace="NUVEEN" parentId="0082S8PAmG00O006" table="FT_T_PPID" timeSeries="LOGICAL_DELETE">
+      <field desc="Property Identifier" id="009zCcii2etbS01X" name="PROP_ID" nameSpace="NUVEEN"/>
+      <value id="009zCcii2etbS01Y" name="PROP_ID_CTXT_TYP" nameSpace="NUVEEN" type="FILTER_FIELD" value="ASST_ID" valueType="CONSTANT"/>
+      <option id="009zCcii2etbS01W" nameSpace="NUVEEN" type="DEFAULT_ACTION" value="UNKNOWN"/>
+    </occurrence>
+    <occurrence desc="Occurrence for Property Identifier" id="++9IDWmy2etbS00I" ignoreDeleteChildren="false" multiplicity="SINGLE_OR_NULL" name="PPID_ASSETNO_PPRY" nameSpace="NUVEEN" parentId="0082S8PAmG00O006" table="FT_T_PPID" timeSeries="PAST_AND_CURRENT_ACTIVE">
+      <field id="009IDgei2etbS000" name="PROP_ID" nameSpace="NUVEEN"/>
+      <value id="++9IDWmy2etbS00J" name="PROP_ID_CTXT_TYP" nameSpace="NUVEEN" type="FILTER_FIELD" value="ASSETNO" valueType="CONSTANT"/>
+      <option id="++9IDWmy2etbS00Q" nameSpace="NUVEEN" type="DEFAULT_ACTION" value="UNKNOWN"/>
+    </occurrence>
+    <occurrence desc="Occurrence for Property Type" id="009JHcpi2etbS00G" ignoreDeleteChildren="false" multiplicity="SINGLE_OR_NULL" name="PPTY_PPRY_PPTYPE" nameSpace="NUVEEN" parentId="0082S8PAmG00O006" table="FT_T_PPTY" timeSeries="LOGICAL_DELETE">
+      <field id="009JHcpi2etbS00H" name="PROP_TYP_NME" nameSpace="NUVEEN"/>
+    </occurrence>
+  </occurrences>
+  <mappings>
+    <mapping beFieldId="++9GWDuy2etbS00S" groupMapping="0" id="++9HTWNy2etbS004" nameSpace="NUVEEN" occFieldId="++9GWDuy2etbS00R"/>
+    <mapping beFieldId="++9GWDuy2etbS00X" groupMapping="0" id="++9HTWNy2etbS007" nameSpace="NUVEEN" occFieldId="++9GWDuy2etbS00W"/>
+    <mapping beFieldId="++9GWDuy2etbS00c" groupMapping="0" id="++9HTWNy2etbS009" nameSpace="NUVEEN" occFieldId="++9GWDuy2etbS00b"/>
+    <mapping beFieldId="++9GWDuy2etbS00I" groupMapping="0" id="++9HTWNy2etbS00A" nameSpace="NUVEEN" occFieldId="++9GWDuy2etbS00H"/>
+    <mapping beFieldId="++9GWDuy2etbS00N" groupMapping="0" id="++9HTWNy2etbS00B" nameSpace="NUVEEN" occFieldId="++9GWDuy2etbS00M"/>
+    <mapping beFieldId="009GWAzi2etbS003" groupMapping="0" id="++9HTWNy2etbS00D" nameSpace="NUVEEN" occFieldId="009GWAzi2etbS002"/>
+    <mapping beFieldId="++9GWDuy2etbS003" groupMapping="0" id="++9HTWNy2etbS00E" nameSpace="NUVEEN" occFieldId="++9GWDuy2etbS002"/>
+    <mapping beFieldId="++9GWDuy2etbS008" groupMapping="0" id="++9HTWNy2etbS00F" nameSpace="NUVEEN" occFieldId="++9GWDuy2etbS007"/>
+    <mapping beFieldId="++9GWDuy2etbS00D" groupMapping="0" id="++9HTWNy2etbS00G" nameSpace="NUVEEN" occFieldId="++9GWDuy2etbS00C"/>
+    <mapping beFieldId="009JHcpi2etbS003" groupMapping="0" id="++9JIpDy2etbS002" nameSpace="NUVEEN" occFieldId="++9JIpDy2etbS000"/>
+    <mapping beFieldId="009tcVSi2etbS004" groupMapping="0" id="++9w0U4y2etbS005" nameSpace="NUVEEN" occFieldId="++9w0U4y2etbS004"/>
+    <mapping beFieldId="009vg9JC2etbS2Z8" groupMapping="0" id="009vx85i2etbS00A" nameSpace="NUVEEN" occFieldId="009vx85i2etbS008"/>
+    <mapping beFieldId="++9GW6vS2etbS008" groupMapping="0" id="++9HTWNy2etbS005" nameSpace="NUVEEN" occFieldId="++9GW6vS2etbS007"/>
+    <mapping beFieldId="++9GW6vS2etbS00N" groupMapping="0" id="++9HTWNy2etbS006" nameSpace="NUVEEN" occFieldId="++9GW6vS2etbS00M"/>
+    <mapping beFieldId="++9GW6vS2etbS00D" groupMapping="0" id="++9HTWNy2etbS00H" nameSpace="NUVEEN" occFieldId="++9GW6vS2etbS00C"/>
+    <mapping beFieldId="++9GV+wy2etbS003" groupMapping="0" id="++9HTWNy2etbS008" nameSpace="NUVEEN" occFieldId="++9GV+wy2etbS006"/>
+    <mapping beFieldId="++9GW6vS2etbS003" groupMapping="0" id="++9HTWNy2etbS00C" nameSpace="NUVEEN" occFieldId="++9GW6vS2etbS002"/>
+    <mapping beFieldId="009Ns9DC2etbS001" groupMapping="0" id="009Ns9DC2etbS002" nameSpace="NUVEEN" occFieldId="009Ns9DC2etbS000"/>
+    <mapping beFieldId="++9HzJNy2etbS002" groupMapping="0" id="++9HzJNy2etbS003" nameSpace="NUVEEN" occFieldId="++9HzJNy2etbS001"/>
+    <mapping beFieldId="++9HzJNy2etbS004" groupMapping="0" id="++9HzJNy2etbS005" nameSpace="NUVEEN" occFieldId="++9HzJNy2etbS000"/>
+    <mapping beFieldId="009UMKdi2etbS008" groupMapping="0" id="009UMKdi2etbS009" nameSpace="NUVEEN" occFieldId="009UMKdi2etbS005"/>
+    <mapping beFieldId="++9z4B4S2etbS02V" groupMapping="0" id="++9z4B4S2etbS02t" nameSpace="NUVEEN" occFieldId="++9z4B4S2etbS02T"/>
+    <mapping beFieldId="++9z4B4S2etbS02h" groupMapping="0" id="++9z4B4S2etbS02u" nameSpace="NUVEEN" occFieldId="++9z4B4S2etbS02f"/>
+    <mapping beFieldId="++9z4B4S2etbS038" groupMapping="0" id="++9z4B4S2etbS039" nameSpace="NUVEEN" occFieldId="++9z4B4S2etbS036"/>
+    <mapping beFieldId="++9z4B4S2etbS03H" groupMapping="0" id="++9z4B4S2etbS03I" nameSpace="NUVEEN" occFieldId="++9z4B4S2etbS03F"/>
+    <mapping beFieldId="++9z4B4S2etbS032" groupMapping="0" id="++9zCUbS2etbS009" nameSpace="NUVEEN" occFieldId="++9z4B4S2etbS030"/>
+    <mapping beFieldId="++9z4B4S2etbS03N" groupMapping="0" id="009zCcii2etbS016" nameSpace="NUVEEN" occFieldId="009zCcii2etbS00B"/>
+    <mapping beFieldId="009zCcii2etbS01N" groupMapping="0" id="009zCcii2etbS01O" nameSpace="NUVEEN" occFieldId="009zCcii2etbS01L"/>
+    <mapping beFieldId="009zCcii2etbS01T" groupMapping="0" id="009zCcii2etbS01U" nameSpace="NUVEEN" occFieldId="009zCcii2etbS01R"/>
+    <mapping beFieldId="009zCcii2etbS01Z" groupMapping="0" id="009zCcii2etbS01a" nameSpace="NUVEEN" occFieldId="009zCcii2etbS01X"/>
+    <mapping beFieldId="++9GWDuy2etbS00S" groupMapping="0" id="++9HTWNy2etbS004" nameSpace="NUVEEN" occFieldId="++9GWDuy2etbS00R"/>
+    <mapping beFieldId="++9GW6vS2etbS008" groupMapping="0" id="++9HTWNy2etbS005" nameSpace="NUVEEN" occFieldId="++9GW6vS2etbS007"/>
+    <mapping beFieldId="++9GW6vS2etbS00N" groupMapping="0" id="++9HTWNy2etbS006" nameSpace="NUVEEN" occFieldId="++9GW6vS2etbS00M"/>
+    <mapping beFieldId="++9GWDuy2etbS00X" groupMapping="0" id="++9HTWNy2etbS007" nameSpace="NUVEEN" occFieldId="++9GWDuy2etbS00W"/>
+    <mapping beFieldId="++9GV+wy2etbS003" groupMapping="0" id="++9HTWNy2etbS008" nameSpace="NUVEEN" occFieldId="++9GV+wy2etbS006"/>
+    <mapping beFieldId="++9GWDuy2etbS00c" groupMapping="0" id="++9HTWNy2etbS009" nameSpace="NUVEEN" occFieldId="++9GWDuy2etbS00b"/>
+    <mapping beFieldId="++9GWDuy2etbS00I" groupMapping="0" id="++9HTWNy2etbS00A" nameSpace="NUVEEN" occFieldId="++9GWDuy2etbS00H"/>
+    <mapping beFieldId="++9GWDuy2etbS00N" groupMapping="0" id="++9HTWNy2etbS00B" nameSpace="NUVEEN" occFieldId="++9GWDuy2etbS00M"/>
+    <mapping beFieldId="++9GW6vS2etbS003" groupMapping="0" id="++9HTWNy2etbS00C" nameSpace="NUVEEN" occFieldId="++9GW6vS2etbS002"/>
+    <mapping beFieldId="009GWAzi2etbS003" groupMapping="0" id="++9HTWNy2etbS00D" nameSpace="NUVEEN" occFieldId="009GWAzi2etbS002"/>
+    <mapping beFieldId="++9GWDuy2etbS003" groupMapping="0" id="++9HTWNy2etbS00E" nameSpace="NUVEEN" occFieldId="++9GWDuy2etbS002"/>
+    <mapping beFieldId="++9GWDuy2etbS008" groupMapping="0" id="++9HTWNy2etbS00F" nameSpace="NUVEEN" occFieldId="++9GWDuy2etbS007"/>
+    <mapping beFieldId="++9GWDuy2etbS00D" groupMapping="0" id="++9HTWNy2etbS00G" nameSpace="NUVEEN" occFieldId="++9GWDuy2etbS00C"/>
+    <mapping beFieldId="++9GW6vS2etbS00D" groupMapping="0" id="++9HTWNy2etbS00H" nameSpace="NUVEEN" occFieldId="++9GW6vS2etbS00C"/>
+    <mapping beFieldId="009JHcpi2etbS003" groupMapping="0" id="++9JIpDy2etbS002" nameSpace="NUVEEN" occFieldId="++9JIpDy2etbS000"/>
+    <mapping beFieldId="++9Jdl3y2etbS001" groupMapping="0" id="++9Jdl3y2etbS002" nameSpace="NUVEEN" occFieldId="++9Jdl3y2etbS000"/>
+    <mapping beFieldId="009tcVSi2etbS004" groupMapping="0" id="++9w0U4y2etbS005" nameSpace="NUVEEN" occFieldId="++9w0U4y2etbS004"/>
+    <mapping beFieldId="009I4dai2etbS002" groupMapping="0" id="009I4dai2etbS003" nameSpace="NUVEEN" occFieldId="009I4dai2etbS000"/>
+    <mapping beFieldId="009I4dai2etbS004" groupMapping="0" id="009I4dai2etbS005" nameSpace="NUVEEN" occFieldId="009I4dai2etbS001"/>
+    <mapping beFieldId="++9IDWmy2etbS00L" groupMapping="0" id="009IDgei2etbS003" nameSpace="NUVEEN" occFieldId="009IDgei2etbS000"/>
+    <mapping beFieldId="009JHcpi2etbS00I" groupMapping="0" id="009JHcpi2etbS00J" nameSpace="NUVEEN" occFieldId="009JHcpi2etbS00H"/>
+    <mapping beFieldId="009vg9JC2etbS2Z8" groupMapping="0" id="009vx85i2etbS00A" nameSpace="NUVEEN" occFieldId="009vx85i2etbS008"/>
+    <mapping beRelationId="009JHcpi2etbS008" groupMapping="0" id="009JHcpi2etbS00D" nameSpace="NUVEEN" occFieldId="009JHcpi2etbS00A"/>
+    <mapping beRelationId="009JBdAi2etbS00B" groupMapping="0" id="009JBdAi2etbS00H" nameSpace="NUVEEN" occFieldId="009JBdAi2etbS00D"/>
+  </mappings>
+  <businessEntities>
+    <businessEntity cachedisableInd="N" category="" dataGroupId="++9HTWNy2etbS001" defaultInd="0" desc="" displayCaption="PropertyNRE" entityTypeId="BGPPRY0000000001" id="++9HTWNy2etbS000" mavenVersion="131.0" name="PropertyNRE" nameSpace="NUVEEN" prntEntityId="0082S8PAmG00O000" ruleVersion="5.0" version="194.0">
+      <configurations>
+        <configuration data="INCOMPLETE" id="++9HTWNy2etbS002" ignoreDeleteChildren="false" nameSpace="NUVEEN" option="BEDEINITIONFSTATUS"/>
+        <configuration id="009HemDC2etbS00J" ignoreDeleteChildren="false" nameSpace="NUVEEN" option="HIDDEN">
+          <part disParentConfig="0" groupPartId="++9HTWNy2etbS00a" id="009HemDC2etbS00L" nameSpace="NUVEEN"/>
+          <part disParentConfig="0" groupPartId="++9HTWNy2etbS00b" id="009HemDC2etbS00M" nameSpace="NUVEEN"/>
+          <part disParentConfig="0" groupPartId="0082S8PAmG00O012" id="009HemDC2etbS00K" nameSpace="NUVEEN"/>
+          <part disParentConfig="0" groupPartId="0082SQ4AmG00O016" id="++9JJxvS2etbS000" nameSpace="NUVEEN"/>
+          <part disParentConfig="0" groupPartId="0082SQ4AmG00O01s" id="++9JJxvS2etbS001" nameSpace="NUVEEN"/>
+          <part disParentConfig="0" groupPartId="0082SQ4AmG00O048" id="++9JJxvS2etbS002" nameSpace="NUVEEN"/>
+          <part disParentConfig="0" groupPartId="0082SQ4AmG00O05J" id="++9JJxvS2etbS003" nameSpace="NUVEEN"/>
+          <part disParentConfig="0" groupPartId="0082SQ4AmG00O066" id="009JBdAi2etbS00M" nameSpace="NUVEEN"/>
+          <part disParentConfig="0" groupPartId="0082SQ4AmG00O0Ds" id="++9JJxvS2etbS005" nameSpace="NUVEEN"/>
+          <part disParentConfig="0" groupPartId="0082SQ4AmG00O0Ed" id="++9JJxvS2etbS006" nameSpace="NUVEEN"/>
+          <part disParentConfig="0" groupPartId="008YAoUC2etXK00C" id="++9JJxvS2etbS007" nameSpace="NUVEEN"/>
+          <part disParentConfig="0" groupPartId="008eM6nC2es38003" id="++9JJxvS2etbS004" nameSpace="NUVEEN"/>
+          <part disParentConfig="0" groupPartId="009JHcpi2etbS009" id="009JHcpi2etbS00N" nameSpace="NUVEEN"/>
+        </configuration>
+      </configurations>
+    </businessEntity>
+  </businessEntities>
+  <entityRelations>
+    <entityRelation desc="CUSTOM:Relation Participant" entityId="0082S8PAmG00O000" id="0082SQ4AmG00O065" lookupField="0082S8PAmG00O01I" multiplicity="MULTIPLE" name="PropertyToPropertyRelation" nameSpace="GSC" rltdEntityId="0082S8PAmG00O000">
+      <part forPublishing="0" forUI="1" id="++9N9rDS2etbS002" nameSpace="NUVEEN" partId="++9HTWNy2etbS00U"/>
+      <part forPublishing="1" forUI="1" id="009zCcii2etbS00+" nameSpace="NUVEEN" partId="++9zCUbS2etbS00B"/>
+      <part forPublishing="1" forUI="1" id="009zCcii2etbS010" nameSpace="NUVEEN" partId="++9zCUbS2etbS00C"/>
+      <part forPublishing="1" forUI="1" id="009zCcii2etbS00z" nameSpace="NUVEEN" partId="++9zCUbS2etbS00D"/>
+      <part forPublishing="1" forUI="1" id="009zCcii2etbS00-" nameSpace="NUVEEN" partId="++9zCUbS2etbS00E"/>
+      <part forPublishing="1" forUI="1" id="009zCcii2etbS011" nameSpace="NUVEEN" partId="++9zCUbS2etbS00F"/>
+      <part forPublishing="1" forUI="1" id="009zCcii2etbS012" nameSpace="NUVEEN" partId="++9zCUbS2etbS00G"/>
+      <part forPublishing="0" forUI="1" id="++9N9rDS2etbS000" nameSpace="NUVEEN" partId="0082S8PAmG00O01C"/>
+      <part forPublishing="0" forUI="1" id="++9N9rDS2etbS001" nameSpace="NUVEEN" partId="0082S8PAmG00O01D"/>
+      <part forPublishing="1" forUI="1" id="0082SQ4AmG00O06Q" nameSpace="GSC" partId="0082S8PAmG00O01I"/>
+      <part forPublishing="0" forUI="1" id="009ztETi2etbS001" nameSpace="NUVEEN" partId="009zCcii2etbS01b"/>
+      <part forPublishing="0" forUI="1" id="009ztETi2etbS002" nameSpace="NUVEEN" partId="009zCcii2etbS01c"/>
+      <part forPublishing="0" forUI="1" id="009ztETi2etbS000" nameSpace="NUVEEN" partId="009zCcii2etbS01d"/>
+    </entityRelation>
+    <entityRelation entityId="++9HTWNy2etbS000" id="009JHcpi2etbS008" multiplicity="SINGLE_OR_NULL" name="NRERelatedPropertyType" nameSpace="NUVEEN" rltdEntityId="0082SQ4AmG00O081">
+      <part forPublishing="0" forUI="1" id="009JHcpi2etbS00E" nameSpace="NUVEEN" partId="0082SQ4AmG00O08Y"/>
+      <part forPublishing="0" forUI="1" id="009JHcpi2etbS00F" nameSpace="NUVEEN" partId="0082SQ4AmG00O08Z"/>
+    </entityRelation>
+    <entityRelation entityId="++9HTWNy2etbS000" id="009JBdAi2etbS00B" multiplicity="MULTIPLE_OR_NULL" name="PropertyNREtoPropertyNRERelation" nameSpace="NUVEEN" rltdEntityId="++9HTWNy2etbS000">
+      <part forPublishing="1" forUI="1" id="009JBdAi2etbS00J" nameSpace="NUVEEN" partId="++9IDWmy2etbS00N"/>
+      <part forPublishing="1" forUI="1" id="009JBdAi2etbS00I" nameSpace="NUVEEN" partId="009HemDC2etbS00F"/>
+    </entityRelation>
+  </entityRelations>
+  <naturalKeys>
+    <naturalKey dataGroupId="009UMKdi2etbS00A" id="009UMKdi2etbS00D" name="NREExceptionsNaturalKey" nameSpace="NUVEEN">
+      <part beFieldId="009UMKdi2etbS00B" id="009UMKdi2etbS00E" nameSpace="NUVEEN"/>
+    </naturalKey>
+    <naturalKey dataGroupId="009JBdAi2etbS004" id="009JBdAi2etbS00N" name="RelatedPropertyNRENaturalKey" nameSpace="NUVEEN">
+      <part beFieldId="009JBdAi2etbS00C" id="009JBdAi2etbS00O" nameSpace="NUVEEN"/>
+      <part beFieldId="009JBdAi2etbS00K" id="009JBdAi2etbS00P" nameSpace="NUVEEN"/>
+    </naturalKey>
+  </naturalKeys>
+</entities>

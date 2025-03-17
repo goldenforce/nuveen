@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<vendor-definition>
+  <name>RatingsBulkConfiguration</name>
+  <encoding>ISO-8859-1</encoding>
+  <textPreparation type="com.j2fe.feeds.stp.STPFeedPreparation">
+    <variables>
+      <inputDirectory>/edmfs/app/requestreply/snp/ratings/input</inputDirectory>
+      <outputDirectory>/edmfs/app/requestreply/snp/ratings/output</outputDirectory>
+      <moveDirectory>/edmfs/app/requestreply/snp/ratings/move</moveDirectory>
+      <vendorDirectory>/Products/RXSPGCrossRefGISFPFCurrentDaily</vendorDirectory>
+      <vendorDirectory>/Products/RXSPGRatingsGISFPFCurrentDaily</vendorDirectory>
+    </variables>
+    <pull type="com.j2fe.feeds.stp.RatingBulkPullFeed">
+      <name>RATINGSV4</name>
+      <type>ENTITIES</type>
+      <fullFile>false</fullFile>
+      <pattern>spRatingData*.txt</pattern>
+      <pattern>spRatingIdentifier*.txt</pattern>
+      <pattern>spAssessmentData*.txt</pattern>
+      <pattern>spAssessmentLevelData*.txt</pattern>
+      <pattern>spEntityLevelData*.txt</pattern>
+      <pattern>spInstrumentToEntity*.txt</pattern>
+    </pull>
+    <pull type="com.j2fe.feeds.stp.RatingBulkPullFeed">
+      <name>RATINGSV4</name>
+      <type>SECURITIES</type>
+      <fullFile>false</fullFile>
+      <pattern>spRatingData*.txt</pattern>
+      <pattern>spRatingDataNoCUSIP*.txt</pattern>
+      <pattern>spAssessmentData*.txt</pattern>
+      <pattern>spAssessmentDataNoCUSIP*.txt</pattern>
+      <pattern>spInstrumentLevelData*.txt</pattern>
+      <pattern>spSecurityLevelData*.txt</pattern>
+      <pattern>spInstrumentToEntity*.txt</pattern>
+    </pull>
+    <prepare type="com.j2fe.feeds.stp.RatingBulkPrepareFeed"/>
+  </textPreparation>
+</vendor-definition>

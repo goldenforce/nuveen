@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entities cleanUnusedFields="false" nameSpace="NUVEEN">
+  <dataGroups>
+    <dataGroup customInd="0" displayCaption="Credit Exceptions" entityTypeId="++3qwBhS2etxm001" frequencyInd="0" id="009dpxqi2etbS00m" multiplicity="MULTIPLE_OR_NULL" name="CreditExceptions" nameSpace="NUVEEN">
+      <part beRelationId="009dpxqi2etbS00n" defNameSpace="NUVEEN" id="009dpxqi2etbS00r" label="ExceptionOnFins" prntReqdInd="0" seq="0"/>
+    </dataGroup>
+    <dataGroup customInd="0" entityTypeId="++3qwBhS2etxm001" frequencyInd="0" id="++4HwLjy2etpy008" multiplicity="SINGLE_OR_NULL" name="FinancialInstitution- Root DataGroup" nameSpace="GSC">
+      <part dataGroupId="009dpxqi2etbS00m" defNameSpace="NUVEEN" id="009dpxqi2etbS00l" prntReqdInd="0" seq="45"/>
+    </dataGroup>
+  </dataGroups>
+  <relations>
+    <relation id="009dpxqi2etbS00N" name="FT_T_FINS-To-FT_T_NTEL" nameSpace="NUVEEN" srcTable="FT_T_FINS" tgtTable="FT_T_NTEL">
+      <field fromColumn="INST_MNEM" id="009dpxqi2etbS00O" nameSpace="NUVEEN" toColumn="XREF_TBL_OID" type="RELATION_FIELD" valueType="COLUMN"/>
+    </relation>
+    <relation id="009dpxqi2etbS00p" name="FT_T_NTEL-To-FT_T_NTEL03" nameSpace="NUVEEN" srcTable="FT_T_NTEL" tgtTable="FT_T_NTEL">
+      <field fromColumn="NTEL_OID" id="009fn+Fi2etbS000" nameSpace="NUVEEN" toColumn="NTEL_OID" type="RELATION_FIELD" valueType="COLUMN"/>
+    </relation>
+	<relation id="009dpxqi2etbS00U" name="NTEL-FINS-NTEL" nameSpace="NUVEEN" srcTable="FT_T_NTEL" tgtTable="FT_T_NTEL">
+      <field fromColumn="NTEL_OID" id="009dpxqi2etbS00V" nameSpace="NUVEEN" toColumn="NOTFCN_ID" type="RELATION_FIELD" valueType="COLUMN"/>
+    </relation>
+  </relations>
+  <occurrences>
+    <occurrence desc="Occurrence for Notification Entity Log Details" id="009dpxqi2etbS00M" ignoreDeleteChildren="false" multiplicity="MULTIPLE_OR_NULL" name="NTEL_FINS" nameSpace="NUVEEN" parentId="++4HwLjy2etpy00a" relationId="009dpxqi2etbS00N" table="FT_T_NTEL" timeSeries="LOGICAL_DELETE">
+      <field id="009dpxqi2etbS00T" nameSpace="NUVEEN" relationId="009dpxqi2etbS00U"/>
+      <field id="009dpxqi2etbS00o" nameSpace="NUVEEN" relationId="009dpxqi2etbS00p"/>
+    </occurrence>
+  </occurrences>
+  <mappings>
+    <mapping beRelationId="009dpxqi2etbS00n" groupMapping="0" id="009dpxqi2etbS00s" nameSpace="NUVEEN" occFieldId="009dpxqi2etbS00o"/>
+  </mappings>
+  <entityRelations>
+    <entityRelation entityId="++4HwLjy2etpy007" id="009dpxqi2etbS00n" lookupField="005yIuai2etvy006" multiplicity="MULTIPLE_OR_NULL" name="ExceptionOnFins" nameSpace="NUVEEN" rltdEntityId="005YcD1C2etse02f">
+      <part forPublishing="1" forUI="1" id="009dpxqi2etbS00w" nameSpace="NUVEEN" partId="++5mLxey2etqS00r"/>
+      <part forPublishing="1" forUI="1" id="009dpxqi2etbS010" nameSpace="NUVEEN" partId="++5mLxey2etqS00s"/>
+      <part forPublishing="1" forUI="1" id="009dpxqi2etbS00t" nameSpace="NUVEEN" partId="++5mLxey2etqS00t"/>
+      <part forPublishing="1" forUI="1" id="009dpxqi2etbS00x" nameSpace="NUVEEN" partId="++5mLxey2etqS00u"/>
+      <part forPublishing="1" forUI="1" id="009dpxqi2etbS00-" nameSpace="NUVEEN" partId="++5mLxey2etqS00v"/>
+      <part forPublishing="1" forUI="1" id="009dpxqi2etbS00y" nameSpace="NUVEEN" partId="++5mLxey2etqS00w"/>
+      <part forPublishing="1" forUI="1" id="009dpxqi2etbS00z" nameSpace="NUVEEN" partId="++5mLxey2etqS00x"/>
+      <part forPublishing="1" forUI="1" id="009dpxqi2etbS00+" nameSpace="NUVEEN" partId="++5mLxey2etqS00y"/>
+      <part forPublishing="1" forUI="1" id="009dpxqi2etbS011" nameSpace="NUVEEN" partId="++5pPTFS2etne00g"/>
+      <part forPublishing="1" forUI="1" id="009dpxqi2etbS012" nameSpace="NUVEEN" partId="++5pUmSy2etlS01P"/>
+      <part forPublishing="1" forUI="1" id="009dpxqi2etbS00u" nameSpace="NUVEEN" partId="005yIuai2etvy006"/>
+      <part forPublishing="1" forUI="1" id="009dpxqi2etbS00v" nameSpace="NUVEEN" partId="005yIuai2etvy007"/>
+    </entityRelation>
+  </entityRelations>
+  <naturalKeys>
+    <naturalKey dataGroupId="009dpxqi2etbS00m" id="009dpxqi2etbS013" name="NuveenExceptionsNaturalKey" nameSpace="NUVEEN">
+      <part beFieldId="009dpxqi2etbS00r" id="009dpxqi2etbS014" nameSpace="NUVEEN"/>
+    </naturalKey>
+  </naturalKeys>
+</entities>

@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entities cleanUnusedFields="false" nameSpace="NUVEEN">
+  <entiyTypes>
+    <entiyType colTypName="CONFIG_VAL_TXT" desc="Generated default type for table FT_T_NTEL" disColName="CONFIG_TYP" entityTypeCol="CONFIG_TYP" entityTypeColNme="XREF_TBL_TYP" id="++3qwBhS2etxm099" mainTable="FT_T_NTEL" name="ExceptionDetails" nameSpace="GSC" subTypTableName="FT_BE_BEGC"/>
+  </entiyTypes>
+  <dataGroups>
+    <dataGroup customInd="0" displayCaption="Property Details" entityTypeId="++3qwBhS2etxm099" frequencyInd="0" id="++9HKrRS2es2C03E" multiplicity="SINGLE_OR_NULL" name="PropertyDetails" nameSpace="GSC">
+      <part beRelationId="++9HKrRS2es2C03K" defNameSpace="GSC" id="++9HKrRS2es2C03R" prntReqdInd="0" seq="0"/>
+    </dataGroup>
+    <dataGroup customInd="0" entityTypeId="++3qwBhS2etxm099" frequencyInd="0" id="++9HKrRS2es2C039" multiplicity="SINGLE" name="PropertyException- Root DataGroup" nameSpace="GSC">
+      <part dataGroupId="++9HKrRS2es2C03E" defNameSpace="GSC" id="++9HKrRS2es2C03F" multiplicity="SINGLE_OR_NULL" prntReqdInd="0" seq="0"/>
+    </dataGroup>
+  </dataGroups>
+  <relations>
+    <relation id="++7VyhjwmICIq00A" name="CustomerExceptionToCustomer" nameSpace="GSC" srcTable="FT_T_NTEL" tgtTable="FT_T_CUST">
+      <field fromColumn="XREF_TBL_OID" id="++7VyhjwmICIq00B" nameSpace="GSC" toColumn="CST_ID" type="RELATION_FIELD" valueType="COLUMN"/>
+    </relation>
+    <relation customSQL="NTEL_01.XREF_TBL_TYP = 'ACCT'" id="008tvhAC2es2y009" name="FT_T_NTEL-To-FT_T_ACCT00" nameSpace="GSC" srcTable="FT_T_NTEL" tgtTable="FT_T_ACCT">
+      <field fromColumn="XREF_TBL_OID" id="008tvhAC2es2y00A" nameSpace="GSC" toColumn="ACCT_OID" type="RELATION_FIELD" valueType="COLUMN"/>
+    </relation>
+    <relation customSQL="NTEL_01.XREF_TBL_TYP = 'BNCH'" id="008twvDi2es2y00A" name="FT_T_NTEL-To-FT_T_BNCH00" nameSpace="GSC" srcTable="FT_T_NTEL" tgtTable="FT_T_BNCH">
+      <field fromColumn="XREF_TBL_OID" id="008twvDi2es2y00B" nameSpace="GSC" toColumn="BNCH_OID" type="RELATION_FIELD" valueType="COLUMN"/>
+    </relation>
+    <relation id="++6ZR9nS2etk800C" name="FT_T_NTEL-To-FT_T_IADS00" nameSpace="GSC" srcTable="FT_T_NTEL" tgtTable="FT_T_IADS">
+      <field fromColumn="XREF_TBL_OID" id="++6ZR9nS2etk800D" nameSpace="GSC" toColumn="IADS_OID" type="RELATION_FIELD" valueType="COLUMN"/>
+    </relation>
+    <relation id="++7gPP1S2esnK009" name="LegalAgreementExceptionToLegalAgreement" nameSpace="GSC" srcTable="FT_T_NTEL" tgtTable="FT_T_LAGR">
+      <field fromColumn="XREF_TBL_OID" id="++7gPP1S2esnK00A" nameSpace="GSC" toColumn="LAGR_OID" type="RELATION_FIELD" valueType="COLUMN"/>
+    </relation>
+    <relation id="006AeweC2etjy00P" name="NTEL-CorporateActions-IADC" nameSpace="GSC" srcTable="FT_T_NTEL" tgtTable="FT_T_IADC">
+      <field fromColumn="XREF_TBL_OID" id="006AeweC2etjy00Q" nameSpace="GSC" toColumn="ISSACT_ID" type="RELATION_FIELD" valueType="COLUMN"/>
+    </relation>
+    <relation customSQL="NTEL_01.XREF_TBL_TYP = 'EXTR'" id="++6TawFy2etrC009" name="NTEL-ExecutedTradeException-EXTR" nameSpace="GSC" srcTable="FT_T_NTEL" tgtTable="FT_T_EXTR">
+      <field fromColumn="XREF_TBL_OID" id="++6TawFy2etrC00A" nameSpace="GSC" toColumn="EXEC_TRD_ID" type="RELATION_FIELD" valueType="COLUMN"/>
+    </relation>
+    <relation customSQL="NTEL_01.XREF_TBL_TYP = 'FINS'" id="++5q-gwy2etpe00D" name="NTEL-InstitutionException-FINS" nameSpace="GSC" srcTable="FT_T_NTEL" tgtTable="FT_T_FINS">
+      <field fromColumn="XREF_TBL_OID" id="++5q-gwy2etpe00E" nameSpace="GSC" toColumn="INST_MNEM" type="RELATION_FIELD" valueType="COLUMN"/>
+    </relation>
+    <relation customSQL="NTEL_01.XREF_TBL_TYP = 'ISSU'" id="=000000198" name="NTEL-InstrumentException-ISSU" nameSpace="GSC" srcTable="FT_T_NTEL" tgtTable="FT_T_ISSU">
+      <field fromColumn="XREF_TBL_OID" id="=00000019E" nameSpace="GSC" toColumn="INSTR_ID" type="RELATION_FIELD" valueType="COLUMN"/>
+    </relation>
+    <relation customSQL="NTEL_01.XREF_TBL_TYP = 'ISSR'" id="=000000197" name="NTEL-IssuerException-ISSR" nameSpace="GSC" srcTable="FT_T_NTEL" tgtTable="FT_T_ISSR">
+      <field fromColumn="XREF_TBL_OID" id="=00000019D" nameSpace="GSC" toColumn="INSTR_ISSR_ID" type="RELATION_FIELD" valueType="COLUMN"/>
+    </relation>
+    <relation customSQL="NTEL_01.XREF_TBL_TYP = 'MRKT'" id="=00000009D" name="NTEL-MarketException-MRKT" nameSpace="GSC" srcTable="FT_T_NTEL" tgtTable="FT_T_MRKT">
+      <field fromColumn="XREF_TBL_OID" id="=0000000A0" nameSpace="GSC" toColumn="MKT_OID" type="RELATION_FIELD" valueType="COLUMN"/>
+    </relation>
+    <relation customSQL="NTEL_01.XREF_TBL_TYP = 'PPRY'" id="++9HKrRS2es2C03L" name="NTEL-To-PPRY" nameSpace="GSC" srcTable="FT_T_NTEL" tgtTable="FT_T_PPRY">
+      <field fromColumn="XREF_TBL_OID" id="++9HKrRS2es2C03M" nameSpace="GSC" toColumn="PPRY_OID" type="RELATION_FIELD" valueType="COLUMN"/>
+    </relation>
+    <relation id="++7dHn8wmICIq00G" name="PartyExceptionToParty" nameSpace="GSC" srcTable="FT_T_NTEL" tgtTable="FT_T_PART">
+      <field fromColumn="XREF_TBL_OID" id="++7dHn8wmICIq00H" nameSpace="GSC" toColumn="PART_OID" type="RELATION_FIELD" valueType="COLUMN"/>
+    </relation>
+    <relation id="++7EebwwmICIq00A" name="ProductExceptionToProduct" nameSpace="GSC" srcTable="FT_T_NTEL" tgtTable="FT_T_PROD">
+      <field fromColumn="XREF_TBL_OID" id="++7EebwwmICIq00B" nameSpace="GSC" toColumn="PROD_OID" type="RELATION_FIELD" valueType="COLUMN"/>
+    </relation>
+    <relation id="++6s-98S2euLq001" name="NTEL-To-MSTP" nameSpace="GSC" srcTable="FT_T_NTEL" tgtTable="FT_CFG_MSTP">
+      <field fromColumn="MSG_TYP" id="++6s-98S2euLq002" nameSpace="GSC" toColumn="MSG_TYP_NME" type="RELATION_FIELD" valueType="COLUMN"/>
+    </relation>
+    <relation id="++79s3yS2ete000D" name="NTEL-To-BERC" nameSpace="GSC" srcTable="FT_T_NTEL" tgtTable="FT_BE_BERC">
+      <field fromColumn="BERC_OID" id="++79s3yS2ete000E" nameSpace="GSC" toColumn="BERC_OID" type="RELATION_FIELD" valueType="COLUMN"/>
+    </relation>
+  </relations>
+  <occurrences>
+    <occurrence desc="Occurrence for Notification Entity Log Details" id="++5mLxey2etqS000" ignoreDeleteChildren="false" multiplicity="SINGLE_OR_NULL" name="NTEL_01" nameSpace="GSC" table="FT_T_NTEL" timeSeries="NONE">
+      <field id="++5q-gwy2etpe00C" nameSpace="GSC" relationId="++5q-gwy2etpe00D"/>
+      <field id="++6TawFy2etrC008" nameSpace="GSC" relationId="++6TawFy2etrC009"/>
+      <field id="++6ZR9nS2etk800B" nameSpace="GSC" relationId="++6ZR9nS2etk800C"/>
+      <field id="++7EebwwmICIq009" nameSpace="GSC" relationId="++7EebwwmICIq00A"/>
+      <field id="++7VyhjwmICIq009" nameSpace="GSC" relationId="++7VyhjwmICIq00A"/>
+      <field id="++7dHn8wmICIq00F" nameSpace="GSC" relationId="++7dHn8wmICIq00G"/>
+      <field id="++7gPP1S2esnK008" nameSpace="GSC" relationId="++7gPP1S2esnK009"/>
+      <field id="++9HKrRS2es2C03N" nameSpace="GSC" relationId="++9HKrRS2es2C03L"/>
+      <field id="006AeweC2etjy00O" nameSpace="GSC" relationId="006AeweC2etjy00P"/>
+      <field id="008tvhAC2es2y008" nameSpace="GSC" relationId="008tvhAC2es2y009"/>
+      <field id="008twvDi2es2y009" nameSpace="GSC" relationId="008twvDi2es2y00A"/>
+      <field id="=00000009E" nameSpace="GSC" relationId="=00000009D"/>
+      <field id="=000000199" nameSpace="GSC" relationId="=000000197"/>
+      <field id="=00000019A" nameSpace="GSC" relationId="=000000198"/>
+      <field id="++5mLxey2etqS001" name="APPL_ID" nameSpace="GSC"/>
+      <field id="++78w6jy2euLq001" name="BERC_OID" nameSpace="GSC"/>
+      <field id="++78w6jy2euLq002" name="BUS_ATTR_PATH_TXT" nameSpace="GSC"/>
+      <field id="++5mLxey2etqS002" name="CHAR_VAL_TXT" nameSpace="GSC"/>
+      <field id="++5vbH-S2etqq024" name="LAST_CHG_TRN_ID" nameSpace="GSC"/>
+      <field id="++5mLxey2etqS003" name="LST_NOTFCN_TMS" nameSpace="GSC"/>
+      <field id="005yIuai2etvy003" name="MAIN_ENTITY_ID" nameSpace="GSC"/>
+      <field id="005yIuai2etvy002" name="MAIN_ENTITY_ID_CTXT_TYP" nameSpace="GSC"/>
+      <field id="++5wFsuy2etvy000" name="MSG_SEVERITY_CDE" nameSpace="GSC"/>
+      <field id="++5mLxey2etqS004" name="MSG_TYP" nameSpace="GSC"/>
+      <field id="++5pPTFS2etne00Z" name="NOTFCN_CNT" nameSpace="GSC"/>
+      <field id="++5mLxey2etqS005" name="NOTFCN_CRTE_TMS" nameSpace="GSC"/>
+      <field id="++5mLxey2etqS006" name="NOTFCN_ID" nameSpace="GSC"/>
+      <field id="++5mLxey2etqS007" name="NOTFCN_OCCUR_CNT" nameSpace="GSC"/>
+      <field id="++5pPTFS2etne00W" name="NOTFCN_STAT_TYP" nameSpace="GSC"/>
+      <field id="++5mLxey2etqS008" name="NTEL_OID" nameSpace="GSC"/>
+      <field id="++5mLxey2etqS00A" name="PART_ID" nameSpace="GSC"/>
+      <field id="++8npv4S2etZa000" name="RULE_NME" nameSpace="GSC"/>
+      <field id="++5mLxey2etqS00B" name="SOURCE_ID" nameSpace="GSC"/>
+      <field id="++5pUmSy2etlS01S" name="TRN_ID" nameSpace="GSC"/>
+      <field id="++5mLxey2etqS00J" name="XREF_TBL_OID" nameSpace="GSC"/>
+      <field id="++5mLxey2etqS00I" name="XREF_TBL_TYP" nameSpace="GSC"/>
+      <option id="++5mLxey2etqS00E" nameSpace="GSC" type="DEFAULT_ACTION" value="UNKNOWN"/>
+    </occurrence>
+    <occurrence desc="Occurrence for Message Type" id="++78w6jy2euLq009" ignoreDeleteChildren="false" multiplicity="SINGLE_OR_NULL" name="NTEL_MSTP" nameSpace="GSC" parentId="++5mLxey2etqS000" relationId="++6s-98S2euLq001" table="FT_CFG_MSTP" timeSeries="LOGICAL_DELETE">
+      <option id="++78w6jy2euLq00A" nameSpace="GSC" type="DEFAULT_ACTION" value="REFERENCE"/>
+      <option id="++79s3yS2ete000J" nameSpace="GSC" type="LOOKUP_ONLY" value="true"/>
+    </occurrence>
+    <occurrence desc="Occurrence for Business Entity Rule Configuration" id="++79s3yS2ete000C" ignoreDeleteChildren="false" multiplicity="SINGLE_OR_NULL" name="NTEL_BERC" nameSpace="GSC" parentId="++5mLxey2etqS000" relationId="++79s3yS2ete000D" table="FT_BE_BERC" timeSeries="LOGICAL_DELETE">
+      <field id="++79s3yS2ete000G" name="RULE_NME" nameSpace="GSC"/>
+      <option id="++79s3yS2ete000F" nameSpace="GSC" type="LOOKUP_ONLY" value="true"/>
+      <option id="++79s3yS2ete000N" nameSpace="GSC" type="DEFAULT_ACTION" value="REFERENCE"/>
+    </occurrence>
+  </occurrences>
+  <mappings>
+    <mapping beRelationId="++9HKrRS2es2C03K" groupMapping="0" id="++9HKrRS2es2C03O" nameSpace="GSC" occFieldId="++9HKrRS2es2C03N"/>
+  </mappings>
+  <businessEntities>
+    <businessEntity cachedisableInd="N" completenessType="" dataGroupId="++9HKrRS2es2C039" defaultInd="0" displayCaption="Property Exception" entityTypeId="++3qwBhS2etxm099" id="++9HKrRS2es2C038" mavenVersion="1.0" name="PropertyException" nameSpace="GSC" prntEntityId="005YcD1C2etse02f" ruleVersion="0.0" version="1.0">
+      <configurations>
+        <configuration data="false" id="++9HKrRS2es2C03A" ignoreDeleteChildren="false" nameSpace="GSC" option="DOMAIN"/>
+      </configurations>
+    </businessEntity>
+  </businessEntities>
+  <entityRelations>
+    <entityRelation desc="Relation Participant" entityId="++9HKrRS2es2C038" id="++9HKrRS2es2C03K" lookupField="0082S8PAmG00O01I" multiplicity="SINGLE_OR_NULL" name="PropertyException" nameSpace="GSC" rltdEntityId="0082S8PAmG00O000">
+      <part forPublishing="1" forUI="1" id="++9HKrRS2es2C03P" nameSpace="GSC" partId="0082S8PAmG00O01G"/>
+      <part forPublishing="1" forUI="1" id="++9HKrRS2es2C03Q" nameSpace="GSC" partId="0082S8PAmG00O01I"/>
+    </entityRelation>
+  </entityRelations>
+</entities>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entities cleanUnusedFields="false" nameSpace="GSC">
+	<beFields>
+		<beField class="BEDEC" displayCaption="Current Principal Limit Amount" entityTypeId="++3qwBhS2etxm003" id="008s8K1C2es18001" mandatory="0" multiplicity="MULTIPLE_OR_NULL" name="CurrentPrinLimitAmount" nameSpace="GSC"/>
+	</beFields>
+	<dataGroups>
+		<dataGroup customInd="0" desc="Mortgage Statistics" displayCaption="Mortgage Statistics" entityTypeId="++3qwBhS2etxm003" frequencyInd="0" id="++5Ral9S2etse05E" ignoreDeleteChildren="false" multiplicity="MULTIPLE_OR_NULL" name="MortgageStatistics" nameSpace="GSC">
+			<part defNameSpace="GSC" fieldId="008s8K1C2es18001" id="008s8K1C2es18003" prntReqdInd="0" seq="236"/>
+		</dataGroup>
+	</dataGroups>
+	<occurrences>
+		<occurrence desc="Occurrence for Loan/Mortgage Statistics" id="004hiN-i2etv400u" ignoreDeleteChildren="false" multiplicity="MULTIPLE_OR_NULL" name="LMST_02" nameSpace="GSC" parentId="++4Gmmty2ettS01A" table="FT_T_LMST" timeSeries="LOGICAL_DELETE">
+			<field id="008s8K1C2es18000" name="CRRNT_PRIN_LIMIT_CAMT" nameSpace="GSC"/>
+		</occurrence>
+	</occurrences>
+	<mappings>
+		<mapping beFieldId="008s8K1C2es18001" groupMapping="0" id="008s8K1C2es18002" nameSpace="GSC" occFieldId="008s8K1C2es18000"/>
+	</mappings>
+</entities>

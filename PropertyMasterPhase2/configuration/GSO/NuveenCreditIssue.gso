@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entities cleanUnusedFields="false" nameSpace="NUVEEN">
+  <beFields>
+    <beField class="BETEXT  " customDesc="Fix in GS and Eagle | Indicates if the bonds are sinkable. " desc="Identifies bonds that are sinkable. Returns Y or N. " displayCaption="Sink Indicator" entityTypeId="++3qwBhS2etxm003" id="++4IvLOy2ettS027" mandatory="0" multiplicity="SINGLE_OR_NULL" name="SinkIndicator" nameSpace="GSC"/>
+    <beField class="BETEXT" customDesc="Indicates if the bond was fully redeemed prior to maturity via the issuer's call option. If a full call was announced, but not yet effective, field will return N until the Called Date (DS443, CALLED_DT)." desc="Indicates if the bond is completely or partially called.  Returns Y or N. " displayCaption="Called Status Code" entityTypeId="++3qwBhS2etxm003" id="++4IvLOy2ettS01y" mandatory="0" multiplicity="SINGLE_OR_NULL" name="CalledStatusCode" nameSpace="GSC"/>
+    <beField class="BETEXT" customDesc="Fix in GS and WSO | Indicates whether the security has a call provision.        Corps:       Indicates whether the security is subject to early redemption through a call provision, excluding extraordinary redemptions, sinking fund redemptions, or make-whole call redemptions. To check whether the bond is still callable, is beyond all of its discrete call dates or has been called already, check the Security Still Callable Indicator (DX815, IS_STILL_CALLABLE).         Loans:       Indicates whether or not the loan has call protection. Generally, all loans are continuously callable (can be called at any time) without penalty. If there is call protection on the loan, the borrower would pay the lenders a premium if they were to repay or refinance (in whole or in part) the loan prior to maturity. Call protection typically steps down to par according to a Call Schedule (SC001, CALL_SCHEDULE).        Mortgages:       Indicates if the collateral is subject to a cleanup call Mtge Deal (DS795, MTG_DEAL_CALL_PCT) and/or the bond is subject to a specified call date Next Call Date (DS022, NXT_CALL_DT).        Municipals:      Indicates whether the security is subject to early redemption through a call provision, excluding extraordinary redemptions, sinking fund redemptions, or make-whole call redemptions. " desc="Indicates whether the security is subject to early redemption through a call provision, excluding extraordinary redemptions, sinking fund redemptions, or make-whole call redemptions." displayCaption="Callable Indicator" entityTypeId="++3qwBhS2etxm003" id="004WG04i2etpy00s" mandatory="0" multiplicity="SINGLE_OR_NULL" name="CallableIndicator" nameSpace="GSC"/>
+    <beField class="BETEXT" customDesc="Fix in GS and Eagle | Indicates if the security has a soft call.        Corps:       Applicable to convertible securities, the Issuer has the option to repurchase or force a conversion only if the underlying stock price equals or exceeds a trigger, indicated by Soft Call Trigger (DS860, SOFT_CALL_TRIGGER), as stated in official documentation.        Loans:       The prepayment premium described by the Call Schedule (SC001, CALL_SCHEDULE) for loans with soft call protection only applies to prepayments that are the result of refinancing or repricing the loan. " desc="Indicates if the security has a soft call. Corps: Applicable to convertible securities, the Issuer has the option to repurchase or force a conversion only if the underlying stock price equals or exceeds a trigger as stated in official documentation.        Loans:       The prepayment premium described by the Call Schedule (SC001, CALL_SCHEDULE) for loans with soft call protection only applies to prepayments that are the result of refinancing or repricing the loan. " displayCaption="Soft Call Indicator" entityTypeId="++3qwBhS2etxm003" id="004NnGCC2ettm01q" mandatory="0" multiplicity="SINGLE_OR_NULL" name="SoftCallIndicator" nameSpace="GSC"/>
+    <beField class="BETEXT" customDesc="Fix in GS and Eagle | Indicates if the security has a make whole call.        Munis:    A make whole call is a provision that allows a borrower to prepay the remaining fixed rate term debt. The borrower, however, has to make an additional payment that is derived from a formula based on the net present value of the future debt payments. " desc="Indicates if the security has a make whole call.  Returns Y or N.  " displayCaption="Make Whole Call Indicator" entityTypeId="++3qwBhS2etxm003" id="++4IvLOy2ettS01+" mandatory="0" multiplicity="SINGLE_OR_NULL" name="MakeWholeCallIndicator" nameSpace="GSC"/>
+    <beField class="BETEXT  " customDesc="Fix in GS and WSO | Govt/Corp/Pfd:    Indicates whether the security has a put provision, which would allow the security's holder to require the issuer to buyback the instrument based on terms defined in offering documentation, excluding extraordinary and provisional redemptions. To check whether the security still has an actionable put option, see the Has Put Provision Expired (DS744, PUT_EXPIRED) field.        Municipals:    Indicates if the bonds are putable. Official Statement Notes (DS562, OS_NOTES) and Official Statement Series Notes (DX623, OS_SERIES_NOTES) may expand on the put provision. " desc="This field indicates whether the security has a put feature." displayCaption="Putable Indicator" entityTypeId="++3qwBhS2etxm003" id="++4IvLOy2ettS026" mandatory="0" multiplicity="SINGLE_OR_NULL" name="PutableIndicator" nameSpace="GSC"/>
+    <beField class="BETEXT" customDesc="Specifies how the periodic payment is structured. Under specific scenarios, payment structure details are replaced with information detailing the state of the instrument (Defaulted, Exchanged, Flat Trading, Funged, Prelim, When Issued).        Mortgages:        FIXED coupon securities have reported coupons which are not tied to an index.        FLOATING coupon securities tie the calculation of a coupon to an index.        VARIABLE coupon securities do not tie the coupon to an index but may be an aggregate of other securities or have an additional structural component which can cause the coupon to change between scheduled payments.        STEP coupon securities do not tie the coupon to an index but have predetermined accrual properties or a schedule of coupon changes over time." desc="Type of interest to be paid to investors. Indicates if coupon type is fixed or floating." displayCaption="Coupon Type" entityTypeId="++3qwBhS2etxm003" id="004HBMJi2etwa00G" mandatory="0" multiplicity="SINGLE_OR_NULL" name="CouponType" nameSpace="GSC"/>
+    <beField class="BETEXT" customDesc="Specifies the redemption features of the security, Examples include at maturity, callable, putable, sinkable and may include combinations if applicable. Maturity Type Lookup (DM002, LU_MTY_TYP) specifies the potential return values for Maturity / Refund Type." desc="Displays the bond's structure, i.e., Callable, Putable, Sinkable. " displayCaption="Maturity Type" entityTypeId="++3qwBhS2etxm003" id="004GsTdi2etzy00G" mandatory="0" multiplicity="SINGLE_OR_NULL" name="MaturityType" nameSpace="GSC"/>
+    <beField class="BETEXT" customDesc="Fix in GS | Indicates a security that does not rank lower in priority than other securities when dividends are paid or assets are distributed in liquidation or bankruptcy. " desc="Provides the ISO country code for the country in which the guarantor is incorporated" displayCaption="Senior Indicator" entityTypeId="++3qwBhS2etxm003" id="004K9FQi2etpy06A" mandatory="0" multiplicity="SINGLE_OR_NULL" name="SeniorIndicator" nameSpace="GSC"/>
+    <beField class="BETEXT" customDesc="Fix in GS | Indicates whether the bond or loan is secured.        Corporates:       In the event of a default, the creditor(s) of a secured bond has a priority claim to the pledged assets over the unsecured debt creditors.        Loans:       The asset collateral of the borrower is pledged to repay the lenders in the event of default under a credit agreement. Secured loans are commonly used in the leveraged loan market. " desc="Indicates the obligation is not backed by any collateral.  Returns Y or N. " displayCaption="Unsecured Obligation Indicator" entityTypeId="++3qwBhS2etxm003" id="004JftOi2etwa00I" mandatory="0" multiplicity="SINGLE_OR_NULL" name="UnsecuredObligationIndicator" nameSpace="GSC"/>
+    <beField class="BETEXT" customDesc="Fix in GS | Indicates a violation of an indenture provision such as failing to pay interest or principal by the payable date or grace period expiration date, as applicable, or breaching a covenant. Indicator will be removed if default is cured and issuer is current on payments.        Municipal Bond:    Indicates that the debt instrument is in payment default (has missed a scheduled payment or has only made partial payment).        Preferred Share:    Not applicable as true preferred stock is not listed as defaulted. " desc="Indicates if the debt instrument is in default. Returns Y or N. " displayCaption="Default Indicator" entityTypeId="++3qwBhS2etxm003" id="++4JFP5S2etwa00i" mandatory="0" multiplicity="SINGLE_OR_NULL" name="DefaultedIndicator" nameSpace="GSC"/>
+    <beField class="BETEXT" customDesc="Fix in GS | Debt type of the single name credit default swap deal. Returns senior, subordinate or other.        Currencies:       Available for Credit Default Swaps (CDS) tickers. " desc="Code representing the seniority of the asset, as disclosed in source documentation. " displayCaption="Seniority" entityTypeId="++3qwBhS2etxm003" id="005WGrhC2etse00P" mandatory="0" multiplicity="SINGLE_OR_NULL" name="Seniority" nameSpace="GSC"/>
+    <beField class="BETEXT" customDesc="Indicates whether the bond falls in the category of Structured Notes." desc="Indicates whether or not the bond falls in the category of Structured Notes. Returns a Y or N. " displayCaption="Structured Note Indicator" entityTypeId="++3qwBhS2etxm003" id="004K9FQi2etpy06M" mandatory="0" multiplicity="SINGLE_OR_NULL" name="StructuredNoteIndicator" nameSpace="GSC"/>
+    <beField class="BETEXT" customDesc="Fix in GS | Indicates whether or not the security rank is junior.  A junior security is a security  that ranks lower than other securities in regards to the owner's claims on assets and income in the event of the issuer becoming insolvent. " desc="Indicates whether or not the security rank is senior.  A senior security is a security that has a claim prior to junior obligations and equity on a corporation's assets in the event of liquidation." displayCaption="Junior Indicator" entityTypeId="++3qwBhS2etxm003" id="006F4IYi2etvy000" mandatory="0" multiplicity="SINGLE_OR_NULL" name="JuniorIndicator" nameSpace="GSC"/>
+    <beField class="BETEXT" customDesc="Fix in GS | Indicates whether or not the loan type is PIK (Payment-In-Kind). A PIK loan is one that typically does not provide for any cash flows from borrower to lender between the drawdown date and the maturity or refinancing date. PIK loans are typically unsecured. " desc="This field indicates whether the Instrument pays interest in kind, meaning as additional securities." displayCaption="Payment In Kind Indicator" entityTypeId="++3qwBhS2etxm003" id="008mgQzi2es2C01d" mandatory="0" multiplicity="SINGLE_OR_NULL" name="PaymentInKindIndicator" nameSpace="GSC"/>
+    <beField class="BETEXT" customDesc="Fix in GS and Eagle | Indicates a security that ranks ahead of other securities in the event of a bankruptcy or liquidation. Within unsecured and secured backing categories, a senior security has a claim prior to other obligations on a corporation's assets in the event of default.  Within the secured backing category, first lien bonds receive senior designation while one and half lien, second and third priority claims do not. " desc="" displayCaption="Senior" entityTypeId="++3qwBhS2etxm003" id="++8rQuaS2es18003" mandatory="0" multiplicity="SINGLE_OR_NULL" name="Senior" nameSpace="GSC"/>
+    <beField class="BETEXT" displayCaption="Original Issue Discount De Minimis" entityTypeId="++3qwBhS2etxm003" id="++8r-s8S2es18005" mandatory="0" multiplicity="SINGLE_OR_NULL" name="NuveenOriginalIssueDiscountDeMinimis" nameSpace="NUVEEN"/>
+    <beField class="BETEXT" displayCaption="Corp Bond Indicator" entityTypeId="++3qwBhS2etxm003" id="008sQXVi2es18001" mandatory="0" multiplicity="SINGLE_OR_NULL" name="NuveenCorpBondIndicator" nameSpace="NUVEEN"/>
+    <beField class="BEDEC" customDesc="" desc="" displayCaption="Min Subsequent Purchase Amount" entityTypeId="++3qwBhS2etxm003" id="008vqi7C2es18005" mandatory="0" multiplicity="SINGLE_OR_NULL" name="NuveenMinSubsequentPurchaseAmount" nameSpace="NUVEEN"/>
+  </beFields>
+  <dataGroups>
+    <dataGroup customInd="0" desc="Related Instrument Details" displayCaption="Related Instrument Details" entityTypeId="++3qwBhS2etxm003" frequencyInd="0" id="++4ci0By2etrS006" ignoreDeleteChildren="false" multiplicity="MULTIPLE" name="RelatedInstrumentDetails" nameSpace="GSC">
+      <part beRelationId="009WthRC2etbS000" defNameSpace="NUVEEN" id="009WthRC2etbS001" label="NuveenUnderlyingCUSIP" prntReqdInd="0" seq="6"/>
+    </dataGroup>
+    <dataGroup customInd="0" desc="Bond Features" displayCaption="Bond Features" entityTypeId="++3qwBhS2etxm003" frequencyInd="0" id="004JftOi2etwa023" ignoreDeleteChildren="false" multiplicity="SINGLE_OR_NULL" name="BondFeatures" nameSpace="GSC">
+      <part defNameSpace="NUVEEN" fieldId="++8r-s8S2es18005" id="++8r-s8S2es18007" prntReqdInd="0" seq="281"/>
+      <part defNameSpace="NUVEEN" fieldId="008sQXVi2es18001" id="008sQXVi2es18003" prntReqdInd="0" seq="282"/>
+      <part defNameSpace="NUVEEN" fieldId="008vqi7C2es18005" id="008vqi7C2es18008" prntReqdInd="0" seq="283"/>
+    </dataGroup>
+    <dataGroup customInd="0" entityTypeId="++3qwBhS2etxm003" frequencyInd="0" id="009V00nC2etbS03n" ignoreDeleteChildren="false" multiplicity="SINGLE" name="NuveenCreditIssue- Root DataGroup" nameSpace="NUVEEN">
+      <part dataGroupId="004QUONC2etsS018" defNameSpace="NUVEEN" id="++9VhNzS2etbS001" prntReqdInd="0" seq="0"/>
+      <part dataGroupId="++6vC+Jy2euPC000" defNameSpace="NUVEEN" id="009WthRC2etbS009" prntReqdInd="0" seq="1"/>
+      <part dataGroupId="004JftOi2etwa023" defNameSpace="NUVEEN" id="009ZiFQC2etbS006" prntReqdInd="0" seq="2"/>
+    </dataGroup>
+  </dataGroups>
+  <relations>
+    <relation id="009WthRC2etbS003" name="FT_T_RISS-To-FT_T_ISSU17_NUVEEN" nameSpace="NUVEEN" srcTable="FT_T_RISS" tgtTable="FT_T_ISSU">
+      <field fromColumn="INSTR_ID" id="009WthRC2etbS004" nameSpace="NUVEEN" toColumn="INSTR_ID" type="RELATION_FIELD" valueType="COLUMN"/>
+    </relation>
+  </relations>
+  <occurrences>
+    <occurrence desc="Occurrence for Related Issue" id="004RuC1C2ettK00T" ignoreDeleteChildren="false" multiplicity="MULTIPLE_OR_NULL" name="RISS_01" nameSpace="GSC" parentId="004QPmYC2etr002Z" table="FT_T_RISS" timeSeries="LOGICAL_DELETE">
+      <field id="009WthRC2etbS002" nameSpace="NUVEEN" relationId="009WthRC2etbS003"/>
+    </occurrence>
+    <occurrence desc="Occurence for Issue Rating" id="JKKBUTVBCVEKEDGU" ignoreDeleteChildren="false" multiplicity="MULTIPLE_OR_NULL" name="ISRT_ALL" nameSpace="GSC" parentId="++4Gmmty2ettS01A" table="FT_T_ISRT" timeSeries="CURRENT_AND_FUTURE_ACTIVE">
+      <field id="++8rJBCS2es1800F" name="START_TMS" nameSpace="NUVEEN"/>
+      <option id="MYVJOJZISJHJNCHI" nameSpace="GSC" type="DEFAULT_ACTION" value="UNKNOWN"/>
+      <option id="SNRHPFSGKNANCTFM" nameSpace="GSC" type="DEFAULT_MATCH_KEY"/>
+      <option id="UZTTMFDKWYQDIAOF" nameSpace="GSC" type="LOOKUP_ONLY" value="false"/>
+      <option id="VCUUNPGTYKPWNBNP" nameSpace="GSC" type="UI_PUB_ONLY" value="false"/>
+    </occurrence>
+    <occurrence desc="Occurrence for Rating Value" id="++6vC+Jy2euPC00m" ignoreDeleteChildren="false" multiplicity="SINGLE_OR_NULL" name="RTVL_ALL" nameSpace="GSC" parentId="JKKBUTVBCVEKEDGU" relationId="++5gmvwS2etge03Q" table="FT_T_RTVL" timeSeries="LOGICAL_DELETE">
+      <field id="++8rLpJy2es18000" name="RTNG_ID" nameSpace="NUVEEN"/>
+      <option id="++6vC+Jy2euPC00o" nameSpace="GSC" type="LOOKUP_ONLY" value="true"/>
+      <option id="++6vC+Jy2euPC00p" nameSpace="GSC" type="DEFAULT_ACTION" value="REFERENCE"/>
+      <option id="++8hZedS2euPC001" nameSpace="GSC" type="DEFAULT_MATCH_KEY" value="RTVL_MATCH_1"/>
+    </occurrence>
+    <occurrence desc="Occurrence for Rating Set Definition" id="++6vC+Jy2euPC00r" ignoreDeleteChildren="false" multiplicity="SINGLE_OR_NULL" name="RTNG_ALL" nameSpace="GSC" parentId="++6vC+Jy2euPC00m" relationId="006vr+mi2euPC000" table="FT_T_RTNG" timeSeries="LOGICAL_DELETE">
+      <field id="008rM0Ni2es18004" name="INST_MNEM" nameSpace="NUVEEN"/>
+      <field id="++8rLscS2es18001" name="RTNG_SET_NME" nameSpace="NUVEEN"/>
+      <field id="008pRKBC2etbS009" name="RTNG_TENOR_MNEM" nameSpace="NUVEEN"/>
+      <option id="++6vC+Jy2euPC00s" nameSpace="GSC" type="UI_PUB_ONLY" value="true"/>
+      <option id="++6vC+Jy2euPC00t" nameSpace="GSC" type="LOOKUP_ONLY" value="true"/>
+      <option id="++7zhoiS2etee000" nameSpace="GSC" type="DEFAULT_MATCH_KEY" value="RTNG_MATCH_1"/>
+      <option id="006vr+mi2euPC002" nameSpace="GSC" type="DEFAULT_ACTION" value="REFERENCE"/>
+    </occurrence>
+    <occurrence desc="Occurrence for Debt Instrument Characteristics" id="004GsTdi2etzy011" ignoreDeleteChildren="false" multiplicity="SINGLE_OR_NULL" name="BDCH_01" nameSpace="GSC" parentId="++4Gmmty2ettS01A" table="FT_T_BDCH" timeSeries="LOGICAL_DELETE">
+      <field id="008sQXVi2es18000" name="IS_CORP_BOND_IND" nameSpace="NUVEEN"/>
+      <field id="008vqi7C2es18004" name="MN_SUBSEQ_PR_CAMT" nameSpace="NUVEEN"/>
+      <field id="++8r-s8S2es18004" name="OID_DE_MINIMIS_IND" nameSpace="NUVEEN"/>
+    </occurrence>
+  </occurrences>
+  <mappings>
+    <mapping beRelationId="009WthRC2etbS000" groupMapping="0" id="009WthRC2etbS005" nameSpace="NUVEEN" occFieldId="009WthRC2etbS002"/>
+    <mapping beFieldId="++4IvLOy2ettS027" groupMapping="0" id="004KIvai2etzy00c" nameSpace="GSC" occFieldId="004KIvai2etzy00b"/>
+    <mapping beFieldId="++4IvLOy2ettS01+" groupMapping="0" id="004KIvai2etzy00Y" nameSpace="GSC" occFieldId="004KIvai2etzy00X"/>
+    <mapping beFieldId="++4IvLOy2ettS01y" groupMapping="0" id="004KuYRi2etzy000" nameSpace="GSC" occFieldId="++4K3vHS2ettS00p"/>
+    <mapping beFieldId="004NnGCC2ettm01q" groupMapping="0" id="004NnGCC2ettm01-" nameSpace="GSC" occFieldId="004NnGCC2ettm01z"/>
+    <mapping beFieldId="004WG04i2etpy00s" groupMapping="0" id="004WG04i2etpy00t" nameSpace="GSC" occFieldId="004NnGCC2ettm009"/>
+    <mapping beFieldId="++4IvLOy2ettS026" groupMapping="0" id="005WGrhC2etse00Y" nameSpace="GSC" occFieldId="005WGrhC2etse00X"/>
+    <mapping beFieldId="++4JFP5S2etwa00i" groupMapping="0" id="++4JUQQy2etzy006" nameSpace="GSC" occFieldId="++4GhriS2etwa03m"/>
+    <mapping beFieldId="004K9FQi2etpy06M" groupMapping="0" id="++4KDYfy2etu0008" nameSpace="GSC" occFieldId="++4KDYfy2etu0007"/>
+    <mapping beFieldId="004K9FQi2etpy06A" groupMapping="0" id="++5Xx3ay2etse00M" nameSpace="GSC" occFieldId="004JftOi2etwa01d"/>
+    <mapping beFieldId="++8r-s8S2es18005" groupMapping="0" id="++8r-s8S2es18006" nameSpace="NUVEEN" occFieldId="++8r-s8S2es18004"/>
+    <mapping beFieldId="++8rQuaS2es18003" groupMapping="0" id="++8rQuaS2es18004" nameSpace="GSC" occFieldId="++8rQuaS2es18002"/>
+    <mapping beFieldId="004GsTdi2etzy00G" groupMapping="0" id="004GsTdi2etzy01V" nameSpace="GSC" occFieldId="004GsTdi2etzy01R"/>
+    <mapping beFieldId="004HBMJi2etwa00G" groupMapping="0" id="004J3gzC2etzy007" nameSpace="GSC" occFieldId="004J3gzC2etzy006"/>
+    <mapping beFieldId="004JftOi2etwa00I" groupMapping="0" id="004JftOi2etwa01c" nameSpace="GSC" occFieldId="004JftOi2etwa01b"/>
+    <mapping beFieldId="005WGrhC2etse00P" groupMapping="0" id="005WGrhC2etse00R" nameSpace="GSC" occFieldId="005WGrhC2etse00Q"/>
+    <mapping beFieldId="006F4IYi2etvy000" groupMapping="0" id="006F4IYi2etvy001" nameSpace="GSC" occFieldId="004M2Vxi2ettS02C"/>
+    <mapping beFieldId="008mgQzi2es2C01d" groupMapping="0" id="008mgQzi2es2C01e" nameSpace="GSC" occFieldId="008mgQzi2es2C01c"/>
+    <mapping beFieldId="008sQXVi2es18001" groupMapping="0" id="008sQXVi2es18002" nameSpace="NUVEEN" occFieldId="008sQXVi2es18000"/>
+    <mapping beFieldId="008vqi7C2es18005" groupMapping="0" id="008vqi7C2es18006" nameSpace="NUVEEN" occFieldId="008vqi7C2es18004"/>
+  </mappings>
+  <businessEntities>
+    <businessEntity cachedisableInd="N" category="" completenessType="" dataGroupId="009V00nC2etbS03n" defaultInd="0" desc="" displayCaption="Credit Issue" entityTypeId="++3qwBhS2etxm003" id="009V00nC2etbS03m" mavenVersion="0.0" name="NuveenCreditIssue" nameSpace="NUVEEN" prntEntityId="++5SQ0Ly2etse000" ruleVersion="0.0" version="15.0">
+      <configurations>
+        <configuration data="false" id="++9VhNzS2etbS000" ignoreDeleteChildren="false" nameSpace="NUVEEN" option="DOMAIN"/>
+        <configuration id="++9Zj1NS2etbS000" ignoreDeleteChildren="false" nameSpace="NUVEEN" option="MULTIPLICITY_REQUIRE">
+          <part disParentConfig="0" groupPartId="005Q5i8i2etse002" id="++9Zj1NS2etbS001" nameSpace="NUVEEN"/>
+          <part disParentConfig="0" groupPartId="005QX23C2etse0Bo" id="++9Zj1NS2etbS002" nameSpace="NUVEEN"/>
+        </configuration>
+        <configuration data="INCOMPLETE" id="009W0UpC2etbS01B" ignoreDeleteChildren="false" nameSpace="NUVEEN" option="BEDEINITIONFSTATUS"/>
+      </configurations>
+    </businessEntity>
+  </businessEntities>
+  <entityRelations>
+    <entityRelation entityId="009V00nC2etbS03m" id="009WthRC2etbS000" lookupField="++5PNZ5y2etz400o" multiplicity="MULTIPLE_OR_NULL" name="NuveenUnderlyingCUSIP" nameSpace="NUVEEN" rltdEntityId="++5TZs2y2etse000">
+      <part forPublishing="1" forUI="1" id="009WthRC2etbS006" nameSpace="NUVEEN" partId="++5PNZ5y2etz400o"/>
+      <part forPublishing="1" forUI="1" id="009WthRC2etbS007" nameSpace="NUVEEN" partId="004aIFeC2etv4008"/>
+      <part forPublishing="1" forUI="1" id="009WthRC2etbS008" nameSpace="NUVEEN" partId="005Q5i8i2etse002"/>
+    </entityRelation>
+  </entityRelations>
+  <naturalKeys>
+    <naturalKey dataGroupId="++4ci0By2etrS006" id="++5ZV22y2etse08v" name="RelatedInstrumentsNaturalKey" nameSpace="GSC">
+      <part beFieldId="++5dnClS2etxK004" id="++5znZyS2etvy001" nameSpace="GSC"/>
+      <part beFieldId="++5rYSvS2etpe02H" id="++5znzyS2etvy001" nameSpace="GSC"/>
+      <part beFieldId="++5rYSvS2etpe02I" id="++5znzyS2etvy000" nameSpace="GSC"/>
+      <part beFieldId="004crIiC2etrS004" id="++5ZV22y2etse08w" nameSpace="GSC"/>
+      <part beFieldId="007vpZXi2etbC003" id="007vpZXi2etbC008" nameSpace="GSC"/>
+      <part beFieldId="009WthRC2etbS001" id="009Wttki2etbS000" nameSpace="NUVEEN"/>
+    </naturalKey>
+  </naturalKeys>
+</entities>

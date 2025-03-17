@@ -1,0 +1,133 @@
+{
+  "TYPE" : "Workflow",
+  "version" : "1.6.6",
+  "timeZone" : "America/New_York",
+  "title" : "Nuveen LevFin Ratings Full Load Process",
+  "orderPreparation" : {
+    "parameters" : {
+      "checkDependency" : {
+        "type" : "Boolean",
+        "default" : "false"
+      },
+      "bb_file_pattern" : {
+        "type" : "String",
+        "default" : "'GS.*\\.OUT'"
+      },
+      "bb_dayMinus" : {
+        "type" : "String",
+        "default" : "'0'"
+      },
+      "bb_jobConfigText" : {
+        "type" : "String",
+        "default" : "'LevFin - Bloomberg Per Security Job'"
+      },
+      "target_application" : {
+        "type" : "String",
+        "default" : "'fileloading'"
+      },
+      "scripts_home" : {
+        "type" : "String",
+        "default" : "'/ext/app/jobscheduler/scripts/'"
+      },
+      "dayMinus" : {
+        "type" : "String",
+        "default" : "0"
+      }
+    },
+    "allowUndeclared" : false
+  },
+  "jobResourceNames" : [ "curDteJob" ],
+  "instructions" : [ {
+    "TYPE" : "Execute.Named",
+    "jobName" : "Ratings_Full_Workflow_Start",
+    "label" : "Ratings_Full_Workflow_Start"
+  }, {
+    "TYPE" : "Execute.Named",
+    "jobName" : "Moodys_Instrument_Ratings_Full_NDC",
+    "label" : "Moodys_Instr_Ratings_Full_NDC"
+  }, {
+    "TYPE" : "Execute.Named",
+    "jobName" : "Moodys_Issuer_Ratings_Full",
+    "label" : "Moodys_Issuer_Ratings_Full"
+  }, {
+    "TYPE" : "Execute.Named",
+    "jobName" : "Ratings_Full_Workflow_End",
+    "label" : "Ratings_Full_Workflow_End"
+  } ],
+  "jobs" : {
+    "Ratings_Full_Workflow_Start" : {
+      "agentName" : "JSAgent",
+      "withSubagentClusterIdExpr" : false,
+      "executable" : {
+        "TYPE" : "ShellScriptExecutable",
+        "script" : "echo \"Ratings Full Workflow Start\"",
+        "v1Compatible" : false
+      },
+      "skipIfNoAdmissionForOrderDay" : false,
+      "parallelism" : 1,
+      "graceTimeout" : 1,
+      "failOnErrWritten" : false,
+      "warnOnErrWritten" : false,
+      "title" : "Ratings Full Workflow Start"
+    },
+    "Moodys_Instrument_Ratings_Full_NDC" : {
+      "agentName" : "JSAgent",
+      "withSubagentClusterIdExpr" : false,
+      "executable" : {
+        "TYPE" : "ShellScriptExecutable",
+        "script" : "jq -r '.Pattern[]' $input_param_file | while read fileName; do\n\tfileDte=$(date --date=\"$BUS_DTE $dayMinus days ago\" +\"%Y%m%d\")\n    fileNameBusDte=${fileName/$busDteRegex/$fileDte}\n    fileNameRegex=${fileName//'.'/'\\.'}\n    fileNameRegex=${fileNameRegex//'*'/'\\*'}\n    sed -i \"s|$fileNameRegex|$fileNameBusDte|\" $input_param_file\ndone\n\ncd $scripts_home\n./jobutilities execWkf $input_param_file $event_name $target_application",
+        "env" : {
+          "input_param_file" : "'/edmfs/app/InputParams/ratings/Nuveen_LevFin_Moodys_Instrument_Ratings_Full.json'",
+          "event_name" : "'Nuveen_LevFin_EVT_Moodys_Ratings'",
+          "target_application" : "$target_application",
+          "scripts_home" : "$scripts_home",
+          "dayMinus" : "$dayMinus"
+        },
+        "v1Compatible" : false
+      },
+      "skipIfNoAdmissionForOrderDay" : false,
+      "parallelism" : 1,
+      "graceTimeout" : 1,
+      "failOnErrWritten" : false,
+      "warnOnErrWritten" : false,
+      "title" : "Moodys Instrument Ratings Full NDC"
+    },
+    "Moodys_Issuer_Ratings_Full" : {
+      "agentName" : "JSAgent",
+      "withSubagentClusterIdExpr" : false,
+      "executable" : {
+        "TYPE" : "ShellScriptExecutable",
+        "script" : "jq -r '.Pattern[]' $input_param_file | while read fileName; do\n\tfileDte=$(date --date=\"$BUS_DTE $dayMinus days ago\" +\"%Y%m%d\")\n\tfileNameBusDte=${fileName/$busDteRegex/$fileDte}\n    fileNameRegex=${fileName//'.'/'\\.'}\n    fileNameRegex=${fileNameRegex//'*'/'\\*'}\n    sed -i \"s|$fileNameRegex|$fileNameBusDte|\" $input_param_file\ndone\n\ncd $scripts_home\n./jobutilities execWkf $input_param_file $event_name $target_application",
+        "env" : {
+          "input_param_file" : "'/edmfs/app/InputParams/ratings/Nuveen_LevFin_Moodys_Issuer_Ratings_Full.json'",
+          "event_name" : "'Nuveen_LevFin_EVT_Moodys_Ratings'",
+          "target_application" : "$target_application",
+          "scripts_home" : "$scripts_home",
+          "dayMinus" : "$dayMinus"
+        },
+        "v1Compatible" : false
+      },
+      "skipIfNoAdmissionForOrderDay" : false,
+      "parallelism" : 1,
+      "graceTimeout" : 1,
+      "failOnErrWritten" : false,
+      "warnOnErrWritten" : false,
+      "title" : "Moodys Issuer Ratings Full"
+    },
+    "Ratings_Full_Workflow_End" : {
+      "agentName" : "JSAgent",
+      "withSubagentClusterIdExpr" : false,
+      "executable" : {
+        "TYPE" : "ShellScriptExecutable",
+        "script" : "echo \"Ratings Full Workflow End\"",
+        "v1Compatible" : false
+      },
+      "skipIfNoAdmissionForOrderDay" : false,
+      "parallelism" : 1,
+      "graceTimeout" : 1,
+      "failOnErrWritten" : false,
+      "warnOnErrWritten" : false,
+      "title" : "Ratings Full Workflow End"
+    }
+  }
+}

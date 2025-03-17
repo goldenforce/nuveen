@@ -1,0 +1,2 @@
+INSERT INTO FT_T_DSRC (DATA_SRC_ID,START_TMS,LAST_CHG_TMS,LAST_CHG_USR_ID,DATA_SRC_NME,DATA_SRC_DESC) SELECT 'NIX',SYSDATE(),SYSDATE(),'NRE:CSTM','NIX','' from dual where not exists (select 'X' from ft_t_dsrc where data_src_ID='NIX');
+INSERT INTO FT_T_DSRC (DATA_SRC_ID,START_TMS,LAST_CHG_TMS,LAST_CHG_USR_ID,DATA_SRC_NME,DATA_SRC_DESC) SELECT 'BACKSHOP',SYSDATE(),SYSDATE(),'NRE:CSTM','BACKSHOP','' from dual where not exists (select 'X' from ft_t_dsrc where data_src_ID='BACKSHOP');

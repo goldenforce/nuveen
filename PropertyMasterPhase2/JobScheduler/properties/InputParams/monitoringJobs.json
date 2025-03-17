@@ -1,0 +1,7 @@
+{
+  "From Mail Id" : "noreply@nuveen.com",
+  "Holiday Sql" : "select BUS_DTE_IND  from FT_T_CADP  where GREG_DTE=sysdate()::date and cal_id='PRPTUAL'",
+  "Client Logo" : "https://upload.wikimedia.org/wikipedia/en/9/92/GoldenSource_logo.svg",
+  "Client Name" : "NUVEEN:UAT",
+  "DBTypePostgres" : true
+}

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entities cleanUnusedFields="false" nameSpace="NUVEEN">
+  <beFields>
+    <beField class="BETEXT" customDesc="" customDomainSQL="" customSQL="" desc="" displayCaption="NuveenInstitutionRatingName" entityTypeId="++3qwBhS2etxm001" id="009gOIbC2etbS003" mandatory="0" multiplicity="MULTIPLE_OR_NULL" name="NuveenInstitutionRatingName" nameSpace="NUVEEN"/>
+    <beField class="BETEXT" customDesc="" customDomainSQL="" customSQL="" desc="" displayCaption="NuveenInstitutionRatingWatchName" entityTypeId="++3qwBhS2etxm001" id="009gOIbC2etbS00D" mandatory="0" multiplicity="MULTIPLE_OR_NULL" name="NuveenInstitutionRatingWatchName" nameSpace="NUVEEN"/>
+    <beField class="BETEXT" customDesc="" customDomainSQL="" customSQL="" desc="" displayCaption="NuveenInstitutionRatingOpnName" entityTypeId="++3qwBhS2etxm001" id="009gOIbC2etbS008" mandatory="0" multiplicity="MULTIPLE_OR_NULL" name="NuveenInstitutionRatingOpnName" nameSpace="NUVEEN"/>
+  </beFields>
+  <dataGroups>
+    <dataGroup customInd="0" desc="Ratings" displayCaption="Ratings" entityTypeId="++3qwBhS2etxm001" frequencyInd="0" id="005lCprC2etqS00c" multiplicity="MULTIPLE_OR_NULL" name="Ratings" nameSpace="GSC">
+      <part defNameSpace="NUVEEN" fieldId="009gOIbC2etbS003" id="009gOIbC2etbS00F" prntReqdInd="0" seq="42"/>
+    </dataGroup>
+    <dataGroup customInd="0" desc="Watch Opinion" displayCaption="Watch Opinion" entityTypeId="++3qwBhS2etxm001" frequencyInd="0" id="005lCprC2etqS01F" multiplicity="MULTIPLE_OR_NULL" name="WatchOpinion" nameSpace="GSC">
+      <part defNameSpace="NUVEEN" fieldId="009gOIbC2etbS00D" id="009gOIbC2etbS00G" prntReqdInd="0" seq="14"/>
+    </dataGroup>
+    <dataGroup customInd="0" desc="Outlook Opinion" displayCaption="Outlook Opinion" entityTypeId="++3qwBhS2etxm001" frequencyInd="0" id="005lCprC2etqS01H" multiplicity="MULTIPLE_OR_NULL" name="OutlookOpinion" nameSpace="GSC">
+      <part defNameSpace="NUVEEN" fieldId="009gOIbC2etbS008" id="009gOIbC2etbS00H" prntReqdInd="0" seq="12"/>
+    </dataGroup>
+  </dataGroups>
+  <occurrences>
+    <occurrence desc="Occurrence for Rating Set Definition" id="009gOIbC2etbS000" ignoreDeleteChildren="false" multiplicity="SINGLE_OR_NULL" name="NVN_RTNG_NAME" nameSpace="NUVEEN" parentId="005lCprC2etqS000" table="FT_T_RTNG" timeSeries="LOGICAL_DELETE">
+      <field desc="Rating Set Name" id="009gOIbC2etbS002" name="RTNG_SET_NME" nameSpace="NUVEEN"/>
+      <option id="009gOIbC2etbS001" nameSpace="NUVEEN" type="DEFAULT_ACTION" value="UNKNOWN"/>
+    </occurrence>
+    <occurrence desc="Occurrence for Rating Set Definition" id="009gOIbC2etbS00A" ignoreDeleteChildren="false" multiplicity="SINGLE_OR_NULL" name="NVN_RTNG_WTCH_NAME" nameSpace="NUVEEN" parentId="005lCprC2etqS01Q" table="FT_T_RTNG" timeSeries="LOGICAL_DELETE">
+      <field desc="Rating Set Name" id="009gOIbC2etbS00C" name="RTNG_SET_NME" nameSpace="NUVEEN"/>
+      <option id="009gOIbC2etbS00B" nameSpace="NUVEEN" type="DEFAULT_ACTION" value="UNKNOWN"/>
+    </occurrence>
+    <occurrence desc="Occurrence for Rating Set Definition" id="009gOIbC2etbS005" ignoreDeleteChildren="false" multiplicity="SINGLE_OR_NULL" name="NVN_RTNG_OPN_NAME" nameSpace="NUVEEN" parentId="005lCprC2etqS01I" table="FT_T_RTNG" timeSeries="LOGICAL_DELETE">
+      <field desc="Rating Set Name" id="009gOIbC2etbS007" name="RTNG_SET_NME" nameSpace="NUVEEN"/>
+      <option id="009gOIbC2etbS006" nameSpace="NUVEEN" type="DEFAULT_ACTION" value="UNKNOWN"/>
+    </occurrence>
+  </occurrences>
+  <mappings>
+    <mapping beFieldId="009gOIbC2etbS003" groupMapping="0" id="009gOIbC2etbS004" nameSpace="NUVEEN" occFieldId="009gOIbC2etbS002"/>
+    <mapping beFieldId="009gOIbC2etbS00D" groupMapping="0" id="009gOIbC2etbS00E" nameSpace="NUVEEN" occFieldId="009gOIbC2etbS00C"/>
+    <mapping beFieldId="009gOIbC2etbS008" groupMapping="0" id="009gOIbC2etbS009" nameSpace="NUVEEN" occFieldId="009gOIbC2etbS007"/>
+  </mappings>
+</entities>

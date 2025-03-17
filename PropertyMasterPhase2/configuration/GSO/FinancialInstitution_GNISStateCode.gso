@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entities cleanUnusedFields="false" nameSpace="NUVEEN">
+  <beFields>
+    <beField class="BETEXT" customDesc="" desc="" displayCaption="Nuveen GNIS State Code" entityTypeId="++3qwBhS2etxm001" id="009k-RFi2etbS007" mandatory="0" multiplicity="SINGLE_OR_NULL" name="NuveenGUIDGNISStateCode" nameSpace="NUVEEN"/>
+  </beFields>
+  <dataGroups>
+    <dataGroup category="" customInd="0" desc="" displayCaption="ESG Details" entityTypeId="++3qwBhS2etxm001" frequencyInd="0" id="009V00nC2etbS04g" multiplicity="SINGLE_OR_NULL" name="NuveenESGDetails" nameSpace="NUVEEN">
+      <part defNameSpace="NUVEEN" fieldId="009k-RFi2etbS007" id="009k-RFi2etbS009" prntReqdInd="0" seq="10"/>
+    </dataGroup>
+  </dataGroups>
+  <relations>
+    <relation id="009k-RFi2etbS001" name="FT_T_FIGU-To-FT_T_GUID_NVN01" nameSpace="NUVEEN" srcTable="FT_T_FIGU" tgtTable="FT_T_GUID">
+      <field fromColumn="GU_ID" id="009k-RFi2etbS002" nameSpace="NUVEEN" toColumn="GU_ID" type="RELATION_FIELD" valueType="COLUMN"/>
+      <field fromColumn="GU_TYP" id="009k-RFi2etbS003" nameSpace="NUVEEN" toColumn="GU_TYP" type="RELATION_FIELD" valueType="COLUMN"/>
+      <field fromColumn="GU_CNT" id="009k-RFi2etbS004" nameSpace="NUVEEN" toColumn="GU_CNT" type="RELATION_FIELD" valueType="COLUMN"/>
+    </relation>
+  </relations>
+  <occurrences>
+    <occurrence desc="Occurrence for Geographic Unit Identifier" id="009k-RFi2etbS000" ignoreDeleteChildren="false" multiplicity="SINGLE_OR_NULL" name="GUID_NVN_GNISSTAT" nameSpace="NUVEEN" parentId="009V00nC2etbS02J" relationId="009k-RFi2etbS001" table="FT_T_GUID" timeSeries="LOGICAL_DELETE">
+      <field id="009k-RFi2etbS006" name="GEO_UNIT_ID" nameSpace="NUVEEN"/>
+      <value id="009k-RFi2etbS005" name="GU_ID_CTXT_TYP" nameSpace="NUVEEN" type="FILTER_FIELD" value="GNIS" valueType="CONSTANT"/>
+    </occurrence>
+  </occurrences>
+  <mappings>
+    <mapping beFieldId="009k-RFi2etbS007" groupMapping="0" id="009k-RFi2etbS008" nameSpace="NUVEEN" occFieldId="009k-RFi2etbS006"/>
+  </mappings>
+</entities>

@@ -1,0 +1,21 @@
+{
+    "BusinessFeed" : "Fitch_RDS_Issue_Ratings_NuveenMuni",
+    "Directory" : "/edmfs/app/requestreply/fitch/ratings/input/",
+    "FileLoadEvent" : "StandardFileLoad",
+    "FilePatterns" : ["*.mis.zip"],
+    "FileSystemName" : "local",
+    "FitchFileSystemType" : "FTP",
+    "IncludeFilePatternNBusinessFeed" : false,
+    "MessageBulkSize" : 500,
+    "MessageProcessingEvent" : "ProcessFeedMessage",
+    "NrOfFilesParallel" : 1,
+    "OutputDirectory" : null,
+    "ParallelBranches" : 4,
+    "RecursiveSearch" : false,
+    "ReProcessProcessedFiles" : true,
+    "serverTimestampChanged" : false,
+    "SortAscending" : true,
+    "SortOrder" : "NATURAL",
+    "SuccessAction" : "LEAVE",
+    "VendorDefinition" : null
+}

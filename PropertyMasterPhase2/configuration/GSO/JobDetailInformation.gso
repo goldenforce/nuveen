@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entities cleanUnusedFields="false" nameSpace="NUVEEN">
+  <beFields>
+    <beField class="BETEXT" customDesc="" desc="" displayCaption="Vendor Data" entityTypeId="++3qwBhS2etxm100" id="009M01eC2etbS00C" mandatory="0" multiplicity="MULTIPLE_AND_READONLY" name="NuveenPartiallyFailedVendorData" nameSpace="NUVEEN">
+      <fieldConfig id="009M01eC2etbS00E" nameSpace="NUVEEN" type="TEXT_DISPLAY" value="TEXTAREA"/>
+    </beField>
+    <beField class="BETEXT" customDesc="" customDomainSQL="" customSQL="" desc="" displayCaption="Vendor Data" entityTypeId="++3qwBhS2etxm100" id="++9M0pny2etbS001" mandatory="0" multiplicity="MULTIPLE_AND_READONLY" name="NuveenFailedVendorData" nameSpace="NUVEEN">
+      <fieldConfig id="009M5lYC2etbS001" nameSpace="NUVEEN" type="CLEAR_DOMAIN_CACHE" value="N"/>
+      <fieldConfig id="009M5lYC2etbS000" nameSpace="NUVEEN" type="TEXT_DISPLAY" value="TEXTAREA"/>
+    </beField>
+  </beFields>
+  <dataGroups>
+    <dataGroup customInd="0" desc="Details of Partially Failed Records" displayCaption="Partially Failed Records" entityTypeId="++3qwBhS2etxm100" frequencyInd="0" id="++6YYW3y2etZa00P" ignoreDeleteChildren="false" multiplicity="MULTIPLE_OR_NULL" name="PartiallyFailedRecords" nameSpace="GSC">
+      <part defNameSpace="NUVEEN" fieldId="009M01eC2etbS00C" id="009M01eC2etbS00Q" prntReqdInd="0" seq="7"/>
+    </dataGroup>
+    <dataGroup customInd="0" desc="Details of Failed records" displayCaption="Failed Records" entityTypeId="++3qwBhS2etxm100" frequencyInd="0" id="++6YYW3y2etZa01M" ignoreDeleteChildren="false" multiplicity="MULTIPLE_OR_NULL" name="FailedRecords" nameSpace="GSC">
+      <part defNameSpace="NUVEEN" fieldId="++9M0pny2etbS001" id="009M01eC2etbS00R" prntReqdInd="0" seq="7"/>
+    </dataGroup>
+  </dataGroups>
+  <relations>
+    <relation id="009M01eC2etbS001" name="FT_T_TRID-To-FT_T_VNRD" nameSpace="NUVEEN" srcTable="FT_T_TRID" tgtTable="FT_T_VNRD">
+      <field fromColumn="TRN_ID" id="009M01eC2etbS002" nameSpace="NUVEEN" toColumn="TRN_ID" type="RELATION_FIELD" valueType="COLUMN"/>
+    </relation>
+  </relations>
+  <occurrences>
+    <occurrence desc="Occurrence for Vendor Raw Data" id="009M01eC2etbS004" ignoreDeleteChildren="false" multiplicity="SINGLE_OR_NULL" name="NVN_VNRD_PartialEx" nameSpace="NUVEEN" parentId="++6YYW3y2etZa002" relationId="009M01eC2etbS001" table="FT_T_VNRD" timeSeries="LOGICAL_DELETE">
+      <field id="009M01eC2etbS00D" name="VENDOR_DATA_CLOB" nameSpace="NUVEEN"/>
+      <option id="009M01eC2etbS00A" nameSpace="NUVEEN" type="DEFAULT_ACTION" value="UNKNOWN"/>
+    </occurrence>
+    <occurrence desc="Occurrence for Vendor Raw Data" id="009M01eC2etbS000" ignoreDeleteChildren="false" multiplicity="SINGLE_OR_NULL" name="NVN_VNRD_FailedEx" nameSpace="NUVEEN" parentId="++6YYW3y2etZa010" relationId="009M01eC2etbS001" table="FT_T_VNRD" timeSeries="LOGICAL_DELETE">
+      <field id="009M01eC2etbS005" name="VENDOR_DATA_CLOB" nameSpace="NUVEEN"/>
+      <option id="009M01eC2etbS003" nameSpace="NUVEEN" type="DEFAULT_ACTION" value="UNKNOWN"/>
+    </occurrence>
+  </occurrences>
+  <mappings>
+    <mapping beFieldId="009M01eC2etbS00C" groupMapping="0" id="++9M0pny2etbS000" nameSpace="NUVEEN" occFieldId="009M01eC2etbS00D"/>
+    <mapping beFieldId="++9M0pny2etbS001" groupMapping="0" id="++9M0pny2etbS002" nameSpace="NUVEEN" occFieldId="009M01eC2etbS005"/>
+  </mappings>
+  <entityRelations>
+    <entityRelation desc="CUSTOM:Relation Participant" entityId="++5mxueS2etqS00M" id="++6YYW3y2etZa00Q" lookupField="++5pUmSy2etlS01V" multiplicity="MULTIPLE_OR_NULL" name="PartiallyFailedExceptionRecords" nameSpace="GSC" rltdEntityId="005YcD1C2etse02f">
+      <part forPublishing="1" forUI="1" id="++8YfS0S2eu9y004" nameSpace="GSC" partId="++5mLxey2etqS00r"/>
+      <part forPublishing="1" forUI="1" id="009M5lYC2etbS005" nameSpace="NUVEEN" partId="++5mLxey2etqS00y"/>
+      <part forPublishing="1" forUI="1" id="++6YYW3y2etZa00c" nameSpace="GSC" partId="++5pUmSy2etlS01V"/>
+    </entityRelation>
+    <entityRelation desc="CUSTOM:Relation Participant" entityId="++5mxueS2etqS00M" id="++6YYW3y2etZa01x" lookupField="++5pUmSy2etlS01V" multiplicity="MULTIPLE_OR_NULL" name="FailedExceptionRecords" nameSpace="GSC" rltdEntityId="005YcD1C2etse02f">
+      <part forPublishing="1" forUI="1" id="++8YfS0S2eu9y006" nameSpace="GSC" partId="++5mLxey2etqS00r"/>
+      <part forPublishing="1" forUI="1" id="009M5lYC2etbS006" nameSpace="NUVEEN" partId="++5mLxey2etqS00y"/>
+      <part forPublishing="1" forUI="1" id="++6YYW3y2etZa024" nameSpace="GSC" partId="++5pUmSy2etlS01V"/>
+    </entityRelation>
+  </entityRelations>
+</entities>

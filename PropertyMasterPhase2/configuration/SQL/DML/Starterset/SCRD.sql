@@ -1,0 +1,4 @@
+INSERT INTO ft_t_scrd
+(scrd_oid, score_def_mnem, start_tms, inst_mnem, gunt_oid, score_def_nme, score_def_desc, score_def_typ, score_typ, scale_direction_ind, scale_precision_num, scale_bottom_int_num, scale_top_int_num, scale_bottom_dec_camt, scale_top_dec_camt, scale_bottom_char_txt, scale_top_char_txt, end_tms, last_chg_usr_id, last_chg_tms, data_stat_typ, data_src_id, scale_bottom_cpct, scale_top_cpct, score_def_calc_meth_typ, score_def_level_nme, score_def_level_num, weight_bottom_dec_camt, weight_bottom_int_num, weight_direction_ind, weight_precision_num, weight_top_dec_camt, weight_top_int_num)
+Select '=NUVEENESG', 'NUVEENESG', sysdate(), NULL, NULL, 'Nuveen ESG Score', 'Nuveen ESG Score', NULL, 'INTEGER', 'H', NULL, 10, 1, NULL, NULL, NULL, NULL, NULL, 'NUVEEN:CSTM', sysdate(), NULL, 'NUVEEN', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL
+ from dual where not exists (select 1 from ft_t_scrd where score_def_mnem = 'NUVEENESG');

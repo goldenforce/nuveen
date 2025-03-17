@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entities cleanUnusedFields="false" nameSpace="NUVEEN">
+  <beFields>
+    <beField class="BETEXT" customDesc="" customDomainSQL="" customSQL="" desc="" displayCaption="Security Active" entityTypeId="++3qwBhS2etxm003" id="009ef6W6HI4-O007" mandatory="0" multiplicity="SINGLE_OR_NULL" name="NuveenSecurityActive" nameSpace="NUVEEN"/>
+  </beFields>
+  <dataGroups>
+    <dataGroup customInd="0" displayCaption="NuveenStatistics" entityTypeId="++3qwBhS2etxm003" frequencyInd="0" id="008mcntC2etbS04Q" ignoreDeleteChildren="false" multiplicity="SINGLE_OR_NULL" name="NuveenStatistics" nameSpace="NUVEEN">
+      <part defNameSpace="NUVEEN" fieldId="009ef6W6HI4-O007" id="009ef6W6HI4-O009" prntReqdInd="0" seq="141"/>
+    </dataGroup>
+  </dataGroups>
+  <occurrences>
+    <occurrence desc="Occurrence for Issue Statistic" id="009ef6W6HI4-O002" ignoreDeleteChildren="false" multiplicity="SINGLE_OR_NULL" name="ISST_NVN_SECUACTV" nameSpace="NUVEEN" parentId="++4Gmmty2ettS01A" table="FT_T_ISST" timeSeries="LOGICAL_DELETE">
+      <field desc="Statistic Character Value" id="009ef6W6HI4-O006" name="STAT_CHAR_VAL_TXT" nameSpace="NUVEEN"/>
+      <value id="009ef6W6HI4-O005" name="STAT_DEF_ID" nameSpace="NUVEEN" type="FILTER_FIELD" value="SECUACTV" valueType="CONSTANT"/>
+      <option id="009ef6W6HI4-O003" nameSpace="NUVEEN" type="DEFAULT_ACTION" value="UNKNOWN"/>
+    </occurrence>
+  </occurrences>
+  <mappings>
+    <mapping beFieldId="009ef6W6HI4-O007" groupMapping="0" id="009ef6W6HI4-O008" nameSpace="NUVEEN" occFieldId="009ef6W6HI4-O006"/>
+  </mappings>
+</entities>

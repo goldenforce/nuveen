@@ -1,0 +1,2 @@
+
+INSERT INTO ft_t_stdf  Select 'NVLRDIND',sysdate(),NULL,sysdate(),'NUVEEN:CSTM','CHAR','LRD Indicator','LRD Indicator',NULL,NULL,NULL,'ACTIVE','NUVEEN',NULL from dual where not exists (Select 1 from ft_T_stdf where stat_def_id = 'NVLRDIND' and end_tms is null );

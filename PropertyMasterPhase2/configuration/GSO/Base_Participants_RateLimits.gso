@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entities cleanUnusedFields="false" nameSpace="NUVEEN">
+  <beFields>
+    <beField class="BETEXT" customDesc="Limit Type in Rate Limits" desc="" displayCaption="Limit Type" entityTypeId="++3qwBhS2etxm003" id="++9c9tCS2etbS008" mandatory="0" multiplicity="MULTIPLE_OR_NULL" name="NuveenLimitType" nameSpace="NUVEEN"/>
+    <beField class="BETEXT" customDesc="Rate Option in Rate Limits" desc="" displayCaption="Rate Option" entityTypeId="++3qwBhS2etxm003" id="++9c9tCS2etbS00A" mandatory="0" multiplicity="MULTIPLE_OR_NULL" name="NuveenRateOption" nameSpace="NUVEEN"/>
+    <beField class="BETEXT" customDesc="Rate Option in Rate Limits" desc="" displayCaption="Rate Type" entityTypeId="++3qwBhS2etxm003" id="++9c9tCS2etbS00C" mandatory="0" multiplicity="MULTIPLE_OR_NULL" name="NuveenRateType" nameSpace="NUVEEN"/>
+    <beField class="BEDEC" customDesc="Nuveen Facility Rate Limit" desc="" displayCaption="Limit" entityTypeId="++3qwBhS2etxm003" id="++9cERiS2etbS00E" mandatory="0" multiplicity="MULTIPLE_OR_NULL" name="NuveenLimit" nameSpace="NUVEEN"/>
+  </beFields>
+  <dataGroups>
+    <dataGroup category="" customInd="0" desc="" displayCaption="Rate Limits" entityTypeId="++3qwBhS2etxm003" frequencyInd="0" id="++9cERiS2etbS001" multiplicity="MULTIPLE_OR_NULL" name="NuveenRateLimits" nameSpace="NUVEEN">
+      <part defNameSpace="NUVEEN" fieldId="++9c9tCS2etbS008" id="++9cERiS2etbS003" prntReqdInd="0" seq="0"/>
+      <part defNameSpace="NUVEEN" fieldId="++9c9tCS2etbS00A" id="++9cERiS2etbS004" prntReqdInd="0" seq="1"/>
+      <part defNameSpace="NUVEEN" fieldId="++9c9tCS2etbS00C" id="++9cERiS2etbS005" prntReqdInd="0" seq="2"/>
+      <part defNameSpace="NUVEEN" fieldId="++9cERiS2etbS00E" id="++9cERiS2etbS00H" prntReqdInd="0" seq="3"/>
+    </dataGroup>
+    <dataGroup customInd="0" entityTypeId="++3qwBhS2etxm003" frequencyInd="0" id="++5SQ0Ly2etse001" multiplicity="SINGLE" name="Base- Root DataGroup" nameSpace="GSC">
+      <part dataGroupId="++9cERiS2etbS001" defNameSpace="NUVEEN" id="++9cERiS2etbS009" prntReqdInd="0" seq="66"/>
+    </dataGroup>
+  </dataGroups>
+  <occurrences>
+    <occurrence desc="Occurrence for Rate Limits" id="++9c9tCS2etbS000" ignoreDeleteChildren="false" multiplicity="MULTIPLE_OR_NULL" name="RTE1_NVN_01" nameSpace="NUVEEN" parentId="++4Gmmty2ettS01A" table="FT_E_RTE1" timeSeries="LOGICAL_DELETE">
+      <field id="++9cERiS2etbS00F" name="LMT" nameSpace="NUVEEN"/>
+      <field id="++9cERiS2etbS00A" name="LMT_TYPE" nameSpace="NUVEEN"/>
+      <field id="++9c9tCS2etbS004" name="RTE_OPTN" nameSpace="NUVEEN"/>
+      <field id="++9cERiS2etbS00C" name="RTE_TYPE" nameSpace="NUVEEN"/>
+      <option id="++9c9tCS2etbS001" nameSpace="NUVEEN" type="DEFAULT_MATCH_KEY" value="RTE1_MATCH_1"/>
+    </occurrence>
+  </occurrences>
+  <mappings>
+    <mapping beFieldId="++9c9tCS2etbS008" groupMapping="0" id="++9cERiS2etbS00B" nameSpace="NUVEEN" occFieldId="++9cERiS2etbS00A"/>
+    <mapping beFieldId="++9c9tCS2etbS00A" groupMapping="0" id="++9c9tCS2etbS00B" nameSpace="NUVEEN" occFieldId="++9c9tCS2etbS004"/>
+    <mapping beFieldId="++9c9tCS2etbS00C" groupMapping="0" id="++9cERiS2etbS00D" nameSpace="NUVEEN" occFieldId="++9cERiS2etbS00C"/>
+    <mapping beFieldId="++9cERiS2etbS00E" groupMapping="0" id="++9cERiS2etbS00G" nameSpace="NUVEEN" occFieldId="++9cERiS2etbS00F"/>
+  </mappings>
+  <naturalKeys>
+    <naturalKey dataGroupId="++9cERiS2etbS001" id="++9cERiS2etbS006" name="NuveenRateLimitsNaturalKey" nameSpace="NUVEEN">
+      <part beFieldId="++9cERiS2etbS004" id="++9cERiS2etbS007" nameSpace="NUVEEN"/>
+    </naturalKey>
+  </naturalKeys>
+</entities>

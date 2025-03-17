@@ -1,0 +1,1 @@
+Update ft_be_berc set config_disabled_ind = 'Y' where berc_oid = '++9E4qXy2es2C00y';

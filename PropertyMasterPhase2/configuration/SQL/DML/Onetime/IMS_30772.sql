@@ -1,0 +1,1 @@
+update Ft_t_isid set end_tms = current_date , last_chg_tms = current_date-1 , last_chg_usr_id = 'IMS-30772' where id_ctxt_typ = 'CINS' and last_chg_usr_id like 'WSO_ASSET_MAIN';

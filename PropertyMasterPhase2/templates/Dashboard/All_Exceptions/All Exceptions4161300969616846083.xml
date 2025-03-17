@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<root createdUser="user1" id="UOwnn&amp;gt;Zwe1" screenType="DASHBOARD" title="All Exceptions">
+  <users>
+    <user id="UOwsn&gt;Zwe1" user="" userGroup="" userRole="readonly"/>
+    <user id="UOwun&gt;Zwe1" user="" userGroup="" userRole="users"/>
+    <user id="UOwtn&gt;Zwe1" user="" userGroup="" userRole="administrators"/>
+    <user id="WXnro&gt;J&lt;e1" user="" userGroup="" userRole="sm_users"/>
+    <user id="WXnso&gt;J&lt;e1" user="" userGroup="" userRole="sm_readonly"/>
+  </users>
+  <tabs>
+    <tab columns="12" id="UOwon&amp;gt;Zwe1" orderNum="0" tabSearch="UOw4n&amp;gt;Zwe1" title="All Exceptions">
+      <participants>
+        <participant createdUser="user1" height="29" id="UOwpn&amp;gt;Zwe1" orderNum="0" tabSearch="UOw4n&amp;gt;Zwe1" width="12" x="0" y="12"/>
+        <participant createdUser="user1" height="12" id="UOwrn&amp;gt;Zwe1" orderNum="1" tabChart="UOwln&amp;gt;Zwe1" width="6" x="0" y="0"/>
+        <participant createdUser="user1" height="12" id="UOwqn&amp;gt;Zwe1" orderNum="2" tabChart="UOwmn&amp;gt;Zwe1" width="6" x="6" y="0"/>
+      </participants>
+    </tab>
+  </tabs>
+</root>

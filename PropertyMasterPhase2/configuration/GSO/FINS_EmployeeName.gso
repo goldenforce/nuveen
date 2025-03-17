@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entities cleanUnusedFields="false" nameSpace="NUVEEN">
+  <dataGroups>
+    <dataGroup category="" customInd="0" desc="" displayCaption="Related Employees" entityTypeId="++3qwBhS2etxm001" frequencyInd="0" id="009V00nC2etbS04L" multiplicity="MULTIPLE_OR_NULL" name="NuveenRelatedEmployees" nameSpace="NUVEEN">
+      <part beRelationId="009V00nC2etbS04G" defNameSpace="NUVEEN" id="009V00nC2etbS04M" label="Employee" prntReqdInd="0" seq="0"/>
+    </dataGroup>
+  </dataGroups>
+  <relations>
+    <relation id="009V00nC2etbS04I" name="FT_T_EFIR-To-FT_T_EMPL00" nameSpace="NUVEEN" srcTable="FT_T_EFIR" tgtTable="FT_T_EMPL">
+      <field fromColumn="EMPL_OID" id="009V00nC2etbS04J" nameSpace="NUVEEN" toColumn="EMPL_OID" type="RELATION_FIELD" valueType="COLUMN"/>
+    </relation>
+  </relations>
+  <occurrences>
+    <occurrence desc="Occurrence for Employee/Financial Institution Role" id="009V00nC2etbS00N" ignoreDeleteChildren="true" multiplicity="MULTIPLE_OR_NULL" name="EFIR_NVN_ALL" nameSpace="NUVEEN" parentId="++4HwLjy2etpy00a" table="FT_T_EFIR" timeSeries="LOGICAL_DELETE">
+      <field id="009V00nC2etbS04H" nameSpace="NUVEEN" relationId="009V00nC2etbS04I"/>
+    </occurrence>
+  </occurrences>
+  <mappings>
+    <mapping beRelationId="009V00nC2etbS04G" groupMapping="0" id="009V00nC2etbS04N" nameSpace="NUVEEN" occFieldId="009V00nC2etbS04H"/>
+  </mappings>
+  <entityRelations>
+    <entityRelation entityId="++4HwLjy2etpy007" id="009V00nC2etbS04G" lookupField="++6SNtsy2etZa01M" multiplicity="MULTIPLE_OR_NULL" name="Employee" nameSpace="NUVEEN" rltdEntityId="++6SNtsy2etZa01j">
+      <part forPublishing="1" forUI="1" id="009V00nC2etbS04O" nameSpace="NUVEEN" partId="++6SNtsy2etZa01M"/>
+      <part forPublishing="1" forUI="1" id="++9gsdMy2etbS000" nameSpace="NUVEEN" partId="++7kqRty2eso000A"/>
+    </entityRelation>
+  </entityRelations>
+</entities>

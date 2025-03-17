@@ -1,0 +1,3 @@
+INSERT INTO ft_t_sprf(sprf_oid, appl_id, org_id, start_tms, end_tms, sec_prof_num, last_chg_tms, last_chg_usr_id, sec_prof_nme, sec_prof_desc, sec_prof_txt, enable_worklist_edit_ind)
+select 'GXBDGOC6m1', 'SSTATION', NULL, SYSDATE(), NULL, 9999, SYSDATE(), 'yraut', 'PropertySubtype', 'GSO', 'PropertySubtype', 'N'
+from dual where not exists (select 'x' from ft_t_sprf where sec_prof_nme = 'PropertySubtype');

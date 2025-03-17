@@ -1,0 +1,21 @@
+{
+    "BusinessFeed" : "Fitch_RDS_Issuer_Ratings",
+    "Directory" : "/data/",
+    "FileLoadEvent" : "StandardFileLoad",
+    "FilePatterns" : ["RDSIssuerReport_20240524_*.dir"],
+    "FileSystemName" : "sftp/fitchsftp",
+    "FitchFileSystemType" : "SFTP",
+    "IncludeFilePatternNBusinessFeed" : false,
+    "MessageBulkSize" : 500,
+    "MessageProcessingEvent" : "ProcessFeedMessage",
+    "NrOfFilesParallel" : 2,
+    "OutputDirectory" : null,
+    "ParallelBranches" : 2,
+    "RecursiveSearch" : false,
+    "ReProcessProcessedFiles" : false,
+    "serverTimestampChanged" : false,
+    "SortAscending" : true,
+    "SortOrder" : "NATURAL",
+    "SuccessAction" : "LEAVE",
+    "VendorDefinition" : null
+}

@@ -1,0 +1,21 @@
+{
+    "BusinessFeed" : "Fitch_RDS_Issue_Ratings_NuveenMuni",
+    "Directory" : "data",
+    "FileLoadEvent" : "StandardFileLoad",
+    "FilePatterns" : ["RDSIssueReport_20241015_*.dis"],
+    "FileSystemName" : "sftp/fitchsftp",
+    "FitchFileSystemType" : "SFTP",
+    "IncludeFilePatternNBusinessFeed" : false,
+    "MessageBulkSize" : 5000,
+    "MessageProcessingEvent" : "ProcessFeedMessage",
+    "NrOfFilesParallel" : 1,
+    "OutputDirectory" : null,
+    "ParallelBranches" : 3,
+    "RecursiveSearch" : false,
+    "ReProcessProcessedFiles" : false,
+    "serverTimestampChanged" : false,
+    "SortAscending" : true,
+    "SortOrder" : "NATURAL",
+    "SuccessAction" : "LEAVE",
+    "VendorDefinition" : null
+}

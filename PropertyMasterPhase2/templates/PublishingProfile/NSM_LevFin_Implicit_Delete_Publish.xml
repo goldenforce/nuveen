@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<root>
+  <Subscriptions>
+    <Subscription description="NSM_LevFin_Implicit_Delete_Publish" id="++9ubWnsHIN8y01q" name="NSM_LevFin_Implicit_Delete_Publish" ruleText="0 0 0 1 1 ? *" sourceId="" type="BATCH" workflow="PublishingWorkflow">
+      <destinations>
+        <destination id="++9vLEBMHIWOi007" outputType="JSON" participantRules="">
+          <downstream connectionFactory="" deadline="" deadlineTime="" description="Nuveen_LevFin_ImplicitDelete_EOD" downstreamDestinationType="File" downstreamValue="/edmfs/app/outbound/output/levfin/ImplicitDelete/smf/eod/done" dwdfOid="++9vLEBMHIWOi005" id="++9vLEBMHIWOi006" name="Nuveen_LevFin_ImplicitDelete_EOD" preferredLanguageCode="" preferredVendorId="" subscriberType="" typeFlag="" validityPriority="null"/>
+        </destination>
+      </destinations>
+      <messageTypes/>
+      <filters>
+        <filter dataSourceId="" deltaMode="NONE" entity="++5TZs2y2etse000" entityCaption="Full Instrument" entityName="FullInstrument" entityType="BUSINESS_ENTITY" filterEQLJsonText="&lt;sql&gt; instR_id in (select issu.instr_id from ft_t_isrt isrt,ft_t_gncm gncm,ft_t_isgp isgp, ft_t_issu issu where isrt.instr_id = issu.instr_id and  isrt.iss_rtng_oid = gncm.cross_ref_id and issu.end_tms is null and isrt.end_tms is null  and isgp.end_tms is null and gncm.end_tms is null and gncm.comm_reas_mnem ='SOFTDELT' AND isrt.sys_eff_end_tms is NULL and prnt_iss_grp_oid  in (select iss_grp_oid  from ft_t_isgr where iss_grp_id like 'LEVFIN%' and end_tms is null)) or instr_id in (select issu.instr_id from ft_t_rtop rtop,ft_t_gncm gncm,ft_t_isgp isgp, ft_t_issu issu where rtop.instr_id = issu.instr_id and  rtop.rtop_oid = gncm.cross_ref_id and issu.end_tms is null and rtop.end_tms is null &#10; AND rtop.sys_eff_end_tms is NULL and isgp.end_tms is null and gncm.end_tms is null and gncm.comm_reas_mnem ='SOFTDELT' and prnt_iss_grp_oid  in (select iss_grp_oid  from ft_t_isgr where iss_grp_id like 'LEVFIN%' and end_tms is null))&lt;/sql&gt;" filterRuleText="&lt;sql&gt; instR_id in (select issu.instr_id from ft_t_isrt isrt,ft_t_gncm gncm,ft_t_isgp isgp, ft_t_issu issu where isrt.instr_id = issu.instr_id and  isrt.iss_rtng_oid = gncm.cross_ref_id and issu.end_tms is null and isrt.end_tms is null  and isgp.end_tms is null and gncm.end_tms is null and gncm.comm_reas_mnem ='SOFTDELT' AND isrt.sys_eff_end_tms is NULL and prnt_iss_grp_oid  in (select iss_grp_oid  from ft_t_isgr where iss_grp_id like 'LEVFIN%' and end_tms is null)) or instr_id in (select issu.instr_id from ft_t_rtop rtop,ft_t_gncm gncm,ft_t_isgp isgp, ft_t_issu issu where rtop.instr_id = issu.instr_id and  rtop.rtop_oid = gncm.cross_ref_id and issu.end_tms is null and rtop.end_tms is null &#10; AND rtop.sys_eff_end_tms is NULL and isgp.end_tms is null and gncm.end_tms is null and gncm.comm_reas_mnem ='SOFTDELT' and prnt_iss_grp_oid  in (select iss_grp_oid  from ft_t_isgr where iss_grp_id like 'LEVFIN%' and end_tms is null))&lt;/sql&gt;" id="++9ubWnsHIN8y01j" publishingModelName="FullInstrument" ruleText="" screen="VG8B41-qW1" tableType="ISSU"/>
+      </filters>
+    </Subscription>
+  </Subscriptions>
+</root>

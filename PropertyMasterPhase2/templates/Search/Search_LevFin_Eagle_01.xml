@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<root baseLookup="Exception" createdUser="user1" freezeColumns="" id="DE9mE1VCe1" isDefault="N" isPublic="Y" lookupId="Exception" pageSize="500" screenType="SYSTEMSRCH" title="LevFin:Eagle_01">
+  <config>{}</config>
+  <buttons>
+    <button buttonName="Repair">
+      <params>
+        <param paramName="Event Name" paramValue="RepairExceptions"/>
+        <param paramName="Event Type" paramValue="GenericEvent"/>
+        <param paramName="entityList" paramValue="ENT_OID"/>
+        <param paramName="Current User" paramValue="Logged in User"/>
+      </params>
+    </button>
+    <button buttonName="Resubmit">
+      <params>
+        <param paramName="entityList" paramValue="ENT_OID"/>
+        <param paramName="Current User" paramValue="Logged in User"/>
+        <param paramName="Event Type" paramValue="GenericEvent"/>
+        <param paramName="Event Name" paramValue="ResubmitExceptions"/>
+      </params>
+    </button>
+    <button buttonName="Close">
+      <params>
+        <param paramName="entityList" paramValue="ENT_OID"/>
+        <param paramName="Event Type" paramValue="GenericEvent"/>
+        <param paramName="Event Name" paramValue="CloseExceptions"/>
+        <param paramName="Current User" paramValue="Logged in User"/>
+      </params>
+    </button>
+    <button buttonName="Re-Assign">
+      <params>
+        <param paramName="Event Name" paramValue="ReassignExceptions"/>
+        <param paramName="Event Type" paramValue="GenericEvent"/>
+        <param paramName="Current User" paramValue="Logged in User"/>
+        <param paramName="Assign" paramValue="true"/>
+        <param paramName="entityList" paramValue="ENT_OID"/>
+      </params>
+    </button>
+    <button buttonName="Ignore">
+      <params>
+        <param paramName="Status" paramValue="IGNORE"/>
+        <param paramName="Type" paramValue="event"/>
+        <param paramName="Event Type" paramValue="GenericEvent"/>
+        <param paramName="entityList" paramValue="ENT_OID"/>
+        <param paramName="Current User" paramValue="Logged in User"/>
+        <param paramName="Event Name" paramValue="CloseExceptions"/>
+      </params>
+    </button>
+  </buttons>
+  <columns>
+    <column caption="" columnName="Notification Creation Date" fieldName="Exception.ExceptionDetail.NotificationCreationDate" filterFromNum="" filterFromTms="" filterToNum="" filterToTms="" filterValue="" filterable="Y" fromRange="" id="DE9nE1VCe1" isRange="N" mobileTemplate="" operator="" orderNum="0" showRelLink="" sort="DESC" toRange="" width="144"/>
+    <column caption="" columnName="Main Entity Id" fieldName="Exception.ExceptionDetail.MainEntityId" filterFromNum="" filterFromTms="" filterToNum="" filterToTms="" filterValue="" filterable="Y" fromRange="" id="DE9oE1VCe1" isRange="N" mobileTemplate="" operator="" orderNum="1" showRelLink="" sort="" toRange="" width="84"/>
+    <column caption="" columnName="Default Severity" fieldName="Exception.ExceptionDetail.DefaultSeverity" filterFromNum="" filterFromTms="" filterToNum="" filterToTms="" filterValue="50,40" filterable="Y" fromRange="" id="DE9pE1VCe1" isRange="N" mobileTemplate="" operator="" orderNum="2" showRelLink="" sort="" toRange="" width="59"/>
+    <column caption="" columnName="Notification Id" fieldName="Exception.ExceptionDetail.NotificationId" filterFromNum="" filterFromTms="" filterToNum="" filterToTms="" filterValue="" filterable="Y" fromRange="" id="DE9qE1VCe1" isRange="N" mobileTemplate="" operator="" orderNum="3" showRelLink="" sort="" toRange="" width="48"/>
+    <column caption="" columnName="Exception Details" fieldName="Exception.ExceptionDetail.Details" filterFromNum="" filterFromTms="" filterToNum="" filterToTms="" filterValue="" filterable="Y" fromRange="" id="DE9rE1VCe1" isRange="N" mobileTemplate="" operator="" orderNum="4" showRelLink="" sort="" toRange="" width="814"/>
+    <column caption="" columnName="Notification Status" fieldName="Exception.ExceptionDetail.NotificationStatus" filterFromNum="" filterFromTms="" filterToNum="" filterToTms="" filterValue="REASSIGN,REPAIRED,IGNORE,OPEN" filterable="Y" fromRange="" id="DE9sE1VCe1" isRange="N" mobileTemplate="" operator="" orderNum="5" showRelLink="" sort="" toRange="" width="79"/>
+    <column caption="" columnName="Source Id" fieldName="Exception.ExceptionDetail.SourceId" filterFromNum="" filterFromTms="" filterToNum="" filterToTms="" filterValue="" filterable="Y" fromRange="" id="DE9vE1VCe1" isRange="N" mobileTemplate="" operator="" orderNum="6" showRelLink="" sort="" toRange="" width="100"/>
+    <column caption="" columnName="Message Type" fieldName="Exception.ExceptionDetail.MessageType" filterFromNum="" filterFromTms="" filterToNum="" filterToTms="" filterValue="Eagle_GSIssuerRelation,Eagle_GSInstrument,Eagle_GSIssuer,Eagle_GSIssuerXREF,Eagle_GSInstrumentIssuerRelation" filterable="Y" fromRange="" id="DE9yE1VCe1" isRange="N" mobileTemplate="" operator="" orderNum="7" showRelLink="" sort="" toRange="" width="100"/>
+    <column caption="" columnName="Exception Sub Type" fieldName="Exception.ExceptionDetail.ExceptionSubType" filterFromNum="" filterFromTms="" filterToNum="" filterToTms="" filterValue="INVALID RELATIONSHIP,CASCHFAI,IDENTIFIER MISMATCH,CADISFAI,CAINFO,USER INFORMATION,ZERO NOT_AMT,APPROVAL,INVALID ACTION,VENDOR COMPARE,REQUEST REPLY,TRANSLATE &amp;amp; VALIDATE,CACHAEXP,OVERRIDE-TECH,ILOG,NO ACTIVE PRVI,DUPLICATE-RECORD,IDENTIFIER FAILED,TOLERANCE BREACHED,FILE NOT FOUND,CONFIGURATION,FUNCTIONAL,VALIDATION,CACHALVL,NOT_AMT MISMATCH,VSH,PUBLISHING,ALL REF PRC MISSING,BENCHMARK,CASCHVAL,PRIMARY MARKET,QUALITY,INVALIDCAENTITY,DROOLS,INVALID INPUT,MISSING DATA,CADELVAL,NO BASE FOR DIVISION,NOT MATCHED,PARENTLOCK-WARN,FIELD CHANGE,MARKETCREATION,INVALID_DATA,PREF ISSUE ID,MISSING RECORD-FINS,CACANVAL,CACAMOVL,ENTITY FAILURE,Instrument ID,SUBSCRIPTION,DEDUP FAILURE,MISSING IN MESSAGE,THRESHOLD FAILURE,MARKET LISTING,MODEL,NO PRVI FOUND,MULTIPLE CODE FOUND,VALIDATION- ISS ACT,DELETED IDENTIFIER,INFORMATIONAL,TIMESERIES,NESTEDSEGMENT,VDDB,MESSAGE DEFINITION,OVERRIDE/LOCK,CARELVAL,NO ACTIVE INSTR,CASCHMSS,TECHNICAL,MASS UPDATE,MISSING RECORD-ISSU,DIVISION BY ZERO,MISSING ATTRIBUTE,DUPLICATE RECORD,INVALID DATA,NO FXRT FOUND,PRICING,MULTIPLE MATCH,INFORMATION,NO PRC PRVI FOUND,CADEAVAL,COMPLETENESS,MULTIPLELISTINGS,DUPLICATE ENTITY,MULTIPLE ROWS,INVALID COUPON DATA,DATA MISSING,POSTINGS,NOT_AMT MISSING,ALL ACCT HLDRS MSSNG,CORP ACTIONS,JOBID LOOKUP FAILURE,NEW ISSUE ALERT,LOOKUP FAILURE,INBOUND,CODE LOOKUP FAILURE,MISMATCH IDENTIFIERS,NEGATIVE NOT_AMT,REF PRC MISSING,MISSING REC-ISSR,OCC FEED,DUPLICATE FINS,MISSING INPUTS,MISSING IN MSG-ID,MISSING PRVI,TIME-TECH,CHILD FAILURE,ID VALIDATION,MISSING RECORD-GUNT,DIVISION SKIPPED,TRILLIUM,OVERRIDE,CATICK,ENTITYALREADYEXIST,IDENTIFIER MISSING,Missing Rel Type,ALL NOT_AMT INVALID,DOMAIN VALUE" filterable="Y" fromRange="" id="DE9zE1VCe1" isRange="N" mobileTemplate="" operator="" orderNum="8" showRelLink="" sort="" toRange="" width="100"/>
+    <column caption="" columnName="Exception Field" fieldName="Exception.ExceptionDetail.ExceptionField" filterFromNum="" filterFromTms="" filterToNum="" filterToTms="" filterValue="" filterable="Y" fromRange="" id="DE9xE1VCe1" isRange="N" mobileTemplate="" operator="" orderNum="9" showRelLink="" sort="" toRange="" width="100"/>
+    <column caption="" columnName="Notification Count" fieldName="Exception.ExceptionDetail.NotificationCount" filterFromNum="" filterFromTms="" filterToNum="" filterToTms="" filterValue="" filterable="Y" fromRange="" id="DE9tE1VCe1" isRange="N" mobileTemplate="" operator="" orderNum="10" showRelLink="" sort="" toRange="" width="66"/>
+    <column caption="" columnName="Notification Occurrence Count" fieldName="Exception.ExceptionDetail.NotificationOccurrenceCount" filterFromNum="" filterFromTms="" filterToNum="" filterToTms="" filterValue="" filterable="Y" fromRange="" id="DE9uE1VCe1" isRange="N" mobileTemplate="" operator="" orderNum="11" showRelLink="" sort="" toRange="" width="57"/>
+  </columns>
+</root>

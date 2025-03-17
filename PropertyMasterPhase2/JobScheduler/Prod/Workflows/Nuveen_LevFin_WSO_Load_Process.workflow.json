@@ -1,0 +1,278 @@
+{
+  "TYPE" : "Workflow",
+  "version" : "1.6.6",
+  "timeZone" : "America/New_York",
+  "orderPreparation" : {
+    "parameters" : {
+      "checkDependency" : {
+        "type" : "Boolean",
+        "default" : "true"
+      },
+      "file_pattern" : {
+        "type" : "String",
+        "default" : "'LevFin ISGP Refresh Job'"
+      },
+      "dayMinus" : {
+        "type" : "String",
+        "default" : "'0'"
+      },
+      "Wso_File_pattern" : {
+        "type" : "String",
+        "default" : "'WSO_SMF_Asset.*\\.txt'"
+      }
+    },
+    "allowUndeclared" : false
+  },
+  "instructions" : [ {
+    "TYPE" : "ConsumeNotices",
+    "noticeBoardNames" : "'ISGP2WSO_NB'",
+    "subworkflow" : {
+      "instructions" : [ ]
+    },
+    "label" : "WSOEXPECT"
+  }, {
+    "TYPE" : "Execute.Named",
+    "jobName" : "WSO_FileLoadStarts",
+    "label" : "WSO_FileLoadStarts"
+  }, {
+    "TYPE" : "If",
+    "predicate" : "$checkDependency==true",
+    "then" : {
+      "instructions" : [ {
+        "TYPE" : "Execute.Named",
+        "jobName" : "Echo_Dependency_Check",
+        "label" : "Echo_Dependency_Check"
+      }, {
+        "TYPE" : "Try",
+        "try" : {
+          "instructions" : [ {
+            "TYPE" : "Execute.Named",
+            "jobName" : "JBLG_Check",
+            "label" : "JBLG_Check"
+          }, {
+            "TYPE" : "Execute.Named",
+            "jobName" : "Currentjobjblgcheck",
+            "label" : "Currentjobjblgcheck"
+          }, {
+            "TYPE" : "If",
+            "predicate" : "$count.toNumber > 0 && $crrwsocnt.toNumber == 0",
+            "then" : {
+              "instructions" : [ {
+                "TYPE" : "Execute.Named",
+                "jobName" : "Echo_Fileload_Completed",
+                "label" : "Echo_Fileload_Completed"
+              }, {
+                "TYPE" : "Execute.Named",
+                "jobName" : "Nuveen_LevFin_WSO_Load_Process",
+                "label" : "Nuveen_LevFin_WSO_Load_Process"
+              } ]
+            },
+            "else" : {
+              "instructions" : [ {
+                "TYPE" : "Execute.Named",
+                "jobName" : "Echo_Fileload_Not_Completed",
+                "label" : "Echo_Fileload_Not_Completed"
+              } ]
+            }
+          }, {
+            "TYPE" : "Execute.Named",
+            "jobName" : "WSOFileLoadCheckforNoticeBoard",
+            "label" : "WSOFileLoadCheckforNoticeBoard"
+          }, {
+            "TYPE" : "If",
+            "predicate" : "$wsocnt.toNumber > 0",
+            "then" : {
+              "instructions" : [ {
+                "TYPE" : "PostNotices",
+                "noticeBoardNames" : [ "WSO2LRD_NB" ],
+                "label" : "WSOPostNotice"
+              } ]
+            },
+            "else" : {
+              "instructions" : [ {
+                "TYPE" : "Fail",
+                "message" : "\"WSO Job not loaded for Today Retry \"",
+                "outcome" : {
+                  "returnCode" : 1
+                },
+                "uncatchable" : false
+              } ]
+            },
+            "label" : "WSOFileloadcount"
+          } ]
+        },
+        "catch" : {
+          "instructions" : [ {
+            "TYPE" : "Retry"
+          } ]
+        },
+        "maxTries" : 15,
+        "retryDelays" : [ 300 ]
+      } ]
+    },
+    "else" : {
+      "instructions" : [ {
+        "TYPE" : "Execute.Named",
+        "jobName" : "Echo_No_Dependency",
+        "label" : "Echo_No_Dependency"
+      }, {
+        "TYPE" : "Execute.Named",
+        "jobName" : "Nuveen_LevFin_WSO_Load_Process",
+        "label" : "WSO_Load_Without_Dependency"
+      } ]
+    }
+  } ],
+  "jobs" : {
+    "WSO_FileLoadStarts" : {
+      "agentName" : "JSAgent",
+      "withSubagentClusterIdExpr" : false,
+      "executable" : {
+        "TYPE" : "ShellScriptExecutable",
+        "script" : "echo \"WSO_FileLoadStarts\"",
+        "v1Compatible" : false
+      },
+      "skipIfNoAdmissionForOrderDay" : false,
+      "parallelism" : 1,
+      "graceTimeout" : 1,
+      "failOnErrWritten" : false,
+      "warnOnErrWritten" : false,
+      "title" : "WSO_FileLoadStarts"
+    },
+    "Echo_Dependency_Check" : {
+      "agentName" : "JSAgent",
+      "withSubagentClusterIdExpr" : false,
+      "executable" : {
+        "TYPE" : "ShellScriptExecutable",
+        "script" : "echo \"no dependency check\"",
+        "v1Compatible" : false
+      },
+      "skipIfNoAdmissionForOrderDay" : false,
+      "parallelism" : 1,
+      "graceTimeout" : 1,
+      "failOnErrWritten" : false,
+      "warnOnErrWritten" : false
+    },
+    "JBLG_Check" : {
+      "agentName" : "JSAgent",
+      "withSubagentClusterIdExpr" : false,
+      "executable" : {
+        "TYPE" : "InternalExecutable",
+        "className" : "com.sos.jitl.jobs.db.SQLExecutorJob",
+        "internalType" : "JITL",
+        "arguments" : {
+          "command" : "\"select count(*) as count from ser_gs_gc.ft_t_jblg where job_config_txt = '$file_pattern' and job_start_tms::date >= to_date(to_char(ser_gs_gc.sysdate()::date - 1 ,'dd/mm/yyyy')||' 23:00','dd/mm/yyyy hh24:mi') AND job_end_tms IS NOT null\"",
+          "resultset_as_variables" : "\"column_value\"",
+          "hibernate_configuration_file" : "\"/ext/app/jobscheduler/base/sos-berlin.com/joc/resources/joc/hibernate.cfg.xml\""
+        }
+      },
+      "skipIfNoAdmissionForOrderDay" : false,
+      "parallelism" : 1,
+      "graceTimeout" : 1,
+      "failOnErrWritten" : false,
+      "warnOnErrWritten" : false
+    },
+    "Currentjobjblgcheck" : {
+      "agentName" : "JSAgent",
+      "withSubagentClusterIdExpr" : false,
+      "executable" : {
+        "TYPE" : "InternalExecutable",
+        "className" : "com.sos.jitl.jobs.db.SQLExecutorJob",
+        "internalType" : "JITL",
+        "arguments" : {
+          "command" : "\"select Count(1) crrwsocnt from ser_gs_gc.ft_t_jblg where job_id in (select max(prnt_job_id) from  ser_gs_gc.ft_t_jblg where job_input_txt ~* '$Wso_File_pattern' and job_config_txt is null and job_start_tms >= case when  (SELECT CAST(ser_gs_gc.sysdate() AS TIME)) > '23:30'::time then  to_timestamp(to_char(ser_gs_gc.sysdate()::date,'dd/mm/yyyy')||' 23:30','dd/mm/yyyy hh24:mi')   else to_timestamp(to_char(ser_gs_gc.sysdate()::date - 1 ,'dd/mm/yyyy')||' 23:30','dd/mm/yyyy hh24:mi')  end    and task_tot_cnt != task_failed_cnt )and job_stat_typ  = 'CLOSED' and job_config_txt ='WSO Dataload Parent Job'\"",
+          "resultset_as_variables" : "\"column_value\"",
+          "hibernate_configuration_file" : "\"/ext/app/jobscheduler/base/sos-berlin.com/joc/resources/joc/hibernate.cfg.xml\""
+        }
+      },
+      "skipIfNoAdmissionForOrderDay" : false,
+      "parallelism" : 1,
+      "graceTimeout" : 1,
+      "failOnErrWritten" : false,
+      "warnOnErrWritten" : false,
+      "title" : "Currentjobjblgcheck"
+    },
+    "Echo_Fileload_Completed" : {
+      "agentName" : "JSAgent",
+      "withSubagentClusterIdExpr" : false,
+      "executable" : {
+        "TYPE" : "ShellScriptExecutable",
+        "script" : "echo \"File has been loaded. Proceeding!\"",
+        "v1Compatible" : false
+      },
+      "skipIfNoAdmissionForOrderDay" : false,
+      "parallelism" : 1,
+      "graceTimeout" : 1,
+      "failOnErrWritten" : false,
+      "warnOnErrWritten" : false
+    },
+    "Nuveen_LevFin_WSO_Load_Process" : {
+      "agentName" : "JSAgent",
+      "withSubagentClusterIdExpr" : false,
+      "executable" : {
+        "TYPE" : "ShellScriptExecutable",
+        "script" : "cd $scripts_home\n./jobutilities execWkf $input_param_file $event_name $target_application",
+        "env" : {
+          "scripts_home" : "'/ext/app/jobscheduler/scripts/'",
+          "input_param_file" : "'/edmfs/app/InputParams/Nuveen_LevFin_WSO_Load_Process.json'",
+          "event_name" : "'Nuveen_LevFin_PFD_Wrapper'",
+          "target_application" : "'fileloading'"
+        },
+        "v1Compatible" : false
+      },
+      "skipIfNoAdmissionForOrderDay" : false,
+      "parallelism" : 1,
+      "graceTimeout" : 1,
+      "failOnErrWritten" : false,
+      "warnOnErrWritten" : false,
+      "title" : "Nuveen_LevFin_WSO_Load_Process"
+    },
+    "Echo_Fileload_Not_Completed" : {
+      "agentName" : "JSAgent",
+      "withSubagentClusterIdExpr" : false,
+      "executable" : {
+        "TYPE" : "ShellScriptExecutable",
+        "script" : "echo \"File has not been loaded\"",
+        "v1Compatible" : false
+      },
+      "skipIfNoAdmissionForOrderDay" : false,
+      "parallelism" : 1,
+      "graceTimeout" : 1,
+      "failOnErrWritten" : false,
+      "warnOnErrWritten" : false
+    },
+    "WSOFileLoadCheckforNoticeBoard" : {
+      "agentName" : "JSAgent",
+      "withSubagentClusterIdExpr" : false,
+      "executable" : {
+        "TYPE" : "InternalExecutable",
+        "className" : "com.sos.jitl.jobs.db.SQLExecutorJob",
+        "internalType" : "JITL",
+        "arguments" : {
+          "command" : "\"select Count(1) wsocnt from ser_gs_gc.ft_t_jblg where job_id in (select max(prnt_job_id) from  ser_gs_gc.ft_t_jblg where job_input_txt ~* '$Wso_File_pattern' and job_config_txt is null and job_start_tms >= case when (SELECT CAST(ser_gs_gc.sysdate() AS TIME)) > '23:30'::time then  to_timestamp(to_char(ser_gs_gc.sysdate()::date,'dd/mm/yyyy')||' 23:30','dd/mm/yyyy hh24:mi')   else to_timestamp(to_char(ser_gs_gc.sysdate()::date - 1 ,'dd/mm/yyyy')||' 23:30','dd/mm/yyyy hh24:mi')  end    and task_tot_cnt != task_failed_cnt )and job_stat_typ  = 'CLOSED' and job_config_txt ='WSO Dataload Parent Job'\"",
+          "resultset_as_variables" : "\"column_value\"",
+          "hibernate_configuration_file" : "\"/ext/app/jobscheduler/base/sos-berlin.com/joc/resources/joc/hibernate.cfg.xml\""
+        }
+      },
+      "skipIfNoAdmissionForOrderDay" : false,
+      "parallelism" : 1,
+      "graceTimeout" : 1,
+      "failOnErrWritten" : false,
+      "warnOnErrWritten" : false,
+      "title" : "WSOFileLoadCheckforNoticeBoard"
+    },
+    "Echo_No_Dependency" : {
+      "agentName" : "JSAgent",
+      "withSubagentClusterIdExpr" : false,
+      "executable" : {
+        "TYPE" : "ShellScriptExecutable",
+        "script" : "echo \"no dependency check\"",
+        "v1Compatible" : false
+      },
+      "skipIfNoAdmissionForOrderDay" : false,
+      "parallelism" : 1,
+      "graceTimeout" : 1,
+      "failOnErrWritten" : false,
+      "warnOnErrWritten" : false
+    }
+  }
+}
